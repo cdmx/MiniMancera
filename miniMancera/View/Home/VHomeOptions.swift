@@ -36,4 +36,8 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     {
         return nil
     }
+    
+    //MARK: collectionView delegate
+    
+    
 }
