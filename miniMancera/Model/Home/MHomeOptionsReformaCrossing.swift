@@ -8,7 +8,7 @@ class MHomeOptionsReformaCrossing:MHomeOptionsProtocol
     {
         get
         {
-            return available
+            return kAvailable
         }
     }
     
@@ -16,7 +16,20 @@ class MHomeOptionsReformaCrossing:MHomeOptionsProtocol
     {
         get
         {
-            
+            return NSLocalizedString("MHomeOptionsReformaCrossing_title", comment:"")
         }
+    }
+    
+    var thumbnail:UIImage
+    {
+        get
+        {
+            return UIImage()
+        }
+    }
+    
+    func gameController() -> UIViewController
+    {
+        return UIViewController()
     }
 }
