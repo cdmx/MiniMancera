@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Avenir</string>
+		<key>font</key>
+		<string>AvenirNext-Medium</string>
+	</dict>
+    <dict>
+        <key>name</key>
+        <string>Menlo</string>
+        <key>font</key>
+        <string>Menlo-Regular</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Gothic Neo</string>
+        <key>font</key>
+        <string>AppleSDGothicNeo-Medium</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Helvetica</string>
+        <key>font</key>
+        <string>HelveticaNeue-Thin</string>
+    </dict>
+    <dict>
+        <key>name</key>
+        <string>Arial</string>
+        <key>font</key>
+        <string>Arial-BoldMT</string>
+    </dict>
+</array>
+</plist>

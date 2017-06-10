@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DNote" representedClassName="DNote" syncable="YES" codeGenerationType="class">
+        <attribute name="created" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fontSize" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="selectedBackground" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="selectedFont" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="frames" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="DNoteFrame" inverseName="note" inverseEntity="DNoteFrame" syncable="YES"/>
+    </entity>
+    <entity name="DNoteFrame" representedClassName="DNoteFrame" syncable="YES" codeGenerationType="class">
+        <attribute name="duration" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="text" attributeType="String" syncable="YES"/>
+        <relationship name="note" maxCount="1" deletionRule="Nullify" destinationEntity="DNote" inverseName="frames" inverseEntity="DNote" syncable="YES"/>
+    </entity>
+    <entity name="DSettings" representedClassName="DSettings" syncable="YES" codeGenerationType="class">
+        <attribute name="ttl" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DNote" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="DNoteFrame" positionX="-54" positionY="18" width="128" height="90"/>
+        <element name="DSettings" positionX="-36" positionY="45" width="128" height="60"/>
+    </elements>
+</model>
