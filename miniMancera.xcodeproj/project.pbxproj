@@ -14,6 +14,7 @@
 		DA2D00221EECB7E400365F23 /* MHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00211EECB7E400365F23 /* MHome.swift */; };
 		DA2D00241EECB80000365F23 /* MHomeOptionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00231EECB80000365F23 /* MHomeOptionsProtocol.swift */; };
 		DA2D00261EECB81700365F23 /* MHomeOptionsReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00251EECB81700365F23 /* MHomeOptionsReformaCrossing.swift */; };
+		DA2D00291EECB9D500365F23 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA2D00271EECB9D500365F23 /* Localizable.strings */; };
 		DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */; };
 		DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA61EECB16A00365F23 /* Controller.swift */; };
 		DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */; };
@@ -30,7 +31,6 @@
 		DA2DFFE01EECB16A00365F23 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFBA1EECB16A00365F23 /* ExtensionUIColor.swift */; };
 		DA2DFFE11EECB16A00365F23 /* ExtensionUIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFBB1EECB16A00365F23 /* ExtensionUIFont.swift */; };
 		DA2DFFE21EECB16A00365F23 /* ExtensionURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFBC1EECB16A00365F23 /* ExtensionURL.swift */; };
-		DA2DFFE31EECB16A00365F23 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA2DFFBE1EECB16A00365F23 /* Localizable.strings */; };
 		DA2DFFE41EECB16A00365F23 /* ResourceURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA2DFFC01EECB16A00365F23 /* ResourceURL.plist */; };
 		DA2DFFE51EECB16A00365F23 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFC31EECB16A00365F23 /* View.swift */; };
 		DA2DFFE61EECB16A00365F23 /* ViewParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFC41EECB16A00365F23 /* ViewParent.swift */; };
@@ -56,6 +56,7 @@
 		DA2D00211EECB7E400365F23 /* MHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHome.swift; sourceTree = "<group>"; };
 		DA2D00231EECB80000365F23 /* MHomeOptionsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsProtocol.swift; sourceTree = "<group>"; };
 		DA2D00251EECB81700365F23 /* MHomeOptionsReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsReformaCrossing.swift; sourceTree = "<group>"; };
+		DA2D00281EECB9D500365F23 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA2DFFA61EECB16A00365F23 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		DA2DFFBA1EECB16A00365F23 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		DA2DFFBB1EECB16A00365F23 /* ExtensionUIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIFont.swift; sourceTree = "<group>"; };
 		DA2DFFBC1EECB16A00365F23 /* ExtensionURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionURL.swift; sourceTree = "<group>"; };
-		DA2DFFBF1EECB16A00365F23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA2DFFC01EECB16A00365F23 /* ResourceURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ResourceURL.plist; sourceTree = "<group>"; };
 		DA2DFFC31EECB16A00365F23 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DA2DFFC41EECB16A00365F23 /* ViewParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParent.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		DA2DFFBD1EECB16A00365F23 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				DA2DFFBE1EECB16A00365F23 /* Localizable.strings */,
+				DA2D00271EECB9D500365F23 /* Localizable.strings */,
 				DA2DFFC01EECB16A00365F23 /* ResourceURL.plist */,
 			);
 			path = Resource;
@@ -329,6 +329,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = DAFB5F6E1EECAC74006A3B99;
 			productRefGroup = DAFB5F781EECAC74006A3B99 /* Products */;
@@ -346,7 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2DFFD81EECB16A00365F23 /* LaunchScreen.storyboard in Resources */,
-				DA2DFFE31EECB16A00365F23 /* Localizable.strings in Resources */,
+				DA2D00291EECB9D500365F23 /* Localizable.strings in Resources */,
 				DA2DFFE41EECB16A00365F23 /* ResourceURL.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,10 +401,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA2DFFBE1EECB16A00365F23 /* Localizable.strings */ = {
+		DA2D00271EECB9D500365F23 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DA2DFFBF1EECB16A00365F23 /* en */,
+				DA2D00281EECB9D500365F23 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
