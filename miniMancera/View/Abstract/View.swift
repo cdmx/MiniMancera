@@ -13,7 +13,7 @@ class View:UIView
     {
         super.init(frame:CGRect.zero)
         clipsToBounds = true
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.black
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
     }

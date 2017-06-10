@@ -11,7 +11,7 @@ class AppDelegate:UIResponder, UIApplicationDelegate
         launchOptions:[UIApplicationLaunchOptionsKey:Any]?) -> Bool
     {
         let window:UIWindow = UIWindow(frame:UIScreen.main.bounds)
-        window.backgroundColor = UIColor.white
+        window.backgroundColor = UIColor.black
         window.makeKeyAndVisible()
         
         let parent:ControllerParent = ControllerParent()

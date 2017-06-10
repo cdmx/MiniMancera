@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="mNK-wy-igd" secondAttribute="bottom" id="GlG-se-kcP"/>
                             <constraint firstItem="mNK-wy-igd" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="ONO-oq-KLO"/>

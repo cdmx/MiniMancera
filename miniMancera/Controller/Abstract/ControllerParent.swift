@@ -17,8 +17,8 @@ class ControllerParent:UIViewController
     }
     
     private(set) weak var viewParent:ViewParent!
-    private var barHidden:Bool = false
-    private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.default
+    private var barHidden:Bool = true
+    private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.lightContent
     
     init()
     {
