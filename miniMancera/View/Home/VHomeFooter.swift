@@ -1,9 +1,20 @@
-//
-//  VHomeFooter.swift
-//  miniMancera
-//
-//  Created by zero on 6/10/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class VHomeFooter:UIView
+{
+    private weak var controller:CHome!
+    
+    init(controller:CHome)
+    {
+        super.init(frame:CGRect.zero)
+        clipsToBounds = true
+        backgroundColor = UIColor.clear
+        translatesAutoresizingMaskIntoConstraints = false
+        self.controller = controller
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+}
