@@ -5,6 +5,8 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     private weak var controller:CHome!
     private weak var collectionView:VCollection!
     private let kDeselectTime:TimeInterval = 0.3
+    private let kInterItem:CGFloat = 5
+    private let kCellSize:CGFloat = 120
     
     init(controller:CHome)
     {
@@ -24,6 +26,9 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
+            flow.itemSize = CGSize(width:kCellSize, height:kCellSize)
+            flow.minimumLineSpacing = kInterItem
+            flow.minimumInteritemSpacing = kInterItem
         }
         
         addSubview(collectionView)
@@ -49,12 +54,18 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     //MARK: collectionView delegate
     
-    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, insetForSectionAt section:Int) -> UIEdgeInsets
     {
-        let height:CGFloat = collectionView.bounds.maxY
-        let size:CGSize = CGSize(width:height, height:height)
+        let height:CGFloat = collectionView.bounds.height
+        let remainHeight:CGFloat = height - kCellSize
+        let margin:CGFloat = remainHeight / 2.0
+        let insets:UIEdgeInsets = UIEdgeInsets(
+            top:margin,
+            left:kInterItem,
+            bottom:margin,
+            right:kInterItem)
         
-        return size
+        return insets
     }
     
     func numberOfSections(in collectionView:UICollectionView) -> Int

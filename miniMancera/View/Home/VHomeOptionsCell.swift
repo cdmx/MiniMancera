@@ -6,7 +6,7 @@ class VHomeOptionsCell:UICollectionViewCell
     {
         super.init(frame:frame)
         clipsToBounds = true
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.darkGray
     }
     
     required init?(coder:NSCoder)
