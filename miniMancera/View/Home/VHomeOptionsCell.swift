@@ -13,4 +13,10 @@ class VHomeOptionsCell:UICollectionViewCell
     {
         return nil
     }
+    
+    //MARK: public
+    
+    func config(model:MHomeOptionsProtocol)
+    {
+    }
 }
