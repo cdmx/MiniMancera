@@ -26,7 +26,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         super.init(texture:texture, color:UIColor.clear, size:size)
         movement(lane:lane, model:model)
         scale(lane:lane)
-        physicsBody = MOptionReformaCrossingFoePhysics(size:size)
+        startPhysics(size:size)
     }
     
     required init?(coder:NSCoder)
@@ -83,6 +83,14 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         let totalSpeed:CGFloat = kMinSpeed + random
         
         return totalSpeed
+    }
+    
+    private func startPhysics(size:CGSize)
+    {
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
+        physicsBody.isDynamic = true
+        physicsBody.collisionBitMask
+        self.physicsBody = physicsBody
     }
     
     //MARK: foe protocol

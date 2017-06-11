@@ -14,6 +14,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         super.init(size:model.size)
         backgroundColor = SKColor.black
+        physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self
         
         let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(

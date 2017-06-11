@@ -39,7 +39,7 @@
 		DA2D00831EEDE39D00365F23 /* MOptionReformaCrossingLane.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00821EEDE39D00365F23 /* MOptionReformaCrossingLane.swift */; };
 		DA2D00851EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00841EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift */; };
 		DA2D00871EEDF4E200365F23 /* MOptionReformaCrossingFoeVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00861EEDF4E200365F23 /* MOptionReformaCrossingFoeVW.swift */; };
-		DA2D008B1EEE00C200365F23 /* MOptionReformaCrossingFoePhysics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D008A1EEE00C200365F23 /* MOptionReformaCrossingFoePhysics.swift */; };
+		DA2D008D1EEE04E300365F23 /* MOptionReformaCrossingPhysicsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D008C1EEE04E300365F23 /* MOptionReformaCrossingPhysicsStruct.swift */; };
 		DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */; };
 		DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA61EECB16A00365F23 /* Controller.swift */; };
 		DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */; };
@@ -106,7 +106,7 @@
 		DA2D00821EEDE39D00365F23 /* MOptionReformaCrossingLane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingLane.swift; sourceTree = "<group>"; };
 		DA2D00841EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeProtocol.swift; sourceTree = "<group>"; };
 		DA2D00861EEDF4E200365F23 /* MOptionReformaCrossingFoeVW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeVW.swift; sourceTree = "<group>"; };
-		DA2D008A1EEE00C200365F23 /* MOptionReformaCrossingFoePhysics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoePhysics.swift; sourceTree = "<group>"; };
+		DA2D008C1EEE04E300365F23 /* MOptionReformaCrossingPhysicsStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingPhysicsStruct.swift; sourceTree = "<group>"; };
 		DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA2DFFA61EECB16A00365F23 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -192,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2D005E1EEDE38600365F23 /* MOptionReformaCrossing.swift */,
+				DA2D008C1EEE04E300365F23 /* MOptionReformaCrossingPhysicsStruct.swift */,
 				DA2D005F1EEDE38600365F23 /* MOptionReformaCrossingBackground.swift */,
 				DA2D00601EEDE38600365F23 /* MOptionReformaCrossingPlayer.swift */,
 				DA2D00611EEDE38600365F23 /* MOptionReformaCrossingSceneGame.swift */,
@@ -204,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				DA2D00641EEDE38600365F23 /* MOptionReformaCrossingFoe.swift */,
-				DA2D008A1EEE00C200365F23 /* MOptionReformaCrossingFoePhysics.swift */,
 				DA2D00841EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift */,
 				DA2D00861EEDF4E200365F23 /* MOptionReformaCrossingFoeVW.swift */,
 			);
@@ -526,7 +526,6 @@
 				DA2D00751EEDE38600365F23 /* MOptionReformaCrossingSceneTitle.swift in Sources */,
 				DA2DFFE11EECB16A00365F23 /* ExtensionUIFont.swift in Sources */,
 				DA2D00791EEDE38600365F23 /* MOptionReformaCrossingLaneC.swift in Sources */,
-				DA2D008B1EEE00C200365F23 /* MOptionReformaCrossingFoePhysics.swift in Sources */,
 				DA2DFFD71EECB16A00365F23 /* MSession.swift in Sources */,
 				DA2DFFEE1EECB16A00365F23 /* VSlider.swift in Sources */,
 				DA2D00711EEDE38600365F23 /* MOptionReformaCrossing.swift in Sources */,
@@ -537,6 +536,7 @@
 				DA2D007F1EEDE38600365F23 /* MOptionReformaCrossingLaneLeft.swift in Sources */,
 				DA2D00731EEDE38600365F23 /* MOptionReformaCrossingPlayer.swift in Sources */,
 				DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */,
+				DA2D008D1EEE04E300365F23 /* MOptionReformaCrossingPhysicsStruct.swift in Sources */,
 				DA2DFFE81EECB16A00365F23 /* VBlur.swift in Sources */,
 				DA2DFFF01EECB16A00365F23 /* VSpinner.swift in Sources */,
 				DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */,
