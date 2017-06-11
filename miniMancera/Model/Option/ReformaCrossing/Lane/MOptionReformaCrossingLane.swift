@@ -3,6 +3,7 @@ import Foundation
 class MOptionReformaCrossingLane
 {
     let lanes:[MOptionReformaCrossingLaneProtocol]
+    private let countLanes:UInt32
     
     private class func factoryLanes() -> [MOptionReformaCrossingLaneProtocol]
     {
@@ -31,12 +32,16 @@ class MOptionReformaCrossingLane
     init()
     {
         lanes = MOptionReformaCrossingLane.factoryLanes()
+        countLanes = UInt32(lanes.count)
     }
     
     //MARK: public
     
     func randomLane() -> MOptionReformaCrossingLaneProtocol
     {
-        return lanes[0]
+        let random:Int = Int(arc4random_uniform(countLanes))
+        let lane:MOptionReformaCrossingLaneProtocol = lanes[random]
+        
+        return lane
     }
 }
