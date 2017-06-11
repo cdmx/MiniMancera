@@ -36,7 +36,6 @@ class MOptionReformaCrossingScene:SKScene
         let foe:SKSpriteNode = factoryFoe()
         
         foe.position = CGPoint(x:foe.size.width / 2.0, y:200)
-        foe.xScale = foe.xScale * -1
         
         addChild(foe)
         
