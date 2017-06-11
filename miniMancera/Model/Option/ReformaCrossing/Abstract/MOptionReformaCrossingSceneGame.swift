@@ -49,11 +49,5 @@ class MOptionReformaCrossingSceneGame:SKScene
             sceneSize:model.size)
         
         addChild(foe)
-        
-        let actualDuration:TimeInterval = 8
-        
-        let actionMove = SKAction.move(to: CGPoint(x:size.width + (foe.size.width / 2), y:200), duration:actualDuration)
-        let actionMoveDone = SKAction.removeFromParent()
-        foe.run(SKAction.sequence([actionMove, actionMoveDone]))
     }
 }
