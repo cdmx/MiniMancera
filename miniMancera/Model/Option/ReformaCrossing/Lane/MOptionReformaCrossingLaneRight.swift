@@ -2,11 +2,11 @@ import UIKit
 
 class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLaneProtocol
 {
-    private let verticalPosition:CGFloat
+    private let deltaVertical:CGFloat
     
-    init(verticalPosition:CGFloat)
+    init(deltaVertical:CGFloat)
     {
-        self.verticalPosition = verticalPosition
+        self.deltaVertical = deltaVertical
     }
     
     //MARK: lane protocol

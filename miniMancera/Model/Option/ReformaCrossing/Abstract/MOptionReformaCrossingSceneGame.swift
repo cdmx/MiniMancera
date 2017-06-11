@@ -46,7 +46,7 @@ class MOptionReformaCrossingSceneGame:SKScene
         let lane:MOptionReformaCrossingLaneProtocol = model.lane.randomLane()
         let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
             lane:lane,
-            sceneSize:model.size)
+            model:model)
         
         addChild(foe)
     }
