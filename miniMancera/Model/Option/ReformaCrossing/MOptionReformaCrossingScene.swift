@@ -2,13 +2,15 @@ import SpriteKit
 
 class MOptionReformaCrossingScene:SKScene
 {
+    private weak var model:MOptionReformaCrossing!
     let player:MOptionReformaCrossingPlayer
     
-    override init(size:CGSize)
+    init(model:MOptionReformaCrossing)
     {
+        self.model = model
         player = MOptionReformaCrossingPlayer()
         
-        super.init(size:size)
+        super.init(size:model.size)
     }
     
     required init?(coder:NSCoder)

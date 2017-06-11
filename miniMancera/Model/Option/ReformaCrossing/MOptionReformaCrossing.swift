@@ -4,6 +4,7 @@ import SpriteKit
 class MOptionReformaCrossing:MOptionProtocol
 {
     let lanes:[MOptionReformaCrossingLaneProtocol]
+    private(set) var size:CGSize
     
     private class func factoryLanes() -> [MOptionReformaCrossingLaneProtocol]
     {
@@ -32,13 +33,15 @@ class MOptionReformaCrossing:MOptionProtocol
     init()
     {
         lanes = MOptionReformaCrossing.factoryLanes()
+        size = CGSize.zero
     }
     
     //MARK: option protocol
     
     func sceneWithSize(size:CGSize) -> SKScene
     {
-        let scene:MOptionReformaCrossingScene = MOptionReformaCrossingScene(size:size)
+        self.size = size
+        let scene:MOptionReformaCrossingScene = MOptionReformaCrossingScene(model:self)
         
         return scene
     }
