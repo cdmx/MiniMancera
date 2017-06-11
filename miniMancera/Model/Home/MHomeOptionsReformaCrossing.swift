@@ -30,6 +30,8 @@ class MHomeOptionsReformaCrossing:MHomeOptionsProtocol
     
     func gameController() -> UIViewController
     {
-        return UIViewController()
+        let controller:COptionReformaCrossing = COptionReformaCrossing()
+        
+        return controller
     }
 }
