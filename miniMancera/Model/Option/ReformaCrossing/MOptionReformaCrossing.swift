@@ -5,6 +5,8 @@ class MOptionReformaCrossing:MOptionProtocol
 {
     let lanes:[MOptionReformaCrossingLaneProtocol]
     private(set) var size:CGSize
+    private(set) var level:Int
+    private let kStartingLevel:Int = 1
     
     private class func factoryLanes() -> [MOptionReformaCrossingLaneProtocol]
     {
@@ -34,6 +36,7 @@ class MOptionReformaCrossing:MOptionProtocol
     {
         lanes = MOptionReformaCrossing.factoryLanes()
         size = CGSize.zero
+        level = kStartingLevel
     }
     
     //MARK: option protocol

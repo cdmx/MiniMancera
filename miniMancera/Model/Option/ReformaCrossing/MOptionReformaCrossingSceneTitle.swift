@@ -3,14 +3,18 @@ import SpriteKit
 class MOptionReformaCrossingSceneTitle:SKScene
 {
     private weak var model:MOptionReformaCrossing!
-    let player:MOptionReformaCrossingPlayer
     
     init(model:MOptionReformaCrossing)
     {
         self.model = model
-        player = MOptionReformaCrossingPlayer()
         
         super.init(size:model.size)
+        backgroundColor = SKColor.black
+        
+        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
+            size:size)
+        
+        addChild(background)
     }
     
     required init?(coder:NSCoder)
@@ -20,42 +24,39 @@ class MOptionReformaCrossingSceneTitle:SKScene
     
     override func didMove(to view:SKView)
     {
-        backgroundColor = SKColor.black
         
-        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
-            size:size)
-        player.position = CGPoint(x:view.bounds.size.width / 2, y:view.bounds.size.height / 2)
-        
-        addChild(background)
-        addChild(player)
-        
+        /*
         run(SKAction.repeatForever(
             SKAction.sequence([
                 SKAction.run(addFoe),
                 SKAction.wait(forDuration:3)])))
+        
+        
+        // 1
+        backgroundColor = SKColor.white
+        
+        // 2
+        let message = won ? "You Won!" : "You Lose :["
+        
+        // 3
+        let label = SKLabelNode(fontNamed: "Chalkduster")
+        label.text = message
+        label.fontSize = 40
+        label.fontColor = SKColor.black
+        label.position = CGPoint(x: size.width/2, y: size.height/2)
+        addChild(label)
+        
+        // 4
+        run(SKAction.sequence([
+            SKAction.wait(forDuration: 3.0),
+            SKAction.run() {
+                // 5
+                let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+                let scene = GameScene(size: size)
+                self.view?.presentScene(scene, transition:reveal)
+            }
+            ]))*/
     }
     
     //MARK: private
-    
-    private func addFoe()
-    {
-        let foe:SKSpriteNode = factoryFoe()
-        
-        foe.position = CGPoint(x:foe.size.width / 2.0, y:200)
-        
-        addChild(foe)
-        
-        let actualDuration:TimeInterval = 8
-        
-        let actionMove = SKAction.move(to: CGPoint(x:size.width + (foe.size.width / 2), y:200), duration:actualDuration)
-        let actionMoveDone = SKAction.removeFromParent()
-        foe.run(SKAction.sequence([actionMove, actionMoveDone]))
-    }
-    
-    private func factoryFoe() -> SKSpriteNode
-    {
-        let foe:SKSpriteNode = SKSpriteNode(imageNamed:"assetReformaCrossingVW")
-        
-        return foe
-    }
 }
