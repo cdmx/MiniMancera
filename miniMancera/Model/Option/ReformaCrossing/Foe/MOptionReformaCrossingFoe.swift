@@ -89,8 +89,14 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     {
         let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
         physicsBody.isDynamic = true
+        physicsBody.friction = 1
+        physicsBody.angularVelocity = 0
+        physicsBody.allowsRotation = false
+        physicsBody.restitution = 0
+        
         physicsBody.categoryBitMask = MOptionReformaCrossingPhysicsStruct.Foe
-        physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.Foe
+        physicsBody.contactTestBitMask = MOptionReformaCrossingPhysicsStruct.Foe
+        physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.None
         self.physicsBody = physicsBody
     }
     

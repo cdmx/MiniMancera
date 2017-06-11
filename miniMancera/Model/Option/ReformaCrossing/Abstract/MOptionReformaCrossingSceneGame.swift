@@ -5,7 +5,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private weak var model:MOptionReformaCrossing!
     private let player:MOptionReformaCrossingPlayer
     private let kSpawnFoeRate:TimeInterval = 0.1
-    private let kSpawnProbability:UInt32 = 10
+    private let kSpawnProbability:UInt32 = 5
     
     init(model:MOptionReformaCrossing)
     {
