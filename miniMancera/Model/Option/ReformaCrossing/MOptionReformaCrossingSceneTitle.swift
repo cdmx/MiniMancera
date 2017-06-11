@@ -5,6 +5,8 @@ class MOptionReformaCrossingSceneTitle:SKScene
     private weak var model:MOptionReformaCrossing!
     private let kFont:String = "Arial-BoldMT"
     private let kFontSize:CGFloat = 45
+    private let kWaitStartGame:TimeInterval = 4
+    private let kAnimationDuration:TimeInterval = 0.3
     
     init(model:MOptionReformaCrossing)
     {
@@ -41,39 +43,24 @@ class MOptionReformaCrossingSceneTitle:SKScene
     
     override func didMove(to view:SKView)
     {
+        let actionWait:SKAction = SKAction.wait(forDuration:kWaitStartGame)
+        let actionRunGame:SKAction = SKAction.run(startGame)
+        let actions:[SKAction] = [
+            actionWait,
+            actionRunGame]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
         
-        /*
-        run(SKAction.repeatForever(
-            SKAction.sequence([
-                SKAction.run(addFoe),
-                SKAction.wait(forDuration:3)])))
-        
-        
-        // 1
-        backgroundColor = SKColor.white
-        
-        // 2
-        let message = won ? "You Won!" : "You Lose :["
-        
-        // 3
-        let label = SKLabelNode(fontNamed: "Chalkduster")
-        label.text = message
-        label.fontSize = 40
-        label.fontColor = SKColor.black
-        label.position = CGPoint(x: size.width/2, y: size.height/2)
-        addChild(label)
-        
-        // 4
-        run(SKAction.sequence([
-            SKAction.wait(forDuration: 3.0),
-            SKAction.run() {
-                // 5
-                let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-                let scene = GameScene(size: size)
-                self.view?.presentScene(scene, transition:reveal)
-            }
-            ]))*/
+        run(actionsSequence)
     }
     
     //MARK: private
+    
+    private func startGame()
+    {
+        let transition:SKTransition = SKTransition.crossFade(
+            withDuration:kAnimationDuration)
+        let gameScene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(model:model)
+        
+        view?.presentScene(gameScene, transition:transition)
+    }
 }
