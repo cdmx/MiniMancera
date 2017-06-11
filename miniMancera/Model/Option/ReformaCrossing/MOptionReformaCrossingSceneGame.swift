@@ -3,19 +3,22 @@ import SpriteKit
 class MOptionReformaCrossingSceneGame:SKScene
 {
     private weak var model:MOptionReformaCrossing!
-    let player:MOptionReformaCrossingPlayer
+    private let player:MOptionReformaCrossingPlayer
+    private let kSpawnFoeRate:TimeInterval = 1
     
     init(model:MOptionReformaCrossing)
     {
         self.model = model
-        player = MOptionReformaCrossingPlayer()
+        player = MOptionReformaCrossingPlayer(sceneSize:model.size)
         
         super.init(size:model.size)
         backgroundColor = SKColor.black
         
         let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
             size:size)
+        
         addChild(background)
+        addChild(player)
     }
     
     required init?(coder:NSCoder)
@@ -25,23 +28,20 @@ class MOptionReformaCrossingSceneGame:SKScene
     
     override func didMove(to view:SKView)
     {
+        let actionSpawnFoe:SKAction = SKAction.run(spawnFoe)
+        let actionDelay:SKAction = SKAction.wait(forDuration:kSpawnFoeRate)
+        let actions:[SKAction] = [
+            actionSpawnFoe,
+            actionDelay]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        let actionRepeat:SKAction = SKAction.repeatForever(actionsSequence)
         
-        
-        
-        
-        
-        
-        addChild(player)
-        
-        run(SKAction.repeatForever(
-            SKAction.sequence([
-                SKAction.run(addFoe),
-                SKAction.wait(forDuration:3)])))
+        run(actionRepeat)
     }
     
     //MARK: private
     
-    private func addFoe()
+    private func spawnFoe()
     {
         let foe:SKSpriteNode = factoryFoe()
         

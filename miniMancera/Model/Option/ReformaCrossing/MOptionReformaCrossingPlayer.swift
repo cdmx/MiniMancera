@@ -9,9 +9,9 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     {
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer0"))
         let size:CGSize = texture.size()
+        self.sceneSize = sceneSize
         
         super.init(texture:texture, color:UIColor.clear, size:size)
-        self.sceneSize = sceneSize
         position = startPosition()
     }
     
