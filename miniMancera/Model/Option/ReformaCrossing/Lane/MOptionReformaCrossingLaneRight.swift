@@ -3,6 +3,7 @@ import UIKit
 class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLaneProtocol
 {
     private let deltaVertical:CGFloat
+    private let kScaleHorizontal:CGFloat = 1
     
     init(deltaVertical:CGFloat)
     {
@@ -10,6 +11,14 @@ class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLaneProtocol
     }
     
     //MARK: lane protocol
+    
+    var scaleHorizontal:CGFloat
+    {
+        get
+        {
+            return kScaleHorizontal
+        }
+    }
     
     func foeInitialPoint(foe:MOptionReformaCrossingFoe, sceneSize:CGSize) -> CGPoint
     {

@@ -23,6 +23,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode
         
         super.init(texture:texture, color:UIColor.clear, size:size)
         movement(lane:lane, model:model)
+        scale(lane:lane)
     }
     
     required init?(coder:NSCoder)
@@ -31,6 +32,11 @@ class MOptionReformaCrossingFoe:SKSpriteNode
     }
     
     //MARK: private
+    
+    private func scale(lane:MOptionReformaCrossingLaneProtocol)
+    {
+        xScale = xScale * lane.scaleHorizontal
+    }
     
     private func movement(lane:MOptionReformaCrossingLaneProtocol, model:MOptionReformaCrossing)
     {
