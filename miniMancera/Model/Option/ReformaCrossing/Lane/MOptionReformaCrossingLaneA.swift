@@ -2,7 +2,7 @@ import UIKit
 
 class MOptionReformaCrossingLaneA:MOptionReformaCrossingLaneLeft
 {
-    private let kDeltaVertical:CGFloat = 0
+    private let kDeltaVertical:CGFloat = -160
     
     init()
     {
