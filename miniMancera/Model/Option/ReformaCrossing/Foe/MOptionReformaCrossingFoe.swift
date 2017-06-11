@@ -26,6 +26,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         super.init(texture:texture, color:UIColor.clear, size:size)
         movement(lane:lane, model:model)
         scale(lane:lane)
+        physicsBody
     }
     
     required init?(coder:NSCoder)

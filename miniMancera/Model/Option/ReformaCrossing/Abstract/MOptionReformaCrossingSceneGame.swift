@@ -67,4 +67,11 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         return false
     }
+    
+    //MARK: contact delegate
+    
+    func didBegin(_ contact:SKPhysicsContact)
+    {
+        print("contact")
+    }
 }
