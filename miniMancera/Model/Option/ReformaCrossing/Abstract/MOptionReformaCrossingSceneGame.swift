@@ -69,10 +69,24 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         return false
     }
     
+    private func contactFoes(foeA:MOptionReformaCrossingFoe, foeB:MOptionReformaCrossingFoe)
+    {
+        
+    }
+    
     //MARK: contact delegate
     
     func didBegin(_ contact:SKPhysicsContact)
     {
-        print("contact")
+        let bodyA:SKPhysicsBody = contact.bodyA
+        let bodyB:SKPhysicsBody = contact.bodyB
+        
+        if let foeA:MOptionReformaCrossingFoe = bodyA.node as? MOptionReformaCrossingFoe
+        {
+            if let foeB:MOptionReformaCrossingFoe = bodyB.node as? MOptionReformaCrossingFoe
+            {
+                contactFoes(foeA:foeA, foeB:foeB)
+            }
+        }
     }
 }
