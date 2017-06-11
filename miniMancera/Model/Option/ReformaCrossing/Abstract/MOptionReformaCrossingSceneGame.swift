@@ -5,6 +5,7 @@ class MOptionReformaCrossingSceneGame:SKScene
     private weak var model:MOptionReformaCrossing!
     private let player:MOptionReformaCrossingPlayer
     private let kSpawnFoeRate:TimeInterval = 0.2
+    private let kSpawnProbability:UInt32 = 10
     
     init(model:MOptionReformaCrossing)
     {
@@ -43,11 +44,26 @@ class MOptionReformaCrossingSceneGame:SKScene
     
     private func spawnFoe()
     {
-        let lane:MOptionReformaCrossingLaneProtocol = model.lane.randomLane()
-        let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
-            lane:lane,
-            model:model)
+        if shouldSpawn()
+        {
+            let lane:MOptionReformaCrossingLaneProtocol = model.lane.randomLane()
+            let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
+                lane:lane,
+                model:model)
+            
+            addChild(foe)
+        }
+    }
+    
+    private func shouldSpawn() -> Bool
+    {
+        let random:UInt32 = arc4random_uniform(kSpawnProbability)
         
-        addChild(foe)
+        if random == 0
+        {
+            return true
+        }
+        
+        return false
     }
 }

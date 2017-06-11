@@ -5,7 +5,7 @@ class MOptionReformaCrossingSceneTitle:SKScene
     private weak var model:MOptionReformaCrossing!
     private let kFont:String = "Arial-BoldMT"
     private let kFontSize:CGFloat = 45
-    private let kWaitStartGame:TimeInterval = 1.7
+    private let kWaitStartGame:TimeInterval = 1
     private let kAnimationDuration:TimeInterval = 0.3
     
     init(model:MOptionReformaCrossing)

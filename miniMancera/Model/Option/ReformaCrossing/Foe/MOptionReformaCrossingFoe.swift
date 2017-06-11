@@ -10,7 +10,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         lane:MOptionReformaCrossingLaneProtocol,
         model:MOptionReformaCrossing) -> MOptionReformaCrossingFoe
     {
-        let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe(
+        let foe:MOptionReformaCrossingFoeVW = MOptionReformaCrossingFoeVW(
             lane:lane,
             model:model)
         
@@ -81,6 +81,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         let random:CGFloat = CGFloat(arc4random_uniform(totalMaxSpeed))
         let totalSpeed:CGFloat = kMinSpeed + random
         
+        print(totalSpeed)
         return totalSpeed
     }
     
