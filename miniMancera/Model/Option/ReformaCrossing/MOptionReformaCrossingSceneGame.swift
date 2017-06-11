@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingScene:SKScene
+class MOptionReformaCrossingSceneGame:SKScene
 {
     private weak var model:MOptionReformaCrossing!
     let player:MOptionReformaCrossingPlayer
@@ -30,9 +30,9 @@ class MOptionReformaCrossingScene:SKScene
         addChild(player)
         
         run(SKAction.repeatForever(
-        SKAction.sequence([
-            SKAction.run(addFoe),
-            SKAction.wait(forDuration:3)])))
+            SKAction.sequence([
+                SKAction.run(addFoe),
+                SKAction.wait(forDuration:3)])))
     }
     
     //MARK: private

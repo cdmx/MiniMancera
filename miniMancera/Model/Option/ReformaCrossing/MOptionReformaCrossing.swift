@@ -41,7 +41,7 @@ class MOptionReformaCrossing:MOptionProtocol
     func sceneWithSize(size:CGSize) -> SKScene
     {
         self.size = size
-        let scene:MOptionReformaCrossingScene = MOptionReformaCrossingScene(model:self)
+        let scene:MOptionReformaCrossingSceneTitle = MOptionReformaCrossingSceneTitle(model:self)
         
         return scene
     }
