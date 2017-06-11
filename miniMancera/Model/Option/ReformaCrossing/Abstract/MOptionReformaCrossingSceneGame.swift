@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingSceneGame:SKScene
+class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
 {
     private weak var model:MOptionReformaCrossing!
     private let player:MOptionReformaCrossingPlayer
@@ -14,6 +14,7 @@ class MOptionReformaCrossingSceneGame:SKScene
         
         super.init(size:model.size)
         backgroundColor = SKColor.black
+        physicsWorld.contactDelegate = self
         
         let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
             size:size)
