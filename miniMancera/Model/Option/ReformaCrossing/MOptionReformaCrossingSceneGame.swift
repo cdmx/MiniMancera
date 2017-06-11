@@ -28,7 +28,7 @@ class MOptionReformaCrossingSceneGame:SKScene
         
         
         
-        player.position = CGPoint(x:view.bounds.size.width / 2, y:view.bounds.size.height / 2)
+        
         
         
         addChild(player)
