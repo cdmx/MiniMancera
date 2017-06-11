@@ -3,7 +3,7 @@ import SpriteKit
 
 class MOptionReformaCrossingFoe:SKSpriteNode
 {
-    private let kSpeed:CGFloat = 30
+    private let kMinSpeed:CGFloat = 10
     
     class func randomFoe(
         lane:MOptionReformaCrossingLaneProtocol,
@@ -48,7 +48,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode
             sceneSize:model.size)
         
         let distance:CGFloat = abs(startingPoint.x - endingPoint.x)
-        let translationTime:CGFloat = distance / kSpeed
+        let translationTime:CGFloat = distance / kBaseSpeed
         let translationTimeInterval:TimeInterval = TimeInterval(translationTime)
         
         position = startingPoint

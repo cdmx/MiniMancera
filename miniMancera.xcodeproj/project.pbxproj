@@ -37,6 +37,7 @@
 		DA2D00801EEDE38600365F23 /* MOptionReformaCrossingLaneProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D006F1EEDE38600365F23 /* MOptionReformaCrossingLaneProtocol.swift */; };
 		DA2D00811EEDE38600365F23 /* MOptionReformaCrossingLaneRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00701EEDE38600365F23 /* MOptionReformaCrossingLaneRight.swift */; };
 		DA2D00831EEDE39D00365F23 /* MOptionReformaCrossingLane.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00821EEDE39D00365F23 /* MOptionReformaCrossingLane.swift */; };
+		DA2D00851EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00841EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift */; };
 		DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */; };
 		DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA61EECB16A00365F23 /* Controller.swift */; };
 		DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */; };
@@ -101,6 +102,7 @@
 		DA2D006F1EEDE38600365F23 /* MOptionReformaCrossingLaneProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingLaneProtocol.swift; sourceTree = "<group>"; };
 		DA2D00701EEDE38600365F23 /* MOptionReformaCrossingLaneRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingLaneRight.swift; sourceTree = "<group>"; };
 		DA2D00821EEDE39D00365F23 /* MOptionReformaCrossingLane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingLane.swift; sourceTree = "<group>"; };
+		DA2D00841EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeProtocol.swift; sourceTree = "<group>"; };
 		DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA2DFFA61EECB16A00365F23 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2D00641EEDE38600365F23 /* MOptionReformaCrossingFoe.swift */,
+				DA2D00841EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift */,
 			);
 			path = Foe;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				DA2D00771EEDE38600365F23 /* MOptionReformaCrossingLaneA.swift in Sources */,
 				DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */,
 				DA2D007B1EEDE38600365F23 /* MOptionReformaCrossingLaneE.swift in Sources */,
+				DA2D00851EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift in Sources */,
 				DA2D00261EECB81700365F23 /* MHomeOptionsReformaCrossing.swift in Sources */,
 				DA2D00761EEDE38600365F23 /* MOptionReformaCrossingFoe.swift in Sources */,
 				DA2DFFE71EECB16A00365F23 /* VAlert.swift in Sources */,
