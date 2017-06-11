@@ -39,7 +39,8 @@ class ControllerGame:UIViewController
         extendedLayoutIncludesOpaqueBars = false
         automaticallyAdjustsScrollViewInsets = false
         
-        let scene:SKScene = SKScene(size:view.bounds.size)
+        let size:CGSize = view.bounds.size
+        let scene:SKScene = model.sceneWithSize(size:size)
         
         guard
             
