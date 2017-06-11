@@ -18,7 +18,7 @@ class MOptionReformaCrossingScene:SKScene
     
     override func didMove(to view:SKView)
     {
-        backgroundColor = SKColor.white
+        backgroundColor = SKColor.black
         player.position = CGPoint(x:view.bounds.size.width / 2, y:view.bounds.size.height / 2)
         
         addChild(player)
