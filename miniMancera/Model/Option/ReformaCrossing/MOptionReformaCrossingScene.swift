@@ -24,4 +24,18 @@ class MOptionReformaCrossingScene:SKScene
         addChild(player)
         
     }
+    
+    //MARK: private
+    
+    private func addFoe()
+    {
+        
+    }
+    
+    private func factoryFoe() -> SKSpriteNode
+    {
+        let foe:SKSpriteNode = SKSpriteNode(imageNamed:"assetReformaCrossingVW")
+        
+        return foe
+    }
 }
