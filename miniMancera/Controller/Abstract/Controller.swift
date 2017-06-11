@@ -33,6 +33,6 @@ class Controller<T:View>:UIViewController
     
     override var prefersStatusBarHidden:Bool
     {
-        return false
+        return true
     }
 }

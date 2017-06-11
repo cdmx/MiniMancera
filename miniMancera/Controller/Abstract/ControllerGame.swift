@@ -3,6 +3,29 @@ import SpriteKit
 
 class ControllerGame:UIViewController
 {
+    let model:MOptionProtocol
+    
+    init(model:MOptionProtocol)
+    {
+        self.model = model
+        super.init(nibName:nil, bundle:nil)
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
+    override var preferredStatusBarStyle:UIStatusBarStyle
+    {
+        return UIStatusBarStyle.lightContent
+    }
+    
+    override var prefersStatusBarHidden:Bool
+    {
+        return true
+    }
+    
     override func loadView()
     {
         let view:SKView = SKView(frame:CGRect.zero)
@@ -12,6 +35,9 @@ class ControllerGame:UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        edgesForExtendedLayout = UIRectEdge()
+        extendedLayoutIncludesOpaqueBars = false
+        automaticallyAdjustsScrollViewInsets = false
         
         let scene:SKScene = SKScene(size:view.bounds.size)
         
