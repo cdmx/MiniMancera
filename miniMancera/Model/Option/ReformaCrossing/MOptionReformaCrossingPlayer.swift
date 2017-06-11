@@ -3,5 +3,4 @@ import SpriteKit
 
 class MOptionReformaCrossingPlayer:SKSpriteNode
 {
-    
 }

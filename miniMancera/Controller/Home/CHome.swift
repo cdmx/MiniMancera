@@ -14,4 +14,13 @@ class CHome:Controller<VHome>
     {
         return nil
     }
+    
+    //MARK: public
+    
+    func optionSelected(option:MHomeOptionsProtocol)
+    {
+        let controller:ControllerGame = option.gameController()
+        
+        parent?.present(controller, animated:true, completion:nil)
+    }
 }

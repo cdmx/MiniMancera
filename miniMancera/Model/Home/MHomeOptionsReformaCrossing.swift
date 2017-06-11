@@ -28,7 +28,7 @@ class MHomeOptionsReformaCrossing:MHomeOptionsProtocol
         }
     }
     
-    func gameController() -> UIViewController
+    func gameController() -> ControllerGame
     {
         let controller:COptionReformaCrossing = COptionReformaCrossing()
         

@@ -100,7 +100,7 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         
         if item.available
         {
-            
+            controller.optionSelected(option:item)
         }
         else
         {
