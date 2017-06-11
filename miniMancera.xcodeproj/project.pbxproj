@@ -16,6 +16,7 @@
 		DA2D00261EECB81700365F23 /* MHomeOptionsReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00251EECB81700365F23 /* MHomeOptionsReformaCrossing.swift */; };
 		DA2D00291EECB9D500365F23 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA2D00271EECB9D500365F23 /* Localizable.strings */; };
 		DA2D002B1EECC6CE00365F23 /* ControllerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D002A1EECC6CE00365F23 /* ControllerGame.swift */; };
+		DA2D002F1EECC88F00365F23 /* COptionReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D002E1EECC88F00365F23 /* COptionReformaCrossing.swift */; };
 		DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */; };
 		DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA61EECB16A00365F23 /* Controller.swift */; };
 		DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */; };
@@ -59,6 +60,7 @@
 		DA2D00251EECB81700365F23 /* MHomeOptionsReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsReformaCrossing.swift; sourceTree = "<group>"; };
 		DA2D00281EECB9D500365F23 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA2D002A1EECC6CE00365F23 /* ControllerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerGame.swift; sourceTree = "<group>"; };
+		DA2D002E1EECC88F00365F23 /* COptionReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COptionReformaCrossing.swift; sourceTree = "<group>"; };
 		DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA2DFFA61EECB16A00365F23 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -105,11 +107,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA2D002D1EECC87700365F23 /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				DA2D002E1EECC88F00365F23 /* COptionReformaCrossing.swift */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
 		DA2DFFA31EECB16A00365F23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				DA2DFFA41EECB16A00365F23 /* Abstract */,
 				DA2DFFA81EECB16A00365F23 /* Home */,
+				DA2D002D1EECC87700365F23 /* Option */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -392,6 +403,7 @@
 				DA2DFFE81EECB16A00365F23 /* VBlur.swift in Sources */,
 				DA2DFFF01EECB16A00365F23 /* VSpinner.swift in Sources */,
 				DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */,
+				DA2D002F1EECC88F00365F23 /* COptionReformaCrossing.swift in Sources */,
 				DA2DFFD91EECB16A00365F23 /* ExtensionDictionary.swift in Sources */,
 				DA2DFFDF1EECB16A00365F23 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA2D00241EECB80000365F23 /* MHomeOptionsProtocol.swift in Sources */,
