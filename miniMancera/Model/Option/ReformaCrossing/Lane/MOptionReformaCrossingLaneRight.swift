@@ -24,7 +24,7 @@ class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLaneProtocol
     {
         let sceneHeight_2:CGFloat = sceneSize.height / 2.0
         let verticalPosition:CGFloat = sceneHeight_2 + deltaVertical
-        let horizontalPosition:CGFloat = foe.size.width / 2.0
+        let horizontalPosition:CGFloat = foe.size.width / -2.0
         let point:CGPoint = CGPoint(x:horizontalPosition, y:verticalPosition)
         
         return point

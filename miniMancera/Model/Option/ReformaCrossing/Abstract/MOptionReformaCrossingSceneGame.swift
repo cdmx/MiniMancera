@@ -4,7 +4,7 @@ class MOptionReformaCrossingSceneGame:SKScene
 {
     private weak var model:MOptionReformaCrossing!
     private let player:MOptionReformaCrossingPlayer
-    private let kSpawnFoeRate:TimeInterval = 1
+    private let kSpawnFoeRate:TimeInterval = 0.2
     
     init(model:MOptionReformaCrossing)
     {
