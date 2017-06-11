@@ -18,6 +18,7 @@
 		DA2D002B1EECC6CE00365F23 /* ControllerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D002A1EECC6CE00365F23 /* ControllerGame.swift */; };
 		DA2D002F1EECC88F00365F23 /* COptionReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D002E1EECC88F00365F23 /* COptionReformaCrossing.swift */; };
 		DA2D00341EECCA1000365F23 /* MOptionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00331EECCA1000365F23 /* MOptionProtocol.swift */; };
+		DA2D00361EECCAD600365F23 /* MOptionReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00351EECCAD600365F23 /* MOptionReformaCrossing.swift */; };
 		DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */; };
 		DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA61EECB16A00365F23 /* Controller.swift */; };
 		DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */; };
@@ -63,6 +64,7 @@
 		DA2D002A1EECC6CE00365F23 /* ControllerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerGame.swift; sourceTree = "<group>"; };
 		DA2D002E1EECC88F00365F23 /* COptionReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COptionReformaCrossing.swift; sourceTree = "<group>"; };
 		DA2D00331EECCA1000365F23 /* MOptionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionProtocol.swift; sourceTree = "<group>"; };
+		DA2D00351EECCAD600365F23 /* MOptionReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossing.swift; sourceTree = "<group>"; };
 		DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA2DFFA61EECB16A00365F23 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		DA2D00321EECC9F000365F23 /* ReformaCrossing */ = {
 			isa = PBXGroup;
 			children = (
+				DA2D00351EECCAD600365F23 /* MOptionReformaCrossing.swift */,
 			);
 			path = ReformaCrossing;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				DA2DFFE11EECB16A00365F23 /* ExtensionUIFont.swift in Sources */,
 				DA2DFFD71EECB16A00365F23 /* MSession.swift in Sources */,
 				DA2DFFEE1EECB16A00365F23 /* VSlider.swift in Sources */,
+				DA2D00361EECCAD600365F23 /* MOptionReformaCrossing.swift in Sources */,
 				DA2DFFE61EECB16A00365F23 /* ViewParent.swift in Sources */,
 				DA2DFFF11EECB16A00365F23 /* VToast.swift in Sources */,
 				DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */,
