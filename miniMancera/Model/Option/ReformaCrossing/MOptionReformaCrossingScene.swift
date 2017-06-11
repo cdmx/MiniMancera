@@ -19,8 +19,12 @@ class MOptionReformaCrossingScene:SKScene
     override func didMove(to view:SKView)
     {
         backgroundColor = SKColor.black
+        
+        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
+            size:size)
         player.position = CGPoint(x:view.bounds.size.width / 2, y:view.bounds.size.height / 2)
         
+        addChild(background)
         addChild(player)
         
         run(SKAction.repeatForever(
