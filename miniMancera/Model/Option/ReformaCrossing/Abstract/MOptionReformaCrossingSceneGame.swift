@@ -43,11 +43,10 @@ class MOptionReformaCrossingSceneGame:SKScene
     
     private func spawnFoe()
     {
-        
-        
-        let foe:SKSpriteNode = factoryFoe()
-        
-        foe.position = CGPoint(x:foe.size.width / 2.0, y:200)
+        let lane:MOptionReformaCrossingLaneProtocol = model.lane.randomLane()
+        let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
+            lane:lane,
+            sceneSize:model.size)
         
         addChild(foe)
         
@@ -56,12 +55,5 @@ class MOptionReformaCrossingSceneGame:SKScene
         let actionMove = SKAction.move(to: CGPoint(x:size.width + (foe.size.width / 2), y:200), duration:actualDuration)
         let actionMoveDone = SKAction.removeFromParent()
         foe.run(SKAction.sequence([actionMove, actionMoveDone]))
-    }
-    
-    private func factoryFoe() -> SKSpriteNode
-    {
-        let foe:SKSpriteNode = SKSpriteNode(imageNamed:"assetReformaCrossingVW")
-        
-        return foe
     }
 }
