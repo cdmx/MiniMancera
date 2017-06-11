@@ -23,13 +23,28 @@ class MOptionReformaCrossingScene:SKScene
         
         addChild(player)
         
+        run(SKAction.repeatForever(
+        SKAction.sequence([
+            SKAction.run(addFoe),
+            SKAction.wait(forDuration:3)])))
     }
     
     //MARK: private
     
     private func addFoe()
     {
+        let foe:SKSpriteNode = factoryFoe()
         
+        
+        foe.position = CGPoint(x:foe.size.width / 2.0, y:200)
+        
+        addChild(foe)
+        
+        let actualDuration:TimeInterval = 8
+        
+        let actionMove = SKAction.move(to: CGPoint(x:size.width + (foe.size.width / 2), y:200), duration:actualDuration)
+        let actionMoveDone = SKAction.removeFromParent()
+        foe.run(SKAction.sequence([actionMove, actionMoveDone]))
     }
     
     private func factoryFoe() -> SKSpriteNode
