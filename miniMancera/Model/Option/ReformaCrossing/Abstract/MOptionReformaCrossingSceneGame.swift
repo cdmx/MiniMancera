@@ -43,6 +43,8 @@ class MOptionReformaCrossingSceneGame:SKScene
     
     private func spawnFoe()
     {
+        
+        
         let foe:SKSpriteNode = factoryFoe()
         
         foe.position = CGPoint(x:foe.size.width / 2.0, y:200)
