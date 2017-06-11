@@ -28,7 +28,7 @@ class ControllerGame:UIViewController
     
     override func loadView()
     {
-        let view:SKView = SKView(frame:CGRect.zero)
+        let view:SKView = SKView(frame:UIScreen.main.bounds)
         self.view = view
     }
     
@@ -51,7 +51,7 @@ class ControllerGame:UIViewController
             return
         }
         
-        scene.scaleMode = SKSceneScaleMode.aspectFill
+        scene.scaleMode = SKSceneScaleMode.resizeFill
         view.showsFPS = true
         view.showsNodeCount = true
         view.ignoresSiblingOrder = true
