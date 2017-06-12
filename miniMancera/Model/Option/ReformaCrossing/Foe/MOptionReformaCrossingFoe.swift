@@ -102,6 +102,13 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         self.physicsBody = physicsBody
     }
     
+    //MARK: public
+    
+    func hitTheBreaks()
+    {
+        
+    }
+    
     //MARK: foe protocol
     
     var randomMaxSpeed:UInt32

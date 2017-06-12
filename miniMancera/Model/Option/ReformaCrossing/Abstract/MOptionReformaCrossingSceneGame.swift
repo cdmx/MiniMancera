@@ -71,7 +71,38 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     private func contactFoes(foeA:MOptionReformaCrossingFoe, foeB:MOptionReformaCrossingFoe)
     {
+        let positionA:CGFloat = foeA.position.x
+        let positionB:CGFloat = foeB.position.x
         
+        if foeA.lane === foeB.lane
+        {
+            if foeA.lane.direction > 0
+            {
+                if positionA >= positionB
+                {
+                    foeB.hitTheBreaks()
+                }
+                else
+                {
+                    foeA.hitTheBreaks()
+                }
+            }
+            else
+            {
+                if positionA <= positionB
+                {
+                    foeB.hitTheBreaks()
+                }
+                else
+                {
+                    foeA.hitTheBreaks()
+                }
+            }
+        }
+        else
+        {
+            fatalError("shit")
+        }
     }
     
     //MARK: contact delegate
