@@ -48,7 +48,7 @@ class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLane
         {
             let minWidth:CGFloat = foe.size.width / 2.0
             
-            if foe.position.x < minWidth
+            if foe.position.x <= minWidth
             {
                 return true
             }

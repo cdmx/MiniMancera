@@ -100,7 +100,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
             actionWalk]
         let actionsGroup:SKAction = SKAction.group(actions)
         
-        run(actionsGroup, withKey:kActionWalking)
+//        run(actionsGroup, withKey:kActionWalking)
     }
     
     func isSafe() -> Bool

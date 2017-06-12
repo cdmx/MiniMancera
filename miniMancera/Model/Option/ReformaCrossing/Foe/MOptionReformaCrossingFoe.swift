@@ -8,8 +8,8 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     private let kActionMoving:String = "actionMoving"
     private let kMinSpeed:CGFloat = 10
     private let kPauseDuration:TimeInterval = 1
-    private let kPhysicsHeight:CGFloat = 22
-    private let kPhysicsAddWidth:CGFloat = 5
+    private let kPhysicsHeight:CGFloat = 30
+    private let kPhysicsAddWidth:CGFloat = 8
     
     class func randomFoe(
         lane:MOptionReformaCrossingLane,
@@ -94,6 +94,8 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     private func startPhysics(size:CGSize)
     {
+        print("size \(size)")
+        
         let physicsWidth:CGFloat = size.width + kPhysicsAddWidth
         let physicsSize:CGSize = CGSize(width:physicsWidth, height:kPhysicsHeight)
         
