@@ -6,7 +6,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let positionSafe:CGFloat
     private weak var model:MOptionReformaCrossing!
     private let kAddPointY:CGFloat = 200
-    private let kSpeed:CGFloat = 20
+    private let kSpeed:CGFloat = 30
     private let kActionWalking:String = "actionWalking"
     private let kAnimationPerFrame:TimeInterval = 0.3
     
