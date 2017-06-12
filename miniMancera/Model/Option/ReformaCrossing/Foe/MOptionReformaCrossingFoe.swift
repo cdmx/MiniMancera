@@ -3,6 +3,7 @@ import SpriteKit
 
 class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
 {
+    let created:TimeInterval
     private(set) weak var lane:MOptionReformaCrossingLane!
     private weak var model:MOptionReformaCrossing!
     private let kActionMoving:String = "actionMoving"
@@ -28,6 +29,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         let size:CGSize = texture.size()
         self.model = model
         self.lane = lane
+        created = Date().timeIntervalSince1970
         
         super.init(texture:texture, color:UIColor.clear, size:size)
         movement()
