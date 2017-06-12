@@ -18,8 +18,7 @@ class MOptionReformaCrossingSceneTitle:SKScene
         let width_2:CGFloat = size.width / 2.0
         let height_2:CGFloat = size.height / 2.0
         
-        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
-            size:size)
+        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(model:model)
         
         let levelNumber:NSNumber = model.level as NSNumber
         let messageTitle:String = String(

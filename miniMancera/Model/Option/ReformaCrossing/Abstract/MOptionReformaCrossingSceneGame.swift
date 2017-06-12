@@ -17,10 +17,11 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self
         
-        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
-            size:size)
+        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(model:model)
+        let menu:MOptionReformaCrossingMenu = MOptionReformaCrossingMenu(model:model)
         
         addChild(background)
+        addChild(menu)
     }
     
     required init?(coder:NSCoder)
