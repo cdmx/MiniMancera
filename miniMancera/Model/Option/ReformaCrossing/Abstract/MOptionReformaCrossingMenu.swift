@@ -4,7 +4,7 @@ import SpriteKit
 class MOptionReformaCrossingMenu:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
-    private let kMargin:CGFloat = 30
+    private let kMargin:CGFloat = 45
     private let kZPosition:CGFloat = 1001
     
     init(controller:COptionReformaCrossing)
@@ -34,8 +34,9 @@ class MOptionReformaCrossingMenu:SKSpriteNode
     private func startPosition() -> CGPoint
     {
         let sceneHeight:CGFloat = controller.model.size.height
+        let sizeWidth_2:CGFloat = size.width / 2.0
         let posY:CGFloat = sceneHeight - kMargin
-        let point:CGPoint = CGPoint(x:kMargin, y:posY)
+        let point:CGPoint = CGPoint(x:sizeWidth_2, y:posY)
         
         return point
     }
