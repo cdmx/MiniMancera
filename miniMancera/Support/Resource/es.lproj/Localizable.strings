@@ -2,5 +2,5 @@
 
 "MOptionReformaCrossingSceneTitle_labelTitle"="Nivel %@";
 
-"COptionReformaCrossing_menuResume"="Continuar";
-"COptionReformaCrossing_menuExit"="Salir";
+"ControllerGame_menuResume"="Continuar";
+"ControllerGame_menuExit"="Salir";

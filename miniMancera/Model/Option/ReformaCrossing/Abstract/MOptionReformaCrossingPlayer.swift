@@ -30,6 +30,11 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         return nil
     }
     
+    deinit
+    {
+        print("die")
+    }
+    
     //MARK: private
     
     private func startPosition() -> CGPoint
