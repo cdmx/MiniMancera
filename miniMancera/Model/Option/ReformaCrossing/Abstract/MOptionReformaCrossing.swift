@@ -7,7 +7,7 @@ class MOptionReformaCrossing:MOptionProtocol
     private(set) var size:CGSize
     private(set) var level:Int
     private let kStartingLevel:Int = 1
-    private let kSpeedMultiplier:Int = 30
+    private let kSpeedMultiplier:Int = 40
     
     init()
     {

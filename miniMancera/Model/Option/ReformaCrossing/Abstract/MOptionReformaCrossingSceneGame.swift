@@ -55,10 +55,12 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         let lane:MOptionReformaCrossingLane = model.laneGroup.randomLane()
         
-        let hasFoeWaiting:Bool = lane.hasFoeWaiting()
+        let hasFoeWaiting:Bool = lane.hasFoeWaiting(sceneSize:model.size)
         
         if hasFoeWaiting
         {
+            print("foe waiting")
+            
             return
         }
         
