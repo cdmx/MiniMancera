@@ -41,4 +41,22 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
         
         return point
     }
+    
+    override func hasFoeWaiting(sceneSize:CGSize) -> Bool
+    {
+        let sceneWidth:CGFloat = sceneSize.width
+        
+        for foe:MOptionReformaCrossingFoe in foes
+        {
+            let foeWidth_2:CGFloat = foe.size.width / 2.0
+            let minWidth:CGFloat = sceneWidth - foeWidth_2
+            
+            if foe.position.x > minWidth
+            {
+                return true
+            }
+        }
+        
+        return false
+    }
 }

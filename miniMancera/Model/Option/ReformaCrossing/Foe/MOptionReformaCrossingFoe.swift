@@ -117,7 +117,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     private func leaveStreet()
     {
-        lane.foes.remo
+        lane.removeFoe(item:self)
         removeAllActions()
         removeFromParent()
     }
