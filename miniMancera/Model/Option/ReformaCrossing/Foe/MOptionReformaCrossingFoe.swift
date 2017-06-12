@@ -5,6 +5,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
 {
     private(set) weak var lane:MOptionReformaCrossingLaneProtocol!
     private weak var model:MOptionReformaCrossing!
+    private let kActionMoving:String = "actionMoving"
     private let kMinSpeed:CGFloat = 10
     private let kPauseDuration:TimeInterval = 1
     
@@ -67,7 +68,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
             actionExit]
         let actionsSequence:SKAction = SKAction.sequence(actions)
         
-        run(actionsSequence)
+        run(actionsSequence, withKey:kActionMoving)
     }
     
     private func movementDuration(startingPoint:CGPoint, endingPoint:CGPoint) -> TimeInterval
@@ -105,14 +106,32 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     private func resumeGas()
     {
-        isPaused = false
+        guard
+            
+            let actionMoving:SKAction = action(forKey:kActionMoving)
+            
+        else
+        {
+            return
+        }
+        
+        actionMoving.speed = 1
     }
     
     //MARK: public
     
     func hitTheBreaks()
     {
-        isPaused = true
+        guard
+            
+            let actionMoving:SKAction = action(forKey:kActionMoving)
+        
+        else
+        {
+            return
+        }
+        
+        actionMoving.speed = 0
         
         let actionDelay:SKAction = SKAction.wait(forDuration:kPauseDuration)
         let actionResume:SKAction = SKAction.run(resumeGas)
