@@ -6,7 +6,7 @@ class MOptionReformaCrossingStop:SKSpriteNode
     private weak var controller:COptionReformaCrossing!
     private let animationTextures:[SKTexture]
     private let kZPosition:CGFloat = 99999
-    private let kAnimationFrameTime:TimeInterval = 0.2
+    private let kAnimationFrameTime:TimeInterval = 0.05
     
     private class func factoryAnimationTextures() -> [SKTexture]
     {
@@ -47,6 +47,7 @@ class MOptionReformaCrossingStop:SKSpriteNode
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
+        isUserInteractionEnabled = false
         animateStop()
     }
     
@@ -68,7 +69,17 @@ class MOptionReformaCrossingStop:SKSpriteNode
             timePerFrame:kAnimationFrameTime,
             resize:false,
             restore:true)
+        let actionReEnable:SKAction = SKAction.run(reEnable)
+        let actions:[SKAction] = [
+            actionAnimation,
+            actionReEnable]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
         
-        run(actionAnimation)
+        run(actionsSequence)
+    }
+    
+    private func reEnable()
+    {
+        isUserInteractionEnabled = true
     }
 }
