@@ -23,10 +23,13 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
             controller:controller)
         let menu:MOptionReformaCrossingMenu = MOptionReformaCrossingMenu(
             controller:controller)
+        let stop:MOptionReformaCrossingStop = MOptionReformaCrossingStop(
+            controller:controller)
         
         addChild(background)
         addChild(bar)
         addChild(menu)
+        addChild(stop)
     }
     
     required init?(coder:NSCoder)
