@@ -46,15 +46,27 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     private func spawnFoe()
     {
-        if shouldSpawn()
+        let should:Bool = shouldSpawn()
+        
+        if !should
         {
-            let lane:MOptionReformaCrossingLane = model.laneGroup.randomLane()
-            let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
-                lane:lane,
-                model:model)
-            
-            addChild(foe)
+            return
         }
+        
+        let lane:MOptionReformaCrossingLane = model.laneGroup.randomLane()
+        
+        let hasFoeWaiting:Bool = lane.hasFoeWaiting()
+        
+        if hasFoeWaiting
+        {
+            return
+        }
+        
+        let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
+            lane:lane,
+            model:model)
+        
+        addChild(foe)
     }
     
     private func shouldSpawn() -> Bool

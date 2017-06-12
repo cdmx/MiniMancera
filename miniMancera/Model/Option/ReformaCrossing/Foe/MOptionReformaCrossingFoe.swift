@@ -33,6 +33,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         movement()
         scale()
         startPhysics(size:size)
+        lane.foes.append(self)
     }
     
     required init?(coder:NSCoder)
