@@ -70,7 +70,6 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
             actionMove,
             actionLeaveStreet]
         let actionsSequence:SKAction = SKAction.sequence(actions)
-        self.actionMove = actionMove
         
         run(actionsSequence, withKey:kActionMoving)
     }
