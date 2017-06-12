@@ -102,30 +102,13 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     private func contactFoes(foeA:MOptionReformaCrossingFoe, foeB:MOptionReformaCrossingFoe)
     {
-        let positionA:CGFloat = foeA.position.x
-        let positionB:CGFloat = foeB.position.x
-        
-        if foeA.lane.direction > 0
+        if foeA.created < foeB.created
         {
-            if positionA >= positionB
-            {
-                foeB.hitTheBreaks()
-            }
-            else
-            {
-                foeA.hitTheBreaks()
-            }
+            foeB.hitTheBreaks()
         }
         else
         {
-            if positionA <= positionB
-            {
-                foeB.hitTheBreaks()
-            }
-            else
-            {
-                foeA.hitTheBreaks()
-            }
+            foeA.hitTheBreaks()
         }
     }
     
