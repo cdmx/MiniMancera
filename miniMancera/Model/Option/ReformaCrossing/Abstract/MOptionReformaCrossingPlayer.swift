@@ -71,7 +71,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let actionAnimate:SKAction = SKAction.animate(
             with:textures,
             timePerFrame:kAnimationPerFrame,
-            resize:true,
+            resize:false,
             restore:true)
         let actionRepeat:SKAction = SKAction.repeatForever(actionAnimate)
         
