@@ -1,6 +1,6 @@
 import UIKit
 
-protocol MOptionReformaCrossingLaneProtocol
+protocol MOptionReformaCrossingLaneProtocol:class
 {
     var scaleHorizontal:CGFloat { get }
     func foeInitialPoint(foe:MOptionReformaCrossingFoe, sceneSize:CGSize) -> CGPoint

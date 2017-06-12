@@ -3,6 +3,7 @@ import SpriteKit
 
 class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
 {
+    private(set) weak var lane:MOptionReformaCrossingLaneProtocol!
     private weak var model:MOptionReformaCrossing!
     private let kMinSpeed:CGFloat = 10
     
@@ -22,10 +23,11 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingVW"))
         let size:CGSize = texture.size()
         self.model = model
+        self.lane = lane
         
         super.init(texture:texture, color:UIColor.clear, size:size)
-        movement(lane:lane, model:model)
-        scale(lane:lane)
+        movement()
+        scale()
         startPhysics(size:size)
     }
     
@@ -36,12 +38,12 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     //MARK: private
     
-    private func scale(lane:MOptionReformaCrossingLaneProtocol)
+    private func scale()
     {
         xScale = xScale * lane.scaleHorizontal
     }
     
-    private func movement(lane:MOptionReformaCrossingLaneProtocol, model:MOptionReformaCrossing)
+    private func movement()
     {
         let startingPoint:CGPoint = lane.foeInitialPoint(
             foe:self,
