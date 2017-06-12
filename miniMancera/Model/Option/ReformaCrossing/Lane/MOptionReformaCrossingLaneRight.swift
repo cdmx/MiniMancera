@@ -4,6 +4,7 @@ class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLaneProtocol
 {
     private let deltaVertical:CGFloat
     private let kScaleHorizontal:CGFloat = 1
+    private let kDirection:CGFloat = 1
     
     init(deltaVertical:CGFloat)
     {
@@ -17,6 +18,14 @@ class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLaneProtocol
         get
         {
             return kScaleHorizontal
+        }
+    }
+    
+    var direction:CGFloat
+    {
+        get
+        {
+            return kDirection
         }
     }
     
