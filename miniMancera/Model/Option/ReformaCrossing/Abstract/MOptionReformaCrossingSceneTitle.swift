@@ -2,17 +2,17 @@ import SpriteKit
 
 class MOptionReformaCrossingSceneTitle:SKScene
 {
-    private weak var model:MOptionReformaCrossing!
+    private weak var controller:COptionReformaCrossing!
     private let kFont:String = "Arial-BoldMT"
     private let kFontSize:CGFloat = 45
     private let kWaitStartGame:TimeInterval = 0.7
     private let kAnimationDuration:TimeInterval = 0.3
     
-    init(model:MOptionReformaCrossing)
+    init(controller:COptionReformaCrossing)
     {
-        self.model = model
+        self.controller = controller
         
-        super.init(size:model.size)
+        super.init(size:controller.model.size)
         backgroundColor = SKColor.black
         
         let width_2:CGFloat = size.width / 2.0

@@ -5,7 +5,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
 {
     let created:TimeInterval
     private(set) weak var lane:MOptionReformaCrossingLane!
-    private weak var model:MOptionReformaCrossing!
+    private weak var controller:COptionReformaCrossing!
     private let kActionMoving:String = "actionMoving"
     private let kPauseDuration:TimeInterval = 1
     private let kPhysicsHeight:CGFloat = 30
@@ -13,20 +13,20 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     class func randomFoe(
         lane:MOptionReformaCrossingLane,
-        model:MOptionReformaCrossing) -> MOptionReformaCrossingFoe
+        controller:COptionReformaCrossing) -> MOptionReformaCrossingFoe
     {
         let foe:MOptionReformaCrossingFoeVW = MOptionReformaCrossingFoeVW(
             lane:lane,
-            model:model)
+            controller:controller)
         
         return foe
     }
     
-    init(lane:MOptionReformaCrossingLane, model:MOptionReformaCrossing)
+    init(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
     {
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingVW"))
         let size:CGSize = texture.size()
-        self.model = model
+        self.controller = controller
         self.lane = lane
         created = Date().timeIntervalSince1970
         

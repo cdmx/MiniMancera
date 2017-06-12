@@ -1,16 +1,5 @@
 import UIKit
 
-class COptionReformaCrossing:ControllerGame
+class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
 {
-    init()
-    {
-        let model:MOptionReformaCrossing = MOptionReformaCrossing()
-        
-        super.init(model:model)
-    }
-    
-    required init?(coder:NSCoder)
-    {
-        return nil
-    }
 }

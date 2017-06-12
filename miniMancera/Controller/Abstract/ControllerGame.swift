@@ -1,13 +1,13 @@
 import UIKit
 import SpriteKit
 
-class ControllerGame:UIViewController
+class ControllerGame<T:MOptionProtocol>:UIViewController
 {
-    let model:MOptionProtocol
+    let model:T
     
-    init(model:MOptionProtocol)
+    init()
     {
-        self.model = model
+        model = T()
         super.init(nibName:nil, bundle:nil)
     }
     

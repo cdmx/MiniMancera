@@ -3,14 +3,14 @@ import SpriteKit
 
 class MOptionReformaCrossingBar:SKSpriteNode
 {
-    private weak var model:MOptionReformaCrossing!
+    private weak var controller:COptionReformaCrossing!
     private let kHeight:CGFloat = 64
     private let kAlpha:CGFloat = 0.6
     private let kZPosition:CGFloat = 1000
     
-    init(model:MOptionReformaCrossing)
+    init(controller:COptionReformaCrossing)
     {
-        self.model = model
+        self.controller = controller
         let sceneWidth:CGFloat = model.size.width
         let sceneWidth_2:CGFloat = sceneWidth / 2
         let sceneHeight:CGFloat = model.size.height

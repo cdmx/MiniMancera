@@ -19,7 +19,7 @@ class CHome:Controller<VHome>
     
     func optionSelected(option:MHomeOptionsProtocol)
     {
-        let controller:ControllerGame = option.gameController()
+        let controller:UIViewController = option.gameController()
         
         parent?.present(controller, animated:true, completion:nil)
     }

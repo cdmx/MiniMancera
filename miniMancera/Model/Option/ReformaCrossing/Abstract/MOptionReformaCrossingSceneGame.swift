@@ -2,17 +2,17 @@ import SpriteKit
 
 class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
 {
-    private weak var model:MOptionReformaCrossing!
+    private weak var controller:COptionReformaCrossing!
     private let player:MOptionReformaCrossingPlayer
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kSpawnProbability:UInt32 = 5
     
-    init(model:MOptionReformaCrossing)
+    init(controller:COptionReformaCrossing)
     {
-        self.model = model
+        self.controller = controller
         player = MOptionReformaCrossingPlayer(model:model)
         
-        super.init(size:model.size)
+        super.init(size:controller.model.size)
         backgroundColor = SKColor.black
         physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self

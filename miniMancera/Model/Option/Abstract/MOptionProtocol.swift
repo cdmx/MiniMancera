@@ -3,5 +3,6 @@ import SpriteKit
 
 protocol MOptionProtocol
 {
-    func sceneWithSize(size:CGSize) -> SKScene
+    init()
+    func sceneWithSize(controller:UIViewController, size:CGSize) -> SKScene?
 }

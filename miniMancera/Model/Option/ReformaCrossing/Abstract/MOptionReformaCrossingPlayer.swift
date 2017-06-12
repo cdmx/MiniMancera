@@ -3,7 +3,7 @@ import SpriteKit
 
 class MOptionReformaCrossingPlayer:SKSpriteNode
 {
-    private weak var model:MOptionReformaCrossing!
+    private weak var controller:COptionReformaCrossing!
     private let positionSafe:CGFloat
     private let kAddPointY:CGFloat = 200
     private let kSpeed:CGFloat = 35
@@ -11,14 +11,14 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let kAnimationPerFrame:TimeInterval = 0.2
     private let kZPosition:CGFloat = 0
     
-    init(model:MOptionReformaCrossing)
+    init(controller:COptionReformaCrossing)
     {
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer0"))
         let size:CGSize = texture.size()
-        let sceneHeight_2:CGFloat = model.size.height / 2.0
+        let sceneHeight_2:CGFloat = controller.model.size.height / 2.0
         let height_2:CGFloat = size.height / 2.0
         positionSafe = sceneHeight_2 + height_2 + kAddPointY
-        self.model = model
+        self.controller = controller
         
         super.init(texture:texture, color:UIColor.clear, size:size)
         position = startPosition()

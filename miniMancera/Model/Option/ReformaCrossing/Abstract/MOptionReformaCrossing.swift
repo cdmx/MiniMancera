@@ -9,7 +9,7 @@ class MOptionReformaCrossing:MOptionProtocol
     private let kStartingLevel:Int = 1
     private let kSpeedMultiplier:Int = 40
     
-    init()
+    required init()
     {
         laneGroup = MOptionReformaCrossingLaneGroup()
         size = CGSize.zero
@@ -27,10 +27,22 @@ class MOptionReformaCrossing:MOptionProtocol
     
     //MARK: option protocol
     
-    func sceneWithSize(size:CGSize) -> SKScene
+    func sceneWithSize(
+        controller:UIViewController,
+        size:CGSize) -> SKScene?
     {
+        guard
+            
+            let controller:COptionReformaCrossing = controller as? COptionReformaCrossing
+        
+        else
+        {
+            return nil
+        }
+        
         self.size = size
-        let scene:MOptionReformaCrossingSceneTitle = MOptionReformaCrossingSceneTitle(model:self)
+        let scene:MOptionReformaCrossingSceneTitle = MOptionReformaCrossingSceneTitle(
+            controller:controller)
         
         return scene
     }
