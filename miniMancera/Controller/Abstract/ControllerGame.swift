@@ -57,4 +57,34 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
         view.ignoresSiblingOrder = true
         view.presentScene(scene)
     }
+    
+    //MARK: public
+    
+    final func pause()
+    {
+        guard
+        
+            let view:SKView = self.view as? SKView
+        
+        else
+        {
+            return
+        }
+        
+        view.isPaused = true
+    }
+    
+    final func resume()
+    {
+        guard
+            
+            let view:SKView = self.view as? SKView
+            
+        else
+        {
+            return
+        }
+        
+        view.isPaused = false
+    }
 }

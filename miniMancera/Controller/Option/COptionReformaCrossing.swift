@@ -2,9 +2,9 @@ import UIKit
 
 class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
 {
-    //MARK: public
+    //MARK: private
     
-    func showMenu()
+    private func asyncShowMenu()
     {
         let alert:UIAlertController = UIAlertController(
             title:nil,
@@ -15,7 +15,11 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
             title:
             NSLocalizedString("COptionReformaCrossing_menuResume", comment:""),
             style:
-            UIAlertActionStyle.default)
+            UIAlertActionStyle.cancel)
+        { [weak self] (action:UIAlertAction) in
+         
+            self?.resume()
+        }
         
         let actionExit:UIAlertAction = UIAlertAction(
             title:
@@ -37,5 +41,18 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         }
         
         present(alert, animated:true, completion:nil)
+    }
+    
+    //MARK: public
+    
+    func showMenu()
+    {
+        pause()
+        
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncShowMenu()
+        }
     }
 }

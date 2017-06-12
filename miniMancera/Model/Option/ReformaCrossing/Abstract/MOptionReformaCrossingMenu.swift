@@ -16,11 +16,17 @@ class MOptionReformaCrossingMenu:SKSpriteNode
         super.init(texture:texture, color:UIColor.clear, size:size)
         position = startPosition()
         zPosition = kZPosition
+        isUserInteractionEnabled = true
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
+    {
+        controller.showMenu()
     }
     
     //MARK: private
