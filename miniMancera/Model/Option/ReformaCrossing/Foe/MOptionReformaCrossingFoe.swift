@@ -41,11 +41,6 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         return nil
     }
     
-    deinit
-    {
-        print("die")
-    }
-    
     //MARK: private
     
     private func scale()
@@ -75,6 +70,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
             actionMove,
             actionLeaveStreet]
         let actionsSequence:SKAction = SKAction.sequence(actions)
+        self.actionMove = actionMove
         
         run(actionsSequence, withKey:kActionMoving)
     }

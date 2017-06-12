@@ -21,7 +21,6 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
             size:size)
         
         addChild(background)
-        addChild(player)
     }
     
     required init?(coder:NSCoder)
@@ -30,6 +29,19 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     }
     
     override func didMove(to view:SKView)
+    {
+        startFoes()
+        startPlayer()
+    }
+    
+    //MARK: private
+    
+    private func startPlayer()
+    {
+        addChild(player)
+    }
+    
+    private func startFoes()
     {
         let actionSpawnFoe:SKAction = SKAction.run(spawnFoe)
         let actionDelay:SKAction = SKAction.wait(forDuration:kSpawnFoeRate)
@@ -41,8 +53,6 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         run(actionRepeat)
     }
-    
-    //MARK: private
     
     private func spawnFoe()
     {
@@ -59,8 +69,6 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         if hasFoeWaiting
         {
-            print("foe waiting")
-            
             return
         }
         
