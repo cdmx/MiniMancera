@@ -43,8 +43,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     {
         let sceneWidth_2:CGFloat = model.size.width / 2.0
         let sceneHeight:CGFloat = model.size.height
-        let height_2:CGFloat = size.height / 2.0
-        let positionY:CGFloat = sceneHeight + height_2
+        let positionY:CGFloat = sceneHeight + size.height
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         
         return point
@@ -61,7 +60,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let actionAnimate:SKAction = SKAction.animate(
             with:textures,
             timePerFrame:kAnimationPerFrame,
-            resize:false,
+            resize:true,
             restore:true)
         let actionRepeat:SKAction = SKAction.repeatForever(actionAnimate)
         
