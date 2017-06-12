@@ -3,7 +3,7 @@ import SpriteKit
 
 class MOptionReformaCrossingPlayer:SKSpriteNode
 {
-    let positionSafe:CGFloat
+    private let positionSafe:CGFloat
     private weak var model:MOptionReformaCrossing!
     private let kAddPointY:CGFloat = 200
     private let kSpeed:CGFloat = 20
@@ -102,5 +102,15 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let actionsGroup:SKAction = SKAction.group(actions)
         
         run(actionsGroup, withKey:kActionWalking)
+    }
+    
+    func isSafe() -> Bool
+    {
+        if position.y > positionSafe
+        {
+            return true
+        }
+        
+        return false
     }
 }

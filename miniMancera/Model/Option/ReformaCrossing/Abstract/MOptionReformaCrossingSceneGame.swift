@@ -34,6 +34,14 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         startPlayer()
     }
     
+    override func update(_ currentTime:TimeInterval)
+    {
+        if player.isSafe()
+        {
+            print("you won")
+        }
+    }
+    
     //MARK: private
     
     private func startPlayer()
