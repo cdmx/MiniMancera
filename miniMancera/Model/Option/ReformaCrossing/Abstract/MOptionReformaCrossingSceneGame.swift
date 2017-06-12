@@ -10,7 +10,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     init(model:MOptionReformaCrossing)
     {
         self.model = model
-        player = MOptionReformaCrossingPlayer(sceneSize:model.size)
+        player = MOptionReformaCrossingPlayer(model:model)
         
         super.init(size:model.size)
         backgroundColor = SKColor.black
@@ -39,6 +39,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private func startPlayer()
     {
         addChild(player)
+        player.startWalking()
     }
     
     private func startFoes()

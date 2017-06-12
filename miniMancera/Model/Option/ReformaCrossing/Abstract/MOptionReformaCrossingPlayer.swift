@@ -4,7 +4,7 @@ import SpriteKit
 class MOptionReformaCrossingPlayer:SKSpriteNode
 {
     private weak var model:MOptionReformaCrossing!
-    private let kPositionSafe:CGFloat = 180
+    private let kPositionSafe:CGFloat = 200
     private let kSpeed:CGFloat = 50
     private let kActionWalking:String = "actionWalking"
     private let kAnimationPerFrame:TimeInterval = 0.3
@@ -40,7 +40,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let sceneWidth_2:CGFloat = model.size.width / 2.0
         let sceneHeight_2:CGFloat = model.size.height / 2.0
         let height_2:CGFloat = size.height / 2.0
-        let positionY:CGFloat = sceneHeight_2 + height_2
+        let positionY:CGFloat = sceneHeight_2 + height_2 + kPositionSafe
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         
         return point
@@ -56,9 +56,12 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         
         let actionAnimate:SKAction = SKAction.animate(
             with:textures,
-            timePerFrame:kAnimationPerFrame)
+            timePerFrame:kAnimationPerFrame,
+            resize:false,
+            restore:true)
+        let actionRepeat:SKAction = SKAction.repeatForever(actionAnimate)
         
-        return actionAnimate
+        return actionRepeat
     }
     
     private func createActionWalk() -> SKAction
@@ -77,7 +80,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     private func movementDuration(startingPoint:CGPoint, endingPoint:CGPoint) -> TimeInterval
     {
-        let distance:CGFloat = abs(startingPoint.x - endingPoint.x)
+        let distance:CGFloat = abs(startingPoint.y - endingPoint.y)
         let translationTime:TimeInterval = TimeInterval(distance / kSpeed)
         
         return translationTime
