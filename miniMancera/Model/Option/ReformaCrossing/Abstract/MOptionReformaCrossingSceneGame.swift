@@ -18,9 +18,11 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         physicsWorld.contactDelegate = self
         
         let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(model:model)
+        let bar:MOptionReformaCrossingBar = MOptionReformaCrossingBar(model:model)
         let menu:MOptionReformaCrossingMenu = MOptionReformaCrossingMenu(model:model)
         
         addChild(background)
+        addChild(bar)
         addChild(menu)
     }
     

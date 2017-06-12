@@ -5,6 +5,8 @@ class MOptionReformaCrossingBar:SKSpriteNode
 {
     private weak var model:MOptionReformaCrossing!
     private let kHeight:CGFloat = 64
+    private let kAlpha:CGFloat = 0.6
+    private let kZPosition:CGFloat = 1
     
     init(model:MOptionReformaCrossing)
     {
@@ -14,12 +16,13 @@ class MOptionReformaCrossingBar:SKSpriteNode
         let sceneHeight:CGFloat = model.size.height
         let height_2:CGFloat = kHeight / 2
         let positionY:CGFloat = sceneHeight - height_2
-        let size:CGSize = CGSize(width:0, height:kHeight)
+        let size:CGSize = CGSize(width:sceneWidth, height:kHeight)
         let position:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
-        let color:UIColor = UIColor(white:0, alpha:0.5)
+        let color:UIColor = UIColor(white:0, alpha:kAlpha)
         
         super.init(texture:nil, color:color, size:size)
         self.position = position
+        zPosition = kZPosition
     }
     
     required init?(coder:NSCoder)

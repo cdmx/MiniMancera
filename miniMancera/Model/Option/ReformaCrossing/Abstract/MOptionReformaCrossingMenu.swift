@@ -5,6 +5,7 @@ class MOptionReformaCrossingMenu:SKSpriteNode
 {
     private weak var model:MOptionReformaCrossing!
     private let kMargin:CGFloat = 30
+    private let kZPosition:CGFloat = 2
     
     init(model:MOptionReformaCrossing)
     {
@@ -12,10 +13,9 @@ class MOptionReformaCrossingMenu:SKSpriteNode
         let size:CGSize = texture.size()
         self.model = model
         
-        print(size)
-        
         super.init(texture:texture, color:UIColor.clear, size:size)
         position = startPosition()
+        zPosition = kZPosition
     }
     
     required init?(coder:NSCoder)

@@ -9,6 +9,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let kSpeed:CGFloat = 35
     private let kActionWalking:String = "actionWalking"
     private let kAnimationPerFrame:TimeInterval = 0.2
+    private let kZPosition:CGFloat = 0
     
     init(model:MOptionReformaCrossing)
     {
@@ -21,6 +22,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         
         super.init(texture:texture, color:UIColor.clear, size:size)
         position = startPosition()
+        zPosition = kZPosition
     }
     
     required init?(coder:NSCoder)
