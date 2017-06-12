@@ -2,10 +2,10 @@ import Foundation
 
 class MOptionReformaCrossingLaneGroup
 {
-    let lanes:[MOptionReformaCrossingLaneProtocol]
+    let lanes:[MOptionReformaCrossingLane]
     private let countLanes:UInt32
     
-    private class func factoryLanes() -> [MOptionReformaCrossingLaneProtocol]
+    private class func factoryLanes() -> [MOptionReformaCrossingLane]
     {
         let laneA:MOptionReformaCrossingLaneA = MOptionReformaCrossingLaneA()
         let laneB:MOptionReformaCrossingLaneB = MOptionReformaCrossingLaneB()
@@ -16,7 +16,7 @@ class MOptionReformaCrossingLaneGroup
         let laneG:MOptionReformaCrossingLaneG = MOptionReformaCrossingLaneG()
         let laneH:MOptionReformaCrossingLaneH = MOptionReformaCrossingLaneH()
         
-        let lanes:[MOptionReformaCrossingLaneProtocol] = [
+        let lanes:[MOptionReformaCrossingLane] = [
             laneA,
             laneB,
             laneC,
@@ -31,16 +31,16 @@ class MOptionReformaCrossingLaneGroup
     
     init()
     {
-        lanes = MOptionReformaCrossingLane.factoryLanes()
+        lanes = MOptionReformaCrossingLaneGroup.factoryLanes()
         countLanes = UInt32(lanes.count)
     }
     
     //MARK: public
     
-    func randomLane() -> MOptionReformaCrossingLaneProtocol
+    func randomLane() -> MOptionReformaCrossingLane
     {
         let random:Int = Int(arc4random_uniform(countLanes))
-        let lane:MOptionReformaCrossingLaneProtocol = lanes[random]
+        let lane:MOptionReformaCrossingLane = lanes[random]
         
         return lane
     }

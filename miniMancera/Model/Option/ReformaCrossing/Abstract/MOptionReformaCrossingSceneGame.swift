@@ -48,7 +48,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     {
         if shouldSpawn()
         {
-            let lane:MOptionReformaCrossingLaneProtocol = model.lane.randomLane()
+            let lane:MOptionReformaCrossingLane = model.laneGroup.randomLane()
             let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
                 lane:lane,
                 model:model)

@@ -1,19 +1,11 @@
 import UIKit
 
-class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLaneProtocol
+class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLane
 {
-    private let deltaVertical:CGFloat
     private let kScaleHorizontal:CGFloat = 1
     private let kDirection:CGFloat = 1
     
-    init(deltaVertical:CGFloat)
-    {
-        self.deltaVertical = deltaVertical
-    }
-    
-    //MARK: lane protocol
-    
-    var scaleHorizontal:CGFloat
+    override var scaleHorizontal:CGFloat
     {
         get
         {
@@ -21,7 +13,7 @@ class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLaneProtocol
         }
     }
     
-    var direction:CGFloat
+    override var direction:CGFloat
     {
         get
         {
@@ -29,7 +21,7 @@ class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLaneProtocol
         }
     }
     
-    func foeInitialPoint(foe:MOptionReformaCrossingFoe, sceneSize:CGSize) -> CGPoint
+    override func foeInitialPoint(foe:MOptionReformaCrossingFoe, sceneSize:CGSize) -> CGPoint
     {
         let sceneHeight_2:CGFloat = sceneSize.height / 2.0
         let verticalPosition:CGFloat = sceneHeight_2 + deltaVertical
@@ -39,7 +31,7 @@ class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLaneProtocol
         return point
     }
     
-    func foeEndingPoint(foe:MOptionReformaCrossingFoe, sceneSize:CGSize) -> CGPoint
+    override func foeEndingPoint(foe:MOptionReformaCrossingFoe, sceneSize:CGSize) -> CGPoint
     {
         let sceneHeight_2:CGFloat = sceneSize.height / 2.0
         let verticalPosition:CGFloat = sceneHeight_2 + deltaVertical

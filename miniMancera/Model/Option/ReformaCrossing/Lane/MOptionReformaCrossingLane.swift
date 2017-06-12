@@ -1,47 +1,41 @@
-import Foundation
+import UIKit
 
-class MOptionReformaCrossingLane
+class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
 {
-    let lanes:[MOptionReformaCrossingLaneProtocol]
-    private let countLanes:UInt32
+    let deltaVertical:CGFloat
     
-    private class func factoryLanes() -> [MOptionReformaCrossingLaneProtocol]
+    init(deltaVertical:CGFloat)
     {
-        let laneA:MOptionReformaCrossingLaneA = MOptionReformaCrossingLaneA()
-        let laneB:MOptionReformaCrossingLaneB = MOptionReformaCrossingLaneB()
-        let laneC:MOptionReformaCrossingLaneC = MOptionReformaCrossingLaneC()
-        let laneD:MOptionReformaCrossingLaneD = MOptionReformaCrossingLaneD()
-        let laneE:MOptionReformaCrossingLaneE = MOptionReformaCrossingLaneE()
-        let laneF:MOptionReformaCrossingLaneF = MOptionReformaCrossingLaneF()
-        let laneG:MOptionReformaCrossingLaneG = MOptionReformaCrossingLaneG()
-        let laneH:MOptionReformaCrossingLaneH = MOptionReformaCrossingLaneH()
-        
-        let lanes:[MOptionReformaCrossingLaneProtocol] = [
-            laneA,
-            laneB,
-            laneC,
-            laneD,
-            laneE,
-            laneF,
-            laneG,
-            laneH]
-        
-        return lanes
-    }
-    
-    init()
-    {
-        lanes = MOptionReformaCrossingLane.factoryLanes()
-        countLanes = UInt32(lanes.count)
+        self.deltaVertical = deltaVertical
     }
     
     //MARK: public
     
-    func randomLane() -> MOptionReformaCrossingLaneProtocol
+    func foeInitialPoint(foe:MOptionReformaCrossingFoe, sceneSize:CGSize) -> CGPoint
     {
-        let random:Int = Int(arc4random_uniform(countLanes))
-        let lane:MOptionReformaCrossingLaneProtocol = lanes[random]
-        
-        return lane
+        return CGPoint.zero
+    }
+    
+    func foeEndingPoint(foe:MOptionReformaCrossingFoe, sceneSize:CGSize) -> CGPoint
+    {
+        return CGPoint.zero
+    }
+    
+    //MARK: lane protocol
+    
+    var scaleHorizontal:CGFloat
+    {
+        get
+        {
+            return 0
+        }
+    }
+    
+    var direction:CGFloat
+    {
+        get
+        {
+            return 0
+        }
     }
 }

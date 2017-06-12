@@ -3,7 +3,7 @@ import SpriteKit
 
 class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
 {
-    private(set) weak var lane:MOptionReformaCrossingLaneProtocol!
+    private(set) weak var lane:MOptionReformaCrossingLane!
     private weak var model:MOptionReformaCrossing!
     private let kActionMoving:String = "actionMoving"
     private let kMinSpeed:CGFloat = 10
@@ -12,7 +12,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     private let kPhysicsAddWidth:CGFloat = 5
     
     class func randomFoe(
-        lane:MOptionReformaCrossingLaneProtocol,
+        lane:MOptionReformaCrossingLane,
         model:MOptionReformaCrossing) -> MOptionReformaCrossingFoe
     {
         let foe:MOptionReformaCrossingFoeVW = MOptionReformaCrossingFoeVW(
@@ -22,7 +22,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         return foe
     }
     
-    init(lane:MOptionReformaCrossingLaneProtocol, model:MOptionReformaCrossing)
+    init(lane:MOptionReformaCrossingLane, model:MOptionReformaCrossing)
     {
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingVW"))
         let size:CGSize = texture.size()

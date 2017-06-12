@@ -3,7 +3,7 @@ import SpriteKit
 
 class MOptionReformaCrossing:MOptionProtocol
 {
-    let lane:MOptionReformaCrossingLane
+    let laneGroup:MOptionReformaCrossingLaneGroup
     private(set) var size:CGSize
     private(set) var level:Int
     private let kStartingLevel:Int = 1
@@ -11,7 +11,7 @@ class MOptionReformaCrossing:MOptionProtocol
     
     init()
     {
-        lane = MOptionReformaCrossingLane()
+        laneGroup = MOptionReformaCrossingLaneGroup()
         size = CGSize.zero
         level = kStartingLevel
     }
