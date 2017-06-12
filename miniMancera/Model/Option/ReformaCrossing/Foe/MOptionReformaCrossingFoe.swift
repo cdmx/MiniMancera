@@ -8,6 +8,8 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     private let kActionMoving:String = "actionMoving"
     private let kMinSpeed:CGFloat = 10
     private let kPauseDuration:TimeInterval = 1
+    private let kPhysicsHeight:CGFloat = 22
+    private let kPhysicsAddWidth:CGFloat = 5
     
     class func randomFoe(
         lane:MOptionReformaCrossingLaneProtocol,
@@ -38,6 +40,11 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         return nil
     }
     
+    deinit
+    {
+        print("die")
+    }
+    
     //MARK: private
     
     private func scale()
@@ -62,10 +69,10 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         let actionMove:SKAction = SKAction.move(
             to:endingPoint,
             duration:duration)
-        let actionExit:SKAction = SKAction.removeFromParent()
+        let actionLeaveStreet:SKAction = SKAction.run(leaveStreet)
         let actions:[SKAction] = [
             actionMove,
-            actionExit]
+            actionLeaveStreet]
         let actionsSequence:SKAction = SKAction.sequence(actions)
         
         run(actionsSequence, withKey:kActionMoving)
@@ -91,7 +98,10 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     private func startPhysics(size:CGSize)
     {
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
+        let physicsWidth:CGFloat = size.width + kPhysicsAddWidth
+        let physicsSize:CGSize = CGSize(width:physicsWidth, height:kPhysicsHeight)
+        
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:physicsSize)
         physicsBody.isDynamic = true
         physicsBody.friction = 1
         physicsBody.angularVelocity = 0
@@ -102,6 +112,12 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         physicsBody.contactTestBitMask = MOptionReformaCrossingPhysicsStruct.Foe
         physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.None
         self.physicsBody = physicsBody
+    }
+    
+    private func leaveStreet()
+    {
+        removeAllActions()
+        removeFromParent()
     }
     
     private func resumeGas()
