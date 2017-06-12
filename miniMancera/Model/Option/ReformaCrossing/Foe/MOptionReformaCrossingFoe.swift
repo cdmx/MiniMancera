@@ -6,6 +6,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     private(set) weak var lane:MOptionReformaCrossingLaneProtocol!
     private weak var model:MOptionReformaCrossing!
     private let kMinSpeed:CGFloat = 10
+    private let kPauseDuration:TimeInterval = 1
     
     class func randomFoe(
         lane:MOptionReformaCrossingLaneProtocol,
@@ -102,11 +103,25 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         self.physicsBody = physicsBody
     }
     
+    private func resumeGas()
+    {
+        isPaused = false
+    }
+    
     //MARK: public
     
     func hitTheBreaks()
     {
+        isPaused = true
         
+        let actionDelay:SKAction = SKAction.wait(forDuration:kPauseDuration)
+        let actionResume:SKAction = SKAction.run(resumeGas)
+        let actions:[SKAction] = [
+            actionDelay,
+            actionResume]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        run(actionsSequence)
     }
     
     //MARK: foe protocol
