@@ -13,9 +13,9 @@ class MOptionReformaCrossingBar:SKSpriteNode
         self.controller = controller
         let sceneSize:CGSize = controller.model.size
         let sceneWidth:CGFloat = sceneSize.width
-        let sceneWidth_2:CGFloat = sceneWidth / 2
+        let sceneWidth_2:CGFloat = sceneWidth / 2.0
         let sceneHeight:CGFloat = sceneSize.height
-        let height_2:CGFloat = kHeight / 2
+        let height_2:CGFloat = kHeight / 2.0
         let positionY:CGFloat = sceneHeight - height_2
         let size:CGSize = CGSize(width:sceneWidth, height:kHeight)
         let position:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)

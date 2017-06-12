@@ -60,8 +60,6 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
     
     //MARK: private
     
-    //MARK: private
-    
     private func asyncShowMenu()
     {
         let alert:UIAlertController = UIAlertController(
@@ -145,6 +143,15 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
     
     func exitGame()
     {
-        parent?.dismiss(animated:true, completion:nil)
+        guard
+            
+            let parent:UIViewController = UIApplication.shared.keyWindow?.rootViewController
+        
+        else
+        {
+            return
+        }
+        
+        parent.dismiss(animated:true, completion:nil)
     }
 }
