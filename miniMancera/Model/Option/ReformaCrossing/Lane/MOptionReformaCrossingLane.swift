@@ -28,6 +28,21 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         return false
     }
     
+    func removeFoe(item:MOptionReformaCrossingFoe)
+    {
+        var foes:[MOptionReformaCrossingFoe] = []
+        
+        for foe:MOptionReformaCrossingFoe in self.foes
+        {
+            if foe !== item
+            {
+                foes.append(foe)
+            }
+        }
+        
+        self.foes = foes
+    }
+    
     //MARK: lane protocol
     
     var scaleHorizontal:CGFloat
