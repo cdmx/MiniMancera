@@ -18,9 +18,10 @@ class MOptionReformaCrossingSceneTitle:SKScene
         let width_2:CGFloat = size.width / 2.0
         let height_2:CGFloat = size.height / 2.0
         
-        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(model:model)
+        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
+            controller:controller)
         
-        let levelNumber:NSNumber = model.level as NSNumber
+        let levelNumber:NSNumber = controller.model.level as NSNumber
         let messageTitle:String = String(
             format:NSLocalizedString("MOptionReformaCrossingSceneTitle_labelTitle", comment:""),
             levelNumber)
@@ -58,7 +59,8 @@ class MOptionReformaCrossingSceneTitle:SKScene
     {
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kAnimationDuration)
-        let gameScene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(model:model)
+        let gameScene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
+            controller:controller)
         
         view?.presentScene(gameScene, transition:transition)
     }

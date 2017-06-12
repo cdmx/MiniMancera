@@ -40,10 +40,10 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
         automaticallyAdjustsScrollViewInsets = false
         
         let size:CGSize = view.bounds.size
-        let scene:SKScene = model.sceneWithSize(size:size)
         
         guard
             
+            let scene:SKScene = model.sceneWithSize(controller:self, size:size),
             let view:SKView = self.view as? SKView
         
         else

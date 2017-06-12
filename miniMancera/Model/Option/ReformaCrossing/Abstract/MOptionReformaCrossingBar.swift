@@ -11,9 +11,10 @@ class MOptionReformaCrossingBar:SKSpriteNode
     init(controller:COptionReformaCrossing)
     {
         self.controller = controller
-        let sceneWidth:CGFloat = model.size.width
+        let sceneSize:CGSize = controller.model.size
+        let sceneWidth:CGFloat = sceneSize.width
         let sceneWidth_2:CGFloat = sceneWidth / 2
-        let sceneHeight:CGFloat = model.size.height
+        let sceneHeight:CGFloat = sceneSize.height
         let height_2:CGFloat = kHeight / 2
         let positionY:CGFloat = sceneHeight - height_2
         let size:CGSize = CGSize(width:sceneWidth, height:kHeight)

@@ -27,7 +27,7 @@ class MOptionReformaCrossingMenu:SKSpriteNode
     
     private func startPosition() -> CGPoint
     {
-        let sceneHeight:CGFloat = model.size.height
+        let sceneHeight:CGFloat = controller.model.size.height
         let posY:CGFloat = sceneHeight - kMargin
         let point:CGPoint = CGPoint(x:kMargin, y:posY)
         

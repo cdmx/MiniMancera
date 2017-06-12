@@ -10,16 +10,19 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     init(controller:COptionReformaCrossing)
     {
         self.controller = controller
-        player = MOptionReformaCrossingPlayer(model:model)
+        player = MOptionReformaCrossingPlayer(controller:controller)
         
         super.init(size:controller.model.size)
         backgroundColor = SKColor.black
         physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self
         
-        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(model:model)
-        let bar:MOptionReformaCrossingBar = MOptionReformaCrossingBar(model:model)
-        let menu:MOptionReformaCrossingMenu = MOptionReformaCrossingMenu(model:model)
+        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
+            controller:controller)
+        let bar:MOptionReformaCrossingBar = MOptionReformaCrossingBar(
+            controller:controller)
+        let menu:MOptionReformaCrossingMenu = MOptionReformaCrossingMenu(
+            controller:controller)
         
         addChild(background)
         addChild(bar)
@@ -75,9 +78,10 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
             return
         }
         
-        let lane:MOptionReformaCrossingLane = model.laneGroup.randomLane()
+        let lane:MOptionReformaCrossingLane = controller.model.laneGroup.randomLane()
         
-        let hasFoeWaiting:Bool = lane.hasFoeWaiting(sceneSize:model.size)
+        let hasFoeWaiting:Bool = lane.hasFoeWaiting(
+            sceneSize:controller.model.size)
         
         if hasFoeWaiting
         {
@@ -86,7 +90,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
             lane:lane,
-            model:model)
+            controller:controller)
         
         addChild(foe)
     }

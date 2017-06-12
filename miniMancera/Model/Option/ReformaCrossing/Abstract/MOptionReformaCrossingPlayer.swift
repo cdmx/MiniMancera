@@ -34,7 +34,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     private func startPosition() -> CGPoint
     {
-        let sceneWidth_2:CGFloat = model.size.width / 2.0
+        let sceneWidth_2:CGFloat = controller.model.size.width / 2.0
         let height_2:CGFloat = size.height / 2.0
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:height_2)
         
@@ -43,8 +43,9 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     private func finalPosition() -> CGPoint
     {
-        let sceneWidth_2:CGFloat = model.size.width / 2.0
-        let sceneHeight:CGFloat = model.size.height
+        let sceneSize:CGSize = controller.model.size
+        let sceneWidth_2:CGFloat = sceneSize.width / 2.0
+        let sceneHeight:CGFloat = sceneSize.height
         let positionY:CGFloat = sceneHeight + size.height
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         

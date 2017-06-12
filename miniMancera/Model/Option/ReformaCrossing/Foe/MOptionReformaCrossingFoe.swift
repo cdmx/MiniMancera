@@ -51,12 +51,13 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     private func movement()
     {
+        let sceneSize:CGSize = controller.model.size
         let startingPoint:CGPoint = lane.foeInitialPoint(
             foe:self,
-            sceneSize:model.size)
+            sceneSize:sceneSize)
         let endingPoint:CGPoint = lane.foeEndingPoint(
             foe:self,
-            sceneSize:model.size)
+            sceneSize:sceneSize)
         let duration:TimeInterval = movementDuration(
             startingPoint:startingPoint,
             endingPoint:endingPoint)
@@ -86,7 +87,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     private func randomSpeed() -> CGFloat
     {
-        let totalMaxSpeed:UInt32 = model.levelAddedMaxSpeed() + randomMaxSpeed
+        let totalMaxSpeed:UInt32 = controller.model.levelAddedMaxSpeed() + randomMaxSpeed
         let random:CGFloat = CGFloat(arc4random_uniform(totalMaxSpeed))
         let totalSpeed:CGFloat = minSpeed + random
         
