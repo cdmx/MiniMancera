@@ -8,7 +8,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let kAddPointY:CGFloat = 200
     private let kSpeed:CGFloat = 30
     private let kActionWalking:String = "actionWalking"
-    private let kAnimationPerFrame:TimeInterval = 0.3
+    private let kAnimationPerFrame:TimeInterval = 0.2
     
     init(model:MOptionReformaCrossing)
     {
@@ -51,11 +51,15 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     private func createActionAnimate() -> SKAction
     {
-        let textureWalkingA:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer1"))
-        let textureWalkingB:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer2"))
+        let textureWalking1:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer1"))
+        let textureWalking2:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer2"))
+        let textureWalking3:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer3"))
+        let textureWalking4:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer4"))
         let textures:[SKTexture] = [
-            textureWalkingA,
-            textureWalkingB]
+            textureWalking1,
+            textureWalking2,
+            textureWalking3,
+            textureWalking4]
         
         let actionAnimate:SKAction = SKAction.animate(
             with:textures,
@@ -100,7 +104,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
             actionWalk]
         let actionsGroup:SKAction = SKAction.group(actions)
         
-//        run(actionsGroup, withKey:kActionWalking)
+        run(actionsGroup, withKey:kActionWalking)
     }
     
     func isSafe() -> Bool
