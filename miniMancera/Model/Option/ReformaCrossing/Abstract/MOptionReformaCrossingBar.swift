@@ -6,7 +6,7 @@ class MOptionReformaCrossingBar:SKSpriteNode
     private weak var model:MOptionReformaCrossing!
     private let kHeight:CGFloat = 64
     private let kAlpha:CGFloat = 0.6
-    private let kZPosition:CGFloat = 1
+    private let kZPosition:CGFloat = 1000
     
     init(model:MOptionReformaCrossing)
     {
