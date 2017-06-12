@@ -7,7 +7,6 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     private(set) weak var lane:MOptionReformaCrossingLane!
     private weak var model:MOptionReformaCrossing!
     private let kActionMoving:String = "actionMoving"
-    private let kMinSpeed:CGFloat = 10
     private let kPauseDuration:TimeInterval = 1
     private let kPhysicsHeight:CGFloat = 30
     private let kPhysicsAddWidth:CGFloat = 8
@@ -89,7 +88,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     {
         let totalMaxSpeed:UInt32 = model.levelAddedMaxSpeed() + randomMaxSpeed
         let random:CGFloat = CGFloat(arc4random_uniform(totalMaxSpeed))
-        let totalSpeed:CGFloat = kMinSpeed + random
+        let totalSpeed:CGFloat = minSpeed + random
         
         return totalSpeed
     }
@@ -161,6 +160,14 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     //MARK: foe protocol
     
     var randomMaxSpeed:UInt32
+    {
+        get
+        {
+            return 0
+        }
+    }
+    
+    var minSpeed:CGFloat
     {
         get
         {
