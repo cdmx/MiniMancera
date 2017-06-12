@@ -6,7 +6,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let positionSafe:CGFloat
     private weak var model:MOptionReformaCrossing!
     private let kAddPointY:CGFloat = 200
-    private let kSpeed:CGFloat = 30
+    private let kSpeed:CGFloat = 35
     private let kActionWalking:String = "actionWalking"
     private let kAnimationPerFrame:TimeInterval = 0.2
     
@@ -55,11 +55,15 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let textureWalking2:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer2"))
         let textureWalking3:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer3"))
         let textureWalking4:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer4"))
+        let textureWalking5:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer5"))
+        let textureWalking6:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer6"))
         let textures:[SKTexture] = [
             textureWalking1,
             textureWalking2,
             textureWalking3,
-            textureWalking4]
+            textureWalking4,
+            textureWalking5,
+            textureWalking6]
         
         let actionAnimate:SKAction = SKAction.animate(
             with:textures,
