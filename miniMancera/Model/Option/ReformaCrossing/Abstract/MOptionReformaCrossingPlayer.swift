@@ -3,9 +3,10 @@ import SpriteKit
 
 class MOptionReformaCrossingPlayer:SKSpriteNode
 {
+    let positionSafe:CGFloat
     private weak var model:MOptionReformaCrossing!
-    private let kPositionSafe:CGFloat = 200
-    private let kSpeed:CGFloat = 50
+    private let kAddPointY:CGFloat = 200
+    private let kSpeed:CGFloat = 20
     private let kActionWalking:String = "actionWalking"
     private let kAnimationPerFrame:TimeInterval = 0.3
     
@@ -13,6 +14,9 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     {
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer0"))
         let size:CGSize = texture.size()
+        let sceneHeight_2:CGFloat = model.size.height / 2.0
+        let height_2:CGFloat = size.height / 2.0
+        positionSafe = sceneHeight_2 + height_2 + kAddPointY
         self.model = model
         
         super.init(texture:texture, color:UIColor.clear, size:size)
@@ -38,9 +42,9 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private func finalPosition() -> CGPoint
     {
         let sceneWidth_2:CGFloat = model.size.width / 2.0
-        let sceneHeight_2:CGFloat = model.size.height / 2.0
+        let sceneHeight:CGFloat = model.size.height
         let height_2:CGFloat = size.height / 2.0
-        let positionY:CGFloat = sceneHeight_2 + height_2 + kPositionSafe
+        let positionY:CGFloat = sceneHeight + height_2
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         
         return point
@@ -95,8 +99,8 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let actions:[SKAction] = [
             actionAnimate,
             actionWalk]
-        let actionsSequence:SKAction = SKAction.sequence(actions)
+        let actionsGroup:SKAction = SKAction.group(actions)
         
-        run(actionsSequence, withKey:kActionWalking)
+        run(actionsGroup, withKey:kActionWalking)
     }
 }
