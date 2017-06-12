@@ -96,8 +96,6 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     private func startPhysics(size:CGSize)
     {
-        print("size \(size)")
-        
         let physicsWidth:CGFloat = size.width + kPhysicsAddWidth
         let physicsSize:CGSize = CGSize(width:physicsWidth, height:kPhysicsHeight)
         
