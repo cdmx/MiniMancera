@@ -35,11 +35,30 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         scale()
         startPhysics(size:size)
         lane.foes.append(self)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedGameOver(sender:)),
+            name:Notification.gameOver,
+            object:self)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    deinit
+    {
+        NotificationCenter.default.removeObserver(self)
+        print("die")
+    }
+    
+    //MARK: notified
+    
+    func notifiedGameOver(sender notification:Notification)
+    {
+        removeAction(forKey:kActionMoving)
     }
     
     //MARK: private

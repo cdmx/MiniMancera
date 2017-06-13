@@ -66,4 +66,20 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         
         scene.player.stopWalking()
     }
+    
+    func timeOut()
+    {
+        guard
+            
+            let view:SKView = self.view as? SKView,
+            let scene:MOptionReformaCrossingSceneGame = view.scene as? MOptionReformaCrossingSceneGame
+            
+        else
+        {
+            return
+        }
+        
+        notifyGameOver()
+        scene.timeOut()
+    }
 }

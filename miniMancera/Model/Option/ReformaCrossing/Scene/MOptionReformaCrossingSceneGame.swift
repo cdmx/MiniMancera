@@ -8,6 +8,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private(set) weak var hud:MOptionReformaCrossingHud!
     private weak var controller:COptionReformaCrossing!
     private weak var stop:MOptionReformaCrossingStop!
+    private let kActionSpawn:String = "actionSpawn"
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kSpawnProbability:UInt32 = 5
     
@@ -92,7 +93,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         let actionsSequence:SKAction = SKAction.sequence(actions)
         let actionRepeat:SKAction = SKAction.repeatForever(actionsSequence)
         
-        run(actionRepeat)
+        run(actionRepeat, withKey:kActionSpawn)
     }
     
     private func spawnFoe()
@@ -143,6 +144,14 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         {
             foeA.hitTheBreaks()
         }
+    }
+    
+    //MARK: public
+    
+    func timeOut()
+    {
+        removeAction(forKey:kActionSpawn)
+        player.timeOut()
     }
     
     //MARK: contact delegate

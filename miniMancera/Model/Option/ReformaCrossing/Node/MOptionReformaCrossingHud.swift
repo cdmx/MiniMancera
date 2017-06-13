@@ -62,7 +62,7 @@ class MOptionReformaCrossingHud:SKSpriteNode
         
         if deltaTime < 0
         {
-            print("game over")
+            controller.timeOut()
         }
         else
         {
