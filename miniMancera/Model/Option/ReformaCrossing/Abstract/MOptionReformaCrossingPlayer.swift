@@ -10,6 +10,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let kActionWalking:String = "actionWalking"
     private let kAnimationPerFrame:TimeInterval = 0.2
     private let kZPosition:CGFloat = 0
+    private let kStopDuration:TimeInterval = 0.5
     
     init(controller:COptionReformaCrossing)
     {
@@ -100,6 +101,20 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         return translationTime
     }
     
+    private func resumeWalking()
+    {
+        guard
+            
+            let actionWalking:SKAction = action(forKey:kActionWalking)
+            
+        else
+        {
+            return
+        }
+        
+        actionWalking.speed = 1
+    }
+    
     //MARK: public
     
     func startWalking()
@@ -126,6 +141,24 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     func stopWalking()
     {
+        guard
+            
+            let actionWalking:SKAction = action(forKey:kActionWalking)
+            
+        else
+        {
+            return
+        }
         
+        actionWalking.speed = 0
+        
+        let actionDelay:SKAction = SKAction.wait(forDuration:kStopDuration)
+        let actionResume:SKAction = SKAction.run(resumeWalking)
+        let actions:[SKAction] = [
+            actionDelay,
+            actionResume]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        run(actionsSequence)
     }
 }
