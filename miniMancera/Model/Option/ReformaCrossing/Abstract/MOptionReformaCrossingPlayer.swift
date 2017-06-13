@@ -6,14 +6,15 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private weak var controller:COptionReformaCrossing!
     private var lastElapsedTime:TimeInterval
     private var stopTime:TimeInterval?
-    private let standTexture:SKTexture
+    private let stopTextures:[SKTexture]
     private let positionSafe:CGFloat
     private let kAddPointY:CGFloat = 200
     private let kSpeed:CGFloat = 35
     private let kActionWalking:String = "actionWalking"
     private let kAnimationPerFrame:TimeInterval = 0.2
+    private let kStopAnimationPerFrame:TimeInterval = 0.1
     private let kZPosition:CGFloat = 0
-    private let kStopDuration:TimeInterval = 0.5
+    private let kStopDuration:TimeInterval = 1
     
     private class func factoryAnimationTextures() -> [SKTexture]
     {
@@ -34,18 +35,38 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         return textures
     }
     
+    private class func factoryStopTextures() -> [SKTexture]
+    {
+        let textureWalking0:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer0"))
+        let textureWalking7:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer7"))
+        let textureWalking8:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer8"))
+        let textureWalking9:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer9"))
+        
+        let textures:[SKTexture] = [
+            textureWalking0,
+            textureWalking7,
+            textureWalking8,
+            textureWalking9,
+            textureWalking8,
+            textureWalking7,
+            textureWalking0]
+        
+        return textures
+    }
+    
     init(controller:COptionReformaCrossing)
     {
         self.controller = controller
-        standTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer0"))
+        stopTextures = MOptionReformaCrossingPlayer.factoryStopTextures()
+        let texture:SKTexture = stopTextures[0]
         
-        let size:CGSize = standTexture.size()
+        let size:CGSize = texture.size()
         let sceneHeight_2:CGFloat = controller.model.size.height / 2.0
         let height_2:CGFloat = size.height / 2.0
         positionSafe = sceneHeight_2 + height_2 + kAddPointY
         lastElapsedTime = 0
         
-        super.init(texture:standTexture, color:UIColor.clear, size:size)
+        super.init(texture:texture, color:UIColor.clear, size:size)
         position = startPosition()
         zPosition = kZPosition
         isHidden = true
@@ -111,6 +132,17 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
             duration:duration)
         
         return actionWalk
+    }
+    
+    private func animateStop()
+    {
+        let actionAnimate:SKAction = SKAction.animate(
+            with:stopTextures,
+            timePerFrame:kStopAnimationPerFrame,
+            resize:false,
+            restore:false)
+        
+        run(actionAnimate)
     }
     
     private func resumeWalking()
@@ -187,9 +219,9 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
             }
             
             actionWalking.speed = 0
-            texture = standTexture
         }
         
         measureStopTime()
+        animateStop()
     }
 }
