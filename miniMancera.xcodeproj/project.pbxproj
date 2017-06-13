@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA11DE3D1EF089810043749D /* MOptionReformaCrossingCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE3C1EF089810043749D /* MOptionReformaCrossingCoin.swift */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA11DE3C1EF089810043749D /* MOptionReformaCrossingCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoin.swift; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				DA2D009D1EEFC15E00365F23 /* MOptionReformaCrossingStop.swift */,
 				DA2D00B61EEFF1BF00365F23 /* MOptionReformaCrossing1up.swift */,
 				DA2D00BA1EEFF20900365F23 /* MOptionReformaCrossingEnd.swift */,
+				DA11DE3C1EF089810043749D /* MOptionReformaCrossingCoin.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				DA2D00201EECB68F00365F23 /* VHomeOptionsCell.swift in Sources */,
 				DA2DFFE11EECB16A00365F23 /* ExtensionUIFont.swift in Sources */,
 				DA2D00A91EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift in Sources */,
+				DA11DE3D1EF089810043749D /* MOptionReformaCrossingCoin.swift in Sources */,
 				DA2D00791EEDE38600365F23 /* MOptionReformaCrossingLaneC.swift in Sources */,
 				DA2DFFD71EECB16A00365F23 /* MSession.swift in Sources */,
 				DA2DFFEE1EECB16A00365F23 /* VSlider.swift in Sources */,

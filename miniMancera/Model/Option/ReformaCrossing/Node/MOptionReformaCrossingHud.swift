@@ -11,7 +11,7 @@ class MOptionReformaCrossingHud:SKSpriteNode
     private let kMargin:CGFloat = 45
     private let kTimePositionX:CGFloat = 65
     private let kTimePositionY:CGFloat = -8
-    private let kScorePositionX:CGFloat = -80
+    private let kScorePositionX:CGFloat = -32
     private let kScorePositionY:CGFloat = -6
     private let kZPosition:CGFloat = 10001
     private let kTimeZPosition:CGFloat = 10006
@@ -37,7 +37,7 @@ class MOptionReformaCrossingHud:SKSpriteNode
         labelTime.zPosition = kTimeZPosition
         self.labelTime = labelTime
         
-        let labelScore:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontRegular)
+        let labelScore:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
         labelScore.fontSize = kScoreFontSize
         labelScore.fontColor = SKColor.white
         labelScore.position = CGPoint(x:kScorePositionX, y:kScorePositionY)
@@ -47,6 +47,7 @@ class MOptionReformaCrossingHud:SKSpriteNode
         self.labelScore = labelScore
         
         addChild(labelTime)
+        addChild(labelScore)
     }
     
     required init?(coder:NSCoder)
