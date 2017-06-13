@@ -3,7 +3,7 @@ import SpriteKit
 class MOptionReformaCrossingSceneTitle:SKScene
 {
     private weak var controller:COptionReformaCrossing!
-    private let kFontSize:CGFloat = 45
+    private let kFontSize:CGFloat = 35
     private let kWaitStartGame:TimeInterval = 0.7
     private let kAnimationDuration:TimeInterval = 0.3
     

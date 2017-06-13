@@ -3,10 +3,10 @@ import SpriteKit
 class MOptionReformaCrossingSceneGameOver:SKScene
 {
     private weak var controller:COptionReformaCrossing!
-    private let kTitleFontSize:CGFloat = 35
-    private let kDescrFontSize:CGFloat = 16
-    private let kTitleAddY:CGFloat = 100
-    private let kDescrAddY:CGFloat = 60
+    private let kTitleFontSize:CGFloat = 25
+    private let kDescrFontSize:CGFloat = 14
+    private let kTitleAddY:CGFloat = 180
+    private let kDescrAddY:CGFloat = 150
     private let kAnimationDuration:TimeInterval = 0.5
     
     init(controller:COptionReformaCrossing, reason:MOptionReformaCrossingGameOverProtocol)
@@ -31,14 +31,19 @@ class MOptionReformaCrossingSceneGameOver:SKScene
         labelTitle.position = CGPoint(x:width_2, y:titleY)
         
         let labelDescr:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
-        labelDescr.text = reason.title
-        labelDescr.fontSize = kTitleFontSize
+        labelDescr.text = reason.descr
+        labelDescr.fontSize = kDescrFontSize
         labelDescr.fontColor = SKColor.white
         labelDescr.position = CGPoint(x:width_2, y:descrY)
+        
+        let texture:SKTexture = SKTexture(image:reason.image)
+        let image:SKSpriteNode = SKSpriteNode(texture:texture)
+        image.position = CGPoint(x:width_2, y:height_2)
         
         addChild(background)
         addChild(labelTitle)
         addChild(labelDescr)
+        addChild(image)
     }
     
     required init?(coder:NSCoder)
