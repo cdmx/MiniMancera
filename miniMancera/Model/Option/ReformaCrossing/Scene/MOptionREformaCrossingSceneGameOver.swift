@@ -3,9 +3,11 @@ import SpriteKit
 class MOptionReformaCrossingSceneGameOver:SKScene
 {
     private weak var controller:COptionReformaCrossing!
-    private let kFontSize:CGFloat = 45
-    private let kWaitStartGame:TimeInterval = 0.7
-    private let kAnimationDuration:TimeInterval = 0.3
+    private let kTitleFontSize:CGFloat = 35
+    private let kDescrFontSize:CGFloat = 16
+    private let kTitleAddY:CGFloat = 100
+    private let kDescrAddY:CGFloat = 60
+    private let kAnimationDuration:TimeInterval = 0.5
     
     init(controller:COptionReformaCrossing, reason:MOptionReformaCrossingGameOverProtocol)
     {
@@ -16,23 +18,27 @@ class MOptionReformaCrossingSceneGameOver:SKScene
         
         let width_2:CGFloat = size.width / 2.0
         let height_2:CGFloat = size.height / 2.0
+        let titleY:CGFloat = height_2 + kTitleAddY
+        let descrY:CGFloat = height_2 + kDescrAddY
         
         let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
             controller:controller)
         
-        let levelNumber:NSNumber = controller.model.level as NSNumber
-        let messageTitle:String = String(
-            format:NSLocalizedString("MOptionReformaCrossingSceneTitle_labelTitle", comment:""),
-            levelNumber)
-        
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
-        labelTitle.text = messageTitle
-        labelTitle.fontSize = kFontSize
+        labelTitle.text = reason.title
+        labelTitle.fontSize = kTitleFontSize
         labelTitle.fontColor = SKColor.white
-        labelTitle.position = CGPoint(x:width_2, y:height_2)
+        labelTitle.position = CGPoint(x:width_2, y:titleY)
+        
+        let labelDescr:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
+        labelDescr.text = reason.title
+        labelDescr.fontSize = kTitleFontSize
+        labelDescr.fontColor = SKColor.white
+        labelDescr.position = CGPoint(x:width_2, y:descrY)
         
         addChild(background)
         addChild(labelTitle)
+        addChild(labelDescr)
     }
     
     required init?(coder:NSCoder)
@@ -42,14 +48,6 @@ class MOptionReformaCrossingSceneGameOver:SKScene
     
     override func didMove(to view:SKView)
     {
-        let actionWait:SKAction = SKAction.wait(forDuration:kWaitStartGame)
-        let actionRunGame:SKAction = SKAction.run(startGame)
-        let actions:[SKAction] = [
-            actionWait,
-            actionRunGame]
-        let actionsSequence:SKAction = SKAction.sequence(actions)
-        
-        run(actionsSequence)
     }
     
     //MARK: private
