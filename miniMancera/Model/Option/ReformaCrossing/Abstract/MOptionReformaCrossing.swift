@@ -5,11 +5,12 @@ class MOptionReformaCrossing:MOptionProtocol
 {
     let laneGroup:MOptionReformaCrossingLaneGroup
     let kMaxGameTime:TimeInterval = 60
-    private(set) var gameActive:Bool
+    private(set) var addedSpeed:CGFloat
     private(set) var size:CGSize
     private(set) var level:Int
+    private(set) var gameActive:Bool
+    private let kSpeedMultiplier:CGFloat = 50
     private let kStartingLevel:Int = 1
-    private let kSpeedMultiplier:Int = 40
     
     required init()
     {
@@ -17,16 +18,10 @@ class MOptionReformaCrossing:MOptionProtocol
         laneGroup = MOptionReformaCrossingLaneGroup()
         size = CGSize.zero
         level = kStartingLevel
+        addedSpeed = 0
     }
     
     //MARK: public
-    
-    func levelAddedMaxSpeed() -> UInt32
-    {
-        let multipliedSpeed:UInt32 = UInt32(level * kSpeedMultiplier)
-        
-        return multipliedSpeed
-    }
     
     func gameOver()
     {
@@ -42,6 +37,7 @@ class MOptionReformaCrossing:MOptionProtocol
     func startLevel()
     {
         laneGroup.configureForScene(size:size)
+        addedSpeed = CGFloat(level) * kSpeedMultiplier
     }
     
     func activateGame()

@@ -82,9 +82,11 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     private func randomSpeed() -> CGFloat
     {
-        let totalMaxSpeed:UInt32 = controller.model.levelAddedMaxSpeed() + randomMaxSpeed
-        let random:CGFloat = CGFloat(arc4random_uniform(totalMaxSpeed))
-        let totalSpeed:CGFloat = minSpeed + random
+        let levelSpeed:CGFloat = controller.model.addedSpeed
+        let random:CGFloat = CGFloat(arc4random_uniform(randomMaxSpeed))
+        let totalSpeed:CGFloat = minSpeed + random + levelSpeed
+        
+        print("level speed \(levelSpeed)")
         
         return totalSpeed
     }
