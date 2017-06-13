@@ -66,6 +66,8 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         sceneWidth = size.width
         let sceneHeight_2:CGFloat = size.height / 2.0
         verticalPosition = sceneHeight_2 + deltaVertical
+        
+        foes = []
     }
     
     //MARK: lane protocol

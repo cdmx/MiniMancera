@@ -61,11 +61,6 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         return nil
     }
     
-    deinit
-    {
-        print("scene die")
-    }
-    
     override func didMove(to view:SKView)
     {
         startFoes()

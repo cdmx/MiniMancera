@@ -42,11 +42,6 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         return nil
     }
     
-    deinit
-    {
-        print("die")
-    }
-    
     //MARK: private
     
     private func scale()
@@ -160,7 +155,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     func totalStop()
     {
-        removeAction(forKey:kActionMoving)
+        removeAllActions()
     }
     
     //MARK: foe protocol

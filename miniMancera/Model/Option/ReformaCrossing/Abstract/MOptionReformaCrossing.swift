@@ -53,7 +53,6 @@ class MOptionReformaCrossing:MOptionProtocol
     {
         gameActive = false
         level += 1
-        laneGroup.stopFoes()
     }
     
     //MARK: option protocol
