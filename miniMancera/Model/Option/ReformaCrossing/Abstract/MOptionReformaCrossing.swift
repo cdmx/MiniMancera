@@ -49,6 +49,12 @@ class MOptionReformaCrossing:MOptionProtocol
         gameActive = true
     }
     
+    func playerSuccess()
+    {
+        gameActive = false
+        level += 1
+    }
+    
     //MARK: option protocol
     
     func sceneWithSize(

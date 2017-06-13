@@ -82,6 +82,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
             
             if player.isSafe()
             {
+                controller.model.playerSuccess()
             }
         }
     }

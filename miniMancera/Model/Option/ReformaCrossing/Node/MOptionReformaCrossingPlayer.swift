@@ -166,6 +166,11 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         stopTime = lastElapsedTime + kStopDuration
     }
     
+    private func showSuccess()
+    {
+        
+    }
+    
     //MARK: public
     
     func update(elapsedTime:TimeInterval)
@@ -199,6 +204,8 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     {
         if position.y > positionSafe
         {
+            showSuccess()
+            
             return true
         }
         
