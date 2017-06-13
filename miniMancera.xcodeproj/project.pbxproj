@@ -43,7 +43,6 @@
 		DA2D00A41EEFC15E00365F23 /* MOptionReformaCrossingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D009C1EEFC15E00365F23 /* MOptionReformaCrossingPlayer.swift */; };
 		DA2D00A51EEFC15E00365F23 /* MOptionReformaCrossingStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D009D1EEFC15E00365F23 /* MOptionReformaCrossingStop.swift */; };
 		DA2D00A61EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D009F1EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift */; };
-		DA2D00A71EEFC15E00365F23 /* MOptionReformaCrossingSceneTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00A01EEFC15E00365F23 /* MOptionReformaCrossingSceneTitle.swift */; };
 		DA2D00A91EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00A81EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift */; };
 		DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00B01EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift */; };
 		DA2D00B31EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00B21EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift */; };
@@ -119,7 +118,6 @@
 		DA2D009C1EEFC15E00365F23 /* MOptionReformaCrossingPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingPlayer.swift; sourceTree = "<group>"; };
 		DA2D009D1EEFC15E00365F23 /* MOptionReformaCrossingStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingStop.swift; sourceTree = "<group>"; };
 		DA2D009F1EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSceneGame.swift; sourceTree = "<group>"; };
-		DA2D00A01EEFC15E00365F23 /* MOptionReformaCrossingSceneTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSceneTitle.swift; sourceTree = "<group>"; };
 		DA2D00A81EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionREformaCrossingSceneGameOver.swift; sourceTree = "<group>"; };
 		DA2D00B01EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverProtocol.swift; sourceTree = "<group>"; };
 		DA2D00B21EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverTimeOut.swift; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 		DA2D009E1EEFC15E00365F23 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				DA2D00A01EEFC15E00365F23 /* MOptionReformaCrossingSceneTitle.swift */,
 				DA2D009F1EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift */,
 				DA2D00A81EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift */,
 			);
@@ -554,7 +551,6 @@
 				DA2DFFED1EECB16A00365F23 /* VPushBackground.swift in Sources */,
 				DA2D00BB1EEFF20900365F23 /* MOptionReformaCrossingEnd.swift in Sources */,
 				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
-				DA2D00A71EEFC15E00365F23 /* MOptionReformaCrossingSceneTitle.swift in Sources */,
 				DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */,
 				DA2DFFDD1EECB16A00365F23 /* ExtensionNSManagedObject.swift in Sources */,
 				DA2D00A21EEFC15E00365F23 /* MOptionReformaCrossingHud.swift in Sources */,

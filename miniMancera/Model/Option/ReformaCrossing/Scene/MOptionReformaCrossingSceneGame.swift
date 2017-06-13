@@ -8,12 +8,13 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private(set) weak var hud:MOptionReformaCrossingHud!
     private weak var controller:COptionReformaCrossing!
     private weak var stop:MOptionReformaCrossingStop!
+    private weak var menu:MOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
     private let kActionSpawn:String = "actionSpawn"
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
-    private let kTitleDuration:TimeInterval = 1
-    private let kFontSize:CGFloat = 20
+    private let kTitleDuration:TimeInterval = 3
+    private let kFontSize:CGFloat = 25
     private let kSpawnProbability:UInt32 = 5
     
     init(controller:COptionReformaCrossing)
@@ -36,6 +37,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         let menu:MOptionReformaCrossingMenu = MOptionReformaCrossingMenu(
             controller:controller)
+        self.menu = menu
         
         let stop:MOptionReformaCrossingStop = MOptionReformaCrossingStop(
             controller:controller)
@@ -169,8 +171,13 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         let width_2:CGFloat = controller.model.size.width / 2.0
         let height_2:CGFloat = controller.model.size.height / 2.0
         
+        let level:NSNumber = controller.model.level as NSNumber
+        let levelString:String = String(
+            format:NSLocalizedString("MOptionReformaCrossingSceneGame_labelTitle", comment:""),
+            level)
+        
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
-        labelTitle.text = NSLocalizedString("MOptionReformaCrossingSceneGame_labelTitle", comment:"")
+        labelTitle.text = levelString
         labelTitle.fontSize = kFontSize
         labelTitle.fontColor = SKColor.white
         labelTitle.position = CGPoint(x:width_2, y:height_2)
@@ -178,6 +185,11 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         addChild(labelTitle)
         
+        actionsActivateGame()
+    }
+    
+    private func actionsActivateGame()
+    {
         let actionDelay:SKAction = SKAction.wait(forDuration:kTitleDuration)
         let actionActivateGame:SKAction = SKAction.run(activateGame)
         let actions:[SKAction] = [

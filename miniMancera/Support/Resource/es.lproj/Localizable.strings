@@ -1,10 +1,9 @@
 "MHomeOptionsReformaCrossing_title"="Cruzando Reforma";
-"MOptionReformaCrossingSceneTitle_labelTitle"="Nivel %@";
 "MOptionReformaCrossingGameOverTimeOut_title"="Tiempo terminado";
 "MOptionReformaCrossingGameOverTimeOut_descr"="MiniMancera no llegó\na su junta";
 "MOptionReformaCrossingSceneGameOver_label1up"="Reintentar";
 "MOptionReformaCrossingSceneGameOver_labelGameOver"="Salir";
-"MOptionReformaCrossingSceneGame_labelTitle"="Avenida Reforma";
+"MOptionReformaCrossingSceneGame_labelTitle"="Nivel %@";
 
 "ControllerGame_menuResume"="Continuar";
 "ControllerGame_menuExit"="Salir";
