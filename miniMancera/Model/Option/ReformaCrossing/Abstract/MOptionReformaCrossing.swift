@@ -8,6 +8,7 @@ class MOptionReformaCrossing:MOptionProtocol
     private(set) var addedSpeed:CGFloat
     private(set) var size:CGSize
     private(set) var level:Int
+    private(set) var score:Int
     private(set) var gameActive:Bool
     private let kSpeedMultiplier:CGFloat = 50
     private let kStartingLevel:Int = 1
@@ -18,6 +19,7 @@ class MOptionReformaCrossing:MOptionProtocol
         laneGroup = MOptionReformaCrossingLaneGroup()
         size = CGSize.zero
         level = kStartingLevel
+        score = 0
         addedSpeed = 0
     }
     
@@ -32,6 +34,7 @@ class MOptionReformaCrossing:MOptionProtocol
     func revertChanges()
     {
         level = kStartingLevel
+        score = 0
     }
     
     func startLevel()
@@ -49,6 +52,11 @@ class MOptionReformaCrossing:MOptionProtocol
     {
         gameActive = false
         level += 1
+    }
+    
+    func collectedLane()
+    {
+        score += 1
     }
     
     //MARK: option protocol

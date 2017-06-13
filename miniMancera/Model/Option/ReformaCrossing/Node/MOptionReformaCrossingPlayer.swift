@@ -180,7 +180,17 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     private func collectLane()
     {
+        guard
         
+            let lane:MOptionReformaCrossingLane = controller.model.laneGroup.playerCollectAt(
+                position:position)
+        
+        else
+        {
+            return
+        }
+        
+        controller.model.collectedLane()
     }
     
     //MARK: public

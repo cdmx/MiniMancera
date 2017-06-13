@@ -5,12 +5,17 @@ class MOptionReformaCrossingHud:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
     private weak var labelTime:SKLabelNode!
+    private weak var labelScore:SKLabelNode!
     private let kTimeFontSize:CGFloat = 18
+    private let kScoreFontSize:CGFloat = 15
     private let kMargin:CGFloat = 45
     private let kTimePositionX:CGFloat = 65
     private let kTimePositionY:CGFloat = -8
+    private let kScorePositionX:CGFloat = -80
+    private let kScorePositionY:CGFloat = -6
     private let kZPosition:CGFloat = 10001
-    private let kTimeZPosition:CGFloat = 10005
+    private let kTimeZPosition:CGFloat = 10006
+    private let kScoreZPosition:CGFloat = 10005
     
     init(controller:COptionReformaCrossing)
     {
@@ -31,6 +36,15 @@ class MOptionReformaCrossingHud:SKSpriteNode
         labelTime.verticalAlignmentMode = SKLabelVerticalAlignmentMode.baseline
         labelTime.zPosition = kTimeZPosition
         self.labelTime = labelTime
+        
+        let labelScore:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontRegular)
+        labelScore.fontSize = kScoreFontSize
+        labelScore.fontColor = SKColor.white
+        labelScore.position = CGPoint(x:kScorePositionX, y:kScorePositionY)
+        labelScore.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
+        labelScore.verticalAlignmentMode = SKLabelVerticalAlignmentMode.baseline
+        labelScore.zPosition = kScoreZPosition
+        self.labelScore = labelScore
         
         addChild(labelTime)
     }
@@ -71,5 +85,8 @@ class MOptionReformaCrossingHud:SKSpriteNode
             let timeString:String = "\(time)"
             labelTime.text = timeString
         }
+        
+        let scoreString:String = "\(controller.model.score)"
+        labelScore.text = scoreString
     }
 }
