@@ -6,11 +6,11 @@ class MOptionReformaCrossingStop:SKSpriteNode
     private weak var controller:COptionReformaCrossing!
     private var lastElapsedTime:TimeInterval
     private var unblockTime:TimeInterval?
-    private let standTexture:SKTexture
     private let animationTextures:[SKTexture]
+    private let standTexture:SKTexture
     private let kBlockDuration:TimeInterval = 1
     private let kZPosition:CGFloat = 99999
-    private let kAnimationFrameTime:TimeInterval = 0.04
+    private let kAnimationFrameTime:TimeInterval = 0.03
     
     private class func factoryAnimationTextures() -> [SKTexture]
     {
@@ -56,10 +56,10 @@ class MOptionReformaCrossingStop:SKSpriteNode
         if unblockTime == nil
         {
             animateStop()
-            controller.playerStop()
         }
         
         measureUnblockTime()
+        controller.playerStop()
     }
     
     //MARK: private
