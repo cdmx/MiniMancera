@@ -25,4 +25,9 @@ class AppDelegate:UIResponder, UIApplicationDelegate
     {
 //        MSession.sharedInstance.settings?.addTtl()
     }
+    
+    func applicationWillResignActive(_ application:UIApplication)
+    {
+        NotificationCenter.default.post(name:Notification.enterBackground, object:nil)
+    }
 }
