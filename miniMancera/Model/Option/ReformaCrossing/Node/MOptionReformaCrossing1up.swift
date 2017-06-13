@@ -4,12 +4,12 @@ import SpriteKit
 class MOptionReformaCrossing1up:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
-    private let kMargin:CGFloat = 45
-    private let kZPosition:CGFloat = 10002
+    private let kYPosition:CGFloat = 175
+    private let kZPosition:CGFloat = 1000
     
     init(controller:COptionReformaCrossing)
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingMenu"))
+        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossing1up"))
         let size:CGSize = texture.size()
         self.controller = controller
         
@@ -26,20 +26,15 @@ class MOptionReformaCrossing1up:SKSpriteNode
     
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        if controller.model.gameActive
-        {
-            controller.showMenu()
-        }
+        
     }
     
     //MARK: private
     
     private func startPosition() -> CGPoint
     {
-        let sceneHeight:CGFloat = controller.model.size.height
-        let sizeWidth_2:CGFloat = size.width / 2.0
-        let posY:CGFloat = sceneHeight - kMargin
-        let point:CGPoint = CGPoint(x:sizeWidth_2, y:posY)
+        let sceneWidth_2:CGFloat = controller.model.size.width / 2.0
+        let point:CGPoint = CGPoint(x:sceneWidth_2, y:kYPosition)
         
         return point
     }

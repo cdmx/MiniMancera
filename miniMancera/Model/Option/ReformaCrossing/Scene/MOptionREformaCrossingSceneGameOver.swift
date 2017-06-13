@@ -53,6 +53,7 @@ class MOptionReformaCrossingSceneGameOver:SKScene
     
     override func didMove(to view:SKView)
     {
+        let node1up:MOptionReformaCrossing1up = MOptionReformaCrossing1up(
     }
     
     //MARK: private
