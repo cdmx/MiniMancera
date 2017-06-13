@@ -86,8 +86,6 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         let random:CGFloat = CGFloat(arc4random_uniform(randomMaxSpeed))
         let totalSpeed:CGFloat = minSpeed + random + levelSpeed
         
-        print("level speed \(levelSpeed)")
-        
         return totalSpeed
     }
     

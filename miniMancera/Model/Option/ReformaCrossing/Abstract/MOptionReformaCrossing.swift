@@ -4,7 +4,7 @@ import SpriteKit
 class MOptionReformaCrossing:MOptionProtocol
 {
     let laneGroup:MOptionReformaCrossingLaneGroup
-    let kMaxGameTime:TimeInterval = 60
+    let kMaxGameTime:TimeInterval = 31
     private(set) var addedSpeed:CGFloat
     private(set) var size:CGSize
     private(set) var level:Int
