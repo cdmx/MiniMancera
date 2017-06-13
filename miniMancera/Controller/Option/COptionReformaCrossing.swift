@@ -30,7 +30,6 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
     
     func notifiedEnterBackground(sender notification:Notification)
     {
-        print("stop")
         stopTimer()
     }
     

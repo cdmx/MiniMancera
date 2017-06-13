@@ -134,7 +134,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     //MARK: public
     
-    func update()
+    func update(elapsedTime:TimeInterval)
     {
         
     }

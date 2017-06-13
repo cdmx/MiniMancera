@@ -73,8 +73,8 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     private func updateNodes()
     {
-        player.update()
-        stop.update()
+        player.update(elapsedTime:elapsedTime)
+        stop.update(elapsedTime:elapsedTime)
     }
     
     private func startFoes()

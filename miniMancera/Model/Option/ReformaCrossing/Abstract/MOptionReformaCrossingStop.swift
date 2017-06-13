@@ -4,7 +4,11 @@ import SpriteKit
 class MOptionReformaCrossingStop:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
+    private var lastElapsedTime:TimeInterval
+    private var unblockTime:TimeInterval?
+    private let standTexture:SKTexture
     private let animationTextures:[SKTexture]
+    private let kBlockDuration:TimeInterval = 1
     private let kZPosition:CGFloat = 99999
     private let kAnimationFrameTime:TimeInterval = 0.04
     
@@ -28,13 +32,15 @@ class MOptionReformaCrossingStop:SKSpriteNode
     
     init(controller:COptionReformaCrossing)
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingStop0"))
+        standTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingStop0"))
         animationTextures = MOptionReformaCrossingStop.factoryAnimationTextures()
         
-        let size:CGSize = texture.size()
+        let size:CGSize = standTexture.size()
         self.controller = controller
         
-        super.init(texture:texture, color:UIColor.clear, size:size)
+        lastElapsedTime = 0
+        
+        super.init(texture:standTexture, color:UIColor.clear, size:size)
         position = startPosition()
         zPosition = kZPosition
         isUserInteractionEnabled = true
@@ -47,9 +53,13 @@ class MOptionReformaCrossingStop:SKSpriteNode
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        isUserInteractionEnabled = false
-        animateStop()
-        controller.playerStop()
+        if unblockTime == nil
+        {
+            animateStop()
+            controller.playerStop()
+        }
+        
+        measureUnblockTime()
     }
     
     //MARK: private
@@ -69,25 +79,34 @@ class MOptionReformaCrossingStop:SKSpriteNode
             with:animationTextures,
             timePerFrame:kAnimationFrameTime,
             resize:false,
-            restore:true)
-        let actionReEnable:SKAction = SKAction.run(reEnable)
-        let actions:[SKAction] = [
-            actionAnimation,
-            actionReEnable]
-        let actionsSequence:SKAction = SKAction.sequence(actions)
+            restore:false)
         
-        run(actionsSequence)
+        run(actionAnimation)
     }
     
     private func reEnable()
     {
-        isUserInteractionEnabled = true
+        unblockTime = nil
+        texture = standTexture
+    }
+    
+    private func measureUnblockTime()
+    {
+        unblockTime = lastElapsedTime + kBlockDuration
     }
     
     //MARK: public
     
-    func update()
+    func update(elapsedTime:TimeInterval)
     {
+        lastElapsedTime = elapsedTime
         
+        if let unblockTime:TimeInterval = self.unblockTime
+        {
+            if unblockTime < elapsedTime
+            {
+                reEnable()
+            }
+        }
     }
 }
