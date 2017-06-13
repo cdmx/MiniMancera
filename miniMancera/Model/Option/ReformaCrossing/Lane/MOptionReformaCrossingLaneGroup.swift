@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MOptionReformaCrossingLaneGroup
 {
@@ -36,6 +36,14 @@ class MOptionReformaCrossingLaneGroup
     }
     
     //MARK: public
+    
+    func configureForScene(size:CGSize)
+    {
+        for lane:MOptionReformaCrossingLane in lanes
+        {
+            lane.configureForScene(size:size)
+        }
+    }
     
     func randomLane() -> MOptionReformaCrossingLane
     {

@@ -38,6 +38,7 @@ class MOptionReformaCrossing:MOptionProtocol
     {
         gameActive = true
         level = kStartingLevel
+        laneGroup.configureForScene(size:size)
     }
     
     //MARK: option protocol

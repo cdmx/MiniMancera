@@ -51,13 +51,8 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     private func movement()
     {
-        let sceneSize:CGSize = controller.model.size
-        let startingPoint:CGPoint = lane.foeInitialPoint(
-            foe:self,
-            sceneSize:sceneSize)
-        let endingPoint:CGPoint = lane.foeEndingPoint(
-            foe:self,
-            sceneSize:sceneSize)
+        let startingPoint:CGPoint = lane.foeInitialPoint(foe:self)
+        let endingPoint:CGPoint = lane.foeEndingPoint(foe:self)
         let duration:TimeInterval = movementDuration(
             startingPoint:startingPoint,
             endingPoint:endingPoint)

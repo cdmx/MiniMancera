@@ -17,6 +17,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     {
         self.controller = controller
         elapsedTime = 0
+        controller.model.restart()
         
         super.init(size:controller.model.size)
         backgroundColor = SKColor.black

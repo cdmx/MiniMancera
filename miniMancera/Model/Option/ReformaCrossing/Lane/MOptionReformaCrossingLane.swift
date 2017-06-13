@@ -59,8 +59,10 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         foes = []
     }
     
-    final func configureScene(size:CGSize)
+    final func configureForScene(size:CGSize)
     {
+        addScore = true
+        
         sceneWidth = size.width
         let sceneHeight_2:CGFloat = size.height / 2.0
         verticalPosition = sceneHeight_2 + deltaVertical
