@@ -4,6 +4,7 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
 {
     var foes:[MOptionReformaCrossingFoe]
     private(set) var verticalPosition:CGFloat
+    private(set) var sceneWidth:CGFloat
     private let deltaVertical:CGFloat
     private var addScore:Bool
     
@@ -13,16 +14,17 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         foes = []
         addScore = false
         verticalPosition = 0
+        sceneWidth = 0
     }
     
     //MARK: public
     
-    func foeInitialPoint(foe:MOptionReformaCrossingFoe, sceneSize:CGSize) -> CGPoint
+    func foeInitialPoint(foe:MOptionReformaCrossingFoe) -> CGPoint
     {
         return CGPoint.zero
     }
     
-    func foeEndingPoint(foe:MOptionReformaCrossingFoe, sceneSize:CGSize) -> CGPoint
+    func foeEndingPoint(foe:MOptionReformaCrossingFoe) -> CGPoint
     {
         return CGPoint.zero
     }
@@ -32,7 +34,7 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         return false
     }
     
-    func removeFoe(item:MOptionReformaCrossingFoe)
+    final func removeFoe(item:MOptionReformaCrossingFoe)
     {
         var foes:[MOptionReformaCrossingFoe] = []
         
@@ -47,7 +49,7 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         self.foes = foes
     }
     
-    func stopFoes()
+    final func stopFoes()
     {
         for foe:MOptionReformaCrossingFoe in foes
         {
@@ -57,9 +59,11 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         foes = []
     }
     
-    func configureScene(size:CGSize)
+    final func configureScene(size:CGSize)
     {
-        
+        sceneWidth = size.width
+        let sceneHeight_2:CGFloat = size.height / 2.0
+        verticalPosition = sceneHeight_2 + deltaVertical
     }
     
     //MARK: lane protocol
