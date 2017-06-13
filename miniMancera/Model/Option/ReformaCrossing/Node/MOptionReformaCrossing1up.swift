@@ -26,7 +26,8 @@ class MOptionReformaCrossing1up:SKSpriteNode
     
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        
+        isUserInteractionEnabled = false
+        controller.game1up()
     }
     
     //MARK: private

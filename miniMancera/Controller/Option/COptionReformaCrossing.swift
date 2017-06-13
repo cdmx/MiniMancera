@@ -82,4 +82,20 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         model.gameOver()
         scene.timeOut()
     }
+    
+    func game1up()
+    {
+        guard
+            
+            let view:SKView = self.view as? SKView,
+            let scene:MOptionReformaCrossingSceneGameOver = view.scene as? MOptionReformaCrossingSceneGameOver
+            
+        else
+        {
+            return
+        }
+        
+        model.restart()
+        scene.game1up()
+    }
 }

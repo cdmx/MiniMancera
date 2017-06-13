@@ -73,13 +73,13 @@ class MOptionReformaCrossingSceneGameOver:SKScene
         return nil
     }
     
-    //MARK: private
+    //MARK: public
     
-    private func startGame()
+    func game1up()
     {
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kAnimationDuration)
-        let gameScene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
+        let gameScene:MOptionReformaCrossingSceneTitle = MOptionReformaCrossingSceneTitle(
             controller:controller)
         
         view?.presentScene(gameScene, transition:transition)

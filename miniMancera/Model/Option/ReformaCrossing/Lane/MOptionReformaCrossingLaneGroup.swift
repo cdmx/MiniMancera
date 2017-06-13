@@ -49,10 +49,7 @@ class MOptionReformaCrossingLaneGroup
     {
         for lane:MOptionReformaCrossingLane in lanes
         {
-            for foe:MOptionReformaCrossingFoe in lane.foes
-            {
-                foe.totalStop()
-            }
+            lane.stopFoes()
         }
     }
 }

@@ -4,7 +4,7 @@ import SpriteKit
 class MOptionReformaCrossing:MOptionProtocol
 {
     let laneGroup:MOptionReformaCrossingLaneGroup
-    let kMaxGameTime:TimeInterval = 8
+    let kMaxGameTime:TimeInterval = 90
     private(set) var gameActive:Bool
     private(set) var size:CGSize
     private(set) var level:Int
@@ -32,6 +32,12 @@ class MOptionReformaCrossing:MOptionProtocol
     {
         gameActive = false
         laneGroup.stopFoes()
+    }
+    
+    func restart()
+    {
+        gameActive = true
+        level = kStartingLevel
     }
     
     //MARK: option protocol

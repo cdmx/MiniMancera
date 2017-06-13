@@ -43,6 +43,16 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         self.foes = foes
     }
     
+    func stopFoes()
+    {
+        for foe:MOptionReformaCrossingFoe in foes
+        {
+            foe.totalStop()
+        }
+        
+        foes = []
+    }
+    
     //MARK: lane protocol
     
     var scaleHorizontal:CGFloat
