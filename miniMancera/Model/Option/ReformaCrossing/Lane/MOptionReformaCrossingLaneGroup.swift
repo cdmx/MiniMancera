@@ -44,4 +44,15 @@ class MOptionReformaCrossingLaneGroup
         
         return lane
     }
+    
+    func stopFoes()
+    {
+        for lane:MOptionReformaCrossingLane in lanes
+        {
+            for foe:MOptionReformaCrossingFoe in lane.foes
+            {
+                foe.totalStop()
+            }
+        }
+    }
 }

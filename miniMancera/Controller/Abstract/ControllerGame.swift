@@ -154,9 +154,4 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
         
         parent.dismiss(animated:true, completion:nil)
     }
-    
-    func notifyGameOver()
-    {
-        NotificationCenter.default.post(name:Notification.gameOver, object:nil)
-    }
 }

@@ -31,6 +31,7 @@ class MOptionReformaCrossing:MOptionProtocol
     func gameOver()
     {
         gameActive = false
+        laneGroup.stopFoes()
     }
     
     //MARK: option protocol
