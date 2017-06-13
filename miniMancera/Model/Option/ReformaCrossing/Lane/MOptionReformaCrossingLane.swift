@@ -3,12 +3,16 @@ import UIKit
 class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
 {
     var foes:[MOptionReformaCrossingFoe]
-    let deltaVertical:CGFloat
+    private(set) var verticalPosition:CGFloat
+    private let deltaVertical:CGFloat
+    private var addScore:Bool
     
     init(deltaVertical:CGFloat)
     {
         self.deltaVertical = deltaVertical
         foes = []
+        addScore = false
+        verticalPosition = 0
     }
     
     //MARK: public
@@ -51,6 +55,11 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         }
         
         foes = []
+    }
+    
+    func configureScene(size:CGSize)
+    {
+        
     }
     
     //MARK: lane protocol
