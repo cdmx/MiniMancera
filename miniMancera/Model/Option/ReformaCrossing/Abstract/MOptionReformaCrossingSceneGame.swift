@@ -2,15 +2,18 @@ import SpriteKit
 
 class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
 {
-    let player:MOptionReformaCrossingPlayer
+    var lastUpdateTime:TimeInterval?
+    private(set) var elapsedTime:TimeInterval
+    private(set) weak var player:MOptionReformaCrossingPlayer!
     private weak var controller:COptionReformaCrossing!
+    private weak var stop:MOptionReformaCrossingStop!
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kSpawnProbability:UInt32 = 5
     
     init(controller:COptionReformaCrossing)
     {
         self.controller = controller
-        player = MOptionReformaCrossingPlayer(controller:controller)
+        elapsedTime = 0
         
         super.init(size:controller.model.size)
         backgroundColor = SKColor.black
@@ -19,12 +22,19 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
             controller:controller)
+        
         let menu:MOptionReformaCrossingMenu = MOptionReformaCrossingMenu(
             controller:controller)
+        
         let stop:MOptionReformaCrossingStop = MOptionReformaCrossingStop(
             controller:controller)
+        self.stop = stop
+        
+        let player:MOptionReformaCrossingPlayer = MOptionReformaCrossingPlayer(controller:controller)
+        self.player = player
         
         addChild(background)
+        addChild(player)
         addChild(menu)
         addChild(stop)
     }
@@ -37,23 +47,36 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     override func didMove(to view:SKView)
     {
         startFoes()
-        startPlayer()
+        player.startWalking()
     }
     
     override func update(_ currentTime:TimeInterval)
     {
+        if let lastUpdateTime:TimeInterval = self.lastUpdateTime
+        {
+            let deltaTime:TimeInterval = currentTime - lastUpdateTime
+            elapsedTime += deltaTime
+            
+            print(elapsedTime)
+            
+            updateNodes()
+        }
+        else
+        {
+            lastUpdateTime = currentTime
+        }
+        
         if player.isSafe()
         {
-            print("you won")
         }
     }
     
     //MARK: private
     
-    private func startPlayer()
+    private func updateNodes()
     {
-        addChild(player)
-        player.startWalking()
+        player.update()
+        stop.update()
     }
     
     private func startFoes()

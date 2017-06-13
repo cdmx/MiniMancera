@@ -83,4 +83,11 @@ class MOptionReformaCrossingStop:SKSpriteNode
     {
         isUserInteractionEnabled = true
     }
+    
+    //MARK: public
+    
+    func update()
+    {
+        
+    }
 }

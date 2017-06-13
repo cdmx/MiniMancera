@@ -25,6 +25,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         super.init(texture:texture, color:UIColor.clear, size:size)
         position = startPosition()
         zPosition = kZPosition
+        isHidden = true
     }
     
     required init?(coder:NSCoder)
@@ -133,8 +134,14 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     //MARK: public
     
+    func update()
+    {
+        
+    }
+    
     func startWalking()
     {
+        isHidden = false
         startMoving()
         startAnimating()
     }

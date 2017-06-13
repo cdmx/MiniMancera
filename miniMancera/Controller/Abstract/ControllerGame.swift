@@ -102,7 +102,7 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
     
     //MARK: public
     
-    final func pause()
+    func pause()
     {
         guard
         
@@ -116,7 +116,7 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
         view.isPaused = true
     }
     
-    final func resume()
+    func resume()
     {
         guard
             
