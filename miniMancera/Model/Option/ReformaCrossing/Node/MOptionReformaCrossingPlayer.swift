@@ -178,6 +178,11 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         controller.playerSuccess()
     }
     
+    private func collectLane()
+    {
+        
+    }
+    
     //MARK: public
     
     func update(elapsedTime:TimeInterval)
@@ -190,6 +195,10 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
             {
                 resumeWalking()
             }
+        }
+        else
+        {
+            collectLane()
         }
     }
     

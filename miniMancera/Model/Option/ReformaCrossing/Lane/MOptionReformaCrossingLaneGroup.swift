@@ -16,7 +16,7 @@ class MOptionReformaCrossingLaneGroup
         let laneG:MOptionReformaCrossingLaneG = MOptionReformaCrossingLaneG()
         let laneH:MOptionReformaCrossingLaneH = MOptionReformaCrossingLaneH()
         
-        let lanes:[MOptionReformaCrossingLane] = [
+        var lanes:[MOptionReformaCrossingLane] = [
             laneA,
             laneB,
             laneC,
@@ -59,5 +59,18 @@ class MOptionReformaCrossingLaneGroup
         {
             lane.stopFoes()
         }
+    }
+    
+    func playerCollectAt(position:CGPoint) -> MOptionReformaCrossingLane?
+    {
+        for lane:MOptionReformaCrossingLane in lanes
+        {
+            if lane.playerCollectAt(position:position)
+            {
+                return lane
+            }
+        }
+        
+        return nil
     }
 }

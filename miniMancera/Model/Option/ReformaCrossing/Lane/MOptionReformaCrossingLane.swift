@@ -6,13 +6,13 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
     private(set) var verticalPosition:CGFloat
     private(set) var sceneWidth:CGFloat
     private let deltaVertical:CGFloat
-    private var addScore:Bool
+    private var collectable:Bool
     
     init(deltaVertical:CGFloat)
     {
         self.deltaVertical = deltaVertical
         foes = []
-        addScore = false
+        collectable = false
         verticalPosition = 0
         sceneWidth = 0
     }
@@ -61,13 +61,30 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
     
     final func configureForScene(size:CGSize)
     {
-        addScore = true
+        collectable = true
         
         sceneWidth = size.width
         let sceneHeight_2:CGFloat = size.height / 2.0
         verticalPosition = sceneHeight_2 + deltaVertical
         
         foes = []
+    }
+    
+    final func playerCollectAt(position:CGPoint) -> Bool
+    {
+        if collectable
+        {
+            let playerY:CGFloat = position.y
+            
+            if playerY > verticalPosition
+            {
+                collectable = false
+                
+                return true
+            }
+        }
+        
+        return false
     }
     
     //MARK: lane protocol
