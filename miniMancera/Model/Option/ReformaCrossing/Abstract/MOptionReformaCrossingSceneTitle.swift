@@ -3,7 +3,6 @@ import SpriteKit
 class MOptionReformaCrossingSceneTitle:SKScene
 {
     private weak var controller:COptionReformaCrossing!
-    private let kFont:String = "Arial-BoldMT"
     private let kFontSize:CGFloat = 45
     private let kWaitStartGame:TimeInterval = 0.7
     private let kAnimationDuration:TimeInterval = 0.3
@@ -26,7 +25,7 @@ class MOptionReformaCrossingSceneTitle:SKScene
             format:NSLocalizedString("MOptionReformaCrossingSceneTitle_labelTitle", comment:""),
             levelNumber)
         
-        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:kFont)
+        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
         labelTitle.text = messageTitle
         labelTitle.fontSize = kFontSize
         labelTitle.fontColor = SKColor.white

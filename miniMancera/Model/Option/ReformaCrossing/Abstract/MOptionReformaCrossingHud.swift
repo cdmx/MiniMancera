@@ -4,8 +4,13 @@ import SpriteKit
 class MOptionReformaCrossingHud:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
+    private weak var labelTime:SKLabelNode!
+    private let kTimeFontSize:CGFloat = 25
     private let kMargin:CGFloat = 45
+    private let kTimePositionX:CGFloat = 80
+    private let kTimePositionY:CGFloat = -10
     private let kZPosition:CGFloat = 10001
+    private let kTimeZPosition:CGFloat = 10005
     
     init(controller:COptionReformaCrossing)
     {
@@ -17,11 +22,16 @@ class MOptionReformaCrossingHud:SKSpriteNode
         position = startPosition()
         zPosition = kZPosition
         
-        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:kFont)
-        labelTitle.text = messageTitle
-        labelTitle.fontSize = kFontSize
-        labelTitle.fontColor = SKColor.white
-        labelTitle.position = CGPoint(x:width_2, y:height_2)
+        let labelTime:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontRegular)
+        labelTime.fontSize = kTimeFontSize
+        labelTime.fontColor = SKColor.white
+        labelTime.position = CGPoint(x:kTimePositionX, y:kTimePositionY)
+        labelTime.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.right
+        labelTime.verticalAlignmentMode = SKLabelVerticalAlignmentMode.baseline
+        labelTime.zPosition = kTimeZPosition
+        self.labelTime = labelTime
+        
+        addChild(labelTime)
     }
     
     required init?(coder:NSCoder)
@@ -48,6 +58,17 @@ class MOptionReformaCrossingHud:SKSpriteNode
     
     func update(elapsedTime:TimeInterval)
     {
+        let deltaTime:TimeInterval = controller.model.kMaxGameTime - elapsedTime
         
+        if deltaTime < 0
+        {
+            print("game over")
+        }
+        else
+        {
+            let time:Int = Int(deltaTime)
+            let timeString:String = "\(time)"
+            labelTime.text = timeString
+        }
     }
 }
