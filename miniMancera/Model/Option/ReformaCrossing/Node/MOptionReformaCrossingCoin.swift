@@ -4,9 +4,10 @@ import SpriteKit
 class MOptionReformaCrossingCoin:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
-    private let kAddPositionX:CGFloat = 100
-    private let kAddPositionY:CGFloat = 20
-    private let kFadeDuration:TimeInterval = 1
+    private let kAddPositionX:CGFloat = 50
+    private let kAddPositionY:CGFloat = 10
+    private let kDelayFade:TimeInterval = 0.6
+    private let kFadeDuration:TimeInterval = 0.5
     private let kZPosition:CGFloat = 10100
     
     init(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
@@ -26,11 +27,6 @@ class MOptionReformaCrossingCoin:SKSpriteNode
         return nil
     }
     
-    deinit
-    {
-        print("die coin")
-    }
-    
     //MARK: private
     
     private func startPosition(lane:MOptionReformaCrossingLane)
@@ -43,9 +39,11 @@ class MOptionReformaCrossingCoin:SKSpriteNode
     
     private func startActions()
     {
+        let actionDelay:SKAction = SKAction.wait(forDuration:kDelayFade)
         let actionFade:SKAction = SKAction.fadeOut(withDuration:kFadeDuration)
         let actionLeaverStreet:SKAction = SKAction.run(leaveStreet)
         let actions:[SKAction] = [
+            actionDelay,
             actionFade,
             actionLeaverStreet]
         let actionsSequence:SKAction = SKAction.sequence(actions)
