@@ -8,9 +8,12 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private(set) weak var hud:MOptionReformaCrossingHud!
     private weak var controller:COptionReformaCrossing!
     private weak var stop:MOptionReformaCrossingStop!
+    private weak var labelTitle:SKLabelNode?
     private let kActionSpawn:String = "actionSpawn"
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
+    private let kTitleDuration:TimeInterval = 1
+    private let kFontSize:CGFloat = 20
     private let kSpawnProbability:UInt32 = 5
     
     init(controller:COptionReformaCrossing)
@@ -56,7 +59,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     override func didMove(to view:SKView)
     {
         startFoes()
-        player.startWalking()
+        showTitle()
     }
     
     override func update(_ currentTime:TimeInterval)
@@ -159,6 +162,37 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
             controller:controller, reason:reason)
         
         view?.presentScene(gameOverScene, transition:transition)
+    }
+    
+    private func showTitle()
+    {
+        let width_2:CGFloat = controller.model.size.width / 2.0
+        let height_2:CGFloat = controller.model.size.height / 2.0
+        
+        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
+        labelTitle.text = NSLocalizedString("MOptionReformaCrossingSceneGame_labelTitle", comment:"")
+        labelTitle.fontSize = kFontSize
+        labelTitle.fontColor = SKColor.white
+        labelTitle.position = CGPoint(x:width_2, y:height_2)
+        self.labelTitle = labelTitle
+        
+        addChild(labelTitle)
+        
+        let actionDelay:SKAction = SKAction.wait(forDuration:kTitleDuration)
+        let actionActivateGame:SKAction = SKAction.run(activateGame)
+        let actions:[SKAction] = [
+            actionDelay,
+            actionActivateGame]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        run(actionsSequence)
+    }
+    
+    private func activateGame()
+    {
+        controller.model.activateGame()
+        labelTitle?.removeFromParent()
+        player.startWalking()
     }
     
     //MARK: public

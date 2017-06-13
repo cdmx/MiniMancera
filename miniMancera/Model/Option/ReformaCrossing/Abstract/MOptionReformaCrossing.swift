@@ -13,7 +13,7 @@ class MOptionReformaCrossing:MOptionProtocol
     
     required init()
     {
-        gameActive = true
+        gameActive = false
         laneGroup = MOptionReformaCrossingLaneGroup()
         size = CGSize.zero
         level = kStartingLevel
@@ -36,9 +36,13 @@ class MOptionReformaCrossing:MOptionProtocol
     
     func restart()
     {
-        gameActive = true
         level = kStartingLevel
         laneGroup.configureForScene(size:size)
+    }
+    
+    func activateGame()
+    {
+        gameActive = true
     }
     
     //MARK: option protocol
