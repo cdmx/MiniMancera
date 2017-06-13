@@ -79,11 +79,6 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
             }
             
             lastUpdateTime = currentTime
-            
-            if player.isSafe()
-            {
-                controller.model.playerSuccess()
-            }
         }
     }
     

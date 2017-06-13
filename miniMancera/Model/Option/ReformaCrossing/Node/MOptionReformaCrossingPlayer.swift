@@ -7,8 +7,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private var lastElapsedTime:TimeInterval
     private var stopTime:TimeInterval?
     private let stopTextures:[SKTexture]
-    private let positionSafe:CGFloat
-    private let kAddPointY:CGFloat = 200
+    private let kAddPointY:CGFloat = 205
     private let kSpeed:CGFloat = 35
     private let kActionWalking:String = "actionWalking"
     private let kAnimationPerFrame:TimeInterval = 0.2
@@ -61,9 +60,6 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let texture:SKTexture = stopTextures[0]
         
         let size:CGSize = texture.size()
-        let sceneHeight_2:CGFloat = controller.model.size.height / 2.0
-        let height_2:CGFloat = size.height / 2.0
-        positionSafe = sceneHeight_2 + height_2 + kAddPointY
         lastElapsedTime = 0
         
         super.init(texture:texture, color:UIColor.clear, size:size)
@@ -92,8 +88,9 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     {
         let sceneSize:CGSize = controller.model.size
         let sceneWidth_2:CGFloat = sceneSize.width / 2.0
-        let sceneHeight:CGFloat = sceneSize.height
-        let positionY:CGFloat = sceneHeight + size.height
+        let sceneHeight_2:CGFloat = sceneSize.height / 2.0
+        let height_2:CGFloat = size.height / 2.0
+        let positionY:CGFloat = sceneHeight_2 + height_2 + kAddPointY
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         
         return point
@@ -130,8 +127,13 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let actionWalk:SKAction = SKAction.move(
             to:finalPos,
             duration:duration)
+        let actionSuccess:SKAction = SKAction.run(showSuccess)
+        let actions:[SKAction] = [
+            actionWalk,
+            actionSuccess]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
         
-        return actionWalk
+        return actionsSequence
     }
     
     private func animateStop()
@@ -168,7 +170,12 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     private func showSuccess()
     {
+        removeAllActions()
         
+        let textureSuccess:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer12"))
+        texture = textureSuccess
+        
+        controller.playerSuccess()
     }
     
     //MARK: public
@@ -198,18 +205,6 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let actionsGroup:SKAction = SKAction.group(actions)
         
         run(actionsGroup, withKey:kActionWalking)
-    }
-    
-    func isSafe() -> Bool
-    {
-        if position.y > positionSafe
-        {
-            showSuccess()
-            
-            return true
-        }
-        
-        return false
     }
     
     func stopWalking()

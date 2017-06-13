@@ -98,4 +98,9 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         model.revertChanges()
         scene.game1up()
     }
+    
+    func playerSuccess()
+    {
+        model.playerSuccess()
+    }
 }

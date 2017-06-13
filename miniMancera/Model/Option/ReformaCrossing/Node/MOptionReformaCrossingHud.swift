@@ -5,10 +5,10 @@ class MOptionReformaCrossingHud:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
     private weak var labelTime:SKLabelNode!
-    private let kTimeFontSize:CGFloat = 25
+    private let kTimeFontSize:CGFloat = 18
     private let kMargin:CGFloat = 45
-    private let kTimePositionX:CGFloat = 80
-    private let kTimePositionY:CGFloat = -10
+    private let kTimePositionX:CGFloat = 65
+    private let kTimePositionY:CGFloat = -8
     private let kZPosition:CGFloat = 10001
     private let kTimeZPosition:CGFloat = 10005
     
