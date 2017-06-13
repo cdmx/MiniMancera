@@ -123,4 +123,9 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         
         return false
     }
+    
+    func stopWalking()
+    {
+        
+    }
 }

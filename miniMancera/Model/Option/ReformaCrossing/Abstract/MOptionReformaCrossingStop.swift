@@ -49,6 +49,7 @@ class MOptionReformaCrossingStop:SKSpriteNode
     {
         isUserInteractionEnabled = false
         animateStop()
+        controller.playerStop()
     }
     
     //MARK: private

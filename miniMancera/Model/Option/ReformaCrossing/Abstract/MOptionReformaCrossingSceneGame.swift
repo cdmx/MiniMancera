@@ -2,8 +2,8 @@ import SpriteKit
 
 class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
 {
+    let player:MOptionReformaCrossingPlayer
     private weak var controller:COptionReformaCrossing!
-    private let player:MOptionReformaCrossingPlayer
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kSpawnProbability:UInt32 = 5
     
