@@ -7,7 +7,7 @@ class MOptionReformaCrossingSceneGameOver:SKScene
     private let kWaitStartGame:TimeInterval = 0.7
     private let kAnimationDuration:TimeInterval = 0.3
     
-    init(controller:COptionReformaCrossing)
+    init(controller:COptionReformaCrossing, reason:MOptionReformaCrossingGameOverProtocol)
     {
         self.controller = controller
         

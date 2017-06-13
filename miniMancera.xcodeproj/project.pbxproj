@@ -259,8 +259,8 @@
 		DA2D009E1EEFC15E00365F23 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				DA2D009F1EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift */,
 				DA2D00A01EEFC15E00365F23 /* MOptionReformaCrossingSceneTitle.swift */,
+				DA2D009F1EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift */,
 				DA2D00A81EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift */,
 			);
 			path = Scene;

@@ -9,6 +9,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private weak var controller:COptionReformaCrossing!
     private weak var stop:MOptionReformaCrossingStop!
     private let kActionSpawn:String = "actionSpawn"
+    private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kSpawnProbability:UInt32 = 5
     
@@ -149,12 +150,25 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         }
     }
     
+    private func actionsGameOver(reason:MOptionReformaCrossingGameOverProtocol)
+    {
+        let transition:SKTransition = SKTransition.crossFade(
+            withDuration:kSceneTransitionDuration)
+        let gameOverScene:MOptionReformaCrossingSceneGameOver = MOptionReformaCrossingSceneGameOver(
+            controller:controller, reason:reason)
+        
+        view?.presentScene(gameOverScene, transition:transition)
+    }
+    
     //MARK: public
     
     func timeOut()
     {
         removeAction(forKey:kActionSpawn)
         player.timeOut()
+        
+        let reason:MOptionReformaCrossingGameOverTimeOut = MOptionReformaCrossingGameOverTimeOut()
+        actionsGameOver(reason:reason)
     }
     
     //MARK: contact delegate
