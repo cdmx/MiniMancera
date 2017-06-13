@@ -2,5 +2,5 @@ import Foundation
 
 extension Notification
 {
-    static let frameTextChanged:Notification.Name = Notification.Name("frameTextChanged")
+    static let enterBackground:Notification.Name = Notification.Name("enterBackground")
 }

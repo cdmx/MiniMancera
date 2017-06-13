@@ -61,10 +61,8 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
             
             updateNodes()
         }
-        else
-        {
-            lastUpdateTime = currentTime
-        }
+        
+        lastUpdateTime = currentTime
         
         if player.isSafe()
         {
