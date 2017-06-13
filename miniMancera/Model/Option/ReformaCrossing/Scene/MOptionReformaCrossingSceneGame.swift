@@ -59,18 +59,21 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     override func update(_ currentTime:TimeInterval)
     {
-        if let lastUpdateTime:TimeInterval = self.lastUpdateTime
+        if controller.model.gameActive
         {
-            let deltaTime:TimeInterval = currentTime - lastUpdateTime
-            elapsedTime += deltaTime
+            if let lastUpdateTime:TimeInterval = self.lastUpdateTime
+            {
+                let deltaTime:TimeInterval = currentTime - lastUpdateTime
+                elapsedTime += deltaTime
+                
+                updateNodes()
+            }
             
-            updateNodes()
-        }
-        
-        lastUpdateTime = currentTime
-        
-        if player.isSafe()
-        {
+            lastUpdateTime = currentTime
+            
+            if player.isSafe()
+            {
+            }
         }
     }
     

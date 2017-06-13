@@ -69,6 +69,8 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
     
     func timeOut()
     {
+        model.gameActive = false
+        
         guard
             
             let view:SKView = self.view as? SKView,

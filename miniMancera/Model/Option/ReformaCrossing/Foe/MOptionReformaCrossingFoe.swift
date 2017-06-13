@@ -51,7 +51,6 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     deinit
     {
         NotificationCenter.default.removeObserver(self)
-        print("die")
     }
     
     //MARK: notified
