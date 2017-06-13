@@ -6,7 +6,7 @@ class MOptionReformaCrossingStop:SKSpriteNode
     private weak var controller:COptionReformaCrossing!
     private let animationTextures:[SKTexture]
     private let kZPosition:CGFloat = 99999
-    private let kAnimationFrameTime:TimeInterval = 0.05
+    private let kAnimationFrameTime:TimeInterval = 0.04
     
     private class func factoryAnimationTextures() -> [SKTexture]
     {

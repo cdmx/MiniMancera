@@ -8,6 +8,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let kAddPointY:CGFloat = 200
     private let kSpeed:CGFloat = 35
     private let kActionWalking:String = "actionWalking"
+    private let kActionAnimate:String = "actionAnimate"
     private let kAnimationPerFrame:TimeInterval = 0.2
     private let kZPosition:CGFloat = 0
     private let kStopDuration:TimeInterval = 0.5
@@ -101,6 +102,20 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         return translationTime
     }
     
+    private func startAnimating()
+    {
+        let actionAnimate:SKAction = createActionAnimate()
+        
+        run(actionAnimate, withKey:kActionAnimate)
+    }
+    
+    private func startMoving()
+    {
+        let actionWalk:SKAction = createActionWalk()
+        
+        run(actionWalk, withKey:kActionWalking)
+    }
+    
     private func resumeWalking()
     {
         guard
@@ -113,20 +128,15 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         }
         
         actionWalking.speed = 1
+        startAnimating()
     }
     
     //MARK: public
     
     func startWalking()
     {
-        let actionAnimate:SKAction = createActionAnimate()
-        let actionWalk:SKAction = createActionWalk()
-        let actions:[SKAction] = [
-            actionAnimate,
-            actionWalk]
-        let actionsGroup:SKAction = SKAction.group(actions)
-        
-        run(actionsGroup, withKey:kActionWalking)
+        startMoving()
+        startAnimating()
     }
     
     func isSafe() -> Bool
@@ -141,6 +151,8 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     func stopWalking()
     {
+        removeAction(forKey:kActionAnimate)
+        
         guard
             
             let actionWalking:SKAction = action(forKey:kActionWalking)
