@@ -13,15 +13,17 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private let kActionSpawn:String = "actionSpawn"
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
-    private let kTitleDuration:TimeInterval = 3
-    private let kFontSize:CGFloat = 25
+    private let kTitleDuration:TimeInterval = 2
+    private let kFadeInDuration:TimeInterval = 0.5
+    private let kFontSize:CGFloat = 30
+    private let kTitleVerticalAdd:CGFloat = -10
     private let kSpawnProbability:UInt32 = 5
     
     init(controller:COptionReformaCrossing)
     {
         self.controller = controller
         elapsedTime = 0
-        controller.model.restart()
+        controller.model.startLevel()
         
         super.init(size:controller.model.size)
         backgroundColor = SKColor.black
@@ -170,6 +172,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     {
         let width_2:CGFloat = controller.model.size.width / 2.0
         let height_2:CGFloat = controller.model.size.height / 2.0
+        let positionY:CGFloat = height_2 + kTitleVerticalAdd
         
         let level:NSNumber = controller.model.level as NSNumber
         let levelString:String = String(
@@ -180,7 +183,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         labelTitle.text = levelString
         labelTitle.fontSize = kFontSize
         labelTitle.fontColor = SKColor.white
-        labelTitle.position = CGPoint(x:width_2, y:height_2)
+        labelTitle.position = CGPoint(x:width_2, y:positionY)
         self.labelTitle = labelTitle
         
         addChild(labelTitle)
@@ -202,9 +205,20 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     private func activateGame()
     {
-        controller.model.activateGame()
+        fadeInControls()
+        
         labelTitle?.removeFromParent()
+        controller.model.activateGame()
         player.startWalking()
+    }
+    
+    private func fadeInControls()
+    {
+        let actionFade:SKAction = SKAction.fadeIn(withDuration:kFadeInDuration)
+        
+        hud.run(actionFade)
+        menu.run(actionFade)
+        stop.run(actionFade)
     }
     
     //MARK: public

@@ -21,6 +21,7 @@ class MOptionReformaCrossingHud:SKSpriteNode
         super.init(texture:texture, color:UIColor.clear, size:size)
         position = startPosition()
         zPosition = kZPosition
+        alpha = 0
         
         let labelTime:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontRegular)
         labelTime.fontSize = kTimeFontSize

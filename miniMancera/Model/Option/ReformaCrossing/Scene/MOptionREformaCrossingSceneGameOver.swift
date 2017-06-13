@@ -79,7 +79,7 @@ class MOptionReformaCrossingSceneGameOver:SKScene
     {
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kAnimationDuration)
-        let gameScene:MOptionReformaCrossingSceneTitle = MOptionReformaCrossingSceneTitle(
+        let gameScene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
             controller:controller)
         
         view?.presentScene(gameScene, transition:transition)

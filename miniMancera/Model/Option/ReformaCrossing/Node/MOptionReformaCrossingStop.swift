@@ -44,6 +44,7 @@ class MOptionReformaCrossingStop:SKSpriteNode
         position = startPosition()
         zPosition = kZPosition
         isUserInteractionEnabled = true
+        alpha = 0
     }
     
     required init?(coder:NSCoder)

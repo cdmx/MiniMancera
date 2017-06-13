@@ -95,6 +95,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
             return
         }
         
+        model.revertChanges()
         scene.game1up()
     }
 }

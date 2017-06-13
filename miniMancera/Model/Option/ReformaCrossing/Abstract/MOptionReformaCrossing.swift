@@ -34,9 +34,13 @@ class MOptionReformaCrossing:MOptionProtocol
         laneGroup.stopFoes()
     }
     
-    func restart()
+    func revertChanges()
     {
         level = kStartingLevel
+    }
+    
+    func startLevel()
+    {
         laneGroup.configureForScene(size:size)
     }
     
@@ -61,7 +65,7 @@ class MOptionReformaCrossing:MOptionProtocol
         }
         
         self.size = size
-        let scene:MOptionReformaCrossingSceneTitle = MOptionReformaCrossingSceneTitle(
+        let scene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
             controller:controller)
         
         return scene
