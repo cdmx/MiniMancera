@@ -23,6 +23,9 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
             controller:controller)
         
+        let hud:MOptionReformaCrossingHud = MOptionReformaCrossingHud(
+            controller:controller)
+        
         let menu:MOptionReformaCrossingMenu = MOptionReformaCrossingMenu(
             controller:controller)
         
@@ -35,6 +38,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         addChild(background)
         addChild(player)
+        addChild(hud)
         addChild(menu)
         addChild(stop)
     }

@@ -9,7 +9,7 @@ class MOptionReformaCrossingStop:SKSpriteNode
     private let animationTextures:[SKTexture]
     private let standTexture:SKTexture
     private let kBlockDuration:TimeInterval = 0.5
-    private let kZPosition:CGFloat = 99999
+    private let kZPosition:CGFloat = 999999
     private let kAnimationFrameTime:TimeInterval = 0.03
     
     private class func factoryAnimationTextures() -> [SKTexture]

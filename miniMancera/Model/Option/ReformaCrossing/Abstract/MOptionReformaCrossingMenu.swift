@@ -5,7 +5,7 @@ class MOptionReformaCrossingMenu:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
     private let kMargin:CGFloat = 45
-    private let kZPosition:CGFloat = 1002
+    private let kZPosition:CGFloat = 10002
     
     init(controller:COptionReformaCrossing)
     {

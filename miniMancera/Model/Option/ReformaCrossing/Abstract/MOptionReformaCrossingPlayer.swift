@@ -13,7 +13,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let kActionWalking:String = "actionWalking"
     private let kAnimationPerFrame:TimeInterval = 0.2
     private let kStopAnimationPerFrame:TimeInterval = 0.1
-    private let kZPosition:CGFloat = 0
+    private let kZPosition:CGFloat = 10000
     private let kStopDuration:TimeInterval = 1
     
     private class func factoryAnimationTextures() -> [SKTexture]

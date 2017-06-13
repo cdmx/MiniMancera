@@ -5,7 +5,7 @@ class MOptionReformaCrossingHud:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
     private let kMargin:CGFloat = 45
-    private let kZPosition:CGFloat = 1001
+    private let kZPosition:CGFloat = 10001
     
     init(controller:COptionReformaCrossing)
     {
@@ -16,17 +16,11 @@ class MOptionReformaCrossingHud:SKSpriteNode
         super.init(texture:texture, color:UIColor.clear, size:size)
         position = startPosition()
         zPosition = kZPosition
-        isUserInteractionEnabled = true
     }
     
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
-    {
-        controller.showMenu()
     }
     
     //MARK: private
@@ -42,5 +36,12 @@ class MOptionReformaCrossingHud:SKSpriteNode
         let point:CGPoint = CGPoint(x:posX, y:posY)
         
         return point
+    }
+    
+    //MARK: public
+    
+    func update(elapsedTime:TimeInterval)
+    {
+        
     }
 }
