@@ -11,8 +11,8 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private weak var menu:MOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
     private let kActionSpawn:String = "actionSpawn"
-    private let kWaitTransition:TimeInterval = 1
-    private let kSceneTransitionDuration:TimeInterval = 0.5
+    private let kWaitTransition:TimeInterval = 1.5
+    private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kTitleDuration:TimeInterval = 2
     private let kFadeInDuration:TimeInterval = 0.5
@@ -59,6 +59,11 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    deinit
+    {
+        print("scene die")
     }
     
     override func didMove(to view:SKView)
@@ -242,7 +247,17 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         let gameOverScene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
             controller:controller)
         
-        view?.presentScene(gameOverScene, transition:transition)
+        guard
+            
+            let view:SKView = self.view
+        
+        else
+        {
+            return
+        }
+        
+        removeAllActions()
+        view.presentScene(gameOverScene, transition:transition)
     }
     
     //MARK: public

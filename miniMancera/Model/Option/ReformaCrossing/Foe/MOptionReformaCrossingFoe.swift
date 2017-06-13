@@ -42,6 +42,11 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         return nil
     }
     
+    deinit
+    {
+        print("die")
+    }
+    
     //MARK: private
     
     private func scale()
