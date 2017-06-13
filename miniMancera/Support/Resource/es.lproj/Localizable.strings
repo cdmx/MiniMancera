@@ -2,6 +2,8 @@
 "MOptionReformaCrossingSceneTitle_labelTitle"="Nivel %@";
 "MOptionReformaCrossingGameOverTimeOut_title"="Tiempo terminado";
 "MOptionReformaCrossingGameOverTimeOut_descr"="MiniMancera no llegó\na su junta";
+"MOptionReformaCrossingSceneGameOver_label1up"="Reintentar";
+"MOptionReformaCrossingSceneGameOver_labelGameOver"="Salir";
 
 "ControllerGame_menuResume"="Continuar";
 "ControllerGame_menuExit"="Salir";

@@ -5,8 +5,11 @@ class MOptionReformaCrossingSceneGameOver:SKScene
     private weak var controller:COptionReformaCrossing!
     private let kTitleFontSize:CGFloat = 25
     private let kDescrFontSize:CGFloat = 14
+    private let kButtonsFontSize:CGFloat = 12
     private let kTitleAddY:CGFloat = 180
     private let kDescrAddY:CGFloat = 150
+    private let k1upY:CGFloat = 180
+    private let kGameOverY:CGFloat = 80
     private let kAnimationDuration:TimeInterval = 0.5
     
     init(controller:COptionReformaCrossing, reason:MOptionReformaCrossingGameOverProtocol)
@@ -36,24 +39,38 @@ class MOptionReformaCrossingSceneGameOver:SKScene
         labelDescr.fontColor = SKColor.white
         labelDescr.position = CGPoint(x:width_2, y:descrY)
         
+        let label1up:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontRegular)
+        label1up.text = NSLocalizedString("MOptionReformaCrossingSceneGameOver_label1up", comment:"")
+        label1up.fontSize = kButtonsFontSize
+        label1up.fontColor = SKColor.white
+        label1up.position = CGPoint(x:width_2, y:k1upY)
+        
+        let labelGameOver:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontRegular)
+        labelGameOver.text = NSLocalizedString("MOptionReformaCrossingSceneGameOver_labelGameOver", comment:"")
+        labelGameOver.fontSize = kButtonsFontSize
+        labelGameOver.fontColor = SKColor.white
+        labelGameOver.position = CGPoint(x:width_2, y:kGameOverY)
+        
         let texture:SKTexture = SKTexture(image:reason.image)
         let image:SKSpriteNode = SKSpriteNode(texture:texture)
         image.position = CGPoint(x:width_2, y:height_2)
         
+        let node1up:MOptionReformaCrossing1up = MOptionReformaCrossing1up(controller:controller)
+        let nodeGameOver:MOptionReformaCrossingEnd = MOptionReformaCrossingEnd(controller:controller)
+        
         addChild(background)
         addChild(labelTitle)
         addChild(labelDescr)
+        addChild(label1up)
+        addChild(labelGameOver)
         addChild(image)
+        addChild(node1up)
+        addChild(nodeGameOver)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    override func didMove(to view:SKView)
-    {
-        let node1up:MOptionReformaCrossing1up = MOptionReformaCrossing1up(
     }
     
     //MARK: private

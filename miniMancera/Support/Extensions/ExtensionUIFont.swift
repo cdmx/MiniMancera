@@ -2,7 +2,7 @@ import UIKit
 
 extension UIFont
 {
-    static let kFontRegular:String = "Arial-BoldMT"
+    static let kFontRegular:String = "ArialMT"
     static let kFontBold:String = "Arial-BoldMT"
     
     class func regular(size:CGFloat) -> UIFont

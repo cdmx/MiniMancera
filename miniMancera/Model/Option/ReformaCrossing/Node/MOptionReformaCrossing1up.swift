@@ -4,7 +4,7 @@ import SpriteKit
 class MOptionReformaCrossing1up:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
-    private let kYPosition:CGFloat = 175
+    private let kYPosition:CGFloat = 150
     private let kZPosition:CGFloat = 1000
     
     init(controller:COptionReformaCrossing)
