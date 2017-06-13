@@ -102,5 +102,17 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
     func playerSuccess()
     {
         model.playerSuccess()
+        
+        guard
+            
+            let view:SKView = self.view as? SKView,
+            let scene:MOptionReformaCrossingSceneGame = view.scene as? MOptionReformaCrossingSceneGame
+            
+        else
+        {
+            return
+        }
+        
+        scene.gameSuccess()
     }
 }

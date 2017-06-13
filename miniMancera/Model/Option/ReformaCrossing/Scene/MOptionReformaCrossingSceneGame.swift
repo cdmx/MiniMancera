@@ -11,7 +11,8 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private weak var menu:MOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
     private let kActionSpawn:String = "actionSpawn"
-    private let kSceneTransitionDuration:TimeInterval = 1
+    private let kWaitTransition:TimeInterval = 1
+    private let kSceneTransitionDuration:TimeInterval = 0.5
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kTitleDuration:TimeInterval = 2
     private let kFadeInDuration:TimeInterval = 0.5
@@ -156,6 +157,23 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     private func actionsGameOver(reason:MOptionReformaCrossingGameOverProtocol)
     {
+        let actionDelay:SKAction = SKAction.wait(forDuration:kWaitTransition)
+        let actionTransition:SKAction = SKAction.run
+        { [weak self] in
+            
+            self?.afterDelayGameOver(reason:reason)
+        }
+        
+        let actions:[SKAction] = [
+            actionDelay,
+            actionTransition]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        run(actionsSequence)
+    }
+    
+    private func afterDelayGameOver(reason:MOptionReformaCrossingGameOverProtocol)
+    {
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kSceneTransitionDuration)
         let gameOverScene:MOptionReformaCrossingSceneGameOver = MOptionReformaCrossingSceneGameOver(
@@ -217,6 +235,16 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         stop.run(actionFade)
     }
     
+    private func transitionNextLevel()
+    {
+        let transition:SKTransition = SKTransition.crossFade(
+            withDuration:kSceneTransitionDuration)
+        let gameOverScene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
+            controller:controller)
+        
+        view?.presentScene(gameOverScene, transition:transition)
+    }
+    
     //MARK: public
     
     func timeOut()
@@ -226,6 +254,18 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         let reason:MOptionReformaCrossingGameOverTimeOut = MOptionReformaCrossingGameOverTimeOut()
         actionsGameOver(reason:reason)
+    }
+    
+    func gameSuccess()
+    {
+        let actionDelay:SKAction = SKAction.wait(forDuration:kWaitTransition)
+        let actionTransition:SKAction = SKAction.run(transitionNextLevel)
+        let actions:[SKAction] = [
+            actionDelay,
+            actionTransition]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        run(actionsSequence)
     }
     
     //MARK: contact delegate
