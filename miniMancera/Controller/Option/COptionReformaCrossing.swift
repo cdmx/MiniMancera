@@ -115,4 +115,21 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         
         scene.gameSuccess()
     }
+    
+    func collectedLane(lane:MOptionReformaCrossingLane)
+    {
+        model.collectedLane()
+        
+        guard
+            
+            let view:SKView = self.view as? SKView,
+            let scene:MOptionReformaCrossingSceneGame = view.scene as? MOptionReformaCrossingSceneGame
+            
+        else
+        {
+            return
+        }
+        
+        scene.createCoinOn(lane:lane)
+    }
 }

@@ -6,6 +6,8 @@ class MOptionReformaCrossingCoin:SKSpriteNode
     private weak var controller:COptionReformaCrossing!
     private let kAddPositionX:CGFloat = 100
     private let kAddPositionY:CGFloat = 20
+    private let kFadeDuration:TimeInterval = 1
+    private let kZPosition:CGFloat = 10100
     
     init(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
     {
@@ -14,11 +16,19 @@ class MOptionReformaCrossingCoin:SKSpriteNode
         self.controller = controller
         
         super.init(texture:texture, color:UIColor.clear, size:size)
+        zPosition = kZPosition
+        startPosition(lane:lane)
+        startActions()
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    deinit
+    {
+        print("die coin")
     }
     
     //MARK: private
@@ -31,37 +41,20 @@ class MOptionReformaCrossingCoin:SKSpriteNode
         position = CGPoint(x:positionX, y:positionY)
     }
     
-    private func movementDuration(startingPoint:CGPoint, endingPoint:CGPoint) -> TimeInterval
+    private func startActions()
     {
-        let distance:CGFloat = abs(startingPoint.x - endingPoint.x)
-        let speed:CGFloat = randomSpeed()
-        let translationTime:TimeInterval = TimeInterval(distance / speed)
+        let actionFade:SKAction = SKAction.fadeOut(withDuration:kFadeDuration)
+        let actionLeaverStreet:SKAction = SKAction.run(leaveStreet)
+        let actions:[SKAction] = [
+            actionFade,
+            actionLeaverStreet]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
         
-        return translationTime
-    }
-    
-    
-    private func startPhysics(size:CGSize)
-    {
-        let physicsWidth:CGFloat = size.width + kPhysicsAddWidth
-        let physicsSize:CGSize = CGSize(width:physicsWidth, height:kPhysicsHeight)
-        
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:physicsSize)
-        physicsBody.isDynamic = true
-        physicsBody.friction = 1
-        physicsBody.angularVelocity = 0
-        physicsBody.allowsRotation = false
-        physicsBody.restitution = 0
-        
-        physicsBody.categoryBitMask = MOptionReformaCrossingPhysicsStruct.Foe
-        physicsBody.contactTestBitMask = MOptionReformaCrossingPhysicsStruct.Foe
-        physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.None
-        self.physicsBody = physicsBody
+        run(actionsSequence)
     }
     
     private func leaveStreet()
     {
-        lane.removeFoe(item:self)
         removeAllActions()
         removeFromParent()
     }

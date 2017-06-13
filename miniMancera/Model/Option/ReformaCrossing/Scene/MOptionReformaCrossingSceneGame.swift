@@ -278,6 +278,15 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         run(actionsSequence)
     }
     
+    func createCoinOn(lane:MOptionReformaCrossingLane)
+    {
+        let coin:MOptionReformaCrossingCoin = MOptionReformaCrossingCoin(
+            lane:lane,
+            controller:controller)
+        
+        addChild(coin)
+    }
+    
     //MARK: contact delegate
     
     func didBegin(_ contact:SKPhysicsContact)

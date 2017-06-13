@@ -178,7 +178,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         controller.playerSuccess()
     }
     
-    private func collectLane()
+    private func collectLanes()
     {
         guard
         
@@ -190,7 +190,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
             return
         }
         
-        controller.model.collectedLane()
+        controller.collectedLane(lane:lane)
     }
     
     //MARK: public
@@ -208,7 +208,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         }
         else
         {
-            collectLane()
+            collectLanes()
         }
     }
     
