@@ -45,6 +45,7 @@
 		DA2D00A61EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D009F1EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift */; };
 		DA2D00A71EEFC15E00365F23 /* MOptionReformaCrossingSceneTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00A01EEFC15E00365F23 /* MOptionReformaCrossingSceneTitle.swift */; };
 		DA2D00A91EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00A81EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift */; };
+		DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00B01EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift */; };
 		DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */; };
 		DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA61EECB16A00365F23 /* Controller.swift */; };
 		DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */; };
@@ -117,6 +118,7 @@
 		DA2D009F1EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSceneGame.swift; sourceTree = "<group>"; };
 		DA2D00A01EEFC15E00365F23 /* MOptionReformaCrossingSceneTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSceneTitle.swift; sourceTree = "<group>"; };
 		DA2D00A81EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionREformaCrossingSceneGameOver.swift; sourceTree = "<group>"; };
+		DA2D00B01EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverProtocol.swift; sourceTree = "<group>"; };
 		DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA2DFFA61EECB16A00365F23 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2D005D1EEDE38600365F23 /* Abstract */,
+				DA2D00AF1EEFD82800365F23 /* GameOver */,
 				DA2D00981EEFC15E00365F23 /* Node */,
 				DA2D009E1EEFC15E00365F23 /* Scene */,
 				DA2D00631EEDE38600365F23 /* Foe */,
@@ -259,6 +262,14 @@
 				DA2D00A81EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		DA2D00AF1EEFD82800365F23 /* GameOver */ = {
+			isa = PBXGroup;
+			children = (
+				DA2D00B01EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift */,
+			);
+			path = GameOver;
 			sourceTree = "<group>";
 		};
 		DA2DFFA31EECB16A00365F23 /* Controller */ = {
@@ -532,6 +543,7 @@
 				DA2DFFEA1EECB16A00365F23 /* VCollection.swift in Sources */,
 				DA2D007C1EEDE38600365F23 /* MOptionReformaCrossingLaneF.swift in Sources */,
 				DA2DFFED1EECB16A00365F23 /* VPushBackground.swift in Sources */,
+				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
 				DA2D00A71EEFC15E00365F23 /* MOptionReformaCrossingSceneTitle.swift in Sources */,
 				DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */,
 				DA2DFFDD1EECB16A00365F23 /* ExtensionNSManagedObject.swift in Sources */,

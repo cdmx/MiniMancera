@@ -53,13 +53,16 @@ class MOptionReformaCrossingStop:SKSpriteNode
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        if unblockTime == nil
+        if controller.model.gameActive
         {
-            animateStop()
+            if unblockTime == nil
+            {
+                animateStop()
+            }
+            
+            measureUnblockTime()
+            controller.playerStop()
         }
-        
-        measureUnblockTime()
-        controller.playerStop()
     }
     
     //MARK: private

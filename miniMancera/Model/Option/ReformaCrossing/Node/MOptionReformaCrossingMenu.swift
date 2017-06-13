@@ -26,7 +26,10 @@ class MOptionReformaCrossingMenu:SKSpriteNode
     
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        controller.showMenu()
+        if controller.model.gameActive
+        {
+            controller.showMenu()
+        }
     }
     
     //MARK: private
