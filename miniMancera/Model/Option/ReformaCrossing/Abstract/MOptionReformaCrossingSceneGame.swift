@@ -5,6 +5,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     var lastUpdateTime:TimeInterval?
     private(set) var elapsedTime:TimeInterval
     private(set) weak var player:MOptionReformaCrossingPlayer!
+    private(set) weak var hud:MOptionReformaCrossingHud!
     private weak var controller:COptionReformaCrossing!
     private weak var stop:MOptionReformaCrossingStop!
     private let kSpawnFoeRate:TimeInterval = 0.1
@@ -25,6 +26,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         let hud:MOptionReformaCrossingHud = MOptionReformaCrossingHud(
             controller:controller)
+        self.hud = hud
         
         let menu:MOptionReformaCrossingMenu = MOptionReformaCrossingMenu(
             controller:controller)
@@ -61,8 +63,6 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
             let deltaTime:TimeInterval = currentTime - lastUpdateTime
             elapsedTime += deltaTime
             
-            print(elapsedTime)
-            
             updateNodes()
         }
         
@@ -79,6 +79,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     {
         player.update(elapsedTime:elapsedTime)
         stop.update(elapsedTime:elapsedTime)
+        hud.update(elapsedTime:elapsedTime)
     }
     
     private func startFoes()

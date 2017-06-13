@@ -16,6 +16,12 @@ class MOptionReformaCrossingHud:SKSpriteNode
         super.init(texture:texture, color:UIColor.clear, size:size)
         position = startPosition()
         zPosition = kZPosition
+        
+        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:kFont)
+        labelTitle.text = messageTitle
+        labelTitle.fontSize = kFontSize
+        labelTitle.fontColor = SKColor.white
+        labelTitle.position = CGPoint(x:width_2, y:height_2)
     }
     
     required init?(coder:NSCoder)
