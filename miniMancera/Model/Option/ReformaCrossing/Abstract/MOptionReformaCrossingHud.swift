@@ -1,15 +1,15 @@
 import UIKit
 import SpriteKit
 
-class MOptionReformaCrossingMenu:SKSpriteNode
+class MOptionReformaCrossingHud:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
     private let kMargin:CGFloat = 45
-    private let kZPosition:CGFloat = 1002
+    private let kZPosition:CGFloat = 1001
     
     init(controller:COptionReformaCrossing)
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingMenu"))
+        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingHud"))
         let size:CGSize = texture.size()
         self.controller = controller
         
@@ -33,10 +33,13 @@ class MOptionReformaCrossingMenu:SKSpriteNode
     
     private func startPosition() -> CGPoint
     {
-        let sceneHeight:CGFloat = controller.model.size.height
+        let sceneSize:CGSize = controller.model.size
+        let sceneWidth:CGFloat = sceneSize.width
+        let sceneHeight:CGFloat = sceneSize.height
         let sizeWidth_2:CGFloat = size.width / 2.0
+        let posX:CGFloat = sceneWidth - sizeWidth_2
         let posY:CGFloat = sceneHeight - kMargin
-        let point:CGPoint = CGPoint(x:sizeWidth_2, y:posY)
+        let point:CGPoint = CGPoint(x:posX, y:posY)
         
         return point
     }
