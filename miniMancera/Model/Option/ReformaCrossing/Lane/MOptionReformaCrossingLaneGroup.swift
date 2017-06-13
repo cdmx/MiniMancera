@@ -16,15 +16,15 @@ class MOptionReformaCrossingLaneGroup
         let laneG:MOptionReformaCrossingLaneG = MOptionReformaCrossingLaneG()
         let laneH:MOptionReformaCrossingLaneH = MOptionReformaCrossingLaneH()
         
-        var lanes:[MOptionReformaCrossingLane] = [
-            laneA,
-            laneB,
-            laneC,
-            laneD,
-            laneE,
-            laneF,
+        let lanes:[MOptionReformaCrossingLane] = [
+            laneH,
             laneG,
-            laneH]
+            laneF,
+            laneE,
+            laneD,
+            laneC,
+            laneB,
+            laneA]
         
         return lanes
     }
