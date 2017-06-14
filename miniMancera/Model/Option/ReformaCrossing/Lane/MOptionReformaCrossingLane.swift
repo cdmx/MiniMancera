@@ -107,6 +107,9 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
     
     var posibleFoes:[MOptionReformaCrossingFoe.Type]
     {
-        return []
+        get
+        {
+            return []
+        }
     }
 }
