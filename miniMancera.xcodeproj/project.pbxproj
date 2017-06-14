@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA11DE3D1EF089810043749D /* MOptionReformaCrossingCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE3C1EF089810043749D /* MOptionReformaCrossingCoin.swift */; };
 		DA11DE3F1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */; };
+		DA11DE451EF1094D0043749D /* MOptionReformaCrossingFoeId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE441EF1094D0043749D /* MOptionReformaCrossingFoeId.swift */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -86,6 +87,7 @@
 /* Begin PBXFileReference section */
 		DA11DE3C1EF089810043749D /* MOptionReformaCrossingCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoin.swift; sourceTree = "<group>"; };
 		DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverHitAndRun.swift; sourceTree = "<group>"; };
+		DA11DE441EF1094D0043749D /* MOptionReformaCrossingFoeId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeId.swift; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		DA2D00631EEDE38600365F23 /* Foe */ = {
 			isa = PBXGroup;
 			children = (
+				DA11DE441EF1094D0043749D /* MOptionReformaCrossingFoeId.swift */,
 				DA2D00641EEDE38600365F23 /* MOptionReformaCrossingFoe.swift */,
 				DA2D00841EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift */,
 				DA2D00861EEDF4E200365F23 /* MOptionReformaCrossingFoeVW.swift */,
@@ -559,6 +562,7 @@
 				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
 				DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */,
 				DA2DFFDD1EECB16A00365F23 /* ExtensionNSManagedObject.swift in Sources */,
+				DA11DE451EF1094D0043749D /* MOptionReformaCrossingFoeId.swift in Sources */,
 				DA2D00A21EEFC15E00365F23 /* MOptionReformaCrossingHud.swift in Sources */,
 				DA2D00871EEDF4E200365F23 /* MOptionReformaCrossingFoeVW.swift in Sources */,
 				DA2D00B31EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift in Sources */,
