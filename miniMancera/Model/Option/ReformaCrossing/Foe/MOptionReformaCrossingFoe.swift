@@ -11,17 +11,6 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     private let kPhysicsHeight:CGFloat = 30
     private let kPhysicsAddWidth:CGFloat = 8
     
-    class func randomFoe(
-        lane:MOptionReformaCrossingLane,
-        controller:COptionReformaCrossing) -> MOptionReformaCrossingFoe
-    {
-        let foe:MOptionReformaCrossingFoeVW = MOptionReformaCrossingFoeVW(
-            lane:lane,
-            controller:controller)
-        
-        return foe
-    }
-    
     init(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
     {
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingVW"))

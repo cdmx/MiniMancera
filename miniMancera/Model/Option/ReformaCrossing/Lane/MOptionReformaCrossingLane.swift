@@ -104,4 +104,9 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
             return 0
         }
     }
+    
+    var posibleFoes:[MOptionReformaCrossingFoe.Id]
+    {
+        return []
+    }
 }
