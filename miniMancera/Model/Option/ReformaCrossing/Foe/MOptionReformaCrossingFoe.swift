@@ -8,6 +8,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     private weak var controller:COptionReformaCrossing!
     private let kActionMoving:String = "actionMoving"
     private let kPauseDuration:TimeInterval = 1
+    private let kPhysicsRemoveHeight:CGFloat = 4
     private let kPhysicsAddWidth:CGFloat = 8
     
     init(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing, image:UIImage)
@@ -84,8 +85,9 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     
     private func startPhysics(size:CGSize)
     {
+        let physicsHeight:CGFloat = size.height - kPhysicsRemoveHeight
         let physicsWidth:CGFloat = size.width + kPhysicsAddWidth
-        let physicsSize:CGSize = CGSize(width:physicsWidth, height:kPhysicsHeight)
+        let physicsSize:CGSize = CGSize(width:physicsWidth, height:physicsHeight)
         
         let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:physicsSize)
         physicsBody.isDynamic = true
