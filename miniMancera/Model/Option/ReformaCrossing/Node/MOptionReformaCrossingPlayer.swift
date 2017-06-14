@@ -66,6 +66,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         position = startPosition()
         zPosition = kZPosition
         isHidden = true
+        startPhysics(size:size)
     }
     
     required init?(coder:NSCoder)
@@ -94,6 +95,24 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         
         return point
+    }
+    
+    private func startPhysics(size:CGSize)
+    {
+        let physicsWidth:CGFloat = size.width + kPhysicsAddWidth
+        let physicsSize:CGSize = CGSize(width:physicsWidth, height:kPhysicsHeight)
+        
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:physicsSize)
+        physicsBody.isDynamic = true
+        physicsBody.friction = 1
+        physicsBody.angularVelocity = 0
+        physicsBody.allowsRotation = false
+        physicsBody.restitution = 0
+        
+        physicsBody.categoryBitMask = MOptionReformaCrossingPhysicsStruct.Foe
+        physicsBody.contactTestBitMask = MOptionReformaCrossingPhysicsStruct.Foe
+        physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.None
+        self.physicsBody = physicsBody
     }
     
     private func movementDuration(startingPoint:CGPoint, endingPoint:CGPoint) -> TimeInterval
