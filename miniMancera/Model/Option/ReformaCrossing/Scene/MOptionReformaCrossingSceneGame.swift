@@ -277,7 +277,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     {
         player.hitAndRun()
         
-        let reason:MOptionReformaCrossingGameOverTimeOut = MOptionReformaCrossingGameOverTimeOut()
+        let reason:MOptionReformaCrossingGameOverHitAndRun = MOptionReformaCrossingGameOverHitAndRun()
         actionsGameOver(reason:reason)
     }
     
