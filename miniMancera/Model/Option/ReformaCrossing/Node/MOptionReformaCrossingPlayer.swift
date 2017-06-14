@@ -13,6 +13,8 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let kAnimationPerFrame:TimeInterval = 0.1
     private let kStopAnimationPerFrame:TimeInterval = 0.05
     private let kZPosition:CGFloat = 10000
+    private let kPhysicsHeight:CGFloat = 16
+    private let kPhysicsYPos:CGFloat = -12
     private let kStopDuration:TimeInterval = 0.5
     
     private class func factoryAnimationTextures() -> [SKTexture]
@@ -99,7 +101,12 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     private func startPhysics(size:CGSize)
     {
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
+        let physicsSize:CGSize = CGSize(width:size.width, height:kPhysicsHeight)
+        let physicsCenter:CGPoint = CGPoint(x:0, y:kPhysicsYPos)
+        
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(
+            rectangleOf:physicsSize,
+            center:physicsCenter)
         physicsBody.isDynamic = true
         physicsBody.friction = 0
         physicsBody.angularVelocity = 0
