@@ -56,7 +56,6 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
         view.showsNodeCount = true
         view.ignoresSiblingOrder = true
         view.presentScene(scene)
-        view.showsPhysics = true
     }
     
     //MARK: private

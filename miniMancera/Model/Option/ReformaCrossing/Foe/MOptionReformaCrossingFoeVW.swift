@@ -2,7 +2,7 @@ import UIKit
 
 class MOptionReformaCrossingFoeVW:MOptionReformaCrossingFoe
 {
-    private let kRandomMaxSpeed:UInt32 = 50
+    private let kRandomMaxSpeed:UInt32 = 40
 
     override var randomMaxSpeed:UInt32
     {
