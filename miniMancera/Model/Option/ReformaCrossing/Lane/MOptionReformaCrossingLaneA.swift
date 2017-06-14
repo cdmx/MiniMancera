@@ -7,18 +7,23 @@ class MOptionReformaCrossingLaneA:MOptionReformaCrossingLaneLeft
     
     init()
     {
-        foeTypes = [
-            MOptionReformaCrossingFoeVW.self,
-            MOptionReformaCrossingFoeRuta2.self]
+        foeTypes = [MOptionReformaCrossingFoeVW.self,
+                    MOptionReformaCrossingFoeRuta2.self,
+                    MOptionReformaCrossingFoePolice.self,
+                    MOptionReformaCrossingFoeTamales.self,
+                    MOptionReformaCrossingFoeTaxiPink.self,
+                    MOptionReformaCrossingFoeFierroViejo.self,
+                    MOptionReformaCrossingFoeLordAudi.self,
+                    MOptionReformaCrossingFoeCyclerFemale.self]
         
         super.init(deltaVertical:kDeltaVertical)
     }
-    /*
+    
     override var posibleFoes:[MOptionReformaCrossingFoe.Type]
     {
         get
         {
             return foeTypes
         }
-    }*/
+    }
 }
