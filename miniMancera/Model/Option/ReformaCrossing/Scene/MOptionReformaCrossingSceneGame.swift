@@ -18,7 +18,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private let kFadeInDuration:TimeInterval = 0.5
     private let kFontSize:CGFloat = 30
     private let kTitleVerticalAdd:CGFloat = -10
-    private let kSpawnProbability:UInt32 = 5
+    private let kSpawnProbability:UInt32 = 6
     
     init(controller:COptionReformaCrossing)
     {

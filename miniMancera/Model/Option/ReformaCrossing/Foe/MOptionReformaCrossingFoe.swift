@@ -8,7 +8,6 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     private weak var controller:COptionReformaCrossing!
     private let kActionMoving:String = "actionMoving"
     private let kPauseDuration:TimeInterval = 1
-    private let kPhysicsHeight:CGFloat = 30
     private let kPhysicsAddWidth:CGFloat = 8
     
     init(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing, image:UIImage)
