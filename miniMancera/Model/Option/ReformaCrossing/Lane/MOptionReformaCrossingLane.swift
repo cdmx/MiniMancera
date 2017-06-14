@@ -109,7 +109,8 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
     {
         get
         {
-            return []
+            return [MOptionReformaCrossingFoeVW.self,
+                    MOptionReformaCrossingFoeRuta2.self]
         }
     }
 }

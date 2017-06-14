@@ -11,6 +11,7 @@
 		DA11DE3F1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */; };
 		DA11DE471EF10A480043749D /* MOptionReformaCrossingFoeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE461EF10A480043749D /* MOptionReformaCrossingFoeFactory.swift */; };
 		DA11DE491EF111790043749D /* MOptionReformaCrossingFoeRuta2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE481EF111790043749D /* MOptionReformaCrossingFoeRuta2.swift */; };
+		DA11DE4B1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE4A1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -90,6 +91,7 @@
 		DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverHitAndRun.swift; sourceTree = "<group>"; };
 		DA11DE461EF10A480043749D /* MOptionReformaCrossingFoeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeFactory.swift; sourceTree = "<group>"; };
 		DA11DE481EF111790043749D /* MOptionReformaCrossingFoeRuta2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeRuta2.swift; sourceTree = "<group>"; };
+		DA11DE4A1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeMetrobus.swift; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				DA2D00841EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift */,
 				DA2D00861EEDF4E200365F23 /* MOptionReformaCrossingFoeVW.swift */,
 				DA11DE481EF111790043749D /* MOptionReformaCrossingFoeRuta2.swift */,
+				DA11DE4A1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift */,
 			);
 			path = Foe;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				DA2DFFE01EECB16A00365F23 /* ExtensionUIColor.swift in Sources */,
 				DA2D007D1EEDE38600365F23 /* MOptionReformaCrossingLaneG.swift in Sources */,
 				DA2D00A11EEFC15E00365F23 /* MOptionReformaCrossingBackground.swift in Sources */,
+				DA11DE4B1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

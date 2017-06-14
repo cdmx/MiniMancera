@@ -1,9 +1,9 @@
 import UIKit
 
-class MOptionReformaCrossingFoeVW:MOptionReformaCrossingFoe
+class MOptionReformaCrossingFoeMetrobus:MOptionReformaCrossingFoe
 {
-    private let kRandomMaxSpeed:UInt32 = 50
-
+    private let kRandomMaxSpeed:UInt32 = 80
+    
     override var randomMaxSpeed:UInt32
     {
         get
@@ -17,7 +17,7 @@ class MOptionReformaCrossingFoeVW:MOptionReformaCrossingFoe
         super.init(
             lane:lane,
             controller:controller,
-            image:#imageLiteral(resourceName: "assetReformaCrossingVW"))
+            image:#imageLiteral(resourceName: "assetReformaCrossingMetrobus"))
     }
     
     required init?(coder:NSCoder)
