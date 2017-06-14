@@ -14,7 +14,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private let kWaitTransition:TimeInterval = 1.5
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
-    private let kTitleDuration:TimeInterval = 1.5
+    private let kTitleDuration:TimeInterval = 2
     private let kFadeInDuration:TimeInterval = 0.5
     private let kFontSize:CGFloat = 30
     private let kTitleVerticalAdd:CGFloat = -10

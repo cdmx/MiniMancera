@@ -12,6 +12,7 @@
 		DA11DE471EF10A480043749D /* MOptionReformaCrossingFoeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE461EF10A480043749D /* MOptionReformaCrossingFoeFactory.swift */; };
 		DA11DE491EF111790043749D /* MOptionReformaCrossingFoeRuta2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE481EF111790043749D /* MOptionReformaCrossingFoeRuta2.swift */; };
 		DA11DE4B1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE4A1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift */; };
+		DA11DE4D1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE4C1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -92,6 +93,7 @@
 		DA11DE461EF10A480043749D /* MOptionReformaCrossingFoeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeFactory.swift; sourceTree = "<group>"; };
 		DA11DE481EF111790043749D /* MOptionReformaCrossingFoeRuta2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeRuta2.swift; sourceTree = "<group>"; };
 		DA11DE4A1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeMetrobus.swift; sourceTree = "<group>"; };
+		DA11DE4C1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoePolice.swift; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				DA2D00861EEDF4E200365F23 /* MOptionReformaCrossingFoeVW.swift */,
 				DA11DE481EF111790043749D /* MOptionReformaCrossingFoeRuta2.swift */,
 				DA11DE4A1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift */,
+				DA11DE4C1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift */,
 			);
 			path = Foe;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				DA2DFFDD1EECB16A00365F23 /* ExtensionNSManagedObject.swift in Sources */,
 				DA2D00A21EEFC15E00365F23 /* MOptionReformaCrossingHud.swift in Sources */,
 				DA2D00871EEDF4E200365F23 /* MOptionReformaCrossingFoeVW.swift in Sources */,
+				DA11DE4D1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift in Sources */,
 				DA2D00B31EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift in Sources */,
 				DA2DFFE21EECB16A00365F23 /* ExtensionURL.swift in Sources */,
 				DA2DFFEF1EECB16A00365F23 /* VSliderBar.swift in Sources */,

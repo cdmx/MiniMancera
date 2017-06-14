@@ -8,7 +8,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private var stopTime:TimeInterval?
     private let stopTextures:[SKTexture]
     private let kAddPointY:CGFloat = 205
-    private let kSpeed:CGFloat = 60
+    private let kSpeed:CGFloat = 70
     private let kActionWalking:String = "actionWalking"
     private let kAnimationPerFrame:TimeInterval = 0.1
     private let kStopAnimationPerFrame:TimeInterval = 0.04
