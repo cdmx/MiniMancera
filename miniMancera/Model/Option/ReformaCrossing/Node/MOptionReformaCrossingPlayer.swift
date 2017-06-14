@@ -14,7 +14,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let kStopAnimationPerFrame:TimeInterval = 0.04
     private let kStopDuration:TimeInterval = 0.3
     private let kZPosition:CGFloat = 10000
-    private let kPhysicsWidth:CGFloat = 14
+    private let kPhysicsWidth:CGFloat = 12
     private let kPhysicsHeight:CGFloat = 10
     private let kPhysicsYPos:CGFloat = -10
     
