@@ -124,9 +124,16 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
             return
         }
         
-        let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
-            lane:lane,
-            controller:controller)
+        guard
+            
+            let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
+                lane:lane,
+                controller:controller)
+        
+        else
+        {
+            return
+        }
         
         addChild(foe)
     }

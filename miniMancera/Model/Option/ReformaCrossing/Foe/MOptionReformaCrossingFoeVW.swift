@@ -11,4 +11,17 @@ class MOptionReformaCrossingFoeVW:MOptionReformaCrossingFoe
             return kRandomMaxSpeed
         }
     }
+    
+    required init?(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
+    {
+        super.init(
+            lane:lane,
+            controller:controller,
+            image:#imageLiteral(resourceName: "assetReformaCrossingVW"))
+    }
+    
+    required init?(coder: NSCoder)
+    {
+        return nil
+    }
 }

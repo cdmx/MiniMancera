@@ -11,9 +11,9 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     private let kPhysicsHeight:CGFloat = 30
     private let kPhysicsAddWidth:CGFloat = 8
     
-    required init?(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
+    init(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing, image:UIImage)
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingVW"))
+        let texture:SKTexture = SKTexture(image:image)
         let size:CGSize = texture.size()
         self.controller = controller
         self.lane = lane
@@ -24,6 +24,11 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         scale()
         startPhysics(size:size)
         lane.foes.append(self)
+    }
+    
+    required init?(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
+    {
+        return nil
     }
     
     required init?(coder:NSCoder)
