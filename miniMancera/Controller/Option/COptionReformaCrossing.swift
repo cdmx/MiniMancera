@@ -79,8 +79,24 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
             return
         }
         
-        model.gameOver()
+        model.stopAll()
         scene.timeOut()
+    }
+    
+    func hitAndRun()
+    {
+        guard
+            
+            let view:SKView = self.view as? SKView,
+            let scene:MOptionReformaCrossingSceneGame = view.scene as? MOptionReformaCrossingSceneGame
+            
+        else
+        {
+            return
+        }
+        
+        model.hitAndRun()
+        scene.hitAndRun()
     }
     
     func game1up()

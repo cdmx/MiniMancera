@@ -25,10 +25,15 @@ class MOptionReformaCrossing:MOptionProtocol
     
     //MARK: public
     
-    func gameOver()
+    func stopAll()
     {
         gameActive = false
         laneGroup.stopFoes()
+    }
+    
+    func hitAndRun()
+    {
+        gameActive = false
     }
     
     func revertChanges()

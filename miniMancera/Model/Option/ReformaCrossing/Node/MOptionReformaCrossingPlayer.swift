@@ -269,4 +269,12 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         let textureTimeOut:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer11"))
         texture = textureTimeOut
     }
+    
+    func hitAndRun()
+    {
+        removeAllActions()
+        
+        let textureTimeOut:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer10"))
+        texture = textureTimeOut
+    }
 }

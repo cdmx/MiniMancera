@@ -157,7 +157,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     private func contactPlayerFoe(player:MOptionReformaCrossingPlayer, foe:MOptionReformaCrossingFoe)
     {
-        
+        controller.hitAndRun()
     }
     
     private func actionsGameOver(reason:MOptionReformaCrossingGameOverProtocol)
@@ -179,6 +179,8 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     private func afterDelayGameOver(reason:MOptionReformaCrossingGameOverProtocol)
     {
+        removeAllActions()
+        
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kSceneTransitionDuration)
         let gameOverScene:MOptionReformaCrossingSceneGameOver = MOptionReformaCrossingSceneGameOver(
@@ -269,6 +271,11 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         let reason:MOptionReformaCrossingGameOverTimeOut = MOptionReformaCrossingGameOverTimeOut()
         actionsGameOver(reason:reason)
+    }
+    
+    func hitAndRun()
+    {
+        player.hitAndRun()
     }
     
     func gameSuccess()
