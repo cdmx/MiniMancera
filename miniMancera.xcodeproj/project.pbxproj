@@ -18,6 +18,7 @@
 		DA11DE531EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */; };
 		DA11DE551EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE541EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift */; };
 		DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D57821EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift */; };
+		DA1D57861EF1E73F00ECA895 /* soundCarHorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA1D57851EF1E73F00ECA895 /* soundCarHorn.mp3 */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -104,6 +105,7 @@
 		DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeFierroViejo.swift; sourceTree = "<group>"; };
 		DA11DE541EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeLordAudi.swift; sourceTree = "<group>"; };
 		DA1D57821EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeCyclerFemale.swift; sourceTree = "<group>"; };
+		DA1D57851EF1E73F00ECA895 /* soundCarHorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundCarHorn.mp3; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA1D57841EF1E73F00ECA895 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DA1D57851EF1E73F00ECA895 /* soundCarHorn.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 		DA2D002D1EECC87700365F23 /* Option */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +392,7 @@
 		DA2DFFAF1EECB16A00365F23 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				DA1D57841EF1E73F00ECA895 /* sounds */,
 				DA2DFFB01EECB16A00365F23 /* LaunchScreen.storyboard */,
 				DA2D003D1EED2F0000365F23 /* assetSprites.xcassets */,
 			);
@@ -559,6 +570,7 @@
 			files = (
 				DA2DFFD81EECB16A00365F23 /* LaunchScreen.storyboard in Resources */,
 				DA2D00291EECB9D500365F23 /* Localizable.strings in Resources */,
+				DA1D57861EF1E73F00ECA895 /* soundCarHorn.mp3 in Resources */,
 				DA2D003E1EED2F0000365F23 /* assetSprites.xcassets in Resources */,
 				DA2DFFE41EECB16A00365F23 /* ResourceURL.plist in Resources */,
 			);
