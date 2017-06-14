@@ -155,6 +155,11 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         }
     }
     
+    private func contactPlayerFoe(player:MOptionReformaCrossingPlayer, foe:MOptionReformaCrossingFoe)
+    {
+        
+    }
+    
     private func actionsGameOver(reason:MOptionReformaCrossingGameOverProtocol)
     {
         let actionDelay:SKAction = SKAction.wait(forDuration:kWaitTransition)
@@ -291,14 +296,25 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     func didBegin(_ contact:SKPhysicsContact)
     {
-        let bodyA:SKPhysicsBody = contact.bodyA
-        let bodyB:SKPhysicsBody = contact.bodyB
+        let bodyA:SKNode? = contact.bodyA.node
+        let bodyB:SKNode? = contact.bodyB.node
         
-        if let foeA:MOptionReformaCrossingFoe = bodyA.node as? MOptionReformaCrossingFoe
+        if let foeA:MOptionReformaCrossingFoe = bodyA as? MOptionReformaCrossingFoe
         {
-            if let foeB:MOptionReformaCrossingFoe = bodyB.node as? MOptionReformaCrossingFoe
+            if let player:MOptionReformaCrossingPlayer = bodyB as? MOptionReformaCrossingPlayer
+            {
+                contactPlayerFoe(player:player, foe:foeA)
+            }
+            else if let foeB:MOptionReformaCrossingFoe = bodyB as? MOptionReformaCrossingFoe
             {
                 contactFoes(foeA:foeA, foeB:foeB)
+            }
+        }
+        else if let player:MOptionReformaCrossingPlayer = bodyA as? MOptionReformaCrossingPlayer
+        {
+            if let foeB:MOptionReformaCrossingFoe = bodyB as? MOptionReformaCrossingFoe
+            {
+                contactPlayerFoe(player:player, foe:foeB)
             }
         }
     }
