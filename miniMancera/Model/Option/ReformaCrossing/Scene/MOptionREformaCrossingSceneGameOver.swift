@@ -3,10 +3,10 @@ import SpriteKit
 class MOptionReformaCrossingSceneGameOver:SKScene
 {
     private weak var controller:COptionReformaCrossing!
-    private let kTitleFontSize:CGFloat = 25
-    private let kDescrFontSize:CGFloat = 14
+    private let kTitleFontSize:CGFloat = 20
+    private let kDescrFontSize:CGFloat = 12
     private let kButtonsFontSize:CGFloat = 12
-    private let kTitleAddY:CGFloat = 180
+    private let kTitleAddY:CGFloat = 167
     private let kDescrAddY:CGFloat = 150
     private let k1upY:CGFloat = 180
     private let kGameOverY:CGFloat = 80

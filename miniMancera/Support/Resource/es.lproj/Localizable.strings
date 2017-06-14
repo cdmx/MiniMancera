@@ -1,8 +1,8 @@
 "MHomeOptionsReformaCrossing_title"="Cruzando Reforma";
 "MOptionReformaCrossingGameOverTimeOut_title"="Tiempo terminado";
 "MOptionReformaCrossingGameOverTimeOut_descr"="MiniMancera no llegó a su junta";
-"MOptionReformaCrossingGameOverHitAndRun_title"="Atropellaron a MiniMancer";
-"MOptionReformaCrossingGameOverHitAndRun_descr"="Cruzar Reforma es mas difícil de lo que creias";
+"MOptionReformaCrossingGameOverHitAndRun_title"="MiniMancera atropellado";
+"MOptionReformaCrossingGameOverHitAndRun_descr"="Cruzar es mas difícil de lo que creías";
 "MOptionReformaCrossingSceneGameOver_label1up"="Reintentar";
 "MOptionReformaCrossingSceneGameOver_labelGameOver"="Salir";
 "MOptionReformaCrossingSceneGame_labelTitle"="Nivel %@";
