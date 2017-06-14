@@ -4,13 +4,18 @@ extension MOptionReformaCrossingFoe
 {
     class func randomFoe(
         lane:MOptionReformaCrossingLane,
-        controller:COptionReformaCrossing) -> MOptionReformaCrossingFoe
+        controller:COptionReformaCrossing) -> MOptionReformaCrossingFoe?
     {
-        let possibleFoes:[MOptionReformaCrossingFoe.Id] = lane.posibleFoes
+        guard
+            
+            let foeType:MOptionReformaCrossingFoe.Type = foeTypeFrom(lane:lane)
         
+        else
+        {
+            return nil
+        }
         
-        
-        let foe:MOptionReformaCrossingFoeVW = MOptionReformaCrossingFoeVW(
+        let foe:MOptionReformaCrossingFoe? = foeType.init(
             lane:lane,
             controller:controller)
         
@@ -19,13 +24,19 @@ extension MOptionReformaCrossingFoe
     
     //MARK: private
     
-    private class func foeIdFrom(lane:MOptionReformaCrossingLane) -> MOptionReformaCrossingFoe.Id
+    private class func foeTypeFrom(lane:MOptionReformaCrossingLane) -> MOptionReformaCrossingFoe.Type?
     {
-        let possibleFoes:[MOptionReformaCrossingFoe.Id] = lane.posibleFoes
+        let possibleFoes:[MOptionReformaCrossingFoe.Type] = lane.posibleFoes
         let countIds:UInt32 = UInt32(possibleFoes.count)
-        let randomId:Int = Int(arc4random_uniform(countIds))
-        let foeId:MOptionReformaCrossingFoe.Id = possibleFoes[randomId]
         
-        return foeId
+        if countIds > 0
+        {
+            let randomId:Int = Int(arc4random_uniform(countIds))
+            let foeType:MOptionReformaCrossingFoe.Type = possibleFoes[randomId]
+            
+            return foeType
+        }
+        
+        return nil
     }
 }

@@ -11,7 +11,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
     private let kPhysicsHeight:CGFloat = 30
     private let kPhysicsAddWidth:CGFloat = 8
     
-    init(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
+    required init?(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
     {
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingVW"))
         let size:CGSize = texture.size()
