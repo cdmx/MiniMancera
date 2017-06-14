@@ -14,8 +14,9 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private let kStopAnimationPerFrame:TimeInterval = 0.04
     private let kStopDuration:TimeInterval = 0.3
     private let kZPosition:CGFloat = 10000
-    private let kPhysicsHeight:CGFloat = 12
-    private let kPhysicsYPos:CGFloat = -8
+    private let kPhysicsWidth:CGFloat = 14
+    private let kPhysicsHeight:CGFloat = 10
+    private let kPhysicsYPos:CGFloat = -10
     
     private class func factoryAnimationTextures() -> [SKTexture]
     {
@@ -68,7 +69,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         position = startPosition()
         zPosition = kZPosition
         isHidden = true
-        startPhysics(size:size)
+        startPhysics()
     }
     
     required init?(coder:NSCoder)
@@ -99,9 +100,9 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
         return point
     }
     
-    private func startPhysics(size:CGSize)
+    private func startPhysics()
     {
-        let physicsSize:CGSize = CGSize(width:size.width, height:kPhysicsHeight)
+        let physicsSize:CGSize = CGSize(width:kPhysicsWidth, height:kPhysicsHeight)
         let physicsCenter:CGPoint = CGPoint(x:0, y:kPhysicsYPos)
         
         let physicsBody:SKPhysicsBody = SKPhysicsBody(
