@@ -112,7 +112,9 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
             return [MOptionReformaCrossingFoeVW.self,
                     MOptionReformaCrossingFoeRuta2.self,
                 MOptionReformaCrossingFoeMetrobus.self,
-            MOptionReformaCrossingFoePolice.self]
+            MOptionReformaCrossingFoePolice.self,
+            MOptionReformaCrossingFoeTamales.self,
+            MOptionReformaCrossingFoeTaxiPink.self]
         }
     }
 }
