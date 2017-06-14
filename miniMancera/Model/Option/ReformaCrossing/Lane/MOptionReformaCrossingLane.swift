@@ -114,7 +114,8 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
                 MOptionReformaCrossingFoeMetrobus.self,
             MOptionReformaCrossingFoePolice.self,
             MOptionReformaCrossingFoeTamales.self,
-            MOptionReformaCrossingFoeTaxiPink.self]
+            MOptionReformaCrossingFoeTaxiPink.self,
+            MOptionReformaCrossingFoeFierroViejo.self]
         }
     }
 }
