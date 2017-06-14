@@ -99,19 +99,16 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     private func startPhysics(size:CGSize)
     {
-        let physicsWidth:CGFloat = size.width + kPhysicsAddWidth
-        let physicsSize:CGSize = CGSize(width:physicsWidth, height:kPhysicsHeight)
-        
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:physicsSize)
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
         physicsBody.isDynamic = true
-        physicsBody.friction = 1
+        physicsBody.friction = 0
         physicsBody.angularVelocity = 0
-        physicsBody.allowsRotation = false
-        physicsBody.restitution = 0
+        physicsBody.allowsRotation = true
+        physicsBody.restitution = 1
         
-        physicsBody.categoryBitMask = MOptionReformaCrossingPhysicsStruct.Foe
+        physicsBody.categoryBitMask = MOptionReformaCrossingPhysicsStruct.Player
         physicsBody.contactTestBitMask = MOptionReformaCrossingPhysicsStruct.Foe
-        physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.None
+        physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.Foe
         self.physicsBody = physicsBody
     }
     
