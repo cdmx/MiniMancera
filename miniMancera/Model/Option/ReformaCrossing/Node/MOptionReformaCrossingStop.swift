@@ -8,7 +8,7 @@ class MOptionReformaCrossingStop:SKSpriteNode
     private var unblockTime:TimeInterval?
     private let animationTextures:[SKTexture]
     private let standTexture:SKTexture
-    private let kBlockDuration:TimeInterval = 0.3
+    private let kBlockDuration:TimeInterval = 0.2
     private let kZPosition:CGFloat = 999999
     private let kAnimationFrameTime:TimeInterval = 0.03
     
