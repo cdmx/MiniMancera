@@ -274,7 +274,9 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     {
         removeAllActions()
         
-        let textureTimeOut:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer10"))
-        texture = textureTimeOut
+        let textureHitAndRun:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer10"))
+        let size:CGSize = textureHitAndRun.size()
+        texture = textureHitAndRun
+        self.size = size
     }
 }
