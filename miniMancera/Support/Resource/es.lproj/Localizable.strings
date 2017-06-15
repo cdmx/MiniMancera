@@ -1,14 +1,6 @@
 "MHomeFooterSettings_title"="Ajustes";
 "MHomeFooterBoards_title"="Puntos";
 "MHomeFooterStore_title"="Tienda";
-"MHomeOptionsReformaCrossing_title"="Cruzando Reforma";
-"MOptionReformaCrossingGameOverTimeOut_title"="Tiempo terminado";
-"MOptionReformaCrossingGameOverTimeOut_descr"="MiniMancera no llegó a su junta";
-"MOptionReformaCrossingGameOverHitAndRun_title"="MiniMancera atropellado";
-"MOptionReformaCrossingGameOverHitAndRun_descr"="Cruzar es mas difícil de lo que creías";
-"MOptionReformaCrossingSceneGameOver_label1up"="Reintentar";
-"MOptionReformaCrossingSceneGameOver_labelGameOver"="Salir";
-"MOptionReformaCrossingSceneGame_labelTitle"="Nivel %@";
 
 "CHome_errorGameBoards"="No está activado tu Game Center";
 "ControllerGame_menuResume"="Continuar";
