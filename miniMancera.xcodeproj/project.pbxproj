@@ -24,6 +24,7 @@
 		DA1D57941EF207B700ECA895 /* soundFail.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578F1EF207B700ECA895 /* soundFail.caf */; };
 		DA1D57951EF207B700ECA895 /* sound1up.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D57901EF207B700ECA895 /* sound1up.caf */; };
 		DA1D57961EF207B700ECA895 /* soundVictory.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D57911EF207B700ECA895 /* soundVictory.caf */; };
+		DA1D57981EF235D600ECA895 /* ControllerParentGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D57971EF235D600ECA895 /* ControllerParentGame.swift */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -116,6 +117,7 @@
 		DA1D578F1EF207B700ECA895 /* soundFail.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundFail.caf; sourceTree = "<group>"; };
 		DA1D57901EF207B700ECA895 /* sound1up.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound1up.caf; sourceTree = "<group>"; };
 		DA1D57911EF207B700ECA895 /* soundVictory.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundVictory.caf; sourceTree = "<group>"; };
+		DA1D57971EF235D600ECA895 /* ControllerParentGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParentGame.swift; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */,
 				DA2DFFA61EECB16A00365F23 /* Controller.swift */,
 				DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */,
+				DA1D57971EF235D600ECA895 /* ControllerParentGame.swift */,
 				DA2D002A1EECC6CE00365F23 /* ControllerGame.swift */,
 			);
 			path = Abstract;
@@ -680,6 +683,7 @@
 				DA2DFFE01EECB16A00365F23 /* ExtensionUIColor.swift in Sources */,
 				DA11DE531EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift in Sources */,
 				DA2D007D1EEDE38600365F23 /* MOptionReformaCrossingLaneG.swift in Sources */,
+				DA1D57981EF235D600ECA895 /* ControllerParentGame.swift in Sources */,
 				DA2D00A11EEFC15E00365F23 /* MOptionReformaCrossingBackground.swift in Sources */,
 				DA11DE4B1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift in Sources */,
 			);
