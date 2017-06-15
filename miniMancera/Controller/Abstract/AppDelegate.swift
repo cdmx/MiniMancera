@@ -23,6 +23,8 @@ class AppDelegate:UIResponder, UIApplicationDelegate
     
     func applicationWillEnterForeground(_ application:UIApplication)
     {
+        NotificationCenter.default.post(name:Notification.enterForeground, object:nil)
+        
 //        MSession.sharedInstance.settings?.addTtl()
     }
     
