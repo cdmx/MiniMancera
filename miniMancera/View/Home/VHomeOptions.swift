@@ -53,6 +53,14 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         return item
     }
     
+    //MARK: public
+    
+    func refresh()
+    {
+        collectionView.reloadData()
+        isHidden = false
+    }
+    
     //MARK: collectionView delegate
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, insetForSectionAt section:Int) -> UIEdgeInsets

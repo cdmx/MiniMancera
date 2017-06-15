@@ -32,6 +32,8 @@ class ControllerParent:UIViewController
             selector:#selector(notifiedEnterForeground(sender:)),
             name:Notification.enterForeground,
             object:nil)
+        
+        MSession.sharedInstance.loadSession()
     }
     
     override func loadView()

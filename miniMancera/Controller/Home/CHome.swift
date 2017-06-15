@@ -8,11 +8,42 @@ class CHome:Controller<VHome>
     {
         model = MHome()
         super.init()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedSessionLoaded(sender:)),
+            name:Notification.sessionLoaded,
+            object:nil)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    deinit
+    {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    //MARK: notified
+    
+    func notifiedSessionLoaded(sender notification:Notification)
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            guard
+            
+                let view:VHome = self?.view as? VHome
+            
+            else
+            {
+                return
+            }
+            
+            view.sessionLoaded()
+        }
     }
     
     //MARK: public

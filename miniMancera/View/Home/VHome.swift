@@ -2,7 +2,9 @@ import UIKit
 
 class VHome:View
 {
+    private weak var viewHeader:VHomeHeader!
     private weak var viewOptions:VHomeOptions!
+    private weak var viewFooter:VHomeFooter!
     private weak var spinner:VSpinner?
     private let kHeaderHeight:CGFloat = 260
     private let kFooterHeight:CGFloat = 100
@@ -21,11 +23,13 @@ class VHome:View
         }
         
         let viewHeader:VHomeHeader = VHomeHeader(controller:controller)
+        self.viewHeader = viewHeader
         
         let viewOptions:VHomeOptions = VHomeOptions(controller:controller)
         self.viewOptions = viewOptions
         
         let viewFooter:VHomeFooter = VHomeFooter(controller:controller)
+        self.viewFooter = viewFooter
         
         let spinner:VSpinner = VSpinner()
         self.spinner = spinner
@@ -73,5 +77,17 @@ class VHome:View
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: public
+    
+    func sessionLoaded()
+    {
+        spinner?.stopAnimating()
+        spinner?.removeFromSuperview()
+        
+        viewOptions.refresh()
+        viewHeader.isHidden = false
+        viewFooter.isHidden = false
     }
 }
