@@ -14,14 +14,14 @@ extension UIColor
         }
     }
     
-    open class var colourFail:UIColor //#F6A623
+    open class var colourFail:UIColor //#DC0000
     {
         get
         {
             return UIColor(
-                red:0.96078431372549,
-                green:0.650980392156863,
-                blue:0.137254901960784,
+                red:0.862745098039216,
+                green:0,
+                blue:0,
                 alpha:1)
         }
     }
