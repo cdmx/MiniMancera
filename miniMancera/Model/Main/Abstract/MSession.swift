@@ -8,4 +8,11 @@ class MSession
     private init()
     {
     }
+    
+    //MARK: public
+    
+    func settingsLoaded(settings:DSettings)
+    {
+        self.settings = settings
+    }
 }
