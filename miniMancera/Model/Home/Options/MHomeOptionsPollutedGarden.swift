@@ -26,6 +26,10 @@ class MHomeOptionsPollutedGarden:MHomeOptionsProtocol
         }
     }
     
+    required init()
+    {
+    }
+    
     func gameController() -> UIViewController
     {
         let controller:COptionReformaCrossing = COptionReformaCrossing()
