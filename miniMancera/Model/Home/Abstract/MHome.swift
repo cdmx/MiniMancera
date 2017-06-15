@@ -2,7 +2,7 @@ import Foundation
 
 class MHome
 {
-    let options:[MHomeOptionsProtocol]
+    private(set) var options:[MHomeOptionsProtocol]
     let footer:[MHomeFooterProtocol]
     
     private class func factoryOptions() -> [MHomeOptionsProtocol]
@@ -54,7 +54,14 @@ class MHome
     
     init()
     {
-        options = MHome.factoryOptions()
+        options = []
         footer = MHome.factoryFooter()
+    }
+    
+    //MARK: public
+    
+    func refreshOptions()
+    {
+        options = MHome.factoryOptions()
     }
 }

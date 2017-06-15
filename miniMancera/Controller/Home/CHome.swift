@@ -30,6 +30,8 @@ class CHome:Controller<VHome>
     
     func notifiedSessionLoaded(sender notification:Notification)
     {
+        model.refreshOptions()
+        
         DispatchQueue.main.async
         { [weak self] in
             
