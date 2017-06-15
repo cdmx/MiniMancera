@@ -2,7 +2,7 @@ import UIKit
 
 class VToast:UIView
 {
-    private static let kHeight:CGFloat = 52
+    private static let kHeight:CGFloat = 60
     private weak var timer:Timer?
     private let kAnimationDuration:TimeInterval = 0.4
     private let kTimeOut:TimeInterval = 3.5

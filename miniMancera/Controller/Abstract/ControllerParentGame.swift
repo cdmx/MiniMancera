@@ -29,24 +29,36 @@ extension ControllerParent:GKGameCenterControllerDelegate
     
     //MARK: public
     
-    func gameLeaderBoards()
+    func gameLeaderBoards() -> Bool
     {
-        let controller:GKGameCenterViewController = GKGameCenterViewController()
-        present(controller, animated:true)
-        { [weak self] in
-            
-            guard
-                
-                let strongSelf:ControllerParent = self
-            
-            else
-            {
-                return
-            }
-            
-            controller.gameCenterDelegate = strongSelf
+        let localPlayer:GKLocalPlayer = GKLocalPlayer.localPlayer()
+        
+        if localPlayer.isAuthenticated
+        {
+            let controller:GKGameCenterViewController = GKGameCenterViewController()
+            controller.gameCenterDelegate = self
             controller.leaderboardTimeScope = GKLeaderboardTimeScope.allTime
             controller.viewState = GKGameCenterViewControllerState.leaderboards
+            
+            present(controller, animated:true, completion:nil)
+            
+            return true
+        }
+        
+        return false
+    }
+    
+    func gameScore(score:Int, gameId:String)
+    {
+        let localPlayer:GKLocalPlayer = GKLocalPlayer.localPlayer()
+        
+        if localPlayer.isAuthenticated
+        {
+            let report:GKScore = GKScore(leaderboardIdentifier:gameId)
+            report.value = Int64(score)
+            let scores:[GKScore] = [report]
+            
+            GKScore.report(scores, withCompletionHandler:nil)
         }
     }
     
@@ -54,6 +66,6 @@ extension ControllerParent:GKGameCenterControllerDelegate
     
     func gameCenterViewControllerDidFinish(_ gameCenterViewController:GKGameCenterViewController)
     {
-        
+        dismiss(animated:true, completion:nil)
     }
 }

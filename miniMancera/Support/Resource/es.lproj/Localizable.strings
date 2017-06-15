@@ -10,5 +10,6 @@
 "MOptionReformaCrossingSceneGameOver_labelGameOver"="Salir";
 "MOptionReformaCrossingSceneGame_labelTitle"="Nivel %@";
 
+"CHome_errorGameBoards"="No está activado tu Game Center";
 "ControllerGame_menuResume"="Continuar";
 "ControllerGame_menuExit"="Salir";

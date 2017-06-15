@@ -22,4 +22,24 @@ class CHome:Controller<VHome>
         let controller:UIViewController = option.gameController()
         parent?.present(controller, animated:true, completion:nil)
     }
+    
+    func footerBoards()
+    {
+        guard
+        
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        let showBoards:Bool = parent.gameLeaderBoards()
+        
+        if !showBoards
+        {
+            let error:String = NSLocalizedString("CHome_errorGameBoards", comment:"")
+            VAlert.messageFail(message:error)
+        }
+    }
 }

@@ -2,12 +2,12 @@ import UIKit
 
 class VAlert:UIView
 {
-    private static let kHeight:CGFloat = 50
+    private static let kHeight:CGFloat = 60
     private weak var layoutTop:NSLayoutConstraint!
     private weak var timer:Timer?
     private let kAnimationDuration:TimeInterval = 0.3
     private let kTimeOut:TimeInterval = 5
-    private let kFontSize:CGFloat = 15
+    private let kFontSize:CGFloat = 17
     private let kLabelMargin:CGFloat = 9
     
     class func messageFail(message:String)
@@ -58,7 +58,7 @@ class VAlert:UIView
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.bold(size:kFontSize)
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         label.textAlignment = NSTextAlignment.center
         label.numberOfLines = 0
         label.backgroundColor = UIColor.clear
