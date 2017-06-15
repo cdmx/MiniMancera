@@ -13,4 +13,11 @@ class VHomeFooterCell:UICollectionViewCell
     {
         return nil
     }
+    
+    //MARK: public
+    
+    func config(model:MHomeFooterProtocol)
+    {
+        
+    }
 }
