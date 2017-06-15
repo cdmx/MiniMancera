@@ -3,36 +3,18 @@ import SpriteKit
 
 class MOptionPollutedGarden:MOptionProtocol
 {
+    private(set) var size:CGSize
+    private(set) var score:Int
+    private(set) var gameActive:Bool
+    
     required init()
     {
-        
+        size = CGSize.zero
+        score = 0
+        gameActive = false
     }
     
     //MARK: option protocol
-    
-    var size:CGSize
-    {
-        get
-        {
-            return CGSize.zero
-        }
-    }
-    
-    var score:Int
-    {
-        get
-        {
-            return 0
-        }
-    }
-    
-    var gameActive:Bool
-    {
-        get
-        {
-            return false
-        }
-    }
     
     func sceneWithSize(controller: UIViewController, size: CGSize) -> SKScene?
     {
