@@ -10,6 +10,8 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private weak var stop:MOptionReformaCrossingStop!
     private weak var menu:MOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
+    private let kSoundBackground:String = "soundReformaCrossing.caf"
+    private let kSoundHonk:String = "soundCarHorn.mp3"
     private let kActionSpawn:String = "actionSpawn"
     private let kWaitTransition:TimeInterval = 1.5
     private let kSceneTransitionDuration:TimeInterval = 1
@@ -63,6 +65,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     override func didMove(to view:SKView)
     {
+        startBackgroundSound()
         startFoes()
         showTitle()
     }
@@ -90,6 +93,13 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         player.update(elapsedTime:elapsedTime)
         stop.update(elapsedTime:elapsedTime)
         hud.update(elapsedTime:elapsedTime)
+    }
+    
+    private func startBackgroundSound()
+    {
+        let background:SKAudioNode = SKAudioNode(fileNamed:kSoundBackground)
+        background.autoplayLooped = true
+        addChild(background)
     }
     
     private func startFoes()
@@ -164,7 +174,16 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     private func contactPlayerFoe(player:MOptionReformaCrossingPlayer, foe:MOptionReformaCrossingFoe)
     {
-        controller.hitAndRun()
+        let actionHonk:SKAction = SKAction.playSoundFileNamed(
+            kSoundHonk,
+            waitForCompletion:false)
+        
+        run(actionHonk)
+    
+        if controller.model.gameActive
+        {
+            controller.hitAndRun()
+        }
     }
     
     private func actionsGameOver(reason:MOptionReformaCrossingGameOverProtocol)

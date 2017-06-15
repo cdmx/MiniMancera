@@ -18,7 +18,12 @@
 		DA11DE531EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */; };
 		DA11DE551EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE541EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift */; };
 		DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D57821EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift */; };
-		DA1D57861EF1E73F00ECA895 /* soundCarHorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA1D57851EF1E73F00ECA895 /* soundCarHorn.mp3 */; };
+		DA1D578C1EF1EEE100ECA895 /* soundReformaCrossing.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578B1EF1EEE100ECA895 /* soundReformaCrossing.caf */; };
+		DA1D57921EF207B700ECA895 /* soundCarHorn.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578D1EF207B700ECA895 /* soundCarHorn.caf */; };
+		DA1D57931EF207B700ECA895 /* soundCoin.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578E1EF207B700ECA895 /* soundCoin.caf */; };
+		DA1D57941EF207B700ECA895 /* soundFail.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578F1EF207B700ECA895 /* soundFail.caf */; };
+		DA1D57951EF207B700ECA895 /* sound1up.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D57901EF207B700ECA895 /* sound1up.caf */; };
+		DA1D57961EF207B700ECA895 /* soundVictory.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D57911EF207B700ECA895 /* soundVictory.caf */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -105,7 +110,12 @@
 		DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeFierroViejo.swift; sourceTree = "<group>"; };
 		DA11DE541EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeLordAudi.swift; sourceTree = "<group>"; };
 		DA1D57821EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeCyclerFemale.swift; sourceTree = "<group>"; };
-		DA1D57851EF1E73F00ECA895 /* soundCarHorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundCarHorn.mp3; sourceTree = "<group>"; };
+		DA1D578B1EF1EEE100ECA895 /* soundReformaCrossing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundReformaCrossing.caf; sourceTree = "<group>"; };
+		DA1D578D1EF207B700ECA895 /* soundCarHorn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundCarHorn.caf; sourceTree = "<group>"; };
+		DA1D578E1EF207B700ECA895 /* soundCoin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundCoin.caf; sourceTree = "<group>"; };
+		DA1D578F1EF207B700ECA895 /* soundFail.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundFail.caf; sourceTree = "<group>"; };
+		DA1D57901EF207B700ECA895 /* sound1up.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound1up.caf; sourceTree = "<group>"; };
+		DA1D57911EF207B700ECA895 /* soundVictory.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundVictory.caf; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -196,7 +206,12 @@
 		DA1D57841EF1E73F00ECA895 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				DA1D57851EF1E73F00ECA895 /* soundCarHorn.mp3 */,
+				DA1D578D1EF207B700ECA895 /* soundCarHorn.caf */,
+				DA1D578E1EF207B700ECA895 /* soundCoin.caf */,
+				DA1D578F1EF207B700ECA895 /* soundFail.caf */,
+				DA1D57901EF207B700ECA895 /* sound1up.caf */,
+				DA1D57911EF207B700ECA895 /* soundVictory.caf */,
+				DA1D578B1EF1EEE100ECA895 /* soundReformaCrossing.caf */,
 			);
 			path = sounds;
 			sourceTree = "<group>";
@@ -568,10 +583,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1D57921EF207B700ECA895 /* soundCarHorn.caf in Resources */,
 				DA2DFFD81EECB16A00365F23 /* LaunchScreen.storyboard in Resources */,
+				DA1D57941EF207B700ECA895 /* soundFail.caf in Resources */,
+				DA1D57951EF207B700ECA895 /* sound1up.caf in Resources */,
 				DA2D00291EECB9D500365F23 /* Localizable.strings in Resources */,
-				DA1D57861EF1E73F00ECA895 /* soundCarHorn.mp3 in Resources */,
+				DA1D578C1EF1EEE100ECA895 /* soundReformaCrossing.caf in Resources */,
 				DA2D003E1EED2F0000365F23 /* assetSprites.xcassets in Resources */,
+				DA1D57961EF207B700ECA895 /* soundVictory.caf in Resources */,
+				DA1D57931EF207B700ECA895 /* soundCoin.caf in Resources */,
 				DA2DFFE41EECB16A00365F23 /* ResourceURL.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
