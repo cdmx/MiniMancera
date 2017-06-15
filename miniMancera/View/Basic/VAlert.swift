@@ -10,14 +10,14 @@ class VAlert:UIView
     private let kFontSize:CGFloat = 15
     private let kLabelMargin:CGFloat = 9
     
-    class func messageOrange(message:String)
+    class func messageFail(message:String)
     {
-        VAlert.message(message:message, color:UIColor.punkOrange)
+        VAlert.message(message:message, color:UIColor.colourFail)
     }
     
-    class func messagePurple(message:String)
+    class func messageSuccess(message:String)
     {
-        VAlert.message(message:message, color:UIColor.punkPurple)
+        VAlert.message(message:message, color:UIColor.colourSuccess)
     }
     
     private class func message(message:String, color:UIColor)

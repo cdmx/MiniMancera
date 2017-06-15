@@ -9,14 +9,14 @@ class VToast:UIView
     private let kFontSize:CGFloat = 17
     private let kLabelMargin:CGFloat = 15
     
-    class func messageOrange(message:String)
+    class func messageFail(message:String)
     {
-        VToast.message(message:message, color:UIColor.punkOrange)
+        VToast.message(message:message, color:UIColor.colourFail)
     }
     
-    class func messagePurple(message:String)
+    class func messageSuccess(message:String)
     {
-        VToast.message(message:message, color:UIColor.punkPurple)
+        VToast.message(message:message, color:UIColor.colourSuccess)
     }
     
     private class func message(message:String, color:UIColor)
