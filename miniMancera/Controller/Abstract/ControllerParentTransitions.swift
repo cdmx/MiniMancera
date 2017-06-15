@@ -2,6 +2,50 @@ import UIKit
 
 extension ControllerParent
 {
+    enum Vertical:CGFloat
+    {
+        case top = -1
+        case bottom = 1
+        case none = 0
+    }
+    
+    enum Horizontal:CGFloat
+    {
+        case left = -1
+        case right = 1
+        case none = 0
+    }
+    
+    //MARK: private
+    
+    private func slide(controller:UIViewController, left:CGFloat)
+    {
+        guard
+            
+            let currentController:UIViewController = childViewControllers.last,
+            let newView:View = controller.view as? View,
+            let currentView:View = currentController.view as? View
+            
+        else
+        {
+            return
+        }
+        
+        addChildViewController(controller)
+        controller.beginAppearanceTransition(true, animated:true)
+        currentController.beginAppearanceTransition(false, animated:true)
+        
+        viewParent.slide(
+            currentView:currentView,
+            newView:newView,
+            left:left)
+        {
+            controller.endAppearanceTransition()
+            currentController.endAppearanceTransition()
+            currentController.removeFromParentViewController()
+        }
+    }
+    
     //MARK: public
     
     func slideTo(horizontal:Horizontal, controller:UIViewController)
