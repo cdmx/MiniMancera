@@ -22,7 +22,15 @@ class VHomeFooterCell:UICollectionViewCell
         labelTitle.textAlignment = NSTextAlignment.center
         self.labelTitle = labelTitle
         
+        let imageView:UIImageView = UIImageView()
+        imageView.isUserInteractionEnabled = false
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.contentMode = UIViewContentMode.center
+        self.imageView = imageView
+        
         addSubview(labelTitle)
+        addSubview(imageView)
         
         NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
@@ -32,6 +40,10 @@ class VHomeFooterCell:UICollectionViewCell
             constant:kTitleHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:imageView,
             toView:self)
     }
     
@@ -74,6 +86,9 @@ class VHomeFooterCell:UICollectionViewCell
     
     func config(model:MHomeFooterProtocol)
     {
+        labelTitle.text = model.title
+        imageView.image = model.image
+        
         hover()
     }
 }
