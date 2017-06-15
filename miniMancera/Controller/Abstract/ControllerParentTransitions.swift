@@ -22,6 +22,7 @@ extension ControllerParent
     {
         guard
             
+            let view:ViewParent = self.view as? ViewParent,
             let currentController:UIViewController = childViewControllers.last,
             let newView:View = controller.view as? View,
             let currentView:View = currentController.view as? View
@@ -35,7 +36,7 @@ extension ControllerParent
         controller.beginAppearanceTransition(true, animated:true)
         currentController.beginAppearanceTransition(false, animated:true)
         
-        viewParent.slide(
+        view.slide(
             currentView:currentView,
             newView:newView,
             left:left)
@@ -50,7 +51,8 @@ extension ControllerParent
     
     func slideTo(horizontal:Horizontal, controller:UIViewController)
     {
-        let left:CGFloat = -viewParent.bounds.maxX * horizontal.rawValue
+        let viewWidth:CGFloat = -view.bounds.maxX
+        let left:CGFloat = viewWidth * horizontal.rawValue
         slide(controller:controller, left:left)
     }
     
@@ -60,6 +62,7 @@ extension ControllerParent
         
         guard
             
+            let view:ViewParent = self.view as? ViewParent,
             let newView:View = controller.view as? View
             
         else
@@ -67,7 +70,7 @@ extension ControllerParent
             return
         }
         
-        viewParent.mainView(view:newView)
+        view.mainView(view:newView)
     }
     
     func push(
@@ -77,13 +80,9 @@ extension ControllerParent
         background:Bool = true,
         completion:(() -> ())? = nil)
     {
-        let width:CGFloat = viewParent.bounds.maxX
-        let height:CGFloat = viewParent.bounds.maxY
-        let left:CGFloat = width * horizontal.rawValue
-        let top:CGFloat = height * vertical.rawValue
-        
         guard
             
+            let view:ViewParent = self.view as? ViewParent,
             let currentController:UIViewController = childViewControllers.last,
             let newView:View = controller.view as? View
             
@@ -92,12 +91,17 @@ extension ControllerParent
             return
         }
         
+        let width:CGFloat = view.bounds.maxX
+        let height:CGFloat = view.bounds.maxY
+        let left:CGFloat = width * horizontal.rawValue
+        let top:CGFloat = height * vertical.rawValue
+        
         addChildViewController(controller)
         controller.beginAppearanceTransition(true, animated:true)
         currentController.beginAppearanceTransition(false, animated:true)
-        viewParent.panRecognizer.isEnabled = true
+        view.panRecognizer.isEnabled = true
         
-        viewParent.push(
+        view.push(
             newView:newView,
             left:left,
             top:top,
@@ -113,6 +117,7 @@ extension ControllerParent
     {
         guard
             
+            let view:ViewParent = self.view as? ViewParent,
             let currentController:UIViewController = childViewControllers.last,
             let newView:View = controller.view as? View
             
@@ -125,7 +130,7 @@ extension ControllerParent
         controller.beginAppearanceTransition(true, animated:true)
         currentController.beginAppearanceTransition(false, animated:true)
         
-        viewParent.animateOver(
+        view.animateOver(
             newView:newView)
         {
             controller.endAppearanceTransition()
@@ -190,8 +195,8 @@ extension ControllerParent
         vertical:Vertical = Vertical.none,
         completion:(() -> ())? = nil)
     {
-        let width:CGFloat = viewParent.bounds.maxX
-        let height:CGFloat = viewParent.bounds.maxY
+        let width:CGFloat = view.bounds.maxX
+        let height:CGFloat = view.bounds.maxY
         let left:CGFloat = width * horizontal.rawValue
         let top:CGFloat = height * vertical.rawValue
         let controllers:Int = childViewControllers.count
@@ -203,6 +208,7 @@ extension ControllerParent
             
             guard
                 
+                let view:ViewParent = self.view as? ViewParent,
                 let currentView:View = currentController.view as? View
                 
             else
@@ -213,7 +219,7 @@ extension ControllerParent
             currentController.beginAppearanceTransition(false, animated:true)
             previousController.beginAppearanceTransition(true, animated:true)
             
-            viewParent.pop(
+            view.pop(
                 currentView:currentView,
                 left:left,
                 top:top)
@@ -226,11 +232,11 @@ extension ControllerParent
                 
                 if self.childViewControllers.count > 1
                 {
-                    self.viewParent.panRecognizer.isEnabled = true
+                    view.panRecognizer.isEnabled = true
                 }
                 else
                 {
-                    self.viewParent.panRecognizer.isEnabled = false
+                    view.panRecognizer.isEnabled = false
                 }
             }
         }
@@ -246,6 +252,7 @@ extension ControllerParent
             
             guard
                 
+                let view:ViewParent = self.view as? ViewParent,
                 let removeView:View = removeController.view as? View
                 
             else
@@ -259,7 +266,7 @@ extension ControllerParent
             
             if childViewControllers.count < 2
             {
-                self.viewParent.panRecognizer.isEnabled = false
+                view.panRecognizer.isEnabled = false
             }
         }
     }
@@ -268,6 +275,7 @@ extension ControllerParent
     {
         guard
             
+            let view:ViewParent = self.view as? ViewParent,
             let currentController:UIViewController = childViewControllers.last,
             let currentView:View = currentController.view as? View
             
@@ -290,7 +298,7 @@ extension ControllerParent
         currentController.beginAppearanceTransition(false, animated:true)
         previousController.beginAppearanceTransition(true, animated:true)
         
-        viewParent.dismissAnimateOver(
+        view.dismissAnimateOver(
             currentView:currentView)
         {
             currentController.endAppearanceTransition()

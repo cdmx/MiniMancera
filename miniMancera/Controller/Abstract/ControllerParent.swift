@@ -2,7 +2,6 @@ import UIKit
 
 class ControllerParent:UIViewController
 {
-    private(set) weak var viewParent:ViewParent!
     private var barHidden:Bool = true
     private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.lightContent
     
@@ -38,7 +37,6 @@ class ControllerParent:UIViewController
     override func loadView()
     {
         let viewParent:ViewParent = ViewParent(controller:self)
-        self.viewParent = viewParent
         view = viewParent
     }
     
