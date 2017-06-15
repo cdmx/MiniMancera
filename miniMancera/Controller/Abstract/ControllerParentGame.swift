@@ -27,6 +27,29 @@ extension ControllerParent:GKGameCenterControllerDelegate
         localPlayer.authenticateHandler = gameControllerAuthHandler(controller:error:)
     }
     
+    //MARK: public
+    
+    func gameLeaderBoards()
+    {
+        let controller:GKGameCenterViewController = GKGameCenterViewController()
+        present(controller, animated:true)
+        { [weak self] in
+            
+            guard
+                
+                let strongSelf:ControllerParent = self
+            
+            else
+            {
+                return
+            }
+            
+            controller.gameCenterDelegate = strongSelf
+            controller.leaderboardTimeScope = GKLeaderboardTimeScope.allTime
+            controller.viewState = GKGameCenterViewControllerState.leaderboards
+        }
+    }
+    
     //MARK: game delegate
     
     func gameCenterViewControllerDidFinish(_ gameCenterViewController:GKGameCenterViewController)
