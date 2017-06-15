@@ -1,9 +1,24 @@
-//
-//  MHomeFooterBoards.swift
-//  miniMancera
-//
-//  Created by zero on 6/14/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class MHomeFooterBoards:MHomeFooterProtocol
+{
+    var title:String
+    {
+        get
+        {
+            return NSLocalizedString("", comment:"")
+        }
+    }
+    
+    var image:UIImage
+    {
+        get
+        {
+            return UIImage()
+        }
+    }
+    
+    func selected(controller:CHome)
+    {
+    }
+}
