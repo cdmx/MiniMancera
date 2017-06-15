@@ -114,6 +114,7 @@
 		DA5667861EF276CD000055D8 /* MHomeFooterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56677E1EF276CD000055D8 /* MHomeFooterStore.swift */; };
 		DA56678E1EF2772A000055D8 /* MHomeOptionsReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56678C1EF2772A000055D8 /* MHomeOptionsReformaCrossing.swift */; };
 		DA5667901EF2773B000055D8 /* MHomeOptionsPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56678F1EF2773B000055D8 /* MHomeOptionsPollutedGarden.swift */; };
+		DA5667921EF27A21000055D8 /* MSessionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667911EF27A21000055D8 /* MSessionSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -224,6 +225,7 @@
 		DA56677E1EF276CD000055D8 /* MHomeFooterStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeFooterStore.swift; sourceTree = "<group>"; };
 		DA56678C1EF2772A000055D8 /* MHomeOptionsReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsReformaCrossing.swift; sourceTree = "<group>"; };
 		DA56678F1EF2773B000055D8 /* MHomeOptionsPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsPollutedGarden.swift; sourceTree = "<group>"; };
+		DA5667911EF27A21000055D8 /* MSessionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionSettings.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -544,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5667681EF27427000055D8 /* MSession.swift */,
+				DA5667911EF27A21000055D8 /* MSessionSettings.swift */,
 				DA56676B1EF27446000055D8 /* MGameProtocol.swift */,
 				DA56676D1EF27475000055D8 /* MGameFreeProtocol.swift */,
 				DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */,
@@ -736,6 +739,7 @@
 				DA2D00A41EEFC15E00365F23 /* MOptionReformaCrossingPlayer.swift in Sources */,
 				DA11DE491EF111790043749D /* MOptionReformaCrossingFoeRuta2.swift in Sources */,
 				DA2D00831EEDE39D00365F23 /* MOptionReformaCrossingLane.swift in Sources */,
+				DA5667921EF27A21000055D8 /* MSessionSettings.swift in Sources */,
 				DA11DE3F1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift in Sources */,
 				DA5667861EF276CD000055D8 /* MHomeFooterStore.swift in Sources */,
 				DA2D002B1EECC6CE00365F23 /* ControllerGame.swift in Sources */,
