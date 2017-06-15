@@ -7,14 +7,16 @@ extension ControllerParent:GKGameCenterControllerDelegate
     
     private func gameControllerAuthHandler(controller:UIViewController?, error:Error?)
     {
-        if let controller:UIViewController = controller
+        guard
+        
+            let controller:UIViewController = controller
+        
+        else
         {
-            
+            return
         }
-        else if let error:Error = error
-        {
-            
-        }
+        
+        present(controller, animated:false, completion:nil)
     }
     
     //MARK: notifications
