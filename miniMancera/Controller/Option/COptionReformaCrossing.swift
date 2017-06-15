@@ -26,6 +26,13 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         stopTimer()
     }
     
+    override func exitGame()
+    {
+        postScore()
+        
+        super.exitGame()
+    }
+    
     //MARK: notified
     
     func notifiedEnterBackground(sender notification:Notification)
@@ -48,6 +55,22 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         }
         
         scene.lastUpdateTime = nil
+    }
+    
+    private func postScore()
+    {
+        guard
+        
+            let gameId:String = dataOption?.gameId,
+            let parent:ControllerParent = UIApplication.shared.keyWindow?.rootViewController as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        let gameScore:Int = model.score
+        parent.gameScore(score:gameScore, gameId:gameId)
     }
     
     //MARK: public
@@ -81,6 +104,8 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         
         model.stopAll()
         scene.timeOut()
+        
+        postScore()
     }
     
     func hitAndRun()
@@ -97,6 +122,8 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         
         model.hitAndRun()
         scene.hitAndRun()
+        
+        postScore()
     }
     
     func game1up()

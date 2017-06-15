@@ -20,7 +20,16 @@ class MHomeOptionsReformaCrossing:MHomeOptionsFree
     
     override func selected() -> UIViewController?
     {
-        let controller:COptionReformaCrossing = COptionReformaCrossing()
+        guard
+            
+            let dataOption:DOption = self.dataOption
+        
+        else
+        {
+            return nil
+        }
+        
+        let controller:COptionReformaCrossing = COptionReformaCrossing(dataOption:dataOption)
         
         return controller
     }

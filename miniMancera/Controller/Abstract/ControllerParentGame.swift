@@ -19,6 +19,20 @@ extension ControllerParent:GKGameCenterControllerDelegate
         present(controller, animated:false, completion:nil)
     }
     
+    private func asyncGameScore(score:Int, gameId:String)
+    {
+        let localPlayer:GKLocalPlayer = GKLocalPlayer.localPlayer()
+        
+        if localPlayer.isAuthenticated
+        {
+            let report:GKScore = GKScore(leaderboardIdentifier:gameId)
+            report.value = Int64(score)
+            let scores:[GKScore] = [report]
+            
+            GKScore.report(scores, withCompletionHandler:nil)
+        }
+    }
+    
     //MARK: notifications
     
     func notifiedEnterForeground(sender notification:Notification)
@@ -50,15 +64,10 @@ extension ControllerParent:GKGameCenterControllerDelegate
     
     func gameScore(score:Int, gameId:String)
     {
-        let localPlayer:GKLocalPlayer = GKLocalPlayer.localPlayer()
-        
-        if localPlayer.isAuthenticated
-        {
-            let report:GKScore = GKScore(leaderboardIdentifier:gameId)
-            report.value = Int64(score)
-            let scores:[GKScore] = [report]
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
             
-            GKScore.report(scores, withCompletionHandler:nil)
+            self?.asyncGameScore(score:score, gameId:gameId)
         }
     }
     
