@@ -2,9 +2,16 @@ import Foundation
 
 extension String
 {
+    private static let tableReformaCrossing:String = "ReformaCrossing"
+    
     static func localized(key:String) -> String
     {
         return NSLocalizedString(key, comment:"")
+    }
+    
+    static func localizedReformaCrossing(key:String) -> String
+    {
+        return NSLocalizedString(key, tableName:tableReformaCrossing, comment:"")
     }
     
     func capitalizedFirstLetter() -> String
