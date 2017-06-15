@@ -107,6 +107,10 @@
 		DA5667651EF26DFD000055D8 /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667631EF26DFD000055D8 /* DManager.swift */; };
 		DA5667661EF26DFD000055D8 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667641EF26DFD000055D8 /* DSettingsExtension.swift */; };
 		DA56676A1EF27427000055D8 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667681EF27427000055D8 /* MSession.swift */; };
+		DA56676C1EF27446000055D8 /* MGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56676B1EF27446000055D8 /* MGameProtocol.swift */; };
+		DA56676E1EF27475000055D8 /* MGameFreeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56676D1EF27475000055D8 /* MGameFreeProtocol.swift */; };
+		DA5667701EF27482000055D8 /* MGamePurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */; };
+		DA5667721EF2748F000055D8 /* MGameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667711EF2748F000055D8 /* MGameFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -210,6 +214,10 @@
 		DA5667631EF26DFD000055D8 /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
 		DA5667641EF26DFD000055D8 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA5667681EF27427000055D8 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
+		DA56676B1EF27446000055D8 /* MGameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameProtocol.swift; sourceTree = "<group>"; };
+		DA56676D1EF27475000055D8 /* MGameFreeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameFreeProtocol.swift; sourceTree = "<group>"; };
+		DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGamePurchaseProtocol.swift; sourceTree = "<group>"; };
+		DA5667711EF2748F000055D8 /* MGameFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameFactory.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -534,6 +542,10 @@
 			isa = PBXGroup;
 			children = (
 				DA5667681EF27427000055D8 /* MSession.swift */,
+				DA56676B1EF27446000055D8 /* MGameProtocol.swift */,
+				DA56676D1EF27475000055D8 /* MGameFreeProtocol.swift */,
+				DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */,
+				DA5667711EF2748F000055D8 /* MGameFactory.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -657,6 +669,7 @@
 				DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */,
 				DA2D00A51EEFC15E00365F23 /* MOptionReformaCrossingStop.swift in Sources */,
 				DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */,
+				DA56676E1EF27475000055D8 /* MGameFreeProtocol.swift in Sources */,
 				DA2DFFDC1EECB16A00365F23 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA11DE471EF10A480043749D /* MOptionReformaCrossingFoeFactory.swift in Sources */,
 				DA2D008F1EEE6D6F00365F23 /* MOptionReformaCrossingLaneGroup.swift in Sources */,
@@ -666,6 +679,7 @@
 				DA2D007C1EEDE38600365F23 /* MOptionReformaCrossingLaneF.swift in Sources */,
 				DA2DFFED1EECB16A00365F23 /* VPushBackground.swift in Sources */,
 				DA1D579C1EF245C800ECA895 /* VHomeFooterCell.swift in Sources */,
+				DA56676C1EF27446000055D8 /* MGameProtocol.swift in Sources */,
 				DA2D00BB1EEFF20900365F23 /* MOptionReformaCrossingEnd.swift in Sources */,
 				DA1D57A01EF248DA00ECA895 /* MHomeFooterSettings.swift in Sources */,
 				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
@@ -705,6 +719,7 @@
 				DA2DFFD61EECB16A00365F23 /* CHome.swift in Sources */,
 				DA11DE511EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift in Sources */,
 				DA2D00341EECCA1000365F23 /* MOptionProtocol.swift in Sources */,
+				DA5667721EF2748F000055D8 /* MGameFactory.swift in Sources */,
 				DA2DFFDE1EECB16A00365F23 /* ExtensionString.swift in Sources */,
 				DA2D00201EECB68F00365F23 /* VHomeOptionsCell.swift in Sources */,
 				DA2DFFE11EECB16A00365F23 /* ExtensionUIFont.swift in Sources */,
@@ -733,6 +748,7 @@
 				DA2D00221EECB7E400365F23 /* MHome.swift in Sources */,
 				DA5667661EF26DFD000055D8 /* DSettingsExtension.swift in Sources */,
 				DA2D00A31EEFC15E00365F23 /* MOptionReformaCrossingMenu.swift in Sources */,
+				DA5667701EF27482000055D8 /* MGamePurchaseProtocol.swift in Sources */,
 				DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */,
 				DA56676A1EF27427000055D8 /* MSession.swift in Sources */,
 				DA2DFFE01EECB16A00365F23 /* ExtensionUIColor.swift in Sources */,
