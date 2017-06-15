@@ -3,7 +3,7 @@
     <entity name="DOption" representedClassName="DOption" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <attribute name="gameId" attributeType="String" syncable="YES"/>
         <attribute name="maxScore" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="optionClass" attributeType="String" syncable="YES"/>
+        <attribute name="optionsClass" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="DOptionFree" representedClassName="DOptionFree" parentEntity="DOption" syncable="YES" codeGenerationType="class"/>
     <entity name="DOptionPurchase" representedClassName="DOptionPurchase" parentEntity="DOption" syncable="YES" codeGenerationType="class">
