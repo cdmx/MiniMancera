@@ -4,6 +4,7 @@
         <attribute name="gameId" attributeType="String" syncable="YES"/>
         <attribute name="maxScore" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="optionsClass" attributeType="String" syncable="YES"/>
+        <relationship name="settings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DSettings" inverseName="options" inverseEntity="DSettings" syncable="YES"/>
     </entity>
     <entity name="DOptionFree" representedClassName="DOptionFree" parentEntity="DOption" syncable="YES" codeGenerationType="class"/>
     <entity name="DOptionPurchase" representedClassName="DOptionPurchase" parentEntity="DOption" syncable="YES" codeGenerationType="class">
@@ -13,10 +14,11 @@
     <entity name="DSettings" representedClassName="DSettings" syncable="YES" codeGenerationType="class">
         <attribute name="sounds" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="ttl" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="options" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DOption" inverseName="settings" inverseEntity="DOption" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DSettings" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="DOption" positionX="-54" positionY="9" width="128" height="90"/>
+        <element name="DSettings" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="DOption" positionX="-54" positionY="9" width="128" height="105"/>
         <element name="DOptionPurchase" positionX="-36" positionY="27" width="128" height="75"/>
         <element name="DOptionFree" positionX="-18" positionY="36" width="128" height="45"/>
     </elements>
