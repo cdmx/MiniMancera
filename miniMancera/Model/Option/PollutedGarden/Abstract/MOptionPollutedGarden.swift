@@ -16,8 +16,21 @@ class MOptionPollutedGarden:MOptionProtocol
     
     //MARK: option protocol
     
-    func sceneWithSize(controller: UIViewController, size: CGSize) -> SKScene?
+    func sceneWithSize(controller:UIViewController, size:CGSize) -> SKScene?
     {
-        return nil
+        guard
+            
+            let controller:COptionReformaCrossing = controller as? COptionReformaCrossing
+            
+        else
+        {
+            return nil
+        }
+        
+        self.size = size
+        let scene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
+            controller:controller)
+        
+        return scene
     }
 }
