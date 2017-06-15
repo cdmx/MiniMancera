@@ -6,6 +6,7 @@ class MOptionReformaCrossingEnd:SKSpriteNode
     private weak var controller:COptionReformaCrossing!
     private let kYPosition:CGFloat = 50
     private let kZPosition:CGFloat = 1001
+    private let kSoundFail:String = "soundFail"
     
     init(controller:COptionReformaCrossing)
     {
@@ -27,6 +28,13 @@ class MOptionReformaCrossingEnd:SKSpriteNode
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
         isUserInteractionEnabled = false
+        
+        let actionHonk:SKAction = SKAction.playSoundFileNamed(
+            kSoundFail,
+            waitForCompletion:false)
+        
+        run(actionHonk)
+        
         controller.exitGame()
     }
     

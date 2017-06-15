@@ -3,6 +3,8 @@ import SpriteKit
 class MOptionReformaCrossingSceneGameOver:SKScene
 {
     private weak var controller:COptionReformaCrossing!
+    private let kSoundBackground:String = "soundReformaCrossing.caf"
+    private let kSound1up:String = "sound1up"
     private let kTitleFontSize:CGFloat = 20
     private let kDescrFontSize:CGFloat = 12
     private let kButtonsFontSize:CGFloat = 12
@@ -73,10 +75,24 @@ class MOptionReformaCrossingSceneGameOver:SKScene
         return nil
     }
     
+    override func didMove(to view:SKView)
+    {
+        let background:SKAudioNode = SKAudioNode(fileNamed:kSoundBackground)
+        background.autoplayLooped = true
+        
+        addChild(background)
+    }
+    
     //MARK: public
     
     func game1up()
     {
+        let actionHonk:SKAction = SKAction.playSoundFileNamed(
+            kSound1up,
+            waitForCompletion:false)
+        
+        run(actionHonk)
+        
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kAnimationDuration)
         let gameScene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
