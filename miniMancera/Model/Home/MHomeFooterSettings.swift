@@ -14,7 +14,7 @@ class MHomeFooterSettings:MHomeFooterProtocol
     {
         get
         {
-            return UIImage()
+            return #imageLiteral(resourceName: "assetGenericSettings")
         }
     }
     

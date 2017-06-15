@@ -103,6 +103,7 @@
 		DA2DFFF01EECB16A00365F23 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFCF1EECB16A00365F23 /* VSpinner.swift */; };
 		DA2DFFF11EECB16A00365F23 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFD01EECB16A00365F23 /* VToast.swift */; };
 		DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFD21EECB16A00365F23 /* VHome.swift */; };
+		DA56675F1EF252AE000055D8 /* assetGeneric.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA56675E1EF252AE000055D8 /* assetGeneric.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,6 +203,7 @@
 		DA2DFFCF1EECB16A00365F23 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
 		DA2DFFD01EECB16A00365F23 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA2DFFD21EECB16A00365F23 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
+		DA56675E1EF252AE000055D8 /* assetGeneric.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assetGeneric.xcassets; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -430,6 +432,7 @@
 				DA1D57841EF1E73F00ECA895 /* sounds */,
 				DA2DFFB01EECB16A00365F23 /* LaunchScreen.storyboard */,
 				DA2D003D1EED2F0000365F23 /* assetSprites.xcassets */,
+				DA56675E1EF252AE000055D8 /* assetGeneric.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 			files = (
 				DA1D57921EF207B700ECA895 /* soundCarHorn.caf in Resources */,
 				DA2DFFD81EECB16A00365F23 /* LaunchScreen.storyboard in Resources */,
+				DA56675F1EF252AE000055D8 /* assetGeneric.xcassets in Resources */,
 				DA1D57941EF207B700ECA895 /* soundFail.caf in Resources */,
 				DA1D57951EF207B700ECA895 /* sound1up.caf in Resources */,
 				DA2D00291EECB9D500365F23 /* Localizable.strings in Resources */,

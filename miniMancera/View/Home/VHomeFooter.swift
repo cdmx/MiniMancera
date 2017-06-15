@@ -17,6 +17,8 @@ class VHomeFooter:UIView, UICollectionViewDelegate, UICollectionViewDataSource, 
         let collectionView:VCollection = VCollection()
         collectionView.isScrollEnabled = false
         collectionView.bounces = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
         collectionView.registerCell(cell:VHomeFooterCell.self)
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
@@ -52,7 +54,9 @@ class VHomeFooter:UIView, UICollectionViewDelegate, UICollectionViewDataSource, 
     {
         let width:CGFloat = collectionView.bounds.maxX
         let height:CGFloat = collectionView.bounds.maxY
-        let remainWidth:CGFloat = width - kCellSize
+        let cells:CGFloat = CGFloat(controller.model.footer.count)
+        let cellsWidth:CGFloat = cells * kCellSize
+        let remainWidth:CGFloat = width - cellsWidth
         let remainHeight:CGFloat = height - kCellSize
         let remainWidth_2:CGFloat = remainWidth / 2.0
         let insets:UIEdgeInsets = UIEdgeInsets(

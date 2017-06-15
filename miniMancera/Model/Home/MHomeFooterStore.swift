@@ -14,7 +14,7 @@ class MHomeFooterStore:MHomeFooterProtocol
     {
         get
         {
-            return UIImage()
+            return #imageLiteral(resourceName: "assetGenericStore")
         }
     }
     

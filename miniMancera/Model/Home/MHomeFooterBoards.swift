@@ -14,7 +14,7 @@ class MHomeFooterBoards:MHomeFooterProtocol
     {
         get
         {
-            return UIImage()
+            return #imageLiteral(resourceName: "assetGenericBoards")
         }
     }
     

@@ -5,7 +5,7 @@ class VHomeFooterCell:UICollectionViewCell
     private weak var imageView:UIImageView!
     private weak var labelTitle:UILabel!
     private let kTitleHeight:CGFloat = 40
-    private let kAlphaSelected:CGFloat = 0.2
+    private let kAlphaSelected:CGFloat = 0.3
     private let kAlphaNotSelected:CGFloat = 1
     
     override init(frame:CGRect)
