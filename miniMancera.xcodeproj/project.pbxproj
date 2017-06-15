@@ -112,6 +112,7 @@
 		DA5667701EF27482000055D8 /* MGamePurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */; };
 		DA5667721EF2748F000055D8 /* MGameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667711EF2748F000055D8 /* MGameFactory.swift */; };
 		DA5667741EF27502000055D8 /* MGameReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667731EF27502000055D8 /* MGameReformaCrossing.swift */; };
+		DA5667761EF27571000055D8 /* MGamePollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667751EF27571000055D8 /* MGamePollutedGarden.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,6 +221,7 @@
 		DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGamePurchaseProtocol.swift; sourceTree = "<group>"; };
 		DA5667711EF2748F000055D8 /* MGameFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameFactory.swift; sourceTree = "<group>"; };
 		DA5667731EF27502000055D8 /* MGameReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameReformaCrossing.swift; sourceTree = "<group>"; };
+		DA5667751EF27571000055D8 /* MGamePollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGamePollutedGarden.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -556,6 +558,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5667731EF27502000055D8 /* MGameReformaCrossing.swift */,
+				DA5667751EF27571000055D8 /* MGamePollutedGarden.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 				DA2D002F1EECC88F00365F23 /* COptionReformaCrossing.swift in Sources */,
 				DA2DFFD91EECB16A00365F23 /* ExtensionDictionary.swift in Sources */,
 				DA2D00781EEDE38600365F23 /* MOptionReformaCrossingLaneB.swift in Sources */,
+				DA5667761EF27571000055D8 /* MGamePollutedGarden.swift in Sources */,
 				DA2D00A61EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift in Sources */,
 				DA2DFFDF1EECB16A00365F23 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA2D00241EECB80000365F23 /* MHomeOptionsProtocol.swift in Sources */,
