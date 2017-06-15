@@ -6,10 +6,7 @@ class MOptionReformaCrossing:MOptionProtocol
     let laneGroup:MOptionReformaCrossingLaneGroup
     let kMaxGameTime:TimeInterval = 31
     private(set) var addedSpeed:CGFloat
-    private(set) var size:CGSize
     private(set) var level:Int
-    private(set) var score:Int
-    private(set) var gameActive:Bool
     private let kSpeedMultiplier:CGFloat = 50
     private let kStartingLevel:Int = 1
     
@@ -65,6 +62,28 @@ class MOptionReformaCrossing:MOptionProtocol
     }
     
     //MARK: option protocol
+    
+    private(set) var size:CGSize
+    {
+        get {}
+        set {}
+    }
+    
+    var score:Int
+    {
+        get {}
+    }
+    
+    private(set) var score:Int
+    {
+        set {}
+    }
+    
+    private(set) var gameActive:Bool
+    {
+        get {}
+        set {}
+    }
     
     func sceneWithSize(
         controller:UIViewController,
