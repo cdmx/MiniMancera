@@ -27,6 +27,7 @@
 		DA1D57981EF235D600ECA895 /* ControllerParentGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D57971EF235D600ECA895 /* ControllerParentGame.swift */; };
 		DA1D579A1EF238D300ECA895 /* ControllerParentTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D57991EF238D300ECA895 /* ControllerParentTransitions.swift */; };
 		DA1D579C1EF245C800ECA895 /* VHomeFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D579B1EF245C800ECA895 /* VHomeFooterCell.swift */; };
+		DA1D579E1EF2473500ECA895 /* MHomeFooterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D579D1EF2473500ECA895 /* MHomeFooterProtocol.swift */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -122,6 +123,7 @@
 		DA1D57971EF235D600ECA895 /* ControllerParentGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParentGame.swift; sourceTree = "<group>"; };
 		DA1D57991EF238D300ECA895 /* ControllerParentTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParentTransitions.swift; sourceTree = "<group>"; };
 		DA1D579B1EF245C800ECA895 /* VHomeFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooterCell.swift; sourceTree = "<group>"; };
+		DA1D579D1EF2473500ECA895 /* MHomeFooterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeFooterProtocol.swift; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				DA2D00211EECB7E400365F23 /* MHome.swift */,
 				DA2D00231EECB80000365F23 /* MHomeOptionsProtocol.swift */,
 				DA2D00251EECB81700365F23 /* MHomeOptionsReformaCrossing.swift */,
+				DA1D579D1EF2473500ECA895 /* MHomeFooterProtocol.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				DA1D579A1EF238D300ECA895 /* ControllerParentTransitions.swift in Sources */,
 				DA2D00B71EEFF1BF00365F23 /* MOptionReformaCrossing1up.swift in Sources */,
 				DA2D00801EEDE38600365F23 /* MOptionReformaCrossingLaneProtocol.swift in Sources */,
+				DA1D579E1EF2473500ECA895 /* MHomeFooterProtocol.swift in Sources */,
 				DA2DFFD61EECB16A00365F23 /* CHome.swift in Sources */,
 				DA11DE511EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift in Sources */,
 				DA2D00341EECCA1000365F23 /* MOptionProtocol.swift in Sources */,
