@@ -76,7 +76,6 @@
 		DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA61EECB16A00365F23 /* Controller.swift */; };
 		DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */; };
 		DA2DFFD61EECB16A00365F23 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA91EECB16A00365F23 /* CHome.swift */; };
-		DA2DFFD71EECB16A00365F23 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFAD1EECB16A00365F23 /* MSession.swift */; };
 		DA2DFFD81EECB16A00365F23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2DFFB01EECB16A00365F23 /* LaunchScreen.storyboard */; };
 		DA2DFFD91EECB16A00365F23 /* ExtensionDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFB31EECB16A00365F23 /* ExtensionDictionary.swift */; };
 		DA2DFFDA1EECB16A00365F23 /* ExtensionFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFB41EECB16A00365F23 /* ExtensionFileManager.swift */; };
@@ -107,6 +106,7 @@
 		DA5667621EF26D24000055D8 /* DMiniMancera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA5667601EF26D24000055D8 /* DMiniMancera.xcdatamodeld */; };
 		DA5667651EF26DFD000055D8 /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667631EF26DFD000055D8 /* DManager.swift */; };
 		DA5667661EF26DFD000055D8 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667641EF26DFD000055D8 /* DSettingsExtension.swift */; };
+		DA56676A1EF27427000055D8 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667681EF27427000055D8 /* MSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -179,7 +179,6 @@
 		DA2DFFA61EECB16A00365F23 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
 		DA2DFFA91EECB16A00365F23 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
-		DA2DFFAD1EECB16A00365F23 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
 		DA2DFFB01EECB16A00365F23 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA2DFFB31EECB16A00365F23 /* ExtensionDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDictionary.swift; sourceTree = "<group>"; };
 		DA2DFFB41EECB16A00365F23 /* ExtensionFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFileManager.swift; sourceTree = "<group>"; };
@@ -210,6 +209,7 @@
 		DA5667611EF26D24000055D8 /* DMiniMancera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DMiniMancera.xcdatamodel; sourceTree = "<group>"; };
 		DA5667631EF26DFD000055D8 /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
 		DA5667641EF26DFD000055D8 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
+		DA5667681EF27427000055D8 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -416,7 +416,8 @@
 		DA2DFFAC1EECB16A00365F23 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				DA2DFFAD1EECB16A00365F23 /* MSession.swift */,
+				DA5667671EF27427000055D8 /* Abstract */,
+				DA5667691EF27427000055D8 /* Game */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -527,6 +528,21 @@
 				DA1D579B1EF245C800ECA895 /* VHomeFooterCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DA5667671EF27427000055D8 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DA5667681EF27427000055D8 /* MSession.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		DA5667691EF27427000055D8 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		DAFB5F6E1EECAC74006A3B99 = {
@@ -695,7 +711,6 @@
 				DA2D00A91EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift in Sources */,
 				DA11DE3D1EF089810043749D /* MOptionReformaCrossingCoin.swift in Sources */,
 				DA2D00791EEDE38600365F23 /* MOptionReformaCrossingLaneC.swift in Sources */,
-				DA2DFFD71EECB16A00365F23 /* MSession.swift in Sources */,
 				DA2DFFEE1EECB16A00365F23 /* VSlider.swift in Sources */,
 				DA2D00711EEDE38600365F23 /* MOptionReformaCrossing.swift in Sources */,
 				DA2DFFE61EECB16A00365F23 /* ViewParent.swift in Sources */,
@@ -719,6 +734,7 @@
 				DA5667661EF26DFD000055D8 /* DSettingsExtension.swift in Sources */,
 				DA2D00A31EEFC15E00365F23 /* MOptionReformaCrossingMenu.swift in Sources */,
 				DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */,
+				DA56676A1EF27427000055D8 /* MSession.swift in Sources */,
 				DA2DFFE01EECB16A00365F23 /* ExtensionUIColor.swift in Sources */,
 				DA11DE531EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift in Sources */,
 				DA1D57A21EF248F900ECA895 /* MHomeFooterBoards.swift in Sources */,
