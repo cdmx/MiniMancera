@@ -16,6 +16,14 @@ class MOptionPollutedGarden:MOptionProtocol
     
     //MARK: option protocol
     
+    var soundBackground:String?
+    {
+        get
+        {
+            return nil
+        }
+    }
+    
     func sceneWithSize(controller:UIViewController, size:CGSize) -> SKScene?
     {
         guard

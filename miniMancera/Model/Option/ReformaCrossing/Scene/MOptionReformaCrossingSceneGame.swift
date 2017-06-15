@@ -10,7 +10,6 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private weak var stop:MOptionReformaCrossingStop!
     private weak var menu:MOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
-    private let kSoundBackground:String = "soundReformaCrossing.caf"
     private let kSoundHonk:String = "soundCarHorn.caf"
     private let kSoundCoin:String = "soundCoin.caf"
     private let kSoundFail:String = "soundFail.caf"

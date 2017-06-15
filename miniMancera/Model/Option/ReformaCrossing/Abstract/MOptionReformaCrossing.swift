@@ -3,24 +3,23 @@ import SpriteKit
 
 class MOptionReformaCrossing:MOptionProtocol
 {
-    private(set) var size:CGSize
-    private(set) var score:Int
-    private(set) var gameActive:Bool
-    
     let laneGroup:MOptionReformaCrossingLaneGroup
     let kMaxGameTime:TimeInterval = 31
     private(set) var addedSpeed:CGFloat
     private(set) var level:Int
+    private(set) var size:CGSize
+    private(set) var score:Int
+    private(set) var gameActive:Bool
+    private let kSoundBackground:String = "soundReformaCrossing.caf"
     private let kSpeedMultiplier:CGFloat = 50
     private let kStartingLevel:Int = 1
     
     required init()
     {
+        laneGroup = MOptionReformaCrossingLaneGroup()
         size = CGSize.zero
         score = 0
         gameActive = false
-        
-        laneGroup = MOptionReformaCrossingLaneGroup()
         level = kStartingLevel
         addedSpeed = 0
     }
@@ -67,6 +66,14 @@ class MOptionReformaCrossing:MOptionProtocol
     }
     
     //MARK: option protocol
+    
+    var soundBackground:String?
+    {
+        get
+        {
+            return kSoundBackground
+        }
+    }
     
     func sceneWithSize(
         controller:UIViewController,
