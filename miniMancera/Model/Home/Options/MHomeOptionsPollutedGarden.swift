@@ -1,14 +1,12 @@
 import UIKit
 
-class MHomeOptionsReformaCrossing:MHomeOptionsProtocol
-{
-    private let kAvailable:Bool = true
-    
+class MHomeOptionsPollutedGarden:MHomeOptionsProtocol
+{   
     var available:Bool
     {
         get
         {
-            return kAvailable
+            return false
         }
     }
     
