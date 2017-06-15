@@ -36,6 +36,12 @@ class ControllerParent:UIViewController
 
         let controller:CHome = CHome()
         mainController(controller:controller)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedEnterForeground(sender:)),
+            name:Notification.enterForeground,
+            object:nil)
     }
     
     override func loadView()
