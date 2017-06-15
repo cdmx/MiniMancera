@@ -2,6 +2,11 @@ import Foundation
 
 extension String
 {
+    static func localized(key:String) -> String
+    {
+        return NSLocalizedString(key, comment:"")
+    }
+    
     func capitalizedFirstLetter() -> String
     {
         let count:Int = characters.count
