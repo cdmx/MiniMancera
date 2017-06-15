@@ -1,6 +1,8 @@
 import SpriteKit
 
-class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, COptionReformaCrossing>, SKPhysicsContactDelegate
+class MOptionReformaCrossingSceneGame:
+    MOptionSceneGame<MOptionReformaCrossing, COptionReformaCrossing>,
+    SKPhysicsContactDelegate
 {
     private(set) weak var player:MOptionReformaCrossingPlayer!
     private(set) weak var hud:MOptionReformaCrossingHud!
