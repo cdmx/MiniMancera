@@ -1,6 +1,6 @@
 import UIKit
 
-class COptionPollutedGarden:ControllerGame
+class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
 {
     
 }
