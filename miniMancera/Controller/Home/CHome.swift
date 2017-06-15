@@ -52,7 +52,15 @@ class CHome:Controller<VHome>
     
     func optionSelected(option:MHomeOptionsProtocol)
     {
-        let controller:UIViewController = option.gameController()
+        guard
+            
+            let controller:UIViewController = option.selected()
+        
+        else
+        {
+            return
+        }
+        
         parent?.present(controller, animated:true, completion:nil)
     }
     

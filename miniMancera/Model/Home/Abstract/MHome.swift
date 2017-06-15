@@ -31,7 +31,7 @@ class MHome
                 continue
             }
             
-            let option:MHomeOptionsProtocol = optionsType.init()
+            let option:MHomeOptionsProtocol = optionsType.init(dataOption:dataOption)
             options.append(option)
         }
         

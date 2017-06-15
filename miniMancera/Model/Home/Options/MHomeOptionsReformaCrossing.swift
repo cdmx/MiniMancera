@@ -1,19 +1,8 @@
 import UIKit
 
-class MHomeOptionsReformaCrossing:MHomeOptionsProtocol
+class MHomeOptionsReformaCrossing:MHomeOptionsFree
 {
-    private weak var dataOption:DOption?
-    private let kAvailable:Bool = true
-    
-    var available:Bool
-    {
-        get
-        {
-            return kAvailable
-        }
-    }
-    
-    var title:String
+    override var title:String?
     {
         get
         {
@@ -21,7 +10,7 @@ class MHomeOptionsReformaCrossing:MHomeOptionsProtocol
         }
     }
     
-    var thumbnail:UIImage
+    override var thumbnail:UIImage?
     {
         get
         {
@@ -29,12 +18,7 @@ class MHomeOptionsReformaCrossing:MHomeOptionsProtocol
         }
     }
     
-    required init(dataOption:DOption)
-    {
-        self.dataOption = dataOption
-    }
-    
-    func gameController() -> UIViewController
+    override func selected() -> UIViewController?
     {
         let controller:COptionReformaCrossing = COptionReformaCrossing()
         
