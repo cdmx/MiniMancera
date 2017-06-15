@@ -111,6 +111,7 @@
 		DA56676E1EF27475000055D8 /* MGameFreeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56676D1EF27475000055D8 /* MGameFreeProtocol.swift */; };
 		DA5667701EF27482000055D8 /* MGamePurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */; };
 		DA5667721EF2748F000055D8 /* MGameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667711EF2748F000055D8 /* MGameFactory.swift */; };
+		DA5667741EF27502000055D8 /* MGameReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667731EF27502000055D8 /* MGameReformaCrossing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -218,6 +219,7 @@
 		DA56676D1EF27475000055D8 /* MGameFreeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameFreeProtocol.swift; sourceTree = "<group>"; };
 		DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGamePurchaseProtocol.swift; sourceTree = "<group>"; };
 		DA5667711EF2748F000055D8 /* MGameFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameFactory.swift; sourceTree = "<group>"; };
+		DA5667731EF27502000055D8 /* MGameReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameReformaCrossing.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -553,6 +555,7 @@
 		DA5667691EF27427000055D8 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				DA5667731EF27502000055D8 /* MGameReformaCrossing.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 				DA11DE4D1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift in Sources */,
 				DA2D00B31EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift in Sources */,
 				DA2DFFE21EECB16A00365F23 /* ExtensionURL.swift in Sources */,
+				DA5667741EF27502000055D8 /* MGameReformaCrossing.swift in Sources */,
 				DA5667651EF26DFD000055D8 /* DManager.swift in Sources */,
 				DA2DFFEF1EECB16A00365F23 /* VSliderBar.swift in Sources */,
 				DA2DFFEB1EECB16A00365F23 /* VCollectionFlow.swift in Sources */,
