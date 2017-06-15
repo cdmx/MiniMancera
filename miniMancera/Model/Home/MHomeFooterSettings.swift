@@ -6,7 +6,7 @@ class MHomeFooterSettings:MHomeFooterProtocol
     {
         get
         {
-            return NSLocalizedString("", comment:"")
+            return NSLocalizedString("MHomeFooterSettings_title", comment:"")
         }
     }
     
