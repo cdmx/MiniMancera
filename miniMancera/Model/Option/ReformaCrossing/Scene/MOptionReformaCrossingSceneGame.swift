@@ -2,12 +2,12 @@ import SpriteKit
 
 class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, COptionReformaCrossing>
 {
+    let kSoundHonk:String = "soundCarHorn.caf"
     private(set) weak var player:MOptionReformaCrossingPlayer!
     private(set) weak var hud:MOptionReformaCrossingHud!
     private weak var stop:MOptionReformaCrossingStop!
     private weak var menu:MOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
-    private let kSoundHonk:String = "soundCarHorn.caf"
     private let kSoundCoin:String = "soundCoin.caf"
     private let kSoundFail:String = "soundFail.caf"
     private let kSoundVictory:String = "soundVictory.caf"
@@ -132,28 +132,6 @@ class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, C
         }
         
         return false
-    }
-    
-    private func contactFoes(foeA:MOptionReformaCrossingFoe, foeB:MOptionReformaCrossingFoe)
-    {
-        if foeA.created < foeB.created
-        {
-            foeB.hitTheBreaks()
-        }
-        else
-        {
-            foeA.hitTheBreaks()
-        }
-    }
-    
-    private func contactPlayerFoe(player:MOptionReformaCrossingPlayer, foe:MOptionReformaCrossingFoe)
-    {
-        playSound(soundName:kSoundHonk)
-    
-        if controller.model.gameActive
-        {
-            controller.hitAndRun()
-        }
     }
     
     private func actionsGameOver(reason:MOptionReformaCrossingGameOverProtocol)
@@ -308,26 +286,6 @@ class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, C
     
     func didBegin(_ contact:SKPhysicsContact)
     {
-        let bodyA:SKNode? = contact.bodyA.node
-        let bodyB:SKNode? = contact.bodyB.node
-        
-        if let foeA:MOptionReformaCrossingFoe = bodyA as? MOptionReformaCrossingFoe
-        {
-            if let player:MOptionReformaCrossingPlayer = bodyB as? MOptionReformaCrossingPlayer
-            {
-                contactPlayerFoe(player:player, foe:foeA)
-            }
-            else if let foeB:MOptionReformaCrossingFoe = bodyB as? MOptionReformaCrossingFoe
-            {
-                contactFoes(foeA:foeA, foeB:foeB)
-            }
-        }
-        else if let player:MOptionReformaCrossingPlayer = bodyA as? MOptionReformaCrossingPlayer
-        {
-            if let foeB:MOptionReformaCrossingFoe = bodyB as? MOptionReformaCrossingFoe
-            {
-                contactPlayerFoe(player:player, foe:foeB)
-            }
-        }
+        contactBegin(contact:contact)
     }
 }

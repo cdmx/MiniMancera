@@ -26,9 +26,9 @@ extension MOptionReformaCrossingSceneGame:SKPhysicsContactDelegate
         }
     }
     
-    //MARK: contact delegate
+    //MARK: public
     
-    func didBegin(_ contact:SKPhysicsContact)
+    func contactBegin(contact:SKPhysicsContact)
     {
         let bodyA:SKNode? = contact.bodyA.node
         let bodyB:SKNode? = contact.bodyB.node
