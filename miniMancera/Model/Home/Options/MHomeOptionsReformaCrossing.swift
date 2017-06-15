@@ -2,6 +2,7 @@ import UIKit
 
 class MHomeOptionsReformaCrossing:MHomeOptionsProtocol
 {
+    private weak var dataOption:DOption?
     private let kAvailable:Bool = true
     
     var available:Bool
@@ -28,8 +29,9 @@ class MHomeOptionsReformaCrossing:MHomeOptionsProtocol
         }
     }
     
-    required init()
+    required init(dataOption:DOption)
     {
+        self.dataOption = dataOption
     }
     
     func gameController() -> UIViewController

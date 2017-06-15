@@ -155,8 +155,6 @@ extension MSession
         let objectClass:AnyClass = object_getClass(game.optionsClass)
         let classString:String = NSStringFromClass(objectClass)
         
-        print("class string: \(classString)")
-        
         return classString
     }
     
