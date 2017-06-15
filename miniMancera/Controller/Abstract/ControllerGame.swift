@@ -4,9 +4,11 @@ import SpriteKit
 class ControllerGame<T:MOptionProtocol>:UIViewController
 {
     let model:T
+    private(set) weak var dataOption:DOption?
     
-    init()
+    init(dataOption:DOption)
     {
+        self.dataOption = dataOption
         model = T()
         super.init(nibName:nil, bundle:nil)
     }
