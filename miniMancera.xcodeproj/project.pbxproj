@@ -122,6 +122,7 @@
 		DA56679D1EF32342000055D8 /* COptionPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56679C1EF32342000055D8 /* COptionPollutedGarden.swift */; };
 		DA5667A41EF325E9000055D8 /* MOptionPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667A31EF325E9000055D8 /* MOptionPollutedGarden.swift */; };
 		DA5667A61EF33209000055D8 /* MOptionPollutedGardenSceneGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667A51EF33209000055D8 /* MOptionPollutedGardenSceneGame.swift */; };
+		DA5667A81EF3329E000055D8 /* MOptionSceneGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667A71EF3329E000055D8 /* MOptionSceneGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -240,6 +241,7 @@
 		DA56679C1EF32342000055D8 /* COptionPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COptionPollutedGarden.swift; sourceTree = "<group>"; };
 		DA5667A31EF325E9000055D8 /* MOptionPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGarden.swift; sourceTree = "<group>"; };
 		DA5667A51EF33209000055D8 /* MOptionPollutedGardenSceneGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenSceneGame.swift; sourceTree = "<group>"; };
+		DA5667A71EF3329E000055D8 /* MOptionSceneGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionSceneGame.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2D00331EECCA1000365F23 /* MOptionProtocol.swift */,
+				DA5667A71EF3329E000055D8 /* MOptionSceneGame.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -782,6 +785,7 @@
 				DA5667841EF276CD000055D8 /* MHomeFooterBoards.swift in Sources */,
 				DA2DFFED1EECB16A00365F23 /* VPushBackground.swift in Sources */,
 				DA1D579C1EF245C800ECA895 /* VHomeFooterCell.swift in Sources */,
+				DA5667A81EF3329E000055D8 /* MOptionSceneGame.swift in Sources */,
 				DA56676C1EF27446000055D8 /* MGameProtocol.swift in Sources */,
 				DA2D00BB1EEFF20900365F23 /* MOptionReformaCrossingEnd.swift in Sources */,
 				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
