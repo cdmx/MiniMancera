@@ -10,6 +10,7 @@ class VHomeHeader:UIView
         clipsToBounds = true
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
+        isHidden = true
         self.controller = controller
     }
     

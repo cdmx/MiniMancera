@@ -3,6 +3,7 @@ import UIKit
 class VHome:View
 {
     private weak var viewOptions:VHomeOptions!
+    private weak var spinner:VSpinner?
     private let kHeaderHeight:CGFloat = 260
     private let kFooterHeight:CGFloat = 100
     
@@ -26,9 +27,17 @@ class VHome:View
         
         let viewFooter:VHomeFooter = VHomeFooter(controller:controller)
         
+        let spinner:VSpinner = VSpinner()
+        self.spinner = spinner
+        
+        addSubview(spinner)
         addSubview(viewHeader)
         addSubview(viewOptions)
         addSubview(viewFooter)
+        
+        NSLayoutConstraint.equals(
+            view:spinner,
+            toView:self)
         
         NSLayoutConstraint.topToTop(
             view:viewHeader,

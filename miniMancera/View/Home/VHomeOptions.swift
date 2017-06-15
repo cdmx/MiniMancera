@@ -14,6 +14,7 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         clipsToBounds = true
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
+        isHidden = true
         self.controller = controller
         
         let collectionView:VCollection = VCollection()
