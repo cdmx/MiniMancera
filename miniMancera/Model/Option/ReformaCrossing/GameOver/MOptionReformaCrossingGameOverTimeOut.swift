@@ -6,7 +6,7 @@ class MOptionReformaCrossingGameOverTimeOut:MOptionReformaCrossingGameOverProtoc
     {
         get
         {
-            return NSLocalizedString("MOptionReformaCrossingGameOverTimeOut_title", comment:"")
+            return String.localizedReformaCrossing(key:"MOptionReformaCrossingGameOverTimeOut_title")
         }
     }
     
@@ -14,7 +14,7 @@ class MOptionReformaCrossingGameOverTimeOut:MOptionReformaCrossingGameOverProtoc
     {
         get
         {
-            return NSLocalizedString("MOptionReformaCrossingGameOverTimeOut_descr", comment:"")
+            return String.localizedReformaCrossing(key:"MOptionReformaCrossingGameOverTimeOut_descr")
         }
     }
     

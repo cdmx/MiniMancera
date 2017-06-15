@@ -79,7 +79,7 @@ class CHome:Controller<VHome>
         
         if !showBoards
         {
-            let error:String = NSLocalizedString("CHome_errorGameBoards", comment:"")
+            let error:String = String.localized(key:"CHome_errorGameBoards")
             VAlert.messageFail(message:error)
         }
     }

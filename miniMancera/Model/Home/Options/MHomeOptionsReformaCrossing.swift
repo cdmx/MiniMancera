@@ -6,7 +6,7 @@ class MHomeOptionsReformaCrossing:MHomeOptionsFree
     {
         get
         {
-            return NSLocalizedString("MHomeOptionsReformaCrossing_title", comment:"")
+            return String.localizedReformaCrossing(key:"MHomeOptionsReformaCrossing_title")
         }
     }
     

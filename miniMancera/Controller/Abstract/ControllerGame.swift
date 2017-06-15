@@ -69,7 +69,7 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
         
         let actionResume:UIAlertAction = UIAlertAction(
             title:
-            NSLocalizedString("ControllerGame_menuResume", comment:""),
+            String.localized(key:"ControllerGame_menuResume"),
             style:
             UIAlertActionStyle.cancel)
         { [weak self] (action:UIAlertAction) in
@@ -79,7 +79,7 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
         
         let actionExit:UIAlertAction = UIAlertAction(
             title:
-            NSLocalizedString("ControllerGame_menuExit", comment:""),
+            String.localized(key:"ControllerGame_menuExit"),
             style:
             UIAlertActionStyle.destructive)
         { [weak self] (action:UIAlertAction) in

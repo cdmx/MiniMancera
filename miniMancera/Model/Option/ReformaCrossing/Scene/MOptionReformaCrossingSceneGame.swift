@@ -232,7 +232,7 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
         
         let level:NSNumber = controller.model.level as NSNumber
         let levelString:String = String(
-            format:NSLocalizedString("MOptionReformaCrossingSceneGame_labelTitle", comment:""),
+            format:String.localizedReformaCrossing(key:"MOptionReformaCrossingSceneGame_labelTitle"),
             level)
         
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)

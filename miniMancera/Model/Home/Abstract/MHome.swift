@@ -64,29 +64,4 @@ class MHome
     {
         options = MHome.factoryOptions()
     }
-    
-    
-    
-    func anagramGroups(strings:[String]) -> [[String:String]]
-    {
-        var foundGroups:[[String:String]] = []
-        var stringMap:[String:String] = [:]
-        
-        for string:String in strings
-        {
-            let reversed:String = String(string.characters.reversed())
-            
-            if let _:String = stringMap.removeValue(forKey:reversed)
-            {
-                let group:[String:String] = [reversed:string]
-                foundGroups.append(group)
-            }
-            else
-            {
-                stringMap[string] = reversed
-            }
-        }
-        
-        return foundGroups
-    }
 }
