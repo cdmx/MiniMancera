@@ -1,12 +1,9 @@
 import SpriteKit
 
-class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
+class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, COptionReformaCrossing>, SKPhysicsContactDelegate
 {
-    var lastUpdateTime:TimeInterval?
-    private(set) var elapsedTime:TimeInterval
     private(set) weak var player:MOptionReformaCrossingPlayer!
     private(set) weak var hud:MOptionReformaCrossingHud!
-    private weak var controller:COptionReformaCrossing!
     private weak var stop:MOptionReformaCrossingStop!
     private weak var menu:MOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
@@ -24,14 +21,11 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     private let kTitleVerticalAdd:CGFloat = -10
     private let kSpawnProbability:UInt32 = 6
     
-    init(controller:COptionReformaCrossing)
+    override init(controller:COptionReformaCrossing)
     {
-        self.controller = controller
-        elapsedTime = 0
         controller.model.startLevel()
         
-        super.init(size:controller.model.size)
-        backgroundColor = SKColor.black
+        super.init(controller:controller)
         physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self
         
@@ -67,52 +61,20 @@ class MOptionReformaCrossingSceneGame:SKScene, SKPhysicsContactDelegate
     
     override func didMove(to view:SKView)
     {
-        startBackgroundSound()
+        super.didMove(to:view)
+        
         startFoes()
         showTitle()
     }
     
-    override func update(_ currentTime:TimeInterval)
-    {
-        if controller.model.gameActive
-        {
-            if let lastUpdateTime:TimeInterval = self.lastUpdateTime
-            {
-                let deltaTime:TimeInterval = currentTime - lastUpdateTime
-                elapsedTime += deltaTime
-                
-                updateNodes()
-            }
-            
-            lastUpdateTime = currentTime
-        }
-    }
-    
-    //MARK: private
-    
-    private func playSound(soundName:String)
-    {
-        let actionHonk:SKAction = SKAction.playSoundFileNamed(
-            soundName,
-            waitForCompletion:false)
-        
-        run(actionHonk)
-    }
-    
-    private func updateNodes()
+    override func updateNodes()
     {
         player.update(elapsedTime:elapsedTime)
         stop.update(elapsedTime:elapsedTime)
         hud.update(elapsedTime:elapsedTime)
     }
     
-    private func startBackgroundSound()
-    {
-        let background:SKAudioNode = SKAudioNode(fileNamed:kSoundBackground)
-        background.autoplayLooped = true
-        
-        addChild(background)
-    }
+    //MARK: private
     
     private func startFoes()
     {

@@ -18,6 +18,11 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
         return nil
     }
     
+    deinit
+    {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override var preferredStatusBarStyle:UIStatusBarStyle
     {
         return UIStatusBarStyle.lightContent
@@ -58,6 +63,18 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
         view.showsNodeCount = true
         view.ignoresSiblingOrder = true
         view.presentScene(scene)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(notifiedEnterBackground(sender:)),
+            name:Notification.enterBackground,
+            object:nil)
+    }
+    
+    //MARK: notified
+    
+    func notifiedEnterBackground(sender notification:Notification)
+    {
     }
     
     //MARK: private

@@ -3,22 +3,6 @@ import SpriteKit
 
 class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
 {
-    deinit
-    {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(
-            self,
-            selector:#selector(notifiedEnterBackground(sender:)),
-            name:Notification.enterBackground,
-            object:nil)
-    }
-    
     override func pause()
     {
         super.pause()
@@ -33,9 +17,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         super.exitGame()
     }
     
-    //MARK: notified
-    
-    func notifiedEnterBackground(sender notification:Notification)
+    override func notifiedEnterBackground(sender notification:Notification)
     {
         stopTimer()
     }

@@ -2,9 +2,9 @@ import SpriteKit
 
 class MOptionSceneGame<S:MOptionProtocol, T:ControllerGame<S>>:SKScene
 {
-    private(set) var lastUpdateTime:TimeInterval?
+    var lastUpdateTime:TimeInterval?
+    private(set) weak var controller:T!
     private(set) var elapsedTime:TimeInterval
-    private weak var controller:T!
     
     init(controller:T)
     {
