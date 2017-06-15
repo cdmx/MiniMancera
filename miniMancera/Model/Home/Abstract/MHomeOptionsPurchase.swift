@@ -17,7 +17,8 @@ class MHomeOptionsPurchase:MHomeOptionsProtocol
                 return false
             }
             
-            return purchased
+//            return purchased
+            return true
         }
     }
     
