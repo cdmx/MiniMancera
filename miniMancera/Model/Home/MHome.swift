@@ -3,6 +3,7 @@ import Foundation
 class MHome
 {
     let options:[MHomeOptionsProtocol]
+    let footer:[MHomeFooterProtocol]
     
     private class func factoryOptions() -> [MHomeOptionsProtocol]
     {
@@ -14,8 +15,14 @@ class MHome
         return options
     }
     
+    private class func factoryFooter() -> [MHomeFooterProtocol]
+    {
+        let
+    }
+    
     init()
     {
         options = MHome.factoryOptions()
+        footer = MHome.factoryFooter()
     }
 }
