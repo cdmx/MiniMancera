@@ -120,6 +120,7 @@
 		DA5667981EF30B88000055D8 /* MHomeOptionsPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667971EF30B88000055D8 /* MHomeOptionsPurchase.swift */; };
 		DA56679B1EF31023000055D8 /* ReformaCrossing.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5667991EF31023000055D8 /* ReformaCrossing.strings */; };
 		DA56679D1EF32342000055D8 /* COptionPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56679C1EF32342000055D8 /* COptionPollutedGarden.swift */; };
+		DA5667A41EF325E9000055D8 /* MOptionPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667A31EF325E9000055D8 /* MOptionPollutedGarden.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -236,6 +237,7 @@
 		DA5667971EF30B88000055D8 /* MHomeOptionsPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsPurchase.swift; sourceTree = "<group>"; };
 		DA56679A1EF31023000055D8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ReformaCrossing.strings; sourceTree = "<group>"; };
 		DA56679C1EF32342000055D8 /* COptionPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COptionPollutedGarden.swift; sourceTree = "<group>"; };
+		DA5667A31EF325E9000055D8 /* MOptionPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGarden.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -278,6 +280,7 @@
 			children = (
 				DA2D00311EECC9F000365F23 /* Abstract */,
 				DA2D00321EECC9F000365F23 /* ReformaCrossing */,
+				DA56679E1EF325CA000055D8 /* PollutedGarden */,
 			);
 			path = Option;
 			sourceTree = "<group>";
@@ -608,6 +611,46 @@
 			path = Options;
 			sourceTree = "<group>";
 		};
+		DA56679E1EF325CA000055D8 /* PollutedGarden */ = {
+			isa = PBXGroup;
+			children = (
+				DA56679F1EF325CA000055D8 /* Abstract */,
+				DA5667A01EF325CA000055D8 /* Node */,
+				DA5667A11EF325CA000055D8 /* Pollution */,
+				DA5667A21EF325CA000055D8 /* Scene */,
+			);
+			path = PollutedGarden;
+			sourceTree = "<group>";
+		};
+		DA56679F1EF325CA000055D8 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DA5667A31EF325E9000055D8 /* MOptionPollutedGarden.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		DA5667A01EF325CA000055D8 /* Node */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		DA5667A11EF325CA000055D8 /* Pollution */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pollution;
+			sourceTree = "<group>";
+		};
+		DA5667A21EF325CA000055D8 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		DAFB5F6E1EECAC74006A3B99 = {
 			isa = PBXGroup;
 			children = (
@@ -762,6 +805,7 @@
 				DA5667861EF276CD000055D8 /* MHomeFooterStore.swift in Sources */,
 				DA2D002B1EECC6CE00365F23 /* ControllerGame.swift in Sources */,
 				DA5667621EF26D24000055D8 /* DMiniMancera.xcdatamodeld in Sources */,
+				DA5667A41EF325E9000055D8 /* MOptionPollutedGarden.swift in Sources */,
 				DA56679D1EF32342000055D8 /* COptionPollutedGarden.swift in Sources */,
 				DA11DE551EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift in Sources */,
 				DA2D00771EEDE38600365F23 /* MOptionReformaCrossingLaneA.swift in Sources */,
