@@ -7,10 +7,33 @@ class MHome
     
     private class func factoryOptions() -> [MHomeOptionsProtocol]
     {
-        let optionReformaCrossing:MHomeOptionsReformaCrossing = MHomeOptionsReformaCrossing()
+        var options:[MHomeOptionsProtocol] = []
         
-        let options:[MHomeOptionsProtocol] = [
-            optionReformaCrossing]
+        guard
+            
+            let dataOptions:[DOption] = MSession.sharedInstance.settings?.options?.array as? [DOption]
+        
+        else
+        {
+            return options
+        }
+        
+        for dataOption:DOption in dataOptions
+        {
+            guard
+            
+                let optionsClassString:String = dataOption.optionsClass,
+                let optionsClass:AnyClass = NSClassFromString(optionsClassString),
+                let optionsType:MHomeOptionsProtocol.Type = optionsClass as? MHomeOptionsProtocol.Type
+            
+            else
+            {
+                continue
+            }
+            
+            let option:MHomeOptionsProtocol = optionsType.init()
+            options.append(option)
+        }
         
         return options
     }
