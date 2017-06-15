@@ -13,7 +13,7 @@ class MHomeOptionsPollutedGarden:MHomeOptionsPurchase
             return nil
         }
         
-        let controller:COptionReformaCrossing = COptionReformaCrossing(dataOption:dataOption)
+        let controller:COptionPollutedGarden = COptionPollutedGarden(dataOption:dataOption)
         
         return controller
     }

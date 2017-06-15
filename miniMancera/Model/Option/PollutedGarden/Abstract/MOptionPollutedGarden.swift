@@ -28,7 +28,7 @@ class MOptionPollutedGarden:MOptionProtocol
     {
         guard
             
-            let controller:COptionReformaCrossing = controller as? COptionReformaCrossing
+            let controller:COptionPollutedGarden = controller as? COptionPollutedGarden
             
         else
         {
@@ -36,7 +36,7 @@ class MOptionPollutedGarden:MOptionProtocol
         }
         
         self.size = size
-        let scene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
+        let scene:MOptionPollutedGardenSceneGame = MOptionPollutedGardenSceneGame(
             controller:controller)
         
         return scene
