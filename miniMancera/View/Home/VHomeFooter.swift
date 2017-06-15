@@ -48,6 +48,22 @@ class VHomeFooter:UIView, UICollectionViewDelegate, UICollectionViewDataSource, 
     
     //MARK: collectionView delegate
     
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, insetForSectionAt section:Int) -> UIEdgeInsets
+    {
+        let width:CGFloat = collectionView.bounds.maxX
+        let height:CGFloat = collectionView.bounds.maxY
+        let remainWidth:CGFloat = width - kCellSize
+        let remainHeight:CGFloat = height - kCellSize
+        let remainWidth_2:CGFloat = remainWidth / 2.0
+        let insets:UIEdgeInsets = UIEdgeInsets(
+            top:0,
+            left:remainWidth_2,
+            bottom:remainHeight,
+            right:remainWidth_2)
+        
+        return insets
+    }
+    
     func numberOfSections(in collectionView:UICollectionView) -> Int
     {
         return 1
