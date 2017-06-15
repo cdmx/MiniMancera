@@ -17,7 +17,16 @@ class MHome
     
     private class func factoryFooter() -> [MHomeFooterProtocol]
     {
-        let
+        let footerSettings:MHomeFooterSettings = MHomeFooterSettings()
+        let footerBoards:MHomeFooterBoards = MHomeFooterBoards()
+        let footerStore:MHomeFooterStore = MHomeFooterStore()
+        
+        let footer:[MHomeFooterProtocol] = [
+            footerSettings,
+            footerBoards,
+            footerStore]
+        
+        return footer
     }
     
     init()
