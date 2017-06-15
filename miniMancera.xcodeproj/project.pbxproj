@@ -118,6 +118,7 @@
 		DA5667941EF2969B000055D8 /* assetSpinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5667931EF2969B000055D8 /* assetSpinner.xcassets */; };
 		DA5667961EF30B7D000055D8 /* MHomeOptionsFree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667951EF30B7D000055D8 /* MHomeOptionsFree.swift */; };
 		DA5667981EF30B88000055D8 /* MHomeOptionsPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667971EF30B88000055D8 /* MHomeOptionsPurchase.swift */; };
+		DA56679B1EF31023000055D8 /* ReformaCrossing.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5667991EF31023000055D8 /* ReformaCrossing.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -232,6 +233,7 @@
 		DA5667931EF2969B000055D8 /* assetSpinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assetSpinner.xcassets; sourceTree = "<group>"; };
 		DA5667951EF30B7D000055D8 /* MHomeOptionsFree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsFree.swift; sourceTree = "<group>"; };
 		DA5667971EF30B88000055D8 /* MHomeOptionsPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsPurchase.swift; sourceTree = "<group>"; };
+		DA56679A1EF31023000055D8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ReformaCrossing.strings; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -493,6 +495,7 @@
 		DA2DFFBD1EECB16A00365F23 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				DA5667991EF31023000055D8 /* ReformaCrossing.strings */,
 				DA2D00271EECB9D500365F23 /* Localizable.strings */,
 				DA2DFFC01EECB16A00365F23 /* ResourceURL.plist */,
 			);
@@ -699,6 +702,7 @@
 				DA1D578C1EF1EEE100ECA895 /* soundReformaCrossing.caf in Resources */,
 				DA2D003E1EED2F0000365F23 /* assetSprites.xcassets in Resources */,
 				DA1D57961EF207B700ECA895 /* soundVictory.caf in Resources */,
+				DA56679B1EF31023000055D8 /* ReformaCrossing.strings in Resources */,
 				DA1D57931EF207B700ECA895 /* soundCoin.caf in Resources */,
 				DA2DFFE41EECB16A00365F23 /* ResourceURL.plist in Resources */,
 			);
@@ -822,6 +826,14 @@
 				DA2D00281EECB9D500365F23 /* es */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DA5667991EF31023000055D8 /* ReformaCrossing.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA56679A1EF31023000055D8 /* es */,
+			);
+			name = ReformaCrossing.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
