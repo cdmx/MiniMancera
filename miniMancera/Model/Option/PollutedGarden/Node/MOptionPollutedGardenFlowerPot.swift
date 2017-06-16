@@ -8,7 +8,7 @@ class MOptionPollutedGardenFlowerPot:SKSpriteNode
     private let kMinAnimationDuration:TimeInterval = 0.3
     private let kAnimationDurationDivider:TimeInterval = 10
     private let kMaxAnimationduration:UInt32 = 25
-    private let kZPosition:CGFloat = 100
+    private let kZPosition:CGFloat = 500
     private let kInitialY:CGFloat = 45
     private let kFinalY:CGFloat = 70
     
