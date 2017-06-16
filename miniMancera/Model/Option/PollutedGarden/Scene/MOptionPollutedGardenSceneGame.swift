@@ -4,6 +4,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
 {
     private weak var hud:MOptionPollutedGardenHud!
     private weak var menu:MOptionPollutedGardenMenu!
+    private weak var floor:MOptionPollutedGardenFloor!
     private weak var labelTitle:SKLabelNode?
     private let kTitleDuration:TimeInterval = 1.5
     private let kFadeInDuration:TimeInterval = 0.5
@@ -25,7 +26,12 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
             controller:controller)
         self.menu = menu
         
+        let floor:MOptionPollutedGardenFloor = MOptionPollutedGardenFloor(
+            controller:controller)
+        self.floor = floor
+        
         addChild(background)
+        addChild(floor)
         
         addChild(hud)
         addChild(menu)

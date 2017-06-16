@@ -4,7 +4,7 @@ import SpriteKit
 class MOptionPollutedGardenBackground:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
-    private let kZPosition:CGFloat = -1
+    private let kZPosition:CGFloat = -10
     
     init(controller:COptionPollutedGarden)
     {

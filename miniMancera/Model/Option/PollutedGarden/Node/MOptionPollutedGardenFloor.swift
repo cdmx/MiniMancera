@@ -4,7 +4,7 @@ import SpriteKit
 class MOptionPollutedGardenFloor:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
-    private let kZPosition:CGFloat = 10000
+    private let kZPosition:CGFloat = 100000
     
     init(controller:COptionPollutedGarden)
     {
@@ -14,7 +14,6 @@ class MOptionPollutedGardenFloor:SKSpriteNode
         
         super.init(texture:texture, color:UIColor.clear, size:textureSize)
         
-        let textureHeight:CGFloat = textureSize.height
         let sceneSize:CGSize = controller.model.size
         let sceneWidth:CGFloat = sceneSize.width
         let sceneWidth_2:CGFloat = sceneWidth / 2.0
