@@ -7,7 +7,7 @@ class MOptionPollutedGardenHud:SKSpriteNode
     private weak var labelScore:SKLabelNode!
     private let kScoreFontSize:CGFloat = 15
     private let kMargin:CGFloat = 45
-    private let kScorePositionX:CGFloat = -32
+    private let kScorePositionX:CGFloat = 2
     private let kScorePositionY:CGFloat = -6
     private let kZPosition:CGFloat = 10001
     private let kScoreZPosition:CGFloat = 10005

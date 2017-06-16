@@ -89,4 +89,9 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         hud.run(actionFade)
         menu.run(actionFade)
     }
+    
+    override func updateNodes()
+    {
+        hud.update(elapsedTime:elapsedTime)
+    }
 }
