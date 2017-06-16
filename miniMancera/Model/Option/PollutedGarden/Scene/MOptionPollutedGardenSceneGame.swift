@@ -16,4 +16,9 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     {
         return nil
     }
+    
+    override func didMove(to view:SKView)
+    {
+        super.didMove(to:view)
+    }
 }
