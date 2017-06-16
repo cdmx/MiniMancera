@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COptionPollutedGarden>
 {
+    private var petunias:[MOptionPollutedGardenPetunia]
     private weak var hud:MOptionPollutedGardenHud!
     private weak var menu:MOptionPollutedGardenMenu!
     private weak var floor:MOptionPollutedGardenFloor!
@@ -13,6 +14,8 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     
     override init(controller:COptionPollutedGarden)
     {
+        petunias = []
+        
         super.init(controller:controller)
         
         let background:MOptionPollutedGardenBackground = MOptionPollutedGardenBackground(
@@ -50,6 +53,12 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         showTitle()
     }
     
+    override func updateNodes()
+    {
+        hud.update(elapsedTime:elapsedTime)
+        updatePetunias()
+    }
+    
     //MARK: private
     
     private func spawnPots()
@@ -73,12 +82,25 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         
         flowerPot.animateAppear()
         
-        spawnFlowerFor(flowerPot:flowerPot)
+        spawnPlantFor(flowerPot:flowerPot)
     }
     
-    private func spawnFlowerFor(flowerPot:MOptionPollutedGardenFlowerPot)
+    private func spawnPlantFor(flowerPot:MOptionPollutedGardenFlowerPot)
     {
+        let petunia:MOptionPollutedGardenPetunia = MOptionPollutedGardenPetunia(
+            controller:controller,
+            flowerPot:flowerPot)
+        petunias.append(petunia)
         
+        addChild(petunia)
+    }
+    
+    private func updatePetunias()
+    {
+        for petunia:MOptionPollutedGardenPetunia in petunias
+        {
+            petunia.update(elapsedTime:elapsedTime)
+        }
     }
     
     private func showTitle()
@@ -124,10 +146,5 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         
         hud.run(actionFade)
         menu.run(actionFade)
-    }
-    
-    override func updateNodes()
-    {
-        hud.update(elapsedTime:elapsedTime)
     }
 }
