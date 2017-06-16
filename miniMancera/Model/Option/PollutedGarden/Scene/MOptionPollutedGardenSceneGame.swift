@@ -40,10 +40,32 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     {
         super.didMove(to:view)
         
+        spawnPots()
         showTitle()
     }
     
     //MARK: private
+    
+    private func spawnPots()
+    {
+        let positions:[CGPoint] = MOptionPollutedGardenPotPosition.positionsFor(
+            model:controller.model)
+        
+        for position:CGPoint in positions
+        {
+            spawnPot(position:position)
+        }
+    }
+    
+    private func spawnPot(position:CGPoint)
+    {
+        
+    }
+    
+    private func spawnFlowerFor(flowerPot:MOptionPollutedGardenFlowerPot)
+    {
+        
+    }
     
     private func showTitle()
     {
