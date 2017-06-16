@@ -9,5 +9,6 @@ protocol MOptionProtocol
     var soundBackground:String? { get }
     
     init()
+    func activateGame()
     func sceneWithSize(controller:UIViewController, size:CGSize) -> SKScene?
 }

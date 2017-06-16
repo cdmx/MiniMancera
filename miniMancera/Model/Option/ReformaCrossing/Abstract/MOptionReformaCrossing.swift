@@ -49,11 +49,6 @@ class MOptionReformaCrossing:MOptionProtocol
         addedSpeed = CGFloat(level) * kSpeedMultiplier
     }
     
-    func activateGame()
-    {
-        gameActive = true
-    }
-    
     func playerSuccess()
     {
         gameActive = false
@@ -73,6 +68,11 @@ class MOptionReformaCrossing:MOptionProtocol
         {
             return kSoundBackground
         }
+    }
+    
+    func activateGame()
+    {
+        gameActive = true
     }
     
     func sceneWithSize(

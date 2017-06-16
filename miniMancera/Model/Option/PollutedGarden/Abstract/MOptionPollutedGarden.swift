@@ -24,6 +24,11 @@ class MOptionPollutedGarden:MOptionProtocol
         }
     }
     
+    func activateGame()
+    {
+        gameActive = true
+    }
+    
     func sceneWithSize(controller:UIViewController, size:CGSize) -> SKScene?
     {
         guard

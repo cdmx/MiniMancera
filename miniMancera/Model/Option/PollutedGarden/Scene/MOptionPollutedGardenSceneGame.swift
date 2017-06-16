@@ -5,7 +5,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private weak var labelTitle:SKLabelNode?
     private let kTitleDuration:TimeInterval = 1.5
     private let kFontSize:CGFloat = 24
-    private let kTitleVerticalAdd:CGFloat = -100
+    private let kTitleVerticalAdd:CGFloat = 100
     
     override init(controller:COptionPollutedGarden)
     {
@@ -63,10 +63,17 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     
     private func activateGame()
     {
-//        fadeInControls()
-//        
-//        labelTitle?.removeFromParent()
-//        controller.model.activateGame()
-//        player.startWalking()
+        fadeInControls()
+        labelTitle?.removeFromParent()
+        controller.model.activateGame()
+    }
+    
+    private func fadeInControls()
+    {
+        let actionFade:SKAction = SKAction.fadeIn(withDuration:kFadeInDuration)
+        
+        hud.run(actionFade)
+        menu.run(actionFade)
+        stop.run(actionFade)
     }
 }
