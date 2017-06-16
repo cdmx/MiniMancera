@@ -60,7 +60,6 @@
 		DA2D00A41EEFC15E00365F23 /* MOptionReformaCrossingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D009C1EEFC15E00365F23 /* MOptionReformaCrossingPlayer.swift */; };
 		DA2D00A51EEFC15E00365F23 /* MOptionReformaCrossingStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D009D1EEFC15E00365F23 /* MOptionReformaCrossingStop.swift */; };
 		DA2D00A61EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D009F1EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift */; };
-		DA2D00A91EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00A81EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift */; };
 		DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00B01EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift */; };
 		DA2D00B31EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00B21EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift */; };
 		DA2D00B71EEFF1BF00365F23 /* MOptionReformaCrossing1up.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00B61EEFF1BF00365F23 /* MOptionReformaCrossing1up.swift */; };
@@ -186,7 +185,6 @@
 		DA2D009C1EEFC15E00365F23 /* MOptionReformaCrossingPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingPlayer.swift; sourceTree = "<group>"; };
 		DA2D009D1EEFC15E00365F23 /* MOptionReformaCrossingStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingStop.swift; sourceTree = "<group>"; };
 		DA2D009F1EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSceneGame.swift; sourceTree = "<group>"; };
-		DA2D00A81EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionREformaCrossingSceneGameOver.swift; sourceTree = "<group>"; };
 		DA2D00B01EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverProtocol.swift; sourceTree = "<group>"; };
 		DA2D00B21EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverTimeOut.swift; sourceTree = "<group>"; };
 		DA2D00B61EEFF1BF00365F23 /* MOptionReformaCrossing1up.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossing1up.swift; sourceTree = "<group>"; };
@@ -393,7 +391,6 @@
 			children = (
 				DA2D009F1EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift */,
 				DA5667AB1EF3429A000055D8 /* MOptionReformaCrossingSceneGamePhysics.swift */,
-				DA2D00A81EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -861,7 +858,6 @@
 				DA2DFFDE1EECB16A00365F23 /* ExtensionString.swift in Sources */,
 				DA2D00201EECB68F00365F23 /* VHomeOptionsCell.swift in Sources */,
 				DA2DFFE11EECB16A00365F23 /* ExtensionUIFont.swift in Sources */,
-				DA2D00A91EEFC17E00365F23 /* MOptionREformaCrossingSceneGameOver.swift in Sources */,
 				DA11DE3D1EF089810043749D /* MOptionReformaCrossingCoin.swift in Sources */,
 				DA2D00791EEDE38600365F23 /* MOptionReformaCrossingLaneC.swift in Sources */,
 				DA2DFFEE1EECB16A00365F23 /* VSlider.swift in Sources */,
