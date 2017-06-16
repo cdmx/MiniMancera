@@ -3,6 +3,7 @@ import Foundation
 extension String
 {
     private static let tableReformaCrossing:String = "ReformaCrossing"
+    private static let tablePollutedGarden:String = "PollutedGarden"
     
     static func localized(key:String) -> String
     {
@@ -12,6 +13,11 @@ extension String
     static func localizedReformaCrossing(key:String) -> String
     {
         return NSLocalizedString(key, tableName:tableReformaCrossing, comment:"")
+    }
+    
+    static func localizedPollutedGarden(key:String) -> String
+    {
+        return NSLocalizedString(key, tableName:tablePollutedGarden, comment:"")
     }
     
     func capitalizedFirstLetter() -> String

@@ -127,6 +127,7 @@
 		DA5667AE1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667AD1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift */; };
 		DABD4F111EF458F0003DF861 /* MOptionPollutedGardenFlowerPot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F101EF458F0003DF861 /* MOptionPollutedGardenFlowerPot.swift */; };
 		DABD4F131EF45EE0003DF861 /* MOptionPollutedGardenPotPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F121EF45EE0003DF861 /* MOptionPollutedGardenPotPosition.swift */; };
+		DABD4F161EF4635E003DF861 /* PollutedGarden.strings in Resources */ = {isa = PBXBuildFile; fileRef = DABD4F141EF4635E003DF861 /* PollutedGarden.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -250,6 +251,7 @@
 		DA5667AD1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBackground.swift; sourceTree = "<group>"; };
 		DABD4F101EF458F0003DF861 /* MOptionPollutedGardenFlowerPot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenFlowerPot.swift; sourceTree = "<group>"; };
 		DABD4F121EF45EE0003DF861 /* MOptionPollutedGardenPotPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPotPosition.swift; sourceTree = "<group>"; };
+		DABD4F151EF4635E003DF861 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PollutedGarden.strings; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -515,6 +517,7 @@
 		DA2DFFBD1EECB16A00365F23 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				DABD4F141EF4635E003DF861 /* PollutedGarden.strings */,
 				DA5667991EF31023000055D8 /* ReformaCrossing.strings */,
 				DA2D00271EECB9D500365F23 /* Localizable.strings */,
 				DA2DFFC01EECB16A00365F23 /* ResourceURL.plist */,
@@ -764,6 +767,7 @@
 				DA1D57951EF207B700ECA895 /* sound1up.caf in Resources */,
 				DA2D00291EECB9D500365F23 /* Localizable.strings in Resources */,
 				DA1D578C1EF1EEE100ECA895 /* soundReformaCrossing.caf in Resources */,
+				DABD4F161EF4635E003DF861 /* PollutedGarden.strings in Resources */,
 				DA2D003E1EED2F0000365F23 /* assetSprites.xcassets in Resources */,
 				DA1D57961EF207B700ECA895 /* soundVictory.caf in Resources */,
 				DA56679B1EF31023000055D8 /* ReformaCrossing.strings in Resources */,
@@ -906,6 +910,14 @@
 				DA56679A1EF31023000055D8 /* es */,
 			);
 			name = ReformaCrossing.strings;
+			sourceTree = "<group>";
+		};
+		DABD4F141EF4635E003DF861 /* PollutedGarden.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DABD4F151EF4635E003DF861 /* es */,
+			);
+			name = PollutedGarden.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
