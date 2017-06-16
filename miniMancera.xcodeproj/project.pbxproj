@@ -124,6 +124,7 @@
 		DA5667A61EF33209000055D8 /* MOptionPollutedGardenSceneGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667A51EF33209000055D8 /* MOptionPollutedGardenSceneGame.swift */; };
 		DA5667A81EF3329E000055D8 /* MOptionSceneGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667A71EF3329E000055D8 /* MOptionSceneGame.swift */; };
 		DA5667AC1EF3429A000055D8 /* MOptionReformaCrossingSceneGamePhysics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667AB1EF3429A000055D8 /* MOptionReformaCrossingSceneGamePhysics.swift */; };
+		DA5667AE1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667AD1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -244,6 +245,7 @@
 		DA5667A51EF33209000055D8 /* MOptionPollutedGardenSceneGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenSceneGame.swift; sourceTree = "<group>"; };
 		DA5667A71EF3329E000055D8 /* MOptionSceneGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionSceneGame.swift; sourceTree = "<group>"; };
 		DA5667AB1EF3429A000055D8 /* MOptionReformaCrossingSceneGamePhysics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSceneGamePhysics.swift; sourceTree = "<group>"; };
+		DA5667AD1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBackground.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -641,6 +643,7 @@
 		DA5667A01EF325CA000055D8 /* Node */ = {
 			isa = PBXGroup;
 			children = (
+				DA5667AD1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				DA2DFFDC1EECB16A00365F23 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA5667981EF30B88000055D8 /* MHomeOptionsPurchase.swift in Sources */,
 				DA11DE471EF10A480043749D /* MOptionReformaCrossingFoeFactory.swift in Sources */,
+				DA5667AE1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift in Sources */,
 				DA2D008F1EEE6D6F00365F23 /* MOptionReformaCrossingLaneGroup.swift in Sources */,
 				DA2D007E1EEDE38600365F23 /* MOptionReformaCrossingLaneH.swift in Sources */,
 				DA5667831EF276CD000055D8 /* MHomeOptionsProtocol.swift in Sources */,
