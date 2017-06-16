@@ -131,6 +131,8 @@
 		DABD4F1A1EF469FC003DF861 /* MOptionPollutedGardenMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F191EF469FC003DF861 /* MOptionPollutedGardenMenu.swift */; };
 		DABD4F1C1EF46F1D003DF861 /* MOptionReformaCrossingSceneGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F1B1EF46F1D003DF861 /* MOptionReformaCrossingSceneGameOver.swift */; };
 		DABD4F1E1EF48440003DF861 /* MOptionPollutedGardenFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F1D1EF48440003DF861 /* MOptionPollutedGardenFloor.swift */; };
+		DABD4F201EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F1F1EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift */; };
+		DABD4F221EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F211EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -258,6 +260,8 @@
 		DABD4F191EF469FC003DF861 /* MOptionPollutedGardenMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenMenu.swift; sourceTree = "<group>"; };
 		DABD4F1B1EF46F1D003DF861 /* MOptionReformaCrossingSceneGameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSceneGameOver.swift; sourceTree = "<group>"; };
 		DABD4F1D1EF48440003DF861 /* MOptionPollutedGardenFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenFloor.swift; sourceTree = "<group>"; };
+		DABD4F1F1EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPetunia.swift; sourceTree = "<group>"; };
+		DABD4F211EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPetuniaLife.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -650,6 +654,7 @@
 			children = (
 				DA5667A31EF325E9000055D8 /* MOptionPollutedGarden.swift */,
 				DABD4F121EF45EE0003DF861 /* MOptionPollutedGardenPotPosition.swift */,
+				DABD4F211EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -662,6 +667,7 @@
 				DABD4F171EF46983003DF861 /* MOptionPollutedGardenHud.swift */,
 				DABD4F191EF469FC003DF861 /* MOptionPollutedGardenMenu.swift */,
 				DABD4F1D1EF48440003DF861 /* MOptionPollutedGardenFloor.swift */,
+				DABD4F1F1EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -856,6 +862,7 @@
 				DA2DFFE71EECB16A00365F23 /* VAlert.swift in Sources */,
 				DA2DFFDA1EECB16A00365F23 /* ExtensionFileManager.swift in Sources */,
 				DA1D579A1EF238D300ECA895 /* ControllerParentTransitions.swift in Sources */,
+				DABD4F201EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift in Sources */,
 				DA2D00B71EEFF1BF00365F23 /* MOptionReformaCrossing1up.swift in Sources */,
 				DA2D00801EEDE38600365F23 /* MOptionReformaCrossingLaneProtocol.swift in Sources */,
 				DA2DFFD61EECB16A00365F23 /* CHome.swift in Sources */,
@@ -894,6 +901,7 @@
 				DA56678E1EF2772A000055D8 /* MHomeOptionsReformaCrossing.swift in Sources */,
 				DA5667701EF27482000055D8 /* MGamePurchaseProtocol.swift in Sources */,
 				DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */,
+				DABD4F221EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift in Sources */,
 				DA56676A1EF27427000055D8 /* MSession.swift in Sources */,
 				DA2DFFE01EECB16A00365F23 /* ExtensionUIColor.swift in Sources */,
 				DA11DE531EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift in Sources */,
