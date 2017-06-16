@@ -3,17 +3,22 @@ import SpriteKit
 
 class MOptionPollutedGardenPetunia:SKSpriteNode
 {
+    private var lastElapsedTime:TimeInterval
+    private var growTime:TimeInterval?
     private weak var controller:COptionPollutedGarden!
     private weak var flowerPot:MOptionPollutedGardenFlowerPot!
     private var level:Int
+    private let kGrowDeltaTime:TimeInterval = 3
     private let kZPosition:CGFloat = 400
+    private let kInitialLevel:Int = -1
     
     init(controller:COptionPollutedGarden, flowerPot:MOptionPollutedGardenFlowerPot)
     {
         let size:CGSize = controller.model.petuniaLife.textureSize
         self.controller = controller
         self.flowerPot = flowerPot
-        level = 0
+        level = kInitialLevel
+        lastElapsedTime = 0
         
         super.init(texture:nil, color:UIColor.clear, size:size)
         position = startPosition()
@@ -50,6 +55,53 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
         return point
     }
     
+    private func grow()
+    {
+        level += 1
+        
+        if level < controller.model.petuniaLife.textures.count
+        {
+            updateTexture()
+        }
+        else
+        {
+            collectFlower()
+        }
+        
+        nextGrowTime()
+    }
+    
+    private func nextGrowTime()
+    {
+        growTime = lastElapsedTime + kGrowDeltaTime
+    }
+    
+    private func updateTexture()
+    {
+        texture = controller.model.petuniaLife.textures[level]
+    }
+    
+    private func collectFlower()
+    {
+        
+    }
+    
     //MARK: public
     
+    func update(elapsedTime:TimeInterval)
+    {
+        lastElapsedTime = elapsedTime
+        
+        if let growTime:TimeInterval = self.growTime
+        {
+            if growTime < elapsedTime
+            {
+                grow()
+            }
+        }
+        else
+        {
+            nextGrowTime()
+        }
+    }
 }
