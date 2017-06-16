@@ -3,6 +3,7 @@ import SpriteKit
 
 class MOptionPollutedGarden:MOptionProtocol
 {
+    let petuniaLife:MOptionPollutedGardenPetuniaLife
     private(set) var size:CGSize
     private(set) var score:Int
     private(set) var gameActive:Bool
@@ -12,6 +13,7 @@ class MOptionPollutedGarden:MOptionProtocol
         size = CGSize.zero
         score = 0
         gameActive = false
+        petuniaLife = MOptionPollutedGardenPetuniaLife()
     }
     
     //MARK: option protocol
