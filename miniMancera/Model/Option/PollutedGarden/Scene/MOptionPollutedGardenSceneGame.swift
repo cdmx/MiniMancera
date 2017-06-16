@@ -48,18 +48,26 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     
     private func spawnPots()
     {
-        let positions:[CGPoint] = MOptionPollutedGardenPotPosition.positionsFor(
+        let positions:[CGFloat] = MOptionPollutedGardenPotPosition.positionsFor(
             model:controller.model)
         
-        for position:CGPoint in positions
+        for position:CGFloat in positions
         {
             spawnPot(position:position)
         }
     }
     
-    private func spawnPot(position:CGPoint)
+    private func spawnPot(position:CGFloat)
     {
+        let flowerPot:MOptionPollutedGardenFlowerPot = MOptionPollutedGardenFlowerPot(
+            controller:controller,
+            positionX:position)
         
+        addChild(flowerPot)
+        
+        flowerPot.animateAppear()
+        
+        spawnFlowerFor(flowerPot:flowerPot)
     }
     
     private func spawnFlowerFor(flowerPot:MOptionPollutedGardenFlowerPot)

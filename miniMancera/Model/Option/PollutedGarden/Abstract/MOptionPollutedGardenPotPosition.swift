@@ -5,7 +5,7 @@ class MOptionPollutedGardenPotPosition
     private static let kPotWidth:CGFloat = 50
     private static let kCountPots:Int = 5
     
-    class func positionsFor(model:MOptionPollutedGarden) -> [CGPoint]
+    class func positionsFor(model:MOptionPollutedGarden) -> [CGFloat]
     {
         let width:CGFloat = model.size.width
         var all:[CGFloat] = allPositions(width:width)
@@ -42,6 +42,6 @@ class MOptionPollutedGardenPotPosition
         let random:UInt32 = arc4random_uniform(count32)
         let randomInt:Int = Int(random)
         
-        return random
+        return randomInt
     }
 }

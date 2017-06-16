@@ -4,18 +4,24 @@ import SpriteKit
 class MOptionPollutedGardenFlowerPot:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
+    private let kScaleDuration:TimeInterval = 1
     private let kZPosition:CGFloat = 100
+    private let kPositionY:CGFloat = 100
+    private let kInitialScale:CGFloat = 0.1
+    private let kFinalScale:CGFloat = 1
     
-    init(controller:COptionPollutedGarden)
+    init(controller:COptionPollutedGarden, positionX:CGFloat)
     {
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenFlowerPot"))
         let size:CGSize = texture.size()
         self.controller = controller
         
         super.init(texture:texture, color:UIColor.clear, size:size)
-        position = startPosition()
+        position = CGPoint(x:positionX, y:kPositionY)
         zPosition = kZPosition
         isUserInteractionEnabled = true
+        xScale = kInitialScale
+        yScale = kInitialScale
         alpha = 0
     }
     
@@ -31,14 +37,12 @@ class MOptionPollutedGardenFlowerPot:SKSpriteNode
         }
     }
     
-    //MARK: private
+    //MARK: public
     
-    private func startPosition() -> CGPoint
+    func animateAppear()
     {
-        let sceneWidth_2:CGFloat = controller.model.size.width / 2.0
-        let sizeHeight_2:CGFloat = size.height / 2.0
-        let point:CGPoint = CGPoint(x:sceneWidth_2, y:sizeHeight_2)
+        let actionScale:SKAction = SKAction.scale(to:kFinalScale, duration:kScaleDuration)
         
-        return point
+        run(actionScale)
     }
 }
