@@ -2,8 +2,11 @@ import SpriteKit
 
 class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COptionPollutedGarden>
 {
+    private weak var hud:MOptionPollutedGardenHud!
+    private weak var menu:MOptionPollutedGardenMenu!
     private weak var labelTitle:SKLabelNode?
     private let kTitleDuration:TimeInterval = 1.5
+    private let kFadeInDuration:TimeInterval = 0.5
     private let kFontSize:CGFloat = 24
     private let kTitleVerticalAdd:CGFloat = 100
     
@@ -14,7 +17,18 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         let background:MOptionPollutedGardenBackground = MOptionPollutedGardenBackground(
             controller:controller)
         
+        let hud:MOptionPollutedGardenHud = MOptionPollutedGardenHud(
+            controller:controller)
+        self.hud = hud
+        
+        let menu:MOptionPollutedGardenMenu = MOptionPollutedGardenMenu(
+            controller:controller)
+        self.menu = menu
+        
         addChild(background)
+        
+        addChild(hud)
+        addChild(menu)
     }
     
     required init?(coder:NSCoder)
@@ -74,6 +88,5 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         
         hud.run(actionFade)
         menu.run(actionFade)
-        stop.run(actionFade)
     }
 }

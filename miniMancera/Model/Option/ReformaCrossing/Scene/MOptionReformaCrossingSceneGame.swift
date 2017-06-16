@@ -4,7 +4,7 @@ class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, C
 {
     let kSoundHonk:String = "soundCarHorn.caf"
     private(set) weak var player:MOptionReformaCrossingPlayer!
-    private(set) weak var hud:MOptionReformaCrossingHud!
+    private weak var hud:MOptionReformaCrossingHud!
     private weak var stop:MOptionReformaCrossingStop!
     private weak var menu:MOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
