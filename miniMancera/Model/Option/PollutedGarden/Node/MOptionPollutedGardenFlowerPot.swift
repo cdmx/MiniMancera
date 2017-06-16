@@ -22,7 +22,6 @@ class MOptionPollutedGardenFlowerPot:SKSpriteNode
         isUserInteractionEnabled = true
         xScale = kInitialScale
         yScale = kInitialScale
-        alpha = 0
     }
     
     required init?(coder:NSCoder)

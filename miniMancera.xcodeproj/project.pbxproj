@@ -130,6 +130,7 @@
 		DABD4F181EF46983003DF861 /* MOptionPollutedGardenHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F171EF46983003DF861 /* MOptionPollutedGardenHud.swift */; };
 		DABD4F1A1EF469FC003DF861 /* MOptionPollutedGardenMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F191EF469FC003DF861 /* MOptionPollutedGardenMenu.swift */; };
 		DABD4F1C1EF46F1D003DF861 /* MOptionReformaCrossingSceneGameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F1B1EF46F1D003DF861 /* MOptionReformaCrossingSceneGameOver.swift */; };
+		DABD4F1E1EF48440003DF861 /* MOptionPollutedGardenFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F1D1EF48440003DF861 /* MOptionPollutedGardenFloor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -256,6 +257,7 @@
 		DABD4F171EF46983003DF861 /* MOptionPollutedGardenHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenHud.swift; sourceTree = "<group>"; };
 		DABD4F191EF469FC003DF861 /* MOptionPollutedGardenMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenMenu.swift; sourceTree = "<group>"; };
 		DABD4F1B1EF46F1D003DF861 /* MOptionReformaCrossingSceneGameOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSceneGameOver.swift; sourceTree = "<group>"; };
+		DABD4F1D1EF48440003DF861 /* MOptionPollutedGardenFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenFloor.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -659,6 +661,7 @@
 				DABD4F101EF458F0003DF861 /* MOptionPollutedGardenFlowerPot.swift */,
 				DABD4F171EF46983003DF861 /* MOptionPollutedGardenHud.swift */,
 				DABD4F191EF469FC003DF861 /* MOptionPollutedGardenMenu.swift */,
+				DABD4F1D1EF48440003DF861 /* MOptionPollutedGardenFloor.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -793,6 +796,7 @@
 				DA5667821EF276CD000055D8 /* MHomeFooterProtocol.swift in Sources */,
 				DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */,
 				DA2D00A51EEFC15E00365F23 /* MOptionReformaCrossingStop.swift in Sources */,
+				DABD4F1E1EF48440003DF861 /* MOptionPollutedGardenFloor.swift in Sources */,
 				DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */,
 				DA56676E1EF27475000055D8 /* MGameFreeProtocol.swift in Sources */,
 				DA2DFFDC1EECB16A00365F23 /* ExtensionNSLayoutConstraint.swift in Sources */,
