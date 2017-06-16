@@ -6,7 +6,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private weak var menu:MOptionPollutedGardenMenu!
     private weak var floor:MOptionPollutedGardenFloor!
     private weak var labelTitle:SKLabelNode?
-    private let kTitleDuration:TimeInterval = 1.5
+    private let kTitleDuration:TimeInterval = 2.5
     private let kFadeInDuration:TimeInterval = 0.5
     private let kFontSize:CGFloat = 24
     private let kTitleVerticalAdd:CGFloat = 100
