@@ -13,9 +13,9 @@ class MOptionPollutedGardenBubbleType
     let orientation:Orientation
     let size:CGSize
     
-    init(texture:SKTexture, orientation:Orientation)
+    init(image:UIImage, orientation:Orientation)
     {
-        self.texture = texture
+        self.texture = SKTexture(image:image)
         self.orientation = orientation
         size = texture.size()
     }
