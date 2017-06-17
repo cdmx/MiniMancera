@@ -7,6 +7,9 @@ class MOptionPollutedGardenPlayer:SKSpriteNode
     private let textureStand:SKTexture
     private let kZPosition:CGFloat = 1
     private let kYPosition:CGFloat = 93
+    private let kPhysicsWidth:CGFloat = 30
+    private let kPhysicsHeight:CGFloat = 10
+    private let kPhysicsY:CGFloat = 20
     
     init(controller:COptionPollutedGarden)
     {
@@ -35,17 +38,21 @@ class MOptionPollutedGardenPlayer:SKSpriteNode
     }
     
     private func startPhysics(size:CGSize)
-    {/*
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
+    {
+        let physicsSize:CGSize = CGSize(width:kPhysicsWidth, height:kPhysicsHeight)
+        let physicsCenter:CGPoint = CGPoint(x:0, y:kPhysicsY)
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(
+            rectangleOf:physicsSize,
+            center:physicsCenter)
         physicsBody.isDynamic = false
         physicsBody.friction = 1
         physicsBody.angularVelocity = 0
         physicsBody.allowsRotation = false
         physicsBody.restitution = 0
         
-        physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Floor
+        physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Umbrella
         physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.Bubble
         physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.None
-        self.physicsBody = physicsBody*/
+        self.physicsBody = physicsBody
     }
 }
