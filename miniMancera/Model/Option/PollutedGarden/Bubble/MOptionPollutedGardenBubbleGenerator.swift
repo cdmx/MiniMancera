@@ -3,12 +3,12 @@ import SpriteKit
 
 class MOptionPollutedGardenBubbleGenerator
 {
+    let explodeAnimation:SKAction
     private weak var controller:COptionPollutedGarden!
     private var maxX:CGFloat
     private var maxY:CGFloat
     private let bubbleTypes:[MOptionPollutedGardenBubbleType]
     private let colours:[UIColor]
-    private let explodeAnimation:SKAction
     private let kAddYPos:CGFloat = 150
     private let countBubbles:UInt32
     private let countColours:UInt32

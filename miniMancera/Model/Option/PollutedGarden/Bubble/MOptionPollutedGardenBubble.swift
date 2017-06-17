@@ -36,6 +36,12 @@ class MOptionPollutedGardenBubble:SKSpriteNode
     
     //MARK: private
     
+    private func leaveGarden()
+    {
+        removeAllActions()
+        removeFromParent()
+    }
+    
     private func randomVelocity() -> CGFloat
     {
         let random:UInt32 = arc4random_uniform(kMaxVelocity)
@@ -65,12 +71,23 @@ class MOptionPollutedGardenBubble:SKSpriteNode
         self.physicsBody = physicsBody
     }
     
+    private func animateAndLeave()
+    {
+        let actionExplosion:SKAction = controller.model.bubbleGenerator.explodeAnimation
+        let actionLeave:SKAction = SKAction.run(leaveGarden)
+        let actions:[SKAction] = [
+            actionExplosion,
+            actionLeave]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        run(actionsSequence)
+    }
+    
     //MARK: public
     
     func explode()
     {
         alive = false
-        
-        
+        animateAndLeave()
     }
 }
