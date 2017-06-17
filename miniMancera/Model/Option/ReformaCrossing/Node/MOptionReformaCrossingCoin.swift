@@ -41,11 +41,11 @@ class MOptionReformaCrossingCoin:SKSpriteNode
     {
         let actionDelay:SKAction = SKAction.wait(forDuration:kDelayFade)
         let actionFade:SKAction = SKAction.fadeOut(withDuration:kFadeDuration)
-        let actionLeaverStreet:SKAction = SKAction.run(leaveStreet)
+        let actionLeaveStreet:SKAction = SKAction.run(leaveStreet)
         let actions:[SKAction] = [
             actionDelay,
             actionFade,
-            actionLeaverStreet]
+            actionLeaveStreet]
         let actionsSequence:SKAction = SKAction.sequence(actions)
         
         run(actionsSequence)

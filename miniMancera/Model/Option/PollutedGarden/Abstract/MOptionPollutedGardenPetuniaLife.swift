@@ -4,6 +4,7 @@ import SpriteKit
 class MOptionPollutedGardenPetuniaLife
 {
     let textures:[SKTexture]
+    let texturePlus:SKTexture
     let textureSize:CGSize
     
     private class func factoryTextures() -> [SKTexture]
@@ -43,6 +44,7 @@ class MOptionPollutedGardenPetuniaLife
     init()
     {
         textures = MOptionPollutedGardenPetuniaLife.factoryTextures()
+        texturePlus = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenPlusFlower"))
         textureSize = textures[0].size()
     }
 }

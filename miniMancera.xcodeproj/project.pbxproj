@@ -133,6 +133,7 @@
 		DABD4F1E1EF48440003DF861 /* MOptionPollutedGardenFloor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F1D1EF48440003DF861 /* MOptionPollutedGardenFloor.swift */; };
 		DABD4F201EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F1F1EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift */; };
 		DABD4F221EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F211EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift */; };
+		DABD4F241EF4AD63003DF861 /* MOptionPollutedGardenPlusFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F231EF4AD63003DF861 /* MOptionPollutedGardenPlusFlower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -262,6 +263,7 @@
 		DABD4F1D1EF48440003DF861 /* MOptionPollutedGardenFloor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenFloor.swift; sourceTree = "<group>"; };
 		DABD4F1F1EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPetunia.swift; sourceTree = "<group>"; };
 		DABD4F211EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPetuniaLife.swift; sourceTree = "<group>"; };
+		DABD4F231EF4AD63003DF861 /* MOptionPollutedGardenPlusFlower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPlusFlower.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -668,6 +670,7 @@
 				DABD4F191EF469FC003DF861 /* MOptionPollutedGardenMenu.swift */,
 				DABD4F1D1EF48440003DF861 /* MOptionPollutedGardenFloor.swift */,
 				DABD4F1F1EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift */,
+				DABD4F231EF4AD63003DF861 /* MOptionPollutedGardenPlusFlower.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -884,6 +887,7 @@
 				DA2D008D1EEE04E300365F23 /* MOptionReformaCrossingPhysicsStruct.swift in Sources */,
 				DA2DFFE81EECB16A00365F23 /* VBlur.swift in Sources */,
 				DA2DFFF01EECB16A00365F23 /* VSpinner.swift in Sources */,
+				DABD4F241EF4AD63003DF861 /* MOptionPollutedGardenPlusFlower.swift in Sources */,
 				DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */,
 				DABD4F1C1EF46F1D003DF861 /* MOptionReformaCrossingSceneGameOver.swift in Sources */,
 				DA2D007A1EEDE38600365F23 /* MOptionReformaCrossingLaneD.swift in Sources */,

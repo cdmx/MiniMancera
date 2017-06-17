@@ -8,8 +8,8 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     private weak var controller:COptionPollutedGarden!
     private weak var flowerPot:MOptionPollutedGardenFlowerPot!
     private var level:Int
-    private let kGrowDeltaTime:TimeInterval = 2
-    private let kAnimationDuration:TimeInterval = 0.3
+    private let kGrowDeltaTime:TimeInterval = 7
+    private let kAnimationDuration:TimeInterval = 0.4
     private let kZPosition:CGFloat = 400
     private let kInitialLevel:Int = -1
     
@@ -53,8 +53,6 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
         let textureHeight_2:CGFloat = textureHeight / 2.0
         let positionY:CGFloat = potY + potHeight_2 + textureHeight_2
         let point:CGPoint = CGPoint(x:potX, y:positionY)
-        
-        print(point)
         
         return point
     }
