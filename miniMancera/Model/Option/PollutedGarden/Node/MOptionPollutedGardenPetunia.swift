@@ -3,12 +3,12 @@ import SpriteKit
 
 class MOptionPollutedGardenPetunia:SKSpriteNode
 {
-    private var lastElapsedTime:TimeInterval
-    private var growTime:TimeInterval
     private weak var controller:COptionPollutedGarden!
     private weak var flowerPot:MOptionPollutedGardenFlowerPot!
     private var level:Int
-    private let kGrowDeltaTime:TimeInterval = 3
+    private var lastElapsedTime:TimeInterval
+    private var growTime:TimeInterval
+    private let kGrowDeltaTime:TimeInterval = 9
     private let kAnimationDuration:TimeInterval = 0.4
     private let kZPosition:CGFloat = 400
     private let kInitialLevel:Int = -1

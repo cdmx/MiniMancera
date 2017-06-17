@@ -2,16 +2,18 @@ import SpriteKit
 
 class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COptionPollutedGarden>
 {
-    private var petunias:[MOptionPollutedGardenPetunia]
     private weak var hud:MOptionPollutedGardenHud!
     private weak var menu:MOptionPollutedGardenMenu!
     private weak var floor:MOptionPollutedGardenFloor!
     private weak var labelTitle:SKLabelNode?
+    private var petunias:[MOptionPollutedGardenPetunia]
+    private var nextBubbleSpawns:TimeInterval
     private let soundCoin:SKAction
     private let kSoundCoin:String = "soundCoin.caf"
     private let kTitleDuration:TimeInterval = 2.5
     private let kFadeInDuration:TimeInterval = 0.5
-    private let kGravityY:CGFloat = 1
+    private let kSpawnBubbleRate:TimeInterval = 0.1
+    private let kGravityY:CGFloat = -0.1
     private let kFontSize:CGFloat = 24
     private let kTitleVerticalAdd:CGFloat = 100
     private let kSpawnProbability:UInt32 = 1
@@ -19,6 +21,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     override init(controller:COptionPollutedGarden)
     {
         petunias = []
+        nextBubbleSpawns = 0
         soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
         
         super.init(controller:controller)
@@ -57,13 +60,13 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         
         spawnPots()
         showTitle()
-        spawnBubble()
     }
     
     override func updateNodes()
     {
         hud.update(elapsedTime:elapsedTime)
         updatePetunias()
+        checkBubbleSpawning()
     }
     
     //MARK: private
@@ -155,7 +158,28 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         menu.run(actionFade)
     }
     
-    private func shouldSpawn() -> Bool
+    private func checkBubbleSpawning()
+    {
+        if elapsedTime > nextBubbleSpawns
+        {
+            nextBubbleSpawns = elapsedTime + kSpawnBubbleRate
+            spawnBubble()
+        }
+    }
+    
+    private func spawnBubble()
+    {
+        let should:Bool = shouldSpawnBubble()
+        
+        if should
+        {
+            let bubble:MOptionPollutedGardenBubble = controller.model.bubbleGenerator.randomBubble()
+            
+            addChild(bubble)
+        }
+    }
+    
+    private func shouldSpawnBubble() -> Bool
     {
         let random:UInt32 = arc4random_uniform(kSpawnProbability)
         
@@ -165,18 +189,6 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         }
         
         return false
-    }
-    
-    private func spawnBubble()
-    {
-        let should:Bool = shouldSpawn()
-        
-        if should
-        {
-            let bubble:MOptionPollutedGardenBubble = controller.model.bubbleGenerator.randomBubble()
-            
-            addChild(bubble)
-        }
     }
     
     //MARK: public

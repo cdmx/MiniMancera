@@ -35,12 +35,13 @@ class MOptionPollutedGardenBubble:SKSpriteNode
     private func startPhysics()
     {
         let physicsBody:SKPhysicsBody = SKPhysicsBody(
-            circleOfRadius:bubbleType.size.width)
-        physicsBody.isDynamic = false
+            circleOfRadius:bubbleType.radius)
+        physicsBody.isDynamic = true
         physicsBody.friction = 0
-        physicsBody.angularVelocity = 0
+        physicsBody.angularVelocity = 1
         physicsBody.allowsRotation = true
         physicsBody.restitution = 1
+        physicsBody.mass = bubbleType.mass
         
         physicsBody.categoryBitMask = MOptionReformaCrossingPhysicsStruct.Player
         physicsBody.contactTestBitMask = MOptionReformaCrossingPhysicsStruct.Foe
