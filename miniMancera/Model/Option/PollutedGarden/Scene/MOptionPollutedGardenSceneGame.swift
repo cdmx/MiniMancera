@@ -10,7 +10,9 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private var contactQueue:[SKPhysicsContact]
     private var nextBubbleSpawns:TimeInterval
     private let soundCoin:SKAction
+    private let soundFail:SKAction
     private let kSoundCoin:String = "soundCoin.caf"
+    private let kSoundFail:String = "soundFail.caf"
     private let kTitleDuration:TimeInterval = 2.5
     private let kFadeInDuration:TimeInterval = 0.5
     private let kSpawnBubbleRate:TimeInterval = 0.1
@@ -26,6 +28,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         contactQueue = []
         nextBubbleSpawns = 0
         soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
+        soundFail = SKAction.playSoundFileNamed(kSoundFail, waitForCompletion:false)
         
         super.init(controller:controller)
         startPhysics()
@@ -228,6 +231,17 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
             controller:controller)
         
         addChild(plusFlower)
+    }
+    
+    func flowerPolluted(petunia:MOptionPollutedGardenPetunia)
+    {
+        playSound(actionSound:soundFail)
+        
+        let pollution:MOptionPollutedGardenPollution = MOptionPollutedGardenPollution(
+            petunia:petunia,
+            controller:controller)
+        
+        addChild(pollution)
     }
     
     //MARK: contact delegate

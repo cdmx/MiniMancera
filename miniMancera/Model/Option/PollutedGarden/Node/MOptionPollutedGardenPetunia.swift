@@ -15,6 +15,7 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     private let kPhysicsHeight:CGFloat = 20
     private let kPhysicsY:CGFloat = -16
     private let kInitialLevel:Int = -1
+    private let kPollutedLevel:Int = -2
     
     init(controller:COptionPollutedGarden, flowerPot:MOptionPollutedGardenFlowerPot)
     {
@@ -77,13 +78,20 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     {
         level += 1
         
-        if level < controller.model.petuniaLife.textures.count
+        if level == kInitialLevel
         {
-            updateTexture()
+            sickPetunia()
         }
         else
         {
-            collectFlower()
+            if level < controller.model.petuniaLife.textures.count
+            {
+                updateTexture()
+            }
+            else
+            {
+                collectFlower()
+            }
         }
         
         nextGrowTime()
@@ -97,6 +105,17 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     private func updateTexture()
     {
         let newTexture = controller.model.petuniaLife.textures[level]
+        animateWithTexture(newTexture:newTexture)
+    }
+    
+    private func sickPetunia()
+    {
+        let newTexture = controller.model.petuniaLife.texturePetuniaSick
+        animateWithTexture(newTexture:newTexture)
+    }
+    
+    private func animateWithTexture(newTexture:SKTexture)
+    {
         let actionFadeOut:SKAction = SKAction.fadeOut(withDuration:kAnimationDuration)
         let actionTexture:SKAction = SKAction.setTexture(newTexture, resize:false)
         let actionFadeIn:SKAction = SKAction.fadeIn(withDuration:kAnimationDuration)
@@ -123,6 +142,16 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
         if growTime < elapsedTime
         {
             grow()
+        }
+    }
+    
+    func polluted()
+    {
+        if level > kInitialLevel
+        {
+            controller.pollutedFlower(petunia:self)
+            level = kPollutedLevel
+            growTime = lastElapsedTime
         }
     }
 }

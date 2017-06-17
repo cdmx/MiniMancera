@@ -28,6 +28,7 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
         petunia:MOptionPollutedGardenPetunia)
     {
         bubble.explode()
+        petunia.polluted()
     }
     
     private func contactBubbleFlowerPot(

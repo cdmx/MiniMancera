@@ -32,6 +32,16 @@ class MOptionPollutedGarden:MOptionProtocol
         }
     }
     
+    func pollutedFlower()
+    {
+        score -= 1
+    }
+    
+    func allFlowersPolluted()
+    {
+        gameActive = false
+    }
+    
     //MARK: option protocol
     
     var soundBackground:String?
