@@ -4,6 +4,7 @@ import SpriteKit
 class MOptionPollutedGarden:MOptionProtocol
 {
     let petuniaLife:MOptionPollutedGardenPetuniaLife
+    let bubbleGenerator:MOptionPollutedGardenBubbleGenerator
     private(set) var size:CGSize
     private(set) var score:Int
     private(set) var gameActive:Bool
@@ -16,6 +17,7 @@ class MOptionPollutedGarden:MOptionProtocol
         maxScore = 0
         gameActive = false
         petuniaLife = MOptionPollutedGardenPetuniaLife()
+        bubbleGenerator = MOptionPollutedGardenBubbleGenerator()
     }
     
     //MARK: public
