@@ -29,7 +29,10 @@ extension MOptionPollutedGardenBubbleGenerator
     private class func allImages() -> [UIImage]
     {
         let images:[UIImage] = [
-            #imageLiteral(resourceName: "assetPollutedGardenBubbleBig")]
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleBig"),
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleMedium"),
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleSmall"),
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleMini")]
         
         return images
     }

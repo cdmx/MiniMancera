@@ -15,6 +15,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private let kSpawnBubbleRate:TimeInterval = 0.1
     private let kGravityY:CGFloat = -0.1
     private let kFontSize:CGFloat = 24
+    private let kExtraEdge:CGFloat = 400
     private let kTitleVerticalAdd:CGFloat = 100
     private let kSpawnProbability:UInt32 = 20
     
@@ -75,21 +76,14 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     {
         physicsWorld.gravity = CGVector(dx:0, dy:kGravityY)
         
-        let origin:CGPoint = frame.origin
-        let originX:CGFloat = origin.x
-        let originY:CGFloat = origin.y
-        let width:CGFloat = frame.size.width
-        let height:CGFloat = frame.size.height
-        let maxX:CGFloat = originX + width
-        let maxY:CGFloat = originY + height
+        let origin:CGPoint = self.frame.origin
+        let size:CGSize = self.frame.size
+        let width:CGFloat = size.width
+        let height:CGFloat = size.height
+        let newSize:CGSize = CGSize(width:width, height:height + kExtraEdge)
+        let frame:CGRect = CGRect(origin:origin, size:newSize)
         
-        let path:CGMutablePath = CGMutablePath()
-        path.move(to:CGPoint(x:originX, y:maxY))
-        path.addLine(to:origin)
-        path.addLine(to:CGPoint(x:maxX, y:originY))
-        path.addLine(to:CGPoint(x:maxX, y:maxY))
-        
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(edgeChainFrom:path)
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(edgeLoopFrom:frame)
         physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Scene
         physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.None
         physicsBody.collisionBitMask = MOptionPollutedGardenPhysicsStruct.None

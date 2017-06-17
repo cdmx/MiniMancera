@@ -8,6 +8,7 @@ class MOptionPollutedGardenBubbleGenerator
     private var maxY:CGFloat
     private let bubbleTypes:[MOptionPollutedGardenBubbleType]
     private let colours:[UIColor]
+    private let kAddYPos:CGFloat = 150
     private let countBubbles:UInt32
     private let countColours:UInt32
     
@@ -45,13 +46,11 @@ class MOptionPollutedGardenBubbleGenerator
     {
         let width:CGFloat = size.width
         let width_2:CGFloat = width / 2.0
-        let height_2:CGFloat = size.height / 2.0
-        let positionY:CGFloat = maxY + height_2
         let remainWidth:UInt32 = UInt32(maxX - width)
         let randomX:UInt32 = arc4random_uniform(remainWidth)
         let randomXFloat:CGFloat = CGFloat(randomX)
         let positionX:CGFloat = randomXFloat + width_2
-        let position:CGPoint = CGPoint(x:positionX, y:positionY)
+        let position:CGPoint = CGPoint(x:positionX, y:maxY)
         
         return position
     }
@@ -64,7 +63,7 @@ class MOptionPollutedGardenBubbleGenerator
         
         let size:CGSize = controller.model.size
         maxX = size.width
-        maxY = size.height
+        maxY = size.height + kAddYPos
     }
     
     func randomBubble() -> MOptionPollutedGardenBubble
