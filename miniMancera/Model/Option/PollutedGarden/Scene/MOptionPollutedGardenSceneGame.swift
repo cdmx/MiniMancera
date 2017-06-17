@@ -7,6 +7,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private weak var menu:MOptionPollutedGardenMenu!
     private weak var floor:MOptionPollutedGardenFloor!
     private weak var labelTitle:SKLabelNode?
+    private let kSoundCoin:String = "soundCoin.caf"
     private let kTitleDuration:TimeInterval = 2.5
     private let kFadeInDuration:TimeInterval = 0.5
     private let kFontSize:CGFloat = 24
@@ -146,5 +147,18 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         
         hud.run(actionFade)
         menu.run(actionFade)
+    }
+    
+    //MARK: public
+    
+    func collectFlower(petunia:MOptionPollutedGardenPetunia)
+    {
+        playSound(soundName:kSoundCoin)
+        
+        let plusFlower:MOptionPollutedGardenPlusFlower = MOptionPollutedGardenPlusFlower(
+            petunia:petunia,
+            controller:controller)
+        
+        addChild(plusFlower)
     }
 }

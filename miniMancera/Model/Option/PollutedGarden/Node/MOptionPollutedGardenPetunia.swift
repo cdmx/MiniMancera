@@ -8,7 +8,7 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     private weak var controller:COptionPollutedGarden!
     private weak var flowerPot:MOptionPollutedGardenFlowerPot!
     private var level:Int
-    private let kGrowDeltaTime:TimeInterval = 7
+    private let kGrowDeltaTime:TimeInterval = 3
     private let kAnimationDuration:TimeInterval = 0.4
     private let kZPosition:CGFloat = 400
     private let kInitialLevel:Int = -1
@@ -95,7 +95,7 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     
     private func collectFlower()
     {
-        
+        controller.collectFlower(petunia:self)
     }
     
     //MARK: public

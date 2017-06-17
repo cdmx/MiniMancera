@@ -16,6 +16,13 @@ class MOptionPollutedGarden:MOptionProtocol
         petuniaLife = MOptionPollutedGardenPetuniaLife()
     }
     
+    //MARK: public
+    
+    func collectedFlower()
+    {
+        score += 1
+    }
+    
     //MARK: option protocol
     
     var soundBackground:String?
