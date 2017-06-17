@@ -134,6 +134,7 @@
 		DABD4F201EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F1F1EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift */; };
 		DABD4F221EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F211EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift */; };
 		DABD4F241EF4AD63003DF861 /* MOptionPollutedGardenPlusFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F231EF4AD63003DF861 /* MOptionPollutedGardenPlusFlower.swift */; };
+		DABD4F281EF4E0C7003DF861 /* assetBackgrounds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABD4F271EF4E0C7003DF861 /* assetBackgrounds.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -264,6 +265,7 @@
 		DABD4F1F1EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPetunia.swift; sourceTree = "<group>"; };
 		DABD4F211EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPetuniaLife.swift; sourceTree = "<group>"; };
 		DABD4F231EF4AD63003DF861 /* MOptionPollutedGardenPlusFlower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPlusFlower.swift; sourceTree = "<group>"; };
+		DABD4F271EF4E0C7003DF861 /* assetBackgrounds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assetBackgrounds.xcassets; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -495,6 +497,7 @@
 				DA2D003D1EED2F0000365F23 /* assetSprites.xcassets */,
 				DA56675E1EF252AE000055D8 /* assetGeneric.xcassets */,
 				DA5667931EF2969B000055D8 /* assetSpinner.xcassets */,
+				DABD4F271EF4E0C7003DF861 /* assetBackgrounds.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -784,6 +787,7 @@
 				DA1D57941EF207B700ECA895 /* soundFail.caf in Resources */,
 				DA1D57951EF207B700ECA895 /* sound1up.caf in Resources */,
 				DA2D00291EECB9D500365F23 /* Localizable.strings in Resources */,
+				DABD4F281EF4E0C7003DF861 /* assetBackgrounds.xcassets in Resources */,
 				DA1D578C1EF1EEE100ECA895 /* soundReformaCrossing.caf in Resources */,
 				DABD4F161EF4635E003DF861 /* PollutedGarden.strings in Resources */,
 				DA2D003E1EED2F0000365F23 /* assetSprites.xcassets in Resources */,
