@@ -88,6 +88,7 @@ class MOptionPollutedGardenBubble:SKSpriteNode
     func explode()
     {
         alive = false
+        SKAction.stop
         animateAndLeave()
     }
 }
