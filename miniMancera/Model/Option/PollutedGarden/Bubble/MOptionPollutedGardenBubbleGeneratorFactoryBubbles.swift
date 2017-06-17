@@ -24,20 +24,6 @@ extension MOptionPollutedGardenBubbleGenerator
         return bubbles
     }
     
-    class func factoruBubbleExplodeTextures() -> [SKTexture]
-    {
-        let images:[UIImage] = explodingImages()
-        var textures:[SKTexture] = []
-        
-        for image:UIImage in images
-        {
-            let texture:SKTexture = SKTexture(image:image)
-            textures.append(texture)
-        }
-        
-        return textures
-    }
-    
     //MARK: private
     
     private class func allImages() -> [UIImage]
@@ -60,16 +46,5 @@ extension MOptionPollutedGardenBubbleGenerator
             orientation:orientation)
         
         return bubble
-    }
-    
-    private class func explodingImages() -> [UIImage]
-    {
-        let images:[UIImage] = [
-            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion0"),
-            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion1"),
-            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion2"),
-            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion3")]
-        
-        return images
     }
 }

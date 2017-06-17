@@ -718,9 +718,9 @@
 				DABD4F301EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift */,
 				DABD4F361EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift */,
 				DABD4F381EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift */,
+				DABD4F3E1EF5B572003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryExplosion.swift */,
 				DABD4F341EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift */,
 				DABD4F2C1EF4F78B003DF861 /* MOptionPollutedGardenBubble.swift */,
-				DABD4F3E1EF5B572003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryExplosion.swift */,
 			);
 			path = Bubble;
 			sourceTree = "<group>";

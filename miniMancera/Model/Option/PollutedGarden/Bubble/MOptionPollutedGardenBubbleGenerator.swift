@@ -17,6 +17,7 @@ class MOptionPollutedGardenBubbleGenerator
     {
         bubbleTypes = MOptionPollutedGardenBubbleGenerator.factoryBubbleTypes()
         colours = MOptionPollutedGardenBubbleGenerator.factoryColours()
+        explodeAnimation = MOptionPollutedGardenBubbleGenerator.factoryExplodeAnimation()
         countBubbles = UInt32(bubbleTypes.count)
         countColours = UInt32(colours.count)
         maxX = 0
