@@ -8,9 +8,12 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     private var level:Int
     private var lastElapsedTime:TimeInterval
     private var growTime:TimeInterval
-    private let kGrowDeltaTime:TimeInterval = 9
+    private let kGrowDeltaTime:TimeInterval = 5
     private let kAnimationDuration:TimeInterval = 0.4
     private let kZPosition:CGFloat = 400
+    private let kPhysicsWidth:CGFloat = 24
+    private let kPhysicsHeight:CGFloat = 20
+    private let kPhysicsY:CGFloat = -20
     private let kInitialLevel:Int = -1
     
     init(controller:COptionPollutedGarden, flowerPot:MOptionPollutedGardenFlowerPot)
@@ -24,8 +27,10 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
         
         super.init(texture:nil, color:UIColor.clear, size:size)
         flowerPot.petunia = self
-        position = startPosition()
         zPosition = kZPosition
+        position = startPosition()
+        startPhysics()
+        collectFlower()
     }
     
     required init?(coder:NSCoder)
@@ -48,6 +53,24 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
         let point:CGPoint = CGPoint(x:potX, y:positionY)
         
         return point
+    }
+    
+    private func startPhysics()
+    {
+        let physicsSize:CGSize = CGSize(width:kPhysicsWidth, height:kPhysicsHeight)
+        let physicsCenter:CGPoint = CGPoint(x:0, y:kPhysicsY)
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(
+            rectangleOf:physicsSize,
+            center:physicsCenter)
+        physicsBody.isDynamic = false
+        physicsBody.friction = 1
+        physicsBody.allowsRotation = false
+        physicsBody.restitution = 0
+        
+        physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Flower
+        physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.Bubble
+        physicsBody.collisionBitMask = MOptionPollutedGardenPhysicsStruct.None
+        self.physicsBody = physicsBody
     }
     
     private func grow()
