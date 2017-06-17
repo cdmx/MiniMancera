@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionSceneGame<S:MOptionProtocol, T:ControllerGame<S>>:SKScene
 {
+    let shouldPlaySounds:Bool
     var lastUpdateTime:TimeInterval?
     private(set) weak var controller:T!
     private(set) var elapsedTime:TimeInterval
@@ -10,6 +11,15 @@ class MOptionSceneGame<S:MOptionProtocol, T:ControllerGame<S>>:SKScene
     {
         self.controller = controller
         elapsedTime = 0
+        
+        if let sounds:Bool = MSession.sharedInstance.settings?.sounds
+        {
+            shouldPlaySounds = sounds
+        }
+        else
+        {
+            shouldPlaySounds = true
+        }
         
         super.init(size:controller.model.size)
         backgroundColor = SKColor.black
@@ -22,7 +32,10 @@ class MOptionSceneGame<S:MOptionProtocol, T:ControllerGame<S>>:SKScene
     
     override func didMove(to view:SKView)
     {
-        startBackgroundSound()
+        if playSounds
+        {
+            startBackgroundSound()
+        }
     }
     
     override func update(_ currentTime:TimeInterval)
@@ -68,10 +81,13 @@ class MOptionSceneGame<S:MOptionProtocol, T:ControllerGame<S>>:SKScene
     
     func playSound(soundName:String)
     {
-        let actionHonk:SKAction = SKAction.playSoundFileNamed(
-            soundName,
-            waitForCompletion:false)
-        
-        run(actionHonk)
+        if shouldPlaySounds
+        {
+            let actionHonk:SKAction = SKAction.playSoundFileNamed(
+                soundName,
+                waitForCompletion:false)
+            
+            run(actionHonk)
+        }
     }
 }

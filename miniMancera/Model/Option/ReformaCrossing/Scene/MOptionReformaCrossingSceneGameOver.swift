@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionReformaCrossingSceneGameOver:SKScene
 {
+    private let shouldPlaySounds:Bool
     private weak var controller:COptionReformaCrossing!
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     private let kSound1up:String = "sound1up"
@@ -17,6 +18,15 @@ class MOptionReformaCrossingSceneGameOver:SKScene
     init(controller:COptionReformaCrossing, reason:MOptionReformaCrossingGameOverProtocol)
     {
         self.controller = controller
+        
+        if let sounds:Bool = MSession.sharedInstance.settings?.sounds
+        {
+            shouldPlaySounds = sounds
+        }
+        else
+        {
+            shouldPlaySounds = true
+        }
         
         super.init(size:controller.model.size)
         backgroundColor = SKColor.black
@@ -77,21 +87,25 @@ class MOptionReformaCrossingSceneGameOver:SKScene
     
     override func didMove(to view:SKView)
     {
-        let background:SKAudioNode = SKAudioNode(fileNamed:kSoundBackground)
-        background.autoplayLooped = true
-        
-        addChild(background)
+        if shouldPlaySounds
+        {
+            let background:SKAudioNode = SKAudioNode(fileNamed:kSoundBackground)
+            background.autoplayLooped = true
+        }
     }
     
     //MARK: public
     
     func game1up()
     {
-        let actionHonk:SKAction = SKAction.playSoundFileNamed(
-            kSound1up,
-            waitForCompletion:false)
-        
-        run(actionHonk)
+        if shouldPlaySounds
+        {
+            let action1up:SKAction = SKAction.playSoundFileNamed(
+                kSound1up,
+                waitForCompletion:false)
+            
+            run(action1up)
+        }
         
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kAnimationDuration)
