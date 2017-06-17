@@ -41,7 +41,7 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
         }
         else
         {
-            model.allFlowersPolluted()
+//            model.allFlowersPolluted()
         }
     }
 }

@@ -79,7 +79,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         
         updateContact(contactQueue:contactQueue)
         contactQueue = []
-        checkBubbleSpawning()
+        checkBubbleSpawning(currentTime:currentTime)
     }
     
     override func updateNodes()
@@ -196,11 +196,11 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         menu.run(actionFade)
     }
     
-    private func checkBubbleSpawning()
+    private func checkBubbleSpawning(currentTime:TimeInterval)
     {
-        if elapsedTime > nextBubbleSpawns
+        if currentTime > nextBubbleSpawns
         {
-            nextBubbleSpawns = elapsedTime + kSpawnBubbleRate
+            nextBubbleSpawns = currentTime + kSpawnBubbleRate
             spawnBubble()
         }
     }
