@@ -8,7 +8,11 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
     {
         if bubble.alive
         {
-            if let petunia:MOptionPollutedGardenPetunia = body as? MOptionPollutedGardenPetunia
+            if let player:MOptionPollutedGardenPlayer = body as? MOptionPollutedGardenPlayer
+            {
+                contactBubbleUmbrella(bubble:bubble, player:player)
+            }
+            else if let petunia:MOptionPollutedGardenPetunia = body as? MOptionPollutedGardenPetunia
             {
                 contactBubblePetunia(bubble:bubble, petunia:petunia)
             }
@@ -17,6 +21,13 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
                 contactBubbleFloor(bubble:bubble, floor:floor)
             }
         }
+    }
+    
+    private func contactBubbleUmbrella(
+        bubble:MOptionPollutedGardenBubble,
+        player:MOptionPollutedGardenPlayer)
+    {
+        bubble.explode()
     }
     
     private func contactBubblePetunia(
