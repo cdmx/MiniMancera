@@ -4,6 +4,7 @@ import SpriteKit
 class MOptionPollutedGardenPlayer:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
+    private let actionAnimate:SKAction
     private let textureStand:SKTexture
     private let kZPosition:CGFloat = 1
     private let kYPosition:CGFloat = 93
