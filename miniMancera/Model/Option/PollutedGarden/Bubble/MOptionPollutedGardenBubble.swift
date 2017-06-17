@@ -64,4 +64,13 @@ class MOptionPollutedGardenBubble:SKSpriteNode
         physicsBody.collisionBitMask = MOptionPollutedGardenPhysicsStruct.Bubble | MOptionPollutedGardenPhysicsStruct.Scene
         self.physicsBody = physicsBody
     }
+    
+    //MARK: public
+    
+    func explode()
+    {
+        alive = false
+        
+        
+    }
 }

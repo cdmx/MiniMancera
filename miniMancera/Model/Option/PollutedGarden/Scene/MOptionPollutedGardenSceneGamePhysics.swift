@@ -41,7 +41,9 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
         bubble:MOptionPollutedGardenBubble,
         floor:MOptionPollutedGardenFloor)
     {
+        // play sound
         
+        bubble.explode()
     }
     
     //MARK: public
