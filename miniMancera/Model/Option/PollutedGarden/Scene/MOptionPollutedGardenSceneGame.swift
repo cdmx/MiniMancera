@@ -68,15 +68,19 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         showTitle()
     }
     
-    override func updateNodes()
+    override func update(_ currentTime:TimeInterval)
     {
-        hud.update(elapsedTime:elapsedTime)
+        super.update(currentTime)
         
         updateContact(contactQueue:contactQueue)
         contactQueue = []
-        
-        updatePetunias()
         checkBubbleSpawning()
+    }
+    
+    override func updateNodes()
+    {
+        hud.update(elapsedTime:elapsedTime)
+        updatePetunias()
     }
     
     //MARK: private
