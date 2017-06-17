@@ -4,51 +4,59 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
 {
     //MARK: private
     
-    private func contactFoes(foeA:MOptionReformaCrossingFoe, foeB:MOptionReformaCrossingFoe)
+    private func bubbleAndBody(bubble:MOptionPollutedGardenBubble, body:SKNode?)
     {
-        if foeA.created < foeB.created
+        if let petunia:MOptionPollutedGardenPetunia = body as? MOptionPollutedGardenPetunia
         {
-            foeB.hitTheBreaks()
+            contactBubblePetunia(bubble:bubble, petunia:petunia)
         }
-        else
+        else if let flowerPot:MOptionPollutedGardenFlowerPot = body as? MOptionPollutedGardenFlowerPot
         {
-            foeA.hitTheBreaks()
+            contactBubbleFlowerPot(bubble:bubble, flowerPot:flowerPot)
+        }
+        else if let floor:MOptionPollutedGardenFloor = body as? MOptionPollutedGardenFloor
+        {
+            contactBubbleFloor(bubble:bubble, floor:floor)
         }
     }
     
-    private func contactPlayerFoe(player:MOptionReformaCrossingPlayer, foe:MOptionReformaCrossingFoe)
+    private func contactBubblePetunia(
+        bubble:MOptionPollutedGardenBubble,
+        petunia:MOptionPollutedGardenPetunia)
     {
-        playSound(actionSound:soundHonk)
         
-        if controller.model.gameActive
-        {
-            controller.hitAndRun()
-        }
+    }
+    
+    private func contactBubbleFlowerPot(
+        bubble:MOptionPollutedGardenBubble,
+        flowerPot:MOptionPollutedGardenFlowerPot)
+    {
+        
+    }
+    
+    private func contactBubbleFloor(
+        bubble:MOptionPollutedGardenBubble,
+        floor:MOptionPollutedGardenFloor)
+    {
+        
     }
     
     //MARK: public
     
     func updateContact(contactQueue:[SKPhysicsContact])
     {
-        let bodyA:SKNode? = contact.bodyA.node
-        let bodyB:SKNode? = contact.bodyB.node
-        
-        if let foeA:MOptionReformaCrossingFoe = bodyA as? MOptionReformaCrossingFoe
+        for contact:SKPhysicsContact in contactQueue
         {
-            if let player:MOptionReformaCrossingPlayer = bodyB as? MOptionReformaCrossingPlayer
+            let bodyA:SKNode? = contact.bodyA.node
+            let bodyB:SKNode? = contact.bodyB.node
+            
+            if let bubble:MOptionPollutedGardenBubble = bodyA as? MOptionPollutedGardenBubble
             {
-                contactPlayerFoe(player:player, foe:foeA)
+                bubbleAndBody(bubble:bubble, body:bodyB)
             }
-            else if let foeB:MOptionReformaCrossingFoe = bodyB as? MOptionReformaCrossingFoe
+            else if let bubble:MOptionPollutedGardenBubble = bodyB as? MOptionPollutedGardenBubble
             {
-                contactFoes(foeA:foeA, foeB:foeB)
-            }
-        }
-        else if let player:MOptionReformaCrossingPlayer = bodyA as? MOptionReformaCrossingPlayer
-        {
-            if let foeB:MOptionReformaCrossingFoe = bodyB as? MOptionReformaCrossingFoe
-            {
-                contactPlayerFoe(player:player, foe:foeB)
+                bubbleAndBody(bubble:bubble, body:bodyA)
             }
         }
     }
