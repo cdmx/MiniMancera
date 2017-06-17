@@ -32,7 +32,7 @@ class MOptionSceneGame<S:MOptionProtocol, T:ControllerGame<S>>:SKScene
     
     override func didMove(to view:SKView)
     {
-        if playSounds
+        if shouldPlaySounds
         {
             startBackgroundSound()
         }
