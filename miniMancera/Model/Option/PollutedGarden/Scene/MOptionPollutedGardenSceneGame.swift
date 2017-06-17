@@ -11,6 +11,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private let kSoundCoin:String = "soundCoin.caf"
     private let kTitleDuration:TimeInterval = 2.5
     private let kFadeInDuration:TimeInterval = 0.5
+    private let kGravityY:CGFloat = 1
     private let kFontSize:CGFloat = 24
     private let kTitleVerticalAdd:CGFloat = 100
     private let kSpawnProbability:UInt32 = 1
@@ -21,6 +22,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
         
         super.init(controller:controller)
+        physicsWorld.gravity = CGVector(dx:0, dy:kGravityY)
         
         let background:MOptionPollutedGardenBackground = MOptionPollutedGardenBackground(
             controller:controller)

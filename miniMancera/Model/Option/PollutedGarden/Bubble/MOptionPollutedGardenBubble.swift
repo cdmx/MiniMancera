@@ -16,6 +16,7 @@ class MOptionPollutedGardenBubble:SKSpriteNode
             color:colour,
             size:bubbleType.size)
         xScale = bubbleType.orientation.rawValue
+        colorBlendFactor = 1
         self.position = position
         self.controller = controller
     }
