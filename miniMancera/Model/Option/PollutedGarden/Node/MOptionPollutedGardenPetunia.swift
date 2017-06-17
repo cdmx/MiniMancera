@@ -25,7 +25,6 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
         super.init(texture:nil, color:UIColor.clear, size:size)
         position = startPosition()
         zPosition = kZPosition
-        isUserInteractionEnabled = true
     }
     
     required init?(coder:NSCoder)

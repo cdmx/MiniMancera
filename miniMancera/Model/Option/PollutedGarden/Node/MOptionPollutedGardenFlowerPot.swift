@@ -14,7 +14,7 @@ class MOptionPollutedGardenFlowerPot:SKSpriteNode
     
     init(controller:COptionPollutedGarden, positionX:CGFloat)
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenFlowerPot"))
+        let texture:SKTexture = controller.model.petuniaLife.texturePot
         let size:CGSize = texture.size()
         self.controller = controller
         endingPoint = CGPoint(x:positionX, y:kFinalY)
@@ -22,7 +22,6 @@ class MOptionPollutedGardenFlowerPot:SKSpriteNode
         super.init(texture:texture, color:UIColor.clear, size:size)
         position = CGPoint(x:positionX, y:kInitialY)
         zPosition = kZPosition
-        isUserInteractionEnabled = true
     }
     
     required init?(coder:NSCoder)

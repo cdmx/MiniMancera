@@ -5,6 +5,7 @@ class MOptionPollutedGardenPetuniaLife
 {
     let textures:[SKTexture]
     let texturePlus:SKTexture
+    let texturePot:SKTexture
     let textureSize:CGSize
     
     private class func factoryTextures() -> [SKTexture]
@@ -45,6 +46,7 @@ class MOptionPollutedGardenPetuniaLife
     {
         textures = MOptionPollutedGardenPetuniaLife.factoryTextures()
         texturePlus = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenPlusFlower"))
+        texturePot = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenFlowerPot"))
         textureSize = textures[0].size()
     }
 }
