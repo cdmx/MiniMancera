@@ -6,17 +6,20 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
     
     private func bubbleAndBody(bubble:MOptionPollutedGardenBubble, body:SKNode?)
     {
-        if let petunia:MOptionPollutedGardenPetunia = body as? MOptionPollutedGardenPetunia
+        if bubble.alive
         {
-            contactBubblePetunia(bubble:bubble, petunia:petunia)
-        }
-        else if let flowerPot:MOptionPollutedGardenFlowerPot = body as? MOptionPollutedGardenFlowerPot
-        {
-            contactBubbleFlowerPot(bubble:bubble, flowerPot:flowerPot)
-        }
-        else if let floor:MOptionPollutedGardenFloor = body as? MOptionPollutedGardenFloor
-        {
-            contactBubbleFloor(bubble:bubble, floor:floor)
+            if let petunia:MOptionPollutedGardenPetunia = body as? MOptionPollutedGardenPetunia
+            {
+                contactBubblePetunia(bubble:bubble, petunia:petunia)
+            }
+            else if let flowerPot:MOptionPollutedGardenFlowerPot = body as? MOptionPollutedGardenFlowerPot
+            {
+                contactBubbleFlowerPot(bubble:bubble, flowerPot:flowerPot)
+            }
+            else if let floor:MOptionPollutedGardenFloor = body as? MOptionPollutedGardenFloor
+            {
+                contactBubbleFloor(bubble:bubble, floor:floor)
+            }
         }
     }
     

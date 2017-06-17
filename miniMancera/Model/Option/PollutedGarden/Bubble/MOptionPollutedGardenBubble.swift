@@ -3,6 +3,7 @@ import SpriteKit
 
 class MOptionPollutedGardenBubble:SKSpriteNode
 {
+    private(set) var alive:Bool
     private weak var controller:COptionPollutedGarden!
     private weak var bubbleType:MOptionPollutedGardenBubbleType!
     private let kMaxVelocity:UInt32 = 500
@@ -13,6 +14,8 @@ class MOptionPollutedGardenBubble:SKSpriteNode
         colour:UIColor,
         position:CGPoint)
     {
+        alive = true
+        
         super.init(
             texture:bubbleType.texture,
             color:colour,
