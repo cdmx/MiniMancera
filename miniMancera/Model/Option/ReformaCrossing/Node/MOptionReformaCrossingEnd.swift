@@ -29,11 +29,17 @@ class MOptionReformaCrossingEnd:SKSpriteNode
     {
         isUserInteractionEnabled = false
         
-        let actionHonk:SKAction = SKAction.playSoundFileNamed(
-            kSoundFail,
-            waitForCompletion:false)
-        
-        run(actionHonk)
+        if let sounds:Bool = MSession.sharedInstance.settings?.sounds
+        {
+            if sounds
+            {
+                let actionSound:SKAction = SKAction.playSoundFileNamed(
+                    kSoundFail,
+                    waitForCompletion:false)
+                
+                run(actionSound)
+            }
+        }
         
         controller.exitGame()
     }
