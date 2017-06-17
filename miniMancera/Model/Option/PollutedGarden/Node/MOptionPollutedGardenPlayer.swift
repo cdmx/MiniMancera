@@ -6,7 +6,7 @@ class MOptionPollutedGardenPlayer:SKSpriteNode
     private weak var controller:COptionPollutedGarden!
     private let textureStand:SKTexture
     private let kZPosition:CGFloat = 1
-    private let kYPosition:CGFloat = 95
+    private let kYPosition:CGFloat = 93
     
     init(controller:COptionPollutedGarden)
     {

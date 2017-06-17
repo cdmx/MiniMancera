@@ -11,7 +11,7 @@ class MOptionPollutedGardenFlowerPot:SKSpriteNode
     private let kMaxAnimationduration:UInt32 = 25
     private let kZPosition:CGFloat = 500
     private let kInitialY:CGFloat = 45
-    private let kFinalY:CGFloat = 70
+    private let kFinalY:CGFloat = 66
     
     init(controller:COptionPollutedGarden, positionX:CGFloat)
     {
