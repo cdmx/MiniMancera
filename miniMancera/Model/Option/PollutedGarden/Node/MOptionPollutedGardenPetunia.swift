@@ -4,11 +4,12 @@ import SpriteKit
 class MOptionPollutedGardenPetunia:SKSpriteNode
 {
     private var lastElapsedTime:TimeInterval
-    private var growTime:TimeInterval?
+    private var growTime:TimeInterval
     private weak var controller:COptionPollutedGarden!
     private weak var flowerPot:MOptionPollutedGardenFlowerPot!
     private var level:Int
-    private let kGrowDeltaTime:TimeInterval = 3
+    private let kGrowDeltaTime:TimeInterval = 2
+    private let kAnimationDuration:TimeInterval = 0.3
     private let kZPosition:CGFloat = 400
     private let kInitialLevel:Int = -1
     
@@ -19,6 +20,7 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
         self.flowerPot = flowerPot
         level = kInitialLevel
         lastElapsedTime = 0
+        growTime = 0
         
         super.init(texture:nil, color:UIColor.clear, size:size)
         position = startPosition()
@@ -42,7 +44,7 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     
     private func startPosition() -> CGPoint
     {
-        let potPosition:CGPoint = flowerPot.position
+        let potPosition:CGPoint = flowerPot.endingPoint
         let potX:CGFloat = potPosition.x
         let potY:CGFloat = potPosition.y
         let potHeight:CGFloat = flowerPot.size.height
@@ -51,6 +53,8 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
         let textureHeight_2:CGFloat = textureHeight / 2.0
         let positionY:CGFloat = potY + potHeight_2 + textureHeight_2
         let point:CGPoint = CGPoint(x:potX, y:positionY)
+        
+        print(point)
         
         return point
     }
@@ -78,7 +82,17 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     
     private func updateTexture()
     {
-        texture = controller.model.petuniaLife.textures[level]
+        let newTexture = controller.model.petuniaLife.textures[level]
+        let actionFadeOut:SKAction = SKAction.fadeOut(withDuration:kAnimationDuration)
+        let actionTexture:SKAction = SKAction.setTexture(newTexture, resize:false)
+        let actionFadeIn:SKAction = SKAction.fadeIn(withDuration:kAnimationDuration)
+        let actions:[SKAction] = [
+            actionFadeOut,
+            actionTexture,
+            actionFadeIn]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        run(actionsSequence)
     }
     
     private func collectFlower()
@@ -92,16 +106,9 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     {
         lastElapsedTime = elapsedTime
         
-        if let growTime:TimeInterval = self.growTime
+        if growTime < elapsedTime
         {
-            if growTime < elapsedTime
-            {
-                grow()
-            }
-        }
-        else
-        {
-            nextGrowTime()
+            grow()
         }
     }
 }
