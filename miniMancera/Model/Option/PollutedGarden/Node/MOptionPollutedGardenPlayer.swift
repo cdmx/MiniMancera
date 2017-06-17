@@ -6,11 +6,11 @@ class MOptionPollutedGardenPlayer:SKSpriteNode
     private weak var controller:COptionPollutedGarden!
     private let textureStand:SKTexture
     private let kZPosition:CGFloat = 1
-    private let kYPosition:CGFloat = 90
+    private let kYPosition:CGFloat = 80
     
     init(controller:COptionPollutedGarden)
     {
-        textureStand = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenFloor"))
+        textureStand = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer0"))
         let textureSize:CGSize = textureStand.size()
         self.controller = controller
         
