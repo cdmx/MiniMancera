@@ -10,6 +10,6 @@ class MOptionPollutedGardenBubbleGenerator
     
     init()
     {
-        
+        bubbleTypes = MOptionPollutedGardenBubbleGenerator.factoryBubbleTypes()
     }
 }

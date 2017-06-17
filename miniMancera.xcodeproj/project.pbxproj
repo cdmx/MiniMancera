@@ -139,6 +139,7 @@
 		DABD4F311EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F301EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift */; };
 		DABD4F351EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F341EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift */; };
 		DABD4F371EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F361EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift */; };
+		DABD4F391EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F381EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -274,6 +275,7 @@
 		DABD4F301EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleGenerator.swift; sourceTree = "<group>"; };
 		DABD4F341EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleType.swift; sourceTree = "<group>"; };
 		DABD4F361EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift; sourceTree = "<group>"; };
+		DABD4F381EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleGeneratorFactoryColours.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -706,9 +708,10 @@
 			isa = PBXGroup;
 			children = (
 				DABD4F301EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift */,
+				DABD4F361EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift */,
+				DABD4F381EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift */,
 				DABD4F341EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift */,
 				DABD4F2C1EF4F78B003DF861 /* MOptionPollutedGardenBubble.swift */,
-				DABD4F361EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift */,
 			);
 			path = Bubble;
 			sourceTree = "<group>";
@@ -930,6 +933,7 @@
 				DA5667661EF26DFD000055D8 /* DSettingsExtension.swift in Sources */,
 				DA2D00A31EEFC15E00365F23 /* MOptionReformaCrossingMenu.swift in Sources */,
 				DA56678E1EF2772A000055D8 /* MHomeOptionsReformaCrossing.swift in Sources */,
+				DABD4F391EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift in Sources */,
 				DABD4F2D1EF4F78B003DF861 /* MOptionPollutedGardenBubble.swift in Sources */,
 				DA5667701EF27482000055D8 /* MGamePurchaseProtocol.swift in Sources */,
 				DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */,
