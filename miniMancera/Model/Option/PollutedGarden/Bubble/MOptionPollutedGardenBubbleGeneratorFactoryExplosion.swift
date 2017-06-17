@@ -3,7 +3,7 @@ import SpriteKit
 
 extension MOptionPollutedGardenBubbleGenerator
 {
-    private static let kTimePerFrame:TimeInterval = 0.2
+    private static let kTimePerFrame:TimeInterval = 0.15
     
     class func factoryExplodeAnimation() -> SKAction
     {
@@ -39,7 +39,9 @@ extension MOptionPollutedGardenBubbleGenerator
             #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion0"),
             #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion1"),
             #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion2"),
-            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion3")]
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion3"),
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion4"),
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion5")]
         
         return images
     }

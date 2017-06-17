@@ -6,6 +6,8 @@ class MOptionPollutedGardenBubble:SKSpriteNode
     private(set) var alive:Bool
     private weak var controller:COptionPollutedGarden!
     private weak var bubbleType:MOptionPollutedGardenBubbleType!
+    private let velocityExplosion:CGVector
+    private let kExplosionVelocityY:CGFloat = 1
     private let kMaxVelocity:UInt32 = 500
     
     init(
@@ -15,6 +17,9 @@ class MOptionPollutedGardenBubble:SKSpriteNode
         position:CGPoint)
     {
         alive = true
+        velocityExplosion = CGVector(
+            dx:bubbleType.velocityXExplosion,
+            dy:kExplosionVelocityY)
         
         super.init(
             texture:bubbleType.texture,
@@ -88,7 +93,7 @@ class MOptionPollutedGardenBubble:SKSpriteNode
     func explode()
     {
         alive = false
-        SKAction.stop
+        physicsBody?.velocity = velocityExplosion
         animateAndLeave()
     }
 }

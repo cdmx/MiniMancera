@@ -43,7 +43,6 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
     {
         // play sound
         
-        print("floor")
         bubble.explode()
     }
     
