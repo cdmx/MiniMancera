@@ -59,6 +59,7 @@ class MOptionPollutedGarden:MOptionProtocol
         }
         
         self.size = size
+        bubbleGenerator.updateController(controller:controller)
         let scene:MOptionPollutedGardenSceneGame = MOptionPollutedGardenSceneGame(
             controller:controller)
         

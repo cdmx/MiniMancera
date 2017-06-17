@@ -9,13 +9,12 @@ class MOptionPollutedGardenBubbleGenerator
     private let countBubbles:UInt32
     private let countColours:UInt32
     
-    init(controller:COptionPollutedGarden)
+    init()
     {
         bubbleTypes = MOptionPollutedGardenBubbleGenerator.factoryBubbleTypes()
         colours = MOptionPollutedGardenBubbleGenerator.factoryColours()
         countBubbles = UInt32(bubbleTypes.count)
         countColours = UInt32(colours.count)
-        self.controller = controller
     }
     
     //MARK: private
@@ -47,6 +46,11 @@ class MOptionPollutedGardenBubbleGenerator
     
     //MARK: public
     
+    func updateController(controller:COptionPollutedGarden)
+    {
+        self.controller = controller
+    }
+    
     func randomBubble() -> MOptionPollutedGardenBubble
     {
         let bubbleType:MOptionPollutedGardenBubbleType = randomType()
@@ -55,7 +59,7 @@ class MOptionPollutedGardenBubbleGenerator
         let bubble:MOptionPollutedGardenBubble = MOptionPollutedGardenBubble(
             controller:controller,
             bubbleType:bubbleType,
-            colour:colours,
+            colour:colour,
             position:position)
         
         return bubble
