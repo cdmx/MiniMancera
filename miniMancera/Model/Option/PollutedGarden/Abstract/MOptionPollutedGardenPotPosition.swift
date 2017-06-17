@@ -2,7 +2,7 @@ import UIKit
 
 class MOptionPollutedGardenPotPosition
 {
-    private static let kPotWidth:CGFloat = 41
+    private static let kPotWidth:CGFloat = 40
     private static let kCountPots:Int = 5
     
     class func positionsFor(model:MOptionPollutedGarden) -> [CGFloat]

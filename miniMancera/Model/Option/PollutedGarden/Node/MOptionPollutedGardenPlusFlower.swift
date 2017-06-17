@@ -4,10 +4,10 @@ import SpriteKit
 class MOptionPollutedGardenPlusFlower:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
-    private let kAddPositionY:CGFloat = 50
-    private let kMoveVertical:CGFloat = 50
+    private let kAddPositionY:CGFloat = 30
+    private let kMoveVertical:CGFloat = 60
     private let kDelayFade:TimeInterval = 0.3
-    private let kAnimationDuration:TimeInterval = 1.2
+    private let kAnimationDuration:TimeInterval = 1.4
     private let kZPosition:CGFloat = 100000
     
     init(petunia:MOptionPollutedGardenPetunia, controller:COptionPollutedGarden)

@@ -5,12 +5,17 @@ class MOptionPollutedGardenHud:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
     private weak var labelScore:SKLabelNode!
-    private let kScoreFontSize:CGFloat = 15
+    private weak var labelMax:SKLabelNode!
+    private let kScoreFontSize:CGFloat = 17
+    private let kMaxFontSize:CGFloat = 12
     private let kMargin:CGFloat = 45
-    private let kScorePositionX:CGFloat = 2
+    private let kScorePositionX:CGFloat = -30
     private let kScorePositionY:CGFloat = -6
+    private let kMaxPositionX:CGFloat = 37
+    private let kMaxPositionY:CGFloat = -5
     private let kZPosition:CGFloat = 10001
     private let kScoreZPosition:CGFloat = 10005
+    private let kMaxZPosition:CGFloat = 10006
     
     init(controller:COptionPollutedGarden)
     {
@@ -32,7 +37,17 @@ class MOptionPollutedGardenHud:SKSpriteNode
         labelScore.zPosition = kScoreZPosition
         self.labelScore = labelScore
         
+        let labelMax:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
+        labelMax.fontSize = kMaxFontSize
+        labelMax.fontColor = SKColor.white
+        labelMax.position = CGPoint(x:kMaxPositionX, y:kMaxPositionY)
+        labelMax.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
+        labelMax.verticalAlignmentMode = SKLabelVerticalAlignmentMode.baseline
+        labelMax.zPosition = kMaxZPosition
+        self.labelMax = labelMax
+        
         addChild(labelScore)
+        addChild(labelMax)
     }
     
     required init?(coder:NSCoder)
@@ -61,5 +76,8 @@ class MOptionPollutedGardenHud:SKSpriteNode
     {
         let scoreString:String = "\(controller.model.score)"
         labelScore.text = scoreString
+        
+        let maxString:String = "\(controller.model.maxScore)"
+        labelMax.text = maxString
     }
 }

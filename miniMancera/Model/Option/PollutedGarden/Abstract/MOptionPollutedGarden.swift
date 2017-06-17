@@ -7,11 +7,13 @@ class MOptionPollutedGarden:MOptionProtocol
     private(set) var size:CGSize
     private(set) var score:Int
     private(set) var gameActive:Bool
+    private(set) var maxScore:Int
     
     required init()
     {
         size = CGSize.zero
         score = 0
+        maxScore = 0
         gameActive = false
         petuniaLife = MOptionPollutedGardenPetuniaLife()
     }
@@ -21,6 +23,11 @@ class MOptionPollutedGarden:MOptionProtocol
     func collectedFlower()
     {
         score += 1
+        
+        if score > maxScore
+        {
+            maxScore = score
+        }
     }
     
     //MARK: option protocol
