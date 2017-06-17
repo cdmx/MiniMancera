@@ -25,7 +25,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
         
         super.init(controller:controller)
-        physicsWorld.gravity = CGVector(dx:0, dy:kGravityY)
+        startPhysics()
         
         let background:MOptionPollutedGardenBackground = MOptionPollutedGardenBackground(
             controller:controller)
@@ -70,6 +70,17 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     }
     
     //MARK: private
+    
+    private func startPhysics()
+    {
+        physicsWorld.gravity = CGVector(dx:0, dy:kGravityY)
+        
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(edgeLoopFrom:frame)
+        physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Scene
+        physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.None
+        physicsBody.collisionBitMask = MOptionPollutedGardenPhysicsStruct.None
+        self.physicsBody = physicsBody
+    }
     
     private func spawnPots()
     {
