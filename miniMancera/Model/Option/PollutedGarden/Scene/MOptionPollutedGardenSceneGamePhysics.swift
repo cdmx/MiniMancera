@@ -12,10 +12,6 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
             {
                 contactBubblePetunia(bubble:bubble, petunia:petunia)
             }
-            else if let flowerPot:MOptionPollutedGardenFlowerPot = body as? MOptionPollutedGardenFlowerPot
-            {
-                contactBubbleFlowerPot(bubble:bubble, flowerPot:flowerPot)
-            }
             else if let floor:MOptionPollutedGardenFloor = body as? MOptionPollutedGardenFloor
             {
                 contactBubbleFloor(bubble:bubble, floor:floor)
@@ -29,13 +25,6 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
     {
         bubble.explode()
         petunia.polluted()
-    }
-    
-    private func contactBubbleFlowerPot(
-        bubble:MOptionPollutedGardenBubble,
-        flowerPot:MOptionPollutedGardenFlowerPot)
-    {
-        print("flowerPot bubble")
     }
     
     private func contactBubbleFloor(
