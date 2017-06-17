@@ -27,7 +27,7 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
         bubble:MOptionPollutedGardenBubble,
         petunia:MOptionPollutedGardenPetunia)
     {
-        print("petunia bubble")
+        bubble.explode()
     }
     
     private func contactBubbleFlowerPot(
@@ -41,8 +41,6 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
         bubble:MOptionPollutedGardenBubble,
         floor:MOptionPollutedGardenFloor)
     {
-        // play sound
-        
         bubble.explode()
     }
     

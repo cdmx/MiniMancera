@@ -11,9 +11,9 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     private let kGrowDeltaTime:TimeInterval = 5
     private let kAnimationDuration:TimeInterval = 0.4
     private let kZPosition:CGFloat = 400
-    private let kPhysicsWidth:CGFloat = 24
+    private let kPhysicsWidth:CGFloat = 18
     private let kPhysicsHeight:CGFloat = 20
-    private let kPhysicsY:CGFloat = -20
+    private let kPhysicsY:CGFloat = -16
     private let kInitialLevel:Int = -1
     
     init(controller:COptionPollutedGarden, flowerPot:MOptionPollutedGardenFlowerPot)
