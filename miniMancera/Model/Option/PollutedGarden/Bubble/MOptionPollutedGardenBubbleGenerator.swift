@@ -39,7 +39,7 @@ class MOptionPollutedGardenBubbleGenerator
     
     private func randomPosition() -> CGPoint
     {
-        let position:CGPoint = CGPoint(x:100, y:500)
+        let position:CGPoint = CGPoint(x:100, y:700)
         
         return position
     }
