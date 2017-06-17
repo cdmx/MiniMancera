@@ -14,6 +14,7 @@ class MOptionPollutedGardenPlayer:SKSpriteNode
     
     init(controller:COptionPollutedGarden)
     {
+        actionAnimate = MOptionPollutedGardenPlayer.factoryAnimation()
         textureStand = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenPlayer1"))
         let textureSize:CGSize = textureStand.size()
         self.controller = controller
