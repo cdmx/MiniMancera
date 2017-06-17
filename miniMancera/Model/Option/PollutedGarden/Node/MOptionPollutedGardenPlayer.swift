@@ -7,9 +7,9 @@ class MOptionPollutedGardenPlayer:SKSpriteNode
     private let textureStand:SKTexture
     private let kZPosition:CGFloat = 1
     private let kYPosition:CGFloat = 93
-    private let kPhysicsWidth:CGFloat = 30
+    private let kPhysicsWidth:CGFloat = 38
     private let kPhysicsHeight:CGFloat = 10
-    private let kPhysicsY:CGFloat = 20
+    private let kPhysicsY:CGFloat = 23
     
     init(controller:COptionPollutedGarden)
     {
