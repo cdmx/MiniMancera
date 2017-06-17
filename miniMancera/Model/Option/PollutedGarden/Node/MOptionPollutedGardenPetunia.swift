@@ -23,6 +23,7 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
         growTime = 0
         
         super.init(texture:nil, color:UIColor.clear, size:size)
+        flowerPot.petunia = self
         position = startPosition()
         zPosition = kZPosition
     }
@@ -30,13 +31,6 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
-    {
-        if controller.model.gameActive
-        {
-        }
     }
     
     //MARK: private

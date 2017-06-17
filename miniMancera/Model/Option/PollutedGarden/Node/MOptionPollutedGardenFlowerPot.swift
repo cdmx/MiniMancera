@@ -4,6 +4,7 @@ import SpriteKit
 class MOptionPollutedGardenFlowerPot:SKSpriteNode
 {
     let endingPoint:CGPoint
+    weak var petunia:MOptionPollutedGardenPetunia?
     private weak var controller:COptionPollutedGarden!
     private let kMinAnimationDuration:TimeInterval = 0.3
     private let kAnimationDurationDivider:TimeInterval = 10
@@ -27,13 +28,6 @@ class MOptionPollutedGardenFlowerPot:SKSpriteNode
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
-    {
-        if controller.model.gameActive
-        {
-        }
     }
     
     //MARK: private

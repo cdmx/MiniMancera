@@ -7,7 +7,7 @@ class MOptionPollutedGardenBubble:SKSpriteNode
     private weak var controller:COptionPollutedGarden!
     private weak var bubbleType:MOptionPollutedGardenBubbleType!
     private let velocityExplosion:CGVector
-    private let kExplosionVelocityY:CGFloat = 1
+    private let kExplosionVelocityY:CGFloat = 50
     private let kMaxVelocity:UInt32 = 500
     
     init(
