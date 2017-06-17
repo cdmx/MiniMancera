@@ -13,6 +13,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private let kFadeInDuration:TimeInterval = 0.5
     private let kFontSize:CGFloat = 24
     private let kTitleVerticalAdd:CGFloat = 100
+    private let kSpawnProbability:UInt32 = 1
     
     override init(controller:COptionPollutedGarden)
     {
@@ -54,6 +55,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         
         spawnPots()
         showTitle()
+        spawnBubble()
     }
     
     override func updateNodes()
@@ -149,6 +151,30 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         
         hud.run(actionFade)
         menu.run(actionFade)
+    }
+    
+    private func shouldSpawn() -> Bool
+    {
+        let random:UInt32 = arc4random_uniform(kSpawnProbability)
+        
+        if random == 0
+        {
+            return true
+        }
+        
+        return false
+    }
+    
+    private func spawnBubble()
+    {
+        let should:Bool = shouldSpawn()
+        
+        if should
+        {
+            let bubble:MOptionPollutedGardenBubble = controller.model.bubbleGenerator.randomBubble()
+            
+            addChild(bubble)
+        }
     }
     
     //MARK: public

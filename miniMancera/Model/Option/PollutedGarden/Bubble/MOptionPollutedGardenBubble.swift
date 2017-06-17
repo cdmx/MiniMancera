@@ -11,7 +11,13 @@ class MOptionPollutedGardenBubble:SKSpriteNode
         colour:UIColor,
         position:CGPoint)
     {
-        super.init(texture: <#T##SKTexture?#>, color: <#T##UIColor#>, size: <#T##CGSize#>)
+        super.init(
+            texture:bubbleType.texture,
+            color:colour,
+            size:bubbleType.size)
+        xScale = bubbleType.orientation.rawValue
+        self.position = position
+        self.controller = controller
     }
     
     required init?(coder:NSCoder)
