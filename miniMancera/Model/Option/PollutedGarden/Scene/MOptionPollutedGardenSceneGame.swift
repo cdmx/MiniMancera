@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COptionPollutedGarden>
 {
+    private weak var player:MOptionPollutedGardenPlayer!
     private weak var hud:MOptionPollutedGardenHud!
     private weak var menu:MOptionPollutedGardenMenu!
     private weak var floor:MOptionPollutedGardenFloor!
@@ -48,9 +49,13 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
             controller:controller)
         self.floor = floor
         
+        let player:MOptionPollutedGardenPlayer = MOptionPollutedGardenPlayer(
+            controller:controller)
+        self.player = player
+        
         addChild(background)
         addChild(floor)
-        
+        addChild(player)
         addChild(hud)
         addChild(menu)
     }
