@@ -75,7 +75,21 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     {
         physicsWorld.gravity = CGVector(dx:0, dy:kGravityY)
         
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(edgeLoopFrom:frame)
+        let origin:CGPoint = frame.origin
+        let originX:CGFloat = origin.x
+        let originY:CGFloat = origin.y
+        let width:CGFloat = frame.size.width
+        let height:CGFloat = frame.size.height
+        let maxX:CGFloat = originX + width
+        let maxY:CGFloat = originY + height
+        
+        let path:CGMutablePath = CGMutablePath()
+        path.move(to:CGPoint(x:originX, y:maxY))
+        path.addLine(to:origin)
+        path.addLine(to:CGPoint(x:maxX, y:originY))
+        path.addLine(to:CGPoint(x:maxX, y:maxY))
+        
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(edgeChainFrom:path)
         physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Scene
         physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.None
         physicsBody.collisionBitMask = MOptionPollutedGardenPhysicsStruct.None

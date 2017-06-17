@@ -38,9 +38,9 @@ class MOptionPollutedGardenBubble:SKSpriteNode
             circleOfRadius:bubbleType.radius)
         physicsBody.isDynamic = true
         physicsBody.friction = 0
-        physicsBody.angularVelocity = 1
         physicsBody.allowsRotation = true
         physicsBody.restitution = 1
+        physicsBody.angularVelocity = bubbleType.orientation.rawValue
         physicsBody.mass = bubbleType.mass
         physicsBody.velocity = CGVector(
             dx:bubbleType.velocityX,
@@ -48,7 +48,7 @@ class MOptionPollutedGardenBubble:SKSpriteNode
         
         physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Bubble
         physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.None
-        physicsBody.collisionBitMask = MOptionPollutedGardenPhysicsStruct.None
+        physicsBody.collisionBitMask = MOptionPollutedGardenPhysicsStruct.Bubble | MOptionPollutedGardenPhysicsStruct.Scene
         self.physicsBody = physicsBody
     }
 }
