@@ -15,7 +15,7 @@ class MOptionPollutedGardenBubbleType
     let radius:CGFloat
     let mass:CGFloat
     let velocityX:CGFloat
-    private let kVelocityMultiplier:CGFloat = 10
+    private let kVelocityMultiplier:CGFloat = 50
     
     init(image:UIImage, orientation:Orientation)
     {
@@ -25,7 +25,7 @@ class MOptionPollutedGardenBubbleType
         
         let sizeWidth_2:CGFloat = size.width / 2.0
         radius = sizeWidth_2
-        mass = sizeWidth_2
+        mass = sizeWidth_2 * 10000
         velocityX = orientation.rawValue * kVelocityMultiplier
     }
 }

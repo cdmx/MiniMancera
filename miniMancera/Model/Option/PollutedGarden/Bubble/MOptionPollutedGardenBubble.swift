@@ -5,6 +5,7 @@ class MOptionPollutedGardenBubble:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
     private weak var bubbleType:MOptionPollutedGardenBubbleType!
+    private let kMaxVelocity:UInt32 = 500
     
     init(
         controller:COptionPollutedGarden,
@@ -32,8 +33,17 @@ class MOptionPollutedGardenBubble:SKSpriteNode
     
     //MARK: private
     
+    private func randomVelocity() -> CGFloat
+    {
+        let random:UInt32 = arc4random_uniform(kMaxVelocity)
+        let vectorVelocity:CGFloat = -CGFloat(random)
+        
+        return vectorVelocity
+    }
+    
     private func startPhysics()
     {
+        let velocityY:CGFloat = randomVelocity()
         let physicsBody:SKPhysicsBody = SKPhysicsBody(
             circleOfRadius:bubbleType.radius)
         physicsBody.isDynamic = true
@@ -41,10 +51,10 @@ class MOptionPollutedGardenBubble:SKSpriteNode
         physicsBody.allowsRotation = true
         physicsBody.restitution = 1
         physicsBody.angularVelocity = bubbleType.orientation.rawValue
-        physicsBody.mass = bubbleType.mass
+        physicsBody.density = bubbleType.mass
         physicsBody.velocity = CGVector(
             dx:bubbleType.velocityX,
-            dy:0)
+            dy:velocityY)
         
         physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Bubble
         physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.None
