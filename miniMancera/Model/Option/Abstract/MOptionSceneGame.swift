@@ -79,15 +79,11 @@ class MOptionSceneGame<S:MOptionProtocol, T:ControllerGame<S>>:SKScene
     {
     }
     
-    func playSound(soundName:String)
+    func playSound(actionSound:SKAction)
     {
         if shouldPlaySounds
         {
-            let actionHonk:SKAction = SKAction.playSoundFileNamed(
-                soundName,
-                waitForCompletion:false)
-            
-            run(actionHonk)
+            run(actionSound)
         }
     }
 }

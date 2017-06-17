@@ -2,15 +2,19 @@ import SpriteKit
 
 class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, COptionReformaCrossing>
 {
-    let kSoundHonk:String = "soundCarHorn.caf"
+    let soundHonk:SKAction
     private(set) weak var player:MOptionReformaCrossingPlayer!
     private weak var hud:MOptionReformaCrossingHud!
     private weak var stop:MOptionReformaCrossingStop!
     private weak var menu:MOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
+    private let soundCoin:SKAction
+    private let soundFail:SKAction
+    private let soundVictory:SKAction
     private let kSoundCoin:String = "soundCoin.caf"
     private let kSoundFail:String = "soundFail.caf"
     private let kSoundVictory:String = "soundVictory.caf"
+    private let kSoundHonk:String = "soundCarHorn.caf"
     private let kActionSpawn:String = "actionSpawn"
     private let kWaitTransition:TimeInterval = 1.5
     private let kSceneTransitionDuration:TimeInterval = 1
@@ -24,6 +28,10 @@ class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, C
     override init(controller:COptionReformaCrossing)
     {
         controller.model.startLevel()
+        soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
+        soundFail = SKAction.playSoundFileNamed(kSoundFail, waitForCompletion:false)
+        soundVictory = SKAction.playSoundFileNamed(kSoundVictory, waitForCompletion:false)
+        soundHonk = SKAction.playSoundFileNamed(kSoundHonk, waitForCompletion:false)
         
         super.init(controller:controller)
         physicsWorld.gravity = CGVector.zero
@@ -240,7 +248,7 @@ class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, C
     
     func timeOut()
     {
-        playSound(soundName:kSoundFail)
+        playSound(actionSound:soundFail)
         
         removeAction(forKey:kActionSpawn)
         player.timeOut()
@@ -259,7 +267,7 @@ class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, C
     
     func gameSuccess()
     {
-        playSound(soundName:kSoundVictory)
+        playSound(actionSound:soundVictory)
         
         let actionDelay:SKAction = SKAction.wait(forDuration:kWaitTransition)
         let actionTransition:SKAction = SKAction.run(transitionNextLevel)
@@ -273,7 +281,7 @@ class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, C
     
     func createCoinOn(lane:MOptionReformaCrossingLane)
     {
-        playSound(soundName:kSoundCoin)
+        playSound(actionSound:soundCoin)
         
         let coin:MOptionReformaCrossingCoin = MOptionReformaCrossingCoin(
             lane:lane,

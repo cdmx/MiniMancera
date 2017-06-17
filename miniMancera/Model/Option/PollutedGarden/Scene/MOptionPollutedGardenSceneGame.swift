@@ -7,6 +7,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private weak var menu:MOptionPollutedGardenMenu!
     private weak var floor:MOptionPollutedGardenFloor!
     private weak var labelTitle:SKLabelNode?
+    private let soundCoin:SKAction
     private let kSoundCoin:String = "soundCoin.caf"
     private let kTitleDuration:TimeInterval = 2.5
     private let kFadeInDuration:TimeInterval = 0.5
@@ -16,6 +17,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     override init(controller:COptionPollutedGarden)
     {
         petunias = []
+        soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
         
         super.init(controller:controller)
         
@@ -153,7 +155,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     
     func collectFlower(petunia:MOptionPollutedGardenPetunia)
     {
-        playSound(soundName:kSoundCoin)
+        playSound(actionSound:soundCoin)
         
         let plusFlower:MOptionPollutedGardenPlusFlower = MOptionPollutedGardenPlusFlower(
             petunia:petunia,

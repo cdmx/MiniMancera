@@ -18,7 +18,7 @@ extension MOptionReformaCrossingSceneGame:SKPhysicsContactDelegate
     
     private func contactPlayerFoe(player:MOptionReformaCrossingPlayer, foe:MOptionReformaCrossingFoe)
     {
-        playSound(soundName:kSoundHonk)
+        playSound(actionSound:soundHonk)
         
         if controller.model.gameActive
         {
