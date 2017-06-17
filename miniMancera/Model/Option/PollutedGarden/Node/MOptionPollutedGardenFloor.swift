@@ -21,10 +21,29 @@ class MOptionPollutedGardenFloor:SKSpriteNode
         let centerPosition:CGPoint = CGPoint(x:sceneWidth_2, y:height_2)
         position = centerPosition
         zPosition = kZPosition
+        
+        startPhysics(size:textureSize)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: private
+    
+    private func startPhysics(size:CGSize)
+    {
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
+        physicsBody.isDynamic = false
+        physicsBody.friction = 1
+        physicsBody.angularVelocity = 0
+        physicsBody.allowsRotation = false
+        physicsBody.restitution = 0
+        
+        physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Floor
+        physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.Bubble
+        physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.None
+        self.physicsBody = physicsBody
     }
 }
