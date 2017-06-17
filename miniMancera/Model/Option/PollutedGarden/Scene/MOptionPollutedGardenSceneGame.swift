@@ -7,6 +7,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private weak var floor:MOptionPollutedGardenFloor!
     private weak var labelTitle:SKLabelNode?
     private var petunias:[MOptionPollutedGardenPetunia]
+    private var contactQueue:[SKPhysicsContact]
     private var nextBubbleSpawns:TimeInterval
     private let soundCoin:SKAction
     private let kSoundCoin:String = "soundCoin.caf"
@@ -22,6 +23,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     override init(controller:COptionPollutedGarden)
     {
         petunias = []
+        contactQueue = []
         nextBubbleSpawns = 0
         soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
         
@@ -66,6 +68,10 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     override func updateNodes()
     {
         hud.update(elapsedTime:elapsedTime)
+        
+        updateContact(contactQueue:contactQueue)
+        contactQueue = []
+        
         updatePetunias()
         checkBubbleSpawning()
     }
@@ -228,6 +234,6 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     
     func didBegin(_ contact:SKPhysicsContact)
     {
-        contactBegin(contact:contact)
+        contactQueue.append(contact)
     }
 }

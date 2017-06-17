@@ -28,7 +28,7 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
     
     //MARK: public
     
-    func contactBegin(contact:SKPhysicsContact)
+    func updateContact(contactQueue:[SKPhysicsContact])
     {
         let bodyA:SKNode? = contact.bodyA.node
         let bodyB:SKNode? = contact.bodyB.node
