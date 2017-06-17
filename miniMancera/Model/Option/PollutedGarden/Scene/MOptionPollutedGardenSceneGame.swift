@@ -75,6 +75,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private func startPhysics()
     {
         physicsWorld.gravity = CGVector(dx:0, dy:kGravityY)
+        physicsWorld.contactDelegate = self
         
         let origin:CGPoint = self.frame.origin
         let size:CGSize = self.frame.size
@@ -221,5 +222,12 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
             controller:controller)
         
         addChild(plusFlower)
+    }
+    
+    //MARK: contact delegate
+    
+    func didBegin(_ contact:SKPhysicsContact)
+    {
+        contactBegin(contact:contact)
     }
 }
