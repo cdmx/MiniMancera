@@ -136,6 +136,7 @@
 		DA5667A81EF3329E000055D8 /* MOptionSceneGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667A71EF3329E000055D8 /* MOptionSceneGame.swift */; };
 		DA5667AC1EF3429A000055D8 /* MOptionReformaCrossingSceneGamePhysics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667AB1EF3429A000055D8 /* MOptionReformaCrossingSceneGamePhysics.swift */; };
 		DA5667AE1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667AD1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift */; };
+		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DABD4F111EF458F0003DF861 /* MOptionPollutedGardenFlowerPot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F101EF458F0003DF861 /* MOptionPollutedGardenFlowerPot.swift */; };
 		DABD4F131EF45EE0003DF861 /* MOptionPollutedGardenPotPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F121EF45EE0003DF861 /* MOptionPollutedGardenPotPosition.swift */; };
 		DABD4F161EF4635E003DF861 /* PollutedGarden.strings in Resources */ = {isa = PBXBuildFile; fileRef = DABD4F141EF4635E003DF861 /* PollutedGarden.strings */; };
@@ -290,6 +291,7 @@
 		DA5667A71EF3329E000055D8 /* MOptionSceneGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionSceneGame.swift; sourceTree = "<group>"; };
 		DA5667AB1EF3429A000055D8 /* MOptionReformaCrossingSceneGamePhysics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSceneGamePhysics.swift; sourceTree = "<group>"; };
 		DA5667AD1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBackground.swift; sourceTree = "<group>"; };
+		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DABD4F101EF458F0003DF861 /* MOptionPollutedGardenFlowerPot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenFlowerPot.swift; sourceTree = "<group>"; };
 		DABD4F121EF45EE0003DF861 /* MOptionPollutedGardenPotPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPotPosition.swift; sourceTree = "<group>"; };
 		DABD4F151EF4635E003DF861 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PollutedGarden.strings; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 				DA2DFFA41EECB16A00365F23 /* Abstract */,
 				DA2DFFA81EECB16A00365F23 /* Home */,
 				DA2D002D1EECC87700365F23 /* Option */,
+				DAAF2F841EF6EC6300589BB0 /* Footer */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -765,6 +768,14 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		DAAF2F841EF6EC6300589BB0 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				DAAF2F851EF6EC6300589BB0 /* CSettings.swift */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
 		DABD4F2B1EF4F778003DF861 /* Bubble */ = {
 			isa = PBXGroup;
 			children = (
@@ -894,6 +905,7 @@
 			files = (
 				DA2DFFE51EECB16A00365F23 /* View.swift in Sources */,
 				DA5667821EF276CD000055D8 /* MHomeFooterProtocol.swift in Sources */,
+				DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */,
 				DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */,
 				DA2D00A51EEFC15E00365F23 /* MOptionReformaCrossingStop.swift in Sources */,
 				DABD4F1E1EF48440003DF861 /* MOptionPollutedGardenFloor.swift in Sources */,
