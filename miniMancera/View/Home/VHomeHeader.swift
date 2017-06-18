@@ -11,7 +11,20 @@ class VHomeHeader:UIView
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
         isHidden = true
+        isUserInteractionEnabled = false
         self.controller = controller
+        
+        let imageView:UIImageView = UIImageView()
+        imageView.isUserInteractionEnabled = false
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = UIViewContentMode.bottom
+        imageView.image = #imageLiteral(resourceName: "assetGenericLogo")
+        
+        addSubview(imageView)
+        
+        NSLayoutConstraint.equals(
+            view:imageView,
+            toView:self)
     }
     
     required init?(coder:NSCoder)

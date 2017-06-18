@@ -6,8 +6,8 @@ class VHome:View
     private weak var viewOptions:VHomeOptions!
     private weak var viewFooter:VHomeFooter!
     private weak var spinner:VSpinner?
-    private let kHeaderHeight:CGFloat = 260
-    private let kFooterHeight:CGFloat = 100
+    private let kHeaderHeight:CGFloat = 200
+    private let kFooterHeight:CGFloat = 160
     
     required init(controller:UIViewController)
     {

@@ -106,15 +106,7 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         collectionView.isUserInteractionEnabled = false
         
         let item:MHomeOptionsProtocol = modelAtIndex(index:indexPath)
-        
-        if item.available
-        {
-            controller.optionSelected(option:item)
-        }
-        else
-        {
-            
-        }
+        controller.optionSelected(option:item)
         
         DispatchQueue.main.asyncAfter(
             deadline:DispatchTime.now() + kDeselectTime)
