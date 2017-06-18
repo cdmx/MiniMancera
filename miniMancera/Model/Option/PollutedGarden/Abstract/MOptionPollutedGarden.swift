@@ -42,6 +42,12 @@ class MOptionPollutedGarden:MOptionProtocol
         gameActive = false
     }
     
+    func revertChanges()
+    {
+        maxScore = 0
+        score = 0
+    }
+    
     //MARK: option protocol
     
     var soundBackground:String?

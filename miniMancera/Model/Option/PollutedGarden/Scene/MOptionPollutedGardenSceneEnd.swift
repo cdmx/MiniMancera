@@ -70,8 +70,8 @@ class MOptionPollutedGardenSceneEnd:SKScene
         let image:SKSpriteNode = SKSpriteNode(texture:texture)
         image.position = CGPoint(x:width_2, y:height_2)
         
-        let node1up:MOptionReformaCrossing1up = MOptionReformaCrossing1up(controller:controller)
-        let nodeGameOver:MOptionReformaCrossingEnd = MOptionReformaCrossingEnd(controller:controller)
+        let node1up:MOptionPollutedGarden1up = MOptionPollutedGarden1up(controller:controller)
+        let nodeGameOver:MOptionPollutedGardenEnd = MOptionPollutedGardenEnd(controller:controller)
         
         addChild(background)
 //        addChild(floor)
@@ -113,7 +113,7 @@ class MOptionPollutedGardenSceneEnd:SKScene
         
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kAnimationDuration)
-        let gameScene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
+        let gameScene:MOptionPollutedGardenSceneGame = MOptionPollutedGardenSceneGame(
             controller:controller)
         
         view?.presentScene(gameScene, transition:transition)

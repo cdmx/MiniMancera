@@ -44,4 +44,20 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
             model.allFlowersPolluted()
         }
     }
+    
+    func game1up()
+    {
+        guard
+            
+            let view:SKView = self.view as? SKView,
+            let scene:MOptionPollutedGardenSceneEnd = view.scene as? MOptionPollutedGardenSceneEnd
+            
+        else
+        {
+            return
+        }
+        
+        model.revertChanges()
+        scene.game1up()
+    }
 }

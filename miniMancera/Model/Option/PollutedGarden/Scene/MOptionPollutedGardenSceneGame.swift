@@ -258,8 +258,8 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kSceneTransitionDuration)
-        let gameOverScene:MOptionReformaCrossingSceneGameOver = MOptionReformaCrossingSceneGameOver(
-            controller:controller, reason:reason)
+        let gameOverScene:MOptionPollutedGardenSceneEnd = MOptionPollutedGardenSceneEnd(
+            controller:controller)
         
         view?.presentScene(gameOverScene, transition:transition)
     }
