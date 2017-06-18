@@ -10,11 +10,27 @@ class MHomeOptionsPollutedGarden:MHomeOptionsPurchase
         }
     }
     
+    override var descr:String?
+    {
+        get
+        {
+            return String.localizedPollutedGarden(key:"MHomeOptionsPollutedGarden_descr")
+        }
+    }
+    
     override var thumbnail:UIImage?
     {
         get
         {
             return #imageLiteral(resourceName: "assetGenericPollutedGardenThumbnail")
+        }
+    }
+    
+    override var splashImage:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericPollutedGardenSplash")
         }
     }
     
