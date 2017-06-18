@@ -19,14 +19,14 @@ class VSettingsHeader:UICollectionReusableView
         imageView.clipsToBounds = true
         imageView.contentMode = UIViewContentMode.center
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = #imageLiteral(resourceName: "assetGenericLogo")
+        imageView.image = #imageLiteral(resourceName: "assetGenericLogoSmall")
         
         let labelVersion:UILabel = UILabel()
         labelVersion.translatesAutoresizingMaskIntoConstraints = false
         labelVersion.backgroundColor = UIColor.clear
         labelVersion.isUserInteractionEnabled = false
         labelVersion.textAlignment = NSTextAlignment.center
-        labelVersion.font = UIFont.numeric(size:14)
+        labelVersion.font = UIFont.regular(size:14)
         labelVersion.textColor = UIColor.white
         
         let backButton:UIButton = UIButton()

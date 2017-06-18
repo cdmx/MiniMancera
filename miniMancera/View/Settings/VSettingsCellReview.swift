@@ -13,7 +13,7 @@ class VSettingsCellReview:VSettingsCell
         button.backgroundColor = UIColor.clear
         button.clipsToBounds = true
         button.setTitle(
-            NSLocalizedString("VSettingsCellReview_button", comment:""),
+            String.localized(key:"VSettingsCellReview_button"),
             for:UIControlState.normal)
         button.setTitleColor(
             UIColor.white,

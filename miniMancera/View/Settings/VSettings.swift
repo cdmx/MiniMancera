@@ -66,6 +66,7 @@ class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
     {
+        let controller:CSettings = self.controller as! CSettings
         let count:Int = controller.model.items.count
         
         return count
@@ -73,6 +74,7 @@ class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView:UICollectionView, viewForSupplementaryElementOfKind kind:String, at indexPath:IndexPath) -> UICollectionReusableView
     {
+        let controller:CSettings = self.controller as! CSettings
         let header:VSettingsHeader = collectionView.dequeueReusableSupplementaryView(
             ofKind:kind,
             withReuseIdentifier:
@@ -85,6 +87,7 @@ class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
+        let controller:CSettings = self.controller as! CSettings
         let item:MSettingsProtocol = modelAtIndex(index:indexPath)
         let cell:VSettingsCell = collectionView.dequeueReusableCell(
             withReuseIdentifier:

@@ -13,7 +13,7 @@ class VSettingsCellShare:VSettingsCell
         button.backgroundColor = UIColor.clear
         button.clipsToBounds = true
         button.setTitle(
-            NSLocalizedString("VSettingsCellShare_button", comment:""),
+            String.localized(key:"VSettingsCellShare_button"),
             for:UIControlState.normal)
         button.setTitleColor(
             UIColor.white,

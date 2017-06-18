@@ -6,12 +6,10 @@ class MSettings
     
     init()
     {
-        let itemDistance:MSettingsDistance = MSettingsDistance()
         let itemShare:MSettingsShare = MSettingsShare()
         let itemReview:MSettingsReview = MSettingsReview()
         
         items = [
-            itemDistance,
             itemShare,
             itemReview]
     }

@@ -9,3 +9,5 @@
 "VHomeSplashOptions_scoreTitle"="Puntaje máximo: ";
 "VHomeSplashFooter_buttonClose"="Cerrar";
 "VHomeSplashOptions_buttonPlay"="Jugar";
+"VSettingsCellReview_button"="Calificar en la tienda";
+"VSettingsCellShare_button"="Compartir";

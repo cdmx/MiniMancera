@@ -29,11 +29,8 @@ class VSettingsCellDistance:VSettingsCell
             items:segmentedItems)
         segmented.translatesAutoresizingMaskIntoConstraints = false
         segmented.clipsToBounds = true
-        segmented.tintColor = UIColor.gridBlue
-        segmented.addTarget(
-            self,
-            action:#selector(actionSegmented(sender:)),
-            for:UIControlEvents.valueChanged)
+        segmented.tintColor = UIColor.colourSuccess
+
         self.segmented = segmented
         
         addSubview(labelTitle)
@@ -64,8 +61,7 @@ class VSettingsCellDistance:VSettingsCell
         NSLayoutConstraint.width(
             view:segmented,
             constant:kSegmentedWidth)
-        
-        updateSegmented()
+
     }
     
     required init?(coder:NSCoder)
@@ -73,50 +69,4 @@ class VSettingsCellDistance:VSettingsCell
         return nil
     }
     
-    //MARK: actions
-    
-    func actionSegmented(sender segmented:UISegmentedControl)
-    {
-        let selected:Int = segmented.selectedSegmentIndex
-        let distance:MDistanceProtocol
-        
-        if selected == 0
-        {
-            distance = MDistanceMetre()
-        }
-        else
-        {
-            distance = MDistanceFoot()
-        }
-        
-        MSession.sharedInstance.settings?.changeDistance(
-            distance:distance)
-    }
-    
-    //MARK: private
-    
-    private func updateSegmented()
-    {
-        guard
-        
-            let currentDistance:MDistanceProtocol = MSession.sharedInstance.settings?.currentDistance()
-        
-        else
-        {
-            return
-        }
-        
-        let index:Int
-        
-        if let _:MDistanceFoot = currentDistance as? MDistanceFoot
-        {
-            index = 1
-        }
-        else
-        {
-            index = 0
-        }
-        
-        segmented.selectedSegmentIndex = index
-    }
 }
