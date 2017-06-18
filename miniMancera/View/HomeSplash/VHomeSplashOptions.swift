@@ -14,10 +14,10 @@ class VHomeSplashOptions:UIView
         self.controller = controller
         
         let attributesScoreTitle:[String:AnyObject] = [
-            NSFontAttributeName:UIFont.bold(size:13),
+            NSFontAttributeName:UIFont.bold(size:14),
             NSForegroundColorAttributeName:UIColor.white]
         let attributesScoreNumber:[String:AnyObject] = [
-            NSFontAttributeName:UIFont.regular(size:15),
+            NSFontAttributeName:UIFont.regular(size:20),
             NSForegroundColorAttributeName:UIColor.white]
         
         let numberFormatter:NumberFormatter = NumberFormatter()
@@ -35,7 +35,7 @@ class VHomeSplashOptions:UIView
         }
         
         let stringTitle:NSAttributedString = NSAttributedString(
-            string:String.localizedReformaCrossing(key:"VHomeSplashOptions_scoreTitle"),
+            string:String.localized(key:"VHomeSplashOptions_scoreTitle"),
             attributes:attributesScoreTitle)
         let stringNumber:NSAttributedString = NSAttributedString(
             string:scoreString,
@@ -57,7 +57,8 @@ class VHomeSplashOptions:UIView
             toView:self)
         NSLayoutConstraint.leftToLeft(
             view:labelScore,
-            toView:self)
+            toView:self,
+            constant:kScoreLeft)
         NSLayoutConstraint.width(
             view:labelScore,
             constant:kScoreWidth)

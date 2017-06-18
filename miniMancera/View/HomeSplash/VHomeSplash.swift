@@ -19,8 +19,10 @@ class VHomeSplash:View
         }
         
         let viewImage:VHomeSplashImage = VHomeSplashImage(controller:controller)
+        let viewOptions:VHomeSplashOptions = VHomeSplashOptions(controller:controller)
         
         addSubview(viewImage)
+        addSubview(viewOptions)
         
         NSLayoutConstraint.topToTop(
             view:viewImage,
@@ -30,6 +32,16 @@ class VHomeSplash:View
             constant:kImageHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewImage,
+            toView:self)
+        
+        NSLayoutConstraint.topToBottom(
+            view:viewOptions,
+            toView:viewImage)
+        NSLayoutConstraint.height(
+            view:viewOptions,
+            constant:kOptionsHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewOptions,
             toView:self)
     }
     
