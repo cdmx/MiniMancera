@@ -123,9 +123,22 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
     
     func postScore()
     {
+        let gameScore:Int = model.score
+        
+        guard
+        
+            let dataOption:DOption = self.dataOption
+        
+        else
+        {
+            return
+        }
+        
+        dataOption.postScore(score:gameScore)
+        
         guard
             
-            let gameId:String = dataOption?.gameId,
+            let gameId:String = dataOption.gameId,
             let parent:ControllerParent = UIApplication.shared.keyWindow?.rootViewController as? ControllerParent
             
         else
@@ -133,7 +146,6 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
             return
         }
         
-        let gameScore:Int = model.score
         parent.gameScore(score:gameScore, gameId:gameId)
     }
     

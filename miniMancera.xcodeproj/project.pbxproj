@@ -31,6 +31,7 @@
 		DA28927D1EF612A900C80D3D /* MOptionPollutedGardenSceneEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28927C1EF612A900C80D3D /* MOptionPollutedGardenSceneEnd.swift */; };
 		DA28927F1EF614FB00C80D3D /* MOptionPollutedGarden1up.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28927E1EF614FB00C80D3D /* MOptionPollutedGarden1up.swift */; };
 		DA2892811EF6160200C80D3D /* MOptionPollutedGardenEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2892801EF6160200C80D3D /* MOptionPollutedGardenEnd.swift */; };
+		DA2892831EF61A3800C80D3D /* DOptionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2892821EF61A3800C80D3D /* DOptionExtension.swift */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -177,6 +178,7 @@
 		DA28927C1EF612A900C80D3D /* MOptionPollutedGardenSceneEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenSceneEnd.swift; sourceTree = "<group>"; };
 		DA28927E1EF614FB00C80D3D /* MOptionPollutedGarden1up.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGarden1up.swift; sourceTree = "<group>"; };
 		DA2892801EF6160200C80D3D /* MOptionPollutedGardenEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenEnd.swift; sourceTree = "<group>"; };
+		DA2892821EF61A3800C80D3D /* DOptionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionExtension.swift; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -538,6 +540,7 @@
 				DA5667601EF26D24000055D8 /* DMiniMancera.xcdatamodeld */,
 				DA5667631EF26DFD000055D8 /* DManager.swift */,
 				DA5667641EF26DFD000055D8 /* DSettingsExtension.swift */,
+				DA2892821EF61A3800C80D3D /* DOptionExtension.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -863,6 +866,7 @@
 				DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */,
 				DA2D00A51EEFC15E00365F23 /* MOptionReformaCrossingStop.swift in Sources */,
 				DABD4F1E1EF48440003DF861 /* MOptionPollutedGardenFloor.swift in Sources */,
+				DA2892831EF61A3800C80D3D /* DOptionExtension.swift in Sources */,
 				DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */,
 				DA56676E1EF27475000055D8 /* MGameFreeProtocol.swift in Sources */,
 				DA2DFFDC1EECB16A00365F23 /* ExtensionNSLayoutConstraint.swift in Sources */,
