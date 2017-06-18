@@ -1,6 +1,6 @@
 import UIKit
 
-class VSettings:VView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var controller:CSettings!
     private weak var collectionView:VCollection!
