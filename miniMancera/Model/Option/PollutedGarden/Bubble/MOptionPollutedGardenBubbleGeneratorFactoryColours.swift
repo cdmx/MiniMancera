@@ -46,6 +46,7 @@ extension MOptionPollutedGardenBubbleGenerator
             colourSuccess,
             colourFail,
             colourRed,
+            colourGreen,
             colourGreenDark,
             colourYellow,
             colourBlue,

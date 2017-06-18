@@ -1,6 +1,6 @@
 import UIKit
 
-protocol MHomeOptionsProtocol
+protocol MHomeOptionsProtocol:class
 {
     var available:Bool { get }
     var title:String? { get }

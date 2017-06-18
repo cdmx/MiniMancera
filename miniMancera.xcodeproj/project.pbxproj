@@ -34,6 +34,10 @@
 		DA2892831EF61A3800C80D3D /* DOptionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2892821EF61A3800C80D3D /* DOptionExtension.swift */; };
 		DA2892851EF61D2000C80D3D /* soundPop.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA2892841EF61D2000C80D3D /* soundPop.caf */; };
 		DA2892871EF64E3300C80D3D /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2892861EF64E3300C80D3D /* brand.xcassets */; };
+		DA2892891EF66B7E00C80D3D /* CHomeSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2892881EF66B7E00C80D3D /* CHomeSplash.swift */; };
+		DA28928C1EF66BE800C80D3D /* VHomeSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28928B1EF66BE800C80D3D /* VHomeSplash.swift */; };
+		DA28928E1EF66ED700C80D3D /* VHomeSplashOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28928D1EF66ED700C80D3D /* VHomeSplashOptions.swift */; };
+		DA2892901EF66F2600C80D3D /* VHomeSplashImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28928F1EF66F2600C80D3D /* VHomeSplashImage.swift */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -183,6 +187,10 @@
 		DA2892821EF61A3800C80D3D /* DOptionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionExtension.swift; sourceTree = "<group>"; };
 		DA2892841EF61D2000C80D3D /* soundPop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundPop.caf; sourceTree = "<group>"; };
 		DA2892861EF64E3300C80D3D /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
+		DA2892881EF66B7E00C80D3D /* CHomeSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeSplash.swift; sourceTree = "<group>"; };
+		DA28928B1EF66BE800C80D3D /* VHomeSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSplash.swift; sourceTree = "<group>"; };
+		DA28928D1EF66ED700C80D3D /* VHomeSplashOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSplashOptions.swift; sourceTree = "<group>"; };
+		DA28928F1EF66F2600C80D3D /* VHomeSplashImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSplashImage.swift; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -329,6 +337,16 @@
 				DA1D578B1EF1EEE100ECA895 /* soundReformaCrossing.caf */,
 			);
 			path = sounds;
+			sourceTree = "<group>";
+		};
+		DA28928A1EF66BD600C80D3D /* HomeSplash */ = {
+			isa = PBXGroup;
+			children = (
+				DA28928B1EF66BE800C80D3D /* VHomeSplash.swift */,
+				DA28928F1EF66F2600C80D3D /* VHomeSplashImage.swift */,
+				DA28928D1EF66ED700C80D3D /* VHomeSplashOptions.swift */,
+			);
+			path = HomeSplash;
 			sourceTree = "<group>";
 		};
 		DA2D002D1EECC87700365F23 /* Option */ = {
@@ -482,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2DFFA91EECB16A00365F23 /* CHome.swift */,
+				DA2892881EF66B7E00C80D3D /* CHomeSplash.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -585,6 +604,7 @@
 				DA2DFFC21EECB16A00365F23 /* Abstract */,
 				DA2DFFC51EECB16A00365F23 /* Basic */,
 				DA2DFFD11EECB16A00365F23 /* Home */,
+				DA28928A1EF66BD600C80D3D /* HomeSplash */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -910,6 +930,7 @@
 				DA5667741EF27502000055D8 /* MGameReformaCrossing.swift in Sources */,
 				DA5667651EF26DFD000055D8 /* DManager.swift in Sources */,
 				DA2DFFEF1EECB16A00365F23 /* VSliderBar.swift in Sources */,
+				DA28928E1EF66ED700C80D3D /* VHomeSplashOptions.swift in Sources */,
 				DA2DFFEB1EECB16A00365F23 /* VCollectionFlow.swift in Sources */,
 				DA2DFFDB1EECB16A00365F23 /* ExtensionNotification.swift in Sources */,
 				DA2D00811EEDE38600365F23 /* MOptionReformaCrossingLaneRight.swift in Sources */,
@@ -919,6 +940,7 @@
 				DA5667921EF27A21000055D8 /* MSessionSettings.swift in Sources */,
 				DA11DE3F1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift in Sources */,
 				DA28927D1EF612A900C80D3D /* MOptionPollutedGardenSceneEnd.swift in Sources */,
+				DA28928C1EF66BE800C80D3D /* VHomeSplash.swift in Sources */,
 				DABD4F451EF5EEAF003DF861 /* MOptionPollutedGardenPlayerAnimate.swift in Sources */,
 				DA5667861EF276CD000055D8 /* MHomeFooterStore.swift in Sources */,
 				DA2D002B1EECC6CE00365F23 /* ControllerGame.swift in Sources */,
@@ -950,6 +972,7 @@
 				DA11DE511EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift in Sources */,
 				DA2D00341EECCA1000365F23 /* MOptionProtocol.swift in Sources */,
 				DA5667721EF2748F000055D8 /* MGameFactory.swift in Sources */,
+				DA2892891EF66B7E00C80D3D /* CHomeSplash.swift in Sources */,
 				DA2DFFDE1EECB16A00365F23 /* ExtensionString.swift in Sources */,
 				DA2D00201EECB68F00365F23 /* VHomeOptionsCell.swift in Sources */,
 				DA2DFFE11EECB16A00365F23 /* ExtensionUIFont.swift in Sources */,
@@ -972,6 +995,7 @@
 				DA2D007A1EEDE38600365F23 /* MOptionReformaCrossingLaneD.swift in Sources */,
 				DA2D002F1EECC88F00365F23 /* COptionReformaCrossing.swift in Sources */,
 				DA2DFFD91EECB16A00365F23 /* ExtensionDictionary.swift in Sources */,
+				DA2892901EF66F2600C80D3D /* VHomeSplashImage.swift in Sources */,
 				DA5667901EF2773B000055D8 /* MHomeOptionsPollutedGarden.swift in Sources */,
 				DA2D00781EEDE38600365F23 /* MOptionReformaCrossingLaneB.swift in Sources */,
 				DABD4F431EF5E3CE003DF861 /* MOptionPollutedGardenPlayer.swift in Sources */,
