@@ -82,9 +82,7 @@ class CHome:Controller<VHome>
         let controller:CHomeFroob = CHomeFroob(
             controllerHome:self,
             option:option)
-        parent.push(
-            controller:controller,
-            horizontal:ControllerParent.Horizontal.right)
+        parent.animateOver(controller:controller)
     }
     
     //MARK: public

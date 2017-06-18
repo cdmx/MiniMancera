@@ -18,6 +18,6 @@
 "VStoreCellNotAvailable_label"="No disponible";
 "VStoreCellPurchased_label"="Comprado";
 "VStoreCellPurchasing_label"="Comprando";
-"VHomeFroobContent_labelSubtitle"="Aún no tienes esta aventura de MiniMancera";
+"VHomeFroobContent_labelSubtitle"="\n\nAún no tienes esta aventura de MiniMancera.\nObtenla en la Tienda";
 "VHomeFroobContentButtons_buttonStore"="Tienda";
-"VHomeFroobContentButtons_buttonCancel"="Ahora no";
+"VHomeFroobContentButtons_buttonCancel"="Ahorita no";

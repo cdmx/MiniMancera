@@ -4,20 +4,20 @@ class VHomeFroobContentButtons:UIView
 {
     private weak var controller:CHomeFroob!
     private let kButtonMargin:CGFloat = 1
-    private let kButtonWidth:CGFloat = 148
+    private let kButtonWidth:CGFloat = 154
     
     convenience init(controller:CHomeFroob)
     {
         self.init()
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor(white:0.88, alpha:1)
+        backgroundColor = UIColor(white:0.3, alpha:1)
         self.controller = controller
         
         let buttonStore:UIButton = UIButton()
         buttonStore.translatesAutoresizingMaskIntoConstraints = false
         buttonStore.clipsToBounds = true
-        buttonStore.backgroundColor = UIColor.white
+        buttonStore.backgroundColor = UIColor.black
         buttonStore.setTitle(
             String.localized(key:"VHomeFroobContentButtons_buttonStore"),
             for:UIControlState.normal)
@@ -25,9 +25,9 @@ class VHomeFroobContentButtons:UIView
             UIColor.colourSuccess,
             for:UIControlState.normal)
         buttonStore.setTitleColor(
-            UIColor(white:0, alpha:0.1),
+            UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
-        buttonStore.titleLabel!.font = UIFont.bold(size:15)
+        buttonStore.titleLabel!.font = UIFont.bold(size:18)
         buttonStore.addTarget(
             self,
             action:#selector(actionStore(sender:)),
@@ -36,17 +36,17 @@ class VHomeFroobContentButtons:UIView
         let buttonCancel:UIButton = UIButton()
         buttonCancel.translatesAutoresizingMaskIntoConstraints = false
         buttonCancel.clipsToBounds = true
-        buttonCancel.backgroundColor = UIColor.white
+        buttonCancel.backgroundColor = UIColor.black
         buttonCancel.setTitle(
             String.localized(key:"VHomeFroobContentButtons_buttonCancel"),
             for:UIControlState.normal)
         buttonCancel.setTitleColor(
-            UIColor(white:0.7, alpha:1),
+            UIColor(white:0.5, alpha:1),
             for:UIControlState.normal)
         buttonCancel.setTitleColor(
-            UIColor(white:0, alpha:0.1),
+            UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
-        buttonCancel.titleLabel!.font = UIFont.bold(size:15)
+        buttonCancel.titleLabel!.font = UIFont.bold(size:14)
         buttonCancel.addTarget(
             self,
             action:#selector(self.actionCancel(sender:)),
@@ -64,8 +64,7 @@ class VHomeFroobContentButtons:UIView
             toView:self)
         NSLayoutConstraint.leftToLeft(
             view:buttonCancel,
-            toView:self,
-            constant:kButtonMargin)
+            toView:self)
         NSLayoutConstraint.width(
             view:buttonCancel,
             constant:kButtonWidth)
@@ -79,8 +78,7 @@ class VHomeFroobContentButtons:UIView
             toView:self)
         NSLayoutConstraint.rightToRight(
             view:buttonStore,
-            toView:self,
-            constant:-kButtonMargin)
+            toView:self)
         NSLayoutConstraint.width(
             view:buttonStore,
             constant:kButtonWidth)

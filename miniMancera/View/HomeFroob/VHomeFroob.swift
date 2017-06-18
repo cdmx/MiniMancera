@@ -4,10 +4,9 @@ class VHomeFroob:View
 {
     private weak var blurContainer:UIView!
     private weak var layoutContentBottom:NSLayoutConstraint!
-    private let kAnimationDuration:TimeInterval = 0.3
-    private let kBlurAlpha:CGFloat = 0.99
-    private let kContentHeight:CGFloat = 300
-    private let kContentTop:CGFloat = 150
+    private let kAnimationDuration:TimeInterval = 0.5
+    private let kContentHeight:CGFloat = 380
+    private let kContentTop:CGFloat = 100
     
     required init(controller:UIViewController)
     {
@@ -23,7 +22,7 @@ class VHomeFroob:View
             return
         }
         
-        let blur:VBlur = VBlur.dark()
+        let blur:VBlur = VBlur.light()
         
         let blurContainer:UIView = UIView()
         blurContainer.isUserInteractionEnabled = false
@@ -97,14 +96,12 @@ class VHomeFroob:View
     {
         let height:CGFloat = bounds.maxY
         let contentTop:CGFloat = kContentTop - height
-        
         layoutContentBottom.constant = contentTop
-        let blurAlpha:CGFloat = kBlurAlpha
         
         UIView.animate(withDuration:kAnimationDuration)
         { [weak self] in
             
-            self?.blurContainer.alpha = blurAlpha
+            self?.blurContainer.alpha = 1
             self?.layoutIfNeeded()
         }
     }
