@@ -18,6 +18,7 @@ class VHomeHeader:UIView
         imageView.isUserInteractionEnabled = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = UIViewContentMode.bottom
+        imageView.clipsToBounds = true
         imageView.image = #imageLiteral(resourceName: "assetGenericLogo")
         
         addSubview(imageView)

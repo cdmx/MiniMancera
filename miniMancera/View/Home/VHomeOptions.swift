@@ -6,7 +6,7 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     private weak var collectionView:VCollection!
     private let kDeselectTime:TimeInterval = 0.3
     private let kInterItem:CGFloat = 5
-    private let kCellSize:CGFloat = 120
+    private let kCellSize:CGFloat = 170
     
     init(controller:CHome)
     {

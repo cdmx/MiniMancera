@@ -1,7 +1,15 @@
 import UIKit
 
 class MHomeOptionsPollutedGarden:MHomeOptionsPurchase
-{   
+{
+    override var title:String?
+    {
+        get
+        {
+            return String.localizedPollutedGarden(key:"MHomeOptionsPollutedGarden_title")
+        }
+    }
+    
     override func selected() -> UIViewController?
     {
         guard
