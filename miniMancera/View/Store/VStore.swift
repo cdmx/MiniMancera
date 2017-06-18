@@ -89,7 +89,7 @@ class VStore:View, UICollectionViewDataSource, UICollectionViewDelegate, UIColle
     
     private func modelAtIndex(index:IndexPath) -> MStoreItem
     {
-        let controller:CStore = controller as! CStore
+        let controller:CStore = self.controller as! CStore
         let itemId:String = controller.model.references[index.section - 1]
         let item:MStoreItem = controller.model.mapItems[itemId]!
         
@@ -109,7 +109,7 @@ class VStore:View, UICollectionViewDataSource, UICollectionViewDelegate, UIColle
             
             guard
                 
-                let controller:CStore = self?.controller as CStore,
+                let controller:CStore = self?.controller as? CStore,
                 let errorMessage:String = controller.model.error
                 
             else
@@ -188,7 +188,7 @@ class VStore:View, UICollectionViewDataSource, UICollectionViewDelegate, UIColle
     
     func numberOfSections(in collectionView:UICollectionView) -> Int
     {
-        let controller:CStore = controller as! CStore
+        let controller:CStore = self.controller as! CStore
         let count:Int = controller.model.references.count + 1
         
         return count
@@ -235,7 +235,7 @@ class VStore:View, UICollectionViewDataSource, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let controller:CStore = controller as! CStore
+        let controller:CStore = self.controller as! CStore
         let item:MStoreItem = modelAtIndex(index:indexPath)
         let reusableIdentifier:String = item.status!.reusableIdentifier
         
