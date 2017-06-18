@@ -8,26 +8,26 @@ class MStore
     private let priceFormatter:NumberFormatter
     var error:String?
     
-    init()
+    init(options:[MHomeOptionsPurchase])
     {
         priceFormatter = NumberFormatter()
         priceFormatter.numberStyle = NumberFormatter.Style.currencyISOCode
         mapItems = [:]
         references = []
         
-        let itemPlusRange:MStorePurchasePlusRange = MStorePurchasePlusRange()
-        let itemEnergy:MStorePurchaseEnergy = MStorePurchaseEnergy()
-        let itemMemory:MStorePurchaseMemory = MStorePurchaseMemory()
-        let itemNetwork:MStorePurchaseNetwork = MStorePurchaseNetwork()
-        let itemProcessor:MStorePurchaseProcessor = MStorePurchaseProcessor()
-        let itemSkill:MStorePurchaseSkill = MStorePurchaseSkill()
-        
-        addPurchase(item:itemPlusRange)
-        addPurchase(item:itemEnergy)
-        addPurchase(item:itemMemory)
-        addPurchase(item:itemNetwork)
-        addPurchase(item:itemProcessor)
-        addPurchase(item:itemSkill)
+        for option:MHomeOptionsPurchase in options
+        {
+            guard
+                
+                let item:MStoreItem = MStoreItem(option:option)
+            
+            else
+            {
+                continue
+            }
+            
+            addPurchase(item:item)
+        }
     }
     
     //MARK: private
@@ -35,7 +35,6 @@ class MStore
     private func addPurchase(item:MStoreItem)
     {
         let purchaseId:String = item.purchaseId
-        
         mapItems[purchaseId] = item
         references.append(purchaseId)
     }

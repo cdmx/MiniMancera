@@ -104,4 +104,23 @@ class CHome:Controller<VHome>
             VAlert.messageFail(message:error)
         }
     }
+    
+    func footerStore()
+    {
+        guard
+            
+            let parent:ControllerParent = self.parent as? ControllerParent
+            
+        else
+        {
+            return
+        }
+        
+        let options:[MHomeOptionsPurchase] = model.purchaseOptions()
+        
+        let controller:CSettings = C()
+        parent.push(
+            controller:controller,
+            horizontal:ControllerParent.Horizontal.right)
+    }
 }

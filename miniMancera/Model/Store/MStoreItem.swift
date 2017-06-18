@@ -3,21 +3,26 @@ import StoreKit
 
 class MStoreItem
 {
-    let purchaseId:String
-    let title:String
-    let descr:String
     var skProduct:SKProduct?
+    let purchaseId:String
+    private(set) weak var option:MHomeOptionsPurchase!
     private(set) var price:String?
     private(set) var status:MStoreStatusProtocol?
     
-    init(
-        purchaseId:String,
-        title:String,
-        descr:String)
+    init?(option:MHomeOptionsPurchase)
     {
+        guard
+            
+            let dataOption:DOptionPurchase = option.dataOption as? DOptionPurchase,
+            let purchaseId:String = dataOption.purchaseId
+        
+        else
+        {
+            return nil
+        }
+        
         self.purchaseId = purchaseId
-        self.title = title
-        self.descr = descr
+        self.option = option
         status = MStoreStatusNotAvailable()
     }
     

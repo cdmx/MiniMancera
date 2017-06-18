@@ -64,4 +64,25 @@ class MHome
     {
         options = MHome.factoryOptions()
     }
+    
+    func purchaseOptions() -> [MHomeOptionsPurchase]
+    {
+        var options:[MHomeOptionsPurchase] = []
+        
+        for option:MHomeOptionsProtocol in self.options
+        {
+            guard
+            
+                let option:MHomeOptionsPurchase = option as? MHomeOptionsPurchase
+            
+            else
+            {
+                continue
+            }
+            
+            options.append(option)
+        }
+        
+        return options
+    }
 }
