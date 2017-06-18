@@ -22,7 +22,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private let kFontSize:CGFloat = 24
     private let kExtraEdge:CGFloat = 400
     private let kTitleVerticalAdd:CGFloat = 100
-    private let kSpawnProbability:UInt32 = 25
+    private let kSpawnProbability:UInt32 = 15
     
     override init(controller:COptionPollutedGarden)
     {
