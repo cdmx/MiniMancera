@@ -3,8 +3,13 @@ import UIKit
 class VHomeSplashOptions:UIView
 {
     private weak var controller:CHomeSplash!
+    private weak var layoutPlayTop:NSLayoutConstraint!
     private let kScoreLeft:CGFloat = 10
     private let kScoreWidth:CGFloat = 300
+    private let kPlayWidth:CGFloat = 110
+    private let kPlayHeight:CGFloat = 32
+    private let kPlayRight:CGFloat = -10
+    private let kCornerRadius:CGFloat = 6
     
     init(controller:CHomeSplash)
     {
@@ -13,12 +18,65 @@ class VHomeSplashOptions:UIView
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
+        let buttonPlay:UIButton = UIButton()
+        buttonPlay.translatesAutoresizingMaskIntoConstraints = false
+        buttonPlay.clipsToBounds = true
+        buttonPlay.backgroundColor = UIColor.colourSuccess
+        buttonPlay.layer.cornerRadius = kCornerRadius
+        buttonPlay.setTitleColor(
+            UIColor.white,
+            for:UIControlState.normal)
+        buttonPlay.setTitleColor(
+            UIColor(white:1, alpha:0.4),
+            for:UIControlState.highlighted)
+        buttonPlay.setTitle(
+            String.localized(key:"VHomeSplashOptions_buttonPlay"),
+            for:UIControlState.normal)
+        buttonPlay.titleLabel!.font = UIFont.bold(size:15)
+        buttonPlay.addTarget(
+            self,
+            action:#selector(actionPlay(sender:)),
+            for:UIControlEvents.touchUpInside)
+        
+        addSubview(buttonPlay)
+        
+        layoutPlayTop = NSLayoutConstraint.topToTop(
+            view:buttonPlay,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:buttonPlay,
+            constant:kPlayHeight)
+        NSLayoutConstraint.rightToRight(
+            view:buttonPlay,
+            toView:self,
+            constant:kPlayRight)
+        NSLayoutConstraint.width(
+            view:buttonPlay,
+            constant:kPlayWidth)
+        
         createScore()
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func layoutSubviews()
+    {
+        let height:CGFloat = bounds.maxY
+        let remainHeight:CGFloat = height - kPlayHeight
+        let marginTop:CGFloat = remainHeight / 2.0
+        layoutPlayTop.constant = marginTop
+        
+        super.layoutSubviews()
+    }
+    
+    //MARK: actions
+    
+    func actionPlay(sender button:UIButton)
+    {
+        controller.play()
     }
     
     //MARK: private
