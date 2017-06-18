@@ -2,23 +2,24 @@ import UIKit
 
 class VStoreHeader:UICollectionReusableView
 {
+    private weak var imageView:UIImageView!
+    private weak var label:UILabel!
+    private weak var layoutLabelHeight:NSLayoutConstraint!
     private let attrTitle:[String:Any]
     private let attrDescr:[String:Any]
     private let labelMargin2:CGFloat
-    private weak var label:UILabel!
-    private weak var layoutLabelHeight:NSLayoutConstraint!
-    private let kLabelTop:CGFloat = 16
+    private let kImageHeight:CGFloat = 150
     private let kLabelMargin:CGFloat = 10
     private let kBorderHeight:CGFloat = 1
     
     override init(frame:CGRect)
     {
         attrTitle = [
-            NSFontAttributeName:UIFont.bold(size:20),
+            NSFontAttributeName:UIFont.bold(size:17),
             NSForegroundColorAttributeName:UIColor.white]
         
         attrDescr = [
-            NSFontAttributeName:UIFont.regular(size:15),
+            NSFontAttributeName:UIFont.regular(size:14),
             NSForegroundColorAttributeName:UIColor.white]
         labelMargin2 = kLabelMargin + kLabelMargin
         
@@ -26,6 +27,13 @@ class VStoreHeader:UICollectionReusableView
         clipsToBounds = true
         backgroundColor = UIColor.clear
         isUserInteractionEnabled = false
+        
+        let imageView:UIImageView = UIImageView()
+        imageView.isUserInteractionEnabled = false
+        imageView.contentMode = UIViewContentMode.center
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        self.imageView = imageView
         
         let label:UILabel = UILabel()
         label.isUserInteractionEnabled = false
@@ -38,11 +46,21 @@ class VStoreHeader:UICollectionReusableView
         
         addSubview(label)
         addSubview(border)
+        addSubview(imageView)
         
         NSLayoutConstraint.topToTop(
+            view:imageView,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:imageView,
+            constant:kImageHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:imageView,
+            toView:self)
+        
+        NSLayoutConstraint.topToBottom(
             view:label,
-            toView:self,
-            constant:kLabelTop)
+            toView:imageView)
         layoutLabelHeight = NSLayoutConstraint.height(
             view:label)
         NSLayoutConstraint.equalsHorizontal(
@@ -96,12 +114,24 @@ class VStoreHeader:UICollectionReusableView
     
     func config(model:MStoreItem)
     {
+        imageView.image = model.option.thumbnail
+        
+        guard
+            
+            let title:String = model.option.title,
+            let descr:String = model.option.descr
+        
+        else
+        {
+            return
+        }
+        
         let mutableString:NSMutableAttributedString = NSMutableAttributedString()
         let stringTitle:NSAttributedString = NSAttributedString(
-            string:model.title,
+            string:title,
             attributes:attrTitle)
         let stringDescr:NSAttributedString = NSAttributedString(
-            string:model.descr,
+            string:descr,
             attributes:attrDescr)
         mutableString.append(stringTitle)
         mutableString.append(stringDescr)
