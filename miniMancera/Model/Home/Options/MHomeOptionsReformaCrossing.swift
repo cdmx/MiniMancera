@@ -14,7 +14,7 @@ class MHomeOptionsReformaCrossing:MHomeOptionsFree
     {
         get
         {
-            return UIImage()
+            return #imageLiteral(resourceName: "assetGenericReformaCrossingThumbnail")
         }
     }
     

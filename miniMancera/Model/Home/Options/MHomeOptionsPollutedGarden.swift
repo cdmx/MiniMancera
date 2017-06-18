@@ -10,6 +10,14 @@ class MHomeOptionsPollutedGarden:MHomeOptionsPurchase
         }
     }
     
+    override var thumbnail:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericPollutedGardenThumbnail")
+        }
+    }
+    
     override func selected() -> UIViewController?
     {
         guard
