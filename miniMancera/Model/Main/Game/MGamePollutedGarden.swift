@@ -2,7 +2,7 @@ import Foundation
 
 class MGamePollutedGarden:MGamePurchaseProtocol
 {
-    private let kGameId:String = "iturbide.miniMancera.reformaCrossing"
+    private let kGameId:String = "iturbide.miniMancera.pollutedGarden"
     private let kPurchaseId:String = ""
     
     var gameId:String
