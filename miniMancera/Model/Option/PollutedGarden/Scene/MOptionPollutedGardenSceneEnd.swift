@@ -91,6 +91,8 @@ class MOptionPollutedGardenSceneEnd:SKScene
         {
             let background:SKAudioNode = SKAudioNode(fileNamed:kSoundBackground)
             background.autoplayLooped = true
+            
+            addChild(background)
         }
     }
     
