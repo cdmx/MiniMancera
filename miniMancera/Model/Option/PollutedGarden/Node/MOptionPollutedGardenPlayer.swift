@@ -6,6 +6,7 @@ class MOptionPollutedGardenPlayer:SKSpriteNode
     private weak var controller:COptionPollutedGarden!
     private let actionAnimate:SKAction
     private let textureStand:SKTexture
+    private let kSpeed:CGFloat = 90
     private let kZPosition:CGFloat = 1
     private let kYPosition:CGFloat = 93
     private let kPhysicsWidth:CGFloat = 38
@@ -56,5 +57,53 @@ class MOptionPollutedGardenPlayer:SKSpriteNode
         physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.Bubble
         physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.None
         self.physicsBody = physicsBody
+    }
+    
+    private func createActionMove(positionX:CGFloat) -> SKAction
+    {
+        let deltaX:CGFloat = abs(position.x - positionX)
+        let duration:CGFloat = deltaX / kSpeed
+        let durationTime:TimeInterval = TimeInterval(duration)
+        let point:CGPoint = CGPoint(x:positionX, y:position.y)
+        let actionMove:SKAction = SKAction.move(to:point, duration:durationTime)
+        
+        return actionMove
+    }
+    
+    private func actionsWalk(positionX:CGFloat)
+    {
+        removeAllActions()
+      
+        let actionMove:SKAction = createActionMove(positionX:positionX)
+        let actionReached:SKAction = SKAction.run(reachedPosition)
+        let actions:[SKAction] = [
+            actionMove,
+            actionReached]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        run(actionAnimate)
+        run(actionsSequence)
+    }
+    
+    private func reachedPosition()
+    {
+        removeAllActions()
+        texture = textureStand
+    }
+    
+    //MARK: public
+    
+    func walkToPosition(positionX:CGFloat)
+    {
+        if positionX >= position.x
+        {
+            xScale = 1
+        }
+        else
+        {
+            xScale = -1
+        }
+        
+        actionsWalk(positionX:positionX)
     }
 }

@@ -22,7 +22,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private let kFontSize:CGFloat = 24
     private let kExtraEdge:CGFloat = 400
     private let kTitleVerticalAdd:CGFloat = 100
-    private let kSpawnProbability:UInt32 = 15
+    private let kSpawnProbability:UInt32 = 10
     
     override init(controller:COptionPollutedGarden)
     {
@@ -54,9 +54,14 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
             controller:controller)
         self.player = player
         
+        let controls:MOptionPollutedGardenControls = MOptionPollutedGardenControls(
+            controller:controller)
+        self.controls = controls
+        
         addChild(background)
         addChild(floor)
         addChild(player)
+        addChild(controls)
         addChild(hud)
         addChild(menu)
     }
@@ -87,6 +92,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     {
         hud.update(elapsedTime:elapsedTime)
         updatePetunias()
+        updatePlayer()
     }
     
     //MARK: private
@@ -150,6 +156,20 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         {
             petunia.update(elapsedTime:elapsedTime)
         }
+    }
+    
+    private func updatePlayer()
+    {
+        guard
+        
+            let lastTouchPositionX:CGFloat = controls.lastTouchPositionX()
+        
+        else
+        {
+            return
+        }
+        
+        player.walkToPosition(positionX:lastTouchPositionX)
     }
     
     private func showTitle()
