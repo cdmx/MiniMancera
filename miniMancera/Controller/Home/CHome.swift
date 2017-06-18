@@ -48,14 +48,14 @@ class CHome:Controller<VHome>
         }
     }
     
-    //MARK: public
+    //MARK: private
     
-    func optionSelected(option:MHomeOptionsProtocol)
+    private func showSplash(option:MHomeOptionsProtocol)
     {
         guard
             
             let parent:ControllerParent = self.parent as? ControllerParent
-        
+            
         else
         {
             return
@@ -65,6 +65,37 @@ class CHome:Controller<VHome>
         parent.push(
             controller:controller,
             horizontal:ControllerParent.Horizontal.right)
+    }
+    
+    private func showFroob(option:MHomeOptionsProtocol)
+    {
+        guard
+            
+            let parent:ControllerParent = self.parent as? ControllerParent
+            
+        else
+        {
+            return
+        }
+        
+        let controller:CHomeSplash = CHomeSplash(model:option)
+        parent.push(
+            controller:controller,
+            horizontal:ControllerParent.Horizontal.right)
+    }
+    
+    //MARK: public
+    
+    func optionSelected(option:MHomeOptionsProtocol)
+    {
+        if option.available
+        {
+            showSplash(option:option)
+        }
+        else
+        {
+            showFroob(option:option)
+        }
     }
     
     func footerSettings()
