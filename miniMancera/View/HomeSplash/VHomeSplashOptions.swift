@@ -6,7 +6,7 @@ class VHomeSplashOptions:UIView
     private weak var layoutPlayTop:NSLayoutConstraint!
     private let kScoreLeft:CGFloat = 10
     private let kScoreWidth:CGFloat = 300
-    private let kPlayWidth:CGFloat = 110
+    private let kPlayWidth:CGFloat = 90
     private let kPlayHeight:CGFloat = 32
     private let kPlayRight:CGFloat = -10
     private let kCornerRadius:CGFloat = 6
