@@ -30,16 +30,32 @@ class MStoreItem
     
     func purchaseAction()
     {
-    }
-    
-    func buyingError() -> String?
-    {
-        return nil
+        guard
+            
+            let dataOption:DOptionPurchase = option.dataOption as? DOptionPurchase
+            
+        else
+        {
+            return
+        }
+        
+        dataOption.purchaseAction()
     }
     
     func validatePurchase() -> Bool
     {
-        return false
+        guard
+        
+            let dataOption:DOptionPurchase = option.dataOption as? DOptionPurchase
+        
+        else
+        {
+            return false
+        }
+        
+        let purchased:Bool = dataOption.purchased
+        
+        return purchased
     }
     
     //MARK: final

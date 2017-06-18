@@ -17,6 +17,7 @@
 		DA11DE511EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE501EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift */; };
 		DA11DE531EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */; };
 		DA11DE551EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE541EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift */; };
+		DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */; };
 		DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D57821EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift */; };
 		DA1D578C1EF1EEE100ECA895 /* soundReformaCrossing.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578B1EF1EEE100ECA895 /* soundReformaCrossing.caf */; };
 		DA1D57921EF207B700ECA895 /* soundCarHorn.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578D1EF207B700ECA895 /* soundCarHorn.caf */; };
@@ -201,6 +202,7 @@
 		DA11DE501EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeTaxiPink.swift; sourceTree = "<group>"; };
 		DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeFierroViejo.swift; sourceTree = "<group>"; };
 		DA11DE541EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeLordAudi.swift; sourceTree = "<group>"; };
+		DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionPurchaseExtension.swift; sourceTree = "<group>"; };
 		DA1D57821EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeCyclerFemale.swift; sourceTree = "<group>"; };
 		DA1D578B1EF1EEE100ECA895 /* soundReformaCrossing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundReformaCrossing.caf; sourceTree = "<group>"; };
 		DA1D578D1EF207B700ECA895 /* soundCarHorn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundCarHorn.caf; sourceTree = "<group>"; };
@@ -632,6 +634,7 @@
 				DA5667631EF26DFD000055D8 /* DManager.swift */,
 				DA5667641EF26DFD000055D8 /* DSettingsExtension.swift */,
 				DA2892821EF61A3800C80D3D /* DOptionExtension.swift */,
+				DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1114,6 +1117,7 @@
 				DABD4F311EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift in Sources */,
 				DABD4F3D1EF538B1003DF861 /* MOptionPollutedGardenSceneGamePhysics.swift in Sources */,
 				DA2DFFDA1EECB16A00365F23 /* ExtensionFileManager.swift in Sources */,
+				DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */,
 				DA1D579A1EF238D300ECA895 /* ControllerParentTransitions.swift in Sources */,
 				DABD4F201EF49BF1003DF861 /* MOptionPollutedGardenPetunia.swift in Sources */,
 				DA2D00B71EEFF1BF00365F23 /* MOptionReformaCrossing1up.swift in Sources */,
