@@ -10,13 +10,6 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         stopTimer()
     }
     
-    override func exitGame()
-    {
-        postScore()
-        
-        super.exitGame()
-    }
-    
     override func notifiedEnterBackground(sender notification:Notification)
     {
         stopTimer()
@@ -37,22 +30,6 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         }
         
         scene.lastUpdateTime = nil
-    }
-    
-    private func postScore()
-    {
-        guard
-        
-            let gameId:String = dataOption?.gameId,
-            let parent:ControllerParent = UIApplication.shared.keyWindow?.rootViewController as? ControllerParent
-        
-        else
-        {
-            return
-        }
-        
-        let gameScore:Int = model.score
-        parent.gameScore(score:gameScore, gameId:gameId)
     }
     
     //MARK: public

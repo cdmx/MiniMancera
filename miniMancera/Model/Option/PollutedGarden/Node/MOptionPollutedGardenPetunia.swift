@@ -8,6 +8,7 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     private var level:Int
     private var lastElapsedTime:TimeInterval
     private var growTime:TimeInterval
+    private var firstCollect:Bool
     private let kGrowDeltaTime:TimeInterval = 5
     private let kAnimationDuration:TimeInterval = 0.4
     private let kZPosition:CGFloat = 400
@@ -25,13 +26,13 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
         level = kInitialLevel
         lastElapsedTime = 0
         growTime = 0
+        firstCollect = true
         
         super.init(texture:nil, color:UIColor.clear, size:size)
         flowerPot.petunia = self
         zPosition = kZPosition
         position = startPosition()
         startPhysics()
-        collectFlower()
     }
     
     required init?(coder:NSCoder)
@@ -137,6 +138,12 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     
     func update(elapsedTime:TimeInterval)
     {
+        if firstCollect
+        {
+            firstCollect = false
+            collectFlower()
+        }
+        
         lastElapsedTime = elapsedTime
         
         if growTime < elapsedTime

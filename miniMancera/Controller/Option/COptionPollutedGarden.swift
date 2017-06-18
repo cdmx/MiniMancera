@@ -42,6 +42,7 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
         else
         {
             model.allFlowersPolluted()
+            scene.allFlowersPolluted()
         }
     }
     
@@ -59,5 +60,7 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
         
         model.revertChanges()
         scene.game1up()
+        
+        postScore()
     }
 }

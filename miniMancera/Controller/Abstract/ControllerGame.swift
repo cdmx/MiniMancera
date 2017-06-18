@@ -121,6 +121,22 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
     
     //MARK: public
     
+    func postScore()
+    {
+        guard
+            
+            let gameId:String = dataOption?.gameId,
+            let parent:ControllerParent = UIApplication.shared.keyWindow?.rootViewController as? ControllerParent
+            
+        else
+        {
+            return
+        }
+        
+        let gameScore:Int = model.score
+        parent.gameScore(score:gameScore, gameId:gameId)
+    }
+    
     func pause()
     {
         guard
@@ -162,6 +178,8 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
     
     func exitGame()
     {
+        postScore()
+        
         guard
             
             let parent:UIViewController = UIApplication.shared.keyWindow?.rootViewController

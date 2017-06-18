@@ -39,9 +39,6 @@ class MOptionPollutedGardenSceneEnd:SKScene
         let background:MOptionPollutedGardenBackground = MOptionPollutedGardenBackground(
             controller:controller)
         
-        let floor:MOptionPollutedGardenFloor = MOptionPollutedGardenFloor(
-            controller:controller)
-        
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
         labelTitle.text = String.localizedPollutedGarden(key:"MOptionPollutedGardenSceneEnd_labelTitle")
         labelTitle.fontSize = kTitleFontSize
@@ -74,7 +71,6 @@ class MOptionPollutedGardenSceneEnd:SKScene
         let nodeGameOver:MOptionPollutedGardenEnd = MOptionPollutedGardenEnd(controller:controller)
         
         addChild(background)
-//        addChild(floor)
         addChild(labelTitle)
         addChild(labelDescr)
         addChild(label1up)
