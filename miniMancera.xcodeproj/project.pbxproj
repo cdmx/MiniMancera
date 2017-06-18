@@ -19,6 +19,9 @@
 		DA11DE551EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE541EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift */; };
 		DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */; };
 		DA1BDB181EF705050040FBEA /* CHomeFroob.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB171EF705050040FBEA /* CHomeFroob.swift */; };
+		DA1BDB241EF705960040FBEA /* VHomeFroob.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB211EF705960040FBEA /* VHomeFroob.swift */; };
+		DA1BDB251EF705960040FBEA /* VHomeFroobContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB221EF705960040FBEA /* VHomeFroobContent.swift */; };
+		DA1BDB261EF705960040FBEA /* VHomeFroobContentButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB231EF705960040FBEA /* VHomeFroobContentButtons.swift */; };
 		DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D57821EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift */; };
 		DA1D578C1EF1EEE100ECA895 /* soundReformaCrossing.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578B1EF1EEE100ECA895 /* soundReformaCrossing.caf */; };
 		DA1D57921EF207B700ECA895 /* soundCarHorn.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578D1EF207B700ECA895 /* soundCarHorn.caf */; };
@@ -205,6 +208,9 @@
 		DA11DE541EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeLordAudi.swift; sourceTree = "<group>"; };
 		DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionPurchaseExtension.swift; sourceTree = "<group>"; };
 		DA1BDB171EF705050040FBEA /* CHomeFroob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeFroob.swift; sourceTree = "<group>"; };
+		DA1BDB211EF705960040FBEA /* VHomeFroob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroob.swift; sourceTree = "<group>"; };
+		DA1BDB221EF705960040FBEA /* VHomeFroobContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContent.swift; sourceTree = "<group>"; };
+		DA1BDB231EF705960040FBEA /* VHomeFroobContentButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentButtons.swift; sourceTree = "<group>"; };
 		DA1D57821EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeCyclerFemale.swift; sourceTree = "<group>"; };
 		DA1D578B1EF1EEE100ECA895 /* soundReformaCrossing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundReformaCrossing.caf; sourceTree = "<group>"; };
 		DA1D578D1EF207B700ECA895 /* soundCarHorn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundCarHorn.caf; sourceTree = "<group>"; };
@@ -391,6 +397,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA1BDB201EF705960040FBEA /* HomeFroob */ = {
+			isa = PBXGroup;
+			children = (
+				DA1BDB211EF705960040FBEA /* VHomeFroob.swift */,
+				DA1BDB221EF705960040FBEA /* VHomeFroobContent.swift */,
+				DA1BDB231EF705960040FBEA /* VHomeFroobContentButtons.swift */,
+			);
+			path = HomeFroob;
+			sourceTree = "<group>";
+		};
 		DA1D57841EF1E73F00ECA895 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -673,6 +689,7 @@
 		DA2DFFC11EECB16A00365F23 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA1BDB201EF705960040FBEA /* HomeFroob */,
 				DAAF2FB61EF6F6F700589BB0 /* Store */,
 				DAAF2F901EF6ECB800589BB0 /* Settings */,
 				DA2DFFC21EECB16A00365F23 /* Abstract */,
@@ -1080,6 +1097,7 @@
 				DA5667651EF26DFD000055D8 /* DManager.swift in Sources */,
 				DA2DFFEF1EECB16A00365F23 /* VSliderBar.swift in Sources */,
 				DA28928E1EF66ED700C80D3D /* VHomeSplashOptions.swift in Sources */,
+				DA1BDB251EF705960040FBEA /* VHomeFroobContent.swift in Sources */,
 				DA2DFFEB1EECB16A00365F23 /* VCollectionFlow.swift in Sources */,
 				DA2DFFDB1EECB16A00365F23 /* ExtensionNotification.swift in Sources */,
 				DA2D00811EEDE38600365F23 /* MOptionReformaCrossingLaneRight.swift in Sources */,
@@ -1096,6 +1114,7 @@
 				DA5667861EF276CD000055D8 /* MHomeFooterStore.swift in Sources */,
 				DA2D002B1EECC6CE00365F23 /* ControllerGame.swift in Sources */,
 				DAAF2FC41EF6F6F700589BB0 /* VStoreCellNew.swift in Sources */,
+				DA1BDB241EF705960040FBEA /* VHomeFroob.swift in Sources */,
 				DA5667AC1EF3429A000055D8 /* MOptionReformaCrossingSceneGamePhysics.swift in Sources */,
 				DA2892791EF5FA4100C80D3D /* MOptionPollutedGardenControls.swift in Sources */,
 				DABD4F1A1EF469FC003DF861 /* MOptionPollutedGardenMenu.swift in Sources */,
@@ -1138,6 +1157,7 @@
 				DA2DFFE11EECB16A00365F23 /* ExtensionUIFont.swift in Sources */,
 				DA11DE3D1EF089810043749D /* MOptionReformaCrossingCoin.swift in Sources */,
 				DA2D00791EEDE38600365F23 /* MOptionReformaCrossingLaneC.swift in Sources */,
+				DA1BDB261EF705960040FBEA /* VHomeFroobContentButtons.swift in Sources */,
 				DA2DFFEE1EECB16A00365F23 /* VSlider.swift in Sources */,
 				DA2D00711EEDE38600365F23 /* MOptionReformaCrossing.swift in Sources */,
 				DA2DFFE61EECB16A00365F23 /* ViewParent.swift in Sources */,

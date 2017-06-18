@@ -1,16 +1,15 @@
 import UIKit
 
-class VFroobPlus:VView
+class VHomeFroob:View
 {
     private(set) weak var viewContent:VFroobPlusContent!
-    private weak var controller:CFroobPlus!
     private weak var blurContainer:UIView!
     private weak var layoutContentBottom:NSLayoutConstraint!
     private let kAnimationDuration:TimeInterval = 0.3
     private let kContentHeight:CGFloat = 300
     private let kContentTop:CGFloat = 150
     
-    override init(controller:CController)
+    required init(controller:UIViewController)
     {
         super.init(controller:controller)
         backgroundColor = UIColor.clear
