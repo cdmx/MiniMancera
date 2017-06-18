@@ -18,6 +18,7 @@
 		DA11DE531EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */; };
 		DA11DE551EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE541EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift */; };
 		DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */; };
+		DA1BDB181EF705050040FBEA /* CHomeFroob.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB171EF705050040FBEA /* CHomeFroob.swift */; };
 		DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D57821EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift */; };
 		DA1D578C1EF1EEE100ECA895 /* soundReformaCrossing.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578B1EF1EEE100ECA895 /* soundReformaCrossing.caf */; };
 		DA1D57921EF207B700ECA895 /* soundCarHorn.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA1D578D1EF207B700ECA895 /* soundCarHorn.caf */; };
@@ -203,6 +204,7 @@
 		DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeFierroViejo.swift; sourceTree = "<group>"; };
 		DA11DE541EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeLordAudi.swift; sourceTree = "<group>"; };
 		DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionPurchaseExtension.swift; sourceTree = "<group>"; };
+		DA1BDB171EF705050040FBEA /* CHomeFroob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeFroob.swift; sourceTree = "<group>"; };
 		DA1D57821EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeCyclerFemale.swift; sourceTree = "<group>"; };
 		DA1D578B1EF1EEE100ECA895 /* soundReformaCrossing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundReformaCrossing.caf; sourceTree = "<group>"; };
 		DA1D578D1EF207B700ECA895 /* soundCarHorn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundCarHorn.caf; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2DFFA91EECB16A00365F23 /* CHome.swift */,
+				DA1BDB171EF705050040FBEA /* CHomeFroob.swift */,
 				DA2892881EF66B7E00C80D3D /* CHomeSplash.swift */,
 			);
 			path = Home;
@@ -1176,6 +1179,7 @@
 				DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */,
 				DABD4F221EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift in Sources */,
 				DA56676A1EF27427000055D8 /* MSession.swift in Sources */,
+				DA1BDB181EF705050040FBEA /* CHomeFroob.swift in Sources */,
 				DAAF2FA01EF6F6D100589BB0 /* CStore.swift in Sources */,
 				DAAF2F9B1EF6ECB800589BB0 /* VSettingsCellSounds.swift in Sources */,
 				DA2DFFE01EECB16A00365F23 /* ExtensionUIColor.swift in Sources */,
