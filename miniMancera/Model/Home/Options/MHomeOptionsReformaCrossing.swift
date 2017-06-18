@@ -10,6 +10,14 @@ class MHomeOptionsReformaCrossing:MHomeOptionsFree
         }
     }
     
+    override var descr:String?
+    {
+        get
+        {
+            return String.localizedReformaCrossing(key:"MHomeOptionsReformaCrossing_descr")
+        }
+    }
+    
     override var thumbnail:UIImage?
     {
         get
