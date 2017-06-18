@@ -20,7 +20,7 @@ class VHomeSplashImage:UIView
         imageView.clipsToBounds = true
         imageView.image = controller.model.splashImage
         
-        let border:VBorder = VBorder(color:UIColor.colourSuccess)
+        let border:VBorder = VBorder(color:UIColor.white)
         
         addSubview(imageView)
         addSubview(border)
