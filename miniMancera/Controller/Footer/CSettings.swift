@@ -1,9 +1,8 @@
 import UIKit
 
-class CSettings:CController
+class CSettings:Controller
 {
     let model:MSettings
-    private weak var viewSettings:VSettings!
     private let urlMap:[String:String]?
     private let kResourceName:String = "ResourceURL"
     private let kResourceExtension:String = "plist"
