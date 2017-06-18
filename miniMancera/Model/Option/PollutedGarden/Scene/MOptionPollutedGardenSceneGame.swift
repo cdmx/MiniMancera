@@ -3,6 +3,7 @@ import SpriteKit
 class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COptionPollutedGarden>
 {
     private weak var player:MOptionPollutedGardenPlayer!
+    private weak var controls:MOptionPollutedGardenControls!
     private weak var hud:MOptionPollutedGardenHud!
     private weak var menu:MOptionPollutedGardenMenu!
     private weak var floor:MOptionPollutedGardenFloor!
