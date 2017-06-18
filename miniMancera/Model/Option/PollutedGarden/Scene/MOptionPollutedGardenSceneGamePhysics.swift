@@ -35,7 +35,6 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
         bubble:MOptionPollutedGardenBubble,
         petunia:MOptionPollutedGardenPetunia)
     {
-        playSound(actionSound:soundPop)
         bubble.explode()
         petunia.polluted()
     }
