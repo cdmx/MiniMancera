@@ -15,9 +15,11 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private let soundFail:SKAction
     private let kSoundCoin:String = "soundCoin.caf"
     private let kSoundFail:String = "soundFail.caf"
+    private let kSceneTransitionDuration:TimeInterval = 1
     private let kTitleDuration:TimeInterval = 1.25
     private let kFadeInDuration:TimeInterval = 0.5
     private let kSpawnBubbleRate:TimeInterval = 0.1
+    private let kWaitTransition:TimeInterval = 1.5
     private let kGravityY:CGFloat = -0.1
     private let kFontSize:CGFloat = 24
     private let kExtraEdge:CGFloat = 400
@@ -250,6 +252,18 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         return false
     }
     
+    private func afterDelayGameOver()
+    {
+        removeAllActions()
+        
+        let transition:SKTransition = SKTransition.crossFade(
+            withDuration:kSceneTransitionDuration)
+        let gameOverScene:MOptionReformaCrossingSceneGameOver = MOptionReformaCrossingSceneGameOver(
+            controller:controller, reason:reason)
+        
+        view?.presentScene(gameOverScene, transition:transition)
+    }
+    
     //MARK: public
     
     func collectFlower(petunia:MOptionPollutedGardenPetunia)
@@ -272,6 +286,23 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
             controller:controller)
         
         addChild(pollution)
+    }
+    
+    func allFlowersPolluted()
+    {
+        let actionDelay:SKAction = SKAction.wait(forDuration:kWaitTransition)
+        let actionTransition:SKAction = SKAction.run
+        { [weak self] in
+            
+            self?.afterDelayGameOver()
+        }
+        
+        let actions:[SKAction] = [
+            actionDelay,
+            actionTransition]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        run(actionsSequence)
     }
     
     //MARK: contact delegate
