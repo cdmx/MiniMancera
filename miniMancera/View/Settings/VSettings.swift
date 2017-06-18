@@ -2,16 +2,13 @@ import UIKit
 
 class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
-    private weak var controller:CSettings!
     private weak var collectionView:VCollection!
     private let kHeaderHeight:CGFloat = 240
     private let kCollectionBottom:CGFloat = 20
     
-    override init(controller:CController)
+    required init(controller:UIViewController)
     {
         super.init(controller:controller)
-        clipsToBounds = true
-        self.controller = controller as? CSettings
         
         let collectionView:VCollection = VCollection()
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +42,7 @@ class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     private func modelAtIndex(index:IndexPath) -> MSettingsProtocol
     {
+        let controller:CSettings = self.controller as! CSettings
         let item:MSettingsProtocol = controller.model.items[index.item]
                 
         return item

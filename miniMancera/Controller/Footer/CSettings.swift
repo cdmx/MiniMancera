@@ -1,6 +1,6 @@
 import UIKit
 
-class CSettings:Controller
+class CSettings:Controller<VSettings>
 {
     let model:MSettings
     private let urlMap:[String:String]?
@@ -40,18 +40,20 @@ class CSettings:Controller
         return nil
     }
     
-    override func loadView()
-    {
-        let viewSettings:VSettings = VSettings(controller:self)
-        self.viewSettings = viewSettings
-        view = viewSettings
-    }
-    
     //MARK: public
     
     func back()
     {
-        parentController.pop(horizontal:CParent.TransitionHorizontal.fromRight)
+        guard
+            
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        parent.pop(horizontal:ControllerParent.Horizontal.right)
     }
     
     func review()
@@ -87,7 +89,7 @@ class CSettings:Controller
         
         if let popover:UIPopoverPresentationController = activity.popoverPresentationController
         {
-            popover.sourceView = viewSettings
+            popover.sourceView = view
             popover.sourceRect = CGRect.zero
             popover.permittedArrowDirections = UIPopoverArrowDirection.up
         }
