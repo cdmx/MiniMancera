@@ -4,12 +4,18 @@ extension MOptionPollutedGardenBubbleGenerator
 {
     class func factoryColours() -> [UIColor]
     {
-        let red:UIColor = UIColor.red
-        let blue:UIColor = UIColor.blue
+        let colourSuccess:UIColor = UIColor.colourSuccess
+        let colourFail:UIColor = UIColor.colourFail
+        let colourRed:UIColor = UIColor(
+            red:1,
+            green:0.2,
+            blue:0,
+            alpha:1)
         
         let colours:[UIColor] = [
-            red,
-            blue]
+            colourSuccess,
+            colourFail,
+            colourRed]
         
         return colours
     }
