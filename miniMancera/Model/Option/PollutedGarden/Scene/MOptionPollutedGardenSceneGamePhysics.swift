@@ -27,6 +27,7 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
         bubble:MOptionPollutedGardenBubble,
         player:MOptionPollutedGardenPlayer)
     {
+        playSound(actionSound:soundPop)
         bubble.explode()
     }
     
@@ -34,6 +35,7 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
         bubble:MOptionPollutedGardenBubble,
         petunia:MOptionPollutedGardenPetunia)
     {
+        playSound(actionSound:soundPop)
         bubble.explode()
         petunia.polluted()
     }
@@ -42,6 +44,7 @@ extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
         bubble:MOptionPollutedGardenBubble,
         floor:MOptionPollutedGardenFloor)
     {
+        playSound(actionSound:soundPop)
         bubble.explode()
     }
     

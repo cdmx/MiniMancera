@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COptionPollutedGarden>
 {
+    let soundPop:SKAction
     private weak var player:MOptionPollutedGardenPlayer!
     private weak var controls:MOptionPollutedGardenControls!
     private weak var hud:MOptionPollutedGardenHud!
@@ -14,6 +15,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private let soundCoin:SKAction
     private let soundFail:SKAction
     private let kSoundCoin:String = "soundCoin.caf"
+    private let kSoundPop:String = "soundPop.caf"
     private let kSoundFail:String = "soundFail.caf"
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kTitleDuration:TimeInterval = 1.25
@@ -32,6 +34,7 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
         contactQueue = []
         nextBubbleSpawns = 0
         soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
+        soundPop = SKAction.playSoundFileNamed(kSoundPop, waitForCompletion:false)
         soundFail = SKAction.playSoundFileNamed(kSoundFail, waitForCompletion:false)
         
         super.init(controller:controller)
