@@ -2,7 +2,6 @@ import UIKit
 
 class VHomeFroob:View
 {
-    private(set) weak var viewContent:VFroobPlusContent!
     private weak var blurContainer:UIView!
     private weak var layoutContentBottom:NSLayoutConstraint!
     private let kAnimationDuration:TimeInterval = 0.3
@@ -42,9 +41,8 @@ class VHomeFroob:View
             action:#selector(self.actionClose(sender:)),
             for:UIControlEvents.touchUpInside)
         
-        let viewContent:VFroobPlusContent = VFroobPlusContent(
-            controller:self.controller)
-        self.viewContent = viewContent
+        let viewContent:VHomeFroobContent = VHomeFroobContent(
+            controller:controller)
         
         blurContainer.addSubview(blur)
         addSubview(blurContainer)
@@ -81,6 +79,15 @@ class VHomeFroob:View
     
     func actionClose(sender button:UIButton)
     {
+        guard
+            
+            let controller:CHomeFroob = self.controller as? CHomeFroob
+        
+        else
+        {
+            return
+        }
+        
         controller.back()
     }
     

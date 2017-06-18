@@ -2,8 +2,8 @@ import UIKit
 
 class CHomeFroob:Controller<VHomeFroob>
 {
-    private weak var controllerHome:CHome!
-    private weak var option:MHomeOptionsPurchase!
+    private(set) weak var controllerHome:CHome!
+    private(set) weak var option:MHomeOptionsPurchase!
     
     init(controllerHome:CHome, option:MHomeOptionsPurchase)
     {

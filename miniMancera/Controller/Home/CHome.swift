@@ -71,14 +71,17 @@ class CHome:Controller<VHome>
     {
         guard
             
-            let parent:ControllerParent = self.parent as? ControllerParent
+            let parent:ControllerParent = self.parent as? ControllerParent,
+            let option:MHomeOptionsPurchase = option as? MHomeOptionsPurchase
             
         else
         {
             return
         }
         
-        let controller:CHomeSplash = CHomeSplash(model:option)
+        let controller:CHomeFroob = CHomeFroob(
+            controllerHome:self,
+            option:option)
         parent.push(
             controller:controller,
             horizontal:ControllerParent.Horizontal.right)

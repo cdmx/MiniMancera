@@ -1,12 +1,12 @@
 import UIKit
 
-class VFroobPlusContentButtons:UIView
+class VHomeFroobContentButtons:UIView
 {
-    private weak var controller:CFroobPlus!
+    private weak var controller:CHomeFroob!
     private let kButtonMargin:CGFloat = 1
     private let kButtonWidth:CGFloat = 148
     
-    convenience init(controller:CFroobPlus)
+    convenience init(controller:CHomeFroob)
     {
         self.init()
         clipsToBounds = true
@@ -19,15 +19,15 @@ class VFroobPlusContentButtons:UIView
         buttonStore.clipsToBounds = true
         buttonStore.backgroundColor = UIColor.white
         buttonStore.setTitle(
-            NSLocalizedString("VFroobPlusContentButtons_buttonStore", comment:""),
+            String.localized(key:"VHomeFroobContentButtons_buttonStore"),
             for:UIControlState.normal)
         buttonStore.setTitleColor(
-            UIColor.hyperBlue,
+            UIColor.colourSuccess,
             for:UIControlState.normal)
         buttonStore.setTitleColor(
             UIColor(white:0, alpha:0.1),
             for:UIControlState.highlighted)
-        buttonStore.titleLabel!.font = UIFont.bolder(size:15)
+        buttonStore.titleLabel!.font = UIFont.bold(size:15)
         buttonStore.addTarget(
             self,
             action:#selector(actionStore(sender:)),
@@ -38,7 +38,7 @@ class VFroobPlusContentButtons:UIView
         buttonCancel.clipsToBounds = true
         buttonCancel.backgroundColor = UIColor.white
         buttonCancel.setTitle(
-            NSLocalizedString("VFroobPlusContentButtons_buttonCancel", comment:""),
+            String.localized(key:"VHomeFroobContentButtons_buttonCancel"),
             for:UIControlState.normal)
         buttonCancel.setTitleColor(
             UIColor(white:0.7, alpha:1),
@@ -46,7 +46,7 @@ class VFroobPlusContentButtons:UIView
         buttonCancel.setTitleColor(
             UIColor(white:0, alpha:0.1),
             for:UIControlState.highlighted)
-        buttonCancel.titleLabel!.font = UIFont.bolder(size:15)
+        buttonCancel.titleLabel!.font = UIFont.bold(size:15)
         buttonCancel.addTarget(
             self,
             action:#selector(self.actionCancel(sender:)),

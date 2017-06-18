@@ -1,9 +1,9 @@
 import UIKit
 
-class VFroobPlusContent:UIView
+class VHomeFroobContent:UIView
 {
-    private weak var controller:CFroobPlus!
-    private weak var labelTimer:UILabel!
+    private weak var controller:CHomeFroob!
+    private weak var labelTitle:UILabel!
     private weak var layoutBaseLeft:NSLayoutConstraint!
     private weak var layoutCircleLeft:NSLayoutConstraint!
     private let kBaseWidth:CGFloat = 299
@@ -12,36 +12,17 @@ class VFroobPlusContent:UIView
     private let kCornerRadius:CGFloat = 20
     private let kCircleTop:CGFloat = 2
     private let kCircleSize:CGFloat = 90
-    private let kLabelTimerTop:CGFloat = 100
-    private let kLabelTimerHeight:CGFloat = 50
-    private let kSubtitleMargin:CGFloat = 10
-    private let kSubtitleHeight:CGFloat = 80
+    private let kTitleMargin:CGFloat = 10
+    private let kTitleHeight:CGFloat = 140
     private let kButtonsHeight:CGFloat = 62
-    private let kSecondsInMinutes:TimeInterval = 60
     
-    init(controller:CFroobPlus)
+    init(controller:CHomeFroob)
     {
         super.init(frame:CGRect.zero)
         clipsToBounds = true
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
-        
-        let attributesTitle:[String:AnyObject] = [
-            NSFontAttributeName:UIFont.bolder(size:18),
-            NSForegroundColorAttributeName:UIColor.black]
-        let attributesSubtitle:[String:AnyObject] = [
-            NSFontAttributeName:UIFont.regular(size:17),
-            NSForegroundColorAttributeName:UIColor.black]
-        let stringTitle:NSAttributedString = NSAttributedString(
-            string:NSLocalizedString("VFroobPlusContent_labelTitle", comment:""),
-            attributes:attributesTitle)
-        let stringSubtitle:NSAttributedString = NSAttributedString(
-            string:NSLocalizedString("VFroobPlusContent_labelSubtitle", comment:""),
-            attributes:attributesSubtitle)
-        let mutableString:NSMutableAttributedString = NSMutableAttributedString()
-        mutableString.append(stringTitle)
-        mutableString.append(stringSubtitle)
         
         let baseView:UIView = UIView()
         baseView.translatesAutoresizingMaskIntoConstraints = false
@@ -61,34 +42,24 @@ class VFroobPlusContent:UIView
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.contentMode = UIViewContentMode.center
-        imageView.image = #imageLiteral(resourceName: "assetGenericFroobPlus")
+        imageView.image = controller.option.thumbnail
         
-        let labelTimer:UILabel = UILabel()
-        labelTimer.isUserInteractionEnabled = false
-        labelTimer.translatesAutoresizingMaskIntoConstraints = false
-        labelTimer.textAlignment = NSTextAlignment.center
-        labelTimer.backgroundColor = UIColor.clear
-        labelTimer.font = UIFont.numeric(size:35)
-        labelTimer.textColor = UIColor.black
-        self.labelTimer = labelTimer
+        let labelTitle:UILabel = UILabel()
+        labelTitle.isUserInteractionEnabled = false
+        labelTitle.backgroundColor = UIColor.clear
+        labelTitle.translatesAutoresizingMaskIntoConstraints = false
+        labelTitle.textAlignment = NSTextAlignment.center
+        labelTitle.numberOfLines = 0
+        self.labelTitle = labelTitle
         
-        let labelSubtitle:UILabel = UILabel()
-        labelSubtitle.isUserInteractionEnabled = false
-        labelSubtitle.backgroundColor = UIColor.clear
-        labelSubtitle.translatesAutoresizingMaskIntoConstraints = false
-        labelSubtitle.textAlignment = NSTextAlignment.center
-        labelSubtitle.numberOfLines = 0
-        labelSubtitle.attributedText = mutableString
-        
-        let viewButtons:VFroobPlusContentButtons = VFroobPlusContentButtons(
+        let viewButtons:VHomeFroobContentButtons = VHomeFroobContentButtons(
             controller:controller)
         
         circle.addSubview(imageView)
         baseView.addSubview(viewButtons)
         addSubview(baseView)
         addSubview(circle)
-        addSubview(labelTimer)
-        addSubview(labelSubtitle)
+        addSubview(labelTitle)
         
         NSLayoutConstraint.bottomToBottom(
             view:baseView,
@@ -118,27 +89,16 @@ class VFroobPlusContent:UIView
             view:imageView,
             toView:circle)
         
-        NSLayoutConstraint.topToTop(
-            view:labelTimer,
-            toView:self,
-            constant:kLabelTimerTop)
-        NSLayoutConstraint.height(
-            view:labelTimer,
-            constant:kLabelTimerHeight)
-        NSLayoutConstraint.equalsHorizontal(
-            view:labelTimer,
-            toView:self)
-        
         NSLayoutConstraint.topToBottom(
-            view:labelSubtitle,
-            toView:labelTimer)
+            view:labelTitle,
+            toView:circle)
         NSLayoutConstraint.height(
-            view:labelSubtitle,
-            constant:kSubtitleHeight)
+            view:labelTitle,
+            constant:kTitleHeight)
         NSLayoutConstraint.equalsHorizontal(
-            view:labelSubtitle,
+            view:labelTitle,
             toView:baseView,
-            margin:kSubtitleMargin)
+            margin:kTitleMargin)
         
         NSLayoutConstraint.bottomToBottom(
             view:viewButtons,
@@ -149,6 +109,8 @@ class VFroobPlusContent:UIView
         NSLayoutConstraint.equalsHorizontal(
             view:viewButtons,
             toView:baseView)
+        
+        printInfo()
     }
     
     required init?(coder:NSCoder)
@@ -170,29 +132,35 @@ class VFroobPlusContent:UIView
         super.layoutSubviews()
     }
     
-    //MARK: public
+    //MARK: private
     
-    func updateTimer(time:TimeInterval)
+    private func printInfo()
     {
-        let minutes:Int = Int(time / kSecondsInMinutes)
-        let seconds:Int = Int(time.truncatingRemainder(dividingBy:kSecondsInMinutes))
-        let secondsString:String
+        guard
+            
+            let title:String = controller.option.title
         
-        if seconds > 9
-        {
-            secondsString = "\(seconds)"
-        }
         else
         {
-            secondsString = "0\(seconds)"
+            return
         }
         
-        let timeString:String = "\(minutes):\(secondsString)"
+        let attributesTitle:[String:AnyObject] = [
+            NSFontAttributeName:UIFont.bold(size:18),
+            NSForegroundColorAttributeName:UIColor.black]
+        let attributesSubtitle:[String:AnyObject] = [
+            NSFontAttributeName:UIFont.regular(size:17),
+            NSForegroundColorAttributeName:UIColor.black]
+        let stringTitle:NSAttributedString = NSAttributedString(
+            string:title,
+            attributes:attributesTitle)
+        let stringSubtitle:NSAttributedString = NSAttributedString(
+            string:String.localized(key:"VHomeFroobContent_labelSubtitle"),
+            attributes:attributesSubtitle)
+        let mutableString:NSMutableAttributedString = NSMutableAttributedString()
+        mutableString.append(stringTitle)
+        mutableString.append(stringSubtitle)
         
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            self?.labelTimer.text = timeString
-        }
+        labelTitle.attributedText = mutableString
     }
 }
