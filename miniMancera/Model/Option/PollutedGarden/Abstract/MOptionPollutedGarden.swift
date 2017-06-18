@@ -9,6 +9,7 @@ class MOptionPollutedGarden:MOptionProtocol
     private(set) var score:Int
     private(set) var gameActive:Bool
     private(set) var maxScore:Int
+    private let kSoundBackground:String = "soundReformaCrossing.caf"
     
     required init()
     {
@@ -54,7 +55,7 @@ class MOptionPollutedGarden:MOptionProtocol
     {
         get
         {
-            return nil
+            return kSoundBackground
         }
     }
     
