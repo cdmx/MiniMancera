@@ -13,6 +13,18 @@ class VHomeSplashOptions:UIView
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
+        createScore()
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
+    //MARK: private
+    
+    private func createScore()
+    {
         let attributesScoreTitle:[String:AnyObject] = [
             NSFontAttributeName:UIFont.bold(size:14),
             NSForegroundColorAttributeName:UIColor.white]
@@ -26,7 +38,7 @@ class VHomeSplashOptions:UIView
         guard
             
             let scoreInt:Int32 = controller.model.dataOption?.maxScore
-        
+            
         else
         {
             return
@@ -37,7 +49,7 @@ class VHomeSplashOptions:UIView
         guard
             
             let scoreString:String = numberFormatter.string(from:score)
-        
+            
         else
         {
             return
@@ -71,10 +83,5 @@ class VHomeSplashOptions:UIView
         NSLayoutConstraint.width(
             view:labelScore,
             constant:kScoreWidth)
-    }
-    
-    required init?(coder:NSCoder)
-    {
-        return nil
     }
 }
