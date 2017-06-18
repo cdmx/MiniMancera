@@ -48,6 +48,11 @@ extension MSession
     
     private func loadGames(settings:DSettings)
     {
+        let dispatchGroup:DispatchGroup = DispatchGroup()
+        dispatchGroup.setTarget(
+            queue:DispatchQueue.global(
+                qos:DispatchQoS.QoSClass.background))
+        
         guard
             
             let options:[DOption] = settings.options?.array as? [DOption]
@@ -67,11 +72,17 @@ extension MSession
             
             if shouldAdd
             {
-                addGame(game:game)
+                addGame(game:game, dispatchGroup:dispatchGroup)
             }
         }
         
-        finishLoadingSession()
+        dispatchGroup.notify(
+            queue:DispatchQueue.global(
+                qos:DispatchQoS.QoSClass.background))
+        { [weak self] in
+            
+            self?.finishLoadingSession()
+        }
     }
     
     private func shouldAddGame(game:MGameProtocol, options:[DOption]) -> Bool
@@ -89,20 +100,22 @@ extension MSession
         return true
     }
     
-    private func addGame(game:MGameProtocol)
+    private func addGame(game:MGameProtocol, dispatchGroup:DispatchGroup)
     {
         if let gameFree:MGameFreeProtocol = game as? MGameFreeProtocol
         {
-            addGameFree(game:gameFree)
+            addGameFree(game:gameFree, dispatchGroup:dispatchGroup)
         }
         else if let gamePurchase:MGamePurchaseProtocol = game as? MGamePurchaseProtocol
         {
-            addGamePurchase(game:gamePurchase)
+            addGamePurchase(game:gamePurchase, dispatchGroup:dispatchGroup)
         }
     }
     
-    private func addGameFree(game:MGameFreeProtocol)
+    private func addGameFree(game:MGameFreeProtocol, dispatchGroup:DispatchGroup)
     {
+        dispatchGroup.enter()
+        
         let optionsClass:String = optionsClassFor(game:game)
         
         DManager.sharedInstance?.createData(
@@ -122,11 +135,15 @@ extension MSession
             option.optionsClass = optionsClass
             
             self.settings?.addToOptions(option)
+            
+            dispatchGroup.leave()
         }
     }
     
-    private func addGamePurchase(game:MGamePurchaseProtocol)
+    private func addGamePurchase(game:MGamePurchaseProtocol, dispatchGroup:DispatchGroup)
     {
+        dispatchGroup.enter()
+        
         let optionsClass:String = optionsClassFor(game:game)
         
         DManager.sharedInstance?.createData(
@@ -147,6 +164,8 @@ extension MSession
             option.purchaseId = game.purchaseId
             
             self.settings?.addToOptions(option)
+            
+            dispatchGroup.leave()
         }
     }
     
