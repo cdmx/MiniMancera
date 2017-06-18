@@ -3,8 +3,13 @@ import UIKit
 class VHomeSplashFooter:UIView
 {
     private weak var controller:CHomeSplash!
+    private weak var layoutCloseLeft:NSLayoutConstraint!
     private let kLabelMargin:CGFloat = 10
     private let kLabelHeight:CGFloat = 500
+    private let kCornerRadius:CGFloat = 6
+    private let kCloseHeight:CGFloat = 30
+    private let kCloseWidth:CGFloat = 80
+    private let kCloseBottom:CGFloat = -30
     
     init(controller:CHomeSplash)
     {
@@ -61,7 +66,27 @@ class VHomeSplashFooter:UIView
         label.numberOfLines = 0
         label.attributedText = mutableString
         
+        let buttonClose:UIButton = UIButton()
+        buttonClose.translatesAutoresizingMaskIntoConstraints = false
+        buttonClose.clipsToBounds = true
+        buttonClose.backgroundColor = UIColor.colourFail
+        buttonClose.layer.cornerRadius = kCornerRadius
+        buttonClose.setTitleColor(
+            UIColor.white,
+            for:UIControlState.normal)
+        buttonClose.setTitleColor(
+            UIColor(white:1, alpha:0.4),
+            for:UIControlState.highlighted)
+        buttonClose.setTitle(
+            String.localized(key:"VHomeSplashFooter_buttonClose"),
+            for:UIControlState.normal)
+        buttonClose.addTarget(
+            self,
+            action:#selector(actionClose(sender:)),
+            for:UIControlEvents.touchUpInside)
+        
         addSubview(label)
+        addSubview(buttonClose)
         
         NSLayoutConstraint.topToTop(
             view:label,
@@ -77,17 +102,41 @@ class VHomeSplashFooter:UIView
         NSLayoutConstraint.height(
             view:label,
             constant:height)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:buttonClose,
+            toView:self,
+            constant:kCloseBottom)
+        NSLayoutConstraint.height(
+            view:buttonClose,
+            constant:kCloseHeight)
+        layoutCloseLeft = NSLayoutConstraint.leftToLeft(
+            view:buttonClose,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:buttonClose,
+            constant:kCloseWidth)
     }
     
-    required init?(coder aDecoder: NSCoder)
+    required init?(coder:NSCoder)
     {
         return nil
     }
     
+    override func layoutSubviews()
+    {
+        let width:CGFloat = bounds.maxX
+        let remainWidth:CGFloat = width - kCloseWidth
+        let margin:CGFloat = remainWidth / 2.0
+        layoutCloseLeft.constant = margin
+        
+        super.layoutSubviews()
+    }
+    
     //MARK: actions
     
-    func actionButton(sender button:UIButton)
+    func actionClose(sender button:UIButton)
     {
-        
+        controller.back()
     }
 }
