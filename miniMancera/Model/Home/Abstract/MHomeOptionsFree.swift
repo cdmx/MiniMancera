@@ -2,7 +2,7 @@ import UIKit
 
 class MHomeOptionsFree:MHomeOptionsProtocol
 {
-    private(set) weak var dataOption:DOptionFree?
+    private(set) weak var dataOption:DOption?
     
     var available:Bool
     {
@@ -51,7 +51,7 @@ class MHomeOptionsFree:MHomeOptionsProtocol
     
     required init(dataOption:DOption)
     {
-        self.dataOption = dataOption as? DOptionFree
+        self.dataOption = dataOption
     }
     
     func selected() -> UIViewController?

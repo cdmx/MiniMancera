@@ -4,7 +4,6 @@ class VHomeSplashFooter:UIView
 {
     private weak var controller:CHomeSplash!
     private let kLabelMargin:CGFloat = 10
-    private let kLabelWidth:CGFloat = 300
     private let kLabelHeight:CGFloat = 500
     
     init(controller:CHomeSplash)
@@ -26,10 +25,10 @@ class VHomeSplashFooter:UIView
         }
         
         let attributesTitle:[String:AnyObject] = [
-            NSFontAttributeName:UIFont.bold(size:18),
+            NSFontAttributeName:UIFont.bold(size:20),
             NSForegroundColorAttributeName:UIColor.white]
         let attributesDescr:[String:AnyObject] = [
-            NSFontAttributeName:UIFont.regular(size:18),
+            NSFontAttributeName:UIFont.regular(size:15),
             NSForegroundColorAttributeName:UIColor.white]
         
         let stringTitle:NSAttributedString = NSAttributedString(
@@ -42,7 +41,9 @@ class VHomeSplashFooter:UIView
         mutableString.append(stringTitle)
         mutableString.append(stringDescr)
         
-        let maxSize:CGSize = CGSize(width:kLabelWidth, height:kLabelHeight)
+        let width:CGFloat = UIScreen.main.bounds.size.width
+        let usableWidth:CGFloat = width - (kLabelMargin + kLabelMargin)
+        let maxSize:CGSize = CGSize(width:usableWidth, height:kLabelHeight)
         let drawingOptions:NSStringDrawingOptions = NSStringDrawingOptions([
             NSStringDrawingOptions.usesFontLeading,
             NSStringDrawingOptions.usesLineFragmentOrigin])
@@ -72,7 +73,7 @@ class VHomeSplashFooter:UIView
             constant:kLabelMargin)
         NSLayoutConstraint.width(
             view:label,
-            constant:kLabelWidth)
+            constant:usableWidth)
         NSLayoutConstraint.height(
             view:label,
             constant:height)
@@ -81,5 +82,12 @@ class VHomeSplashFooter:UIView
     required init?(coder aDecoder: NSCoder)
     {
         return nil
+    }
+    
+    //MARK: actions
+    
+    func actionButton(sender button:UIButton)
+    {
+        
     }
 }

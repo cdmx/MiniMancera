@@ -39,15 +39,13 @@ class MHomeOptionsReformaCrossing:MHomeOptionsFree
         guard
             
             let dataOption:DOption = self.dataOption
-        
+            
         else
         {
             return nil
         }
         
-        let controller:CHomeSplash = CHomeSplash(
-            model:self,
-            dataOption:dataOption)
+        let controller:COptionReformaCrossing = COptionReformaCrossing(dataOption:dataOption)
         
         return controller
     }

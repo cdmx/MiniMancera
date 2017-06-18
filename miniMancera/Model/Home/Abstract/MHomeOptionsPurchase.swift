@@ -2,7 +2,7 @@ import UIKit
 
 class MHomeOptionsPurchase:MHomeOptionsProtocol
 {
-    private(set) weak var dataOption:DOptionPurchase?
+    private(set) weak var dataOption:DOption?
     
     var available:Bool
     {
@@ -10,14 +10,14 @@ class MHomeOptionsPurchase:MHomeOptionsProtocol
         {
             guard
             
-                let purchased:Bool = dataOption?.purchased
+                let dataOption:DOptionPurchase = self.dataOption as? DOptionPurchase
             
             else
             {
                 return false
             }
             
-//            return purchased
+//            return dataOption.purchased
             return true
         }
     }
@@ -56,7 +56,7 @@ class MHomeOptionsPurchase:MHomeOptionsProtocol
     
     required init(dataOption:DOption)
     {
-        self.dataOption = dataOption as? DOptionPurchase
+        self.dataOption = dataOption
     }
     
     func selected() -> UIViewController?

@@ -54,7 +54,6 @@ class CHome:Controller<VHome>
     {
         guard
             
-            let controller:UIViewController = option.selected(),
             let parent:ControllerParent = self.parent as? ControllerParent
         
         else
@@ -62,6 +61,7 @@ class CHome:Controller<VHome>
             return
         }
         
+        let controller:CHomeSplash = CHomeSplash(model:option)
         parent.push(
             controller:controller,
             horizontal:ControllerParent.Horizontal.right)

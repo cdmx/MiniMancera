@@ -17,13 +17,22 @@ class VHomeSplashOptions:UIView
             NSFontAttributeName:UIFont.bold(size:14),
             NSForegroundColorAttributeName:UIColor.white]
         let attributesScoreNumber:[String:AnyObject] = [
-            NSFontAttributeName:UIFont.regular(size:20),
+            NSFontAttributeName:UIFont.regular(size:14),
             NSForegroundColorAttributeName:UIColor.white]
         
         let numberFormatter:NumberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         
-        let score:NSNumber = controller.dataOption.maxScore as NSNumber
+        guard
+            
+            let scoreInt:Int32 = controller.model.dataOption?.maxScore
+        
+        else
+        {
+            return
+        }
+        
+        let score:NSNumber = scoreInt as NSNumber
         
         guard
             
