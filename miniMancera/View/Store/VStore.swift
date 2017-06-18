@@ -1,8 +1,7 @@
 import UIKit
 
-class VStore:VView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
+class VStore:View, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 {
-    private weak var controller:CStore!
     private weak var spinner:VSpinner?
     private weak var collectionView:VCollection!
     private weak var layoutBarTop:NSLayoutConstraint!
@@ -11,16 +10,23 @@ class VStore:VView, UICollectionViewDataSource, UICollectionViewDelegate, UIColl
     private let kCollectionTop:CGFloat = 120
     private let kCollectionBottom:CGFloat = 70
     
-    override init(controller:CController)
+    required init(controller:UIViewController)
     {
         super.init(controller:controller)
-        self.controller = controller as? CStore
+        
+        guard
+            
+            let controller:CStore = controller as? CStore
+        
+        else
+        {
+            return
+        }
         
         let spinner:VSpinner = VSpinner()
         self.spinner = spinner
         
-        let viewBar:VStoreBar = VStoreBar(
-            controller:self.controller)
+        let viewBar:VStoreBar = VStoreBar(controller:controller)
         
         let collectionView:VCollection = VCollection()
         collectionView.isHidden = true
@@ -83,6 +89,7 @@ class VStore:VView, UICollectionViewDataSource, UICollectionViewDelegate, UIColl
     
     private func modelAtIndex(index:IndexPath) -> MStoreItem
     {
+        let controller:CStore = controller as! CStore
         let itemId:String = controller.model.references[index.section - 1]
         let item:MStoreItem = controller.model.mapItems[itemId]!
         
@@ -102,14 +109,15 @@ class VStore:VView, UICollectionViewDataSource, UICollectionViewDelegate, UIColl
             
             guard
                 
-                let errorMessage:String = self?.controller.model.error
+                let controller:CStore = self?.controller as CStore,
+                let errorMessage:String = controller.model.error
                 
             else
             {
                 return
             }
             
-            VAlert.messageOrange(message:errorMessage)
+            VAlert.messageFail(message:errorMessage)
         }
     }
     
@@ -180,6 +188,7 @@ class VStore:VView, UICollectionViewDataSource, UICollectionViewDelegate, UIColl
     
     func numberOfSections(in collectionView:UICollectionView) -> Int
     {
+        let controller:CStore = controller as! CStore
         let count:Int = controller.model.references.count + 1
         
         return count
@@ -226,6 +235,7 @@ class VStore:VView, UICollectionViewDataSource, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
+        let controller:CStore = controller as! CStore
         let item:MStoreItem = modelAtIndex(index:indexPath)
         let reusableIdentifier:String = item.status!.reusableIdentifier
         

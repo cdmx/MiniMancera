@@ -79,6 +79,11 @@ class VHome:View
         return nil
     }
     
+    deinit
+    {
+        spinner?.stopAnimating()
+    }
+    
     //MARK: public
     
     func sessionLoaded()
