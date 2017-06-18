@@ -118,7 +118,7 @@ class CHome:Controller<VHome>
         
         let options:[MHomeOptionsPurchase] = model.purchaseOptions()
         
-        let controller:CSettings = C()
+        let controller:CStore = CStore(options:options)
         parent.push(
             controller:controller,
             horizontal:ControllerParent.Horizontal.right)
