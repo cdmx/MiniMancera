@@ -5,7 +5,7 @@ class VSettingsHeader:UICollectionReusableView
     private weak var controller:CSettings?
     private let kBackButtonWidth:CGFloat = 70
     private let kVersionHeight:CGFloat = 20
-    private let kVersionBottom:CGFloat = -68
+    private let kVersionBottom:CGFloat = -50
     private let kVersionKey:String = "CFBundleShortVersionString"
     
     override init(frame:CGRect)
@@ -26,7 +26,7 @@ class VSettingsHeader:UICollectionReusableView
         labelVersion.backgroundColor = UIColor.clear
         labelVersion.isUserInteractionEnabled = false
         labelVersion.textAlignment = NSTextAlignment.center
-        labelVersion.font = UIFont.regular(size:14)
+        labelVersion.font = UIFont.regular(size:15)
         labelVersion.textColor = UIColor.white
         
         let backButton:UIButton = UIButton()

@@ -20,5 +20,6 @@ class MHomeFooterSettings:MHomeFooterProtocol
     
     func selected(controller:CHome)
     {
+        controller.footerSettings()
     }
 }

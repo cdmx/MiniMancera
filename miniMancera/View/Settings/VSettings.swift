@@ -3,7 +3,7 @@ import UIKit
 class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
-    private let kHeaderHeight:CGFloat = 240
+    private let kHeaderHeight:CGFloat = 300
     private let kCollectionBottom:CGFloat = 20
     
     required init(controller:UIViewController)
@@ -15,7 +15,7 @@ class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICo
         collectionView.alwaysBounceVertical = true
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.registerCell(cell:VSettingsCellDistance.self)
+        collectionView.registerCell(cell:VSettingsCellSounds.self)
         collectionView.registerCell(cell:VSettingsCellReview.self)
         collectionView.registerCell(cell:VSettingsCellShare.self)
         collectionView.registerHeader(header:VSettingsHeader.self)

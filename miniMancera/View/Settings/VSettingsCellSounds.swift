@@ -1,14 +1,14 @@
 import UIKit
 
-class VSettingsCellDistance:VSettingsCell
+class VSettingsCellSounds:VSettingsCell
 {
     private weak var segmented:UISegmentedControl!
     private let kLabelLeft:CGFloat = 10
     private let kLabelWidth:CGFloat = 200
-    private let kSegmentedTop:CGFloat = 34
-    private let kSegmentedHeight:CGFloat = 32
-    private let kSegmentedRight:CGFloat = -10
-    private let kSegmentedWidth:CGFloat = 190
+    private let kCheckRight:CGFloat = -10
+    private let kCheckTop:CGFloat = 10
+    private let kCheckWidth:CGFloat = 100
+    private let kCheckHeight:CGFloat = 50
     
     override init(frame:CGRect)
     {
@@ -20,21 +20,14 @@ class VSettingsCellDistance:VSettingsCell
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.font = UIFont.regular(size:15)
         labelTitle.textColor = UIColor.white
-        labelTitle.text = NSLocalizedString("VSettingsCellDistance_labelTitle", comment:"")
+        labelTitle.text = NSLocalizedString("VSettingsCellSounds_labelTitle", comment:"")
         
-        let segmentedItems:[String] = [
-            NSLocalizedString("VSettingsCellDistance_segmentedMetres", comment:""),
-            NSLocalizedString("VSettingsCellDistance_segmentedFeet", comment:"")]
-        let segmented:UISegmentedControl = UISegmentedControl(
-            items:segmentedItems)
-        segmented.translatesAutoresizingMaskIntoConstraints = false
-        segmented.clipsToBounds = true
-        segmented.tintColor = UIColor.colourSuccess
-
-        self.segmented = segmented
+        let check:UISwitch = UISwitch()
+        check.translatesAutoresizingMaskIntoConstraints = false
+        check.onTintColor = UIColor.colourSuccess
         
         addSubview(labelTitle)
-        addSubview(segmented)
+        addSubview(check)
         
         NSLayoutConstraint.equalsVertical(
             view:labelTitle,
@@ -48,20 +41,19 @@ class VSettingsCellDistance:VSettingsCell
             constant:kLabelWidth)
         
         NSLayoutConstraint.topToTop(
-            view:segmented,
+            view:check,
             toView:self,
-            constant:kSegmentedTop)
+            constant:kCheckTop)
         NSLayoutConstraint.height(
-            view:segmented,
-            constant:kSegmentedHeight)
+            view:check,
+            constant:kCheckHeight)
         NSLayoutConstraint.rightToRight(
-            view:segmented,
+            view:check,
             toView:self,
-            constant:kSegmentedRight)
+            constant:kCheckRight)
         NSLayoutConstraint.width(
-            view:segmented,
-            constant:kSegmentedWidth)
-
+            view:check,
+            constant:kCheckWidth)
     }
     
     required init?(coder:NSCoder)

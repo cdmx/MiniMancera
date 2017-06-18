@@ -5,8 +5,6 @@ class VSettingsCellReview:VSettingsCell
     override init(frame:CGRect)
     {
         super.init(frame:frame)
-        clipsToBounds = true
-        backgroundColor = UIColor.clear
         
         let button:UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false

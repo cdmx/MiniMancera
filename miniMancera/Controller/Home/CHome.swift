@@ -67,6 +67,24 @@ class CHome:Controller<VHome>
             horizontal:ControllerParent.Horizontal.right)
     }
     
+    func footerSettings()
+    {
+        guard
+            
+            let parent:ControllerParent = self.parent as? ControllerParent
+            
+        else
+        {
+            return
+        }
+        
+        
+        let controller:CSettings = CSettings()
+        parent.push(
+            controller:controller,
+            horizontal:ControllerParent.Horizontal.right)
+    }
+    
     func footerBoards()
     {
         guard
