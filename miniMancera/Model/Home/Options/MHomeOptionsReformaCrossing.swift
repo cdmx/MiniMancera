@@ -18,6 +18,14 @@ class MHomeOptionsReformaCrossing:MHomeOptionsFree
         }
     }
     
+    override var splashImage:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericReformaCrossingSplash")
+        }
+    }
+    
     override func selected() -> UIViewController?
     {
         guard
@@ -29,7 +37,9 @@ class MHomeOptionsReformaCrossing:MHomeOptionsFree
             return nil
         }
         
-        let controller:COptionReformaCrossing = COptionReformaCrossing(dataOption:dataOption)
+        let controller:CHomeSplash = CHomeSplash(
+            model:self,
+            dataOption:dataOption)
         
         return controller
     }

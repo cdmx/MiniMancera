@@ -5,3 +5,5 @@
 "CHome_errorGameBoards"="No está activado tu Game Center";
 "ControllerGame_menuResume"="Continuar";
 "ControllerGame_menuExit"="Salir";
+
+"VHomeSplashOptions_scoreTitle"="Record ";

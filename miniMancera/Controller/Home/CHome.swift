@@ -54,14 +54,17 @@ class CHome:Controller<VHome>
     {
         guard
             
-            let controller:UIViewController = option.selected()
+            let controller:UIViewController = option.selected(),
+            let parent:ControllerParent = self.parent as? ControllerParent
         
         else
         {
             return
         }
         
-        parent?.present(controller, animated:true, completion:nil)
+        parent.push(
+            controller:controller,
+            horizontal:ControllerParent.Horizontal.right)
     }
     
     func footerBoards()
