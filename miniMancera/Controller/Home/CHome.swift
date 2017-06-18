@@ -26,9 +26,32 @@ class CHome:Controller<VHome>
         NotificationCenter.default.removeObserver(self)
     }
     
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        guard
+        
+            let view:VHome = self.view as? VHome
+        
+        else
+        {
+            return
+        }
+        
+        view.viewOptions.refresh()
+    }
+    
     //MARK: notified
     
     func notifiedSessionLoaded(sender notification:Notification)
+    {
+        refreshOptions()
+    }
+    
+    //MARK: private
+    
+    private func refreshOptions()
     {
         model.refreshOptions()
         
@@ -36,9 +59,9 @@ class CHome:Controller<VHome>
         { [weak self] in
             
             guard
-            
+                
                 let view:VHome = self?.view as? VHome
-            
+                
             else
             {
                 return
@@ -47,8 +70,6 @@ class CHome:Controller<VHome>
             view.sessionLoaded()
         }
     }
-    
-    //MARK: private
     
     private func showSplash(option:MHomeOptionsProtocol)
     {

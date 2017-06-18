@@ -2,8 +2,8 @@ import UIKit
 
 class VHome:View
 {
+    private(set) weak var viewOptions:VHomeOptions!
     private weak var viewHeader:VHomeHeader!
-    private weak var viewOptions:VHomeOptions!
     private weak var viewFooter:VHomeFooter!
     private weak var spinner:VSpinner?
     private let kHeaderHeight:CGFloat = 170
