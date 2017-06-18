@@ -13,7 +13,7 @@ class VStoreCellNew:VStoreCell
         
         let buttonPurchase:UIButton = UIButton()
         buttonPurchase.translatesAutoresizingMaskIntoConstraints = false
-        buttonPurchase.backgroundColor = UIColor.gridBlue
+        buttonPurchase.backgroundColor = UIColor.colourSuccess
         buttonPurchase.setTitleColor(
             UIColor.white,
             for:UIControlState.normal)
@@ -21,7 +21,7 @@ class VStoreCellNew:VStoreCell
             UIColor.black,
             for:UIControlState.highlighted)
         buttonPurchase.setTitle(
-            NSLocalizedString("VStoreCellNew_buttonPurchase", comment:""),
+            String.localized(key:"VStoreCellNew_buttonPurchase"),
             for:UIControlState.normal)
         buttonPurchase.titleLabel!.font = UIFont.bold(size:15)
         buttonPurchase.addTarget(
@@ -89,6 +89,6 @@ class VStoreCellNew:VStoreCell
             return
         }
         
-        VAlert.messageOrange(message:error)
+        VAlert.messageFail(message:error)
     }
 }

@@ -12,3 +12,9 @@
 "VSettingsCellReview_button"="Calificar en la tienda";
 "VSettingsCellShare_button"="Compartir";
 "VSettingsCellSounds_labelTitle"="Sonidos/Música";
+"VStoreBar_buttonRestore"="Restaurar Compras";
+"VStoreCellDeferred_label"="Compra detenida";
+"VStoreCellNew_buttonPurchase"="Comprar";
+"VStoreCellNotAvailable_label"="No disponible";
+"VStoreCellPurchased_label"="Comprado";
+"VStoreCellPurchasing_label"="Comprando";

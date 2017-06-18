@@ -5,7 +5,6 @@ class VStoreCellNotAvailable:VStoreCell
     override init(frame:CGRect)
     {
         super.init(frame:frame)
-        backgroundColor = UIColor.clear
         isUserInteractionEnabled = false
         
         let label:UILabel = UILabel()
@@ -14,7 +13,7 @@ class VStoreCellNotAvailable:VStoreCell
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont.regular(size:15)
         label.textColor = UIColor(white:0.8, alpha:1)
-        label.text = NSLocalizedString("VStoreCellNotAvailable_label", comment:"")
+        label.text = String.localized(key:"VStoreCellNotAvailable_label")
         
         addSubview(label)
         

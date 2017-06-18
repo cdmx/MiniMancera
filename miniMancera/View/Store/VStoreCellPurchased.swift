@@ -5,7 +5,7 @@ class VStoreCellPurchased:VStoreCell
     override init(frame:CGRect)
     {
         super.init(frame:frame)
-        backgroundColor = UIColor.gridBlue
+        backgroundColor = UIColor.colourSuccess
         isUserInteractionEnabled = false
         
         let label:UILabel = UILabel()
@@ -14,7 +14,7 @@ class VStoreCellPurchased:VStoreCell
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont.regular(size:16)
         label.textColor = UIColor.white
-        label.text = NSLocalizedString("VStoreCellPurchased_label", comment:"")
+        label.text = String.localized(key:"VStoreCellPurchased_label")
         
         addSubview(label)
         

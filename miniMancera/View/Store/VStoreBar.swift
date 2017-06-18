@@ -25,7 +25,7 @@ class VStoreBar:UIView
         let icon:UIImageView = UIImageView()
         icon.isUserInteractionEnabled = false
         icon.translatesAutoresizingMaskIntoConstraints = false
-        icon.image = #imageLiteral(resourceName: "assetGenericStore")
+        icon.image = #imageLiteral(resourceName: "assetGenericStoreBar")
         icon.clipsToBounds = true
         icon.contentMode = UIViewContentMode.center
         
@@ -56,7 +56,7 @@ class VStoreBar:UIView
             UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
         buttonRestore.setTitle(
-            NSLocalizedString("VStoreBar_buttonRestore", comment:""),
+            String.localized(key:"VStoreBar_buttonRestore"),
             for:UIControlState.normal)
         buttonRestore.titleLabel!.font = UIFont.regular(size:14)
         buttonRestore.layer.cornerRadius = kCornerRadius

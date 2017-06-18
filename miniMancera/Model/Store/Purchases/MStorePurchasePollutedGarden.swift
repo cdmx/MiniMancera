@@ -1,6 +1,6 @@
 import Foundation
 
-class MStorePurchaseEnergy:MStoreItem
+class MStorePurchasePollutedGarden:MStoreItem
 {
     private let kStorePurchaseId:String = "iturbide.box.energy"
     

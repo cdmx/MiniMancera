@@ -880,10 +880,10 @@
 			children = (
 				DAAF2FA31EF6F6E400589BB0 /* MStore.swift */,
 				DAAF2FA41EF6F6E400589BB0 /* MStoreItem.swift */,
+				DAAF2FA81EF6F6E400589BB0 /* MStoreStatusProtocol.swift */,
 				DAAF2FA51EF6F6E400589BB0 /* MStoreStatusDeferred.swift */,
 				DAAF2FA61EF6F6E400589BB0 /* MStoreStatusNew.swift */,
 				DAAF2FA71EF6F6E400589BB0 /* MStoreStatusNotAvailable.swift */,
-				DAAF2FA81EF6F6E400589BB0 /* MStoreStatusProtocol.swift */,
 				DAAF2FA91EF6F6E400589BB0 /* MStoreStatusPurchased.swift */,
 				DAAF2FAA1EF6F6E400589BB0 /* MStoreStatusPurchasing.swift */,
 			);

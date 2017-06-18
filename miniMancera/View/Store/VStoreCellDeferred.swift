@@ -13,7 +13,7 @@ class VStoreCellDeferred:VStoreCell
         label.textAlignment = NSTextAlignment.center
         label.font = UIFont.regular(size:14)
         label.textColor = UIColor(white:0.7, alpha:1)
-        label.text = NSLocalizedString("VStoreCellDeferred_label", comment:"")
+        label.text = String.localized(key:"VStoreCellDeferred_label")
         
         addSubview(label)
         
