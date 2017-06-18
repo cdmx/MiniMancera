@@ -1,93 +1,71 @@
 import UIKit
 
-class CHomeFroob:Controller
+class CHomeFroob:Controller<VHomeFroob>
 {
-    private(set) weak var viewFroob:VFroobPlus!
-    private weak var timer:Timer?
-    private let kTimerInterval:TimeInterval = 0.3
+    private weak var controllerHome:CHome!
+    private weak var option:MHomeOptionsPurchase!
     
-    deinit
+    init(controllerHome:CHome, option:MHomeOptionsPurchase)
     {
-        timer?.invalidate()
+        self.controllerHome = controllerHome
+        self.option = option
+        
+        super.init()
     }
     
-    override func viewDidLoad()
+    required init?(coder:NSCoder)
     {
-        super.viewDidLoad()
-        
-        timer = Timer.scheduledTimer(
-            timeInterval:kTimerInterval,
-            target:self,
-            selector:#selector(actionTimer(sender:)),
-            userInfo:nil,
-            repeats:true)
+        return nil
     }
     
     override func viewDidAppear(_ animated:Bool)
     {
         super.viewDidAppear(animated)
-        viewFroob.animateShow()
-    }
-    
-    override func loadView()
-    {
-        let viewFroob:VFroobPlus = VFroobPlus(controller:self)
-        self.viewFroob = viewFroob
-        view = viewFroob
-    }
-    
-    //MARK: actions
-    
-    func actionTimer(sender timer:Timer)
-    {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
-            
-            guard
-                
-                let remainTime:TimeInterval = MSession.sharedInstance.settings?.timeFromLastSearch()
-                
-            else
-            {
-                return
-            }
-            
-            let deltaTime:TimeInterval = DSettings.kWaitingTime - remainTime
-            
-            if deltaTime > 0
-            {
-                self?.viewFroob.viewContent.updateTimer(time:deltaTime)
-            }
-            else
-            {
-                DispatchQueue.main.async
-                { [weak self] in
-                    
-                    self?.back()
-                }
-            }
+        
+        guard
+        
+            let view:VHomeFroob = self.view as? VHomeFroob
+        
+        else
+        {
+            return
         }
+        
+        view.animateShow()
     }
     
     //MARK: public
     
     func back()
     {
-        timer?.invalidate()
-        parentController.dismissAnimateOver(completion:nil)
+        guard
+        
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        parent.dismissAnimateOver(completion:nil)
     }
     
     func openStore()
     {
-        timer?.invalidate()
-        
-        let controllerStore:CStore = CStore()
-        let parentController:CParent = self.parentController
-        parentController.dismissAnimateOver
+        guard
+            
+            let parent:ControllerParent = self.parent as? ControllerParent
+            
+        else
         {
-            parentController.push(
-                controller:controllerStore,
-                horizontal:CParent.TransitionHorizontal.fromRight)
+            return
+        }
+        
+        let controllerHome:CHome = self.controllerHome
+        
+        parent.dismissAnimateOver
+        {
+            controllerHome.footerStore()
         }
     }
 }
