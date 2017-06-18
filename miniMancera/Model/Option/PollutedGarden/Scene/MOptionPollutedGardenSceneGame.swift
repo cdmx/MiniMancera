@@ -15,14 +15,14 @@ class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COp
     private let soundFail:SKAction
     private let kSoundCoin:String = "soundCoin.caf"
     private let kSoundFail:String = "soundFail.caf"
-    private let kTitleDuration:TimeInterval = 2.5
+    private let kTitleDuration:TimeInterval = 1.25
     private let kFadeInDuration:TimeInterval = 0.5
     private let kSpawnBubbleRate:TimeInterval = 0.1
     private let kGravityY:CGFloat = -0.1
     private let kFontSize:CGFloat = 24
     private let kExtraEdge:CGFloat = 400
     private let kTitleVerticalAdd:CGFloat = 100
-    private let kSpawnProbability:UInt32 = 10
+    private let kSpawnProbability:UInt32 = 25
     
     override init(controller:COptionPollutedGarden)
     {

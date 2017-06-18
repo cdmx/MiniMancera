@@ -6,11 +6,11 @@ class MOptionPollutedGardenPlayer:SKSpriteNode
     private weak var controller:COptionPollutedGarden!
     private let actionAnimate:SKAction
     private let textureStand:SKTexture
-    private let kSpeed:CGFloat = 90
+    private let kSpeed:CGFloat = 130
     private let kZPosition:CGFloat = 1
     private let kYPosition:CGFloat = 93
-    private let kPhysicsWidth:CGFloat = 38
-    private let kPhysicsHeight:CGFloat = 10
+    private let kPhysicsWidth:CGFloat = 42
+    private let kPhysicsHeight:CGFloat = 11
     private let kPhysicsY:CGFloat = 23
     
     init(controller:COptionPollutedGarden)
