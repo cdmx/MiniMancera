@@ -138,7 +138,7 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
             return
         }
         
-        dataOption.postScore(score:gameScore)
+        dataOption.postScore(score:score)
         
         guard
             
@@ -150,7 +150,7 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
             return
         }
         
-        parent.gameScore(score:gameScore, gameId:gameId)
+        parent.gameScore(score:score, gameId:gameId)
     }
     
     func pause()

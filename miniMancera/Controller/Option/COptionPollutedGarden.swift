@@ -3,6 +3,12 @@ import SpriteKit
 
 class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
 {
+    override func postScore()
+    {
+        let maxScore:Int = model.maxScore
+        postScoreWithScore(score:maxScore)
+    }
+    
     //MARK: public
     
     func collectFlower(petunia:MOptionPollutedGardenPetunia)
