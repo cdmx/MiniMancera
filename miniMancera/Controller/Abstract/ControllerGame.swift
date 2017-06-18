@@ -124,11 +124,15 @@ class ControllerGame<T:MOptionProtocol>:UIViewController
     func postScore()
     {
         let gameScore:Int = model.score
-        
+        postScoreWithScore(score:gameScore)
+    }
+    
+    func postScoreWithScore(score:Int)
+    {
         guard
-        
+            
             let dataOption:DOption = self.dataOption
-        
+            
         else
         {
             return
