@@ -3,7 +3,7 @@ import UIKit
 class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
-    private let kHeaderHeight:CGFloat = 300
+    private let kHeaderHeight:CGFloat = 320
     private let kCollectionBottom:CGFloat = 20
     
     required init(controller:UIViewController)
