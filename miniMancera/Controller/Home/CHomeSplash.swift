@@ -15,6 +15,22 @@ class CHomeSplash:Controller<VHomeSplash>
         return nil
     }
     
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidDisappear(animated)
+        
+        guard
+        
+            let view:VHomeSplash = self.view as? VHomeSplash
+        
+        else
+        {
+            return
+        }
+        
+        view.refresh()
+    }
+    
     //MARK: public
     
     func back()

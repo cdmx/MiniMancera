@@ -3,6 +3,7 @@ import UIKit
 class VHomeSplashOptions:UIView
 {
     private weak var controller:CHomeSplash!
+    private weak var labelScore:UILabel!
     private weak var layoutPlayTop:NSLayoutConstraint!
     private let kScoreLeft:CGFloat = 10
     private let kScoreWidth:CGFloat = 300
@@ -38,8 +39,26 @@ class VHomeSplashOptions:UIView
             action:#selector(actionPlay(sender:)),
             for:UIControlEvents.touchUpInside)
         
+        let labelScore:UILabel = UILabel()
+        labelScore.translatesAutoresizingMaskIntoConstraints = false
+        labelScore.isUserInteractionEnabled = false
+        labelScore.backgroundColor = UIColor.clear
+        self.labelScore = labelScore
+        
+        addSubview(labelScore)
         addSubview(buttonPlay)
         
+        NSLayoutConstraint.equalsVertical(
+            view:labelScore,
+            toView:self)
+        NSLayoutConstraint.leftToLeft(
+            view:labelScore,
+            toView:self,
+            constant:kScoreLeft)
+        NSLayoutConstraint.width(
+            view:labelScore,
+            constant:kScoreWidth)
+
         layoutPlayTop = NSLayoutConstraint.topToTop(
             view:buttonPlay,
             toView:self)
@@ -53,8 +72,6 @@ class VHomeSplashOptions:UIView
         NSLayoutConstraint.width(
             view:buttonPlay,
             constant:kPlayWidth)
-        
-        createScore()
     }
     
     required init?(coder:NSCoder)
@@ -123,23 +140,13 @@ class VHomeSplashOptions:UIView
         mutableStringScore.append(stringTitle)
         mutableStringScore.append(stringNumber)
         
-        let labelScore:UILabel = UILabel()
-        labelScore.translatesAutoresizingMaskIntoConstraints = false
-        labelScore.isUserInteractionEnabled = false
-        labelScore.backgroundColor = UIColor.clear
         labelScore.attributedText = mutableStringScore
-        
-        addSubview(labelScore)
-        
-        NSLayoutConstraint.equalsVertical(
-            view:labelScore,
-            toView:self)
-        NSLayoutConstraint.leftToLeft(
-            view:labelScore,
-            toView:self,
-            constant:kScoreLeft)
-        NSLayoutConstraint.width(
-            view:labelScore,
-            constant:kScoreWidth)
+    }
+    
+    //MARK: public
+    
+    func refresh()
+    {
+        createScore()
     }
 }

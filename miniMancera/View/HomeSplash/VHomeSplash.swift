@@ -2,6 +2,7 @@ import UIKit
 
 class VHomeSplash:View
 {
+    private weak var viewOptions:VHomeSplashOptions!
     private let kImageHeight:CGFloat = 200
     private let kOptionsHeight:CGFloat = 80
     
@@ -19,8 +20,9 @@ class VHomeSplash:View
         }
         
         let viewImage:VHomeSplashImage = VHomeSplashImage(controller:controller)
-        let viewOptions:VHomeSplashOptions = VHomeSplashOptions(controller:controller)
         let viewFooter:VHomeSplashFooter = VHomeSplashFooter(controller:controller)
+        let viewOptions:VHomeSplashOptions = VHomeSplashOptions(controller:controller)
+        self.viewOptions = viewOptions
         
         addSubview(viewImage)
         addSubview(viewOptions)
@@ -60,5 +62,12 @@ class VHomeSplash:View
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: public
+    
+    func refresh()
+    {
+        viewOptions.refresh()
     }
 }
