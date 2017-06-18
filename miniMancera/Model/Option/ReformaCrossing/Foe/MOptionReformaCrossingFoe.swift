@@ -90,7 +90,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         let physicsSize:CGSize = CGSize(width:physicsWidth, height:physicsHeight)
         
         let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:physicsSize)
-        physicsBody.isDynamic = false
+        physicsBody.isDynamic = true
         physicsBody.friction = 1
         physicsBody.angularVelocity = 0
         physicsBody.allowsRotation = false
