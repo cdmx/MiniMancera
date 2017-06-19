@@ -1,7 +1,8 @@
 import UIKit
 
-class VHomeSplash:View
+class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+    private weak var collectionView:VCollection!
     private weak var viewOptions:VHomeSplashOptions!
     private let kImageHeight:CGFloat = 200
     private let kOptionsHeight:CGFloat = 80
