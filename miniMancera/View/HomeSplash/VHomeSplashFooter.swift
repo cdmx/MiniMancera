@@ -86,8 +86,8 @@ class VHomeSplashFooter:UIView
     {
         guard
             
-            let title:String = controller.model.title,
-            let descr:String = controller.model.descr
+            let title:String = controller.model.optionModel.title,
+            let descr:String = controller.model.optionModel.descr
             
         else
         {

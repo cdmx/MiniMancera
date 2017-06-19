@@ -51,7 +51,7 @@ class CHomeSplash:Controller<VHomeSplash>
     {
         guard
             
-            let controller:UIViewController = model.selected()
+            let controller:UIViewController = model.optionModel.selected()
             
         else
         {

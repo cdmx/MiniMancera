@@ -112,7 +112,7 @@ class VHomeSplashOptions:UIView
         
         guard
             
-            let scoreInt:Int32 = controller.model.dataOption?.maxScore
+            let scoreInt:Int32 = controller.model.optionModel.dataOption?.maxScore
             
         else
         {
