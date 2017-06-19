@@ -1,6 +1,6 @@
 import UIKit
 
-class MHomeOptionsReformaCrossing:MHomeOptionsFree
+class MHomeOptionsReformaCrossing:MHomeOptions
 {
     override var title:String?
     {
@@ -32,21 +32,5 @@ class MHomeOptionsReformaCrossing:MHomeOptionsFree
         {
             return #imageLiteral(resourceName: "assetGenericReformaCrossingSplash")
         }
-    }
-    
-    override func selected() -> UIViewController?
-    {
-        guard
-            
-            let dataOption:DOption = self.dataOption
-            
-        else
-        {
-            return nil
-        }
-        
-        let controller:COptionReformaCrossing = COptionReformaCrossing(dataOption:dataOption)
-        
-        return controller
     }
 }

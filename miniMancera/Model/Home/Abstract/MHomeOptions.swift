@@ -2,17 +2,22 @@ import UIKit
 
 class MHomeOptions
 {
-    typealias OptionProtocol = MOptionProtocol
-    var title:String?
-    var descr:String?
-    var thumbnail:UIImage?
-    var splashImage:UIImage?
-    var gameController:ControllerGame.Type?
     private(set) weak var dataOption:DOption?
+    private(set) var title:String?
+    private(set) var descr:String?
+    private(set) var thumbnail:UIImage?
+    private(set) var splashImage:UIImage?
     
     init(dataOption:DOption)
     {
         self.dataOption = dataOption
+    }
+    
+    //MARK: public
+    
+    func gameController<T:MOptionProtocol>() -> ControllerGame<T>.Type?
+    {
+        return nil
     }
     
     //MARK: final

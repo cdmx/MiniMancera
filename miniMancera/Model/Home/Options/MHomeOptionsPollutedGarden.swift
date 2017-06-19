@@ -1,6 +1,6 @@
 import UIKit
 
-class MHomeOptionsPollutedGarden:MHomeOptionsPurchase
+class MHomeOptionsPollutedGarden:MHomeOptions
 {
     override var title:String?
     {
@@ -32,21 +32,5 @@ class MHomeOptionsPollutedGarden:MHomeOptionsPurchase
         {
             return #imageLiteral(resourceName: "assetGenericPollutedGardenSplash")
         }
-    }
-    
-    override func selected() -> UIViewController?
-    {
-        guard
-            
-            let dataOption:DOption = self.dataOption
-            
-        else
-        {
-            return nil
-        }
-        
-        let controller:COptionPollutedGarden = COptionPollutedGarden(dataOption:dataOption)
-        
-        return controller
     }
 }
