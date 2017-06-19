@@ -46,9 +46,9 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     //MARK: private
     
-    private func modelAtIndex(index:IndexPath) -> MHomeOptionsProtocol
+    private func modelAtIndex(index:IndexPath) -> MHomeOptions
     {
-        let item:MHomeOptionsProtocol = controller.model.options[index.item]
+        let item:MHomeOptions = controller.model.options[index.item]
         
         return item
     }
@@ -91,7 +91,7 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let item:MHomeOptionsProtocol = modelAtIndex(index:indexPath)
+        let item:MHomeOptions = modelAtIndex(index:indexPath)
         let cell:VHomeOptionsCell = collectionView.dequeueReusableCell(
             withReuseIdentifier:
             VHomeOptionsCell.reusableIdentifier,
@@ -105,7 +105,7 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     {
         collectionView.isUserInteractionEnabled = false
         
-        let item:MHomeOptionsProtocol = modelAtIndex(index:indexPath)
+        let item:MHomeOptions = modelAtIndex(index:indexPath)
         controller.optionSelected(option:item)
         
         DispatchQueue.main.asyncAfter(

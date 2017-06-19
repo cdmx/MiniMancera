@@ -5,7 +5,7 @@ class CHomeSplash:Controller<VHomeSplash>
     let model:MHomeSplash
     private(set) weak var dataOption:DOption?
     
-    init(model:MHomeOptionsProtocol)
+    init(model:MHomeOptions)
     {
         self.model = MHomeSplash(model:model)
         self.dataOption = model.dataOption
@@ -51,6 +51,7 @@ class CHomeSplash:Controller<VHomeSplash>
     
     func play()
     {
+        /*
         guard
             
             let controller:UIViewController = model.optionModel.selected()
@@ -60,6 +61,6 @@ class CHomeSplash:Controller<VHomeSplash>
             return
         }
         
-        parent?.present(controller, animated:true, completion:nil)
+        parent?.present(controller, animated:true, completion:nil)*/
     }
 }

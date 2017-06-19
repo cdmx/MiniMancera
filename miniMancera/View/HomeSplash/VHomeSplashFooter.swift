@@ -84,6 +84,7 @@ class VHomeSplashFooter:UIView
     
     private func createText()
     {
+        /*
         guard
             
             let title:String = controller.model.optionModel.title,
@@ -146,6 +147,6 @@ class VHomeSplashFooter:UIView
             constant:usableWidth)
         NSLayoutConstraint.height(
             view:label,
-            constant:height)
+            constant:height)*/
     }
 }

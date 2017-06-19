@@ -8,14 +8,14 @@ class MStore
     private let priceFormatter:NumberFormatter
     var error:String?
     
-    init(options:[MHomeOptionsPurchase])
+    init(options:[MHomeOptions])
     {
         priceFormatter = NumberFormatter()
         priceFormatter.numberStyle = NumberFormatter.Style.currencyISOCode
         mapItems = [:]
         references = []
         
-        for option:MHomeOptionsPurchase in options
+        for option:MHomeOptions in options
         {
             guard
                 

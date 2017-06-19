@@ -109,7 +109,7 @@ class VHomeSplashOptions:UIView
         
         let numberFormatter:NumberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        
+        /*
         guard
             
             let scoreInt:Int32 = controller.model.optionModel.dataOption?.maxScore
@@ -140,7 +140,7 @@ class VHomeSplashOptions:UIView
         mutableStringScore.append(stringTitle)
         mutableStringScore.append(stringNumber)
         
-        labelScore.attributedText = mutableStringScore
+        labelScore.attributedText = mutableStringScore*/
     }
     
     //MARK: public

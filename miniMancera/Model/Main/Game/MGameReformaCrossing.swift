@@ -12,7 +12,7 @@ class MGameReformaCrossing:MGameFreeProtocol
         }
     }
     
-    var optionsClass:MHomeOptionsProtocol.Type
+    var optionsClass:MHomeOptions.Type
     {
         get
         {

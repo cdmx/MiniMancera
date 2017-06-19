@@ -3,9 +3,9 @@ import UIKit
 class CHomeFroob:Controller<VHomeFroob>
 {
     private(set) weak var controllerHome:CHome!
-    private(set) weak var option:MHomeOptionsPurchase!
+    private(set) weak var option:MHomeOptions!
     
-    init(controllerHome:CHome, option:MHomeOptionsPurchase)
+    init(controllerHome:CHome, option:MHomeOptions)
     {
         self.controllerHome = controllerHome
         self.option = option

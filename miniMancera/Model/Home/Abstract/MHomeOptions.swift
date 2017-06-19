@@ -8,7 +8,7 @@ class MHomeOptions
     private(set) var thumbnail:UIImage?
     private(set) var splashImage:UIImage?
     
-    init(dataOption:DOption)
+    required init(dataOption:DOption)
     {
         self.dataOption = dataOption
     }

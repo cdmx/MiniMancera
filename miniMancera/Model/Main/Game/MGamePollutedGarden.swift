@@ -13,7 +13,7 @@ class MGamePollutedGarden:MGamePurchaseProtocol
         }
     }
     
-    var optionsClass:MHomeOptionsProtocol.Type
+    var optionsClass:MHomeOptions.Type
     {
         get
         {

@@ -92,9 +92,11 @@ class VHomeOptionsCell:UICollectionViewCell
     
     //MARK: public
     
-    func config(model:MHomeOptionsProtocol)
+    func config(model:MHomeOptions)
     {
-        if model.available
+        let available:Bool = model.available()
+        
+        if available
         {
             labelTitle.textColor = UIColor.colourSuccess
         }

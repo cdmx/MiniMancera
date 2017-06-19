@@ -4,7 +4,7 @@ class MHomeSplash
 {
     let items:[MHomeSplashProtocol]
     
-    init(model:MHomeOptionsProtocol)
+    init(model:MHomeOptions)
     {
         let itemDescr:MHomeSplashDescr = MHomeSplashDescr(model:model)
         

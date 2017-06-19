@@ -71,7 +71,7 @@ class CHome:Controller<VHome>
         }
     }
     
-    private func showSplash(option:MHomeOptionsProtocol)
+    private func showSplash(option:MHomeOptions)
     {
         guard
             
@@ -88,12 +88,11 @@ class CHome:Controller<VHome>
             horizontal:ControllerParent.Horizontal.right)
     }
     
-    private func showFroob(option:MHomeOptionsProtocol)
+    private func showFroob(option:MHomeOptions)
     {
         guard
             
-            let parent:ControllerParent = self.parent as? ControllerParent,
-            let option:MHomeOptionsPurchase = option as? MHomeOptionsPurchase
+            let parent:ControllerParent = self.parent as? ControllerParent
             
         else
         {
@@ -108,9 +107,11 @@ class CHome:Controller<VHome>
     
     //MARK: public
     
-    func optionSelected(option:MHomeOptionsProtocol)
+    func optionSelected(option:MHomeOptions)
     {
-        if option.available
+        let available:Bool = option.available()
+        
+        if available
         {
             showSplash(option:option)
         }
@@ -169,7 +170,7 @@ class CHome:Controller<VHome>
             return
         }
         
-        let options:[MHomeOptionsPurchase] = model.purchaseOptions()
+        let options:[MHomeOptions] = model.purchaseOptions()
         
         let controller:CStore = CStore(options:options)
         parent.push(

@@ -5,7 +5,7 @@ class MHomeSplashDescr:MHomeSplashProtocol
     let title:String?
     let descr:String?
     
-    init(model:MHomeOptionsProtocol)
+    init(model:MHomeOptions)
     {
         title = model.title
         descr = model.descr
