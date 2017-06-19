@@ -124,7 +124,6 @@
 		DA5667761EF27571000055D8 /* MGamePollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667751EF27571000055D8 /* MGamePollutedGarden.swift */; };
 		DA5667811EF276CD000055D8 /* MHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667781EF276CD000055D8 /* MHome.swift */; };
 		DA5667821EF276CD000055D8 /* MHomeFooterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667791EF276CD000055D8 /* MHomeFooterProtocol.swift */; };
-		DA5667831EF276CD000055D8 /* MHomeOptionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56677A1EF276CD000055D8 /* MHomeOptionsProtocol.swift */; };
 		DA5667841EF276CD000055D8 /* MHomeFooterBoards.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56677C1EF276CD000055D8 /* MHomeFooterBoards.swift */; };
 		DA5667851EF276CD000055D8 /* MHomeFooterSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56677D1EF276CD000055D8 /* MHomeFooterSettings.swift */; };
 		DA5667861EF276CD000055D8 /* MHomeFooterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56677E1EF276CD000055D8 /* MHomeFooterStore.swift */; };
@@ -132,8 +131,6 @@
 		DA5667901EF2773B000055D8 /* MHomeOptionsPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56678F1EF2773B000055D8 /* MHomeOptionsPollutedGarden.swift */; };
 		DA5667921EF27A21000055D8 /* MSessionSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667911EF27A21000055D8 /* MSessionSettings.swift */; };
 		DA5667941EF2969B000055D8 /* assetSpinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5667931EF2969B000055D8 /* assetSpinner.xcassets */; };
-		DA5667961EF30B7D000055D8 /* MHomeOptionsFree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667951EF30B7D000055D8 /* MHomeOptionsFree.swift */; };
-		DA5667981EF30B88000055D8 /* MHomeOptionsPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667971EF30B88000055D8 /* MHomeOptionsPurchase.swift */; };
 		DA56679B1EF31023000055D8 /* ReformaCrossing.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5667991EF31023000055D8 /* ReformaCrossing.strings */; };
 		DA56679D1EF32342000055D8 /* COptionPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56679C1EF32342000055D8 /* COptionPollutedGarden.swift */; };
 		DA5667A41EF325E9000055D8 /* MOptionPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667A31EF325E9000055D8 /* MOptionPollutedGarden.swift */; };
@@ -319,7 +316,6 @@
 		DA5667751EF27571000055D8 /* MGamePollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGamePollutedGarden.swift; sourceTree = "<group>"; };
 		DA5667781EF276CD000055D8 /* MHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHome.swift; sourceTree = "<group>"; };
 		DA5667791EF276CD000055D8 /* MHomeFooterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeFooterProtocol.swift; sourceTree = "<group>"; };
-		DA56677A1EF276CD000055D8 /* MHomeOptionsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsProtocol.swift; sourceTree = "<group>"; };
 		DA56677C1EF276CD000055D8 /* MHomeFooterBoards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeFooterBoards.swift; sourceTree = "<group>"; };
 		DA56677D1EF276CD000055D8 /* MHomeFooterSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeFooterSettings.swift; sourceTree = "<group>"; };
 		DA56677E1EF276CD000055D8 /* MHomeFooterStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeFooterStore.swift; sourceTree = "<group>"; };
@@ -327,8 +323,6 @@
 		DA56678F1EF2773B000055D8 /* MHomeOptionsPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsPollutedGarden.swift; sourceTree = "<group>"; };
 		DA5667911EF27A21000055D8 /* MSessionSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSessionSettings.swift; sourceTree = "<group>"; };
 		DA5667931EF2969B000055D8 /* assetSpinner.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assetSpinner.xcassets; sourceTree = "<group>"; };
-		DA5667951EF30B7D000055D8 /* MHomeOptionsFree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsFree.swift; sourceTree = "<group>"; };
-		DA5667971EF30B88000055D8 /* MHomeOptionsPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsPurchase.swift; sourceTree = "<group>"; };
 		DA56679A1EF31023000055D8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ReformaCrossing.strings; sourceTree = "<group>"; };
 		DA56679C1EF32342000055D8 /* COptionPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COptionPollutedGarden.swift; sourceTree = "<group>"; };
 		DA5667A31EF325E9000055D8 /* MOptionPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGarden.swift; sourceTree = "<group>"; };
@@ -782,10 +776,7 @@
 			children = (
 				DA5667781EF276CD000055D8 /* MHome.swift */,
 				DA5667791EF276CD000055D8 /* MHomeFooterProtocol.swift */,
-				DA56677A1EF276CD000055D8 /* MHomeOptionsProtocol.swift */,
 				DA779A0A1EF88F1B00362A44 /* MHomeOptions.swift */,
-				DA5667951EF30B7D000055D8 /* MHomeOptionsFree.swift */,
-				DA5667971EF30B88000055D8 /* MHomeOptionsPurchase.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1083,14 +1074,12 @@
 				DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */,
 				DA56676E1EF27475000055D8 /* MGameFreeProtocol.swift in Sources */,
 				DA2DFFDC1EECB16A00365F23 /* ExtensionNSLayoutConstraint.swift in Sources */,
-				DA5667981EF30B88000055D8 /* MHomeOptionsPurchase.swift in Sources */,
 				DA779A071EF8872B00362A44 /* VHomeSplashCell.swift in Sources */,
 				DA11DE471EF10A480043749D /* MOptionReformaCrossingFoeFactory.swift in Sources */,
 				DA5667AE1EF35DD3000055D8 /* MOptionPollutedGardenBackground.swift in Sources */,
 				DA2D008F1EEE6D6F00365F23 /* MOptionReformaCrossingLaneGroup.swift in Sources */,
 				DA2D007E1EEDE38600365F23 /* MOptionReformaCrossingLaneH.swift in Sources */,
 				DAAF2FD81EF6FBB500589BB0 /* MStoreStatusPurchasing.swift in Sources */,
-				DA5667831EF276CD000055D8 /* MHomeOptionsProtocol.swift in Sources */,
 				DA2DFFE91EECB16A00365F23 /* VBorder.swift in Sources */,
 				DA2DFFEA1EECB16A00365F23 /* VCollection.swift in Sources */,
 				DA2892921EF6793300C80D3D /* VHomeSplashFooter.swift in Sources */,
@@ -1245,7 +1234,6 @@
 				DAAF2FD51EF6FBB500589BB0 /* MStoreStatusDeferred.swift in Sources */,
 				DA11DE4B1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift in Sources */,
 				DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */,
-				DA5667961EF30B7D000055D8 /* MHomeOptionsFree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
