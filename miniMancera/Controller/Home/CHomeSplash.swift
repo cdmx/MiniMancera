@@ -6,7 +6,7 @@ class CHomeSplash:Controller<VHomeSplash>
     
     init(model:MHomeOptionsProtocol)
     {
-        model = MHomeSplash(model:model)
+        self.model = MHomeSplash(model:model)
         super.init()
     }
     

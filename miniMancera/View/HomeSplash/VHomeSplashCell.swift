@@ -13,4 +13,11 @@ class VHomeSplashCell:UICollectionViewCell
     {
         return nil
     }
+    
+    //MARK: public
+    
+    func config(model:MHomeSplashProtocol)
+    {
+        
+    }
 }

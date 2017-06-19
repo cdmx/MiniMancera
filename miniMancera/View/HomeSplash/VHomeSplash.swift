@@ -65,6 +65,16 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
         return nil
     }
     
+    //MARK: private
+    
+    private func modelAtIndex(index:IndexPath) -> MHomeSplashProtocol
+    {
+        let controller:CHomeSplash = self.controller as! CHomeSplash
+        let item:MHomeSplashProtocol = controller.model.items[index.item]
+        
+        return item
+    }
+    
     //MARK: public
     
     func refresh()
@@ -74,12 +84,22 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     //MARK: collectionView delegate
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
+    {
+        let item:MHomeSplashProtocol = modelAtIndex(index:indexPath)
+        let width:CGFloat = bounds.maxX
+        let height:CGFloat = item.cellHeightFor(width:width)
+        let size:CGSize = CGSize(width:width, height:height)
+        
+        return size
+    }
+    
+    func numberOfSections(in collectionView:UICollectionView) -> Int
     {
         return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
     {
         let controller:CHomeSplash = self.controller as! CHomeSplash
         let count:Int = controller.model.items.count
@@ -89,6 +109,13 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
+        let item:MHomeSplashProtocol = modelAtIndex(index:indexPath)
+        let cell:VHomeSplashCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier:
+            item.reusableIdentifier,
+            for:indexPath) as! VHomeSplashCell
+        cell.config(model:item)
         
+        return cell
     }
 }
