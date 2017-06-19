@@ -775,8 +775,8 @@
 			isa = PBXGroup;
 			children = (
 				DA5667781EF276CD000055D8 /* MHome.swift */,
-				DA5667791EF276CD000055D8 /* MHomeFooterProtocol.swift */,
 				DA779A0A1EF88F1B00362A44 /* MHomeOptions.swift */,
+				DA5667791EF276CD000055D8 /* MHomeFooterProtocol.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";

@@ -2,7 +2,7 @@ import Foundation
 
 class MHome
 {
-    private(set) var options:[MHomeOptionsProtocol]
+    private(set) var options:[MHomeOptions]
     let footer:[MHomeFooterProtocol]
     
     private class func factoryOptions() -> [MHomeOptionsProtocol]
