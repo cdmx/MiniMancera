@@ -3,10 +3,12 @@ import UIKit
 class CHomeSplash:Controller<VHomeSplash>
 {
     let model:MHomeSplash
+    private(set) weak var dataOption:DOption?
     
     init(model:MHomeOptionsProtocol)
     {
         self.model = MHomeSplash(model:model)
+        self.dataOption = model.dataOption
         super.init()
     }
     

@@ -2,11 +2,13 @@ import UIKit
 
 class MHomeSplashDescr:MHomeSplashProtocol
 {
-    private weak var model:MHomeOptionsProtocol?
+    let title:String?
+    let descr:String?
     
     init(model:MHomeOptionsProtocol)
     {
-        self.model = model
+        title = model.title
+        descr = model.descr
     }
     
     //MARK: splash protocol
@@ -15,7 +17,7 @@ class MHomeSplashDescr:MHomeSplashProtocol
     {
         get
         {
-            return ""
+            return VHomeSplashCellDescr.reusableIdentifier
         }
     }
     
