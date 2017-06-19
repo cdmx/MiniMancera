@@ -2,11 +2,11 @@ import UIKit
 
 class CHomeSplash:Controller<VHomeSplash>
 {
-    private(set) weak var model:MHomeOptionsProtocol!
+    let model:MHomeSplash
     
     init(model:MHomeOptionsProtocol)
     {
-        self.model = model
+        model = MHomeSplash(model:model)
         super.init()
     }
     

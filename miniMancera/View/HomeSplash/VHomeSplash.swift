@@ -71,4 +71,24 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
     {
         viewOptions.refresh()
     }
+    
+    //MARK: collectionView delegate
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        let controller:CHomeSplash = self.controller as! CHomeSplash
+        let count:Int = controller.model.items.count
+        
+        return count
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        
+    }
 }
