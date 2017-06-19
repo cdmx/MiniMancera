@@ -2,7 +2,9 @@ import UIKit
 
 class VHomeSplashImage:UIView
 {
+    let kHeight:CGFloat = 200
     private weak var controller:CHomeSplash!
+    private weak var imageView:UIImageView!
     private let kBorderHeight:CGFloat = 1
     
     init(controller:CHomeSplash)
@@ -19,6 +21,7 @@ class VHomeSplashImage:UIView
         imageView.contentMode = UIViewContentMode.center
         imageView.clipsToBounds = true
         imageView.image = controller.model.splashImage
+        self.imageView = imageView
         
         let border:VBorder = VBorder(color:UIColor.white)
         
@@ -43,5 +46,21 @@ class VHomeSplashImage:UIView
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func layoutSubviews()
+    {
+        let height:CGFloat = imageView.bounds.maxY
+        
+        if height > kHeight
+        {
+            imageView.contentMode = UIViewContentMode.scaleAspectFit
+        }
+        else
+        {
+            imageView.contentMode = UIViewContentMode.center
+        }
+        
+        super.layoutSubviews()
     }
 }
