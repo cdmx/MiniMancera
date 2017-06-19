@@ -1,6 +1,6 @@
 import UIKit
 
-class MHomeOptionsPurchase
+class MHomeOptionsPurchase:MHomeOptions
 {
     private(set) weak var dataOption:DOption?
     

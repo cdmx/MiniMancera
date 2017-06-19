@@ -1,10 +1,10 @@
 import UIKit
 
-class MHomeOptionsFree:MHomeOptionsProtocol
+class MHomeOptionsFree:MHomeOptions
 {
     private(set) weak var dataOption:DOption?
     
-    var available:Bool
+    override var available:Bool
     {
         get
         {
