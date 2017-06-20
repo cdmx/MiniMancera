@@ -2,10 +2,14 @@ import UIKit
 
 class VHomeSplashCellScore:VHomeSplashCell
 {
+    private weak var labelScore:UILabel!
+    private weak var imageView:UIImageView!
+    
     override init(frame:CGRect)
     {
         super.init(frame:frame)
         
+        let labelScore:UILabel = UILabel()
         
     }
     
