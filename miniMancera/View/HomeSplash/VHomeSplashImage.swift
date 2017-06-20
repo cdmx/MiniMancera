@@ -54,7 +54,7 @@ class VHomeSplashImage:UIView
         
         if height > kHeight
         {
-            imageView.contentMode = UIViewContentMode.scaleAspectFit
+            imageView.contentMode = UIViewContentMode.scaleAspectFill
         }
         else
         {

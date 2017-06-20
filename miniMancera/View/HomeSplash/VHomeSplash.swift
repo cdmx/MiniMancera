@@ -99,9 +99,15 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     func scrollViewDidScroll(_ scrollView:UIScrollView)
     {
-        var offsetY:CGFloat = scrollView.contentOffset.y
+        let offsetY:CGFloat = scrollView.contentOffset.y
+        var imageScaled:CGFloat = kImageHeight - offsetY
         
-        print(offsetY)
+        if imageScaled < 0
+        {
+            imageScaled = 0
+        }
+        
+        layoutImageHeight.constant = imageScaled
     }
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
