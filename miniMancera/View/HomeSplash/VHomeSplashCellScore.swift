@@ -10,8 +10,8 @@ class VHomeSplashCellScore:VHomeSplashCell
     private var currentScore:Int
     private let numberFormatter:NumberFormatter
     private let kFontSize:CGFloat = 20
-    private let kLabelWidth:CGFloat = 150
-    private let kImageWidth:CGFloat = 60
+    private let kLabelWidth:CGFloat = 110
+    private let kImageWidth:CGFloat = 90
     private let kTimerInterval:TimeInterval = 0.1
     private let kMinIntegers:Int = 0
     private let kMaxDecimals:Int = 0
@@ -39,6 +39,7 @@ class VHomeSplashCellScore:VHomeSplashCell
         labelScore.isUserInteractionEnabled = false
         labelScore.font = UIFont.game(size:kFontSize)
         labelScore.textColor = UIColor.white
+        labelScore.textAlignment = NSTextAlignment.right
         self.labelScore = labelScore
         
         addSubview(imageView)
