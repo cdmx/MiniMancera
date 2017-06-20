@@ -34,6 +34,14 @@ class MHomeOptionsReformaCrossing:MHomeOptions
         }
     }
     
+    override var scoreIcon:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericReformaCrossingScore")
+        }
+    }
+    
     override func gameController() -> UIViewController?
     {
         guard
