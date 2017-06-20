@@ -10,7 +10,6 @@ class VHomeSplashCellScore:VHomeSplashCell
         super.init(frame:frame)
         
         let labelScore:UILabel = UILabel()
-        
     }
     
     required init?(coder:NSCoder)

@@ -24,7 +24,6 @@ class AppDelegate:UIResponder, UIApplicationDelegate
     func applicationDidBecomeActive(_ application:UIApplication)
     {
         NotificationCenter.default.post(name:Notification.enterForeground, object:nil)
-        
         MSession.sharedInstance.settings?.addTtl()
     }
     
