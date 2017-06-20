@@ -3,14 +3,17 @@ import UIKit
 class MHomeSplashDescr:MHomeSplashProtocol
 {
     let attributedString:NSAttributedString
-    let kMargin:CGFloat = 10
-    private let margin2:CGFloat
+    let kVerticalMargin:CGFloat = 30
+    let kMarginHorizontal:CGFloat = 10
+    private let verticalMargin2:CGFloat
+    private let marginHorizontal2:CGFloat
     private let drawingOptions:NSStringDrawingOptions
     private let kMaxHeight:CGFloat = 600
     
     init(model:MHomeOptions)
     {
-        margin2 = kMargin + kMargin
+        marginHorizontal2 = kMarginHorizontal + kMarginHorizontal
+        verticalMargin2 = kVerticalMargin + kVerticalMargin
         drawingOptions = NSStringDrawingOptions([
             NSStringDrawingOptions.usesFontLeading,
             NSStringDrawingOptions.usesLineFragmentOrigin])
@@ -59,7 +62,7 @@ class MHomeSplashDescr:MHomeSplashProtocol
     
     func cellHeightFor(width:CGFloat) -> CGFloat
     {
-        let usableWidth:CGFloat = width - margin2
+        let usableWidth:CGFloat = width - marginHorizontal2
         let maxSize:CGSize = CGSize(width:usableWidth, height:kMaxHeight)
         
         let boundingRects:CGRect = attributedString.boundingRect(
@@ -67,7 +70,7 @@ class MHomeSplashDescr:MHomeSplashProtocol
             options:drawingOptions,
             context:nil)
         let height:CGFloat = ceil(boundingRects.size.height)
-        let heightMargin:CGFloat = height + margin2
+        let heightMargin:CGFloat = height + verticalMargin2
         
         return heightMargin
     }

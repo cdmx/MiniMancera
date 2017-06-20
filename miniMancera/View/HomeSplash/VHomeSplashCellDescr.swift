@@ -3,7 +3,10 @@ import UIKit
 class VHomeSplashCellDescr:VHomeSplashCell
 {
     private weak var labelDescr:UILabel!
-    private let kMarginHorizontal:CGFloat = 10
+    private weak var layoutLabelTop:NSLayoutConstraint!
+    private weak var layoutLabelBottom:NSLayoutConstraint!
+    private weak var layoutLabelLeft:NSLayoutConstraint!
+    private weak var layoutLabelRight:NSLayoutConstraint!
     
     override init(frame:CGRect)
     {
@@ -19,13 +22,18 @@ class VHomeSplashCellDescr:VHomeSplashCell
         
         addSubview(labelDescr)
         
-        NSLayoutConstraint.equalsVertical(
+        layoutLabelTop = NSLayoutConstraint.topToTop(
             view:labelDescr,
             toView:self)
-        NSLayoutConstraint.equalsHorizontal(
+        layoutLabelBottom = NSLayoutConstraint.bottomToBottom(
             view:labelDescr,
-            toView:self,
-            margin:kMarginHorizontal)
+            toView:self)
+        layoutLabelLeft = NSLayoutConstraint.leftToLeft(
+            view:labelDescr,
+            toView:self)
+        layoutLabelRight = NSLayoutConstraint.rightToRight(
+            view:labelDescr,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
@@ -47,5 +55,9 @@ class VHomeSplashCellDescr:VHomeSplashCell
         }
         
         labelDescr.attributedText = model.attributedString
+        layoutLabelTop.constant = model.kVerticalMargin
+        layoutLabelBottom.constant = -model.kVerticalMargin
+        layoutLabelLeft.constant = model.kMarginHorizontal
+        layoutLabelRight.constant = -model.kMarginHorizontal
     }
 }
