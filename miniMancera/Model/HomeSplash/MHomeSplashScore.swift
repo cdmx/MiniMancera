@@ -3,7 +3,6 @@ import UIKit
 class MHomeSplashScore:MHomeSplashProtocol
 {
     let score:Int
-    let suffix:String
     let icon:UIImage?
     private let kCellHeight:CGFloat = 200
     
@@ -18,15 +17,6 @@ class MHomeSplashScore:MHomeSplashProtocol
         else
         {
             score = 0
-        }
-        
-        if let suffix:String = model.scoreSuffix
-        {
-            self.suffix = suffix
-        }
-        else
-        {
-            suffix = ""
         }
     }
     

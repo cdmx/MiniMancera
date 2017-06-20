@@ -7,7 +7,6 @@ class MHomeOptions
     private(set) var modelType:MOptionProtocol?
     private(set) var title:String?
     private(set) var descr:String?
-    private(set) var scoreSuffix:String?
     private(set) var thumbnail:UIImage?
     private(set) var splashImage:UIImage?
     private(set) var scoreIcon:UIImage?

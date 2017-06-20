@@ -103,7 +103,6 @@ class VHomeSplashCellScore:VHomeSplashCell
         }
         
         imageView.image = model.icon
-        numberFormatter.positiveSuffix = model.suffix
         currentScore = 0
         expectedScore = model.score
         
