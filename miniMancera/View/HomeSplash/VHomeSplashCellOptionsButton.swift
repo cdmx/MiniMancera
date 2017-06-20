@@ -2,7 +2,12 @@ import UIKit
 
 class VHomeSplashCellOptionsButton:UIButton
 {
-    init(image:UIImage, text:String)
+    private let kTitleMargin:CGFloat = 30
+    
+    init(
+        image:UIImage,
+        text:String,
+        alignment:NSTextAlignment)
     {
         super.init(frame:CGRect.zero)
         clipsToBounds = true
@@ -20,13 +25,25 @@ class VHomeSplashCellOptionsButton:UIButton
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.backgroundColor = UIColor.clear
         titleLabel.isUserInteractionEnabled = false
-        titleLabel.textAlignment = NSTextAlignment.center
+        titleLabel.textAlignment = alignment
         titleLabel.font = UIFont.bold(size:16)
         titleLabel.textColor = UIColor.white
         titleLabel.text = text
         
         addSubview(imageView)
         addSubview(titleLabel)
+        
+        NSLayoutConstraint.equals(
+            view:imageView,
+            toView:self)
+        
+        NSLayoutConstraint.equalsVertical(
+            view:titleLabel,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
+            view:titleLabel,
+            toView:self,
+            margin:kTitleMargin)
     }
     
     required init?(coder:NSCoder)

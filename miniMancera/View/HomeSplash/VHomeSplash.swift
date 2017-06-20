@@ -114,7 +114,7 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
         let item:MHomeSplashProtocol = modelAtIndex(index:indexPath)
-        let width:CGFloat = bounds.maxX
+        let width:CGFloat = collectionView.bounds.maxX
         let height:CGFloat = item.cellHeightFor(width:width)
         let size:CGSize = CGSize(width:width, height:height)
         
