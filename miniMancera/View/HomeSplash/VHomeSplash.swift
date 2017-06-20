@@ -31,6 +31,7 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerCell(cell:VHomeSplashCellDescr.self)
+        collectionView.registerCell(cell:VHomeSplashCellOptions.self)
         self.collectionView = collectionView
         
         addSubview(viewBackground)
