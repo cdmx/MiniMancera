@@ -33,4 +33,20 @@ class MHomeOptionsPollutedGarden:MHomeOptions
             return #imageLiteral(resourceName: "assetGenericPollutedGardenSplash")
         }
     }
+    
+    override func gameController() -> UIViewController?
+    {
+        guard
+            
+            let dataOption:DOption = self.dataOption
+            
+        else
+        {
+            return nil
+        }
+        
+        let controller:COptionPollutedGarden = COptionPollutedGarden(dataOption:dataOption)
+        
+        return controller
+    }
 }

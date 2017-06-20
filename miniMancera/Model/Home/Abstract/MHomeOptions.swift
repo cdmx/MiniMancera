@@ -4,6 +4,7 @@ class MHomeOptions
 {
     let available:Bool
     private(set) weak var dataOption:DOption?
+    private(set) var modelType:MOptionProtocol?
     private(set) var title:String?
     private(set) var descr:String?
     private(set) var thumbnail:UIImage?
@@ -32,21 +33,5 @@ class MHomeOptions
     func gameController() -> UIViewController?
     {
         return nil
-    }
-    
-    final func gameControllerForType<T:MOptionProtocol>(controller:ControllerGame<T>.Type) -> ControllerGame<T>?
-    {
-        guard
-            
-            let dataOption:DOption = self.dataOption
-        
-        else
-        {
-            return nil
-        }
-        
-        let controller:ControllerGame<T> = ControllerGame(dataOption:dataOption)
-        
-        return controller
     }
 }

@@ -9,6 +9,7 @@ class CHomeSplash:Controller<VHomeSplash>
     init(model:MHomeOptions)
     {
         self.model = MHomeSplash(model:model)
+        self.modelOption = model
         self.dataOption = model.dataOption
         super.init()
     }
@@ -52,7 +53,14 @@ class CHomeSplash:Controller<VHomeSplash>
     
     func play()
     {
-        //let controller:ControllerGame.Type? = modelOption.gameController()
+        guard
+            
+            let controller:UIViewController = modelOption.gameController()
+        
+        else
+        {
+            return
+        }
         
         /*
         guard
@@ -62,8 +70,8 @@ class CHomeSplash:Controller<VHomeSplash>
         else
         {
             return
-        }
+        }*/
         
-        parent?.present(controller, animated:true, completion:nil)*/
+        parent?.present(controller, animated:true, completion:nil)
     }
 }

@@ -33,4 +33,20 @@ class MHomeOptionsReformaCrossing:MHomeOptions
             return #imageLiteral(resourceName: "assetGenericReformaCrossingSplash")
         }
     }
+    
+    override func gameController() -> UIViewController?
+    {
+        guard
+            
+            let dataOption:DOption = self.dataOption
+            
+        else
+        {
+            return nil
+        }
+        
+        let controller:COptionReformaCrossing = COptionReformaCrossing(dataOption:dataOption)
+        
+        return controller
+    }
 }
