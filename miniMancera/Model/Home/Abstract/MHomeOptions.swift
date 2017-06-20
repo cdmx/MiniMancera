@@ -10,6 +10,7 @@ class MHomeOptions
     private(set) var scoreSuffix:String?
     private(set) var thumbnail:UIImage?
     private(set) var splashImage:UIImage?
+    private(set) var scoreIcon:UIImage?
     
     required init(dataOption:DOption)
     {
