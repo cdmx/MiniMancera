@@ -3,6 +3,7 @@ import UIKit
 class VHomeSplashCellOptions:VHomeSplashCell
 {
     private let kButtonsWidth:CGFloat = 140
+    private let kButtonsMarginVertical:CGFloat = 20
     
     override init(frame:CGRect)
     {
@@ -31,7 +32,8 @@ class VHomeSplashCellOptions:VHomeSplashCell
         
         NSLayoutConstraint.equalsVertical(
             view:buttonPlay,
-            toView:self)
+            toView:self,
+            margin:kButtonsMarginVertical)
         NSLayoutConstraint.rightToRight(
             view:buttonPlay,
             toView:self)
@@ -41,7 +43,8 @@ class VHomeSplashCellOptions:VHomeSplashCell
         
         NSLayoutConstraint.equalsVertical(
             view:buttonExit,
-            toView:self)
+            toView:self,
+            margin:kButtonsMarginVertical)
         NSLayoutConstraint.leftToLeft(
             view:buttonExit,
             toView:self)

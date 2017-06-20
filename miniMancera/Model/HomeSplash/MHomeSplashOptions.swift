@@ -2,7 +2,7 @@ import UIKit
 
 class MHomeSplashOptions:MHomeSplashProtocol
 {
-    private let kCellHeight:CGFloat = 100
+    private let kCellHeight:CGFloat = 110
     
     //MARK: splash protocol
     

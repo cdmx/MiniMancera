@@ -4,8 +4,7 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
 {
     private weak var collectionView:VCollection!
     private weak var viewBackground:VHomeSplashBackground!
-    private weak var viewOptions:VHomeSplashOptions!
-    private let kOptionsHeight:CGFloat = 80
+    private let kCollectionBottom:CGFloat = 20
     
     required init(controller:UIViewController)
     {
@@ -22,9 +21,6 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
         
         let viewBackground:VHomeSplashBackground = VHomeSplashBackground(controller:controller)
         self.viewBackground = viewBackground
-        let viewFooter:VHomeSplashFooter = VHomeSplashFooter(controller:controller)
-        let viewOptions:VHomeSplashOptions = VHomeSplashOptions(controller:controller)
-        self.viewOptions = viewOptions
         
         let collectionView:VCollection = VCollection()
         collectionView.alwaysBounceVertical = true
@@ -34,9 +30,16 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
         collectionView.registerCell(cell:VHomeSplashCellOptions.self)
         self.collectionView = collectionView
         
+        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+        {
+            flow.sectionInset = UIEdgeInsets(
+                top:viewBackground.kHeight,
+                left:0,
+                bottom:kCollectionBottom,
+                right:0)
+        }
+        
         addSubview(viewBackground)
-        addSubview(viewOptions)
-        addSubview(viewFooter)
         addSubview(collectionView)
         
         NSLayoutConstraint.topToTop(
@@ -47,26 +50,6 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
             constant:viewBackground.kHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBackground,
-            toView:self)
-        
-        NSLayoutConstraint.topToBottom(
-            view:viewOptions,
-            toView:viewBackground)
-        NSLayoutConstraint.height(
-            view:viewOptions,
-            constant:kOptionsHeight)
-        NSLayoutConstraint.equalsHorizontal(
-            view:viewOptions,
-            toView:self)
-        
-        NSLayoutConstraint.topToBottom(
-            view:viewFooter,
-            toView:viewOptions)
-        NSLayoutConstraint.bottomToBottom(
-            view:viewFooter,
-            toView:self)
-        NSLayoutConstraint.equalsHorizontal(
-            view:viewFooter,
             toView:self)
         
         NSLayoutConstraint.equals(
@@ -93,7 +76,7 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     func refresh()
     {
-        viewOptions.refresh()
+        collectionView.reloadData()
     }
     
     //MARK: collectionView delegate
