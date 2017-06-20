@@ -10,6 +10,19 @@ class VHomeSplashCellScore:VHomeSplashCell
         super.init(frame:frame)
         
         let labelScore:UILabel = UILabel()
+        labelScore.translatesAutoresizingMaskIntoConstraints = false
+        labelScore.isUserInteractionEnabled = false
+        labelScore.font = UIFont.game(size:20)
+        labelScore.textColor = UIColor.white
+        labelScore.textAlignment = NSTextAlignment.center
+        labelScore.text = "120"
+        self.labelScore = labelScore
+        
+        addSubview(labelScore)
+        
+        NSLayoutConstraint.equals(
+            view:labelScore,
+            toView:self)
     }
     
     required init?(coder:NSCoder)

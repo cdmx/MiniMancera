@@ -26,8 +26,9 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
         collectionView.alwaysBounceVertical = true
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.registerCell(cell:VHomeSplashCellDescr.self)
         collectionView.registerCell(cell:VHomeSplashCellOptions.self)
+        collectionView.registerCell(cell:VHomeSplashCellScore.self)
+        collectionView.registerCell(cell:VHomeSplashCellDescr.self)
         self.collectionView = collectionView
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow

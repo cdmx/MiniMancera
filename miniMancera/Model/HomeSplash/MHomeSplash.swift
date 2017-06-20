@@ -9,10 +9,12 @@ class MHomeSplash
     {
         self.modelOption = modelOption
         let itemOptions:MHomeSplashOptions = MHomeSplashOptions()
+        let itemScore:MHomeSplashScore = MHomeSplashScore()
         let itemDescr:MHomeSplashDescr = MHomeSplashDescr(model:modelOption)
         
         items = [
             itemOptions,
+            itemScore,
             itemDescr]
     }
 }
