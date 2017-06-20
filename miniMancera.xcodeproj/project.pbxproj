@@ -46,7 +46,6 @@
 		DA2892871EF64E3300C80D3D /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2892861EF64E3300C80D3D /* brand.xcassets */; };
 		DA2892891EF66B7E00C80D3D /* CHomeSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2892881EF66B7E00C80D3D /* CHomeSplash.swift */; };
 		DA28928C1EF66BE800C80D3D /* VHomeSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28928B1EF66BE800C80D3D /* VHomeSplash.swift */; };
-		DA2892921EF6793300C80D3D /* VHomeSplashFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2892911EF6793300C80D3D /* VHomeSplashFooter.swift */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -243,7 +242,6 @@
 		DA2892861EF64E3300C80D3D /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DA2892881EF66B7E00C80D3D /* CHomeSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeSplash.swift; sourceTree = "<group>"; };
 		DA28928B1EF66BE800C80D3D /* VHomeSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSplash.swift; sourceTree = "<group>"; };
-		DA2892911EF6793300C80D3D /* VHomeSplashFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSplashFooter.swift; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -442,7 +440,6 @@
 			children = (
 				DA28928B1EF66BE800C80D3D /* VHomeSplash.swift */,
 				DA446A6E1EF8B59000CB38D9 /* VHomeSplashBackground.swift */,
-				DA2892911EF6793300C80D3D /* VHomeSplashFooter.swift */,
 				DA779A061EF8872B00362A44 /* VHomeSplashCell.swift */,
 				DAB4F95D1EF974C400C389C7 /* VHomeSplashCellOptions.swift */,
 				DA27A60F1EF9A340009378E2 /* VHomeSplashCellOptionsButton.swift */,
@@ -1099,7 +1096,6 @@
 				DAAF2FD81EF6FBB500589BB0 /* MStoreStatusPurchasing.swift in Sources */,
 				DA2DFFE91EECB16A00365F23 /* VBorder.swift in Sources */,
 				DA2DFFEA1EECB16A00365F23 /* VCollection.swift in Sources */,
-				DA2892921EF6793300C80D3D /* VHomeSplashFooter.swift in Sources */,
 				DA2D007C1EEDE38600365F23 /* MOptionReformaCrossingLaneF.swift in Sources */,
 				DA5667841EF276CD000055D8 /* MHomeFooterBoards.swift in Sources */,
 				DA2DFFED1EECB16A00365F23 /* VPushBackground.swift in Sources */,

@@ -26,6 +26,7 @@ class VHomeSplashCellScore:VHomeSplashCell
         currentScore = 0
         
         super.init(frame:frame)
+        isUserInteractionEnabled = false
         
         let imageView:UIImageView = UIImageView()
         imageView.isUserInteractionEnabled = false
