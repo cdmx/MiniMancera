@@ -20,7 +20,7 @@ class VHomeSplashImage:UIView
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = UIViewContentMode.center
         imageView.clipsToBounds = true
-//        imageView.image = controller.model.optionModel.splashImage
+        imageView.image = controller.model.modelOption.splashImage
         self.imageView = imageView
         
         let border:VBorder = VBorder(color:UIColor.white)

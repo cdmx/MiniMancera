@@ -82,7 +82,7 @@ class CHome:Controller<VHome>
             return
         }
         
-        let controller:CHomeSplash = CHomeSplash(model:option)
+        let controller:CHomeSplash = CHomeSplash(modelOption:option)
         parent.push(
             controller:controller,
             horizontal:ControllerParent.Horizontal.right)

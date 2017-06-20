@@ -3,10 +3,12 @@ import Foundation
 class MHomeSplash
 {
     let items:[MHomeSplashProtocol]
+    private(set) weak var modelOption:MHomeOptions!
     
-    init(model:MHomeOptions)
+    init(modelOption:MHomeOptions)
     {
-        let itemDescr:MHomeSplashDescr = MHomeSplashDescr(model:model)
+        self.modelOption = modelOption
+        let itemDescr:MHomeSplashDescr = MHomeSplashDescr(model:modelOption)
         
         items = [
             itemDescr]

@@ -3,14 +3,10 @@ import UIKit
 class CHomeSplash:Controller<VHomeSplash>
 {
     let model:MHomeSplash
-    private(set) weak var modelOption:MHomeOptions!
-    private(set) weak var dataOption:DOption?
     
-    init(model:MHomeOptions)
+    init(modelOption:MHomeOptions)
     {
-        self.model = MHomeSplash(model:model)
-        self.modelOption = model
-        self.dataOption = model.dataOption
+        self.model = MHomeSplash(modelOption:modelOption)
         super.init()
     }
     
@@ -55,22 +51,12 @@ class CHomeSplash:Controller<VHomeSplash>
     {
         guard
             
-            let controller:UIViewController = modelOption.gameController()
+            let controller:UIViewController = model.modelOption.gameController()
         
         else
         {
             return
         }
-        
-        /*
-        guard
-            
-            let controller:UIViewController = model.optionModel.selected()
-            
-        else
-        {
-            return
-        }*/
         
         parent?.present(controller, animated:true, completion:nil)
     }

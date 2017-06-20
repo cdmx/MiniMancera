@@ -4,6 +4,7 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
 {
     private weak var collectionView:VCollection!
     private weak var viewOptions:VHomeSplashOptions!
+    private weak var layoutImageHeight:NSLayoutConstraint!
     private let kImageHeight:CGFloat = 200
     private let kOptionsHeight:CGFloat = 80
     
@@ -25,14 +26,22 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
         let viewOptions:VHomeSplashOptions = VHomeSplashOptions(controller:controller)
         self.viewOptions = viewOptions
         
+        let collectionView:VCollection = VCollection()
+        collectionView.alwaysBounceVertical = true
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.registerCell(cell:VHomeSplashCellDescr.self)
+        self.collectionView = collectionView
+        
         addSubview(viewImage)
         addSubview(viewOptions)
         addSubview(viewFooter)
+        addSubview(collectionView)
         
         NSLayoutConstraint.topToTop(
             view:viewImage,
             toView:self)
-        NSLayoutConstraint.height(
+        layoutImageHeight = NSLayoutConstraint.height(
             view:viewImage,
             constant:kImageHeight)
         NSLayoutConstraint.equalsHorizontal(
@@ -57,6 +66,10 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
             toView:self)
         NSLayoutConstraint.equalsHorizontal(
             view:viewFooter,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:collectionView,
             toView:self)
     }
     
@@ -83,6 +96,13 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
     }
     
     //MARK: collectionView delegate
+    
+    func scrollViewDidScroll(_ scrollView:UIScrollView)
+    {
+        var offsetY:CGFloat = scrollView.contentOffset.y
+        
+        print(offsetY)
+    }
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
@@ -117,5 +137,15 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
         cell.config(model:item)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        return false
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldHighlightItemAt indexPath:IndexPath) -> Bool
+    {
+        return false
     }
 }
