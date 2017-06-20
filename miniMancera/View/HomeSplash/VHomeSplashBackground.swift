@@ -1,8 +1,9 @@
 import UIKit
 
-class VHomeSplashImage:UIView
+class VHomeSplashBackground:UIView
 {
     let kHeight:CGFloat = 200
+    weak var layoutHeight:NSLayoutConstraint!
     private weak var controller:CHomeSplash!
     private weak var imageView:UIImageView!
     private let kBorderHeight:CGFloat = 1

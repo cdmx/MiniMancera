@@ -3,9 +3,8 @@ import UIKit
 class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
+    private weak var viewBackground:VHomeSplashBackground!
     private weak var viewOptions:VHomeSplashOptions!
-    private weak var layoutImageHeight:NSLayoutConstraint!
-    private let kImageHeight:CGFloat = 200
     private let kOptionsHeight:CGFloat = 80
     
     required init(controller:UIViewController)
@@ -21,7 +20,8 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
             return
         }
         
-        let viewImage:VHomeSplashImage = VHomeSplashImage(controller:controller)
+        let viewBackground:VHomeSplashBackground = VHomeSplashBackground(controller:controller)
+        self.viewBackground = viewBackground
         let viewFooter:VHomeSplashFooter = VHomeSplashFooter(controller:controller)
         let viewOptions:VHomeSplashOptions = VHomeSplashOptions(controller:controller)
         self.viewOptions = viewOptions
@@ -33,24 +33,24 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
         collectionView.registerCell(cell:VHomeSplashCellDescr.self)
         self.collectionView = collectionView
         
-        addSubview(viewImage)
+        addSubview(viewBackground)
         addSubview(viewOptions)
         addSubview(viewFooter)
         addSubview(collectionView)
         
         NSLayoutConstraint.topToTop(
-            view:viewImage,
+            view:viewBackground,
             toView:self)
-        layoutImageHeight = NSLayoutConstraint.height(
-            view:viewImage,
-            constant:kImageHeight)
+        viewBackground.layoutHeight = NSLayoutConstraint.height(
+            view:viewBackground,
+            constant:viewBackground.kHeight)
         NSLayoutConstraint.equalsHorizontal(
-            view:viewImage,
+            view:viewBackground,
             toView:self)
         
         NSLayoutConstraint.topToBottom(
             view:viewOptions,
-            toView:viewImage)
+            toView:viewBackground)
         NSLayoutConstraint.height(
             view:viewOptions,
             constant:kOptionsHeight)
@@ -100,14 +100,14 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
     func scrollViewDidScroll(_ scrollView:UIScrollView)
     {
         let offsetY:CGFloat = scrollView.contentOffset.y
-        var imageScaled:CGFloat = kImageHeight - offsetY
+        var imageScaled:CGFloat = viewBackground.kHeight - offsetY
         
         if imageScaled < 0
         {
             imageScaled = 0
         }
         
-        layoutImageHeight.constant = imageScaled
+        viewBackground.layoutHeight.constant = imageScaled
     }
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
