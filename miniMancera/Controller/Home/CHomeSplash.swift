@@ -3,6 +3,7 @@ import UIKit
 class CHomeSplash:Controller<VHomeSplash>
 {
     let model:MHomeSplash
+    private(set) weak var modelOption:MHomeOptions!
     private(set) weak var dataOption:DOption?
     
     init(model:MHomeOptions)
@@ -51,6 +52,8 @@ class CHomeSplash:Controller<VHomeSplash>
     
     func play()
     {
+        //let controller:ControllerGame.Type? = modelOption.gameController()
+        
         /*
         guard
             

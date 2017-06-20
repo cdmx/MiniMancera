@@ -29,8 +29,24 @@ class MHomeOptions
     
     //MARK: public
     
-    func gameController<T:MOptionProtocol>() -> ControllerGame<T>.Type?
+    func gameController() -> UIViewController?
     {
         return nil
+    }
+    
+    final func gameControllerForType<T:MOptionProtocol>(controller:ControllerGame<T>.Type) -> ControllerGame<T>?
+    {
+        guard
+            
+            let dataOption:DOption = self.dataOption
+        
+        else
+        {
+            return nil
+        }
+        
+        let controller:ControllerGame<T> = ControllerGame(dataOption:dataOption)
+        
+        return controller
     }
 }
