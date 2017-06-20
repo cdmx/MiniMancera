@@ -2,22 +2,14 @@ import UIKit
 
 class MHomeSplashScore:MHomeSplashProtocol
 {
-    let score:Int
     let icon:UIImage?
-    private let kCellHeight:CGFloat = 200
+    private(set) weak var dataOption:DOption?
+    private let kCellHeight:CGFloat = 70
     
     init(model:MHomeOptions)
     {
         icon = model.scoreIcon
-        
-        if let score:Int32 = model.dataOption?.maxScore
-        {
-            self.score = Int(score)
-        }
-        else
-        {
-            score = 0
-        }
+        self.dataOption = model.dataOption
     }
     
     //MARK: splash protocol

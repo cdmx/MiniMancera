@@ -11,8 +11,8 @@ class VHomeSplashCellScore:VHomeSplashCell
     private let numberFormatter:NumberFormatter
     private let kFontSize:CGFloat = 20
     private let kLabelWidth:CGFloat = 110
-    private let kImageWidth:CGFloat = 90
-    private let kTimerInterval:TimeInterval = 0.1
+    private let kImageWidth:CGFloat = 60
+    private let kTimerInterval:TimeInterval = 0.02
     private let kMinIntegers:Int = 0
     private let kMaxDecimals:Int = 0
     
@@ -103,10 +103,19 @@ class VHomeSplashCellScore:VHomeSplashCell
         }
         
         imageView.image = model.icon
-        currentScore = 0
-        expectedScore = model.score
         
-        print()
+        guard
+        
+            let dataOption:DOption = model.dataOption
+        
+        else
+        {
+            return
+        }
+        
+        expectedScore = Int(dataOption.maxScore)
+        currentScore = 0
+        printScore()
         
         timer = Timer.scheduledTimer(
             timeInterval:kTimerInterval,
@@ -128,13 +137,13 @@ class VHomeSplashCellScore:VHomeSplashCell
         {
             currentScore += 1
             
-            print()
+            printScore()
         }
     }
     
     //MARK: private
     
-    private func print()
+    private func printScore()
     {
         let score:NSNumber = self.currentScore as NSNumber
         
