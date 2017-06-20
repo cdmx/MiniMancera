@@ -8,9 +8,11 @@ class MHomeSplash
     init(modelOption:MHomeOptions)
     {
         self.modelOption = modelOption
+        let itemOptions:MHomeSplashOptions = MHomeSplashOptions()
         let itemDescr:MHomeSplashDescr = MHomeSplashDescr(model:modelOption)
         
         items = [
+            itemOptions,
             itemDescr]
     }
 }
