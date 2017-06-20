@@ -2,7 +2,11 @@ import UIKit
 
 class VHomeSplashCellOptionsButton:UIButton
 {
+    private weak var viewImage:UIImageView!
+    private weak var viewTitle:UILabel!
     private let kTitleMargin:CGFloat = 30
+    private let kAlphaSelected:CGFloat = 0.3
+    private let kAlphaNotSelected:CGFloat = 1
     
     init(
         image:UIImage,
@@ -14,40 +18,74 @@ class VHomeSplashCellOptionsButton:UIButton
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
         
-        let imageView:UIImageView = UIImageView()
-        imageView.isUserInteractionEnabled = false
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.contentMode = UIViewContentMode.center
-        imageView.image = image
+        let viewImage:UIImageView = UIImageView()
+        viewImage.isUserInteractionEnabled = false
+        viewImage.translatesAutoresizingMaskIntoConstraints = false
+        viewImage.clipsToBounds = true
+        viewImage.contentMode = UIViewContentMode.center
+        viewImage.image = image
+        self.viewImage = viewImage
         
-        let titleLabel:UILabel = UILabel()
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.backgroundColor = UIColor.clear
-        titleLabel.isUserInteractionEnabled = false
-        titleLabel.textAlignment = alignment
-        titleLabel.font = UIFont.bold(size:16)
-        titleLabel.textColor = UIColor.white
-        titleLabel.text = text
+        let viewTitle:UILabel = UILabel()
+        viewTitle.translatesAutoresizingMaskIntoConstraints = false
+        viewTitle.backgroundColor = UIColor.clear
+        viewTitle.isUserInteractionEnabled = false
+        viewTitle.textAlignment = alignment
+        viewTitle.font = UIFont.bold(size:16)
+        viewTitle.textColor = UIColor.white
+        viewTitle.text = text
+        self.viewTitle = viewTitle
         
-        addSubview(imageView)
-        addSubview(titleLabel)
+        addSubview(viewImage)
+        addSubview(viewTitle)
         
         NSLayoutConstraint.equals(
-            view:imageView,
+            view:viewImage,
             toView:self)
         
         NSLayoutConstraint.equalsVertical(
-            view:titleLabel,
+            view:viewTitle,
             toView:self)
         NSLayoutConstraint.equalsHorizontal(
-            view:titleLabel,
+            view:viewTitle,
             toView:self,
             margin:kTitleMargin)
+        
+        hover()
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override var isSelected:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    override var isHighlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    //MARK: private
+    
+    private func hover()
+    {
+        if isSelected || isHighlighted
+        {
+            viewImage.alpha = kAlphaSelected
+        }
+        else
+        {
+            viewImage.alpha = kAlphaNotSelected
+        }
     }
 }

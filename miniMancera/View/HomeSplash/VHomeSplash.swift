@@ -136,12 +136,13 @@ class VHomeSplash:View, UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
+        let controller:CHomeSplash = self.controller as! CHomeSplash
         let item:MHomeSplashProtocol = modelAtIndex(index:indexPath)
         let cell:VHomeSplashCell = collectionView.dequeueReusableCell(
             withReuseIdentifier:
             item.reusableIdentifier,
             for:indexPath) as! VHomeSplashCell
-        cell.config(model:item)
+        cell.config(controller:controller, model:item)
         
         return cell
     }
