@@ -152,6 +152,9 @@
 		DA7E467C1EFAED5A00466867 /* ViewGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E467B1EFAED5A00466867 /* ViewGame.swift */; };
 		DA7E467E1EFAEDB400466867 /* ViewGameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E467D1EFAEDB400466867 /* ViewGameNode.swift */; };
 		DA7E46811EFAEF0200466867 /* MPerkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46801EFAEF0200466867 /* MPerkProtocol.swift */; };
+		DA7E46831EFAEF3000466867 /* MPerkFreeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46821EFAEF3000466867 /* MPerkFreeProtocol.swift */; };
+		DA7E46851EFAEF3E00466867 /* MPerkPurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46841EFAEF3E00466867 /* MPerkPurchaseProtocol.swift */; };
+		DA7E46871EFAEF6900466867 /* MPerkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46861EFAEF6900466867 /* MPerkFactory.swift */; };
 		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */; };
 		DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */; };
@@ -354,6 +357,9 @@
 		DA7E467B1EFAED5A00466867 /* ViewGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGame.swift; sourceTree = "<group>"; };
 		DA7E467D1EFAEDB400466867 /* ViewGameNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGameNode.swift; sourceTree = "<group>"; };
 		DA7E46801EFAEF0200466867 /* MPerkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkProtocol.swift; sourceTree = "<group>"; };
+		DA7E46821EFAEF3000466867 /* MPerkFreeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkFreeProtocol.swift; sourceTree = "<group>"; };
+		DA7E46841EFAEF3E00466867 /* MPerkPurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkPurchaseProtocol.swift; sourceTree = "<group>"; };
+		DA7E46861EFAEF6900466867 /* MPerkFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkFactory.swift; sourceTree = "<group>"; };
 		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -788,6 +794,9 @@
 				DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */,
 				DA5667711EF2748F000055D8 /* MGameFactory.swift */,
 				DA7E46801EFAEF0200466867 /* MPerkProtocol.swift */,
+				DA7E46821EFAEF3000466867 /* MPerkFreeProtocol.swift */,
+				DA7E46841EFAEF3E00466867 /* MPerkPurchaseProtocol.swift */,
+				DA7E46861EFAEF6900466867 /* MPerkFactory.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1151,6 +1160,7 @@
 				DA2D007C1EEDE38600365F23 /* MOptionReformaCrossingLaneF.swift in Sources */,
 				DA5667841EF276CD000055D8 /* MHomeFooterBoards.swift in Sources */,
 				DA2DFFED1EECB16A00365F23 /* VPushBackground.swift in Sources */,
+				DA7E46851EFAEF3E00466867 /* MPerkPurchaseProtocol.swift in Sources */,
 				DA1D579C1EF245C800ECA895 /* VHomeFooterCell.swift in Sources */,
 				DA5667A81EF3329E000055D8 /* MOptionSceneGame.swift in Sources */,
 				DA56676C1EF27446000055D8 /* MGameProtocol.swift in Sources */,
@@ -1264,6 +1274,7 @@
 				DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */,
 				DABD4F1C1EF46F1D003DF861 /* MOptionReformaCrossingSceneGameOver.swift in Sources */,
 				DA2D007A1EEDE38600365F23 /* MOptionReformaCrossingLaneD.swift in Sources */,
+				DA7E46871EFAEF6900466867 /* MPerkFactory.swift in Sources */,
 				DAAF2F971EF6ECB800589BB0 /* VSettings.swift in Sources */,
 				DA779A0B1EF88F1B00362A44 /* MHomeOptions.swift in Sources */,
 				DA2D002F1EECC88F00365F23 /* COptionReformaCrossing.swift in Sources */,
@@ -1304,6 +1315,7 @@
 				DA1D57981EF235D600ECA895 /* ControllerParentGame.swift in Sources */,
 				DA2D00A11EEFC15E00365F23 /* MOptionReformaCrossingBackground.swift in Sources */,
 				DAAF2FD51EF6FBB500589BB0 /* MStoreStatusDeferred.swift in Sources */,
+				DA7E46831EFAEF3000466867 /* MPerkFreeProtocol.swift in Sources */,
 				DA11DE4B1EF11E2F0043749D /* MOptionReformaCrossingFoeMetrobus.swift in Sources */,
 				DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */,
 			);
