@@ -1,6 +1,6 @@
 import UIKit
 
-class VHomeFroobContentActions:UIView
+class VHomeFroobContentInfo:UIView
 {
     private weak var controller:CHomeFroob!
     
@@ -10,6 +10,7 @@ class VHomeFroobContentActions:UIView
         clipsToBounds = true
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
+        isUserInteractionEnabled = false
         self.controller = controller
     }
     
