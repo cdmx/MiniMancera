@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionReformaCrossingMenu:SKSpriteNode
+class VOptionReformaCrossingMenu:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
     private let kMargin:CGFloat = 45
