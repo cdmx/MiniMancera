@@ -20,10 +20,6 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         isHidden = true
         self.controller = controller
         
-        let background:VGradient = VGradient.diagonal(
-            colorLeftBottom:UIColor.colourSuccess,
-            colorTopRight:UIColor.colourFail)
-        
         let collectionView:VCollection = VCollection()
         collectionView.alwaysBounceHorizontal = true
         collectionView.delegate = self
@@ -36,19 +32,9 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
             flow.minimumLineSpacing = kInterItem
             flow.minimumInteritemSpacing = kInterItem
-            flow.sectionInset = UIEdgeInsets(
-                top:kInterItem,
-                left:kInterItem,
-                bottom:kInterItem,
-                right:kInterItem)
         }
         
-        addSubview(background)
         addSubview(collectionView)
-        
-        NSLayoutConstraint.equals(
-            view:background,
-            toView:self)
         
         NSLayoutConstraint.equals(
             view:collectionView,
