@@ -149,6 +149,7 @@
 		DA7E46711EFAC82A00466867 /* VHomeFroobContentActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46701EFAC82A00466867 /* VHomeFroobContentActions.swift */; };
 		DA7E46731EFAC9EE00466867 /* VHomeFroobContentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46721EFAC9EE00466867 /* VHomeFroobContentInfo.swift */; };
 		DA7E46771EFAD8D300466867 /* VHomeFroobContentActionsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46761EFAD8D300466867 /* VHomeFroobContentActionsStore.swift */; };
+		DA7E467C1EFAED5A00466867 /* ViewGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E467B1EFAED5A00466867 /* ViewGame.swift */; };
 		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */; };
 		DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */; };
@@ -348,6 +349,7 @@
 		DA7E46701EFAC82A00466867 /* VHomeFroobContentActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentActions.swift; sourceTree = "<group>"; };
 		DA7E46721EFAC9EE00466867 /* VHomeFroobContentInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentInfo.swift; sourceTree = "<group>"; };
 		DA7E46761EFAD8D300466867 /* VHomeFroobContentActionsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentActionsStore.swift; sourceTree = "<group>"; };
+		DA7E467B1EFAED5A00466867 /* ViewGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGame.swift; sourceTree = "<group>"; };
 		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -717,6 +719,7 @@
 		DA2DFFC11EECB16A00365F23 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA7E46781EFAED3B00466867 /* Option */,
 				DA1BDB201EF705960040FBEA /* HomeFroob */,
 				DAAF2FB61EF6F6F700589BB0 /* Store */,
 				DAAF2F901EF6ECB800589BB0 /* Settings */,
@@ -733,6 +736,7 @@
 			children = (
 				DA2DFFC31EECB16A00365F23 /* View.swift */,
 				DA2DFFC41EECB16A00365F23 /* ViewParent.swift */,
+				DA7E467B1EFAED5A00466867 /* ViewGame.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -889,6 +893,29 @@
 				DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */,
 			);
 			path = HomeSplash;
+			sourceTree = "<group>";
+		};
+		DA7E46781EFAED3B00466867 /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				DA7E46791EFAED3B00466867 /* PollutedGarden */,
+				DA7E467A1EFAED3B00466867 /* ReformaCrossing */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
+		DA7E46791EFAED3B00466867 /* PollutedGarden */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PollutedGarden;
+			sourceTree = "<group>";
+		};
+		DA7E467A1EFAED3B00466867 /* ReformaCrossing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReformaCrossing;
 			sourceTree = "<group>";
 		};
 		DAAF2F841EF6EC6300589BB0 /* Footer */ = {
@@ -1231,6 +1258,7 @@
 				DA5667761EF27571000055D8 /* MGamePollutedGarden.swift in Sources */,
 				DABD4F131EF45EE0003DF861 /* MOptionPollutedGardenPotPosition.swift in Sources */,
 				DA2D00A61EEFC15E00365F23 /* MOptionReformaCrossingSceneGame.swift in Sources */,
+				DA7E467C1EFAED5A00466867 /* ViewGame.swift in Sources */,
 				DA2DFFDF1EECB16A00365F23 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DAD814381EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift in Sources */,
 				DA779A051EF884E900362A44 /* MHomeSplashDescr.swift in Sources */,
