@@ -3,8 +3,8 @@ import SpriteKit
 class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPollutedGarden>
 {
     let soundPop:SKAction
-    private weak var player:MOptionPollutedGardenPlayer!
-    private weak var controls:MOptionPollutedGardenControls!
+    private weak var player:VOptionPollutedGardenPlayer!
+    private weak var controls:VOptionPollutedGardenControls!
     private weak var hud:VOptionPollutedGardenHud!
     private weak var menu:VOptionPollutedGardenMenu!
     private weak var floor:VOptionPollutedGardenFloor!
@@ -55,11 +55,11 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
             controller:controller)
         self.floor = floor
         
-        let player:MOptionPollutedGardenPlayer = MOptionPollutedGardenPlayer(
+        let player:VOptionPollutedGardenPlayer = VOptionPollutedGardenPlayer(
             controller:controller)
         self.player = player
         
-        let controls:MOptionPollutedGardenControls = MOptionPollutedGardenControls(
+        let controls:VOptionPollutedGardenControls = VOptionPollutedGardenControls(
             controller:controller)
         self.controls = controls
         
@@ -273,7 +273,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
     {
         playSound(actionSound:soundCoin)
         
-        let plusFlower:MOptionPollutedGardenPlusFlower = MOptionPollutedGardenPlusFlower(
+        let plusFlower:VOptionPollutedGardenPlusFlower = VOptionPollutedGardenPlusFlower(
             petunia:petunia,
             controller:controller)
         
@@ -284,7 +284,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
     {
         playSound(actionSound:soundFail)
         
-        let pollution:MOptionPollutedGardenPollution = MOptionPollutedGardenPollution(
+        let pollution:VOptionPollutedGardenPollution = VOptionPollutedGardenPollution(
             petunia:petunia,
             controller:controller)
         

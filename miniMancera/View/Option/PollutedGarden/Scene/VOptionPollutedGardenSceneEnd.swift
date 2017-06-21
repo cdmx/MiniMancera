@@ -67,8 +67,9 @@ class VOptionPollutedGardenSceneEnd:SKScene
         let image:SKSpriteNode = SKSpriteNode(texture:texture)
         image.position = CGPoint(x:width_2, y:height_2)
         
-        let node1up:MOptionPollutedGarden1up = MOptionPollutedGarden1up(controller:controller)
-        let nodeGameOver:MOptionPollutedGardenEnd = MOptionPollutedGardenEnd(controller:controller)
+        let node1up:VOptionPollutedGarden1up = VOptionPollutedGarden1up(controller:controller)
+        let nodeGameOver:VOptionPollutedGardenEnd = VOptionPollutedGardenEnd(
+            controller:controller)
         
         addChild(background)
         addChild(labelTitle)

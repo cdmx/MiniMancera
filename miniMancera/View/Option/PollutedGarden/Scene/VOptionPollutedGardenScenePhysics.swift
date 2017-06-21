@@ -8,7 +8,7 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
     {
         if bubble.alive
         {
-            if let player:MOptionPollutedGardenPlayer = body as? MOptionPollutedGardenPlayer
+            if let player:VOptionPollutedGardenPlayer = body as? VOptionPollutedGardenPlayer
             {
                 contactBubbleUmbrella(bubble:bubble, player:player)
             }
@@ -25,7 +25,7 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
     
     private func contactBubbleUmbrella(
         bubble:VOptionPollutedGardenBubble,
-        player:MOptionPollutedGardenPlayer)
+        player:VOptionPollutedGardenPlayer)
     {
         playSound(actionSound:soundPop)
         bubble.explode()
