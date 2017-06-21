@@ -3,7 +3,7 @@ import UIKit
 class VHomeFroobContentActions:UIView
 {
     private weak var controller:CHomeFroob!
-    private let kButtonHeight:CGFloat = 40
+    private let kButtonHeight:CGFloat = 45
     private let kButtonMargin:CGFloat = 20
     
     init(controller:CHomeFroob)
@@ -26,7 +26,7 @@ class VHomeFroobContentActions:UIView
         buttonCancel.setTitle(
             String.localized(key:"VHomeFroobContentActions_buttonCancel"),
             for:UIControlState.normal)
-        buttonCancel.titleLabel!.font = UIFont.regular(size:14)
+        buttonCancel.titleLabel!.font = UIFont.bold(size:16)
         buttonCancel.addTarget(
             self,
             action:#selector(actionCancel(sender:)),
@@ -69,6 +69,6 @@ class VHomeFroobContentActions:UIView
     
     func actionCancel(sender button:UIButton)
     {
-        
+        controller.back()
     }
 }

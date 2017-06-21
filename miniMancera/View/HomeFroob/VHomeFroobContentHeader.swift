@@ -17,13 +17,6 @@ class VHomeFroobContentHeader:UIView
             colorLeftBottom:UIColor.colourSuccess,
             colorTopRight:UIColor.colourFail)
         
-        let viewCircle:UIImageView = UIImageView()
-        viewCircle.isUserInteractionEnabled = false
-        viewCircle.translatesAutoresizingMaskIntoConstraints = false
-        viewCircle.clipsToBounds = true
-        viewCircle.contentMode = UIViewContentMode.center
-        viewCircle.image = #imageLiteral(resourceName: "assetGenericCircle")
-        
         let imageView:UIImageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
@@ -32,15 +25,10 @@ class VHomeFroobContentHeader:UIView
         imageView.image = controller.option.thumbnail
         
         addSubview(viewGradient)
-        addSubview(viewCircle)
         addSubview(imageView)
         
         NSLayoutConstraint.equals(
             view:viewGradient,
-            toView:self)
-        
-        NSLayoutConstraint.equals(
-            view:viewCircle,
             toView:self)
         
         NSLayoutConstraint.equals(

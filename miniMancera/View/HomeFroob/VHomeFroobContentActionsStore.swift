@@ -12,9 +12,9 @@ class VHomeFroobContentActionsStore:UIButton
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
-        let viewGradient:VGradient = VGradient.diagonal(
-            colorLeftBottom:UIColor.colourSuccess,
-            colorTopRight:UIColor.colourFail)
+        let viewGradient:VGradient = VGradient.horizontal(
+            colorLeft:UIColor.orange,
+            colorRight:UIColor.colourFail)
         
         addSubview(viewGradient)
         
