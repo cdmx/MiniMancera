@@ -40,7 +40,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
         super.init(controller:controller)
         startPhysics()
         
-        let background:MOptionPollutedGardenBackground = MOptionPollutedGardenBackground(
+        let background:VOptionPollutedGardenBackground = VOptionPollutedGardenBackground(
             controller:controller)
         
         let hud:MOptionPollutedGardenHud = MOptionPollutedGardenHud(

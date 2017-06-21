@@ -36,7 +36,7 @@ class VOptionPollutedGardenSceneEnd:SKScene
         let titleY:CGFloat = height_2 + kTitleAddY
         let descrY:CGFloat = height_2 + kDescrAddY
         
-        let background:MOptionPollutedGardenBackground = MOptionPollutedGardenBackground(
+        let background:VOptionPollutedGardenBackground = VOptionPollutedGardenBackground(
             controller:controller)
         
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
