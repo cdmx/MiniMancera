@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-extension MOptionPollutedGardenPlayer
+extension VOptionPollutedGardenPlayer
 {
     private static let kTimePerFrame:TimeInterval = 0.2
     

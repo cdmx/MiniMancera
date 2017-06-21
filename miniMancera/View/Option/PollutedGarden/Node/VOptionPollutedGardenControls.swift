@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionPollutedGardenControls:SKSpriteNode
+class VOptionPollutedGardenControls:SKSpriteNode
 {
     private var lastTouch:UITouch?
     private weak var controller:COptionPollutedGarden!
@@ -35,10 +35,10 @@ class MOptionPollutedGardenControls:SKSpriteNode
     func lastTouchPositionX() -> CGFloat?
     {
         guard
-        
+            
             let lastTouch:UITouch = self.lastTouch,
             let parent:SKNode = self.parent
-        
+            
         else
         {
             return nil

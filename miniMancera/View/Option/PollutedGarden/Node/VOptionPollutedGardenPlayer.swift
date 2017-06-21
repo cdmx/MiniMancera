@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionPollutedGardenPlayer:SKSpriteNode
+class VOptionPollutedGardenPlayer:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
     private let actionAnimate:SKAction
@@ -73,7 +73,7 @@ class MOptionPollutedGardenPlayer:SKSpriteNode
     private func actionsWalk(positionX:CGFloat)
     {
         removeAllActions()
-      
+        
         let actionMove:SKAction = createActionMove(positionX:positionX)
         let actionReached:SKAction = SKAction.run(reachedPosition)
         let actions:[SKAction] = [

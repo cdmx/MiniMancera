@@ -1,18 +1,18 @@
 import UIKit
 import SpriteKit
 
-class MOptionPollutedGardenPollution:SKSpriteNode
+class VOptionPollutedGardenPlusFlower:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
     private let kAddPositionY:CGFloat = 30
-    private let kMoveVertical:CGFloat = 90
-    private let kDelayFade:TimeInterval = 0.2
-    private let kAnimationDuration:TimeInterval = 2
-    private let kZPosition:CGFloat = 200000
+    private let kMoveVertical:CGFloat = 60
+    private let kDelayFade:TimeInterval = 0.3
+    private let kAnimationDuration:TimeInterval = 1.4
+    private let kZPosition:CGFloat = 100000
     
     init(petunia:VOptionPollutedGardenPetunia, controller:COptionPollutedGarden)
     {
-        let texture:SKTexture = controller.model.petuniaLife.texturePollution
+        let texture:SKTexture = controller.model.petuniaLife.texturePlus
         let size:CGSize = texture.size()
         self.controller = controller
         
