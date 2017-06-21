@@ -5,13 +5,7 @@ class VHomeFroobContent:UIView
     private weak var controller:CHomeFroob!
     private weak var labelTitle:UILabel!
     private weak var layoutBaseLeft:NSLayoutConstraint!
-    private weak var layoutCircleLeft:NSLayoutConstraint!
-    private let kBaseWidth:CGFloat = 309
-    private let kBaseHeight:CGFloat = 300
-    private let kBaseBottom:CGFloat = -2
-    private let kCornerRadius:CGFloat = 10
-    private let kCircleTop:CGFloat = 2
-    private let kCircleSize:CGFloat = 170
+    private let kCornerRadius:CGFloat = 20
     private let kTitleMargin:CGFloat = 25
     private let kTitleHeight:CGFloat = 180
     private let kTitleTop:CGFloat = -35
@@ -31,13 +25,6 @@ class VHomeFroobContent:UIView
         baseView.backgroundColor = UIColor.black
         baseView.layer.cornerRadius = kCornerRadius
         
-        let circle:UIView = UIView()
-        circle.isUserInteractionEnabled = false
-        circle.translatesAutoresizingMaskIntoConstraints = false
-        circle.clipsToBounds = true
-        circle.backgroundColor = UIColor.black
-        circle.layer.cornerRadius = kCircleSize / 2.0
-        
         let imageView:UIImageView = UIImageView()
         imageView.isUserInteractionEnabled = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,10 +43,9 @@ class VHomeFroobContent:UIView
         let viewButtons:VHomeFroobContentButtons = VHomeFroobContentButtons(
             controller:controller)
         
-        circle.addSubview(imageView)
         baseView.addSubview(viewButtons)
         addSubview(baseView)
-        addSubview(circle)
+        addSubview(imageView)
         addSubview(labelTitle)
         
         NSLayoutConstraint.bottomToBottom(
