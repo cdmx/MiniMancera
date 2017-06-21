@@ -6,7 +6,8 @@ class VHomeOptionsCell:UICollectionViewCell
     private weak var labelTitle:UILabel!
     private let kAlphaSelected:CGFloat = 0.4
     private let kAlphaNotSelected:CGFloat = 1
-    private let kTitleHeight:CGFloat = 90
+    private let kImageBottom:CGFloat = -40
+    private let kTitleHeight:CGFloat = 100
     private let kTitleMargin:CGFloat = 10
     
     override init(frame:CGRect)
@@ -44,7 +45,14 @@ class VHomeOptionsCell:UICollectionViewCell
             toView:self,
             margin:kTitleMargin)
         
-        NSLayoutConstraint.equals(
+        NSLayoutConstraint.topToTop(
+            view:imageView,
+            toView:self)
+        NSLayoutConstraint.bottomToBottom(
+            view:imageView,
+            toView:self,
+            constant:kImageBottom)
+        NSLayoutConstraint.equalsHorizontal(
             view:imageView,
             toView:self)
     }
@@ -95,8 +103,8 @@ class VHomeOptionsCell:UICollectionViewCell
         }
         else
         {
-            labelTitle.textColor = UIColor(white:0.65, alpha:1)
-            backgroundColor = UIColor.clear
+            labelTitle.textColor = UIColor(white:0.6, alpha:1)
+            backgroundColor = UIColor(white:0, alpha:0.4)
         }
 
         imageView.image = model.thumbnail

@@ -15,10 +15,14 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         
         super.init(frame:CGRect.zero)
         clipsToBounds = true
-        backgroundColor = UIColor(white:0.2, alpha:1)
+        backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
         isHidden = true
         self.controller = controller
+        
+        let background:VGradient = VGradient.diagonal(
+            colorLeftBottom:UIColor.colourSuccess,
+            colorTopRight:UIColor.colourFail)
         
         let collectionView:VCollection = VCollection()
         collectionView.alwaysBounceHorizontal = true
@@ -39,7 +43,12 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
                 right:kInterItem)
         }
         
+        addSubview(background)
         addSubview(collectionView)
+        
+        NSLayoutConstraint.equals(
+            view:background,
+            toView:self)
         
         NSLayoutConstraint.equals(
             view:collectionView,
