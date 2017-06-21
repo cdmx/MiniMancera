@@ -52,13 +52,13 @@ class VOptionReformaCrossingSceneOver:SKScene
         labelDescr.position = CGPoint(x:width_2, y:descrY)
         
         let label1up:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontRegular)
-        label1up.text = String.localizedReformaCrossing(key:"MOptionReformaCrossingSceneGameOver_label1up")
+        label1up.text = String.localizedReformaCrossing(key:"VOptionReformaCrossingSceneOver_label1up")
         label1up.fontSize = kButtonsFontSize
         label1up.fontColor = SKColor.white
         label1up.position = CGPoint(x:width_2, y:k1upY)
         
         let labelGameOver:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontRegular)
-        labelGameOver.text = String.localizedReformaCrossing(key:"MOptionReformaCrossingSceneGameOver_labelGameOver")
+        labelGameOver.text = String.localizedReformaCrossing(key:"VOptionReformaCrossingSceneOver_labelGameOver")
         labelGameOver.fontSize = kButtonsFontSize
         labelGameOver.fontColor = SKColor.white
         labelGameOver.position = CGPoint(x:width_2, y:kGameOverY)

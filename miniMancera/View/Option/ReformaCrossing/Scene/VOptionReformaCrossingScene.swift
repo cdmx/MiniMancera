@@ -180,7 +180,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
         
         let level:NSNumber = controller.model.level as NSNumber
         let levelString:String = String(
-            format:String.localizedReformaCrossing(key:"MOptionReformaCrossingSceneGame_labelTitle"),
+            format:String.localizedReformaCrossing(key:"VOptionReformaCrossingScene_labelTitle"),
             level)
         
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
