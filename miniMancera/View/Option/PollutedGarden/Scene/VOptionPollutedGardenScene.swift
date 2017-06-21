@@ -134,7 +134,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
     
     private func spawnPot(position:CGFloat)
     {
-        let flowerPot:MOptionPollutedGardenFlowerPot = MOptionPollutedGardenFlowerPot(
+        let flowerPot:VOptionPollutedGardenFlowerPot = VOptionPollutedGardenFlowerPot(
             controller:controller,
             positionX:position)
         
@@ -145,7 +145,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
         spawnPlantFor(flowerPot:flowerPot)
     }
     
-    private func spawnPlantFor(flowerPot:MOptionPollutedGardenFlowerPot)
+    private func spawnPlantFor(flowerPot:VOptionPollutedGardenFlowerPot)
     {
         let petunia:MOptionPollutedGardenPetunia = MOptionPollutedGardenPetunia(
             controller:controller,

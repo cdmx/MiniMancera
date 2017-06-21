@@ -4,7 +4,7 @@ import SpriteKit
 class MOptionPollutedGardenPetunia:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
-    private weak var flowerPot:MOptionPollutedGardenFlowerPot!
+    private weak var flowerPot:VOptionPollutedGardenFlowerPot!
     private var level:Int
     private var lastElapsedTime:TimeInterval
     private var growTime:TimeInterval
@@ -18,7 +18,7 @@ class MOptionPollutedGardenPetunia:SKSpriteNode
     private let kInitialLevel:Int = -1
     private let kPollutedLevel:Int = -2
     
-    init(controller:COptionPollutedGarden, flowerPot:MOptionPollutedGardenFlowerPot)
+    init(controller:COptionPollutedGarden, flowerPot:VOptionPollutedGardenFlowerPot)
     {
         let size:CGSize = controller.model.petuniaLife.textureSize
         self.controller = controller

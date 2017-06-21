@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionPollutedGardenFlowerPot:SKSpriteNode
+class VOptionPollutedGardenFlowerPot:SKSpriteNode
 {
     let endingPoint:CGPoint
     weak var petunia:MOptionPollutedGardenPetunia?
