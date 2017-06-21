@@ -68,12 +68,12 @@ class MOptionPollutedGardenBubbleGenerator
         maxY = size.height + kAddYPos
     }
     
-    func randomBubble() -> MOptionPollutedGardenBubble
+    func randomBubble() -> VOptionPollutedGardenBubble
     {
         let bubbleType:MOptionPollutedGardenBubbleType = randomType()
         let colour:UIColor = randomColour()
         let position:CGPoint = randomPosition(size:bubbleType.size)
-        let bubble:MOptionPollutedGardenBubble = MOptionPollutedGardenBubble(
+        let bubble:VOptionPollutedGardenBubble = VOptionPollutedGardenBubble(
             controller:controller,
             bubbleType:bubbleType,
             colour:colour,

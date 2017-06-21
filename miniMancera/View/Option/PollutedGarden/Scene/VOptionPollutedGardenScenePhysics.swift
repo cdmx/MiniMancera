@@ -4,7 +4,7 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
 {
     //MARK: private
     
-    private func bubbleAndBody(bubble:MOptionPollutedGardenBubble, body:SKNode?)
+    private func bubbleAndBody(bubble:VOptionPollutedGardenBubble, body:SKNode?)
     {
         if bubble.alive
         {
@@ -24,7 +24,7 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
     }
     
     private func contactBubbleUmbrella(
-        bubble:MOptionPollutedGardenBubble,
+        bubble:VOptionPollutedGardenBubble,
         player:MOptionPollutedGardenPlayer)
     {
         playSound(actionSound:soundPop)
@@ -32,7 +32,7 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
     }
     
     private func contactBubblePetunia(
-        bubble:MOptionPollutedGardenBubble,
+        bubble:VOptionPollutedGardenBubble,
         petunia:MOptionPollutedGardenPetunia)
     {
         bubble.explode()
@@ -40,7 +40,7 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
     }
     
     private func contactBubbleFloor(
-        bubble:MOptionPollutedGardenBubble,
+        bubble:VOptionPollutedGardenBubble,
         floor:MOptionPollutedGardenFloor)
     {
         playSound(actionSound:soundPop)
@@ -56,11 +56,11 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
             let bodyA:SKNode? = contact.bodyA.node
             let bodyB:SKNode? = contact.bodyB.node
             
-            if let bubble:MOptionPollutedGardenBubble = bodyA as? MOptionPollutedGardenBubble
+            if let bubble:VOptionPollutedGardenBubble = bodyA as? VOptionPollutedGardenBubble
             {
                 bubbleAndBody(bubble:bubble, body:bodyB)
             }
-            else if let bubble:MOptionPollutedGardenBubble = bodyB as? MOptionPollutedGardenBubble
+            else if let bubble:VOptionPollutedGardenBubble = bodyB as? VOptionPollutedGardenBubble
             {
                 bubbleAndBody(bubble:bubble, body:bodyA)
             }

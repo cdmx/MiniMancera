@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionPollutedGardenBubble:SKSpriteNode
+class VOptionPollutedGardenBubble:SKSpriteNode
 {
     private(set) var alive:Bool
     private weak var controller:COptionPollutedGarden!

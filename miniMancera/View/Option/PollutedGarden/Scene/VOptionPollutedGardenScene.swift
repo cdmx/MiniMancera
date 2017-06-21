@@ -237,7 +237,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
         
         if should
         {
-            let bubble:MOptionPollutedGardenBubble = controller.model.bubbleGenerator.randomBubble()
+            let bubble:VOptionPollutedGardenBubble = controller.model.bubbleGenerator.randomBubble()
             
             addChild(bubble)
         }
