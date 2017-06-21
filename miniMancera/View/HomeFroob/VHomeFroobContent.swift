@@ -5,10 +5,8 @@ class VHomeFroobContent:UIView
     private weak var controller:CHomeFroob!
     private weak var labelTitle:UILabel!
     private let kCornerRadius:CGFloat = 15
-    private let kTitleMargin:CGFloat = 25
-    private let kTitleHeight:CGFloat = 180
-    private let kTitleTop:CGFloat = -35
-    private let kButtonsHeight:CGFloat = 62
+    private let kActionsHeight:CGFloat = 80
+    private let kInfoHeight:CGFloat = 150
     
     init(controller:CHomeFroob)
     {
@@ -19,23 +17,7 @@ class VHomeFroobContent:UIView
         layer.cornerRadius = kCornerRadius
         self.controller = controller
         
-        let imageView:UIImageView = UIImageView()
-        imageView.isUserInteractionEnabled = false
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.contentMode = UIViewContentMode.center
-        imageView.image = controller.option.thumbnail
         
-        let labelTitle:UILabel = UILabel()
-        labelTitle.isUserInteractionEnabled = false
-        labelTitle.backgroundColor = UIColor.clear
-        labelTitle.translatesAutoresizingMaskIntoConstraints = false
-        labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.numberOfLines = 0
-        self.labelTitle = labelTitle
-        
-        let viewButtons:VHomeFroobContentButtons = VHomeFroobContentButtons(
-            controller:controller)
     }
     
     required init?(coder:NSCoder)
