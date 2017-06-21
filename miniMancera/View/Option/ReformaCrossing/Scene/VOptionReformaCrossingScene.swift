@@ -5,7 +5,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
     let soundHonk:SKAction
     private(set) weak var player:VOptionReformaCrossingPlayer!
     private weak var hud:VOptionReformaCrossingHud!
-    private weak var stop:MOptionReformaCrossingStop!
+    private weak var stop:VOptionReformaCrossingStop!
     private weak var menu:VOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
     private let soundCoin:SKAction
@@ -48,7 +48,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
             controller:controller)
         self.menu = menu
         
-        let stop:MOptionReformaCrossingStop = MOptionReformaCrossingStop(
+        let stop:VOptionReformaCrossingStop = VOptionReformaCrossingStop(
             controller:controller)
         self.stop = stop
         

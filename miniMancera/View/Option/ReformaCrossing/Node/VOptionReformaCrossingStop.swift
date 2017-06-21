@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionReformaCrossingStop:SKSpriteNode
+class VOptionReformaCrossingStop:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
     private var lastElapsedTime:TimeInterval
@@ -33,7 +33,7 @@ class MOptionReformaCrossingStop:SKSpriteNode
     init(controller:COptionReformaCrossing)
     {
         standTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingStop0"))
-        animationTextures = MOptionReformaCrossingStop.factoryAnimationTextures()
+        animationTextures = VOptionReformaCrossingStop.factoryAnimationTextures()
         
         let size:CGSize = standTexture.size()
         self.controller = controller
