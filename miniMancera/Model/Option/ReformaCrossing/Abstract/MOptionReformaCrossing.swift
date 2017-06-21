@@ -89,7 +89,7 @@ class MOptionReformaCrossing:MGameProtocol
         }
         
         self.size = size
-        let scene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
+        let scene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
             controller:controller)
         
         return scene

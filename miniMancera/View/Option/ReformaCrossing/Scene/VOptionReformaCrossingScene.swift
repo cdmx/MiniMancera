@@ -165,7 +165,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
         
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kSceneTransitionDuration)
-        let gameOverScene:MOptionReformaCrossingSceneGameOver = MOptionReformaCrossingSceneGameOver(
+        let gameOverScene:VOptionReformaCrossingSceneOver = VOptionReformaCrossingSceneOver(
             controller:controller, reason:reason)
         
         view?.presentScene(gameOverScene, transition:transition)
@@ -228,7 +228,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
     {
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kSceneTransitionDuration)
-        let gameOverScene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
+        let nextLevelScene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
             controller:controller)
         
         guard
@@ -241,7 +241,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
         }
         
         removeAllActions()
-        view.presentScene(gameOverScene, transition:transition)
+        view.presentScene(nextLevelScene, transition:transition)
     }
     
     //MARK: public
