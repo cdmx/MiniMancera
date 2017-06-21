@@ -15,7 +15,7 @@ class VHomeFroobContentActionsStore:UIButton
         translatesAutoresizingMaskIntoConstraints = false
         addTarget(
             self,
-            action:#selector(actions(forTarget:forControlEvent:)),
+            action:#selector(actionButton(sender:)),
             for:UIControlEvents.touchUpInside)
         self.controller = controller
         

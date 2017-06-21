@@ -124,13 +124,19 @@ class VHomeFroob:View
         let height:CGFloat = bounds.maxY
         layoutContentTop.constant = height
         
-        UIView.animate(withDuration:kAnimationFirstDuration)
+        UIView.animate(
+            withDuration:kAnimationFirstDuration,
+            animations:
         { [weak self] in
             
+            self?.layoutIfNeeded()
+        })
+        { [weak self] (done:Bool) in
+        
             guard
-            
+                
                 let controller:CHomeFroob = self?.controller as? CHomeFroob
-            
+                
             else
             {
                 return
