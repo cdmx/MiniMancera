@@ -16,7 +16,7 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
         }
     }
     
-    private func contactPlayerFoe(player:MOptionReformaCrossingPlayer, foe:MOptionReformaCrossingFoe)
+    private func contactPlayerFoe(player:VOptionReformaCrossingPlayer, foe:MOptionReformaCrossingFoe)
     {
         playSound(actionSound:soundHonk)
         
@@ -35,7 +35,7 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
         
         if let foeA:MOptionReformaCrossingFoe = bodyA as? MOptionReformaCrossingFoe
         {
-            if let player:MOptionReformaCrossingPlayer = bodyB as? MOptionReformaCrossingPlayer
+            if let player:VOptionReformaCrossingPlayer = bodyB as? VOptionReformaCrossingPlayer
             {
                 contactPlayerFoe(player:player, foe:foeA)
             }
@@ -44,7 +44,7 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
                 contactFoes(foeA:foeA, foeB:foeB)
             }
         }
-        else if let player:MOptionReformaCrossingPlayer = bodyA as? MOptionReformaCrossingPlayer
+        else if let player:VOptionReformaCrossingPlayer = bodyA as? VOptionReformaCrossingPlayer
         {
             if let foeB:MOptionReformaCrossingFoe = bodyB as? MOptionReformaCrossingFoe
             {

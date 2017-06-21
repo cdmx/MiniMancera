@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionReformaCrossingPlayer:SKSpriteNode
+class VOptionReformaCrossingPlayer:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
     private var lastElapsedTime:TimeInterval
@@ -59,7 +59,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     init(controller:COptionReformaCrossing)
     {
         self.controller = controller
-        stopTextures = MOptionReformaCrossingPlayer.factoryStopTextures()
+        stopTextures = VOptionReformaCrossingPlayer.factoryStopTextures()
         let texture:SKTexture = stopTextures[0]
         
         let size:CGSize = texture.size()
@@ -130,7 +130,7 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     
     private func createActionAnimating() -> SKAction
     {
-        let animationTextures:[SKTexture] = MOptionReformaCrossingPlayer.factoryAnimationTextures()
+        let animationTextures:[SKTexture] = VOptionReformaCrossingPlayer.factoryAnimationTextures()
         let actionAnimate:SKAction = SKAction.animate(
             with:animationTextures,
             timePerFrame:kAnimationPerFrame,
@@ -205,10 +205,10 @@ class MOptionReformaCrossingPlayer:SKSpriteNode
     private func collectLanes()
     {
         guard
-        
+            
             let lane:MOptionReformaCrossingLane = controller.model.laneGroup.playerCollectAt(
                 position:position)
-        
+            
         else
         {
             return
