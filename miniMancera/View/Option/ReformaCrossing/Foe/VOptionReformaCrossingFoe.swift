@@ -4,8 +4,10 @@ import SpriteKit
 class VOptionReformaCrossingFoe:SKSpriteNode
 {
     let created:TimeInterval
-    private(set) weak var lane:MOptionReformaCrossingLane!
     private weak var controller:COptionReformaCrossing!
+    private(set) weak var lane:MOptionReformaCrossingLane!
+    private(set) var randomMaxSpeed:UInt32
+    private(set) var minSpeed:CGFloat
     private let kActionMoving:String = "actionMoving"
     private let kPauseDuration:TimeInterval = 1
     private let kPhysicsRemoveHeight:CGFloat = 6
@@ -17,6 +19,8 @@ class VOptionReformaCrossingFoe:SKSpriteNode
         let size:CGSize = texture.size()
         self.controller = controller
         self.lane = lane
+        randomMaxSpeed = 0
+        minSpeed = 0
         created = Date().timeIntervalSince1970
         
         super.init(texture:texture, color:UIColor.clear, size:size)
@@ -151,23 +155,5 @@ class VOptionReformaCrossingFoe:SKSpriteNode
     func totalStop()
     {
         removeAllActions()
-    }
-    
-    //MARK: foe protocol
-    
-    var randomMaxSpeed:UInt32
-    {
-        get
-        {
-            return 0
-        }
-    }
-    
-    var minSpeed:CGFloat
-    {
-        get
-        {
-            return 0
-        }
     }
 }
