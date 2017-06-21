@@ -62,7 +62,7 @@ class ViewGame<S:MGameProtocol, T:ControllerGame<S>>:SKScene
             
             let sound:String = controller.model.soundBackground
             
-            else
+        else
         {
             return
         }
