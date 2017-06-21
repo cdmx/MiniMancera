@@ -18,6 +18,6 @@
 "VStoreCellPurchasing_label"="Comprando";
 "VHomeFroobContentInfo_labelSubtitle"="Aún no tienes esta aventura de\nMiniMancera\nObtenla en la Tienda";
 "VHomeFroobContentButtons_buttonStore"="Tienda";
-"VHomeFroobContentButtons_buttonCancel"="Ahorita no";
+"VHomeFroobContentActions_buttonCancel"="Ahorita no";
 "VHomeSplashCellOptions_buttonPlay"="Jugar";
 "VHomeSplashCellOptions_buttonExit"="Salir";

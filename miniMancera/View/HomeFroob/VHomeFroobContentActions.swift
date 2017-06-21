@@ -3,6 +3,8 @@ import UIKit
 class VHomeFroobContentActions:UIView
 {
     private weak var controller:CHomeFroob!
+    private let kButtonHeight:CGFloat = 40
+    private let kButtonMargin:CGFloat = 20
     
     init(controller:CHomeFroob)
     {
@@ -12,17 +14,61 @@ class VHomeFroobContentActions:UIView
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
-        let buttonStore:UIButton = UIButton()
+        let buttonStore:VHomeFroobContentActionsStore = VHomeFroobContentActionsStore(
+            controller:controller)
         
         let buttonCancel:UIButton = UIButton()
-        buttonCancel
+        buttonCancel.translatesAutoresizingMaskIntoConstraints = false
+        buttonCancel.backgroundColor = UIColor.clear
+        buttonCancel.setTitleColor(
+            UIColor(white:1, alpha:0.6),
+            for:UIControlState.normal)
+        buttonCancel.setTitle(
+            String.localized(key:"VHomeFroobContentActions_buttonCancel"),
+            for:UIControlState.normal)
+        buttonCancel.titleLabel!.font = UIFont.regular(size:14)
+        buttonCancel.addTarget(
+            self,
+            action:#selector(actionCancel(sender:)),
+            for:UIControlEvents.touchUpInside)
         
         addSubview(buttonStore)
         addSubview(buttonCancel)
+        
+        NSLayoutConstraint.topToTop(
+            view:buttonStore,
+            toView:self,
+            constant:kButtonMargin)
+        NSLayoutConstraint.height(
+            view:buttonStore,
+            constant:kButtonHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:buttonStore,
+            toView:self,
+            margin:kButtonMargin)
+        
+        NSLayoutConstraint.topToBottom(
+            view:buttonCancel,
+            toView:buttonStore,
+            constant:kButtonMargin)
+        NSLayoutConstraint.height(
+            view:buttonCancel,
+            constant:kButtonHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:buttonCancel,
+            toView:self,
+            margin:kButtonMargin)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: actions
+    
+    func actionCancel(sender button:UIButton)
+    {
+        
     }
 }
