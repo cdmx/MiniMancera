@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionPollutedGardenSceneGame:ViewGame<MOptionPollutedGarden, COptionPollutedGarden>
+class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPollutedGarden>
 {
     let soundPop:SKAction
     private weak var player:MOptionPollutedGardenPlayer!
@@ -166,10 +166,10 @@ class MOptionPollutedGardenSceneGame:ViewGame<MOptionPollutedGarden, COptionPoll
     private func updatePlayer()
     {
         guard
-        
+            
             let lastTouchPositionX:CGFloat = controls.lastTouchPositionX()
-        
-        else
+            
+            else
         {
             return
         }
@@ -261,7 +261,7 @@ class MOptionPollutedGardenSceneGame:ViewGame<MOptionPollutedGarden, COptionPoll
         
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kSceneTransitionDuration)
-        let gameOverScene:MOptionPollutedGardenSceneEnd = MOptionPollutedGardenSceneEnd(
+        let gameOverScene:VOptionPollutedGardenSceneEnd = VOptionPollutedGardenSceneEnd(
             controller:controller)
         
         view?.presentScene(gameOverScene, transition:transition)

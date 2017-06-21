@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionPollutedGardenSceneEnd:SKScene
+class VOptionPollutedGardenSceneEnd:SKScene
 {
     private let shouldPlaySounds:Bool
     private weak var controller:COptionPollutedGarden!
@@ -111,7 +111,7 @@ class MOptionPollutedGardenSceneEnd:SKScene
         
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kAnimationDuration)
-        let gameScene:MOptionPollutedGardenSceneGame = MOptionPollutedGardenSceneGame(
+        let gameScene:VOptionPollutedGardenScene = VOptionPollutedGardenScene(
             controller:controller)
         
         view?.presentScene(gameScene, transition:transition)

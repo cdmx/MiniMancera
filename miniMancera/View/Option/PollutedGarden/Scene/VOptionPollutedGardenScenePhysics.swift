@@ -1,6 +1,6 @@
 import SpriteKit
 
-extension MOptionPollutedGardenSceneGame:SKPhysicsContactDelegate
+extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
 {
     //MARK: private
     
