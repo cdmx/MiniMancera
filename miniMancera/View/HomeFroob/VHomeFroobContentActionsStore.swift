@@ -3,7 +3,7 @@ import UIKit
 class VHomeFroobContentActionsStore:UIButton
 {
     private weak var controller:CHomeFroob!
-    private let kIconWidth:CGFloat = 50
+    private let kIconWidth:CGFloat = 60
     private let kAlphaSelected:CGFloat = 0.4
     private let kAlphaNotSelected:CGFloat = 1
     

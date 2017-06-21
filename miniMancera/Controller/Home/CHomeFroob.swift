@@ -40,8 +40,22 @@ class CHomeFroob:Controller<VHomeFroob>
     {
         guard
         
-            let parent:ControllerParent = self.parent as? ControllerParent
+            let view:VHomeFroob = self.view as? VHomeFroob
         
+        else
+        {
+            return
+        }
+        
+        view.animateHide()
+    }
+    
+    func backAfterAnimation()
+    {
+        guard
+            
+            let parent:ControllerParent = self.parent as? ControllerParent
+            
         else
         {
             return

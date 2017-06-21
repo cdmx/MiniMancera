@@ -23,6 +23,9 @@ class VHomeFroobContentActions:UIView
         buttonCancel.setTitleColor(
             UIColor(white:1, alpha:0.6),
             for:UIControlState.normal)
+        buttonCancel.setTitleColor(
+            UIColor(white:1, alpha:0.2),
+            for:UIControlState.highlighted)
         buttonCancel.setTitle(
             String.localized(key:"VHomeFroobContentActions_buttonCancel"),
             for:UIControlState.normal)

@@ -118,4 +118,25 @@ class VHomeFroob:View
             }
         }
     }
+    
+    func animateHide()
+    {
+        let height:CGFloat = bounds.maxY
+        layoutContentTop.constant = height
+        
+        UIView.animate(withDuration:kAnimationFirstDuration)
+        { [weak self] in
+            
+            guard
+            
+                let controller:CHomeFroob = self?.controller as? CHomeFroob
+            
+            else
+            {
+                return
+            }
+            
+            controller.backAfterAnimation()
+        }
+    }
 }
