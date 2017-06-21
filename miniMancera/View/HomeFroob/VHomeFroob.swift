@@ -6,7 +6,8 @@ class VHomeFroob:View
     private let kAnimationFirstDuration:TimeInterval = 0.25
     private let kAnimationSecondDuration:TimeInterval = 0.1
     private let kMarginHorizontal:CGFloat = 10
-    private let kMarginVertical:CGFloat = 20
+    private let kMarginVertical:CGFloat = 30
+    private let kFailTop:CGFloat = 50
     
     required init(controller:UIViewController)
     {
@@ -89,7 +90,7 @@ class VHomeFroob:View
     
     func animateShow()
     {
-        layoutContentTop.constant = kMarginVertical + kMarginVertical
+        layoutContentTop.constant = kFailTop
         
         UIView.animate(withDuration:kAnimationFirstDuration,
                        animations:
