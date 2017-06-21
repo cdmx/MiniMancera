@@ -1,16 +1,16 @@
 import Foundation
 
-extension MOptionReformaCrossingFoe
+extension VOptionReformaCrossingFoe
 {
     class func randomFoe(
         lane:MOptionReformaCrossingLane,
-        controller:COptionReformaCrossing) -> MOptionReformaCrossingFoe?
+        controller:COptionReformaCrossing) -> VOptionReformaCrossingFoe?
     {
         guard
             
             let foeType:MOptionReformaCrossingFoe.Type = foeTypeFrom(lane:lane)
-        
-        else
+            
+            else
         {
             return nil
         }

@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
+class VOptionReformaCrossingFoe:SKSpriteNode
 {
     let created:TimeInterval
     private(set) weak var lane:MOptionReformaCrossingLane!
@@ -115,7 +115,7 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
             
             let actionMoving:SKAction = action(forKey:kActionMoving)
             
-        else
+            else
         {
             return
         }
@@ -130,8 +130,8 @@ class MOptionReformaCrossingFoe:SKSpriteNode, MOptionReformaCrossingFoeProtocol
         guard
             
             let actionMoving:SKAction = action(forKey:kActionMoving)
-        
-        else
+            
+            else
         {
             return
         }
