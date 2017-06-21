@@ -1,6 +1,6 @@
 import SpriteKit
 
-class VOptionReformaCrossingSceneGame:ViewGame<MOptionReformaCrossing, COptionReformaCrossing>
+class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReformaCrossing>
 {
     let soundHonk:SKAction
     private(set) weak var player:MOptionReformaCrossingPlayer!
@@ -122,7 +122,7 @@ class VOptionReformaCrossingSceneGame:ViewGame<MOptionReformaCrossing, COptionRe
                 lane:lane,
                 controller:controller)
             
-            else
+        else
         {
             return
         }
@@ -235,7 +235,7 @@ class VOptionReformaCrossingSceneGame:ViewGame<MOptionReformaCrossing, COptionRe
             
             let view:SKView = self.view
             
-            else
+        else
         {
             return
         }
