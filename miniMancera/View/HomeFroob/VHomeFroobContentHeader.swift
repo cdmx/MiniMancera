@@ -17,10 +17,22 @@ class VHomeFroobContentHeader:UIView
             colorLeftBottom:UIColor.colourSuccess,
             colorTopRight:UIColor.colourFail)
         
+        let imageView:UIImageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        imageView.contentMode = UIViewContentMode.center
+        imageView.isUserInteractionEnabled = false
+        imageView.image = controller.option.thumbnail
+        
         addSubview(viewGradient)
+        addSubview(imageView)
         
         NSLayoutConstraint.equals(
             view:viewGradient,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:imageView,
             toView:self)
     }
     

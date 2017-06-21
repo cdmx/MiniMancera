@@ -7,6 +7,7 @@ class VHomeFroobContent:UIView
     private let kCornerRadius:CGFloat = 15
     private let kActionsHeight:CGFloat = 80
     private let kInfoHeight:CGFloat = 150
+    private let kBorderWidth:CGFloat = 2
     
     init(controller:CHomeFroob)
     {
@@ -15,6 +16,8 @@ class VHomeFroobContent:UIView
         backgroundColor = UIColor.black
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = kCornerRadius
+        layer.borderWidth = kBorderWidth
+        layer.borderColor = UIColor.black.cgColor
         self.controller = controller
         
         let viewHeader:VHomeFroobContentHeader = VHomeFroobContentHeader(controller:controller)
