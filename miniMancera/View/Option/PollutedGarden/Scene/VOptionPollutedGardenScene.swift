@@ -184,7 +184,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
         let positionY:CGFloat = height_2 + kTitleVerticalAdd
         
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
-        labelTitle.text = String.localizedPollutedGarden(key:"MOptionPollutedGardenSceneGame_labelTitle")
+        labelTitle.text = String.localizedPollutedGarden(key:"VOptionPollutedGardenScene_labelTitle")
         labelTitle.fontSize = kFontSize
         labelTitle.fontColor = SKColor.white
         labelTitle.position = CGPoint(x:width_2, y:positionY)
