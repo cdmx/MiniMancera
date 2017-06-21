@@ -1,6 +1,6 @@
 import UIKit
 
-class MOptionReformaCrossingFoeFierroViejo:MOptionReformaCrossingFoe
+class VOptionReformaCrossingFoeFierroViejo:VOptionReformaCrossingFoe
 {
     private let kRandomMaxSpeed:UInt32 = 20
     

@@ -1,6 +1,6 @@
 import UIKit
 
-class MOptionReformaCrossingFoeTaxiPink:MOptionReformaCrossingFoe
+class VOptionReformaCrossingFoeTaxiPink:VOptionReformaCrossingFoe
 {
     private let kRandomMaxSpeed:UInt32 = 40
     

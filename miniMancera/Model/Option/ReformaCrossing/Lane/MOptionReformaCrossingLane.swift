@@ -1,8 +1,11 @@
 import UIKit
 
-class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
+class MOptionReformaCrossingLane
 {
-    var foes:[MOptionReformaCrossingFoe]
+    var foes:[VOptionReformaCrossingFoe]
+    private(set) var possibleFoes:[VOptionReformaCrossingFoe.Type]
+    private(set) var scaleHorizontal:CGFloat
+    private(set) var direction:CGFloat
     private(set) var verticalPosition:CGFloat
     private(set) var sceneWidth:CGFloat
     private let deltaVertical:CGFloat
@@ -12,19 +15,22 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
     {
         self.deltaVertical = deltaVertical
         foes = []
-        collectable = false
+        possibleFoes = []
+        scaleHorizontal = 0
+        direction = 0
         verticalPosition = 0
         sceneWidth = 0
+        collectable = false
     }
     
     //MARK: public
     
-    func foeInitialPoint(foe:MOptionReformaCrossingFoe) -> CGPoint
+    func foeInitialPoint(foe:VOptionReformaCrossingFoe) -> CGPoint
     {
         return CGPoint.zero
     }
     
-    func foeEndingPoint(foe:MOptionReformaCrossingFoe) -> CGPoint
+    func foeEndingPoint(foe:VOptionReformaCrossingFoe) -> CGPoint
     {
         return CGPoint.zero
     }
@@ -34,11 +40,13 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         return false
     }
     
-    final func removeFoe(item:MOptionReformaCrossingFoe)
+    //MARK: final
+    
+    final func removeFoe(item:VOptionReformaCrossingFoe)
     {
-        var foes:[MOptionReformaCrossingFoe] = []
+        var foes:[VOptionReformaCrossingFoe] = []
         
-        for foe:MOptionReformaCrossingFoe in self.foes
+        for foe:VOptionReformaCrossingFoe in self.foes
         {
             if foe !== item
             {
@@ -51,7 +59,7 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
     
     final func stopFoes()
     {
-        for foe:MOptionReformaCrossingFoe in foes
+        for foe:VOptionReformaCrossingFoe in foes
         {
             foe.totalStop()
         }
@@ -85,31 +93,5 @@ class MOptionReformaCrossingLane:MOptionReformaCrossingLaneProtocol
         }
         
         return false
-    }
-    
-    //MARK: lane protocol
-    
-    var scaleHorizontal:CGFloat
-    {
-        get
-        {
-            return 0
-        }
-    }
-    
-    var direction:CGFloat
-    {
-        get
-        {
-            return 0
-        }
-    }
-    
-    var posibleFoes:[MOptionReformaCrossingFoe.Type]
-    {
-        get
-        {
-            return []
-        }
     }
 }

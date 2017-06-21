@@ -119,7 +119,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
         
         guard
             
-            let foe:MOptionReformaCrossingFoe = MOptionReformaCrossingFoe.randomFoe(
+            let foe:VOptionReformaCrossingFoe = VOptionReformaCrossingFoe.randomFoe(
                 lane:lane,
                 controller:controller)
             

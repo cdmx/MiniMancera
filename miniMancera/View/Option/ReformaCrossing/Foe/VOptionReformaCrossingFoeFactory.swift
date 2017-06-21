@@ -8,14 +8,14 @@ extension VOptionReformaCrossingFoe
     {
         guard
             
-            let foeType:MOptionReformaCrossingFoe.Type = foeTypeFrom(lane:lane)
+            let foeType:VOptionReformaCrossingFoe.Type = foeTypeFrom(lane:lane)
             
-            else
+        else
         {
             return nil
         }
         
-        let foe:MOptionReformaCrossingFoe? = foeType.init(
+        let foe:VOptionReformaCrossingFoe? = foeType.init(
             lane:lane,
             controller:controller)
         
@@ -24,15 +24,15 @@ extension VOptionReformaCrossingFoe
     
     //MARK: private
     
-    private class func foeTypeFrom(lane:MOptionReformaCrossingLane) -> MOptionReformaCrossingFoe.Type?
+    private class func foeTypeFrom(lane:MOptionReformaCrossingLane) -> VOptionReformaCrossingFoe.Type?
     {
-        let possibleFoes:[MOptionReformaCrossingFoe.Type] = lane.posibleFoes
+        let possibleFoes:[VOptionReformaCrossingFoe.Type] = lane.possibleFoes
         let countIds:UInt32 = UInt32(possibleFoes.count)
         
         if countIds > 0
         {
             let randomId:Int = Int(arc4random_uniform(countIds))
-            let foeType:MOptionReformaCrossingFoe.Type = possibleFoes[randomId]
+            let foeType:VOptionReformaCrossingFoe.Type = possibleFoes[randomId]
             
             return foeType
         }

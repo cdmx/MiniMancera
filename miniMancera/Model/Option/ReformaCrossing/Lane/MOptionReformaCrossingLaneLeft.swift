@@ -21,7 +21,7 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
         }
     }
     
-    override func foeInitialPoint(foe:MOptionReformaCrossingFoe) -> CGPoint
+    override func foeInitialPoint(foe:VOptionReformaCrossingFoe) -> CGPoint
     {
         let foeWidth_2:CGFloat = foe.size.width / 2.0
         let horizontalPosition:CGFloat = foeWidth_2 + sceneWidth
@@ -30,7 +30,7 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
         return point
     }
     
-    override func foeEndingPoint(foe:MOptionReformaCrossingFoe) -> CGPoint
+    override func foeEndingPoint(foe:VOptionReformaCrossingFoe) -> CGPoint
     {
         let horizontalPosition:CGFloat = foe.size.width / -2.0
         let point:CGPoint = CGPoint(x:horizontalPosition, y:verticalPosition)
@@ -42,7 +42,7 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
     {
         let sceneWidth:CGFloat = sceneSize.width
         
-        for foe:MOptionReformaCrossingFoe in foes
+        for foe:VOptionReformaCrossingFoe in foes
         {
             let foeWidth_2:CGFloat = foe.size.width / 2.0
             let minWidth:CGFloat = sceneWidth - foeWidth_2

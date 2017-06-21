@@ -4,7 +4,7 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
 {
     //MARK: private
     
-    private func contactFoes(foeA:MOptionReformaCrossingFoe, foeB:MOptionReformaCrossingFoe)
+    private func contactFoes(foeA:VOptionReformaCrossingFoe, foeB:VOptionReformaCrossingFoe)
     {
         if foeA.created < foeB.created
         {
@@ -16,7 +16,7 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
         }
     }
     
-    private func contactPlayerFoe(player:VOptionReformaCrossingPlayer, foe:MOptionReformaCrossingFoe)
+    private func contactPlayerFoe(player:VOptionReformaCrossingPlayer, foe:VOptionReformaCrossingFoe)
     {
         playSound(actionSound:soundHonk)
         
@@ -33,20 +33,20 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
         let bodyA:SKNode? = contact.bodyA.node
         let bodyB:SKNode? = contact.bodyB.node
         
-        if let foeA:MOptionReformaCrossingFoe = bodyA as? MOptionReformaCrossingFoe
+        if let foeA:VOptionReformaCrossingFoe = bodyA as? VOptionReformaCrossingFoe
         {
             if let player:VOptionReformaCrossingPlayer = bodyB as? VOptionReformaCrossingPlayer
             {
                 contactPlayerFoe(player:player, foe:foeA)
             }
-            else if let foeB:MOptionReformaCrossingFoe = bodyB as? MOptionReformaCrossingFoe
+            else if let foeB:VOptionReformaCrossingFoe = bodyB as? VOptionReformaCrossingFoe
             {
                 contactFoes(foeA:foeA, foeB:foeB)
             }
         }
         else if let player:VOptionReformaCrossingPlayer = bodyA as? VOptionReformaCrossingPlayer
         {
-            if let foeB:MOptionReformaCrossingFoe = bodyB as? MOptionReformaCrossingFoe
+            if let foeB:VOptionReformaCrossingFoe = bodyB as? VOptionReformaCrossingFoe
             {
                 contactPlayerFoe(player:player, foe:foeB)
             }

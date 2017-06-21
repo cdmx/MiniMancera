@@ -1,6 +1,6 @@
 import UIKit
 
-class MOptionReformaCrossingFoeTamales:MOptionReformaCrossingFoe
+class VOptionReformaCrossingFoeTamales:VOptionReformaCrossingFoe
 {
     private let kRandomMaxSpeed:UInt32 = 30
     private let kMinSpeed:CGFloat = -40
