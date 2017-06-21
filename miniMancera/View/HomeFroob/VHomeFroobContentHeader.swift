@@ -2,6 +2,8 @@ import UIKit
 
 class VHomeFroobContentHeader:UIView
 {
+    private weak var controller:CHomeFroob!
+    
     init(controller:CHomeFroob)
     {
         super.init(frame:CGRect.zero)
@@ -9,6 +11,7 @@ class VHomeFroobContentHeader:UIView
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = false
+        self.controller = controller
         
         let viewGradient:VGradient = VGradient.diagonal(
             colorLeftBottom:UIColor.colourSuccess,
