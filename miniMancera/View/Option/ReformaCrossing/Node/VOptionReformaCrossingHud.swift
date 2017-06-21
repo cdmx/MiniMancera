@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionReformaCrossingHud:SKSpriteNode
+class VOptionReformaCrossingHud:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
     private weak var labelTime:SKLabelNode!
