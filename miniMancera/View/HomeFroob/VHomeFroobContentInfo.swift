@@ -3,7 +3,7 @@ import UIKit
 class VHomeFroobContentInfo:UIView
 {
     private weak var controller:CHomeFroob!
-    private let kSubtitleHeight:CGFloat = 60
+    private let kSubtitleHeight:CGFloat = 70
     private let kMarginHorizontal:CGFloat = 10
     
     init(controller:CHomeFroob)
