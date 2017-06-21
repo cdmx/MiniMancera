@@ -17,7 +17,43 @@ class VHomeFroobContent:UIView
         layer.cornerRadius = kCornerRadius
         self.controller = controller
         
+        let viewHeader:VHomeFroobContentHeader = VHomeFroobContentHeader(controller:controller)
+        let viewInfo:VHomeFroobContentInfo = VHomeFroobContentInfo(controller:controller)
+        let viewActions:VHomeFroobContentActions = VHomeFroobContentActions(controller:controller)
         
+        addSubview(viewHeader)
+        addSubview(viewInfo)
+        addSubview(viewActions)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:viewActions,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewActions,
+            constant:kActionsHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewActions,
+            toView:self)
+        
+        NSLayoutConstraint.bottomToTop(
+            view:viewInfo,
+            toView:viewActions)
+        NSLayoutConstraint.height(
+            view:viewInfo,
+            constant:kInfoHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewInfo,
+            toView:self)
+        
+        NSLayoutConstraint.bottomToTop(
+            view:viewHeader,
+            toView:viewInfo)
+        NSLayoutConstraint.topToTop(
+            view:viewHeader,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewHeader,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
