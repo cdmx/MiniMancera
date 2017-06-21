@@ -67,7 +67,7 @@ class VOptionReformaCrossingSceneOver:SKScene
         let image:SKSpriteNode = SKSpriteNode(texture:texture)
         image.position = CGPoint(x:width_2, y:height_2)
         
-        let node1up:MOptionReformaCrossing1up = MOptionReformaCrossing1up(controller:controller)
+        let node1up:VOptionReformaCrossing1up = VOptionReformaCrossing1up(controller:controller)
         let nodeGameOver:MOptionReformaCrossingEnd = MOptionReformaCrossingEnd(controller:controller)
         
         addChild(background)
