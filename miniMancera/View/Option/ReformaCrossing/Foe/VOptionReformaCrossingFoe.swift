@@ -119,7 +119,7 @@ class VOptionReformaCrossingFoe:SKSpriteNode
             
             let actionMoving:SKAction = action(forKey:kActionMoving)
             
-            else
+        else
         {
             return
         }
@@ -135,7 +135,7 @@ class VOptionReformaCrossingFoe:SKSpriteNode
             
             let actionMoving:SKAction = action(forKey:kActionMoving)
             
-            else
+        else
         {
             return
         }
