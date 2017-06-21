@@ -4,7 +4,6 @@ class MHomeOptions
 {
     let available:Bool
     private(set) weak var dataOption:DOption?
-    private(set) var modelType:MOptionProtocol?
     private(set) var title:String?
     private(set) var descr:String?
     private(set) var thumbnail:UIImage?

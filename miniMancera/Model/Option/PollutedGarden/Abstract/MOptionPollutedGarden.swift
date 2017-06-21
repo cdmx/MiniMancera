@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionPollutedGarden:MOptionProtocol
+class MOptionPollutedGarden:MGameProtocol
 {
     let petuniaLife:MOptionPollutedGardenPetuniaLife
     let bubbleGenerator:MOptionPollutedGardenBubbleGenerator

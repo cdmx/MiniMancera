@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingSceneGame:MOptionSceneGame<MOptionReformaCrossing, COptionReformaCrossing>
+class MOptionReformaCrossingSceneGame:ViewGame<MOptionReformaCrossing, COptionReformaCrossing>
 {
     let soundHonk:SKAction
     private(set) weak var player:MOptionReformaCrossingPlayer!

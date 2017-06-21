@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionPollutedGardenSceneGame:MOptionSceneGame<MOptionPollutedGarden, COptionPollutedGarden>
+class MOptionPollutedGardenSceneGame:ViewGame<MOptionPollutedGarden, COptionPollutedGarden>
 {
     let soundPop:SKAction
     private weak var player:MOptionPollutedGardenPlayer!

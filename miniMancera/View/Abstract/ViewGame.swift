@@ -1,6 +1,6 @@
 import SpriteKit
 
-class ViewGame<S:MOptionProtocol, T:ControllerGame<S>>:SKScene
+class ViewGame<S:MGameProtocol, T:ControllerGame<S>>:SKScene
 {
     let shouldPlaySounds:Bool
     var lastUpdateTime:TimeInterval?
