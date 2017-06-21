@@ -151,6 +151,7 @@
 		DA7E46771EFAD8D300466867 /* VHomeFroobContentActionsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46761EFAD8D300466867 /* VHomeFroobContentActionsStore.swift */; };
 		DA7E467C1EFAED5A00466867 /* ViewGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E467B1EFAED5A00466867 /* ViewGame.swift */; };
 		DA7E467E1EFAEDB400466867 /* ViewGameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E467D1EFAEDB400466867 /* ViewGameNode.swift */; };
+		DA7E46811EFAEF0200466867 /* MPerkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46801EFAEF0200466867 /* MPerkProtocol.swift */; };
 		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */; };
 		DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */; };
@@ -352,6 +353,7 @@
 		DA7E46761EFAD8D300466867 /* VHomeFroobContentActionsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentActionsStore.swift; sourceTree = "<group>"; };
 		DA7E467B1EFAED5A00466867 /* ViewGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGame.swift; sourceTree = "<group>"; };
 		DA7E467D1EFAEDB400466867 /* ViewGameNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGameNode.swift; sourceTree = "<group>"; };
+		DA7E46801EFAEF0200466867 /* MPerkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkProtocol.swift; sourceTree = "<group>"; };
 		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -647,6 +649,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5667671EF27427000055D8 /* Abstract */,
+				DA7E467F1EFAEEF600466867 /* Perk */,
 				DA5667691EF27427000055D8 /* Game */,
 			);
 			path = Main;
@@ -784,6 +787,7 @@
 				DA56676D1EF27475000055D8 /* MGameFreeProtocol.swift */,
 				DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */,
 				DA5667711EF2748F000055D8 /* MGameFactory.swift */,
+				DA7E46801EFAEF0200466867 /* MPerkProtocol.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -919,6 +923,13 @@
 			children = (
 			);
 			path = ReformaCrossing;
+			sourceTree = "<group>";
+		};
+		DA7E467F1EFAEEF600466867 /* Perk */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Perk;
 			sourceTree = "<group>";
 		};
 		DAAF2F841EF6EC6300589BB0 /* Footer */ = {
@@ -1116,6 +1127,7 @@
 			files = (
 				DA2DFFE51EECB16A00365F23 /* View.swift in Sources */,
 				DAAF2FD61EF6FBB500589BB0 /* MStoreStatusNotAvailable.swift in Sources */,
+				DA7E46811EFAEF0200466867 /* MPerkProtocol.swift in Sources */,
 				DA5667821EF276CD000055D8 /* MHomeFooterProtocol.swift in Sources */,
 				DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */,
 				DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */,
