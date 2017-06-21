@@ -3,7 +3,7 @@ import UIKit
 class VHomeFroobContentInfo:UIView
 {
     private weak var controller:CHomeFroob!
-    private let kSubtitleHeight:CGFloat = 50
+    private let kSubtitleHeight:CGFloat = 60
     private let kMarginHorizontal:CGFloat = 10
     
     init(controller:CHomeFroob)
@@ -21,8 +21,9 @@ class VHomeFroobContentInfo:UIView
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.numberOfLines = 0
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.game(size:20)
+        labelTitle.font = UIFont.bold(size:17)
         labelTitle.textColor = UIColor.white
+        labelTitle.text = controller.option.title
         
         let labelSubtitle:UILabel = UILabel()
         labelSubtitle.isUserInteractionEnabled = false

@@ -5,8 +5,8 @@ class VHomeFroobContent:UIView
     private weak var controller:CHomeFroob!
     private weak var labelTitle:UILabel!
     private let kCornerRadius:CGFloat = 15
-    private let kActionsHeight:CGFloat = 80
-    private let kInfoHeight:CGFloat = 200
+    private let kActionsHeight:CGFloat = 150
+    private let kInfoHeight:CGFloat = 120
     private let kBorderWidth:CGFloat = 2
     
     init(controller:CHomeFroob)
