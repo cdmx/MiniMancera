@@ -4,13 +4,13 @@ class MPerkFactory
 {
     class func factoryPerks() -> [MPerkProtocol]
     {
-        let gameReformaCrossing:MGameReformaCrossing = MGameReformaCrossing()
-        let gamePollutedGarden:MGamePollutedGarden = MGamePollutedGarden()
+        let perkReformaCrossing:MPerkReformaCrossing = MPerkReformaCrossing()
+        let perkPollutedGarden:MPerkPollutedGarden = MPerkPollutedGarden()
         
-        let games:[MGameProtocol] = [
-            gameReformaCrossing,
-            gamePollutedGarden]
+        let perks:[MPerkProtocol] = [
+            perkReformaCrossing,
+            perkPollutedGarden]
         
-        return games
+        return perks
     }
 }

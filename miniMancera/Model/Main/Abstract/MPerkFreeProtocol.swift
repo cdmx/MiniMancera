@@ -1,5 +1,5 @@
 import Foundation
 
-protocol MPerkFreeProtocol:MGameProtocol
+protocol MPerkFreeProtocol:MPerkProtocol
 {
 }
