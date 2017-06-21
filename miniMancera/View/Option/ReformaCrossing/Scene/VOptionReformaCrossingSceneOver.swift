@@ -36,7 +36,7 @@ class VOptionReformaCrossingSceneOver:SKScene
         let titleY:CGFloat = height_2 + kTitleAddY
         let descrY:CGFloat = height_2 + kDescrAddY
         
-        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
+        let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
             controller:controller)
         
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)

@@ -37,7 +37,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
         physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self
         
-        let background:MOptionReformaCrossingBackground = MOptionReformaCrossingBackground(
+        let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
             controller:controller)
         
         let hud:MOptionReformaCrossingHud = MOptionReformaCrossingHud(
