@@ -11,7 +11,7 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
     
     //MARK: public
     
-    func collectFlower(petunia:MOptionPollutedGardenPetunia)
+    func collectFlower(petunia:VOptionPollutedGardenPetunia)
     {
         guard
             
@@ -27,7 +27,7 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
         scene.collectFlower(petunia:petunia)
     }
     
-    func pollutedFlower(petunia:MOptionPollutedGardenPetunia)
+    func pollutedFlower(petunia:VOptionPollutedGardenPetunia)
     {
         guard
             

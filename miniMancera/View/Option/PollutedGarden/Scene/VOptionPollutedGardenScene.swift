@@ -5,11 +5,11 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
     let soundPop:SKAction
     private weak var player:MOptionPollutedGardenPlayer!
     private weak var controls:MOptionPollutedGardenControls!
-    private weak var hud:MOptionPollutedGardenHud!
-    private weak var menu:MOptionPollutedGardenMenu!
-    private weak var floor:MOptionPollutedGardenFloor!
+    private weak var hud:VOptionPollutedGardenHud!
+    private weak var menu:VOptionPollutedGardenMenu!
+    private weak var floor:VOptionPollutedGardenFloor!
     private weak var labelTitle:SKLabelNode?
-    private var petunias:[MOptionPollutedGardenPetunia]
+    private var petunias:[VOptionPollutedGardenPetunia]
     private var contactQueue:[SKPhysicsContact]
     private var nextBubbleSpawns:TimeInterval
     private let soundCoin:SKAction
@@ -43,15 +43,15 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
         let background:VOptionPollutedGardenBackground = VOptionPollutedGardenBackground(
             controller:controller)
         
-        let hud:MOptionPollutedGardenHud = MOptionPollutedGardenHud(
+        let hud:VOptionPollutedGardenHud = VOptionPollutedGardenHud(
             controller:controller)
         self.hud = hud
         
-        let menu:MOptionPollutedGardenMenu = MOptionPollutedGardenMenu(
+        let menu:VOptionPollutedGardenMenu = VOptionPollutedGardenMenu(
             controller:controller)
         self.menu = menu
         
-        let floor:MOptionPollutedGardenFloor = MOptionPollutedGardenFloor(
+        let floor:VOptionPollutedGardenFloor = VOptionPollutedGardenFloor(
             controller:controller)
         self.floor = floor
         
@@ -147,7 +147,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
     
     private func spawnPlantFor(flowerPot:VOptionPollutedGardenFlowerPot)
     {
-        let petunia:MOptionPollutedGardenPetunia = MOptionPollutedGardenPetunia(
+        let petunia:VOptionPollutedGardenPetunia = VOptionPollutedGardenPetunia(
             controller:controller,
             flowerPot:flowerPot)
         petunias.append(petunia)
@@ -157,7 +157,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
     
     private func updatePetunias()
     {
-        for petunia:MOptionPollutedGardenPetunia in petunias
+        for petunia:VOptionPollutedGardenPetunia in petunias
         {
             petunia.update(elapsedTime:elapsedTime)
         }
@@ -269,7 +269,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
     
     //MARK: public
     
-    func collectFlower(petunia:MOptionPollutedGardenPetunia)
+    func collectFlower(petunia:VOptionPollutedGardenPetunia)
     {
         playSound(actionSound:soundCoin)
         
@@ -280,7 +280,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
         addChild(plusFlower)
     }
     
-    func flowerPolluted(petunia:MOptionPollutedGardenPetunia)
+    func flowerPolluted(petunia:VOptionPollutedGardenPetunia)
     {
         playSound(actionSound:soundFail)
         

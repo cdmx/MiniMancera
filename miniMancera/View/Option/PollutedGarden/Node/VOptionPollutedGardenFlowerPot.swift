@@ -4,7 +4,7 @@ import SpriteKit
 class VOptionPollutedGardenFlowerPot:SKSpriteNode
 {
     let endingPoint:CGPoint
-    weak var petunia:MOptionPollutedGardenPetunia?
+    weak var petunia:VOptionPollutedGardenPetunia?
     private weak var controller:COptionPollutedGarden!
     private let kMinAnimationDuration:TimeInterval = 0.3
     private let kAnimationDurationDivider:TimeInterval = 10

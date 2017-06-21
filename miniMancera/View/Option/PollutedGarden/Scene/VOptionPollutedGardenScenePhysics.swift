@@ -12,11 +12,11 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
             {
                 contactBubbleUmbrella(bubble:bubble, player:player)
             }
-            else if let petunia:MOptionPollutedGardenPetunia = body as? MOptionPollutedGardenPetunia
+            else if let petunia:VOptionPollutedGardenPetunia = body as? VOptionPollutedGardenPetunia
             {
                 contactBubblePetunia(bubble:bubble, petunia:petunia)
             }
-            else if let floor:MOptionPollutedGardenFloor = body as? MOptionPollutedGardenFloor
+            else if let floor:VOptionPollutedGardenFloor = body as? VOptionPollutedGardenFloor
             {
                 contactBubbleFloor(bubble:bubble, floor:floor)
             }
@@ -33,7 +33,7 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
     
     private func contactBubblePetunia(
         bubble:VOptionPollutedGardenBubble,
-        petunia:MOptionPollutedGardenPetunia)
+        petunia:VOptionPollutedGardenPetunia)
     {
         bubble.explode()
         petunia.polluted()
@@ -41,7 +41,7 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
     
     private func contactBubbleFloor(
         bubble:VOptionPollutedGardenBubble,
-        floor:MOptionPollutedGardenFloor)
+        floor:VOptionPollutedGardenFloor)
     {
         playSound(actionSound:soundPop)
         bubble.explode()

@@ -10,7 +10,7 @@ class MOptionPollutedGardenPlusFlower:SKSpriteNode
     private let kAnimationDuration:TimeInterval = 1.4
     private let kZPosition:CGFloat = 100000
     
-    init(petunia:MOptionPollutedGardenPetunia, controller:COptionPollutedGarden)
+    init(petunia:VOptionPollutedGardenPetunia, controller:COptionPollutedGarden)
     {
         let texture:SKTexture = controller.model.petuniaLife.texturePlus
         let size:CGSize = texture.size()
@@ -29,7 +29,7 @@ class MOptionPollutedGardenPlusFlower:SKSpriteNode
     
     //MARK: private
     
-    private func startPosition(petunia:MOptionPollutedGardenPetunia)
+    private func startPosition(petunia:VOptionPollutedGardenPetunia)
     {
         let petuniaPos:CGPoint = petunia.position
         let petuniaX:CGFloat = petuniaPos.x

@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionPollutedGardenFloor:SKSpriteNode
+class VOptionPollutedGardenFloor:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
     private let kZPosition:CGFloat = 100000

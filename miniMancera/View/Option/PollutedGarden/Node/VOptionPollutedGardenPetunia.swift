@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionPollutedGardenPetunia:SKSpriteNode
+class VOptionPollutedGardenPetunia:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
     private weak var flowerPot:VOptionPollutedGardenFlowerPot!

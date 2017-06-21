@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionPollutedGardenMenu:SKSpriteNode
+class VOptionPollutedGardenMenu:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
     private let kMargin:CGFloat = 45

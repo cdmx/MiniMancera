@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionPollutedGardenHud:SKSpriteNode
+class VOptionPollutedGardenHud:SKSpriteNode
 {
     private weak var controller:COptionPollutedGarden!
     private weak var labelScore:SKLabelNode!
