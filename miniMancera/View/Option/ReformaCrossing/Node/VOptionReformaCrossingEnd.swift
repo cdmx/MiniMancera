@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionReformaCrossingEnd:SKSpriteNode
+class VOptionReformaCrossingEnd:SKSpriteNode
 {
     private weak var controller:COptionReformaCrossing!
     private let kYPosition:CGFloat = 50

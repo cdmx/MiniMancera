@@ -68,7 +68,7 @@ class VOptionReformaCrossingSceneOver:SKScene
         image.position = CGPoint(x:width_2, y:height_2)
         
         let node1up:VOptionReformaCrossing1up = VOptionReformaCrossing1up(controller:controller)
-        let nodeGameOver:MOptionReformaCrossingEnd = MOptionReformaCrossingEnd(controller:controller)
+        let nodeGameOver:VOptionReformaCrossingEnd = VOptionReformaCrossingEnd(controller:controller)
         
         addChild(background)
         addChild(labelTitle)

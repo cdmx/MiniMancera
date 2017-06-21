@@ -73,7 +73,6 @@
 		DA2D008F1EEE6D6F00365F23 /* MOptionReformaCrossingLaneGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D008E1EEE6D6F00365F23 /* MOptionReformaCrossingLaneGroup.swift */; };
 		DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00B01EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift */; };
 		DA2D00B31EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00B21EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift */; };
-		DA2D00BB1EEFF20900365F23 /* MOptionReformaCrossingEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00BA1EEFF20900365F23 /* MOptionReformaCrossingEnd.swift */; };
 		DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */; };
 		DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA61EECB16A00365F23 /* Controller.swift */; };
 		DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */; };
@@ -203,6 +202,7 @@
 		DACD313C1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD313B1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift */; };
 		DACD313E1EFB08AD00F205A0 /* VOptionReformaCrossingStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD313D1EFB08AD00F205A0 /* VOptionReformaCrossingStop.swift */; };
 		DACD31401EFB098C00F205A0 /* VOptionReformaCrossing1up.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD313F1EFB098C00F205A0 /* VOptionReformaCrossing1up.swift */; };
+		DACD31421EFB0A1100F205A0 /* VOptionReformaCrossingEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31411EFB0A1100F205A0 /* VOptionReformaCrossingEnd.swift */; };
 		DAD814381EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD814371EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -273,7 +273,6 @@
 		DA2D008E1EEE6D6F00365F23 /* MOptionReformaCrossingLaneGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingLaneGroup.swift; sourceTree = "<group>"; };
 		DA2D00B01EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverProtocol.swift; sourceTree = "<group>"; };
 		DA2D00B21EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverTimeOut.swift; sourceTree = "<group>"; };
-		DA2D00BA1EEFF20900365F23 /* MOptionReformaCrossingEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingEnd.swift; sourceTree = "<group>"; };
 		DA2DFFA51EECB16A00365F23 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA2DFFA61EECB16A00365F23 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA2DFFA71EECB16A00365F23 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
@@ -403,6 +402,7 @@
 		DACD313B1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingPlayer.swift; sourceTree = "<group>"; };
 		DACD313D1EFB08AD00F205A0 /* VOptionReformaCrossingStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingStop.swift; sourceTree = "<group>"; };
 		DACD313F1EFB098C00F205A0 /* VOptionReformaCrossing1up.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossing1up.swift; sourceTree = "<group>"; };
+		DACD31411EFB0A1100F205A0 /* VOptionReformaCrossingEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingEnd.swift; sourceTree = "<group>"; };
 		DAD814371EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentHeader.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -541,7 +541,6 @@
 		DA2D00981EEFC15E00365F23 /* Node */ = {
 			isa = PBXGroup;
 			children = (
-				DA2D00BA1EEFF20900365F23 /* MOptionReformaCrossingEnd.swift */,
 				DA11DE3C1EF089810043749D /* MOptionReformaCrossingCoin.swift */,
 			);
 			path = Node;
@@ -998,6 +997,7 @@
 				DACD313B1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift */,
 				DACD313D1EFB08AD00F205A0 /* VOptionReformaCrossingStop.swift */,
 				DACD313F1EFB098C00F205A0 /* VOptionReformaCrossing1up.swift */,
+				DACD31411EFB0A1100F205A0 /* VOptionReformaCrossingEnd.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -1127,6 +1127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACD31421EFB0A1100F205A0 /* VOptionReformaCrossingEnd.swift in Sources */,
 				DA2DFFE51EECB16A00365F23 /* View.swift in Sources */,
 				DAAF2FD61EF6FBB500589BB0 /* MStoreStatusNotAvailable.swift in Sources */,
 				DA7E46811EFAEF0200466867 /* MPerkProtocol.swift in Sources */,
@@ -1154,7 +1155,6 @@
 				DA7E46851EFAEF3E00466867 /* MPerkPurchaseProtocol.swift in Sources */,
 				DA1D579C1EF245C800ECA895 /* VHomeFooterCell.swift in Sources */,
 				DACD31321EFB002500F205A0 /* VOptionReformaCrossingScenePhysics.swift in Sources */,
-				DA2D00BB1EEFF20900365F23 /* MOptionReformaCrossingEnd.swift in Sources */,
 				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
 				DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */,
 				DA28927F1EF614FB00C80D3D /* MOptionPollutedGarden1up.swift in Sources */,
