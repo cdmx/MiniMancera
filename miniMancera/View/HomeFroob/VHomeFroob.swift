@@ -22,12 +22,8 @@ class VHomeFroob:View
             return
         }
         
-        let screenSize:CGSize = UIScreen.main.bounds.size
-        let width:CGFloat = screenSize.width
-        let height:CGFloat = screenSize.height
-        let marginHoriontal2:CGFloat = kMarginHorizontal + kMarginHorizontal
+        let height:CGFloat = UIScreen.main.bounds.size.height
         let marginVertical2:CGFloat = kMarginVertical + kMarginVertical
-        let usableWidth:CGFloat = width - marginHoriontal2
         let usableHeight:CGFloat = height - marginVertical2
         
         let blur:VBlur = VBlur.light()
