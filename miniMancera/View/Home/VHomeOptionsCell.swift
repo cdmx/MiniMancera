@@ -34,7 +34,7 @@ class VHomeOptionsCell:UICollectionViewCell
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.game(size:14)
+        labelTitle.font = UIFont.game(size:13)
         labelTitle.numberOfLines = 0
         self.labelTitle = labelTitle
         
