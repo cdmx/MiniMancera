@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DA11DE3F1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */; };
-		DA11DE4D1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE4C1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift */; };
 		DA11DE4F1EF141F10043749D /* MOptionReformaCrossingFoeTamales.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE4E1EF141F10043749D /* MOptionReformaCrossingFoeTamales.swift */; };
 		DA11DE511EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE501EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift */; };
 		DA11DE531EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */; };
@@ -201,12 +200,12 @@
 		DACD314A1EFB120100F205A0 /* VOptionReformaCrossingFoeVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31491EFB120100F205A0 /* VOptionReformaCrossingFoeVW.swift */; };
 		DACD314C1EFB127300F205A0 /* VOptionReformaCrossingFoeRuta2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD314B1EFB127300F205A0 /* VOptionReformaCrossingFoeRuta2.swift */; };
 		DACD314E1EFB12BE00F205A0 /* VOptionReformaCrossingFoeMetrobus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD314D1EFB12BE00F205A0 /* VOptionReformaCrossingFoeMetrobus.swift */; };
+		DACD31501EFB131E00F205A0 /* VOptionReformaCrossingFoePolice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD314F1EFB131E00F205A0 /* VOptionReformaCrossingFoePolice.swift */; };
 		DAD814381EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD814371EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverHitAndRun.swift; sourceTree = "<group>"; };
-		DA11DE4C1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoePolice.swift; sourceTree = "<group>"; };
 		DA11DE4E1EF141F10043749D /* MOptionReformaCrossingFoeTamales.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeTamales.swift; sourceTree = "<group>"; };
 		DA11DE501EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeTaxiPink.swift; sourceTree = "<group>"; };
 		DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeFierroViejo.swift; sourceTree = "<group>"; };
@@ -399,6 +398,7 @@
 		DACD31491EFB120100F205A0 /* VOptionReformaCrossingFoeVW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoeVW.swift; sourceTree = "<group>"; };
 		DACD314B1EFB127300F205A0 /* VOptionReformaCrossingFoeRuta2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoeRuta2.swift; sourceTree = "<group>"; };
 		DACD314D1EFB12BE00F205A0 /* VOptionReformaCrossingFoeMetrobus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoeMetrobus.swift; sourceTree = "<group>"; };
+		DACD314F1EFB131E00F205A0 /* VOptionReformaCrossingFoePolice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoePolice.swift; sourceTree = "<group>"; };
 		DAD814371EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentHeader.swift; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -497,7 +497,6 @@
 		DA2D00631EEDE38600365F23 /* Foe */ = {
 			isa = PBXGroup;
 			children = (
-				DA11DE4C1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift */,
 				DA11DE4E1EF141F10043749D /* MOptionReformaCrossingFoeTamales.swift */,
 				DA11DE501EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift */,
 				DA11DE521EF1A7950043749D /* MOptionReformaCrossingFoeFierroViejo.swift */,
@@ -969,6 +968,7 @@
 				DACD31491EFB120100F205A0 /* VOptionReformaCrossingFoeVW.swift */,
 				DACD314B1EFB127300F205A0 /* VOptionReformaCrossingFoeRuta2.swift */,
 				DACD314D1EFB12BE00F205A0 /* VOptionReformaCrossingFoeMetrobus.swift */,
+				DACD314F1EFB131E00F205A0 /* VOptionReformaCrossingFoePolice.swift */,
 			);
 			path = Foe;
 			sourceTree = "<group>";
@@ -1153,7 +1153,6 @@
 				DABD4F181EF46983003DF861 /* MOptionPollutedGardenHud.swift in Sources */,
 				DAAF2FD31EF6FBB500589BB0 /* MStoreStatusNew.swift in Sources */,
 				DA779A031EF876D500362A44 /* MHomeSplashProtocol.swift in Sources */,
-				DA11DE4D1EF12B9E0043749D /* MOptionReformaCrossingFoePolice.swift in Sources */,
 				DA2D00B31EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift in Sources */,
 				DA5667851EF276CD000055D8 /* MHomeFooterSettings.swift in Sources */,
 				DA5667811EF276CD000055D8 /* MHome.swift in Sources */,
@@ -1164,6 +1163,7 @@
 				DACD313A1EFB05FA00F205A0 /* VOptionReformaCrossingMenu.swift in Sources */,
 				DACD31461EFB0CE300F205A0 /* VOptionReformaCrossingFoe.swift in Sources */,
 				DA2DFFEF1EECB16A00365F23 /* VSliderBar.swift in Sources */,
+				DACD31501EFB131E00F205A0 /* VOptionReformaCrossingFoePolice.swift in Sources */,
 				DA1BDB251EF705960040FBEA /* VHomeFroobContent.swift in Sources */,
 				DA2DFFEB1EECB16A00365F23 /* VCollectionFlow.swift in Sources */,
 				DA2DFFDB1EECB16A00365F23 /* ExtensionNotification.swift in Sources */,
