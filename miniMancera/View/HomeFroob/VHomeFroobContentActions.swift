@@ -11,6 +11,14 @@ class VHomeFroobContentActions:UIView
         backgroundColor = UIColor.clear
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
+        
+        let buttonStore:UIButton = UIButton()
+        
+        let buttonCancel:UIButton = UIButton()
+        buttonCancel
+        
+        addSubview(buttonStore)
+        addSubview(buttonCancel)
     }
     
     required init?(coder:NSCoder)

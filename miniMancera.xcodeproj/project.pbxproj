@@ -149,6 +149,7 @@
 		DA779A0B1EF88F1B00362A44 /* MHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A0A1EF88F1B00362A44 /* MHomeOptions.swift */; };
 		DA7E46711EFAC82A00466867 /* VHomeFroobContentActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46701EFAC82A00466867 /* VHomeFroobContentActions.swift */; };
 		DA7E46731EFAC9EE00466867 /* VHomeFroobContentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46721EFAC9EE00466867 /* VHomeFroobContentInfo.swift */; };
+		DA7E46751EFAD7A500466867 /* VHomeFroobContentActionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46741EFAD7A500466867 /* VHomeFroobContentActionsButton.swift */; };
 		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */; };
 		DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */; };
@@ -348,6 +349,7 @@
 		DA779A0A1EF88F1B00362A44 /* MHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptions.swift; sourceTree = "<group>"; };
 		DA7E46701EFAC82A00466867 /* VHomeFroobContentActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentActions.swift; sourceTree = "<group>"; };
 		DA7E46721EFAC9EE00466867 /* VHomeFroobContentInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentInfo.swift; sourceTree = "<group>"; };
+		DA7E46741EFAD7A500466867 /* VHomeFroobContentActionsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentActionsButton.swift; sourceTree = "<group>"; };
 		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 				DAD814371EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift */,
 				DA1BDB231EF705960040FBEA /* VHomeFroobContentButtons.swift */,
 				DA7E46701EFAC82A00466867 /* VHomeFroobContentActions.swift */,
+				DA7E46741EFAD7A500466867 /* VHomeFroobContentActionsButton.swift */,
 				DA7E46721EFAC9EE00466867 /* VHomeFroobContentInfo.swift */,
 			);
 			path = HomeFroob;
@@ -1247,6 +1250,7 @@
 				DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */,
 				DABD4F221EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift in Sources */,
 				DA56676A1EF27427000055D8 /* MSession.swift in Sources */,
+				DA7E46751EFAD7A500466867 /* VHomeFroobContentActionsButton.swift in Sources */,
 				DA1BDB181EF705050040FBEA /* CHomeFroob.swift in Sources */,
 				DA7E46731EFAC9EE00466867 /* VHomeFroobContentInfo.swift in Sources */,
 				DAAF2FA01EF6F6D100589BB0 /* CStore.swift in Sources */,
