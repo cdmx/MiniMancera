@@ -4,15 +4,18 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
 {
     private weak var controller:CHome!
     private weak var collectionView:VCollection!
+    private let interItem2:CGFloat
     private let kDeselectTime:TimeInterval = 0.3
-    private let kInterItem:CGFloat = 5
-    private let kCellSize:CGFloat = 170
+    private let kInterItem:CGFloat = 2
+    private let kCellWidth:CGFloat = 220
     
     init(controller:CHome)
     {
+        interItem2 = kInterItem + kInterItem
+        
         super.init(frame:CGRect.zero)
         clipsToBounds = true
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor(white:0.2, alpha:1)
         translatesAutoresizingMaskIntoConstraints = false
         isHidden = true
         self.controller = controller
@@ -27,9 +30,13 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
-            flow.itemSize = CGSize(width:kCellSize, height:kCellSize)
             flow.minimumLineSpacing = kInterItem
             flow.minimumInteritemSpacing = kInterItem
+            flow.sectionInset = UIEdgeInsets(
+                top:kInterItem,
+                left:kInterItem,
+                bottom:kInterItem,
+                right:kInterItem)
         }
         
         addSubview(collectionView)
@@ -63,18 +70,15 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     //MARK: collectionView delegate
     
-    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, insetForSectionAt section:Int) -> UIEdgeInsets
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let height:CGFloat = collectionView.bounds.height
-        let remainHeight:CGFloat = height - kCellSize
-        let margin:CGFloat = remainHeight / 2.0
-        let insets:UIEdgeInsets = UIEdgeInsets(
-            top:margin,
-            left:kInterItem,
-            bottom:margin,
-            right:kInterItem)
+        let height:CGFloat = collectionView.bounds.maxY
+        let usableHeight:CGFloat = height - interItem2
+        let size:CGSize = CGSize(
+            width:kCellWidth,
+            height:usableHeight)
         
-        return insets
+        return size
     }
     
     func numberOfSections(in collectionView:UICollectionView) -> Int

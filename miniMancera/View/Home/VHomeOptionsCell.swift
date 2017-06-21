@@ -6,21 +6,20 @@ class VHomeOptionsCell:UICollectionViewCell
     private weak var labelTitle:UILabel!
     private let kAlphaSelected:CGFloat = 0.4
     private let kAlphaNotSelected:CGFloat = 1
-    private let kTitleHeight:CGFloat = 60
-    private let kImageHeight:CGFloat = 120
+    private let kTitleHeight:CGFloat = 90
+    private let kTitleMargin:CGFloat = 10
     
     override init(frame:CGRect)
     {
         super.init(frame:frame)
         clipsToBounds = true
-        backgroundColor = UIColor.clear
         
         let labelTitle:UILabel = UILabel()
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.regular(size:16)
+        labelTitle.font = UIFont.game(size:14)
         labelTitle.numberOfLines = 0
         self.labelTitle = labelTitle
         
@@ -42,15 +41,10 @@ class VHomeOptionsCell:UICollectionViewCell
             constant:kTitleHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
-            toView:self)
+            toView:self,
+            margin:kTitleMargin)
         
-        NSLayoutConstraint.topToTop(
-            view:imageView,
-            toView:self)
-        NSLayoutConstraint.height(
-            view:imageView,
-            constant:kImageHeight)
-        NSLayoutConstraint.equalsHorizontal(
+        NSLayoutConstraint.equals(
             view:imageView,
             toView:self)
     }
@@ -97,10 +91,12 @@ class VHomeOptionsCell:UICollectionViewCell
         if model.available
         {
             labelTitle.textColor = UIColor.colourSuccess
+            backgroundColor = UIColor.black
         }
         else
         {
-            labelTitle.textColor = UIColor.colourFail
+            labelTitle.textColor = UIColor(white:0.65, alpha:1)
+            backgroundColor = UIColor.clear
         }
 
         imageView.image = model.thumbnail
