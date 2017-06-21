@@ -118,10 +118,6 @@
 		DA5667651EF26DFD000055D8 /* DManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667631EF26DFD000055D8 /* DManager.swift */; };
 		DA5667661EF26DFD000055D8 /* DSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667641EF26DFD000055D8 /* DSettingsExtension.swift */; };
 		DA56676A1EF27427000055D8 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667681EF27427000055D8 /* MSession.swift */; };
-		DA56676C1EF27446000055D8 /* MGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56676B1EF27446000055D8 /* MGameProtocol.swift */; };
-		DA56676E1EF27475000055D8 /* MGameFreeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56676D1EF27475000055D8 /* MGameFreeProtocol.swift */; };
-		DA5667701EF27482000055D8 /* MGamePurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */; };
-		DA5667721EF2748F000055D8 /* MGameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667711EF2748F000055D8 /* MGameFactory.swift */; };
 		DA5667741EF27502000055D8 /* MGameReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667731EF27502000055D8 /* MGameReformaCrossing.swift */; };
 		DA5667761EF27571000055D8 /* MGamePollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667751EF27571000055D8 /* MGamePollutedGarden.swift */; };
 		DA5667811EF276CD000055D8 /* MHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667781EF276CD000055D8 /* MHome.swift */; };
@@ -155,6 +151,8 @@
 		DA7E46831EFAEF3000466867 /* MPerkFreeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46821EFAEF3000466867 /* MPerkFreeProtocol.swift */; };
 		DA7E46851EFAEF3E00466867 /* MPerkPurchaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46841EFAEF3E00466867 /* MPerkPurchaseProtocol.swift */; };
 		DA7E46871EFAEF6900466867 /* MPerkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46861EFAEF6900466867 /* MPerkFactory.swift */; };
+		DA7E46891EFAEFC200466867 /* MPerkReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46881EFAEFC200466867 /* MPerkReformaCrossing.swift */; };
+		DA7E468B1EFAEFCC00466867 /* MPerkPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E468A1EFAEFCC00466867 /* MPerkPollutedGarden.swift */; };
 		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */; };
 		DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */; };
@@ -323,10 +321,6 @@
 		DA5667631EF26DFD000055D8 /* DManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManager.swift; sourceTree = "<group>"; };
 		DA5667641EF26DFD000055D8 /* DSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSettingsExtension.swift; sourceTree = "<group>"; };
 		DA5667681EF27427000055D8 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSession.swift; sourceTree = "<group>"; };
-		DA56676B1EF27446000055D8 /* MGameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameProtocol.swift; sourceTree = "<group>"; };
-		DA56676D1EF27475000055D8 /* MGameFreeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameFreeProtocol.swift; sourceTree = "<group>"; };
-		DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGamePurchaseProtocol.swift; sourceTree = "<group>"; };
-		DA5667711EF2748F000055D8 /* MGameFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameFactory.swift; sourceTree = "<group>"; };
 		DA5667731EF27502000055D8 /* MGameReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameReformaCrossing.swift; sourceTree = "<group>"; };
 		DA5667751EF27571000055D8 /* MGamePollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGamePollutedGarden.swift; sourceTree = "<group>"; };
 		DA5667781EF276CD000055D8 /* MHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHome.swift; sourceTree = "<group>"; };
@@ -360,6 +354,8 @@
 		DA7E46821EFAEF3000466867 /* MPerkFreeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkFreeProtocol.swift; sourceTree = "<group>"; };
 		DA7E46841EFAEF3E00466867 /* MPerkPurchaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkPurchaseProtocol.swift; sourceTree = "<group>"; };
 		DA7E46861EFAEF6900466867 /* MPerkFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkFactory.swift; sourceTree = "<group>"; };
+		DA7E46881EFAEFC200466867 /* MPerkReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkReformaCrossing.swift; sourceTree = "<group>"; };
+		DA7E468A1EFAEFCC00466867 /* MPerkPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkPollutedGarden.swift; sourceTree = "<group>"; };
 		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -789,10 +785,6 @@
 			children = (
 				DA5667681EF27427000055D8 /* MSession.swift */,
 				DA5667911EF27A21000055D8 /* MSessionSettings.swift */,
-				DA56676B1EF27446000055D8 /* MGameProtocol.swift */,
-				DA56676D1EF27475000055D8 /* MGameFreeProtocol.swift */,
-				DA56676F1EF27482000055D8 /* MGamePurchaseProtocol.swift */,
-				DA5667711EF2748F000055D8 /* MGameFactory.swift */,
 				DA7E46801EFAEF0200466867 /* MPerkProtocol.swift */,
 				DA7E46821EFAEF3000466867 /* MPerkFreeProtocol.swift */,
 				DA7E46841EFAEF3E00466867 /* MPerkPurchaseProtocol.swift */,
@@ -937,6 +929,8 @@
 		DA7E467F1EFAEEF600466867 /* Perk */ = {
 			isa = PBXGroup;
 			children = (
+				DA7E46881EFAEFC200466867 /* MPerkReformaCrossing.swift */,
+				DA7E468A1EFAEFCC00466867 /* MPerkPollutedGarden.swift */,
 			);
 			path = Perk;
 			sourceTree = "<group>";
@@ -1146,7 +1140,6 @@
 				DA7E467E1EFAEDB400466867 /* ViewGameNode.swift in Sources */,
 				DAAF2FD21EF6FBB500589BB0 /* MStoreStatusProtocol.swift in Sources */,
 				DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */,
-				DA56676E1EF27475000055D8 /* MGameFreeProtocol.swift in Sources */,
 				DA27A6121EF9C116009378E2 /* VHomeSplashCellScore.swift in Sources */,
 				DA2DFFDC1EECB16A00365F23 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA779A071EF8872B00362A44 /* VHomeSplashCell.swift in Sources */,
@@ -1163,7 +1156,6 @@
 				DA7E46851EFAEF3E00466867 /* MPerkPurchaseProtocol.swift in Sources */,
 				DA1D579C1EF245C800ECA895 /* VHomeFooterCell.swift in Sources */,
 				DA5667A81EF3329E000055D8 /* MOptionSceneGame.swift in Sources */,
-				DA56676C1EF27446000055D8 /* MGameProtocol.swift in Sources */,
 				DA2D00BB1EEFF20900365F23 /* MOptionReformaCrossingEnd.swift in Sources */,
 				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
 				DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */,
@@ -1223,6 +1215,7 @@
 				DA11DE551EF1AF430043749D /* MOptionReformaCrossingFoeLordAudi.swift in Sources */,
 				DA2D00771EEDE38600365F23 /* MOptionReformaCrossingLaneA.swift in Sources */,
 				DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */,
+				DA7E46891EFAEFC200466867 /* MPerkReformaCrossing.swift in Sources */,
 				DA2D007B1EEDE38600365F23 /* MOptionReformaCrossingLaneE.swift in Sources */,
 				DA2D00851EEDF49700365F23 /* MOptionReformaCrossingFoeProtocol.swift in Sources */,
 				DA11DE4F1EF141F10043749D /* MOptionReformaCrossingFoeTamales.swift in Sources */,
@@ -1244,8 +1237,8 @@
 				DA2D00801EEDE38600365F23 /* MOptionReformaCrossingLaneProtocol.swift in Sources */,
 				DA2DFFD61EECB16A00365F23 /* CHome.swift in Sources */,
 				DA11DE511EF14A3A0043749D /* MOptionReformaCrossingFoeTaxiPink.swift in Sources */,
+				DA7E468B1EFAEFCC00466867 /* MPerkPollutedGarden.swift in Sources */,
 				DA2D00341EECCA1000365F23 /* MOptionProtocol.swift in Sources */,
-				DA5667721EF2748F000055D8 /* MGameFactory.swift in Sources */,
 				DA2892891EF66B7E00C80D3D /* CHomeSplash.swift in Sources */,
 				DA7E46711EFAC82A00466867 /* VHomeFroobContentActions.swift in Sources */,
 				DAAF2FC71EF6F6F700589BB0 /* VStoreCellPurchasing.swift in Sources */,
@@ -1298,7 +1291,6 @@
 				DABD4F391EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift in Sources */,
 				DABD4F2D1EF4F78B003DF861 /* MOptionPollutedGardenBubble.swift in Sources */,
 				DABD4F3F1EF5B572003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryExplosion.swift in Sources */,
-				DA5667701EF27482000055D8 /* MGamePurchaseProtocol.swift in Sources */,
 				DA1D57831EF1CE5D00ECA895 /* MOptionReformaCrossingFoeCyclerFemale.swift in Sources */,
 				DABD4F221EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift in Sources */,
 				DA56676A1EF27427000055D8 /* MSession.swift in Sources */,
