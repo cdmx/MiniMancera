@@ -1,6 +1,6 @@
 import Foundation
 
-protocol MPerkPurchaseProtocol:MGameProtocol
+protocol MPerkPurchaseProtocol:MPerkProtocol
 {
     var purchaseId:String { get }
 }
