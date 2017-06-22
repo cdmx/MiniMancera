@@ -121,7 +121,9 @@ class VHomeOptionsCell:UICollectionViewCell
     
     func config(model:MHomeOptions)
     {
-        if model.available
+        let available:Bool = model.available()
+        
+        if available
         {
             labelTitle.textColor = UIColor.white
             viewBlack.alpha = 0.2

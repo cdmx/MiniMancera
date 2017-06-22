@@ -109,7 +109,9 @@ class CHome:Controller<VHome>
     
     func optionSelected(option:MHomeOptions)
     {
-        if option.available
+        let available:Bool = option.available()
+        
+        if available
         {
             showSplash(option:option)
         }
