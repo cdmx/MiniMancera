@@ -36,6 +36,7 @@ class MHomeOptions
         
         let purchased:Bool = dataOption.purchased
         
-        return purchased
+//        return purchased
+        return true
     }
 }
