@@ -398,6 +398,9 @@
 		DACD31571EFB147C00F205A0 /* VOptionReformaCrossingFoeLordAudi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoeLordAudi.swift; sourceTree = "<group>"; };
 		DACD31591EFB14B400F205A0 /* VOptionReformaCrossingFoeCyclerFemale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoeCyclerFemale.swift; sourceTree = "<group>"; };
 		DAD814371EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentHeader.swift; sourceTree = "<group>"; };
+		DAE84DB91EFB4A8100F9BC9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAE84DBA1EFB4A8100F9BC9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PollutedGarden.strings; sourceTree = "<group>"; };
+		DAE84DBB1EFB4A8100F9BC9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ReformaCrossing.strings; sourceTree = "<group>"; };
 		DAFB5F771EECAC74006A3B99 /* miniMancera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMancera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB5F861EECAC74006A3B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1050,6 +1053,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				es,
+				en,
 			);
 			mainGroup = DAFB5F6E1EECAC74006A3B99;
 			productRefGroup = DAFB5F781EECAC74006A3B99 /* Products */;
@@ -1280,6 +1284,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DA2D00281EECB9D500365F23 /* es */,
+				DAE84DB91EFB4A8100F9BC9C /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1288,6 +1293,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DA56679A1EF31023000055D8 /* es */,
+				DAE84DBB1EFB4A8100F9BC9C /* en */,
 			);
 			name = ReformaCrossing.strings;
 			sourceTree = "<group>";
@@ -1296,6 +1302,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DABD4F151EF4635E003DF861 /* es */,
+				DAE84DBA1EFB4A8100F9BC9C /* en */,
 			);
 			name = PollutedGarden.strings;
 			sourceTree = "<group>";
