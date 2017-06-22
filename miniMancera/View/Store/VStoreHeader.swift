@@ -123,6 +123,8 @@ class VStoreHeader:UICollectionReusableView
         
         else
         {
+            label.attributedText = nil
+            
             return
         }
         
