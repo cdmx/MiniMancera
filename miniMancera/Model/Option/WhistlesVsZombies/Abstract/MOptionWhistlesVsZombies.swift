@@ -23,6 +23,19 @@ class MOptionWhistlesVsZombies:MGameProtocol
     
     func sceneWithSize(controller:UIViewController, size:CGSize) -> SKScene?
     {
-        return nil
+        guard
+            
+            let controller:COptionWhistlesVsZombies = controller as? COptionWhistlesVsZombies
+            
+        else
+        {
+            return nil
+        }
+        
+        self.size = size
+        let scene:VOptionWhistlesVsZombiesScene = VOptionWhistlesVsZombiesScene(
+            controller:controller)
+        
+        return scene
     }
 }
