@@ -86,6 +86,7 @@
 		DA2DFFF11EECB16A00365F23 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFD01EECB16A00365F23 /* VToast.swift */; };
 		DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFD21EECB16A00365F23 /* VHome.swift */; };
 		DA3A38711EFC001A0028C35E /* COptionWhistlesVsZombies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A38701EFC001A0028C35E /* COptionWhistlesVsZombies.swift */; };
+		DA3A38731EFC03140028C35E /* MHomeOptionsWhistlesVsZombies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A38721EFC03140028C35E /* MHomeOptionsWhistlesVsZombies.swift */; };
 		DA446A6F1EF8B59000CB38D9 /* VHomeSplashBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA446A6E1EF8B59000CB38D9 /* VHomeSplashBackground.swift */; };
 		DA56675F1EF252AE000055D8 /* assetGeneric.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA56675E1EF252AE000055D8 /* assetGeneric.xcassets */; };
 		DA5667621EF26D24000055D8 /* DMiniMancera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA5667601EF26D24000055D8 /* DMiniMancera.xcdatamodeld */; };
@@ -284,6 +285,7 @@
 		DA2DFFD01EECB16A00365F23 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA2DFFD21EECB16A00365F23 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DA3A38701EFC001A0028C35E /* COptionWhistlesVsZombies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COptionWhistlesVsZombies.swift; sourceTree = "<group>"; };
+		DA3A38721EFC03140028C35E /* MHomeOptionsWhistlesVsZombies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeOptionsWhistlesVsZombies.swift; sourceTree = "<group>"; };
 		DA446A6E1EF8B59000CB38D9 /* VHomeSplashBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSplashBackground.swift; sourceTree = "<group>"; };
 		DA56675E1EF252AE000055D8 /* assetGeneric.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assetGeneric.xcassets; sourceTree = "<group>"; };
 		DA5667611EF26D24000055D8 /* DMiniMancera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DMiniMancera.xcdatamodel; sourceTree = "<group>"; };
@@ -753,6 +755,7 @@
 			children = (
 				DA56678C1EF2772A000055D8 /* MHomeOptionsReformaCrossing.swift */,
 				DA56678F1EF2773B000055D8 /* MHomeOptionsPollutedGarden.swift */,
+				DA3A38721EFC03140028C35E /* MHomeOptionsWhistlesVsZombies.swift */,
 			);
 			path = Options;
 			sourceTree = "<group>";
@@ -1190,6 +1193,7 @@
 				DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */,
 				DA7E46891EFAEFC200466867 /* MPerkReformaCrossing.swift in Sources */,
 				DA2D007B1EEDE38600365F23 /* MOptionReformaCrossingLaneE.swift in Sources */,
+				DA3A38731EFC03140028C35E /* MHomeOptionsWhistlesVsZombies.swift in Sources */,
 				DAAF2F9A1EF6ECB800589BB0 /* VSettingsCellShare.swift in Sources */,
 				DAAF2FC51EF6F6F700589BB0 /* VStoreCellNotAvailable.swift in Sources */,
 				DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */,
