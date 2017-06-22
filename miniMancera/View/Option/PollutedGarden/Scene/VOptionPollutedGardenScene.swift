@@ -23,9 +23,9 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
     private let kSpawnBubbleRate:TimeInterval = 0.1
     private let kWaitTransition:TimeInterval = 1.5
     private let kGravityY:CGFloat = -0.1
-    private let kFontSize:CGFloat = 22
+    private let kFontSize:CGFloat = 14
     private let kExtraEdge:CGFloat = 400
-    private let kTitleVerticalAdd:CGFloat = 80
+    private let kTitleVerticalAdd:CGFloat = 70
     private let kSpawnProbability:UInt32 = 15
     
     override init(controller:COptionPollutedGarden)

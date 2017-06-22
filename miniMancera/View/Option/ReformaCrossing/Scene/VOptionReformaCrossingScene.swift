@@ -22,7 +22,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
     private let kTitleDuration:TimeInterval = 1.5
     private let kFadeInDuration:TimeInterval = 0.5
     private let kFontSize:CGFloat = 20
-    private let kTitleVerticalAdd:CGFloat = -10
+    private let kTitleVerticalAdd:CGFloat = -12
     private let kSpawnProbability:UInt32 = 6
     
     override init(controller:COptionReformaCrossing)

@@ -135,7 +135,7 @@ class VHomeOptionsCell:UICollectionViewCell
         }
 
         imageView.image = model.thumbnail
-        labelTitle.text = model.title
+        labelTitle.text = model.title?.uppercased()
         
         hover()
     }
