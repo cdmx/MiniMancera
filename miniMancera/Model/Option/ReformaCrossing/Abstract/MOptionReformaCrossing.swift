@@ -4,6 +4,7 @@ class MOptionReformaCrossing:MGameProtocol
 {
     let laneGroup:MOptionReformaCrossingLaneGroup
     let kMaxGameTime:TimeInterval = 31
+    private(set) var soundBackground:String?
     private(set) var addedSpeed:CGFloat
     private(set) var level:Int
     private(set) var size:CGSize
@@ -16,6 +17,7 @@ class MOptionReformaCrossing:MGameProtocol
     required init()
     {
         laneGroup = MOptionReformaCrossingLaneGroup()
+        soundBackground = kSoundBackground
         size = CGSize.zero
         score = 0
         gameActive = false
@@ -60,14 +62,6 @@ class MOptionReformaCrossing:MGameProtocol
     }
     
     //MARK: option protocol
-    
-    var soundBackground:String?
-    {
-        get
-        {
-            return kSoundBackground
-        }
-    }
     
     func activateGame()
     {

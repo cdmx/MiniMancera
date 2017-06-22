@@ -4,6 +4,7 @@ class MOptionPollutedGarden:MGameProtocol
 {
     let petuniaLife:MOptionPollutedGardenPetuniaLife
     let bubbleGenerator:MOptionPollutedGardenBubbleGenerator
+    private(set) var soundBackground:String?
     private(set) var size:CGSize
     private(set) var score:Int
     private(set) var gameActive:Bool
@@ -12,6 +13,7 @@ class MOptionPollutedGarden:MGameProtocol
     
     required init()
     {
+        soundBackground = kSoundBackground
         size = CGSize.zero
         score = 0
         maxScore = 0
@@ -49,14 +51,6 @@ class MOptionPollutedGarden:MGameProtocol
     }
     
     //MARK: option protocol
-    
-    var soundBackground:String?
-    {
-        get
-        {
-            return kSoundBackground
-        }
-    }
     
     func activateGame()
     {
