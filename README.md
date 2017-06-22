@@ -20,4 +20,6 @@ MiniMancera Adventures on CDMX
 
 ■ StoreKit
 
+■ CoreGraphics animations
+
 ■ English and Spanish localization
