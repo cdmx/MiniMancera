@@ -21,7 +21,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kTitleDuration:TimeInterval = 1.5
     private let kFadeInDuration:TimeInterval = 0.5
-    private let kFontSize:CGFloat = 30
+    private let kFontSize:CGFloat = 20
     private let kTitleVerticalAdd:CGFloat = -10
     private let kSpawnProbability:UInt32 = 6
     
@@ -183,7 +183,7 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
             format:String.localizedReformaCrossing(key:"VOptionReformaCrossingScene_labelTitle"),
             level)
         
-        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
+        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
         labelTitle.text = levelString
         labelTitle.fontSize = kFontSize
         labelTitle.fontColor = SKColor.white

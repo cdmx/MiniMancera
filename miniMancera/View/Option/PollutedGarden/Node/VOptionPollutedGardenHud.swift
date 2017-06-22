@@ -28,7 +28,7 @@ class VOptionPollutedGardenHud:SKSpriteNode
         zPosition = kZPosition
         alpha = 0
         
-        let labelScore:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
+        let labelScore:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
         labelScore.fontSize = kScoreFontSize
         labelScore.fontColor = SKColor.white
         labelScore.position = CGPoint(x:kScorePositionX, y:kScorePositionY)
@@ -37,7 +37,7 @@ class VOptionPollutedGardenHud:SKSpriteNode
         labelScore.zPosition = kScoreZPosition
         self.labelScore = labelScore
         
-        let labelMax:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
+        let labelMax:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
         labelMax.fontSize = kMaxFontSize
         labelMax.fontColor = SKColor.white
         labelMax.position = CGPoint(x:kMaxPositionX, y:kMaxPositionY)

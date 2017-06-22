@@ -12,6 +12,7 @@ class VHomeSplashCellScore:VHomeSplashCell
     private let kFontSize:CGFloat = 20
     private let kLabelWidth:CGFloat = 110
     private let kImageWidth:CGFloat = 60
+    private let kImageTop:CGFloat = 10
     private let kTimerInterval:TimeInterval = 0.02
     private let kMinIntegers:Int = 0
     private let kMaxDecimals:Int = 0
@@ -56,7 +57,11 @@ class VHomeSplashCellScore:VHomeSplashCell
             view:labelScore,
             constant:kLabelWidth)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToTop(
+            view:imageView,
+            toView:self,
+            constant:kImageTop)
+        NSLayoutConstraint.bottomToBottom(
             view:imageView,
             toView:self)
         NSLayoutConstraint.leftToRight(

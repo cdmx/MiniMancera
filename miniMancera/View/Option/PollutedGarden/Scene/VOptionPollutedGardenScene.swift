@@ -23,9 +23,9 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
     private let kSpawnBubbleRate:TimeInterval = 0.1
     private let kWaitTransition:TimeInterval = 1.5
     private let kGravityY:CGFloat = -0.1
-    private let kFontSize:CGFloat = 24
+    private let kFontSize:CGFloat = 22
     private let kExtraEdge:CGFloat = 400
-    private let kTitleVerticalAdd:CGFloat = 100
+    private let kTitleVerticalAdd:CGFloat = 80
     private let kSpawnProbability:UInt32 = 15
     
     override init(controller:COptionPollutedGarden)
@@ -183,7 +183,7 @@ class VOptionPollutedGardenScene:ViewGame<MOptionPollutedGarden, COptionPolluted
         let height_2:CGFloat = controller.model.size.height / 2.0
         let positionY:CGFloat = height_2 + kTitleVerticalAdd
         
-        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
+        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
         labelTitle.text = String.localizedPollutedGarden(key:"VOptionPollutedGardenScene_labelTitle")
         labelTitle.fontSize = kFontSize
         labelTitle.fontColor = SKColor.white

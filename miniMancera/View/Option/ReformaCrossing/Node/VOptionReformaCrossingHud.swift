@@ -6,13 +6,13 @@ class VOptionReformaCrossingHud:SKSpriteNode
     private weak var controller:COptionReformaCrossing!
     private weak var labelTime:SKLabelNode!
     private weak var labelScore:SKLabelNode!
-    private let kTimeFontSize:CGFloat = 18
-    private let kScoreFontSize:CGFloat = 15
+    private let kTimeFontSize:CGFloat = 15
+    private let kScoreFontSize:CGFloat = 12
     private let kMargin:CGFloat = 45
     private let kTimePositionX:CGFloat = 65
-    private let kTimePositionY:CGFloat = -8
+    private let kTimePositionY:CGFloat = -10
     private let kScorePositionX:CGFloat = -32
-    private let kScorePositionY:CGFloat = -6
+    private let kScorePositionY:CGFloat = -8
     private let kZPosition:CGFloat = 10001
     private let kTimeZPosition:CGFloat = 10006
     private let kScoreZPosition:CGFloat = 10005
@@ -28,7 +28,7 @@ class VOptionReformaCrossingHud:SKSpriteNode
         zPosition = kZPosition
         alpha = 0
         
-        let labelTime:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontRegular)
+        let labelTime:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
         labelTime.fontSize = kTimeFontSize
         labelTime.fontColor = SKColor.white
         labelTime.position = CGPoint(x:kTimePositionX, y:kTimePositionY)
@@ -37,7 +37,7 @@ class VOptionReformaCrossingHud:SKSpriteNode
         labelTime.zPosition = kTimeZPosition
         self.labelTime = labelTime
         
-        let labelScore:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
+        let labelScore:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
         labelScore.fontSize = kScoreFontSize
         labelScore.fontColor = SKColor.white
         labelScore.position = CGPoint(x:kScorePositionX, y:kScorePositionY)
