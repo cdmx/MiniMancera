@@ -5,7 +5,7 @@
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&style=plastic)](https://twitter.com/MiniManceraApp)
 
-[<img src="https://cloud.githubusercontent.com/assets/219689/5575342/963e0ee8-9013-11e4-8091-7ece67d64729.png" height="32" alt="AppStore"/>](itun.es/i6dq5VC)
+[<img src="https://cloud.githubusercontent.com/assets/219689/5575342/963e0ee8-9013-11e4-8091-7ece67d64729.png" height="32" alt="AppStore"/>](https://itunes.apple.com/mx/app/minimancera/id1247193502?l=en)
 
 
 
