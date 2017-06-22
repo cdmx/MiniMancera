@@ -1,6 +1,6 @@
 import SpriteKit
 
-class VOptionWhistlesVsZombiesScene:ViewGame<mgame, ControllerGame<S>>
+class VOptionWhistlesVsZombiesScene:ViewGame<MOptionWhistlesVsZombies, COptionWhistlesVsZombies>
 {
     
 }

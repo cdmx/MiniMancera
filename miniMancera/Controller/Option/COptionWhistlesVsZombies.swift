@@ -1,6 +1,6 @@
 import SpriteKit
 
-class COptionWhistlesVsZombies:ControllerGame<MOptionPollutedGarden>
+class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
 {
     //MARK: public
 }
