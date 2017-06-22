@@ -18,9 +18,8 @@ class VOptionWhistlesVsZombiesBackground:SKSpriteNode
         let sceneSize:CGSize = controller.model.size
         let sceneWidth:CGFloat = sceneSize.width
         let sceneHeight:CGFloat = sceneSize.height
-        let sceneHeight_2:CGFloat = sceneHeight / 2.0
         let sceneWidth_2:CGFloat = sceneWidth / 2.0
-        let positionY:CGFloat = sceneHeight_2 - textureHeight_2
+        let positionY:CGFloat = sceneHeight - textureHeight_2
         let centerPosition:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         position = centerPosition
         zPosition = kZPosition
