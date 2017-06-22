@@ -110,6 +110,7 @@
 		DA69BD551EFC6EC4002CEB85 /* MOptionWhistlesVsZombiesBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD541EFC6EC4002CEB85 /* MOptionWhistlesVsZombiesBase.swift */; };
 		DA69BD571EFC6ED7002CEB85 /* MOptionWhistlesVsZombiesBaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD561EFC6ED7002CEB85 /* MOptionWhistlesVsZombiesBaseItem.swift */; };
 		DA69BD591EFC75D2002CEB85 /* ResourceWhistlesVsZombiesBase.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA69BD581EFC75D2002CEB85 /* ResourceWhistlesVsZombiesBase.plist */; };
+		DA69BD5D1EFC7A4B002CEB85 /* MOptionWhistlesVsZombiesBaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD5C1EFC7A4B002CEB85 /* MOptionWhistlesVsZombiesBaseFactory.swift */; };
 		DA779A011EF875FD00362A44 /* MHomeSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A001EF875FD00362A44 /* MHomeSplash.swift */; };
 		DA779A031EF876D500362A44 /* MHomeSplashProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A021EF876D500362A44 /* MHomeSplashProtocol.swift */; };
 		DA779A051EF884E900362A44 /* MHomeSplashDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */; };
@@ -317,6 +318,7 @@
 		DA69BD541EFC6EC4002CEB85 /* MOptionWhistlesVsZombiesBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBase.swift; sourceTree = "<group>"; };
 		DA69BD561EFC6ED7002CEB85 /* MOptionWhistlesVsZombiesBaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBaseItem.swift; sourceTree = "<group>"; };
 		DA69BD581EFC75D2002CEB85 /* ResourceWhistlesVsZombiesBase.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ResourceWhistlesVsZombiesBase.plist; sourceTree = "<group>"; };
+		DA69BD5C1EFC7A4B002CEB85 /* MOptionWhistlesVsZombiesBaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBaseFactory.swift; sourceTree = "<group>"; };
 		DA779A001EF875FD00362A44 /* MHomeSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplash.swift; sourceTree = "<group>"; };
 		DA779A021EF876D500362A44 /* MHomeSplashProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashProtocol.swift; sourceTree = "<group>"; };
 		DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashDescr.swift; sourceTree = "<group>"; };
@@ -810,6 +812,7 @@
 			isa = PBXGroup;
 			children = (
 				DA69BD541EFC6EC4002CEB85 /* MOptionWhistlesVsZombiesBase.swift */,
+				DA69BD5C1EFC7A4B002CEB85 /* MOptionWhistlesVsZombiesBaseFactory.swift */,
 				DA69BD561EFC6ED7002CEB85 /* MOptionWhistlesVsZombiesBaseItem.swift */,
 			);
 			path = Player;
@@ -1334,6 +1337,7 @@
 				DA779A0B1EF88F1B00362A44 /* MHomeOptions.swift in Sources */,
 				DA2D002F1EECC88F00365F23 /* COptionReformaCrossing.swift in Sources */,
 				DA2DFFD91EECB16A00365F23 /* ExtensionDictionary.swift in Sources */,
+				DA69BD5D1EFC7A4B002CEB85 /* MOptionWhistlesVsZombiesBaseFactory.swift in Sources */,
 				DA5667901EF2773B000055D8 /* MHomeOptionsPollutedGarden.swift in Sources */,
 				DA2D00781EEDE38600365F23 /* MOptionReformaCrossingLaneB.swift in Sources */,
 				DABD4F131EF45EE0003DF861 /* MOptionPollutedGardenPotPosition.swift in Sources */,
