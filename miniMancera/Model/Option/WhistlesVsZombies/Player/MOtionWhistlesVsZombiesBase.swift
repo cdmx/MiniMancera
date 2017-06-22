@@ -2,10 +2,15 @@ import Foundation
 
 class MOptionWhislesVsZombiesBase
 {
-    private(set) var baseItem:MOptionWhislesVsZombiesBaseItem?
+    let items:[MOptionWhislesVsZombiesBaseItem]
+    
+    class func factoryItems() -> [MOptionWhislesVsZombiesBaseItem]
+    {
+        let item:
+    }
     
     init()
     {
-        
+        items = []
     }
 }
