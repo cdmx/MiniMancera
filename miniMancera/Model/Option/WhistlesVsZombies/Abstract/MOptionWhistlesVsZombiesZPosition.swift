@@ -1,7 +1,7 @@
 import UIKit
 
-struct MOptionWhistlesVsZombiesZPosition
+enum MOptionWhistlesVsZombiesZPosition:CGFloat
 {
-    static let Background:CGFloat =     0
-    static let Base:CGFloat =           1
+    case Background
+    case Base
 }

@@ -113,6 +113,8 @@
 		DA69BD5D1EFC7A4B002CEB85 /* MOptionWhistlesVsZombiesBaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD5C1EFC7A4B002CEB85 /* MOptionWhistlesVsZombiesBaseFactory.swift */; };
 		DA69BD5F1EFC7AC1002CEB85 /* VOptionWhistlesVsZombiesBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD5E1EFC7AC1002CEB85 /* VOptionWhistlesVsZombiesBase.swift */; };
 		DA69BD631EFC7E22002CEB85 /* MOptionWhistlesVsZombiesZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD621EFC7E22002CEB85 /* MOptionWhistlesVsZombiesZPosition.swift */; };
+		DA69BD651EFC8861002CEB85 /* VOptionWhistlesVsZombiesBaseMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD641EFC8861002CEB85 /* VOptionWhistlesVsZombiesBaseMenu.swift */; };
+		DA69BD681EFC89C8002CEB85 /* MOptionWhistlesVsZombiesMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD671EFC89C8002CEB85 /* MOptionWhistlesVsZombiesMenu.swift */; };
 		DA779A011EF875FD00362A44 /* MHomeSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A001EF875FD00362A44 /* MHomeSplash.swift */; };
 		DA779A031EF876D500362A44 /* MHomeSplashProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A021EF876D500362A44 /* MHomeSplashProtocol.swift */; };
 		DA779A051EF884E900362A44 /* MHomeSplashDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */; };
@@ -323,6 +325,8 @@
 		DA69BD5C1EFC7A4B002CEB85 /* MOptionWhistlesVsZombiesBaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBaseFactory.swift; sourceTree = "<group>"; };
 		DA69BD5E1EFC7AC1002CEB85 /* VOptionWhistlesVsZombiesBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesBase.swift; sourceTree = "<group>"; };
 		DA69BD621EFC7E22002CEB85 /* MOptionWhistlesVsZombiesZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesZPosition.swift; sourceTree = "<group>"; };
+		DA69BD641EFC8861002CEB85 /* VOptionWhistlesVsZombiesBaseMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesBaseMenu.swift; sourceTree = "<group>"; };
+		DA69BD671EFC89C8002CEB85 /* MOptionWhistlesVsZombiesMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesMenu.swift; sourceTree = "<group>"; };
 		DA779A001EF875FD00362A44 /* MHomeSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplash.swift; sourceTree = "<group>"; };
 		DA779A021EF876D500362A44 /* MHomeSplashProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashProtocol.swift; sourceTree = "<group>"; };
 		DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashDescr.swift; sourceTree = "<group>"; };
@@ -822,6 +826,14 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
+		DA69BD661EFC89B4002CEB85 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DA69BD671EFC89C8002CEB85 /* MOptionWhistlesVsZombiesMenu.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		DA7799FF1EF875F300362A44 /* HomeSplash */ = {
 			isa = PBXGroup;
 			children = (
@@ -1046,6 +1058,7 @@
 			children = (
 				DAD368731EFC2B2F00CBAC5B /* VOptionWhistlesVsZombiesBackground.swift */,
 				DA69BD5E1EFC7AC1002CEB85 /* VOptionWhistlesVsZombiesBase.swift */,
+				DA69BD641EFC8861002CEB85 /* VOptionWhistlesVsZombiesBaseMenu.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -1062,6 +1075,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD368701EFC27F600CBAC5B /* Abstract */,
+				DA69BD661EFC89B4002CEB85 /* Menu */,
 				DA69BD4C1EFC6981002CEB85 /* AI */,
 				DA69BD4D1EFC6981002CEB85 /* Player */,
 			);
@@ -1327,6 +1341,7 @@
 				DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */,
 				DAB70AD21EFB22DB002C706F /* VOptionPollutedGarden1up.swift in Sources */,
 				DA2D007F1EEDE38600365F23 /* MOptionReformaCrossingLaneLeft.swift in Sources */,
+				DA69BD681EFC89C8002CEB85 /* MOptionWhistlesVsZombiesMenu.swift in Sources */,
 				DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */,
 				DACD314C1EFB127300F205A0 /* VOptionReformaCrossingFoeRuta2.swift in Sources */,
 				DAB4F95E1EF974C400C389C7 /* VHomeSplashCellOptions.swift in Sources */,
@@ -1356,6 +1371,7 @@
 				DA779A051EF884E900362A44 /* MHomeSplashDescr.swift in Sources */,
 				DA2DFFEC1EECB16A00365F23 /* VGradient.swift in Sources */,
 				DA5667661EF26DFD000055D8 /* DSettingsExtension.swift in Sources */,
+				DA69BD651EFC8861002CEB85 /* VOptionWhistlesVsZombiesBaseMenu.swift in Sources */,
 				DAAF2FC21EF6F6F700589BB0 /* VStoreCell.swift in Sources */,
 				DA56678E1EF2772A000055D8 /* MHomeOptionsReformaCrossing.swift in Sources */,
 				DABD4F391EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift in Sources */,

@@ -21,7 +21,7 @@ class VOptionWhistlesVsZombiesBackground:SKSpriteNode
         let positionY:CGFloat = sceneHeight - textureHeight_2
         let centerPosition:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         position = centerPosition
-        zPosition = MOptionWhistlesVsZombiesZPosition.Background
+        zPosition = MOptionWhistlesVsZombiesZPosition.Background.rawValue
     }
     
     required init?(coder:NSCoder)

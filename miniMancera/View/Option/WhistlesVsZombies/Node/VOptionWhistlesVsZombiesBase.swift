@@ -18,7 +18,7 @@ class VOptionWhistlesVsZombiesBase:SKSpriteNode
             texture:base.texture,
             color:UIColor.clear,
             size:base.textureSize)
-        zPosition = MOptionWhistlesVsZombiesZPosition.Base
+        zPosition = MOptionWhistlesVsZombiesZPosition.Base.rawValue
         position = CGPoint(x:model.positionX, y:model.positionY)
     }
     
