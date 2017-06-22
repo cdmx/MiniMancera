@@ -1,7 +1,9 @@
-import UIKit
+import SpriteKit
 
 class MOptionWhistlesVsZombiesBase
 {
+    let texture:SKTexture
+    let textureSize:CGSize
     private(set) var items:[MOptionWhistlesVsZombiesBaseItem]
     private static let kResourceName:String = "ResourceWhistlesVsZombiesBase"
     private static let kResourceExtension:String = "plist"
@@ -17,7 +19,7 @@ class MOptionWhistlesVsZombiesBase
         for positionX:CGFloat in positionsX
         {
             let item:MOptionWhistlesVsZombiesBaseItem = MOptionWhistlesVsZombiesBaseItem(
-                positionX:positionsX,
+                positionX:positionX,
                 positionY:positionY)
             
             items.append(item)
@@ -48,12 +50,14 @@ class MOptionWhistlesVsZombiesBase
     init()
     {
         items = []
+        texture = SKTexture(image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleBase"))
+        textureSize = texture.size()
     }
     
     //MARK: public
     
     func createItems(sceneSize:CGSize)
     {
-        
+        items = MOptionWhistlesVsZombiesBase.factoryItems(sceneSize:sceneSize)
     }
 }

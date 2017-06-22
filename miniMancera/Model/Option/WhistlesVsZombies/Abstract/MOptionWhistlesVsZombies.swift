@@ -35,6 +35,8 @@ class MOptionWhistlesVsZombies:MGameProtocol
         }
         
         self.size = size
+        base.createItems(sceneSize:size)
+        
         let scene:VOptionWhistlesVsZombiesScene = VOptionWhistlesVsZombiesScene(
             controller:controller)
         
