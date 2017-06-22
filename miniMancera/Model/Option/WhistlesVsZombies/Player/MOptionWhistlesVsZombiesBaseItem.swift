@@ -1,12 +1,13 @@
 import UIKit
 
-class MOptionWhislesVsZombiesBaseItem
+class MOptionWhistlesVsZombiesBaseItem
 {
     let positionX:CGFloat
-    let kPositionY:CGFloat =
+    let positionY:CGFloat
     
-    init(positionX:CGFloat)
+    init(positionX:CGFloat, positionY:CGFloat)
     {
-        
+        self.positionX = positionX
+        self.positionY = positionY
     }
 }
