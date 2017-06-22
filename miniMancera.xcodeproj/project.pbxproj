@@ -204,6 +204,7 @@
 		DACD31561EFB142E00F205A0 /* VOptionReformaCrossingFoeFierroViejo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31551EFB142E00F205A0 /* VOptionReformaCrossingFoeFierroViejo.swift */; };
 		DACD31581EFB147C00F205A0 /* VOptionReformaCrossingFoeLordAudi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31571EFB147C00F205A0 /* VOptionReformaCrossingFoeLordAudi.swift */; };
 		DACD315A1EFB14B400F205A0 /* VOptionReformaCrossingFoeCyclerFemale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31591EFB14B400F205A0 /* VOptionReformaCrossingFoeCyclerFemale.swift */; };
+		DAD3686E1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3686D1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift */; };
 		DAD814381EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD814371EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -405,6 +406,7 @@
 		DACD31551EFB142E00F205A0 /* VOptionReformaCrossingFoeFierroViejo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoeFierroViejo.swift; sourceTree = "<group>"; };
 		DACD31571EFB147C00F205A0 /* VOptionReformaCrossingFoeLordAudi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoeLordAudi.swift; sourceTree = "<group>"; };
 		DACD31591EFB14B400F205A0 /* VOptionReformaCrossingFoeCyclerFemale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoeCyclerFemale.swift; sourceTree = "<group>"; };
+		DAD3686D1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesScene.swift; sourceTree = "<group>"; };
 		DAD814371EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentHeader.swift; sourceTree = "<group>"; };
 		DAE84DB91EFB4A8100F9BC9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DAE84DBA1EFB4A8100F9BC9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PollutedGarden.strings; sourceTree = "<group>"; };
@@ -800,6 +802,7 @@
 		DA7E46781EFAED3B00466867 /* Option */ = {
 			isa = PBXGroup;
 			children = (
+				DAD3686A1EFC275A00CBAC5B /* WhistlesVsZombies */,
 				DA7E46791EFAED3B00466867 /* PollutedGarden */,
 				DA7E467A1EFAED3B00466867 /* ReformaCrossing */,
 			);
@@ -994,6 +997,30 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		DAD3686A1EFC275A00CBAC5B /* WhistlesVsZombies */ = {
+			isa = PBXGroup;
+			children = (
+				DAD3686B1EFC275A00CBAC5B /* Node */,
+				DAD3686C1EFC275A00CBAC5B /* Scene */,
+			);
+			path = WhistlesVsZombies;
+			sourceTree = "<group>";
+		};
+		DAD3686B1EFC275A00CBAC5B /* Node */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		DAD3686C1EFC275A00CBAC5B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				DAD3686D1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		DAFB5F6E1EECAC74006A3B99 = {
 			isa = PBXGroup;
 			children = (
@@ -1159,6 +1186,7 @@
 				DA5667851EF276CD000055D8 /* MHomeFooterSettings.swift in Sources */,
 				DA5667811EF276CD000055D8 /* MHome.swift in Sources */,
 				DACD31581EFB147C00F205A0 /* VOptionReformaCrossingFoeLordAudi.swift in Sources */,
+				DAD3686E1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift in Sources */,
 				DA2DFFE21EECB16A00365F23 /* ExtensionURL.swift in Sources */,
 				DAAF2FC61EF6F6F700589BB0 /* VStoreCellPurchased.swift in Sources */,
 				DA5667651EF26DFD000055D8 /* DManager.swift in Sources */,
