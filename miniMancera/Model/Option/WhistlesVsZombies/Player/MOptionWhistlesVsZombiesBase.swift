@@ -1,6 +1,6 @@
 import Foundation
 
-class MOptionWhislesVsZombiesBase
+class MOptionWhistlesVsZombiesBase
 {
     let items:[MOptionWhislesVsZombiesBaseItem]
     
