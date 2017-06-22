@@ -85,6 +85,7 @@
 		DA2DFFF01EECB16A00365F23 /* VSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFCF1EECB16A00365F23 /* VSpinner.swift */; };
 		DA2DFFF11EECB16A00365F23 /* VToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFD01EECB16A00365F23 /* VToast.swift */; };
 		DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2DFFD21EECB16A00365F23 /* VHome.swift */; };
+		DA3A38711EFC001A0028C35E /* COptionWhistlesVsZombies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A38701EFC001A0028C35E /* COptionWhistlesVsZombies.swift */; };
 		DA446A6F1EF8B59000CB38D9 /* VHomeSplashBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA446A6E1EF8B59000CB38D9 /* VHomeSplashBackground.swift */; };
 		DA56675F1EF252AE000055D8 /* assetGeneric.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA56675E1EF252AE000055D8 /* assetGeneric.xcassets */; };
 		DA5667621EF26D24000055D8 /* DMiniMancera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA5667601EF26D24000055D8 /* DMiniMancera.xcdatamodeld */; };
@@ -282,6 +283,7 @@
 		DA2DFFCF1EECB16A00365F23 /* VSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSpinner.swift; sourceTree = "<group>"; };
 		DA2DFFD01EECB16A00365F23 /* VToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VToast.swift; sourceTree = "<group>"; };
 		DA2DFFD21EECB16A00365F23 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
+		DA3A38701EFC001A0028C35E /* COptionWhistlesVsZombies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COptionWhistlesVsZombies.swift; sourceTree = "<group>"; };
 		DA446A6E1EF8B59000CB38D9 /* VHomeSplashBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSplashBackground.swift; sourceTree = "<group>"; };
 		DA56675E1EF252AE000055D8 /* assetGeneric.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assetGeneric.xcassets; sourceTree = "<group>"; };
 		DA5667611EF26D24000055D8 /* DMiniMancera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DMiniMancera.xcdatamodel; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 			children = (
 				DA2D002E1EECC88F00365F23 /* COptionReformaCrossing.swift */,
 				DA56679C1EF32342000055D8 /* COptionPollutedGarden.swift */,
+				DA3A38701EFC001A0028C35E /* COptionWhistlesVsZombies.swift */,
 			);
 			path = Option;
 			sourceTree = "<group>";
@@ -1110,6 +1113,7 @@
 				DA2892831EF61A3800C80D3D /* DOptionExtension.swift in Sources */,
 				DAAF2FD21EF6FBB500589BB0 /* MStoreStatusProtocol.swift in Sources */,
 				DA2DFFD51EECB16A00365F23 /* ControllerParent.swift in Sources */,
+				DA3A38711EFC001A0028C35E /* COptionWhistlesVsZombies.swift in Sources */,
 				DA27A6121EF9C116009378E2 /* VHomeSplashCellScore.swift in Sources */,
 				DA2DFFDC1EECB16A00365F23 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA779A071EF8872B00362A44 /* VHomeSplashCell.swift in Sources */,
