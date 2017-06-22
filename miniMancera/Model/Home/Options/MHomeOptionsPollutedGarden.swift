@@ -1,6 +1,6 @@
 import UIKit
 
-class MHomeOptionsPollutedGarden:MHomeOptionsPurchase
+class MHomeOptionsPollutedGarden:MHomeOptions
 {
     override var title:String?
     {
@@ -34,7 +34,15 @@ class MHomeOptionsPollutedGarden:MHomeOptionsPurchase
         }
     }
     
-    override func selected() -> UIViewController?
+    override var scoreIcon:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericPollutedGardenScore")
+        }
+    }
+    
+    override func gameController() -> UIViewController?
     {
         guard
             

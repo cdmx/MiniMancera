@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionPollutedGarden:MOptionProtocol
+class MOptionPollutedGarden:MGameProtocol
 {
     let petuniaLife:MOptionPollutedGardenPetuniaLife
     let bubbleGenerator:MOptionPollutedGardenBubbleGenerator
@@ -77,7 +77,7 @@ class MOptionPollutedGarden:MOptionProtocol
         
         self.size = size
         bubbleGenerator.updateController(controller:controller)
-        let scene:MOptionPollutedGardenSceneGame = MOptionPollutedGardenSceneGame(
+        let scene:VOptionPollutedGardenScene = VOptionPollutedGardenScene(
             controller:controller)
         
         return scene

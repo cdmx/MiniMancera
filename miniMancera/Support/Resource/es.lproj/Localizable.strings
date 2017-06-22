@@ -6,9 +6,6 @@
 "ControllerGame_menuResume"="Continuar";
 "ControllerGame_menuExit"="Salir";
 
-"VHomeSplashOptions_scoreTitle"="Puntaje máximo: ";
-"VHomeSplashFooter_buttonClose"="Cerrar";
-"VHomeSplashOptions_buttonPlay"="Jugar";
 "VSettingsCellReview_button"="Calificar en la tienda";
 "VSettingsCellShare_button"="Compartir";
 "VSettingsCellSounds_labelTitle"="Sonidos/Música";
@@ -18,6 +15,8 @@
 "VStoreCellNotAvailable_label"="No disponible";
 "VStoreCellPurchased_label"="Comprado";
 "VStoreCellPurchasing_label"="Comprando";
-"VHomeFroobContent_labelSubtitle"="\n\nAún no tienes esta aventura de MiniMancera.\nObtenla en la Tienda";
-"VHomeFroobContentButtons_buttonStore"="Tienda";
-"VHomeFroobContentButtons_buttonCancel"="Ahorita no";
+"VHomeFroobContentInfo_labelSubtitle"="Aún no tienes esta aventura de\nMiniMancera\nObtenla en la Tienda";
+"VHomeFroobContentActionsStore_label"="Tienda";
+"VHomeFroobContentActions_buttonCancel"="Ahorita no";
+"VHomeSplashCellOptions_buttonPlay"="Jugar";
+"VHomeSplashCellOptions_buttonExit"="Salir";

@@ -3,11 +3,14 @@ import UIKit
 class VHomeOptionsCell:UICollectionViewCell
 {
     private weak var imageView:UIImageView!
+    private weak var viewBlack:UIView!
     private weak var labelTitle:UILabel!
     private let kAlphaSelected:CGFloat = 0.4
     private let kAlphaNotSelected:CGFloat = 1
-    private let kTitleHeight:CGFloat = 60
-    private let kImageHeight:CGFloat = 120
+    private let kImageBottom:CGFloat = -40
+    private let kTitleHeight:CGFloat = 100
+    private let kTitleMargin:CGFloat = 10
+    private let kBackgroundMargin:CGFloat = 2
     
     override init(frame:CGRect)
     {
@@ -15,12 +18,23 @@ class VHomeOptionsCell:UICollectionViewCell
         clipsToBounds = true
         backgroundColor = UIColor.clear
         
+        let background:VGradient = VGradient.diagonal(
+            colorLeftBottom:UIColor.colourSuccess,
+            colorTopRight:UIColor.colourFail)
+        
+        let viewBlack:UIView = UIView()
+        viewBlack.translatesAutoresizingMaskIntoConstraints = false
+        viewBlack.isUserInteractionEnabled = false
+        viewBlack.clipsToBounds = true
+        viewBlack.backgroundColor = UIColor.black
+        self.viewBlack = viewBlack
+        
         let labelTitle:UILabel = UILabel()
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.regular(size:16)
+        labelTitle.font = UIFont.game(size:13)
         labelTitle.numberOfLines = 0
         self.labelTitle = labelTitle
         
@@ -31,8 +45,19 @@ class VHomeOptionsCell:UICollectionViewCell
         imageView.clipsToBounds = true
         self.imageView = imageView
         
+        addSubview(background)
+        addSubview(viewBlack)
         addSubview(imageView)
         addSubview(labelTitle)
+        
+        NSLayoutConstraint.equals(
+            view:background,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:viewBlack,
+            toView:self,
+            margin:kBackgroundMargin)
         
         NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
@@ -42,14 +67,16 @@ class VHomeOptionsCell:UICollectionViewCell
             constant:kTitleHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
-            toView:self)
+            toView:self,
+            margin:kTitleMargin)
         
         NSLayoutConstraint.topToTop(
             view:imageView,
             toView:self)
-        NSLayoutConstraint.height(
+        NSLayoutConstraint.bottomToBottom(
             view:imageView,
-            constant:kImageHeight)
+            toView:self,
+            constant:kImageBottom)
         NSLayoutConstraint.equalsHorizontal(
             view:imageView,
             toView:self)
@@ -92,19 +119,23 @@ class VHomeOptionsCell:UICollectionViewCell
     
     //MARK: public
     
-    func config(model:MHomeOptionsProtocol)
+    func config(model:MHomeOptions)
     {
-        if model.available
+        let available:Bool = model.available()
+        
+        if available
         {
-            labelTitle.textColor = UIColor.colourSuccess
+            labelTitle.textColor = UIColor.white
+            viewBlack.alpha = 0.2
         }
         else
         {
-            labelTitle.textColor = UIColor.colourFail
+            labelTitle.textColor = UIColor(white:1, alpha:0.6)
+            viewBlack.alpha = 0.7
         }
 
         imageView.image = model.thumbnail
-        labelTitle.text = model.title
+        labelTitle.text = model.title?.uppercased()
         
         hover()
     }

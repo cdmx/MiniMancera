@@ -1,6 +1,6 @@
 import UIKit
 
-class MHomeOptionsReformaCrossing:MHomeOptionsFree
+class MHomeOptionsReformaCrossing:MHomeOptions
 {
     override var title:String?
     {
@@ -34,7 +34,15 @@ class MHomeOptionsReformaCrossing:MHomeOptionsFree
         }
     }
     
-    override func selected() -> UIViewController?
+    override var scoreIcon:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericReformaCrossingScore")
+        }
+    }
+    
+    override func gameController() -> UIViewController?
     {
         guard
             

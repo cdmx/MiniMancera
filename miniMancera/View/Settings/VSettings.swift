@@ -3,12 +3,17 @@ import UIKit
 class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
+    private weak var layoutGradientHeight:NSLayoutConstraint!
     private let kHeaderHeight:CGFloat = 320
     private let kCollectionBottom:CGFloat = 20
     
     required init(controller:UIViewController)
     {
         super.init(controller:controller)
+        
+        let viewGradient:VGradient = VGradient.diagonal(
+            colorLeftBottom:UIColor.colourSuccess,
+            colorTopRight:UIColor.colourFail)
         
         let collectionView:VCollection = VCollection()
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +31,18 @@ class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICo
             flow.headerReferenceSize = CGSize(width:0, height:kHeaderHeight)
         }
         
+        addSubview(viewGradient)
         addSubview(collectionView)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewGradient,
+            toView:self)
+        layoutGradientHeight = NSLayoutConstraint.height(
+            view:viewGradient,
+            constant:kHeaderHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewGradient,
+            toView:self)
         
         NSLayoutConstraint.equals(
             view:collectionView,
@@ -49,6 +65,23 @@ class VSettings:View, UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
     
     //MARK: collectionView delegate
+    
+    func scrollViewDidScroll(_ scrollView:UIScrollView)
+    {
+        let offsetY:CGFloat = scrollView.contentOffset.y
+        let gradientHeight:CGFloat
+        
+        if offsetY < 0
+        {
+            gradientHeight = kHeaderHeight - offsetY
+        }
+        else
+        {
+            gradientHeight = kHeaderHeight
+        }
+        
+        layoutGradientHeight.constant = gradientHeight
+    }
     
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {

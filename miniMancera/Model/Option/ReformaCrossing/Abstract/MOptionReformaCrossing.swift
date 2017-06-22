@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class MOptionReformaCrossing:MOptionProtocol
+class MOptionReformaCrossing:MGameProtocol
 {
     let laneGroup:MOptionReformaCrossingLaneGroup
     let kMaxGameTime:TimeInterval = 31
@@ -89,7 +89,7 @@ class MOptionReformaCrossing:MOptionProtocol
         }
         
         self.size = size
-        let scene:MOptionReformaCrossingSceneGame = MOptionReformaCrossingSceneGame(
+        let scene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
             controller:controller)
         
         return scene

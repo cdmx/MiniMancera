@@ -3,7 +3,7 @@ import UIKit
 class VHomeFooter:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var controller:CHome!
-    private let kCellSize:CGFloat = 80
+    private let kCellSize:CGFloat = 100
     private let kDeselectTime:TimeInterval = 0.4
     
     init(controller:CHome)

@@ -2,11 +2,11 @@ import UIKit
 
 class CHomeSplash:Controller<VHomeSplash>
 {
-    private(set) weak var model:MHomeOptionsProtocol!
+    let model:MHomeSplash
     
-    init(model:MHomeOptionsProtocol)
+    init(modelOption:MHomeOptions)
     {
-        self.model = model
+        self.model = MHomeSplash(modelOption:modelOption)
         super.init()
     }
     
@@ -51,8 +51,8 @@ class CHomeSplash:Controller<VHomeSplash>
     {
         guard
             
-            let controller:UIViewController = model.selected()
-            
+            let controller:UIViewController = model.modelOption.gameController()
+        
         else
         {
             return

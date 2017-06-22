@@ -11,12 +11,12 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
     
     //MARK: public
     
-    func collectFlower(petunia:MOptionPollutedGardenPetunia)
+    func collectFlower(petunia:VOptionPollutedGardenPetunia)
     {
         guard
             
             let view:SKView = self.view as? SKView,
-            let scene:MOptionPollutedGardenSceneGame = view.scene as? MOptionPollutedGardenSceneGame
+            let scene:VOptionPollutedGardenScene = view.scene as? VOptionPollutedGardenScene
             
         else
         {
@@ -27,12 +27,12 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
         scene.collectFlower(petunia:petunia)
     }
     
-    func pollutedFlower(petunia:MOptionPollutedGardenPetunia)
+    func pollutedFlower(petunia:VOptionPollutedGardenPetunia)
     {
         guard
             
             let view:SKView = self.view as? SKView,
-            let scene:MOptionPollutedGardenSceneGame = view.scene as? MOptionPollutedGardenSceneGame
+            let scene:VOptionPollutedGardenScene = view.scene as? VOptionPollutedGardenScene
             
         else
         {
@@ -59,7 +59,7 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
         guard
             
             let view:SKView = self.view as? SKView,
-            let scene:MOptionPollutedGardenSceneEnd = view.scene as? MOptionPollutedGardenSceneEnd
+            let scene:VOptionPollutedGardenSceneEnd = view.scene as? VOptionPollutedGardenSceneEnd
             
         else
         {

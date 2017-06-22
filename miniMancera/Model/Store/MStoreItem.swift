@@ -5,11 +5,11 @@ class MStoreItem
 {
     var skProduct:SKProduct?
     let purchaseId:String
-    private(set) weak var option:MHomeOptionsPurchase!
+    private(set) weak var option:MHomeOptions!
     private(set) var price:String?
     private(set) var status:MStoreStatusProtocol?
     
-    init?(option:MHomeOptionsPurchase)
+    init?(option:MHomeOptions)
     {
         guard
             

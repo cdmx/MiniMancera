@@ -23,7 +23,7 @@ extension MSession
             
             settings.addTtl()
             
-            self.loadGames(settings:settings)
+            self.loadPerks(settings:settings)
         }
     }
     
@@ -42,11 +42,11 @@ extension MSession
                 return
             }
             
-            self.loadGames(settings:settings)
+            self.loadPerks(settings:settings)
         }
     }
     
-    private func loadGames(settings:DSettings)
+    private func loadPerks(settings:DSettings)
     {
         let dispatchGroup:DispatchGroup = DispatchGroup()
         dispatchGroup.setTarget(
@@ -64,15 +64,15 @@ extension MSession
         
         settingsLoaded(settings:settings)
         
-        let games:[MGameProtocol] = MGameFactory.factoryGames()
+        let perks:[MPerkProtocol] = MPerkFactory.factoryPerks()
      
-        for game:MGameProtocol in games
+        for perk:MPerkProtocol in perks
         {
-            let shouldAdd:Bool = shouldAddGame(game:game, options:options)
+            let shouldAdd:Bool = shouldAddPerk(perk:perk, options:options)
             
             if shouldAdd
             {
-                addGame(game:game, dispatchGroup:dispatchGroup)
+                addPerk(perk:perk, dispatchGroup:dispatchGroup)
             }
         }
         
@@ -85,9 +85,9 @@ extension MSession
         }
     }
     
-    private func shouldAddGame(game:MGameProtocol, options:[DOption]) -> Bool
+    private func shouldAddPerk(perk:MPerkProtocol, options:[DOption]) -> Bool
     {
-        let gameId:String = game.gameId
+        let gameId:String = perk.gameId
         
         for option:DOption in options
         {
@@ -100,23 +100,23 @@ extension MSession
         return true
     }
     
-    private func addGame(game:MGameProtocol, dispatchGroup:DispatchGroup)
+    private func addPerk(perk:MPerkProtocol, dispatchGroup:DispatchGroup)
     {
-        if let gameFree:MGameFreeProtocol = game as? MGameFreeProtocol
+        if let perkFree:MPerkFreeProtocol = perk as? MPerkFreeProtocol
         {
-            addGameFree(game:gameFree, dispatchGroup:dispatchGroup)
+            addPerkFree(perk:perkFree, dispatchGroup:dispatchGroup)
         }
-        else if let gamePurchase:MGamePurchaseProtocol = game as? MGamePurchaseProtocol
+        else if let perkPurchase:MPerkPurchaseProtocol = perk as? MPerkPurchaseProtocol
         {
-            addGamePurchase(game:gamePurchase, dispatchGroup:dispatchGroup)
+            addPerkPurchase(perk:perkPurchase, dispatchGroup:dispatchGroup)
         }
     }
     
-    private func addGameFree(game:MGameFreeProtocol, dispatchGroup:DispatchGroup)
+    private func addPerkFree(perk:MPerkFreeProtocol, dispatchGroup:DispatchGroup)
     {
         dispatchGroup.enter()
         
-        let optionsClass:String = optionsClassFor(game:game)
+        let optionsClass:String = optionsClassFor(perk:perk)
         
         DManager.sharedInstance?.createData(
             entityName:DOptionFree.entityName)
@@ -131,7 +131,7 @@ extension MSession
                 return
             }
             
-            option.gameId = game.gameId
+            option.gameId = perk.gameId
             option.optionsClass = optionsClass
             
             self.settings?.addToOptions(option)
@@ -140,11 +140,11 @@ extension MSession
         }
     }
     
-    private func addGamePurchase(game:MGamePurchaseProtocol, dispatchGroup:DispatchGroup)
+    private func addPerkPurchase(perk:MPerkPurchaseProtocol, dispatchGroup:DispatchGroup)
     {
         dispatchGroup.enter()
         
-        let optionsClass:String = optionsClassFor(game:game)
+        let optionsClass:String = optionsClassFor(perk:perk)
         
         DManager.sharedInstance?.createData(
             entityName:DOptionPurchase.entityName)
@@ -159,9 +159,9 @@ extension MSession
                 return
             }
             
-            option.gameId = game.gameId
+            option.gameId = perk.gameId
             option.optionsClass = optionsClass
-            option.purchaseId = game.purchaseId
+            option.purchaseId = perk.purchaseId
             
             self.settings?.addToOptions(option)
             
@@ -169,9 +169,9 @@ extension MSession
         }
     }
     
-    private func optionsClassFor(game:MGameProtocol) -> String
+    private func optionsClassFor(perk:MPerkProtocol) -> String
     {
-        let objectClass:AnyClass = object_getClass(game.optionsClass)
+        let objectClass:AnyClass = object_getClass(perk.optionsClass)
         let classString:String = NSStringFromClass(objectClass)
         
         return classString

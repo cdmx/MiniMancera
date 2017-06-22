@@ -4,7 +4,7 @@ class VHomeFooterCell:UICollectionViewCell
 {
     private weak var imageView:UIImageView!
     private weak var labelTitle:UILabel!
-    private let kTitleHeight:CGFloat = 22
+    private let kTitleHeight:CGFloat = 40
     private let kAlphaSelected:CGFloat = 0.3
     private let kAlphaNotSelected:CGFloat = 1
     
@@ -18,7 +18,7 @@ class VHomeFooterCell:UICollectionViewCell
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
-        labelTitle.textColor = UIColor(white:1, alpha:0.7)
+        labelTitle.textColor = UIColor(white:1, alpha:0.85)
         labelTitle.textAlignment = NSTextAlignment.center
         labelTitle.font = UIFont.regular(size:11)
         self.labelTitle = labelTitle

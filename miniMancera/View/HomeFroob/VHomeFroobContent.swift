@@ -4,134 +4,64 @@ class VHomeFroobContent:UIView
 {
     private weak var controller:CHomeFroob!
     private weak var labelTitle:UILabel!
-    private weak var layoutBaseLeft:NSLayoutConstraint!
-    private weak var layoutCircleLeft:NSLayoutConstraint!
-    private let kBaseWidth:CGFloat = 309
-    private let kBaseHeight:CGFloat = 300
-    private let kBaseBottom:CGFloat = -2
-    private let kCornerRadius:CGFloat = 10
-    private let kCircleTop:CGFloat = 2
-    private let kCircleSize:CGFloat = 170
-    private let kTitleMargin:CGFloat = 25
-    private let kTitleHeight:CGFloat = 180
-    private let kTitleTop:CGFloat = -35
-    private let kButtonsHeight:CGFloat = 62
+    private let kCornerRadius:CGFloat = 15
+    private let kActionsHeight:CGFloat = 150
+    private let kInfoHeight:CGFloat = 160
+    private let kBorderWidth:CGFloat = 2
     
     init(controller:CHomeFroob)
     {
         super.init(frame:CGRect.zero)
         clipsToBounds = true
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.black
         translatesAutoresizingMaskIntoConstraints = false
+        layer.cornerRadius = kCornerRadius
+        layer.borderWidth = kBorderWidth
+        layer.borderColor = UIColor.black.cgColor
         self.controller = controller
         
-        let baseView:UIView = UIView()
-        baseView.translatesAutoresizingMaskIntoConstraints = false
-        baseView.clipsToBounds = true
-        baseView.backgroundColor = UIColor.black
-        baseView.layer.cornerRadius = kCornerRadius
+        let viewHeader:VHomeFroobContentHeader = VHomeFroobContentHeader(controller:controller)
+        let viewInfo:VHomeFroobContentInfo = VHomeFroobContentInfo(controller:controller)
+        let viewActions:VHomeFroobContentActions = VHomeFroobContentActions(controller:controller)
         
-        let circle:UIView = UIView()
-        circle.isUserInteractionEnabled = false
-        circle.translatesAutoresizingMaskIntoConstraints = false
-        circle.clipsToBounds = true
-        circle.backgroundColor = UIColor.black
-        circle.layer.cornerRadius = kCircleSize / 2.0
-        
-        let imageView:UIImageView = UIImageView()
-        imageView.isUserInteractionEnabled = false
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
-        imageView.contentMode = UIViewContentMode.center
-        imageView.image = controller.option.thumbnail
-        
-        let labelTitle:UILabel = UILabel()
-        labelTitle.isUserInteractionEnabled = false
-        labelTitle.backgroundColor = UIColor.clear
-        labelTitle.translatesAutoresizingMaskIntoConstraints = false
-        labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.numberOfLines = 0
-        self.labelTitle = labelTitle
-        
-        let viewButtons:VHomeFroobContentButtons = VHomeFroobContentButtons(
-            controller:controller)
-        
-        circle.addSubview(imageView)
-        baseView.addSubview(viewButtons)
-        addSubview(baseView)
-        addSubview(circle)
-        addSubview(labelTitle)
+        addSubview(viewHeader)
+        addSubview(viewInfo)
+        addSubview(viewActions)
         
         NSLayoutConstraint.bottomToBottom(
-            view:baseView,
+            view:viewActions,
             toView:self)
         NSLayoutConstraint.height(
-            view:baseView,
-            constant:kBaseHeight)
-        layoutBaseLeft = NSLayoutConstraint.leftToLeft(
-            view:baseView,
+            view:viewActions,
+            constant:kActionsHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewActions,
             toView:self)
-        NSLayoutConstraint.width(
-            view:baseView,
-            constant:kBaseWidth)
         
+        NSLayoutConstraint.bottomToTop(
+            view:viewInfo,
+            toView:viewActions)
+        NSLayoutConstraint.height(
+            view:viewInfo,
+            constant:kInfoHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewInfo,
+            toView:self)
+        
+        NSLayoutConstraint.bottomToTop(
+            view:viewHeader,
+            toView:viewInfo)
         NSLayoutConstraint.topToTop(
-            view:circle,
-            toView:self,
-            constant:kCircleTop)
-        layoutCircleLeft = NSLayoutConstraint.leftToLeft(
-            view:circle,
+            view:viewHeader,
             toView:self)
-        NSLayoutConstraint.size(
-            view:circle,
-            constant:kCircleSize)
-        
-        NSLayoutConstraint.equals(
-            view:imageView,
-            toView:circle)
-        
-        NSLayoutConstraint.topToBottom(
-            view:labelTitle,
-            toView:circle,
-            constant:kTitleTop)
-        NSLayoutConstraint.height(
-            view:labelTitle,
-            constant:kTitleHeight)
         NSLayoutConstraint.equalsHorizontal(
-            view:labelTitle,
-            toView:baseView,
-            margin:kTitleMargin)
-        
-        NSLayoutConstraint.bottomToBottom(
-            view:viewButtons,
-            toView:baseView)
-        NSLayoutConstraint.height(
-            view:viewButtons,
-            constant:kButtonsHeight)
-        NSLayoutConstraint.equalsHorizontal(
-            view:viewButtons,
-            toView:baseView)
-        
-        printInfo()
+            view:viewHeader,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    override func layoutSubviews()
-    {
-        let width:CGFloat = bounds.maxX
-        let remainBase:CGFloat = width - kBaseWidth
-        let baseLeft:CGFloat = remainBase / 2.0
-        let remainCircle:CGFloat = width - kCircleSize
-        let circleLeft:CGFloat = remainCircle / 2.0
-        
-        layoutBaseLeft.constant = baseLeft
-        layoutCircleLeft.constant = circleLeft
-        
-        super.layoutSubviews()
     }
     
     //MARK: private

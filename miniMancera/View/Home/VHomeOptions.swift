@@ -4,12 +4,15 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
 {
     private weak var controller:CHome!
     private weak var collectionView:VCollection!
+    private let interItem2:CGFloat
     private let kDeselectTime:TimeInterval = 0.3
-    private let kInterItem:CGFloat = 5
-    private let kCellSize:CGFloat = 170
+    private let kInterItem:CGFloat = 2
+    private let kCellWidth:CGFloat = 220
     
     init(controller:CHome)
     {
+        interItem2 = kInterItem + kInterItem
+        
         super.init(frame:CGRect.zero)
         clipsToBounds = true
         backgroundColor = UIColor.clear
@@ -27,7 +30,6 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
-            flow.itemSize = CGSize(width:kCellSize, height:kCellSize)
             flow.minimumLineSpacing = kInterItem
             flow.minimumInteritemSpacing = kInterItem
         }
@@ -46,9 +48,9 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     //MARK: private
     
-    private func modelAtIndex(index:IndexPath) -> MHomeOptionsProtocol
+    private func modelAtIndex(index:IndexPath) -> MHomeOptions
     {
-        let item:MHomeOptionsProtocol = controller.model.options[index.item]
+        let item:MHomeOptions = controller.model.options[index.item]
         
         return item
     }
@@ -63,18 +65,15 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     //MARK: collectionView delegate
     
-    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, insetForSectionAt section:Int) -> UIEdgeInsets
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let height:CGFloat = collectionView.bounds.height
-        let remainHeight:CGFloat = height - kCellSize
-        let margin:CGFloat = remainHeight / 2.0
-        let insets:UIEdgeInsets = UIEdgeInsets(
-            top:margin,
-            left:kInterItem,
-            bottom:margin,
-            right:kInterItem)
+        let height:CGFloat = collectionView.bounds.maxY
+        let usableHeight:CGFloat = height - interItem2
+        let size:CGSize = CGSize(
+            width:kCellWidth,
+            height:usableHeight)
         
-        return insets
+        return size
     }
     
     func numberOfSections(in collectionView:UICollectionView) -> Int
@@ -91,7 +90,7 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let item:MHomeOptionsProtocol = modelAtIndex(index:indexPath)
+        let item:MHomeOptions = modelAtIndex(index:indexPath)
         let cell:VHomeOptionsCell = collectionView.dequeueReusableCell(
             withReuseIdentifier:
             VHomeOptionsCell.reusableIdentifier,
@@ -105,7 +104,7 @@ class VHomeOptions:UIView, UICollectionViewDelegate, UICollectionViewDataSource,
     {
         collectionView.isUserInteractionEnabled = false
         
-        let item:MHomeOptionsProtocol = modelAtIndex(index:indexPath)
+        let item:MHomeOptions = modelAtIndex(index:indexPath)
         controller.optionSelected(option:item)
         
         DispatchQueue.main.asyncAfter(

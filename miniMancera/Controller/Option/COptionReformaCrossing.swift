@@ -22,7 +22,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         guard
             
             let view:SKView = self.view as? SKView,
-            let scene:MOptionReformaCrossingSceneGame = view.scene as? MOptionReformaCrossingSceneGame
+            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
             
         else
         {
@@ -39,7 +39,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         guard
         
             let view:SKView = self.view as? SKView,
-            let scene:MOptionReformaCrossingSceneGame = view.scene as? MOptionReformaCrossingSceneGame
+            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
         
         else
         {
@@ -54,7 +54,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         guard
             
             let view:SKView = self.view as? SKView,
-            let scene:MOptionReformaCrossingSceneGame = view.scene as? MOptionReformaCrossingSceneGame
+            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
             
         else
         {
@@ -72,7 +72,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         guard
             
             let view:SKView = self.view as? SKView,
-            let scene:MOptionReformaCrossingSceneGame = view.scene as? MOptionReformaCrossingSceneGame
+            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
             
         else
         {
@@ -90,7 +90,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         guard
             
             let view:SKView = self.view as? SKView,
-            let scene:MOptionReformaCrossingSceneGameOver = view.scene as? MOptionReformaCrossingSceneGameOver
+            let scene:VOptionReformaCrossingSceneOver = view.scene as? VOptionReformaCrossingSceneOver
             
         else
         {
@@ -108,7 +108,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         guard
             
             let view:SKView = self.view as? SKView,
-            let scene:MOptionReformaCrossingSceneGame = view.scene as? MOptionReformaCrossingSceneGame
+            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
             
         else
         {
@@ -125,7 +125,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         guard
             
             let view:SKView = self.view as? SKView,
-            let scene:MOptionReformaCrossingSceneGame = view.scene as? MOptionReformaCrossingSceneGame
+            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
             
         else
         {

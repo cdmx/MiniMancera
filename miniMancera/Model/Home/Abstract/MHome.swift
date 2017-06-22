@@ -2,12 +2,12 @@ import Foundation
 
 class MHome
 {
-    private(set) var options:[MHomeOptionsProtocol]
+    private(set) var options:[MHomeOptions]
     let footer:[MHomeFooterProtocol]
     
-    private class func factoryOptions() -> [MHomeOptionsProtocol]
+    private class func factoryOptions() -> [MHomeOptions]
     {
-        var options:[MHomeOptionsProtocol] = []
+        var options:[MHomeOptions] = []
         
         guard
             
@@ -24,14 +24,14 @@ class MHome
             
                 let optionsClassString:String = dataOption.optionsClass,
                 let optionsClass:AnyClass = NSClassFromString(optionsClassString),
-                let optionsType:MHomeOptionsProtocol.Type = optionsClass as? MHomeOptionsProtocol.Type
+                let optionsType:MHomeOptions.Type = optionsClass as? MHomeOptions.Type
             
             else
             {
                 continue
             }
             
-            let option:MHomeOptionsProtocol = optionsType.init(dataOption:dataOption)
+            let option:MHomeOptions = optionsType.init(dataOption:dataOption)
             options.append(option)
         }
         
@@ -65,15 +65,15 @@ class MHome
         options = MHome.factoryOptions()
     }
     
-    func purchaseOptions() -> [MHomeOptionsPurchase]
+    func purchaseOptions() -> [MHomeOptions]
     {
-        var options:[MHomeOptionsPurchase] = []
+        var options:[MHomeOptions] = []
         
-        for option:MHomeOptionsProtocol in self.options
+        for option:MHomeOptions in self.options
         {
             guard
             
-                let option:MHomeOptionsPurchase = option as? MHomeOptionsPurchase
+                let _:DOptionPurchase = option.dataOption as? DOptionPurchase
             
             else
             {

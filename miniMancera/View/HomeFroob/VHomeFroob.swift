@@ -2,11 +2,12 @@ import UIKit
 
 class VHomeFroob:View
 {
-    private weak var blurContainer:UIView!
-    private weak var layoutContentBottom:NSLayoutConstraint!
-    private let kAnimationDuration:TimeInterval = 0.5
-    private let kContentHeight:CGFloat = 380
-    private let kContentTop:CGFloat = 100
+    private weak var layoutContentTop:NSLayoutConstraint!
+    private let kAnimationFirstDuration:TimeInterval = 0.25
+    private let kAnimationSecondDuration:TimeInterval = 0.1
+    private let kMarginHorizontal:CGFloat = 10
+    private let kMarginVertical:CGFloat = 30
+    private let kFailTop:CGFloat = 50
     
     required init(controller:UIViewController)
     {
@@ -22,14 +23,11 @@ class VHomeFroob:View
             return
         }
         
-        let blur:VBlur = VBlur.light()
+        let height:CGFloat = UIScreen.main.bounds.size.height
+        let marginVertical2:CGFloat = kMarginVertical + kMarginVertical
+        let usableHeight:CGFloat = height - marginVertical2
         
-        let blurContainer:UIView = UIView()
-        blurContainer.isUserInteractionEnabled = false
-        blurContainer.clipsToBounds = true
-        blurContainer.translatesAutoresizingMaskIntoConstraints = false
-        blurContainer.alpha = 0
-        self.blurContainer = blurContainer
+        let blur:VBlur = VBlur.light()
         
         let baseButton:UIButton = UIButton()
         baseButton.clipsToBounds = true
@@ -43,30 +41,28 @@ class VHomeFroob:View
         let viewContent:VHomeFroobContent = VHomeFroobContent(
             controller:controller)
         
-        blurContainer.addSubview(blur)
-        addSubview(blurContainer)
+        addSubview(blur)
         addSubview(baseButton)
         addSubview(viewContent)
         
         NSLayoutConstraint.equals(
             view:blur,
-            toView:blurContainer)
-        NSLayoutConstraint.equals(
-            view:blurContainer,
             toView:self)
         NSLayoutConstraint.equals(
             view:baseButton,
             toView:self)
         
-        layoutContentBottom = NSLayoutConstraint.topToBottom(
+        layoutContentTop = NSLayoutConstraint.topToTop(
             view:viewContent,
-            toView:self)
+            toView:self,
+            constant:-usableHeight)
         NSLayoutConstraint.height(
             view:viewContent,
-            constant:kContentHeight)
+            constant:usableHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewContent,
-            toView:self)
+            toView:self,
+            margin:kMarginHorizontal)
     }
     
     required init?(coder:NSCoder)
@@ -94,15 +90,59 @@ class VHomeFroob:View
     
     func animateShow()
     {
-        let height:CGFloat = bounds.maxY
-        let contentTop:CGFloat = kContentTop - height
-        layoutContentBottom.constant = contentTop
+        layoutContentTop.constant = kFailTop
         
-        UIView.animate(withDuration:kAnimationDuration)
+        UIView.animate(withDuration:kAnimationFirstDuration,
+                       animations:
         { [weak self] in
             
-            self?.blurContainer.alpha = 1
+                self?.layoutIfNeeded()
+        })
+        { [weak self] (done:Bool) in
+            
+            guard
+            
+                let strongSelf:VHomeFroob = self
+            
+            else
+            {
+                return
+            }
+            
+            strongSelf.layoutContentTop.constant = strongSelf.kMarginVertical
+            
+            UIView.animate(withDuration:strongSelf.kAnimationSecondDuration)
+            { [weak self] in
+                
+                self?.layoutIfNeeded()
+            }
+        }
+    }
+    
+    func animateHide()
+    {
+        let height:CGFloat = bounds.maxY
+        layoutContentTop.constant = height
+        
+        UIView.animate(
+            withDuration:kAnimationFirstDuration,
+            animations:
+        { [weak self] in
+            
             self?.layoutIfNeeded()
+        })
+        { [weak self] (done:Bool) in
+        
+            guard
+                
+                let controller:CHomeFroob = self?.controller as? CHomeFroob
+                
+            else
+            {
+                return
+            }
+            
+            controller.backAfterAnimation()
         }
     }
 }

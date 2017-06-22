@@ -6,7 +6,7 @@ class CStore:Controller<VStore>, SKProductsRequestDelegate, SKPaymentTransaction
     private weak var request:SKProductsRequest?
     let model:MStore
     
-    init(options:[MHomeOptionsPurchase])
+    init(options:[MHomeOptions])
     {
         model = MStore(options:options)
         super.init()

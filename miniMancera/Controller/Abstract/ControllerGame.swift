@@ -1,7 +1,7 @@
 import UIKit
 import SpriteKit
 
-class ControllerGame<T:MOptionProtocol>:UIViewController
+class ControllerGame<T:MGameProtocol>:UIViewController
 {
     let model:T
     private(set) weak var dataOption:DOption?

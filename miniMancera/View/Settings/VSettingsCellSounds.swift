@@ -21,7 +21,7 @@ class VSettingsCellSounds:VSettingsCell
         labelTitle.font = UIFont.regular(size:14)
         labelTitle.textColor = UIColor.white
         labelTitle.textAlignment = NSTextAlignment.right
-        labelTitle.text = NSLocalizedString("VSettingsCellSounds_labelTitle", comment:"")
+        labelTitle.text = String.localized(key:"VSettingsCellSounds_labelTitle")
         
         let check:UISwitch = UISwitch()
         check.translatesAutoresizingMaskIntoConstraints = false

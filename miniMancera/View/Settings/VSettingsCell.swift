@@ -8,7 +8,7 @@ class VSettingsCell:UICollectionViewCell
     {
         super.init(frame:frame)
         clipsToBounds = true
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.black
     }
     
     required init?(coder:NSCoder)
