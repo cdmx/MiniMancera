@@ -3,7 +3,6 @@ import SpriteKit
 class VOptionWhistlesVsZombiesBackground:SKSpriteNode
 {
     private weak var controller:COptionWhistlesVsZombies!
-    private let kZPosition:CGFloat = -10
     
     init(controller:COptionWhistlesVsZombies)
     {
@@ -22,7 +21,7 @@ class VOptionWhistlesVsZombiesBackground:SKSpriteNode
         let positionY:CGFloat = sceneHeight - textureHeight_2
         let centerPosition:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         position = centerPosition
-        zPosition = kZPosition
+        zPosition = MOptionWhistlesVsZombiesZPosition.Background
     }
     
     required init?(coder:NSCoder)
