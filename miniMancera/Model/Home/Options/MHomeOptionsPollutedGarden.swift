@@ -34,6 +34,14 @@ class MHomeOptionsPollutedGarden:MHomeOptions
         }
     }
     
+    override var scoreIcon:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericPollutedGardenScore")
+        }
+    }
+    
     override func gameController() -> UIViewController?
     {
         guard
