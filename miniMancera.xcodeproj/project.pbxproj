@@ -205,6 +205,7 @@
 		DACD31581EFB147C00F205A0 /* VOptionReformaCrossingFoeLordAudi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31571EFB147C00F205A0 /* VOptionReformaCrossingFoeLordAudi.swift */; };
 		DACD315A1EFB14B400F205A0 /* VOptionReformaCrossingFoeCyclerFemale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31591EFB14B400F205A0 /* VOptionReformaCrossingFoeCyclerFemale.swift */; };
 		DAD3686E1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3686D1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift */; };
+		DAD368721EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD368711EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift */; };
 		DAD814381EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD814371EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -407,6 +408,7 @@
 		DACD31571EFB147C00F205A0 /* VOptionReformaCrossingFoeLordAudi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoeLordAudi.swift; sourceTree = "<group>"; };
 		DACD31591EFB14B400F205A0 /* VOptionReformaCrossingFoeCyclerFemale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoeCyclerFemale.swift; sourceTree = "<group>"; };
 		DAD3686D1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesScene.swift; sourceTree = "<group>"; };
+		DAD368711EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombies.swift; sourceTree = "<group>"; };
 		DAD814371EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroobContentHeader.swift; sourceTree = "<group>"; };
 		DAE84DB91EFB4A8100F9BC9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DAE84DBA1EFB4A8100F9BC9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PollutedGarden.strings; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 		DA2D00301EECC9F000365F23 /* Option */ = {
 			isa = PBXGroup;
 			children = (
+				DAD3686F1EFC27F600CBAC5B /* WhistlesVsZombies */,
 				DA2D00321EECC9F000365F23 /* ReformaCrossing */,
 				DA56679E1EF325CA000055D8 /* PollutedGarden */,
 			);
@@ -1021,6 +1024,22 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		DAD3686F1EFC27F600CBAC5B /* WhistlesVsZombies */ = {
+			isa = PBXGroup;
+			children = (
+				DAD368701EFC27F600CBAC5B /* Abstract */,
+			);
+			path = WhistlesVsZombies;
+			sourceTree = "<group>";
+		};
+		DAD368701EFC27F600CBAC5B /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				DAD368711EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
 		DAFB5F6E1EECAC74006A3B99 = {
 			isa = PBXGroup;
 			children = (
@@ -1305,6 +1324,7 @@
 				DA7E46731EFAC9EE00466867 /* VHomeFroobContentInfo.swift in Sources */,
 				DAAF2FA01EF6F6D100589BB0 /* CStore.swift in Sources */,
 				DAB70ACE1EFB2087002C706F /* VOptionPollutedGardenPlayerAnimate.swift in Sources */,
+				DAD368721EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift in Sources */,
 				DAAF2F9B1EF6ECB800589BB0 /* VSettingsCellSounds.swift in Sources */,
 				DA2DFFE01EECB16A00365F23 /* ExtensionUIColor.swift in Sources */,
 				DACD313C1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift in Sources */,

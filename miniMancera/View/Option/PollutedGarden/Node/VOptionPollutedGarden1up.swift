@@ -1,4 +1,3 @@
-import UIKit
 import SpriteKit
 
 class VOptionPollutedGarden1up:SKSpriteNode

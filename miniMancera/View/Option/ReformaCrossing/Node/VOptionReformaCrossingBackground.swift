@@ -1,4 +1,3 @@
-import UIKit
 import SpriteKit
 
 class VOptionReformaCrossingBackground:SKSpriteNode

@@ -1,4 +1,3 @@
-import UIKit
 import SpriteKit
 
 class ControllerGame<T:MGameProtocol>:UIViewController
