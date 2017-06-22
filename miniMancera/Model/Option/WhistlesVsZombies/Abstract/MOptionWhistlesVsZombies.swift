@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionWhistlesVsZombies:MGameProtocol
 {
+    let menu:MOptionWhistlesVsZombiesMenu
     let base:MOptionWhistlesVsZombiesBase
     private(set) var soundBackground:String?
     private(set) var size:CGSize
@@ -10,6 +11,7 @@ class MOptionWhistlesVsZombies:MGameProtocol
     
     required init()
     {
+        menu = MOptionWhistlesVsZombiesMenu()
         base = MOptionWhistlesVsZombiesBase()
         size = CGSize.zero
         score = 0

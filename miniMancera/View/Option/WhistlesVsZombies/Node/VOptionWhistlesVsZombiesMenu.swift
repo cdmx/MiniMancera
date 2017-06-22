@@ -1,6 +1,6 @@
 import SpriteKit
 
-class VOptionWhistlesVsZombiesBaseMenu:SKSpriteNode
+class VOptionWhistlesVsZombiesMenu:SKSpriteNode
 {
     private weak var controller:COptionWhistlesVsZombies!
     private let kAlpha:CGFloat = 0.8

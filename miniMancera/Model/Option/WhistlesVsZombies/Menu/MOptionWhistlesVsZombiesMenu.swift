@@ -1,9 +1,23 @@
-//
-//  MOptionWhistlesVsZombiesMenu.swift
-//  miniMancera
-//
-//  Created by zero on 6/22/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import SpriteKit
 
-import Foundation
+class MOptionWhistlesVsZombiesMenu
+{
+    private(set) var position:CGPoint
+    
+    init()
+    {
+        position = CGPoint.zero
+    }
+    
+    //MARK: public
+    
+    func update(sceneSize:CGSize)
+    {
+        let sceneWidth:CGFloat = sceneSize.width
+        let sceneHeight:CGFloat = sceneSize.height
+        let sceneWidth_2:CGFloat = sceneWidth / 2.0
+        let sceneHeight_2:CGFloat = sceneHeight / 2.0
+        
+        position = CGPoint(x:sceneWidth_2, y:sceneHeight_2)
+    }
+}
