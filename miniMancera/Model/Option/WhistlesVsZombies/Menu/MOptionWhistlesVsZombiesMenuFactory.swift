@@ -1,10 +1,12 @@
-import UIKit
+import SpriteKit
 
 extension MOptionWhistlesVsZombiesMenu
 {
     private static let kPositionX:CGFloat = 0
-    private static let kInitialPositionY:CGFloat = 100
-    private static let kDeltaYPosition:CGFloat = 60
+    private static let kInitialPositionY:CGFloat = 150
+    private static let kDeltaYPosition:CGFloat = 100
+    private static let kScaleFactor:CGFloat = 0.75
+    private static let kAnimationDuration:TimeInterval = 0.15
     
     class func factoryItems(sceneSize:CGSize) -> [MOptionWhistlesVsZombiesMenuItem]
     {
@@ -20,5 +22,21 @@ extension MOptionWhistlesVsZombiesMenu
             itemPink]
         
         return items
+    }
+    
+    class func factoryWhistleAnimation() -> SKAction
+    {
+        let actionShrink:SKAction = SKAction.scale(
+            to:kScaleFactor,
+            duration:kAnimationDuration)
+        let actionRestore:SKAction = SKAction.scale(
+            to:1,
+            duration:kAnimationDuration)
+        let actions:[SKAction] = [
+            actionShrink,
+            actionRestore]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        return actionsSequence
     }
 }

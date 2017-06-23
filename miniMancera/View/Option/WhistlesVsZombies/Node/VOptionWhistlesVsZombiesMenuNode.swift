@@ -26,6 +26,7 @@ extension VOptionWhistlesVsZombiesMenu
         {
             let whistle:VOptionWhistlesVsZombiesMenuWhistle = VOptionWhistlesVsZombiesMenuWhistle(
                 controller:controller,
+                modelMenu:model,
                 model:item)
             
             addChild(whistle)

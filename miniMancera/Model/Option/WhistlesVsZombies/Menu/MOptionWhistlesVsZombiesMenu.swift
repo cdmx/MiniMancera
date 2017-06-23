@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionWhistlesVsZombiesMenu
 {
+    let whistleActionAnimation:SKAction
     private(set) var items:[MOptionWhistlesVsZombiesMenuItem]
     private(set) var position:CGPoint
     
@@ -9,6 +10,7 @@ class MOptionWhistlesVsZombiesMenu
     {
         position = CGPoint.zero
         items = []
+        whistleActionAnimation = MOptionWhistlesVsZombiesMenu.factoryWhistleAnimation()
     }
     
     //MARK: public
