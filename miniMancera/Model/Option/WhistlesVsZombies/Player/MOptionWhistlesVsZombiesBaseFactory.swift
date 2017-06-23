@@ -4,15 +4,13 @@ extension MOptionWhistlesVsZombiesBase
 {
     private static let kResourceName:String = "ResourceWhistlesVsZombiesBase"
     private static let kResourceExtension:String = "plist"
-    private static let kMarginFromTop:CGFloat = 150
+    private static let kPositionY:CGFloat = 100
     
     class func factoryItems(sceneSize:CGSize) -> [MOptionWhistlesVsZombiesBaseItem]
     {
         var items:[MOptionWhistlesVsZombiesBaseItem] = []
         let sceneWidth:CGFloat = sceneSize.width
-        let sceneHeight:CGFloat = sceneSize.height
         let sceneWidth_2:CGFloat = sceneWidth / 2.0
-        let positionY:CGFloat = sceneHeight - kMarginFromTop
         let positionsX:[CGFloat] = baseFromFile()
         
         for addPositionX:CGFloat in positionsX
@@ -21,7 +19,7 @@ extension MOptionWhistlesVsZombiesBase
             
             let item:MOptionWhistlesVsZombiesBaseItem = MOptionWhistlesVsZombiesBaseItem(
                 positionX:positionX,
-                positionY:positionY)
+                positionY:kPositionY)
             
             items.append(item)
         }
