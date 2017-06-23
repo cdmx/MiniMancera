@@ -5,7 +5,7 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
     private weak var controller:COptionWhistlesVsZombies!
     private let animationAppear:SKAction
     private let animationDisappear:SKAction
-    private let kAlpha:CGFloat = 0.8
+    private let kAlpha:CGFloat = 0.85
     
     init(controller:COptionWhistlesVsZombies)
     {
