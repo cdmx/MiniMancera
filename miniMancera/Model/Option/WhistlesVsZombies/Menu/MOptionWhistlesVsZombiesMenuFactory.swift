@@ -4,7 +4,7 @@ extension MOptionWhistlesVsZombiesMenu
 {
     private static let kPositionX:CGFloat = 0
     private static let kInitialPositionY:CGFloat = 150
-    private static let kDeltaYPosition:CGFloat = 100
+    private static let kDeltaYPosition:CGFloat = -100
     private static let kScaleFactor:CGFloat = 0.75
     private static let kAnimationDuration:TimeInterval = 0.15
     
@@ -20,7 +20,7 @@ extension MOptionWhistlesVsZombiesMenu
         
         whistlePositionY += kDeltaYPosition
         
-        let itemBlue:MOptionWhistlesVsZombiesMenuItemPink = MOptionWhistlesVsZombiesMenuItemPink(
+        let itemBlue:MOptionWhistlesVsZombiesMenuItemBlue = MOptionWhistlesVsZombiesMenuItemBlue(
             positionX:kPositionX,
             positionY:whistlePositionY)
         
