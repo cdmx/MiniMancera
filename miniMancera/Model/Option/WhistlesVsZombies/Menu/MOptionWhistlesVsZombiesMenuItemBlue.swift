@@ -25,7 +25,7 @@ class MOptionWhistlesVsZombiesMenuItemBlue:MOptionWhistlesVsZombiesMenuItem
     {
         get
         {
-            return String.localizedWhistlesVsZombies(key:"MOptionWhistlesVsZombiesMenuItemOrange_descr")
+            return String.localizedWhistlesVsZombies(key:"MOptionWhistlesVsZombiesMenuItemBlue_descr")
         }
     }
     
