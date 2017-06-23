@@ -6,9 +6,9 @@ class VOptionWhistlesVsZombiesBackground:SKSpriteNode
     
     init(controller:COptionWhistlesVsZombies)
     {
+        self.controller = controller
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetWhistlesVsZombiesBackground"))
         let textureSize:CGSize = texture.size()
-        self.controller = controller
         
         super.init(texture:texture, color:UIColor.clear, size:textureSize)
         

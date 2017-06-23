@@ -9,6 +9,7 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
     
     init(controller:COptionWhistlesVsZombies)
     {
+        self.controller = controller
         let backgroundColour:UIColor = UIColor(white:0, alpha:kAlpha)
         let size:CGSize = controller.model.size
         animationAppear = VOptionWhistlesVsZombiesMenu.factoryAnimationAppear()
@@ -21,6 +22,14 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
         position = model.position
         zPosition = MOptionWhistlesVsZombiesZPosition.Menu.rawValue
         isUserInteractionEnabled = true
+        
+        let labelTitle:SKLabelNode = VOptionWhistlesVsZombiesMenu.factoryTitle(menuSize:size)
+        
+        let menuCancel:VOptionWhistlesVsZombiesMenuCancel = VOptionWhistlesVsZombiesMenuCancel(
+            controller:controller)
+        
+        addChild(labelTitle)
+        addChild(menuCancel)
     }
     
     required init?(coder:NSCoder)
