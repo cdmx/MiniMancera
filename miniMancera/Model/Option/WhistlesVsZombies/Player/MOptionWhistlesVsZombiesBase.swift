@@ -4,6 +4,7 @@ class MOptionWhistlesVsZombiesBase
 {
     let texture:SKTexture
     let textureSize:CGSize
+    let actionAnimation:SKAction
     private(set) var items:[MOptionWhistlesVsZombiesBaseItem]
     
     init()
@@ -11,6 +12,7 @@ class MOptionWhistlesVsZombiesBase
         items = []
         texture = SKTexture(image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleBase"))
         textureSize = texture.size()
+        actionAnimation = MOptionWhistlesVsZombiesBase.factoryAnimation()
     }
     
     //MARK: public

@@ -3,6 +3,7 @@ import SpriteKit
 class VOptionWhistlesVsZombiesBase:SKSpriteNode
 {
     private weak var controller:COptionWhistlesVsZombies!
+    private weak var modelBase:MOptionWhistlesVsZombiesBase!
     private weak var model:MOptionWhistlesVsZombiesBaseItem!
     
     init(
@@ -11,13 +12,12 @@ class VOptionWhistlesVsZombiesBase:SKSpriteNode
     {
         self.controller = controller
         self.model = model
-        
-        let base:MOptionWhistlesVsZombiesBase = controller.model.base
+        modelBase = controller.model.base
         
         super.init(
-            texture:base.texture,
+            texture:modelBase.texture,
             color:UIColor.clear,
-            size:base.textureSize)
+            size:modelBase.textureSize)
         zPosition = MOptionWhistlesVsZombiesZPosition.Base.rawValue
         position = CGPoint(x:model.positionX, y:model.positionY)
         isUserInteractionEnabled = true
@@ -26,6 +26,11 @@ class VOptionWhistlesVsZombiesBase:SKSpriteNode
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
+    {
+        run(modelBase.actionAnimation)
     }
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)

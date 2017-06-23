@@ -1,10 +1,12 @@
-import UIKit
+import SpriteKit
 
 extension MOptionWhistlesVsZombiesBase
 {
     private static let kResourceName:String = "ResourceWhistlesVsZombiesBase"
     private static let kResourceExtension:String = "plist"
     private static let kPositionY:CGFloat = 100
+    private static let kScaleFactor:CGFloat = 0.5
+    private static let kAnimationDuration:TimeInterval = 0.15
     
     class func factoryItems(sceneSize:CGSize) -> [MOptionWhistlesVsZombiesBaseItem]
     {
@@ -26,6 +28,24 @@ extension MOptionWhistlesVsZombiesBase
         
         return items
     }
+    
+    class func factoryAnimation() -> SKAction
+    {
+        let actionShrink:SKAction = SKAction.scale(
+            to:kScaleFactor,
+            duration:kAnimationDuration)
+        let actionRestore:SKAction = SKAction.scale(
+            to:1,
+            duration:kAnimationDuration)
+        let actions:[SKAction] = [
+            actionShrink,
+            actionRestore]
+        let actionsSequence:SKAction = SKAction.sequence(actions)
+        
+        return actionsSequence
+    }
+    
+    //MARK: private
     
     private class func baseFromFile() -> [CGFloat]
     {
