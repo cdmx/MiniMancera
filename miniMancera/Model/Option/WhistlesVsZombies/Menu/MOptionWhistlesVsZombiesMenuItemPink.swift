@@ -13,6 +13,22 @@ class MOptionWhistlesVsZombiesMenuItemPink:MOptionWhistlesVsZombiesMenuItem
         }
     }
     
+    override var title:String?
+    {
+        get
+        {
+            return String.localizedWhistlesVsZombies(key:"MOptionWhistlesVsZombiesMenuItemPink_title")
+        }
+    }
+    
+    override var descr:String?
+    {
+        get
+        {
+            return String.localizedWhistlesVsZombies(key:"MOptionWhistlesVsZombiesMenuItemPink_descr")
+        }
+    }
+    
     override var textureSize:CGSize
     {
         get
