@@ -18,8 +18,15 @@ extension MOptionWhistlesVsZombiesMenu
             positionX:kPositionX,
             positionY:whistlePositionY)
         
+        whistlePositionY += kDeltaYPosition
+        
+        let itemBlue:MOptionWhistlesVsZombiesMenuItemPink = MOptionWhistlesVsZombiesMenuItemPink(
+            positionX:kPositionX,
+            positionY:whistlePositionY)
+        
         let items:[MOptionWhistlesVsZombiesMenuItem] = [
-            itemPink]
+            itemPink,
+            itemBlue]
         
         return items
     }
