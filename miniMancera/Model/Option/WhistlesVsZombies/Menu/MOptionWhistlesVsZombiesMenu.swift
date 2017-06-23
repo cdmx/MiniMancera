@@ -2,11 +2,13 @@ import SpriteKit
 
 class MOptionWhistlesVsZombiesMenu
 {
+    private(set) var items:[MOptionWhistlesVsZombiesMenuItem]
     private(set) var position:CGPoint
     
     init()
     {
         position = CGPoint.zero
+        items = []
     }
     
     //MARK: public
@@ -19,5 +21,6 @@ class MOptionWhistlesVsZombiesMenu
         let sceneHeight_2:CGFloat = sceneHeight / 2.0
         
         position = CGPoint(x:sceneWidth_2, y:sceneHeight_2)
+        items = MOptionWhistlesVsZombiesMenu.factoryItems(sceneSize:sceneSize)
     }
 }
