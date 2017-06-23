@@ -19,4 +19,16 @@ extension VOptionWhistlesVsZombiesMenu
         
         return labelTitle
     }
+    
+    func factoryWhistles()
+    {
+        for item:MOptionWhistlesVsZombiesMenuItem in model.items
+        {
+            let whistle:VOptionWhistlesVsZombiesMenuWhistle = VOptionWhistlesVsZombiesMenuWhistle(
+                controller:controller,
+                model:item)
+            
+            addChild(whistle)
+        }
+    }
 }
