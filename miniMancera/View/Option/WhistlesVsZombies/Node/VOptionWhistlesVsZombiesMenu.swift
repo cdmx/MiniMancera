@@ -16,10 +16,18 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
         
         super.init(texture:nil, color:backgroundColour, size:size)
         alpha = 0
+        zPosition = MOptionWhistlesVsZombiesZPosition.Menu.rawValue
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: public
+    
+    func show()
+    {
+        run(animationAppear)
     }
 }

@@ -2,6 +2,8 @@ import SpriteKit
 
 class VOptionWhistlesVsZombiesScene:ViewGame<MOptionWhistlesVsZombies, COptionWhistlesVsZombies>
 {
+    private(set) weak var menu:VOptionWhistlesVsZombiesMenu!
+    
     override init(controller:COptionWhistlesVsZombies)
     {
         super.init(controller:controller)
@@ -9,7 +11,12 @@ class VOptionWhistlesVsZombiesScene:ViewGame<MOptionWhistlesVsZombies, COptionWh
         let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
             controller:controller)
         
+        let menu:VOptionWhistlesVsZombiesMenu = VOptionWhistlesVsZombiesMenu(
+            controller:controller)
+        self.menu = menu
+        
         addChild(background)
+        addChild(menu)
         
         addBase()
     }
