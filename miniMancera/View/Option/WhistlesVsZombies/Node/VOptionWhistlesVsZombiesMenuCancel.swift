@@ -3,7 +3,7 @@ import SpriteKit
 class VOptionWhistlesVsZombiesMenuCancel:SKSpriteNode
 {
     private weak var controller:COptionWhistlesVsZombies!
-    private let kPositionY:CGFloat = 100
+    private let kAddPositionY:CGFloat = 50
     
     init(controller:COptionWhistlesVsZombies)
     {
@@ -11,9 +11,10 @@ class VOptionWhistlesVsZombiesMenuCancel:SKSpriteNode
         
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleMenuCancel"))
         let textureSize:CGSize = texture.size()
-        let sceneWidth:CGFloat = controller.model.size.width
-        let sceneWidth_2:CGFloat = sceneWidth / 2.0
-        let position:CGPoint = CGPoint(x:sceneWidth_2, y:kPositionY)
+        let sceneHeight:CGFloat = controller.model.size.height
+        let sceneHeight_2:CGFloat = sceneHeight / 2.0
+        let positionY:CGFloat = kAddPositionY - sceneHeight_2
+        let position:CGPoint = CGPoint(x:0, y:positionY)
         
         super.init(texture:texture, color:UIColor.clear, size:textureSize)
         self.position = position

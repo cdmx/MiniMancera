@@ -3,18 +3,19 @@ import SpriteKit
 extension VOptionWhistlesVsZombiesMenu
 {
     private static let kFontSize:CGFloat = 16
-    private static let kPositionY:CGFloat = 100
+    private static let kAddPositionY:CGFloat = -40
     
     class func factoryTitle(menuSize:CGSize) -> SKLabelNode
     {
-        let width:CGFloat = menuSize.width
-        let width_2:CGFloat = width / 2.0
+        let sceneHeight:CGFloat = menuSize.height
+        let sceneHeight_2:CGFloat = sceneHeight / 2.0
+        let positionY:CGFloat = sceneHeight_2 + kAddPositionY
         
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
         labelTitle.text = String.localizedWhistlesVsZombies(key:"VOptionWhistlesVsZombiesMenu_labelTitle")
         labelTitle.fontSize = kFontSize
         labelTitle.fontColor = SKColor.white
-        labelTitle.position = CGPoint(x:width_2, y:kPositionY)
+        labelTitle.position = CGPoint(x:0, y:positionY)
         
         return labelTitle
     }
