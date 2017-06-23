@@ -5,7 +5,7 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
     private weak var controller:COptionWhistlesVsZombies!
     private let animationAppear:SKAction
     private let animationDisappear:SKAction
-    private let kAlpha:CGFloat = 0.8
+    private let kAlpha:CGFloat = 0.7
     
     init(controller:COptionWhistlesVsZombies)
     {
@@ -14,9 +14,13 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
         animationAppear = VOptionWhistlesVsZombiesMenu.factoryAnimationAppear()
         animationDisappear = VOptionWhistlesVsZombiesMenu.factoryAnimationDisappear()
         
+        let model:MOptionWhistlesVsZombiesMenu = controller.model.menu
+        
         super.init(texture:nil, color:backgroundColour, size:size)
         alpha = 0
+        position = model.position
         zPosition = MOptionWhistlesVsZombiesZPosition.Menu.rawValue
+        isUserInteractionEnabled = true
     }
     
     required init?(coder:NSCoder)
@@ -24,10 +28,20 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
         return nil
     }
     
+    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
+    {
+        hide()
+    }
+    
     //MARK: public
     
     func show()
     {
         run(animationAppear)
+    }
+    
+    func hide()
+    {
+        run(animationDisappear)
     }
 }

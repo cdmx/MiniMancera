@@ -2,7 +2,7 @@ import SpriteKit
 
 extension VOptionWhistlesVsZombiesMenu
 {
-    static let kAnimationDuration:TimeInterval = 0.3
+    private static let kAnimationDuration:TimeInterval = 0.3
     
     class func factoryAnimationAppear() -> SKAction
     {

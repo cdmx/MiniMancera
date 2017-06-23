@@ -20,10 +20,16 @@ class VOptionWhistlesVsZombiesBase:SKSpriteNode
             size:base.textureSize)
         zPosition = MOptionWhistlesVsZombiesZPosition.Base.rawValue
         position = CGPoint(x:model.positionX, y:model.positionY)
+        isUserInteractionEnabled = true
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
+    {
+        controller.showMenuFor(base:model)
     }
 }
