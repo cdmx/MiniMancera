@@ -5,6 +5,8 @@ class MOptionWhistlesVsZombiesMenuItem
     let positionX:CGFloat
     let positionY:CGFloat
     private(set) var texture:SKTexture?
+    private(set) var title:String?
+    private(set) var descr:String?
     private(set) var textureSize:CGSize
     
     init(positionX:CGFloat, positionY:CGFloat)
