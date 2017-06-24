@@ -2,8 +2,6 @@ import SpriteKit
 
 class VOptionWhistlesVsZombiesMenuWhistle:SKSpriteNode
 {
-    private weak var controller:COptionWhistlesVsZombies!
-    private weak var modelMenu:MOptionWhistlesVsZombiesMenu!
     private weak var model:MOptionWhistlesVsZombiesMenuItem!
     private let kTitleFontSize:CGFloat = 20
     private let kDescrFontSize:CGFloat = 14
@@ -12,12 +10,11 @@ class VOptionWhistlesVsZombiesMenuWhistle:SKSpriteNode
     private let kDescrPositionY:CGFloat = -20
     
     init(
-        controller:COptionWhistlesVsZombies,
         modelMenu:MOptionWhistlesVsZombiesMenu,
         model:MOptionWhistlesVsZombiesMenuItem)
     {
-        self.controller = controller
-        self.modelMenu = modelMenu
+//        self.controller = controller
+//        self.modelMenu = modelMenu
         self.model = model
         
         super.init(texture:model.texture, color:UIColor.clear, size:model.textureSize)
@@ -35,12 +32,12 @@ class VOptionWhistlesVsZombiesMenuWhistle:SKSpriteNode
     
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        run(modelMenu.whistleActionAnimation)
+//        run(modelMenu.whistleActionAnimation)
     }
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        controller.selectWhistleEditBase(whistle:model)
+//        controller.selectWhistleEditBase(whistle:model)
     }
     
     //MARK: private
