@@ -15,4 +15,11 @@ class MOptionWhistlesVsZombiesMenuItem
         self.positionY = positionY
         textureSize = CGSize.zero
     }
+    
+    //MARK: public
+    
+    func factoryWhistle() -> MOptionWhistlesVsZombiesWhistle?
+    {
+        return nil
+    }
 }
