@@ -41,7 +41,7 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        hide()
+        controller.hideMenuForBase()
     }
     
     //MARK: public
