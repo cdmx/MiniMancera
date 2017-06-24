@@ -1,23 +1,16 @@
 import SpriteKit
 
-class ViewGameScene:SKScene
+class ViewGameScene<T:MGame>:SKScene
 {
-    init(controller:ControllerGame)
+    private weak var controller:ControllerGame<T>!
+    
+    required init(controller:ControllerGame<T>)
     {
-        self.controller = controller
-        elapsedTime = 0
-        
-        if let sounds:Bool = MSession.sharedInstance.settings?.sounds
-        {
-            shouldPlaySounds = sounds
-        }
-        else
-        {
-            shouldPlaySounds = true
-        }
-        
-        super.init(size:controller.model.size)
+        super.init(size:MGame.sceneSize)
         backgroundColor = SKColor.black
+        scaleMode = SKSceneScaleMode.resizeFill
+        delegate = controller
+        self.controller = controller
     }
     
     required init?(coder:NSCoder)
@@ -27,25 +20,9 @@ class ViewGameScene:SKScene
     
     override func didMove(to view:SKView)
     {
-        if shouldPlaySounds
+        if controller.playSounds
         {
             startBackgroundSound()
-        }
-    }
-    
-    override func update(_ currentTime:TimeInterval)
-    {
-        if controller.model.gameActive
-        {
-            if let lastUpdateTime:TimeInterval = self.lastUpdateTime
-            {
-                let deltaTime:TimeInterval = currentTime - lastUpdateTime
-                elapsedTime += deltaTime
-                
-                updateNodes()
-            }
-            
-            lastUpdateTime = currentTime
         }
     }
     
@@ -57,7 +34,7 @@ class ViewGameScene:SKScene
             
             let sound:String = controller.model.soundBackground
             
-            else
+        else
         {
             return
         }
@@ -72,13 +49,5 @@ class ViewGameScene:SKScene
     
     func updateNodes()
     {
-    }
-    
-    func playSound(actionSound:SKAction)
-    {
-        if shouldPlaySounds
-        {
-            run(actionSound)
-        }
     }
 }

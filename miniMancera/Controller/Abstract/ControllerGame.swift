@@ -1,14 +1,54 @@
 import SpriteKit
 
-class ControllerGame<T:MGameProtocol>:UIViewController, SKSceneDelegate
+class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
 {
+    
+    /*
+     var lastUpdateTime:TimeInterval?
+     private(set) weak var controller:T!
+     private(set) var elapsedTime:TimeInterval
+    */
+    
+    
+    
+    
     let model:T
+    let playSounds:Bool
     private(set) weak var dataOption:DOption?
+    
+    private var scene:ViewGameScene<T>?
+    {
+        get
+        {
+            guard
+            
+                let view:SKView = self.view as? SKView
+            
+            else
+            {
+                return nil
+            }
+            
+            let scene:ViewGameScene<T>? = view.scene as? ViewGameScene<T>
+            
+            return scene
+        }
+    }
     
     init(dataOption:DOption)
     {
         self.dataOption = dataOption
         model = T()
+        
+        if let playSounds:Bool = MSession.sharedInstance.settings?.sounds
+        {
+            self.playSounds = playSounds
+        }
+        else
+        {
+            playSounds = true
+        }
+        
         super.init(nibName:nil, bundle:nil)
     }
     
@@ -34,7 +74,7 @@ class ControllerGame<T:MGameProtocol>:UIViewController, SKSceneDelegate
     
     override func loadView()
     {
-        let view:SKView = SKView(frame:UIScreen.main.bounds)
+        let view:ViewGame = ViewGame(controller:self)
         self.view = view
     }
     
@@ -44,24 +84,6 @@ class ControllerGame<T:MGameProtocol>:UIViewController, SKSceneDelegate
         edgesForExtendedLayout = UIRectEdge()
         extendedLayoutIncludesOpaqueBars = false
         automaticallyAdjustsScrollViewInsets = false
-        
-        let size:CGSize = view.bounds.size
-        
-        guard
-            
-            let scene:SKScene = model.sceneWithSize(controller:self, size:size),
-            let view:SKView = self.view as? SKView
-        
-        else
-        {
-            return
-        }
-        
-        scene.scaleMode = SKSceneScaleMode.resizeFill
-        view.showsFPS = false
-        view.showsNodeCount = false
-        view.ignoresSiblingOrder = true
-        view.presentScene(scene)
         
         NotificationCenter.default.addObserver(
             self,
@@ -119,6 +141,14 @@ class ControllerGame<T:MGameProtocol>:UIViewController, SKSceneDelegate
     }
     
     //MARK: public
+    
+    func playSound(actionSound:SKAction)
+    {
+        if playSounds
+        {
+            scene.run(actionSound)
+        }
+    }
     
     func postScore()
     {
@@ -210,6 +240,21 @@ class ControllerGame<T:MGameProtocol>:UIViewController, SKSceneDelegate
     //MARK: scene delegate
     
     func update(_ currentTime:TimeInterval, for scene:SKScene)
-    {
+    {/*
+ 
+         if controller.model.gameActive
+         {
+         if let lastUpdateTime:TimeInterval = self.lastUpdateTime
+         {
+         let deltaTime:TimeInterval = currentTime - lastUpdateTime
+         elapsedTime += deltaTime
+         
+         updateNodes()
+         }
+         
+         lastUpdateTime = currentTime
+         }
+         
+ */
     }
 }
