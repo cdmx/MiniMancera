@@ -4,6 +4,7 @@ class MOptionWhistlesVsZombiesBaseItem
 {
     let positionX:CGFloat
     let positionY:CGFloat
+    weak var view:VOptionWhistlesVsZombiesBase?
     
     init(positionX:CGFloat, positionY:CGFloat)
     {

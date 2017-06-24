@@ -17,9 +17,7 @@ class MOptionWhistlesVsZombiesMenuItem
         self.positionY = positionY
         textureSize = CGSize.zero
     }
-    
-    //MARK: public
-    
+
     //MARK: final
     
     final func factoryWhistle() -> MOptionWhistlesVsZombiesWhistle?
