@@ -5,6 +5,7 @@ class VOptionWhistlesVsZombiesBase:SKSpriteNode
     private weak var controller:COptionWhistlesVsZombies!
     private weak var modelBase:MOptionWhistlesVsZombiesBase!
     private weak var model:MOptionWhistlesVsZombiesBaseItem!
+    private let kAlphaCharged:CGFloat = 0.5
     
     init(
         controller:COptionWhistlesVsZombies,
@@ -36,5 +37,12 @@ class VOptionWhistlesVsZombiesBase:SKSpriteNode
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
         controller.showMenuFor(base:self)
+    }
+    
+    //MARK: public
+    
+    func charged()
+    {
+        alpha = kAlphaCharged
     }
 }

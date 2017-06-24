@@ -40,7 +40,7 @@ class VOptionWhistlesVsZombiesMenuWhistle:SKSpriteNode
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        
+        controller.selectWhistleForBase(whistle:model)
     }
     
     //MARK: private

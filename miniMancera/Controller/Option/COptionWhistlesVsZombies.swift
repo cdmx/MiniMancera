@@ -37,4 +37,11 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
         showingMenuForBase = nil
         scene?.menu.hide()
     }
+    
+    func selectWhistleForBase(whistle:MOptionWhistlesVsZombiesMenuItem)
+    {
+        showingMenuForBase?.charged()
+        showingMenuForBase = nil
+        scene?.menu.hide()
+    }
 }
