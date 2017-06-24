@@ -33,9 +33,14 @@ class VOptionWhistlesVsZombiesMenuWhistle:SKSpriteNode
         return nil
     }
     
-    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
+    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
         run(modelMenu.whistleActionAnimation)
+    }
+    
+    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
+    {
+        
     }
     
     //MARK: private
