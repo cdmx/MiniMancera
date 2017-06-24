@@ -4,7 +4,8 @@ class MOptionWhistlesVsZombiesMenuItem
 {
     let positionX:CGFloat
     let positionY:CGFloat
-    private(set) var whistleTexture:MOptionWhistlesVsZombiesWhistleTextures?
+    private(set) var whistleType:MOptionWhistlesVsZombiesWhistle.Type?
+    private(set) var whistleTextures:MOptionWhistlesVsZombiesWhistleTextures?
     private(set) var texture:SKTexture?
     private(set) var title:String?
     private(set) var descr:String?
@@ -19,8 +20,23 @@ class MOptionWhistlesVsZombiesMenuItem
     
     //MARK: public
     
-    func factoryWhistle() -> MOptionWhistlesVsZombiesWhistle?
+    //MARK: final
+    
+    final func factoryWhistle() -> MOptionWhistlesVsZombiesWhistle?
     {
-        return nil
+        guard
+        
+            let whistleType:MOptionWhistlesVsZombiesWhistle.Type = self.whistleType,
+            let whistleTextures:MOptionWhistlesVsZombiesWhistleTextures = self.whistleTextures
+        
+        else
+        {
+            return nil
+        }
+        
+        let whistle:MOptionWhistlesVsZombiesWhistle = whistleType.init(
+            textures:whistleTextures)
+        
+        return whistle
     }
 }
