@@ -2,7 +2,7 @@ import SpriteKit
 
 class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
 {
-    private weak var showingMenuForBase:VOptionWhistlesVsZombiesBase?
+    private weak var editingBase:MOptionWhistlesVsZombiesBaseItem?
     
     private var scene:VOptionWhistlesVsZombiesScene?
     {
@@ -26,22 +26,22 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
     
     //MARK: public
     
-    func showMenuFor(base:VOptionWhistlesVsZombiesBase)
+    func editBase(editingBase:MOptionWhistlesVsZombiesBaseItem)
     {
-        showingMenuForBase = base
+        self.editingBase = editingBase
         scene?.menu.show()
     }
     
-    func hideMenuForBase()
+    func clearEditBase()
     {
-        showingMenuForBase = nil
+        editingBase = nil
         scene?.menu.hide()
     }
     
-    func selectWhistleForBase(whistle:MOptionWhistlesVsZombiesMenuItem)
+    func selectWhistleEditBase(whistle:MOptionWhistlesVsZombiesMenuItem)
     {
-        showingMenuForBase?.charged()
-        showingMenuForBase = nil
+        editingBase?.charged()
+        editingBase = nil
         scene?.menu.hide()
     }
 }

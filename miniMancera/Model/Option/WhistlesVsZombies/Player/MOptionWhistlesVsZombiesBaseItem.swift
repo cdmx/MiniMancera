@@ -11,4 +11,11 @@ class MOptionWhistlesVsZombiesBaseItem
         self.positionX = positionX
         self.positionY = positionY
     }
+    
+    //MARK: public
+    
+    func charged()
+    {
+        
+    }
 }
