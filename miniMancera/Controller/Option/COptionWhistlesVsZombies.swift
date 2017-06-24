@@ -2,6 +2,8 @@ import SpriteKit
 
 class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
 {
+    private weak var showingMenuForBase:VOptionWhistlesVsZombiesBase?
+    
     private var scene:VOptionWhistlesVsZombiesScene?
     {
         get
@@ -15,7 +17,8 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
                 return nil
             }
             
-            let scene:VOptionWhistlesVsZombiesScene? = view.scene as? VOptionWhistlesVsZombiesScene
+            let scene:VOptionWhistlesVsZombiesScene? = view.scene
+                as? VOptionWhistlesVsZombiesScene
             
             return scene
         }
@@ -23,8 +26,9 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
     
     //MARK: public
     
-    func showMenuFor(base:MOptionWhistlesVsZombiesBaseItem)
+    func showMenuFor(base:VOptionWhistlesVsZombiesBase)
     {
+        self.showingMenuForBase = base
         scene?.menu.show()
     }
 }
