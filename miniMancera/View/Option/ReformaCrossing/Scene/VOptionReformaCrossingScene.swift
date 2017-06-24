@@ -36,7 +36,6 @@ class VOptionReformaCrossingScene:ViewGame<MOptionReformaCrossing, COptionReform
         super.init(controller:controller)
         physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self
-        
         let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
             controller:controller)
         

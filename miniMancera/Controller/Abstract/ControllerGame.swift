@@ -1,6 +1,6 @@
 import SpriteKit
 
-class ControllerGame<T:MGameProtocol>:UIViewController
+class ControllerGame<T:MGameProtocol>:UIViewController, SKSceneDelegate
 {
     let model:T
     private(set) weak var dataOption:DOption?
@@ -205,5 +205,11 @@ class ControllerGame<T:MGameProtocol>:UIViewController
         }
         
         parent.dismiss(animated:true, completion:nil)
+    }
+    
+    //MARK: scene delegate
+    
+    func update(_ currentTime:TimeInterval, for scene:SKScene)
+    {
     }
 }
