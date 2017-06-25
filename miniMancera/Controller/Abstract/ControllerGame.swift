@@ -1,6 +1,6 @@
 import SpriteKit
 
-class ControllerGame:UIViewController, SKSceneDelegate
+class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
 {
     let model:MGame
     let playSounds:Bool
