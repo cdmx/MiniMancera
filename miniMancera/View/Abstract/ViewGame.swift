@@ -13,14 +13,15 @@ class ViewGame<T:MGame>:SKView
         
         guard
             
-            let startSceneType:ViewGameScene.Type = controller.model.startSceneType
+            let startSceneType:SKScene.Type = controller.model.startSceneType,
+            let sceneGameType:ViewGameScene<T>.Type = startSceneType as? ViewGameScene<T>.Type
         
         else
         {
             return
         }
         
-        let startScene:ViewGameScene = startSceneType.init(controller:controller)
+        let startScene:ViewGameScene = sceneGameType.init(controller:controller)
         presentScene(startScene)
     }
     
