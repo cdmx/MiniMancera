@@ -1,6 +1,6 @@
 import SpriteKit
 
-class COptionReformaCrossing:ControllerGame
+class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
 {
     required init?(dataOption:DOption)
     {
@@ -13,13 +13,13 @@ class COptionReformaCrossing:ControllerGame
     {
         return nil
     }
-    
+    /*
     override func pause()
     {
         super.pause()
         
         stopTimer()
-    }
+    }*/
     
     override func notifiedEnterBackground(sender notification:Notification)
     {

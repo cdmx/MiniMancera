@@ -1,6 +1,6 @@
 import SpriteKit
 
-class COptionWhistlesVsZombies:ControllerGame
+class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
 {
     private weak var editingBase:MOptionWhistlesVsZombiesBaseItem?
     

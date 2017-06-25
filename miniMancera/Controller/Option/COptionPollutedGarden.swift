@@ -1,6 +1,6 @@
 import SpriteKit
 
-class COptionPollutedGarden:ControllerGame
+class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
 {    
     //MARK: public
     
