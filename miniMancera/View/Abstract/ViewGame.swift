@@ -1,8 +1,8 @@
 import SpriteKit
 
-class ViewGame:SKView
+class ViewGame<T:MGame>:SKView
 {
-    init(controller:ControllerGame)
+    init(controller:ControllerGame<T>)
     {
         super.init(frame:CGRect.zero)
         clipsToBounds = true
