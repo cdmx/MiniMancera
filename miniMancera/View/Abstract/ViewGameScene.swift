@@ -44,10 +44,4 @@ class ViewGameScene<T:MGame>:SKScene
         
         addChild(background)
     }
-    
-    //MARK: public
-    
-    func updateNodes()
-    {
-    }
 }

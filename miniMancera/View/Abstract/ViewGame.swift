@@ -20,7 +20,7 @@ class ViewGame<T:MGame>:SKView
             return
         }
         
-        let startScene:ViewGameScene = startSceneType.init(controller:controller)
+        let startScene:ViewGameScene<T> = startSceneType.init(controller:controller)
         presentScene(startScene)
     }
     

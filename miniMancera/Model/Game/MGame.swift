@@ -4,9 +4,9 @@ class MGame
 {
     static let sceneSize:CGSize = UIScreen.main.bounds.size
     
+    var score:Int
     private(set) var startSceneType:ViewGameScene<MGame>.Type?
     private(set) var soundBackground:String?
-    private(set) var score:Int
     private(set) var gameActive:Bool
     
     required init()
@@ -20,5 +20,10 @@ class MGame
     func activateGame()
     {
         gameActive = true
+    }
+    
+    func deActivateGame()
+    {
+        gameActive = false
     }
 }

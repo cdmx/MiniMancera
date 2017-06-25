@@ -16,25 +16,6 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
     let playSounds:Bool
     private(set) weak var dataOption:DOption?
     
-    private var scene:ViewGameScene<T>?
-    {
-        get
-        {
-            guard
-            
-                let view:SKView = self.view as? SKView
-            
-            else
-            {
-                return nil
-            }
-            
-            let scene:ViewGameScene<T>? = view.scene as? ViewGameScene<T>
-            
-            return scene
-        }
-    }
-    
     init(dataOption:DOption)
     {
         self.dataOption = dataOption
@@ -92,6 +73,25 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
             object:nil)
     }
     
+    private var scene:ViewGameScene<T>?
+    {
+        get
+        {
+            guard
+                
+                let view:SKView = self.view as? SKView
+                
+            else
+            {
+                return nil
+            }
+            
+            let scene:ViewGameScene<T>? = view.scene as? ViewGameScene<T>
+            
+            return scene
+        }
+    }
+    
     //MARK: notified
     
     func notifiedEnterBackground(sender notification:Notification)
@@ -146,7 +146,7 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
     {
         if playSounds
         {
-            scene.run(actionSound)
+            scene?.run(actionSound)
         }
     }
     
