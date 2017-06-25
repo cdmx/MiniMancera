@@ -1,6 +1,6 @@
 import SpriteKit
 
-class VOptionReformaCrossingScene:ViewGameScene
+class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
 {
     let soundHonk:SKAction
     private(set) weak var player:VOptionReformaCrossingPlayer!
@@ -25,7 +25,7 @@ class VOptionReformaCrossingScene:ViewGameScene
     private let kTitleVerticalAdd:CGFloat = -12
     private let kSpawnProbability:UInt32 = 6
     
-    required init(controller:ControllerGame)
+    required init(controller:ControllerGame<MOptionReformaCrossing>)
     {
 //        controller.model.startLevel()
         soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
