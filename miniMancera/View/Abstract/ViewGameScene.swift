@@ -1,10 +1,10 @@
 import SpriteKit
 
-class ViewGameScene<T:MGame>:SKScene
+class ViewGameScene:SKScene
 {
-    private weak var controller:ControllerGame<T>!
+    private weak var controller:ControllerGame!
     
-    required init(controller:ControllerGame<T>)
+    required init(controller:ControllerGame)
     {
         super.init(size:MGame.sceneSize)
         backgroundColor = SKColor.black

@@ -1,8 +1,8 @@
 import SpriteKit
 
-class ViewGame<T:MGame>:SKView
+class ViewGame:SKView
 {
-    init(controller:ControllerGame<T>)
+    init(controller:ControllerGame)
     {
         super.init(frame:CGRect.zero)
         clipsToBounds = true
@@ -20,7 +20,7 @@ class ViewGame<T:MGame>:SKView
             return
         }
         
-        let startScene:ViewGameScene<T> = startSceneType.init(controller:controller)
+        let startScene:ViewGameScene = startSceneType.init(controller:controller)
         presentScene(startScene)
     }
     

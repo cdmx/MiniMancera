@@ -1,7 +1,19 @@
 import SpriteKit
 
-class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
+class COptionReformaCrossing:ControllerGame
 {
+    required init?(dataOption:DOption)
+    {
+        let model:MOptionReformaCrossing = MOptionReformaCrossing()
+        
+        super.init(model:model, dataOption:dataOption)
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
     override func pause()
     {
         super.pause()
@@ -12,23 +24,6 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
     override func notifiedEnterBackground(sender notification:Notification)
     {
         stopTimer()
-    }
-    
-    //MARK: private
-    
-    private func stopTimer()
-    {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
-        scene.lastUpdateTime = nil
     }
     
     //MARK: public

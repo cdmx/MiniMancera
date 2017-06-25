@@ -33,6 +33,8 @@
 		DA28928C1EF66BE800C80D3D /* VHomeSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28928B1EF66BE800C80D3D /* VHomeSplash.swift */; };
 		DA2974E01EFF24AA00300455 /* ViewGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2974DF1EFF24AA00300455 /* ViewGameScene.swift */; };
 		DA2974E21EFF27A500300455 /* MGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2974E11EFF27A500300455 /* MGame.swift */; };
+		DA2974E41EFF38DD00300455 /* ControllerGameMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2974E31EFF38DD00300455 /* ControllerGameMenu.swift */; };
+		DA2974E61EFF399700300455 /* ControllerGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2974E51EFF399700300455 /* ControllerGameScene.swift */; };
 		DA2D00181EECB4C600365F23 /* VHomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00171EECB4C600365F23 /* VHomeHeader.swift */; };
 		DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */; };
 		DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */; };
@@ -259,6 +261,8 @@
 		DA28928B1EF66BE800C80D3D /* VHomeSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSplash.swift; sourceTree = "<group>"; };
 		DA2974DF1EFF24AA00300455 /* ViewGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGameScene.swift; sourceTree = "<group>"; };
 		DA2974E11EFF27A500300455 /* MGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGame.swift; sourceTree = "<group>"; };
+		DA2974E31EFF38DD00300455 /* ControllerGameMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerGameMenu.swift; sourceTree = "<group>"; };
+		DA2974E51EFF399700300455 /* ControllerGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerGameScene.swift; sourceTree = "<group>"; };
 		DA2D00171EECB4C600365F23 /* VHomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeHeader.swift; sourceTree = "<group>"; };
 		DA2D00191EECB4CF00365F23 /* VHomeFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFooter.swift; sourceTree = "<group>"; };
 		DA2D001B1EECB4DF00365F23 /* VHomeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeOptions.swift; sourceTree = "<group>"; };
@@ -603,6 +607,8 @@
 				DA1D57991EF238D300ECA895 /* ControllerParentTransitions.swift */,
 				DA1D57971EF235D600ECA895 /* ControllerParentGame.swift */,
 				DA2D002A1EECC6CE00365F23 /* ControllerGame.swift */,
+				DA2974E31EFF38DD00300455 /* ControllerGameMenu.swift */,
+				DA2974E51EFF399700300455 /* ControllerGameScene.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1353,10 +1359,12 @@
 				DA69BD6C1EFC914F002CEB85 /* VOptionWhistlesVsZombiesMenuAnimation.swift in Sources */,
 				DA56679D1EF32342000055D8 /* COptionPollutedGarden.swift in Sources */,
 				DA2D00771EEDE38600365F23 /* MOptionReformaCrossingLaneA.swift in Sources */,
+				DA2974E61EFF399700300455 /* ControllerGameScene.swift in Sources */,
 				DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */,
 				DA7E46891EFAEFC200466867 /* MPerkReformaCrossing.swift in Sources */,
 				DA2D007B1EEDE38600365F23 /* MOptionReformaCrossingLaneE.swift in Sources */,
 				DA3A38731EFC03140028C35E /* MHomeOptionsWhistlesVsZombies.swift in Sources */,
+				DA2974E41EFF38DD00300455 /* ControllerGameMenu.swift in Sources */,
 				DAAF2F9A1EF6ECB800589BB0 /* VSettingsCellShare.swift in Sources */,
 				DAAF2FC51EF6F6F700589BB0 /* VStoreCellNotAvailable.swift in Sources */,
 				DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */,

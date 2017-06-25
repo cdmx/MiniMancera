@@ -1,6 +1,6 @@
 import SpriteKit
 
-class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
+class COptionPollutedGarden:ControllerGame
 {
     override func postScore()
     {
