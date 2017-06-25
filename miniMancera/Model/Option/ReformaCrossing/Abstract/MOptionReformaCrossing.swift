@@ -19,7 +19,7 @@ class MOptionReformaCrossing:MGame
         addedSpeed = 0
     }
     
-    override var startSceneType:ViewGameScene<MGame>.Type?
+    override var startSceneType:ViewGameScene.Type?
     {
         get
         {

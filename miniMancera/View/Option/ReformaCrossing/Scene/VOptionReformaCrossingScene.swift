@@ -25,7 +25,7 @@ class VOptionReformaCrossingScene:ViewGameScene
     private let kTitleVerticalAdd:CGFloat = -12
     private let kSpawnProbability:UInt32 = 6
     
-    override init(controller:COptionReformaCrossing)
+    required init(controller:ControllerGame)
     {
         controller.model.startLevel()
         soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
@@ -74,13 +74,13 @@ class VOptionReformaCrossingScene:ViewGameScene
         startFoes()
         showTitle()
     }
-    
+    /*
     override func updateNodes()
     {
         player.update(elapsedTime:elapsedTime)
         stop.update(elapsedTime:elapsedTime)
         hud.update(elapsedTime:elapsedTime)
-    }
+    }*/
     
     //MARK: private
     

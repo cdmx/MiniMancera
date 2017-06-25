@@ -76,7 +76,7 @@ class VOptionPollutedGardenBubble:SKSpriteNode
     }
     
     private func animateAndLeave()
-    {
+    {/*
         let actionExplosion:SKAction = controller.model.bubbleGenerator.explodeAnimation
         let actionLeave:SKAction = SKAction.run(leaveGarden)
         let actions:[SKAction] = [
@@ -84,7 +84,7 @@ class VOptionPollutedGardenBubble:SKSpriteNode
             actionLeave]
         let actionsSequence:SKAction = SKAction.sequence(actions)
         
-        run(actionsSequence)
+        run(actionsSequence)*/
     }
     
     //MARK: public

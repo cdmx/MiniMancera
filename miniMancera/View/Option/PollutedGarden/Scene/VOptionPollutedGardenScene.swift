@@ -28,7 +28,7 @@ class VOptionPollutedGardenScene:ViewGameScene
     private let kTitleVerticalAdd:CGFloat = 70
     private let kSpawnProbability:UInt32 = 15
     
-    override init(controller:COptionPollutedGarden)
+    required init(controller:ControllerGame)
     {
         petunias = []
         contactQueue = []
@@ -92,14 +92,14 @@ class VOptionPollutedGardenScene:ViewGameScene
         contactQueue = []
         checkBubbleSpawning(currentTime:currentTime)
     }
-    
+    /*
     override func updateNodes()
     {
         hud.update(elapsedTime:elapsedTime)
         updatePetunias()
         updatePlayer()
     }
-    
+    */
     //MARK: private
     
     private func startPhysics()

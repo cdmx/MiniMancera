@@ -1,23 +1,18 @@
 import SpriteKit
 
-class MOptionWhistlesVsZombies:MGameProtocol
+class MOptionWhistlesVsZombies:MGame
 {
     let menu:MOptionWhistlesVsZombiesMenu
     let base:MOptionWhistlesVsZombiesBase
-    private(set) var soundBackground:String?
-    private(set) var size:CGSize
-    private(set) var score:Int
-    private(set) var gameActive:Bool
     
     required init()
     {
+        super.init()
+        
         menu = MOptionWhistlesVsZombiesMenu()
         base = MOptionWhistlesVsZombiesBase()
-        size = CGSize.zero
-        score = 0
-        gameActive = false
     }
-    
+    /*
     //MARK: game protocol
     
     func activateGame()
@@ -44,5 +39,5 @@ class MOptionWhistlesVsZombies:MGameProtocol
             controller:controller)
         
         return scene
-    }
+    }*/
 }

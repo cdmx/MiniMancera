@@ -13,7 +13,7 @@ class VOptionWhistlesVsZombiesBase:SKSpriteNode
     {
         self.controller = controller
         self.model = model
-        modelBase = controller.model.base
+//        modelBase = controller.model.base
         
         super.init(
             texture:modelBase.texture,

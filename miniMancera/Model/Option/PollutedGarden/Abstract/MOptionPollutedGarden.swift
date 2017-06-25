@@ -1,54 +1,63 @@
 import SpriteKit
 
-class MOptionPollutedGarden:MGameProtocol
+class MOptionPollutedGarden:MGame
 {
     let petuniaLife:MOptionPollutedGardenPetuniaLife
     let bubbleGenerator:MOptionPollutedGardenBubbleGenerator
-    private(set) var soundBackground:String?
-    private(set) var size:CGSize
-    private(set) var score:Int
-    private(set) var gameActive:Bool
-    private(set) var maxScore:Int
+    private(set) var currentScore:Int
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     
     required init()
     {
-        soundBackground = kSoundBackground
-        size = CGSize.zero
-        score = 0
-        maxScore = 0
-        gameActive = false
+        super.init()
+        currentScore = 0
         petuniaLife = MOptionPollutedGardenPetuniaLife()
         bubbleGenerator = MOptionPollutedGardenBubbleGenerator()
+    }
+    
+    override var startSceneType:ViewGameScene.Type?
+    {
+        get
+        {
+            return VOptionPollutedGardenScene.self
+        }
+    }
+    
+    override var soundBackground:String?
+    {
+        get
+        {
+            return kSoundBackground
+        }
     }
     
     //MARK: public
     
     func collectedFlower()
     {
-        score += 1
+        currentScore += 1
         
-        if score > maxScore
+        if currentScore > currentScore
         {
-            maxScore = score
+            score = currentScore
         }
     }
     
     func pollutedFlower()
     {
-        score -= 1
+        currentScore -= 1
     }
     
     func allFlowersPolluted()
     {
-        gameActive = false
+        deActivateGame()
     }
     
     func revertChanges()
     {
-        maxScore = 0
+        currentScore = 0
         score = 0
-    }
+    }/*
     
     //MARK: option protocol
     
@@ -74,5 +83,5 @@ class MOptionPollutedGarden:MGameProtocol
             controller:controller)
         
         return scene
-    }
+    }*/
 }

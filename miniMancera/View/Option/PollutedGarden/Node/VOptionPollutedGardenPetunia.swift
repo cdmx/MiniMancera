@@ -83,7 +83,7 @@ class VOptionPollutedGardenPetunia:SKSpriteNode
             sickPetunia()
         }
         else
-        {
+        {/*
             if level < controller.model.petuniaLife.textures.count
             {
                 updateTexture()
@@ -91,7 +91,7 @@ class VOptionPollutedGardenPetunia:SKSpriteNode
             else
             {
                 collectFlower()
-            }
+            }*/
         }
         
         nextGrowTime()
@@ -103,15 +103,15 @@ class VOptionPollutedGardenPetunia:SKSpriteNode
     }
     
     private func updateTexture()
-    {
+    {/*
         let newTexture = controller.model.petuniaLife.textures[level]
-        animateWithTexture(newTexture:newTexture)
+        animateWithTexture(newTexture:newTexture)*/
     }
     
     private func sickPetunia()
-    {
+    {/*
         let newTexture = controller.model.petuniaLife.texturePetuniaSick
-        animateWithTexture(newTexture:newTexture)
+        animateWithTexture(newTexture:newTexture)*/
     }
     
     private func animateWithTexture(newTexture:SKTexture)

@@ -18,12 +18,13 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
     
     private func contactPlayerFoe(player:VOptionReformaCrossingPlayer, foe:VOptionReformaCrossingFoe)
     {
+        /*
         playSound(actionSound:soundHonk)
         
         if controller.model.gameActive
         {
             controller.hitAndRun()
-        }
+        }*/
     }
     
     //MARK: public

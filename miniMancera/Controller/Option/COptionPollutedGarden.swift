@@ -1,13 +1,7 @@
 import SpriteKit
 
 class COptionPollutedGarden:ControllerGame
-{
-    override func postScore()
-    {
-        let maxScore:Int = model.maxScore
-        postScoreWithScore(score:maxScore)
-    }
-    
+{    
     //MARK: public
     
     func collectFlower(petunia:VOptionPollutedGardenPetunia)
@@ -22,7 +16,7 @@ class COptionPollutedGarden:ControllerGame
             return
         }
         
-        model.collectedFlower()
+//        model.collectedFlower()
         scene.collectFlower(petunia:petunia)
     }
     
@@ -39,7 +33,7 @@ class COptionPollutedGarden:ControllerGame
         }
         
         scene.flowerPolluted(petunia:petunia)
-        
+        /*
         if model.score > 0
         {
             model.pollutedFlower()
@@ -50,7 +44,7 @@ class COptionPollutedGarden:ControllerGame
             scene.allFlowersPolluted()
             
             postScore()
-        }
+        }*/
     }
     
     func game1up()
@@ -64,8 +58,8 @@ class COptionPollutedGarden:ControllerGame
         {
             return
         }
-        
+        /*
         model.revertChanges()
-        scene.game1up()
+        scene.game1up()*/
     }
 }
