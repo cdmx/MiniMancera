@@ -1,10 +1,10 @@
 import SpriteKit
 
-class VOptionWhistlesVsZombiesScene:ViewGameScene
+class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
 {
     private(set) weak var menu:VOptionWhistlesVsZombiesMenu!
     
-    required init(controller:ControllerGame)
+    required init(controller:ControllerGame<MOptionWhistlesVsZombies>)
     {
         super.init(controller:controller)
         /*
