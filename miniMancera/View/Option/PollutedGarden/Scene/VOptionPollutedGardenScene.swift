@@ -1,6 +1,6 @@
 import SpriteKit
 
-class VOptionPollutedGardenScene:ViewGameScene
+class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
 {
     let soundPop:SKAction
     private weak var player:VOptionPollutedGardenPlayer!
@@ -28,7 +28,7 @@ class VOptionPollutedGardenScene:ViewGameScene
     private let kTitleVerticalAdd:CGFloat = 70
     private let kSpawnProbability:UInt32 = 15
     
-    required init(controller:ControllerGame)
+    required init(controller:ControllerGame<MOptionPollutedGarden>)
     {
         petunias = []
         contactQueue = []
