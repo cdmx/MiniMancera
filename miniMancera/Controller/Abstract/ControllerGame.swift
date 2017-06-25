@@ -112,4 +112,25 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
     {
         lastUpdateTime = nil
     }
+    
+    //MARK: scene delegate
+    
+    func update(_ currentTime:TimeInterval, for scene:SKScene)
+    {/*
+         
+         if controller.model.gameActive
+         {
+         if let lastUpdateTime:TimeInterval = self.lastUpdateTime
+         {
+         let deltaTime:TimeInterval = currentTime - lastUpdateTime
+         elapsedTime += deltaTime
+         
+         updateNodes()
+         }
+         
+         lastUpdateTime = currentTime
+         }
+         
+         */
+    }
 }
