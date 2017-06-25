@@ -14,7 +14,7 @@ class VOptionPollutedGardenEnd:SKSpriteNode
         self.controller = controller
         
         super.init(texture:texture, color:UIColor.clear, size:size)
-        position = startPosition()
+//        position = startPosition()
         zPosition = kZPosition
         isUserInteractionEnabled = true
     }
@@ -44,12 +44,12 @@ class VOptionPollutedGardenEnd:SKSpriteNode
     }
     
     //MARK: private
-    
+    /*
     private func startPosition() -> CGPoint
     {
         let sceneWidth_2:CGFloat = controller.model.size.width / 2.0
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:kYPosition)
         
         return point
-    }
+    }*/
 }

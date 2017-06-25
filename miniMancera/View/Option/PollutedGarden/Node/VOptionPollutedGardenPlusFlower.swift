@@ -11,7 +11,7 @@ class VOptionPollutedGardenPlusFlower:SKSpriteNode
     
     init(petunia:VOptionPollutedGardenPetunia, controller:COptionPollutedGarden)
     {
-        let texture:SKTexture = controller.model.petuniaLife.texturePlus
+        let texture:SKTexture = SKTexture()//controller.model.petuniaLife.texturePlus
         let size:CGSize = texture.size()
         self.controller = controller
         

@@ -65,7 +65,7 @@ class VOptionReformaCrossingPlayer:SKSpriteNode
         lastElapsedTime = 0
         
         super.init(texture:texture, color:UIColor.clear, size:size)
-        position = startPosition()
+//        position = startPosition()
         zPosition = kZPosition
         isHidden = true
         startPhysics()
@@ -77,7 +77,7 @@ class VOptionReformaCrossingPlayer:SKSpriteNode
     }
     
     //MARK: private
-    
+    /*
     private func startPosition() -> CGPoint
     {
         let sceneWidth_2:CGFloat = controller.model.size.width / 2.0
@@ -85,8 +85,8 @@ class VOptionReformaCrossingPlayer:SKSpriteNode
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:height_2)
         
         return point
-    }
-    
+    }*/
+    /*
     private func finalPosition() -> CGPoint
     {
         let sceneSize:CGSize = controller.model.size
@@ -97,7 +97,7 @@ class VOptionReformaCrossingPlayer:SKSpriteNode
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         
         return point
-    }
+    }*/
     
     private func startPhysics()
     {
@@ -139,7 +139,7 @@ class VOptionReformaCrossingPlayer:SKSpriteNode
         
         return actionRepeat
     }
-    
+    /*
     private func createActionMoving() -> SKAction
     {
         let finalPos:CGPoint = finalPosition()
@@ -157,7 +157,7 @@ class VOptionReformaCrossingPlayer:SKSpriteNode
         let actionsSequence:SKAction = SKAction.sequence(actions)
         
         return actionsSequence
-    }
+    }*/
     
     private func animateStop()
     {
@@ -202,7 +202,7 @@ class VOptionReformaCrossingPlayer:SKSpriteNode
     }
     
     private func collectLanes()
-    {
+    {/*
         guard
             
             let lane:MOptionReformaCrossingLane = controller.model.laneGroup.playerCollectAt(
@@ -213,7 +213,7 @@ class VOptionReformaCrossingPlayer:SKSpriteNode
             return
         }
         
-        controller.collectedLane(lane:lane)
+        controller.collectedLane(lane:lane)*/
     }
     
     //MARK: public
@@ -236,7 +236,7 @@ class VOptionReformaCrossingPlayer:SKSpriteNode
     }
     
     func startWalking()
-    {
+    {/*
         isHidden = false
         
         let actionAnimating:SKAction = createActionAnimating()
@@ -246,7 +246,7 @@ class VOptionReformaCrossingPlayer:SKSpriteNode
             actionMoving]
         let actionsGroup:SKAction = SKAction.group(actions)
         
-        run(actionsGroup, withKey:kActionWalking)
+        run(actionsGroup, withKey:kActionWalking)*/
     }
     
     func stopWalking()

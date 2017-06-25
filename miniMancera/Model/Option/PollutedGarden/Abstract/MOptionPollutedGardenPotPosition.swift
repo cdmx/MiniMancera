@@ -7,6 +7,8 @@ class MOptionPollutedGardenPotPosition
     
     class func positionsFor(model:MOptionPollutedGarden) -> [CGFloat]
     {
+        return []
+        /*
         let width:CGFloat = model.size.width
         var all:[CGFloat] = allPositions(width:width)
         var count:Int = all.count
@@ -19,7 +21,7 @@ class MOptionPollutedGardenPotPosition
             count = all.count
         }
         
-        return all
+        return all*/
     }
     
     private class func allPositions(width:CGFloat) -> [CGFloat]

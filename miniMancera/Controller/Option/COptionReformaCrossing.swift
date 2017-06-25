@@ -55,7 +55,7 @@ class COptionReformaCrossing:ControllerGame
             return
         }
         
-        model.stopAll()
+//        model.stopAll()
         scene.timeOut()
         
         postScore()
@@ -73,7 +73,7 @@ class COptionReformaCrossing:ControllerGame
             return
         }
         
-        model.hitAndRun()
+//        model.hitAndRun()
         scene.hitAndRun()
         
         postScore()
@@ -91,13 +91,13 @@ class COptionReformaCrossing:ControllerGame
             return
         }
         
-        model.revertChanges()
+//        model.revertChanges()
         scene.game1up()
     }
     
     func playerSuccess()
     {
-        model.playerSuccess()
+//        model.playerSuccess()
         
         guard
             
@@ -114,7 +114,7 @@ class COptionReformaCrossing:ControllerGame
     
     func collectedLane(lane:MOptionReformaCrossingLane)
     {
-        model.collectedLane()
+//        model.collectedLane()
         
         guard
             

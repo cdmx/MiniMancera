@@ -14,7 +14,7 @@ class VOptionPollutedGardenFlowerPot:SKSpriteNode
     
     init(controller:COptionPollutedGarden, positionX:CGFloat)
     {
-        let texture:SKTexture = controller.model.petuniaLife.texturePot
+        let texture:SKTexture = SKTexture() //controller.model.petuniaLife.texturePot
         let size:CGSize = texture.size()
         self.controller = controller
         endingPoint = CGPoint(x:positionX, y:kFinalY)

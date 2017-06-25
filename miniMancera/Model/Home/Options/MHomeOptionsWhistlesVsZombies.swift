@@ -9,7 +9,7 @@ class MHomeOptionsWhistlesVsZombies:MHomeOptions
             return String.localizedWhistlesVsZombies(key:"MHomeOptionsWhistlesVsZombies_title")
         }
     }
-    
+    /*
     override func gameController() -> UIViewController?
     {
         guard
@@ -24,5 +24,5 @@ class MHomeOptionsWhistlesVsZombies:MHomeOptions
         let controller:COptionWhistlesVsZombies = COptionWhistlesVsZombies(dataOption:dataOption)
         
         return controller
-    }
+    }*/
 }

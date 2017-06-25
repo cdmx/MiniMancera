@@ -23,7 +23,7 @@ class VOptionReformaCrossingHud:SKSpriteNode
         self.controller = controller
         
         super.init(texture:texture, color:UIColor.clear, size:size)
-        position = startPosition()
+//        position = startPosition()
         zPosition = kZPosition
         alpha = 0
         
@@ -55,7 +55,7 @@ class VOptionReformaCrossingHud:SKSpriteNode
     }
     
     //MARK: private
-    
+    /*
     private func startPosition() -> CGPoint
     {
         let sceneSize:CGSize = controller.model.size
@@ -67,12 +67,12 @@ class VOptionReformaCrossingHud:SKSpriteNode
         let point:CGPoint = CGPoint(x:posX, y:posY)
         
         return point
-    }
+    }*/
     
     //MARK: public
     
     func update(elapsedTime:TimeInterval)
-    {
+    {/*
         let deltaTime:TimeInterval = controller.model.kMaxGameTime - elapsedTime
         
         if deltaTime < 0
@@ -87,6 +87,6 @@ class VOptionReformaCrossingHud:SKSpriteNode
         }
         
         let scoreString:String = "\(controller.model.score)"
-        labelScore.text = scoreString
+        labelScore.text = scoreString*/
     }
 }

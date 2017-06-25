@@ -11,7 +11,7 @@ class VOptionWhistlesVsZombiesMenuCancel:SKSpriteNode
         
         let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleMenuCancel"))
         let textureSize:CGSize = texture.size()
-        let sceneHeight:CGFloat = controller.model.size.height
+        let sceneHeight:CGFloat = 0//controller.model.size.height
         let sceneHeight_2:CGFloat = sceneHeight / 2.0
         let positionY:CGFloat = kAddPositionY - sceneHeight_2
         let position:CGPoint = CGPoint(x:0, y:positionY)

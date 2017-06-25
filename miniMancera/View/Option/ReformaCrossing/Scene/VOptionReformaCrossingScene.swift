@@ -27,14 +27,14 @@ class VOptionReformaCrossingScene:ViewGameScene
     
     required init(controller:ControllerGame)
     {
-        controller.model.startLevel()
+//        controller.model.startLevel()
         soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
         soundFail = SKAction.playSoundFileNamed(kSoundFail, waitForCompletion:false)
         soundVictory = SKAction.playSoundFileNamed(kSoundVictory, waitForCompletion:false)
         soundHonk = SKAction.playSoundFileNamed(kSoundHonk, waitForCompletion:false)
         
         super.init(controller:controller)
-        physicsWorld.gravity = CGVector.zero
+       /* physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self
         let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
             controller:controller)
@@ -59,7 +59,7 @@ class VOptionReformaCrossingScene:ViewGameScene
         addChild(player)
         addChild(hud)
         addChild(menu)
-        addChild(stop)
+        addChild(stop)*/
     }
     
     required init?(coder:NSCoder)
@@ -105,7 +105,7 @@ class VOptionReformaCrossingScene:ViewGameScene
         {
             return
         }
-        
+        /*
         let lane:MOptionReformaCrossingLane = controller.model.laneGroup.randomLane()
         
         let hasFoeWaiting:Bool = lane.hasFoeWaiting(
@@ -127,7 +127,7 @@ class VOptionReformaCrossingScene:ViewGameScene
             return
         }
         
-        addChild(foe)
+        addChild(foe)*/
     }
     
     private func shouldSpawn() -> Bool
@@ -162,17 +162,17 @@ class VOptionReformaCrossingScene:ViewGameScene
     private func afterDelayGameOver(reason:MOptionReformaCrossingGameOverProtocol)
     {
         removeAllActions()
-        
+        /*
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kSceneTransitionDuration)
         let gameOverScene:VOptionReformaCrossingSceneOver = VOptionReformaCrossingSceneOver(
             controller:controller, reason:reason)
         
-        view?.presentScene(gameOverScene, transition:transition)
+        view?.presentScene(gameOverScene, transition:transition)*/
     }
     
     private func showTitle()
-    {
+    {/*
         let width_2:CGFloat = controller.model.size.width / 2.0
         let height_2:CGFloat = controller.model.size.height / 2.0
         let positionY:CGFloat = height_2 + kTitleVerticalAdd
@@ -191,7 +191,7 @@ class VOptionReformaCrossingScene:ViewGameScene
         
         addChild(labelTitle)
         
-        actionsActivateGame()
+        actionsActivateGame()*/
     }
     
     private func actionsActivateGame()
@@ -207,12 +207,12 @@ class VOptionReformaCrossingScene:ViewGameScene
     }
     
     private func activateGame()
-    {
+    {/*
         fadeInControls()
         
         labelTitle?.removeFromParent()
         controller.model.activateGame()
-        player.startWalking()
+        player.startWalking()*/
     }
     
     private func fadeInControls()
@@ -225,7 +225,7 @@ class VOptionReformaCrossingScene:ViewGameScene
     }
     
     private func transitionNextLevel()
-    {
+    {/*
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kSceneTransitionDuration)
         let nextLevelScene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
@@ -241,20 +241,20 @@ class VOptionReformaCrossingScene:ViewGameScene
         }
         
         removeAllActions()
-        view.presentScene(nextLevelScene, transition:transition)
+        view.presentScene(nextLevelScene, transition:transition)*/
     }
     
     //MARK: public
     
     func timeOut()
-    {
+    {/*
         playSound(actionSound:soundFail)
         
         removeAction(forKey:kActionSpawn)
         player.timeOut()
         
         let reason:MOptionReformaCrossingGameOverTimeOut = MOptionReformaCrossingGameOverTimeOut()
-        actionsGameOver(reason:reason)
+        actionsGameOver(reason:reason)*/
     }
     
     func hitAndRun()
@@ -266,7 +266,7 @@ class VOptionReformaCrossingScene:ViewGameScene
     }
     
     func gameSuccess()
-    {
+    {/*
         playSound(actionSound:soundVictory)
         
         let actionDelay:SKAction = SKAction.wait(forDuration:kWaitTransition)
@@ -276,18 +276,18 @@ class VOptionReformaCrossingScene:ViewGameScene
             actionTransition]
         let actionsSequence:SKAction = SKAction.sequence(actions)
         
-        run(actionsSequence)
+        run(actionsSequence)*/
     }
     
     func createCoinOn(lane:MOptionReformaCrossingLane)
-    {
+    {/*
         playSound(actionSound:soundCoin)
         
         let coin:MOptionReformaCrossingCoin = MOptionReformaCrossingCoin(
             lane:lane,
             controller:controller)
         
-        addChild(coin)
+        addChild(coin)*/
     }
     
     //MARK: contact delegate

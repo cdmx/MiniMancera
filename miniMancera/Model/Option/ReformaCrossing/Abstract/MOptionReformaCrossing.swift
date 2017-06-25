@@ -12,11 +12,11 @@ class MOptionReformaCrossing:MGame
     
     required init()
     {
-        super.init()
-        
         laneGroup = MOptionReformaCrossingLaneGroup()
         level = kStartingLevel
         addedSpeed = 0
+        
+        super.init()
     }
     
     override var startSceneType:ViewGameScene.Type?
@@ -56,7 +56,7 @@ class MOptionReformaCrossing:MGame
     
     func startLevel()
     {
-        laneGroup.configureForScene(size:size)
+//        laneGroup.configureForScene(size:size)
         addedSpeed = CGFloat(level) * kSpeedMultiplier
     }
     

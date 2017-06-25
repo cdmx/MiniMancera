@@ -19,7 +19,8 @@ class VOptionPollutedGardenPetunia:SKSpriteNode
     
     init(controller:COptionPollutedGarden, flowerPot:VOptionPollutedGardenFlowerPot)
     {
-        let size:CGSize = controller.model.petuniaLife.textureSize
+    //    let size:CGSize = controller.model.petuniaLife.textureSize
+        let size:CGSize = CGSize.zero
         self.controller = controller
         self.flowerPot = flowerPot
         level = kInitialLevel
@@ -38,7 +39,7 @@ class VOptionPollutedGardenPetunia:SKSpriteNode
     {
         return nil
     }
-    
+ 
     //MARK: private
     
     private func startPosition() -> CGPoint

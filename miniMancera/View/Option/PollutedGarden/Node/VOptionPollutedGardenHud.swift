@@ -23,7 +23,7 @@ class VOptionPollutedGardenHud:SKSpriteNode
         self.controller = controller
         
         super.init(texture:texture, color:UIColor.clear, size:size)
-        position = startPosition()
+//        position = startPosition()
         zPosition = kZPosition
         alpha = 0
         
@@ -55,7 +55,7 @@ class VOptionPollutedGardenHud:SKSpriteNode
     }
     
     //MARK: private
-    
+    /*
     private func startPosition() -> CGPoint
     {
         let sceneSize:CGSize = controller.model.size
@@ -67,16 +67,16 @@ class VOptionPollutedGardenHud:SKSpriteNode
         let point:CGPoint = CGPoint(x:posX, y:posY)
         
         return point
-    }
+    }*/
     
     //MARK: public
     
     func update(elapsedTime:TimeInterval)
-    {
+    {/*
         let scoreString:String = "\(controller.model.score)"
         labelScore.text = scoreString
         
         let maxString:String = "\(controller.model.maxScore)"
-        labelMax.text = maxString
+        labelMax.text = maxString*/
     }
 }

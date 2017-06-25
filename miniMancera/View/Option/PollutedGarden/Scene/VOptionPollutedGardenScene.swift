@@ -39,7 +39,7 @@ class VOptionPollutedGardenScene:ViewGameScene
         
         super.init(controller:controller)
         startPhysics()
-        
+        /*
         let background:VOptionPollutedGardenBackground = VOptionPollutedGardenBackground(
             controller:controller)
         
@@ -68,7 +68,7 @@ class VOptionPollutedGardenScene:ViewGameScene
         addChild(player)
         addChild(controls)
         addChild(hud)
-        addChild(menu)
+        addChild(menu)*/
     }
     
     required init?(coder:NSCoder)
@@ -122,18 +122,18 @@ class VOptionPollutedGardenScene:ViewGameScene
     }
     
     private func spawnPots()
-    {
+    {/*
         let positions:[CGFloat] = MOptionPollutedGardenPotPosition.positionsFor(
             model:controller.model)
         
         for position:CGFloat in positions
         {
             spawnPot(position:position)
-        }
+        }*/
     }
     
     private func spawnPot(position:CGFloat)
-    {
+    {/*
         let flowerPot:VOptionPollutedGardenFlowerPot = VOptionPollutedGardenFlowerPot(
             controller:controller,
             positionX:position)
@@ -142,25 +142,25 @@ class VOptionPollutedGardenScene:ViewGameScene
         
         flowerPot.animateAppear()
         
-        spawnPlantFor(flowerPot:flowerPot)
+        spawnPlantFor(flowerPot:flowerPot)*/
     }
     
     private func spawnPlantFor(flowerPot:VOptionPollutedGardenFlowerPot)
-    {
+    {/*
         let petunia:VOptionPollutedGardenPetunia = VOptionPollutedGardenPetunia(
             controller:controller,
             flowerPot:flowerPot)
         petunias.append(petunia)
         
-        addChild(petunia)
+        addChild(petunia)*/
     }
     
     private func updatePetunias()
-    {
+    {/*
         for petunia:VOptionPollutedGardenPetunia in petunias
         {
             petunia.update(elapsedTime:elapsedTime)
-        }
+        }*/
     }
     
     private func updatePlayer()
@@ -178,7 +178,7 @@ class VOptionPollutedGardenScene:ViewGameScene
     }
     
     private func showTitle()
-    {
+    {/*
         let width_2:CGFloat = controller.model.size.width / 2.0
         let height_2:CGFloat = controller.model.size.height / 2.0
         let positionY:CGFloat = height_2 + kTitleVerticalAdd
@@ -192,7 +192,7 @@ class VOptionPollutedGardenScene:ViewGameScene
         
         addChild(labelTitle)
         
-        actionsActivateGame()
+        actionsActivateGame()*/
     }
     
     private func actionsActivateGame()
@@ -211,7 +211,7 @@ class VOptionPollutedGardenScene:ViewGameScene
     {
         fadeInControls()
         labelTitle?.removeFromParent()
-        controller.model.activateGame()
+//        controller.model.activateGame()
     }
     
     private func fadeInControls()
@@ -234,13 +234,13 @@ class VOptionPollutedGardenScene:ViewGameScene
     private func spawnBubble()
     {
         let should:Bool = shouldSpawnBubble()
-        
+        /*
         if should
         {
             let bubble:VOptionPollutedGardenBubble = controller.model.bubbleGenerator.randomBubble()
             
             addChild(bubble)
-        }
+        }*/
     }
     
     private func shouldSpawnBubble() -> Bool
@@ -256,7 +256,7 @@ class VOptionPollutedGardenScene:ViewGameScene
     }
     
     private func afterDelayGameOver()
-    {
+    {/*
         removeAllActions()
         
         let transition:SKTransition = SKTransition.crossFade(
@@ -264,31 +264,31 @@ class VOptionPollutedGardenScene:ViewGameScene
         let gameOverScene:VOptionPollutedGardenSceneEnd = VOptionPollutedGardenSceneEnd(
             controller:controller)
         
-        view?.presentScene(gameOverScene, transition:transition)
+        view?.presentScene(gameOverScene, transition:transition)*/
     }
     
     //MARK: public
     
     func collectFlower(petunia:VOptionPollutedGardenPetunia)
-    {
+    {/*
         playSound(actionSound:soundCoin)
         
         let plusFlower:VOptionPollutedGardenPlusFlower = VOptionPollutedGardenPlusFlower(
             petunia:petunia,
             controller:controller)
         
-        addChild(plusFlower)
+        addChild(plusFlower)*/
     }
     
     func flowerPolluted(petunia:VOptionPollutedGardenPetunia)
-    {
+    {/*
         playSound(actionSound:soundFail)
         
         let pollution:VOptionPollutedGardenPollution = VOptionPollutedGardenPollution(
             petunia:petunia,
             controller:controller)
         
-        addChild(pollution)
+        addChild(pollution)*/
     }
     
     func allFlowersPolluted()

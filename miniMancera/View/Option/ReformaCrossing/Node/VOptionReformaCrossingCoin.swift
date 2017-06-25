@@ -29,11 +29,11 @@ class MOptionReformaCrossingCoin:SKSpriteNode
     //MARK: private
     
     private func startPosition(lane:MOptionReformaCrossingLane)
-    {
+    {/*
         let sceneWidth_2:CGFloat = controller.model.size.width / 2.0
         let positionX:CGFloat = sceneWidth_2 + kAddPositionX
         let positionY:CGFloat = lane.verticalPosition + kAddPositionY
-        position = CGPoint(x:positionX, y:positionY)
+        position = CGPoint(x:positionX, y:positionY)*/
     }
     
     private func startActions()

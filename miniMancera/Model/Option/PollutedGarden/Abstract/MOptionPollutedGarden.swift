@@ -9,10 +9,10 @@ class MOptionPollutedGarden:MGame
     
     required init()
     {
-        super.init()
-        currentScore = 0
         petuniaLife = MOptionPollutedGardenPetuniaLife()
         bubbleGenerator = MOptionPollutedGardenBubbleGenerator()
+        currentScore = 0
+        super.init()
     }
     
     override var startSceneType:ViewGameScene.Type?

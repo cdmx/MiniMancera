@@ -11,7 +11,7 @@ class VOptionWhistlesVsZombiesBackground:SKSpriteNode
         let textureSize:CGSize = texture.size()
         
         super.init(texture:texture, color:UIColor.clear, size:textureSize)
-        
+        /*
         let textureHeight:CGFloat = textureSize.height
         let textureHeight_2:CGFloat = textureHeight / 2.0
         let sceneSize:CGSize = controller.model.size
@@ -21,7 +21,7 @@ class VOptionWhistlesVsZombiesBackground:SKSpriteNode
         let positionY:CGFloat = sceneHeight - textureHeight_2
         let centerPosition:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
         position = centerPosition
-        zPosition = MOptionWhistlesVsZombiesZPosition.Background.rawValue
+        zPosition = MOptionWhistlesVsZombiesZPosition.Background.rawValue*/
     }
     
     required init?(coder:NSCoder)

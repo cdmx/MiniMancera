@@ -41,7 +41,7 @@ class MHomeOptionsPollutedGarden:MHomeOptions
             return #imageLiteral(resourceName: "assetGenericPollutedGardenScore")
         }
     }
-    
+    /*
     override func gameController() -> UIViewController?
     {
         guard
@@ -56,5 +56,5 @@ class MHomeOptionsPollutedGarden:MHomeOptions
         let controller:COptionPollutedGarden = COptionPollutedGarden(dataOption:dataOption)
         
         return controller
-    }
+    }*/
 }

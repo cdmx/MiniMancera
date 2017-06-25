@@ -12,7 +12,7 @@ class VOptionPollutedGardenFloor:SKSpriteNode
         self.controller = controller
         
         super.init(texture:texture, color:UIColor.clear, size:textureSize)
-        
+        /*
         let sceneSize:CGSize = controller.model.size
         let sceneWidth:CGFloat = sceneSize.width
         let sceneWidth_2:CGFloat = sceneWidth / 2.0
@@ -21,7 +21,7 @@ class VOptionPollutedGardenFloor:SKSpriteNode
         position = centerPosition
         zPosition = kZPosition
         
-        startPhysics(size:textureSize)
+        startPhysics(size:textureSize)*/
     }
     
     required init?(coder:NSCoder)

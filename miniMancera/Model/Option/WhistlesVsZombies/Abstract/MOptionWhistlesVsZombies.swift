@@ -7,10 +7,10 @@ class MOptionWhistlesVsZombies:MGame
     
     required init()
     {
-        super.init()
-        
         menu = MOptionWhistlesVsZombiesMenu()
         base = MOptionWhistlesVsZombiesBase()
+        
+        super.init()
     }
     /*
     //MARK: game protocol

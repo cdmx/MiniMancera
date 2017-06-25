@@ -28,7 +28,8 @@ class VOptionPollutedGardenSceneEnd:SKScene
             shouldPlaySounds = true
         }
         
-        super.init(size:controller.model.size)
+//        super.init(size:controller.model.size)
+        super.init(size:CGSize.zero)
         backgroundColor = SKColor.black
         
         let width_2:CGFloat = size.width / 2.0

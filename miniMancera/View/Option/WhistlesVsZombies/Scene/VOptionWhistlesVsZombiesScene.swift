@@ -7,7 +7,7 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene
     required init(controller:ControllerGame)
     {
         super.init(controller:controller)
-        
+        /*
         let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
             controller:controller)
         
@@ -17,8 +17,8 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene
         
         addChild(background)
         addChild(menu)
-        
-        addBase()
+ 
+        addBase()*/
     }
     
     required init?(coder:NSCoder)
@@ -27,7 +27,7 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene
     }
     
     //MARK: private
-    
+    /*
     private func addBase()
     {
         let items:[MOptionWhistlesVsZombiesBaseItem] = controller.model.base.items
@@ -40,5 +40,5 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene
             
             addChild(viewItem)
         }
-    }
+    }*/
 }

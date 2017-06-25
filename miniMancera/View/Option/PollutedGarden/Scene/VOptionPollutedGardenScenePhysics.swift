@@ -27,7 +27,7 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
         bubble:VOptionPollutedGardenBubble,
         player:VOptionPollutedGardenPlayer)
     {
-        playSound(actionSound:soundPop)
+//        playSound(actionSound:soundPop)
         bubble.explode()
     }
     
@@ -43,7 +43,7 @@ extension VOptionPollutedGardenScene:SKPhysicsContactDelegate
         bubble:VOptionPollutedGardenBubble,
         floor:VOptionPollutedGardenFloor)
     {
-        playSound(actionSound:soundPop)
+//        playSound(actionSound:soundPop)
         bubble.explode()
     }
     

@@ -79,7 +79,7 @@ class VOptionReformaCrossingFoe:SKSpriteNode
     
     private func randomSpeed() -> CGFloat
     {
-        let levelSpeed:CGFloat = controller.model.addedSpeed
+        let levelSpeed:CGFloat = 1 // controller.model.addedSpeed
         let random:CGFloat = CGFloat(arc4random_uniform(randomMaxSpeed))
         let totalSpeed:CGFloat = minSpeed + random + levelSpeed
         

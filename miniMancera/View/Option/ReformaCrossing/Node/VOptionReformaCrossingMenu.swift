@@ -13,7 +13,7 @@ class VOptionReformaCrossingMenu:SKSpriteNode
         self.controller = controller
         
         super.init(texture:texture, color:UIColor.clear, size:size)
-        position = startPosition()
+//        position = startPosition()
         zPosition = kZPosition
         isUserInteractionEnabled = true
         alpha = 0
@@ -33,7 +33,7 @@ class VOptionReformaCrossingMenu:SKSpriteNode
     }
     
     //MARK: private
-    
+    /*
     private func startPosition() -> CGPoint
     {
         let sceneHeight:CGFloat = controller.model.size.height
@@ -42,5 +42,5 @@ class VOptionReformaCrossingMenu:SKSpriteNode
         let point:CGPoint = CGPoint(x:sizeWidth_2, y:posY)
         
         return point
-    }
+    }*/
 }

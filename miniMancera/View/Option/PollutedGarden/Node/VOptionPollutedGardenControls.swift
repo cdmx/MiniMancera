@@ -9,7 +9,7 @@ class VOptionPollutedGardenControls:SKSpriteNode
     
     init(controller:COptionPollutedGarden)
     {
-        let sceneWidth:CGFloat = controller.model.size.width
+        let sceneWidth:CGFloat = 0//controller.model.size.width
         let sceneWidth_2:CGFloat = sceneWidth / 2.0
         let size:CGSize = CGSize(width:sceneWidth, height:kHeight)
         let height_2:CGFloat = kHeight / 2.0

@@ -40,7 +40,7 @@ class VOptionReformaCrossingStop:SKSpriteNode
         lastElapsedTime = 0
         
         super.init(texture:standTexture, color:UIColor.clear, size:size)
-        position = startPosition()
+//        position = startPosition()
         zPosition = kZPosition
         isUserInteractionEnabled = true
         alpha = 0
@@ -66,7 +66,7 @@ class VOptionReformaCrossingStop:SKSpriteNode
     }
     
     //MARK: private
-    
+    /*
     private func startPosition() -> CGPoint
     {
         let sceneWidth_2:CGFloat = controller.model.size.width / 2.0
@@ -74,7 +74,7 @@ class VOptionReformaCrossingStop:SKSpriteNode
         let point:CGPoint = CGPoint(x:sceneWidth_2, y:sizeHeight_2)
         
         return point
-    }
+    }*/
     
     private func animateStop()
     {

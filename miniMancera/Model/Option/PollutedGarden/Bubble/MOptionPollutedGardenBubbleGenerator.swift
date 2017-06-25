@@ -59,12 +59,12 @@ class MOptionPollutedGardenBubbleGenerator
     //MARK: public
     
     func updateController(controller:COptionPollutedGarden)
-    {
+    {/*
         self.controller = controller
         
         let size:CGSize = controller.model.size
         maxX = size.width
-        maxY = size.height + kAddYPos
+        maxY = size.height + kAddYPos*/
     }
     
     func randomBubble() -> VOptionPollutedGardenBubble

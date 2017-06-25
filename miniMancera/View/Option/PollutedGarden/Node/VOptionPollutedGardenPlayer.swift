@@ -33,10 +33,10 @@ class VOptionPollutedGardenPlayer:SKSpriteNode
     //MARK: private
     
     private func startPosition()
-    {
+    {/*
         let sceneWidth:CGFloat = controller.model.size.width
         let sceneWidth_2:CGFloat = sceneWidth / 2.0
-        position = CGPoint(x:sceneWidth_2, y:kYPosition)
+        position = CGPoint(x:sceneWidth_2, y:kYPosition)*/
     }
     
     private func startPhysics(size:CGSize)

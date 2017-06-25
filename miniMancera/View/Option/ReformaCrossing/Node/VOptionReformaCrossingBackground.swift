@@ -12,7 +12,7 @@ class VOptionReformaCrossingBackground:SKSpriteNode
         self.controller = controller
         
         super.init(texture:texture, color:UIColor.clear, size:textureSize)
-        
+        /*
         let sceneSize:CGSize = controller.model.size
         let sceneWidth:CGFloat = sceneSize.width
         let sceneHeight:CGFloat = sceneSize.height
@@ -20,7 +20,7 @@ class VOptionReformaCrossingBackground:SKSpriteNode
         let sceneHeight_2:CGFloat = sceneHeight / 2.0
         let centerPosition:CGPoint = CGPoint(x:sceneWidth_2, y:sceneHeight_2)
         position = centerPosition
-        zPosition = kZPosition
+        zPosition = kZPosition*/
     }
     
     required init?(coder:NSCoder)
