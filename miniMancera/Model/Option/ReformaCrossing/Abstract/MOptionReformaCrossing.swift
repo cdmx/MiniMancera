@@ -19,11 +19,11 @@ class MOptionReformaCrossing:MGame
         super.init()
     }
     
-    override var startSceneType:ViewGameScene.Type?
+    override var startSceneType:ViewGameScene<MGame>.Type?
     {
         get
         {
-            return VOptionReformaCrossingScene.self
+            return VOptionReformaCrossingScene<MOptionReformaCrossing>.self
         }
     }
     
