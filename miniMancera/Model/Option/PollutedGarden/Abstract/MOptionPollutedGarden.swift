@@ -15,11 +15,11 @@ class MOptionPollutedGarden:MGame
         super.init()
     }
     
-    override var startSceneType:ViewGameScene.Type?
+    override var startSceneType:ViewGameScene<MGame>.Type?
     {
         get
         {
-            return VOptionPollutedGardenScene.self
+            return VOptionPollutedGardenScene<MOptionPollutedGarden>.self
         }
     }
     
