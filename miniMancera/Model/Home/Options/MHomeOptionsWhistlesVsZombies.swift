@@ -2,6 +2,13 @@ import UIKit
 
 class MHomeOptionsWhistlesVsZombies:MHomeOptions
 {
+    override var gameControllerType:UIViewController.Type?
+    {
+        get
+        {
+            return COptionWhistlesVsZombies.self
+        }
+    }
     
     override var title:String?
     {
