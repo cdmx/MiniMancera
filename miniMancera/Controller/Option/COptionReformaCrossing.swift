@@ -2,17 +2,6 @@ import SpriteKit
 
 class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
 {
-    required init?(dataOption:DOption)
-    {
-        let model:MOptionReformaCrossing = MOptionReformaCrossing()
-        
-        super.init(model:model, dataOption:dataOption)
-    }
-    
-    required init?(coder:NSCoder)
-    {
-        return nil
-    }
     /*
     override func pause()
     {

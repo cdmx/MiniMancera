@@ -50,13 +50,17 @@ class CHomeSplash:Controller<VHomeSplash>
     func play()
     {
         guard
-            
-            let controller:UIViewController = model.modelOption.gameController()
+        
+            let dataOption:DOption = model.modelOption.dataOption,
+            let gameControllerType:UIViewController.Type = model.modelOption.gameControllerType,
+            let specialGameControllerType:ControllerGame.Type = gameControllerType as? ControllerGame.Type
         
         else
         {
             return
         }
+        
+        let controller:ControllerGame = specialGameControllerType.init(dataOption:dataOption)
         
         parent?.present(controller, animated:true, completion:nil)
     }

@@ -2,16 +2,16 @@ import SpriteKit
 
 class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
 {
-    let model:MGame
+    let model:T
     let playSounds:Bool
     private(set) weak var dataOption:DOption?
     private(set) var lastUpdateTime:TimeInterval?
     private(set) var elapsedTime:TimeInterval
     
-    init(model:MGame, dataOption:DOption)
+    required init(dataOption:DOption)
     {
-        self.model = model
         self.dataOption = dataOption
+        model = T()
         
         if let playSounds:Bool = MSession.sharedInstance.settings?.sounds
         {
@@ -25,11 +25,6 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
         elapsedTime = 0
         
         super.init(nibName:nil, bundle:nil)
-    }
-    
-    required init?(dataOption:DOption)
-    {
-        return nil
     }
     
     required init?(coder:NSCoder)
