@@ -2,7 +2,7 @@ import SpriteKit
 
 extension ControllerGame
 {
-    var scene:ViewGameScene?
+    var scene:ViewGameScene<T>?
     {
         get
         {
@@ -15,7 +15,7 @@ extension ControllerGame
                 return nil
             }
             
-            let scene:ViewGameScene? = view.scene as? ViewGameScene
+            let scene:ViewGameScene<T>? = view.scene as? ViewGameScene<T>
             
             return scene
         }
@@ -30,7 +30,7 @@ extension ControllerGame
     }
     
     //MARK: scene delegate
-    
+    /*
     func update(_ currentTime:TimeInterval, for scene:SKScene)
     {/*
          
@@ -48,5 +48,5 @@ extension ControllerGame
          }
          
          */
-    }
+    }*/
 }

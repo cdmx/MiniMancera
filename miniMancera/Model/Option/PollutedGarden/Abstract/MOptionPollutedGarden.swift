@@ -14,18 +14,13 @@ class MOptionPollutedGarden:MGame
         currentScore = 0
         super.init()
     }
-    /*
-    override var startSceneType:ViewGameScene<MGame>.Type?
+    
+    override var startSceneType:SKScene.Type?
     {
         get
         {
             return VOptionPollutedGardenScene.self
         }
-    }*/
-    
-    override func startSceneType<T>() -> ViewGameScene<T>.Type? where T : MOptionPollutedGarden
-    {
-        return VOptionPollutedGardenScene.self
     }
     
     override var soundBackground:String?
