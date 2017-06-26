@@ -3,7 +3,7 @@ import UIKit
 class MOptionReformaCrossingLane
 {
     var foes:[MOptionReformaCrossingFoeItem]
-    private(set) var possibleFoes:[VOptionReformaCrossingFoe.Type]
+    private(set) var possibleFoes:[MOptionReformaCrossingFoeItem.Type]
     private(set) var scaleHorizontal:CGFloat
     private(set) var direction:CGFloat
     private(set) var verticalPosition:CGFloat
@@ -46,7 +46,7 @@ class MOptionReformaCrossingLane
     //MARK: final
     
     final func removeFoe(item:VOptionReformaCrossingFoe)
-    {
+    {/*
         var foes:[VOptionReformaCrossingFoe] = []
         
         for foe:VOptionReformaCrossingFoe in self.foes
@@ -57,17 +57,17 @@ class MOptionReformaCrossingLane
             }
         }
         
-        self.foes = foes
+        self.foes = foes*/
     }
     
     final func stopFoes()
-    {
+    {/*
         for foe:VOptionReformaCrossingFoe in foes
         {
             foe.totalStop()
         }
         
-        foes = []
+        foes = []*/
     }
     
     final func restart()
