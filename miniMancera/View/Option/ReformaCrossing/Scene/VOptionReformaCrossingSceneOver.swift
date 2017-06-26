@@ -18,16 +18,8 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
     {
         super.init(controller:controller)
         
-        guard
-            
-            let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
-                controller:controller)
-        
-        else
-        {
-            return
-        }
-        
+        let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
+            controller:controller)
         addChild(background)
         
         let width_2:CGFloat = size.width / 2.0

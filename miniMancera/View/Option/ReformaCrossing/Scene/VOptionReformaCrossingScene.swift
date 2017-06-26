@@ -2,15 +2,11 @@ import SpriteKit
 
 class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
 {
-    let soundHonk:SKAction
     private(set) weak var player:VOptionReformaCrossingPlayer!
     private weak var hud:VOptionReformaCrossingHud!
     private weak var stop:VOptionReformaCrossingStop!
     private weak var menu:VOptionReformaCrossingMenu!
     private weak var labelTitle:SKLabelNode?
-    private let soundCoin:SKAction
-    private let soundFail:SKAction
-    private let soundVictory:SKAction
     private let kActionSpawn:String = "actionSpawn"
     private let kWaitTransition:TimeInterval = 1.5
     private let kSceneTransitionDuration:TimeInterval = 1
@@ -24,21 +20,18 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     required init(controller:ControllerGame<MOptionReformaCrossing>)
     {
         controller.model.startLevel()
-        soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
-        soundFail = SKAction.playSoundFileNamed(kSoundFail, waitForCompletion:false)
-        soundVictory = SKAction.playSoundFileNamed(kSoundVictory, waitForCompletion:false)
-        soundHonk = SKAction.playSoundFileNamed(kSoundHonk, waitForCompletion:false)
         
         super.init(controller:controller)
-       /* physicsWorld.gravity = CGVector.zero
+        physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self
+        
         let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
             controller:controller)
         
         let hud:VOptionReformaCrossingHud = VOptionReformaCrossingHud(
             controller:controller)
         self.hud = hud
-        
+        /*
         let menu:VOptionReformaCrossingMenu = VOptionReformaCrossingMenu(
             controller:controller)
         self.menu = menu
@@ -50,10 +43,10 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         let player:VOptionReformaCrossingPlayer = VOptionReformaCrossingPlayer(
             controller:controller)
         self.player = player
-        
+        */
         addChild(background)
-        addChild(player)
         addChild(hud)
+        /*addChild(player)
         addChild(menu)
         addChild(stop)*/
     }

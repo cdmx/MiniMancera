@@ -2,7 +2,7 @@ import SpriteKit
 
 class VOptionReformaCrossingBackground:ViewGameNode<MOptionReformaCrossing>
 {
-    override init?(controller:ControllerGame<MOptionReformaCrossing>)
+    override init(controller:ControllerGame<MOptionReformaCrossing>)
     {
         let texture:MGameTexture = controller.model.textures.background
         

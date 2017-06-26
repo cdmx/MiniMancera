@@ -4,9 +4,9 @@ class ViewGameNode<T:MGame>:SKSpriteNode
 {
     private weak var controller:ControllerGame<T>!
     
-    init?(controller:ControllerGame<T>)
+    init(controller:ControllerGame<T>)
     {
-        return nil
+        super.init(texture:nil, color:UIColor.clear, size:CGSize.zero)
     }
     
     init(
