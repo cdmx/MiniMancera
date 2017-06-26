@@ -4,6 +4,7 @@ class MOptionReformaCrossing:MGame
 {
     let textures:MOptionReformaCrossingTextures
     let sounds:MOptionReformaCrossingSounds
+    let actions:MOptionReformaCrossingActions
     let laneGroup:MOptionReformaCrossingLaneGroup
     let foe:MOptionReformaCrossingFoe
     let kMaxGameTime:TimeInterval = 31
@@ -18,10 +19,12 @@ class MOptionReformaCrossing:MGame
     {
         textures = MOptionReformaCrossingTextures()
         sounds = MOptionReformaCrossingSounds()
+        actions = MOptionReformaCrossingActions()
         foe = MOptionReformaCrossingFoe()
         laneGroup = MOptionReformaCrossingLaneGroup()
         level = kStartingLevel
         addedSpeed = 0
+        strategy = MOptionReformaCrossingStrategyBegin()
         
         super.init()
     }
@@ -42,8 +45,17 @@ class MOptionReformaCrossing:MGame
         }
     }
     
-    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    override func update<T>(currentTime:TimeInterval, scene:ViewGameScene<T>) where T:MOptionReformaCrossing
     {
+        guard
+        
+            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
+        
+        else
+        {
+            return
+        }
+        
         strategy?.update(
             elapsedTime:elapsedTime,
             scene:scene,
@@ -52,6 +64,14 @@ class MOptionReformaCrossing:MGame
     }
     
     //MARK: public
+    
+    override func activateGame()
+    {
+        strategy = MOptionReformaCrossingStrategyGame()
+        super.activateGame()
+    }
+    
+    
     
     func stopAll()
     {

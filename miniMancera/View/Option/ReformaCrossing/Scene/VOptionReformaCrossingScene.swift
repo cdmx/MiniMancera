@@ -13,7 +13,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kTitleDuration:TimeInterval = 1.5
-    private let kFadeInDuration:TimeInterval = 0.5
     private let kSpawnProbability:UInt32 = 6
     
     required init(controller:ControllerGame<MOptionReformaCrossing>)
@@ -59,6 +58,14 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     
     //MARK: private
     
+    private func fadeInControls()
+    {
+        let action:SKAction = controller.model.actions.actionFadeIn
+        hud.run(action)
+        menu.run(action)
+        stop.run(action)
+    }
+    
     private func actionsGameOver(reason:MOptionReformaCrossingGameOverProtocol)
     {
         let actionDelay:SKAction = SKAction.wait(forDuration:kWaitTransition)
@@ -102,15 +109,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         run(actionsSequence)
     }
     
-    private func fadeInControls()
-    {
-        let actionFade:SKAction = SKAction.fadeIn(withDuration:kFadeInDuration)
-        
-        hud.run(actionFade)
-        menu.run(actionFade)
-        stop.run(actionFade)
-    }
-    
     private func transitionNextLevel()
     {/*
         let transition:SKTransition = SKTransition.crossFade(
@@ -136,10 +134,8 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     func activateGame()
     {
          fadeInControls()
-         
          labelTitle?.removeFromParent()
-         controller.model.activateGame()
-         player.startWalking()
+//         player.startWalking()
     }
     
     
