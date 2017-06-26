@@ -28,6 +28,7 @@ class VOptionReformaCrossingMenu:SKSpriteNode
     {
         if controller.model.gameActive
         {
+            controller.stopTimer()
             controller.showMenu()
         }
     }

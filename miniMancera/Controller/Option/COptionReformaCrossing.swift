@@ -2,14 +2,6 @@ import SpriteKit
 
 class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
 {
-    /*
-    override func pause()
-    {
-        super.pause()
-        
-        stopTimer()
-    }*/
-    
     override func notifiedEnterBackground(sender notification:Notification)
     {
         stopTimer()
