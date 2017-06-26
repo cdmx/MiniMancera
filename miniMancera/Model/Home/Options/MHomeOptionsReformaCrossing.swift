@@ -41,20 +41,11 @@ class MHomeOptionsReformaCrossing:MHomeOptions
             return #imageLiteral(resourceName: "assetGenericReformaCrossingScore")
         }
     }
-    /*
+    
     override func gameController() -> UIViewController?
     {
-        guard
-            
-            let dataOption:DOption = self.dataOption
-            
-        else
-        {
-            return nil
-        }
-        
-        let controller:COptionReformaCrossing = COptionReformaCrossing(dataOption:dataOption)
+        let controller:UIViewController? = gameControllerWith(type:COptionReformaCrossing.self)
         
         return controller
-    }*/
+    }
 }
