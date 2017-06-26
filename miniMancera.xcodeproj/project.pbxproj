@@ -144,6 +144,7 @@
 		DA91C3A91F015F6D0045FAE2 /* ViewGameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A81F015F6D0045FAE2 /* ViewGameNode.swift */; };
 		DA91C3AD1F01625E0045FAE2 /* MGameTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3AC1F01625E0045FAE2 /* MGameTexture.swift */; };
 		DA91C3B11F0163390045FAE2 /* MOptionReformaCrossingTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3B01F0163390045FAE2 /* MOptionReformaCrossingTextures.swift */; };
+		DA91C3B31F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3B21F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift */; };
 		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */; };
 		DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */; };
@@ -378,6 +379,7 @@
 		DA91C3A81F015F6D0045FAE2 /* ViewGameNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGameNode.swift; sourceTree = "<group>"; };
 		DA91C3AC1F01625E0045FAE2 /* MGameTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameTexture.swift; sourceTree = "<group>"; };
 		DA91C3B01F0163390045FAE2 /* MOptionReformaCrossingTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingTextures.swift; sourceTree = "<group>"; };
+		DA91C3B21F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSounds.swift; sourceTree = "<group>"; };
 		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -568,6 +570,7 @@
 				DA2D008C1EEE04E300365F23 /* MOptionReformaCrossingPhysicsStruct.swift */,
 				DA91C3A61F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift */,
 				DA91C3B01F0163390045FAE2 /* MOptionReformaCrossingTextures.swift */,
+				DA91C3B21F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1462,6 +1465,7 @@
 				DAAF2FC21EF6F6F700589BB0 /* VStoreCell.swift in Sources */,
 				DA56678E1EF2772A000055D8 /* MHomeOptionsReformaCrossing.swift in Sources */,
 				DABD4F391EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift in Sources */,
+				DA91C3B31F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift in Sources */,
 				DACD314E1EFB12BE00F205A0 /* VOptionReformaCrossingFoeMetrobus.swift in Sources */,
 				DABD4F3F1EF5B572003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryExplosion.swift in Sources */,
 				DABD4F221EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift in Sources */,

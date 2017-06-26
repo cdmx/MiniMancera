@@ -11,10 +11,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     private let soundCoin:SKAction
     private let soundFail:SKAction
     private let soundVictory:SKAction
-    private let kSoundCoin:String = "soundCoin.caf"
-    private let kSoundFail:String = "soundFail.caf"
-    private let kSoundVictory:String = "soundVictory.caf"
-    private let kSoundHonk:String = "soundCarHorn.caf"
     private let kActionSpawn:String = "actionSpawn"
     private let kWaitTransition:TimeInterval = 1.5
     private let kSceneTransitionDuration:TimeInterval = 1
