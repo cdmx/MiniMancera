@@ -38,7 +38,7 @@ class MOptionReformaCrossingLane
         return CGPoint.zero
     }
     
-    func hasFoeWaiting(sceneSize:CGSize) -> Bool
+    func hasFoeWaiting() -> Bool
     {
         return false
     }

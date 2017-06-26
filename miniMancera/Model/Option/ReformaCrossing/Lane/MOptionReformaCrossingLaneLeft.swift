@@ -5,6 +5,12 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
     private let kScaleHorizontal:CGFloat = -1
     private let kDirection:CGFloat = -1
     
+    override init(deltaVertical:CGFloat)
+    {
+        super.init(deltaVertical:deltaVertical)
+        sceneWidth = MGame.sceneSize.width
+    }
+    
     override var scaleHorizontal:CGFloat
     {
         get
@@ -38,10 +44,8 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
         return point
     }
     
-    override func hasFoeWaiting(sceneSize:CGSize) -> Bool
-    {
-        let sceneWidth:CGFloat = sceneSize.width
-        
+    override func hasFoeWaiting() -> Bool
+    {   
         for foe:VOptionReformaCrossingFoe in foes
         {
             let foeWidth_2:CGFloat = foe.size.width / 2.0

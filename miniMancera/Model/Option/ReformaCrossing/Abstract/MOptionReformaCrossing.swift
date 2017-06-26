@@ -23,6 +23,8 @@ class MOptionReformaCrossing:MGame
         addedSpeed = 0
         
         super.init()
+        
+        foe.model = self
     }
     
     override var startSceneType:SKScene.Type?

@@ -38,7 +38,7 @@ class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLane
         return point
     }
     
-    override func hasFoeWaiting(sceneSize:CGSize) -> Bool
+    override func hasFoeWaiting() -> Bool
     {
         for foe:VOptionReformaCrossingFoe in foes
         {

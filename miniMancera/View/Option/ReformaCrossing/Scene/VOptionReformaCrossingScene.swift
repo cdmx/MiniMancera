@@ -65,64 +65,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     
     //MARK: private
     
-    private func startFoes()
-    {/*
-        let actionSpawnFoe:SKAction = SKAction.run(spawnFoe)
-        let actionDelay:SKAction = SKAction.wait(forDuration:kSpawnFoeRate)
-        let actions:[SKAction] = [
-            actionSpawnFoe,
-            actionDelay]
-        let actionsSequence:SKAction = SKAction.sequence(actions)
-        let actionRepeat:SKAction = SKAction.repeatForever(actionsSequence)
-        
-        run(actionRepeat, withKey:kActionSpawn)*/
-    }
-    
-    private func spawnFoe()
-    {
-        let should:Bool = shouldSpawn()
-        
-        if !should
-        {
-            return
-        }
-        /*
-        let lane:MOptionReformaCrossingLane = controller.model.laneGroup.randomLane()
-        
-        let hasFoeWaiting:Bool = lane.hasFoeWaiting(
-            sceneSize:controller.model.size)
-        
-        if hasFoeWaiting
-        {
-            return
-        }
-        
-        guard
-            
-            let foe:VOptionReformaCrossingFoe = VOptionReformaCrossingFoe.randomFoe(
-                lane:lane,
-                controller:controller)
-            
-        else
-        {
-            return
-        }
-        
-        addChild(foe)*/
-    }
-    
-    private func shouldSpawn() -> Bool
-    {
-        let random:UInt32 = arc4random_uniform(kSpawnProbability)
-        
-        if random == 0
-        {
-            return true
-        }
-        
-        return false
-    }
-    
     private func actionsGameOver(reason:MOptionReformaCrossingGameOverProtocol)
     {
         let actionDelay:SKAction = SKAction.wait(forDuration:kWaitTransition)
