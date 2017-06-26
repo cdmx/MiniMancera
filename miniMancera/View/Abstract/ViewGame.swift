@@ -1,7 +1,13 @@
 import SpriteKit
 
-class ViewGame<T:MGame>:SKView
+class ViewGame<T:MGame>:SKView, ViewProtocol
 {
+    weak var layoutLeft:NSLayoutConstraint!
+    weak var layoutRight:NSLayoutConstraint!
+    weak var layoutTop:NSLayoutConstraint!
+    weak var layoutBottom:NSLayoutConstraint!
+    weak var pushBackground:VPushBackground?
+    
     init(controller:ControllerGame<T>)
     {
         super.init(frame:CGRect.zero)
