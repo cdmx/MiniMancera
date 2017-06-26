@@ -51,13 +51,16 @@ class CHomeSplash:Controller<VHomeSplash>
     {
         guard
         
-            let controller:UIViewController = model.modelOption.gameController()
+            let controller:UIViewController = model.modelOption.gameController(),
+            let parent:ControllerParent = self.parent as? ControllerParent
         
         else
         {
             return
         }
         
-        parent?.present(controller, animated:true, completion:nil)
+        parent.push(
+            controller:controller,
+            vertical:ControllerParent.Vertical.bottom)
     }
 }

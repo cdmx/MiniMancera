@@ -67,6 +67,23 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
             object:nil)
     }
     
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        guard
+        
+            let parent:ControllerParent = self.parent as? ControllerParent,
+            let view:ViewParent = parent.view as? ViewParent
+        
+        else
+        {
+            return
+        }
+        
+        view.panRecognizer.isEnabled = false
+    }
+    
     //MARK: notified
     
     func notifiedEnterBackground(sender notification:Notification)
