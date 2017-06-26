@@ -31,7 +31,7 @@ class MGame
         gameActive = false
     }
     
-    func update<T:MGame>(currentTime:TimeInterval, scene:ViewGameScene<T>)
+    func update(elapsedTime:TimeInterval, scene:SKScene)
     {
     }
 }

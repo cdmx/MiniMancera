@@ -1,14 +1,24 @@
-import Foundation
+import SpriteKit
 
 class MOptionReformaCrossingStrategyBegin:MOptionReformaCrossingStrategy
 {
     private let kTimeout:TimeInterval = 1.5
     
-    func update(elapsedTime:TimeInterval, scene:VOptionReformaCrossingScene, model:MOptionReformaCrossing)
+    func update(elapsedTime:TimeInterval, scene:SKScene, model:MOptionReformaCrossing)
     {
         if elapsedTime > kTimeout
         {
             model.activateGame()
+            
+            guard
+            
+                let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
+            
+            else
+            {
+                return
+            }
+            
             scene.activateGame()
         }
     }

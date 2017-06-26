@@ -62,8 +62,8 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     {
         let action:SKAction = controller.model.actions.actionFadeIn
         hud.run(action)
-        menu.run(action)
-        stop.run(action)
+//        menu.run(action)
+//        stop.run(action)
     }
     
     private func actionsGameOver(reason:MOptionReformaCrossingGameOverProtocol)

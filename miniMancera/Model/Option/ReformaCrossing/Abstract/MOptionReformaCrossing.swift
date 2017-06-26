@@ -45,17 +45,8 @@ class MOptionReformaCrossing:MGame
         }
     }
     
-    override func update<T>(currentTime:TimeInterval, scene:ViewGameScene<T>) where T:MOptionReformaCrossing
+    override func update(elapsedTime:TimeInterval, scene:SKScene)
     {
-        guard
-        
-            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
-        
-        else
-        {
-            return
-        }
-        
         strategy?.update(
             elapsedTime:elapsedTime,
             scene:scene,

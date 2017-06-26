@@ -1,6 +1,6 @@
-import Foundation
+import SpriteKit
 
 protocol MOptionReformaCrossingStrategy
 {
-    func update(elapsedTime:TimeInterval, scene:VOptionReformaCrossingScene, model:MOptionReformaCrossing)
+    func update(elapsedTime:TimeInterval, scene:SKScene, model:MOptionReformaCrossing)
 }

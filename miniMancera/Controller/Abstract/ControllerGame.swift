@@ -5,6 +5,8 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
     let model:T
     let playSounds:Bool
     private(set) weak var dataOption:DOption?
+    private(set) var lastUpdateTime:TimeInterval?
+    private(set) var elapsedTime:TimeInterval
     
     required init(dataOption:DOption)
     {
@@ -132,15 +134,13 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
     
     func update(_ currentTime:TimeInterval, for scene:SKScene)
     {
-        guard
-            
-            let scene:ViewGameScene<T> = scene as? ViewGameScene<T>
-            
-        else
+        if let lastUpdateTime:TimeInterval = self.lastUpdateTime
         {
-            return
+            let deltaTime:TimeInterval = currentTime - lastUpdateTime
+            elapsedTime += deltaTime
+            model.update(elapsedTime:elapsedTime, scene:scene)
         }
         
-        model.update(currentTime:currentTime, scene:scene)
+        lastUpdateTime = currentTime
     }
 }
