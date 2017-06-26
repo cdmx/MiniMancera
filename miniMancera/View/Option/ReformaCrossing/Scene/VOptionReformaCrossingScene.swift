@@ -27,7 +27,7 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     
     required init(controller:ControllerGame<MOptionReformaCrossing>)
     {
-//        controller.model.startLevel()
+        controller.model.startLevel()
         soundCoin = SKAction.playSoundFileNamed(kSoundCoin, waitForCompletion:false)
         soundFail = SKAction.playSoundFileNamed(kSoundFail, waitForCompletion:false)
         soundVictory = SKAction.playSoundFileNamed(kSoundVictory, waitForCompletion:false)

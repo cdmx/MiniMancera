@@ -15,22 +15,9 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
     private let kGameOverY:CGFloat = 80
     private let kAnimationDuration:TimeInterval = 0.5
     
-    init(controller:COptionReformaCrossing, reason:MOptionReformaCrossingGameOverProtocol)
+    required init(controller:ControllerGame<MOptionReformaCrossing>)
     {
-        self.controller = controller
-        
-        if let sounds:Bool = MSession.sharedInstance.settings?.sounds
-        {
-            shouldPlaySounds = sounds
-        }
-        else
-        {
-            shouldPlaySounds = true
-        }
-        
-//        super.init(size:controller.model.size)
-        super.init(size:CGSize.zero)
-        backgroundColor = SKColor.black
+        super.init(controller:controller)
         
         let width_2:CGFloat = size.width / 2.0
         let height_2:CGFloat = size.height / 2.0
@@ -41,13 +28,13 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
             controller:controller)
         
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
-        labelTitle.text = reason.title
+//        labelTitle.text = reason.title
         labelTitle.fontSize = kTitleFontSize
         labelTitle.fontColor = SKColor.white
         labelTitle.position = CGPoint(x:width_2, y:titleY)
         
         let labelDescr:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
-        labelDescr.text = reason.descr
+//        labelDescr.text = reason.descr
         labelDescr.fontSize = kDescrFontSize
         labelDescr.fontColor = SKColor.white
         labelDescr.position = CGPoint(x:width_2, y:descrY)
@@ -64,6 +51,7 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
         labelGameOver.fontColor = SKColor.white
         labelGameOver.position = CGPoint(x:width_2, y:kGameOverY)
         
+        /*
         let texture:SKTexture = SKTexture(image:reason.image)
         let image:SKSpriteNode = SKSpriteNode(texture:texture)
         image.position = CGPoint(x:width_2, y:height_2)
@@ -78,7 +66,7 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
         addChild(labelGameOver)
         addChild(image)
         addChild(node1up)
-        addChild(nodeGameOver)
+        addChild(nodeGameOver)*/
     }
     
     required init?(coder:NSCoder)
