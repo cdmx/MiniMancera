@@ -1,9 +1,15 @@
 import SpriteKit
 
-class VOptionReformaCrossingBackground:SKSpriteNode
+class VOptionReformaCrossingBackground:ViewGameNode<MOptionReformaCrossing>
 {
-    private weak var controller:COptionReformaCrossing!
-    private let kZPosition:CGFloat = -1
+    override init?(controller:ControllerGame<MOptionReformaCrossing>)
+    {
+        super.init(
+            controller:controller,
+            texture: <#T##SKTexture?#>,
+            size: <#T##CGSize#>,
+            zPosition:MOptionReformaCrossingZPosition.Background.rawValue)
+    }
     
     init(controller:COptionReformaCrossing)
     {
