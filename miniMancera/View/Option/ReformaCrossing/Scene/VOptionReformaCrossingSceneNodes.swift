@@ -14,4 +14,30 @@ extension VOptionReformaCrossingScene
         addChild(background)
         addChild(hud)
     }
+    
+    //MARK: private
+    
+    private func showTitle()
+    {
+        let sceneSize:CGSize = MGame.sceneSize
+        let sceneWidth:CGFloat = sceneSize.width
+        let sceneHeight:CGFloat = sceneSize.height
+        let sceneWidth_2:CGFloat = sceneWidth / 2.0
+        let sceneHeight_2:CGFloat = sceneHeight / 2.0
+        let positionY:CGFloat = sceneHeight_2 + kTitleVerticalAdd
+        
+        let level:NSNumber = controller.model.level as NSNumber
+        let levelString:String = String(
+            format:String.localizedReformaCrossing(key:"VOptionReformaCrossingScene_labelTitle"),
+            level)
+         
+         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
+         labelTitle.text = levelString
+         labelTitle.fontSize = kFontSize
+         labelTitle.fontColor = SKColor.white
+         labelTitle.position = CGPoint(x:sceneWidth_2, y:positionY)
+         self.labelTitle = labelTitle
+         
+         addChild(labelTitle)
+    }
 }

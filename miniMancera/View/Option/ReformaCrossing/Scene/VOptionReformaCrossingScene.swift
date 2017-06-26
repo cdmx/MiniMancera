@@ -7,13 +7,13 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     weak var stop:VOptionReformaCrossingStop!
     weak var menu:VOptionReformaCrossingMenu!
     weak var labelTitle:SKLabelNode?
+    let kTitleVerticalAdd:CGFloat = -12
+    let kFontSize:CGFloat = 20
     private let kWaitTransition:TimeInterval = 1.5
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kTitleDuration:TimeInterval = 1.5
     private let kFadeInDuration:TimeInterval = 0.5
-    private let kFontSize:CGFloat = 20
-    private let kTitleVerticalAdd:CGFloat = -12
     private let kSpawnProbability:UInt32 = 6
     
     required init(controller:ControllerGame<MOptionReformaCrossing>)
@@ -86,28 +86,7 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         view?.presentScene(gameOverScene, transition:transition)*/
     }
     
-    private func showTitle()
-    {/*
-        let width_2:CGFloat = controller.model.size.width / 2.0
-        let height_2:CGFloat = controller.model.size.height / 2.0
-        let positionY:CGFloat = height_2 + kTitleVerticalAdd
-        
-        let level:NSNumber = controller.model.level as NSNumber
-        let levelString:String = String(
-            format:String.localizedReformaCrossing(key:"VOptionReformaCrossingScene_labelTitle"),
-            level)
-        
-        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
-        labelTitle.text = levelString
-        labelTitle.fontSize = kFontSize
-        labelTitle.fontColor = SKColor.white
-        labelTitle.position = CGPoint(x:width_2, y:positionY)
-        self.labelTitle = labelTitle
-        
-        addChild(labelTitle)
-        
-        actionsActivateGame()*/
-    }
+    
     
     private func actionsActivateGame()
     {
