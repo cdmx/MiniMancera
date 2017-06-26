@@ -20,7 +20,10 @@ class MOptionReformaCrossingStrategyBegin:MOptionReformaCrossingStrategy
             }
             
             let actionFadeIn:SKAction = model.actions.actionFadeIn
+            let actionFadeOut:SKAction = model.actions.actionFadeOut
+            
             model.hud.view?.run(actionFadeIn)
+            model.title.view?.run(actionFadeOut)
         }
     }
 }

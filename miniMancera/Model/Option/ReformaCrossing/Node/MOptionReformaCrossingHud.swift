@@ -1,34 +1,65 @@
-import Foundation
+import SpriteKit
 
 class MOptionReformaCrossingHud
 {
     weak var view:VOptionReformaCrossingHud?
-    private let kMaxGameTime:TimeInterval = 31
+    private var elapsedTime:TimeInterval
+    private let kTimeOutString:String = "0"
+    private let kMaxTime:TimeInterval = 32
+    private let kElapsedTimeDelta:TimeInterval = 0.4
     
     init()
     {
+        elapsedTime = 0
+    }
+    
+    //MARK: private
+    
+    private func timeOut(scene:SKScene)
+    {
+        guard
         
+            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene,
+            let controller:COptionReformaCrossing = scene.controller as? COptionReformaCrossing
+        
+        else
+        {
+            return
+        }
+        
+        controller.timeOut()
+    }
+    
+    private func updateStrings(scene:SKScene, score:Int)
+    {
+        let remainTime:TimeInterval = kMaxTime - elapsedTime
+        let scoreString:String = "\(score)"
+        let timeString:String
+        
+        if remainTime < 0
+        {
+            timeString = kTimeOutString
+            timeOut(scene:scene)
+        }
+        else
+        {
+            let time:Int = Int(remainTime)
+            timeString = "\(time)"
+        }
+        
+        view?.update(time:timeString, score:scoreString)
     }
     
     //MARK: public
     
-    func update()
+    func update(elapsedTime:TimeInterval, scene:SKScene, score:Int)
     {
-        /*
-        let deltaTime:TimeInterval = controller.model.kMaxGameTime - elapsedTime
+        let deltaElapsedTime:TimeInterval = elapsedTime - self.elapsedTime
         
-        if deltaTime < 0
+        if deltaElapsedTime > kElapsedTimeDelta
         {
-            controller.timeOut()
+            self.elapsedTime = elapsedTime
+            updateStrings(scene:scene, score:score)
         }
-        else
-        {
-            let time:Int = Int(deltaTime)
-            let timeString:String = "\(time)"
-            labelTime.text = timeString
-        }
-        
-        let scoreString:String = "\(controller.model.score)"
-        labelScore.text = scoreString*/
     }
 }

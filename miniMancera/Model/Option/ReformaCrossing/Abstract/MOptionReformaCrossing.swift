@@ -54,6 +54,7 @@ class MOptionReformaCrossing:MGame
             elapsedTime:elapsedTime,
             scene:scene,
             model:self)
+        hud.update(elapsedTime:elapsedTime, scene:scene, score:score)
         foe.update(elapsedTime:elapsedTime, scene:scene)
     }
     
