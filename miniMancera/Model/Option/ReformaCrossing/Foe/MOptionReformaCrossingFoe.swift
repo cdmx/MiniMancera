@@ -41,23 +41,20 @@ class MOptionReformaCrossingFoe
         
         guard
         
-            let lane:MOptionReformaCrossingLane = controller.model.laneGroup.randomLane()
-        
-        else
-        {
-            return
-        }
-        
-        guard
-            
+            let lane:MOptionReformaCrossingLane = controller.model.laneGroup.randomLane(),
             let foe:MOptionReformaCrossingFoeItem = MOptionReformaCrossingFoe.randomFoe(lane:lane)
-            
+        
         else
         {
             return
         }
         
-        addChild(foe)
+        let view:VOptionReformaCrossingFoe = VOptionReformaCrossingFoe(
+            controller:controller,
+            model:foe)
+        foe.view = view
+        
+        scene.addChild(view)
     }
     
     //MARK: public

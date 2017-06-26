@@ -5,7 +5,7 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
     //MARK: private
     
     private func contactFoes(foeA:VOptionReformaCrossingFoe, foeB:VOptionReformaCrossingFoe)
-    {
+    {/*
         if foeA.created < foeB.created
         {
             foeB.hitTheBreaks()
@@ -13,7 +13,7 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
         else
         {
             foeA.hitTheBreaks()
-        }
+        }*/
     }
     
     private func contactPlayerFoe(player:VOptionReformaCrossingPlayer, foe:VOptionReformaCrossingFoe)

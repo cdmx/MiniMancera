@@ -28,14 +28,14 @@ class MOptionReformaCrossingLane
     
     //MARK: public
     
-    func foeInitialPoint(foe:VOptionReformaCrossingFoe) -> CGPoint
+    func foeInitialX(foeWidth_2:CGFloat) -> CGFloat
     {
-        return CGPoint.zero
+        return 0
     }
     
-    func foeEndingPoint(foe:VOptionReformaCrossingFoe) -> CGPoint
+    func foeEndingX(foeWidth_2:CGFloat) -> CGFloat
     {
-        return CGPoint.zero
+        return 0
     }
     
     func hasFoeWaiting() -> Bool
@@ -44,12 +44,6 @@ class MOptionReformaCrossingLane
     }
     
     //MARK: final
-    
-    final func addFoe(foe:MOptionReformaCrossingFoeItem)
-    {
-        foes.append(foe)
-        foe.lane = self
-    }
     
     final func removeFoe(item:VOptionReformaCrossingFoe)
     {/*

@@ -6,15 +6,13 @@ extension MOptionReformaCrossingFoe
     {
         guard
             
-            let foeType:MOptionReformaCrossingFoeItem.Type = foeTypeFrom(lane:lane)
+            let foeType:MOptionReformaCrossingFoeItem.Type = foeTypeFrom(lane:lane),
+            let foe:MOptionReformaCrossingFoeItem = foeType.init(lane:lane)
             
         else
         {
             return nil
         }
-        
-        let foe:MOptionReformaCrossingFoeItem = foeType.init()
-        lane.addFoe(foe:foe)
         
         return foe
     }
