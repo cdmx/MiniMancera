@@ -2,11 +2,11 @@ import SpriteKit
 
 class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
 {
-    private(set) weak var player:VOptionReformaCrossingPlayer!
-    private weak var hud:VOptionReformaCrossingHud!
-    private weak var stop:VOptionReformaCrossingStop!
-    private weak var menu:VOptionReformaCrossingMenu!
-    private weak var labelTitle:SKLabelNode?
+    weak var player:VOptionReformaCrossingPlayer!
+    weak var hud:VOptionReformaCrossingHud!
+    weak var stop:VOptionReformaCrossingStop!
+    weak var menu:VOptionReformaCrossingMenu!
+    weak var labelTitle:SKLabelNode?
     private let kWaitTransition:TimeInterval = 1.5
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
@@ -23,13 +23,7 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         super.init(controller:controller)
         physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self
-        
-        let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
-            controller:controller)
-        
-        let hud:VOptionReformaCrossingHud = VOptionReformaCrossingHud(
-            controller:controller)
-        self.hud = hud
+
         /*
         let menu:VOptionReformaCrossingMenu = VOptionReformaCrossingMenu(
             controller:controller)
@@ -42,10 +36,8 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         let player:VOptionReformaCrossingPlayer = VOptionReformaCrossingPlayer(
             controller:controller)
         self.player = player
-        */
-        addChild(background)
-        addChild(hud)
-        /*addChild(player)
+        
+        addChild(player)
         addChild(menu)
         addChild(stop)*/
     }
@@ -129,15 +121,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         run(actionsSequence)
     }
     
-    private func activateGame()
-    {/*
-        fadeInControls()
-        
-        labelTitle?.removeFromParent()
-        controller.model.activateGame()
-        player.startWalking()*/
-    }
-    
     private func fadeInControls()
     {
         let actionFade:SKAction = SKAction.fadeIn(withDuration:kFadeInDuration)
@@ -168,6 +151,17 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     }
     
     //MARK: public
+    
+    func activateGame()
+    {
+         fadeInControls()
+         
+         labelTitle?.removeFromParent()
+         controller.model.activateGame()
+         player.startWalking()
+    }
+    
+    
     
     func timeOut()
     {/*
