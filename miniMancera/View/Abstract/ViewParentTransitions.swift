@@ -8,7 +8,7 @@ extension ViewParent
             
             let ui:UIView = view as? UIView
             
-            else
+        else
         {
             return
         }
@@ -40,7 +40,7 @@ extension ViewParent
             let currentUi:UIView = currentView as? UIView,
             let newUi:UIView = newView as? UIView
             
-            else
+        else
         {
             return
         }
@@ -77,13 +77,13 @@ extension ViewParent
         })
         { (done:Bool) in
             
-            currentView.removeFromSuperview()
+            currentUi.removeFromSuperview()
             completion()
         }
     }
     
     func push(
-        newView:View,
+        newView:ViewProtocol,
         left:CGFloat,
         top:CGFloat,
         background:Bool,
@@ -101,22 +101,31 @@ extension ViewParent
                 toView:self)
         }
         
-        addSubview(newView)
+        guard
+            
+            let newUi:UIView = newView as? UIView
+        
+        else
+        {
+            return
+        }
+        
+        addSubview(newUi)
         
         newView.layoutTop = NSLayoutConstraint.topToTop(
-            view:newView,
+            view:newUi,
             toView:self,
             constant:top)
         newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
-            view:newView,
+            view:newUi,
             toView:self,
             constant:top)
         newView.layoutLeft = NSLayoutConstraint.leftToLeft(
-            view:newView,
+            view:newUi,
             toView:self,
             constant:left)
         newView.layoutRight = NSLayoutConstraint.rightToRight(
-            view:newView,
+            view:newUi,
             toView:self,
             constant:left)
         
@@ -158,31 +167,40 @@ extension ViewParent
     }
     
     func animateOver(
-        newView:View,
+        newView:ViewProtocol,
         completion:@escaping(() -> ()))
     {
-        newView.alpha = 0
-        addSubview(newView)
+        guard
+            
+            let newUi:UIView = newView as? UIView
+            
+        else
+        {
+            return
+        }
+        
+        newUi.alpha = 0
+        addSubview(newUi)
         
         newView.layoutTop = NSLayoutConstraint.topToTop(
-            view:newView,
+            view:newUi,
             toView:self)
         newView.layoutBottom = NSLayoutConstraint.bottomToBottom(
-            view:newView,
+            view:newUi,
             toView:self)
         newView.layoutLeft = NSLayoutConstraint.leftToLeft(
-            view:newView,
+            view:newUi,
             toView:self)
         newView.layoutRight = NSLayoutConstraint.rightToRight(
-            view:newView,
+            view:newUi,
             toView:self)
         
         UIView.animate(
             withDuration:kAnimationDuration,
             animations:
-            { [weak newView] in
+            { [weak newUi] in
                 
-                newView?.alpha = 1
+                newUi?.alpha = 1
             })
         { (done:Bool) in
             
@@ -191,11 +209,20 @@ extension ViewParent
     }
     
     func pop(
-        currentView:View,
+        currentView:ViewProtocol,
         left:CGFloat,
         top:CGFloat,
         completion:@escaping(() -> ()))
     {
+        guard
+            
+            let currentUi:UIView = currentView as? UIView
+            
+        else
+        {
+            return
+        }
+        
         currentView.layoutTop.constant = top
         currentView.layoutBottom.constant = top
         currentView.layoutRight.constant = left
@@ -211,13 +238,13 @@ extension ViewParent
         { (done:Bool) in
             
             currentView.pushBackground?.removeFromSuperview()
-            currentView.removeFromSuperview()
+            currentUi.removeFromSuperview()
             completion()
         }
     }
     
     func dismissAnimateOver(
-        currentView:View,
+        currentView:UIView,
         completion:@escaping(() -> ()))
     {
         UIView.animate(

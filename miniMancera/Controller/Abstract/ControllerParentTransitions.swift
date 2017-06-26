@@ -176,7 +176,7 @@ extension ControllerParent
             
             guard
                 
-                let view:ViewProtocol = controller.view as? ViewProtocol
+                let view:UIView = controller.view as? UIView
                 
             else
             {
@@ -261,7 +261,7 @@ extension ControllerParent
             }
             
             removeView.pushBackground?.removeFromSuperview()
-            removeView.removeFromSuperview()
+            removeController.view.removeFromSuperview()
             removeController.removeFromParentViewController()
             
             if childViewControllers.count < 2
@@ -276,8 +276,7 @@ extension ControllerParent
         guard
             
             let view:ViewParent = self.view as? ViewParent,
-            let currentController:UIViewController = childViewControllers.last,
-            let currentView:ViewProtocol = currentController.view as? ViewProtocol
+            let currentController:UIViewController = childViewControllers.last
             
         else
         {
@@ -299,7 +298,7 @@ extension ControllerParent
         previousController.beginAppearanceTransition(true, animated:true)
         
         view.dismissAnimateOver(
-            currentView:currentView)
+            currentView:currentController.view)
         {
             currentController.endAppearanceTransition()
             previousController.endAppearanceTransition()
