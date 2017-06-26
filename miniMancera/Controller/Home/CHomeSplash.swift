@@ -51,16 +51,12 @@ class CHomeSplash:Controller<VHomeSplash>
     {
         guard
         
-            let dataOption:DOption = model.modelOption.dataOption,
-            let gameControllerType:UIViewController.Type = model.modelOption.gameControllerType,
-            let specialGameControllerType:ControllerGame.Type = gameControllerType as? ControllerGame.Type
+            let controller:UIViewController = model.modelOption.gameController()
         
         else
         {
             return
         }
-        
-        let controller:ControllerGame = specialGameControllerType.init(dataOption:dataOption)
         
         parent?.present(controller, animated:true, completion:nil)
     }
