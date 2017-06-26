@@ -3,21 +3,21 @@ import UIKit
 class MOptionReformaCrossingLaneB:MOptionReformaCrossingLaneLeft
 {
     private let kDeltaVertical:CGFloat = 120
-    private let foeTypes:[VOptionReformaCrossingFoe.Type]
+    private let foeTypes:[MOptionReformaCrossingFoeItem.Type]
     
     init()
     {
-        foeTypes = [VOptionReformaCrossingFoeVW.self,
-                    VOptionReformaCrossingFoeRuta2.self,
-                    VOptionReformaCrossingFoePolice.self,
-                    VOptionReformaCrossingFoeTaxiPink.self,
-                    VOptionReformaCrossingFoeFierroViejo.self,
-                    VOptionReformaCrossingFoeLordAudi.self]
+        foeTypes = [MOptionReformaCrossingFoeItemVW.self,
+                    MOptionReformaCrossingFoeItemRuta2.self,
+                    MOptionReformaCrossingFoeItemPolice.self,
+                    MOptionReformaCrossingFoeItemTaxiPink.self,
+                    MOptionReformaCrossingFoeItemFierroViejo.self,
+                    MOptionReformaCrossingFoeItemLordAudi.self]
         
         super.init(deltaVertical:kDeltaVertical)
     }
     
-    override var possibleFoes:[VOptionReformaCrossingFoe.Type]
+    override var possibleFoes:[MOptionReformaCrossingFoeItem.Type]
     {
         get
         {
