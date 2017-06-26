@@ -24,6 +24,8 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         physicsWorld.gravity = CGVector.zero
         physicsWorld.contactDelegate = self
 
+        factoryNodes()
+        
         /*
         let menu:VOptionReformaCrossingMenu = VOptionReformaCrossingMenu(
             controller:controller)
