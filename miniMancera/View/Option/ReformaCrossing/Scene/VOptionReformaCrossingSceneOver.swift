@@ -2,8 +2,6 @@ import SpriteKit
 
 class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
 {
-    private weak var controller:COptionReformaCrossing!
-    private let kSoundBackground:String = "soundReformaCrossing.caf"
     private let kSound1up:String = "sound1up"
     private let kTitleFontSize:CGFloat = 20
     private let kDescrFontSize:CGFloat = 12
