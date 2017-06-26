@@ -74,6 +74,7 @@ class MOptionReformaCrossingFoe
         
         if deltaTime > kSpawnRate
         {
+            self.elapsedTime = elapsedTime
             spawnFoe(scene:scene)
         }
     }

@@ -26,11 +26,11 @@ class MOptionReformaCrossingFoeItem
         minSpeed = 0
         randomMaxSpeed = 0
         created = Date().timeIntervalSince1970
-        positionY = lane.verticalPosition
         
-        let foeWidth:CGFloat = texture.size.width
-        initialPositionX = lane.foeInitialX(foeWidth:foeWidth)
-        endingPositionX = lane.foeEndingX(foeWidth:foeWidth)
+        let foeWidth_2:CGFloat = texture.width_2
+        initialPositionX = lane.foeInitialX(foeWidth_2:foeWidth_2)
+        endingPositionX = lane.foeEndingX(foeWidth_2:foeWidth_2)
+        positionY = lane.verticalPosition
         currentPositionX = initialPositionX
         self.lane = lane
         lane.foes.append(self)

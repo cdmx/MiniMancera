@@ -17,6 +17,10 @@ class MGame
     
     //MARK: public
     
+    func didMove()
+    {
+    }
+    
     func activateGame()
     {
         gameActive = true
