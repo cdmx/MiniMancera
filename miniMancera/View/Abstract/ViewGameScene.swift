@@ -20,6 +20,8 @@ class ViewGameScene<T:MGame>:SKScene
     
     override func didMove(to view:SKView)
     {
+        controller.didMove()
+        
         if controller.playSounds
         {
             startBackgroundSound()

@@ -55,13 +55,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         return nil
     }
     
-    override func didMove(to view:SKView)
-    {
-        super.didMove(to:view)
-        
-        startFoes()
-        showTitle()
-    }
     /*
     override func updateNodes()
     {
@@ -73,7 +66,7 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     //MARK: private
     
     private func startFoes()
-    {
+    {/*
         let actionSpawnFoe:SKAction = SKAction.run(spawnFoe)
         let actionDelay:SKAction = SKAction.wait(forDuration:kSpawnFoeRate)
         let actions:[SKAction] = [
@@ -82,7 +75,7 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         let actionsSequence:SKAction = SKAction.sequence(actions)
         let actionRepeat:SKAction = SKAction.repeatForever(actionsSequence)
         
-        run(actionRepeat, withKey:kActionSpawn)
+        run(actionRepeat, withKey:kActionSpawn)*/
     }
     
     private func spawnFoe()

@@ -26,4 +26,8 @@ class MGame
     {
         gameActive = false
     }
+    
+    func update(elapsedTime:TimeInterval)
+    {
+    }
 }

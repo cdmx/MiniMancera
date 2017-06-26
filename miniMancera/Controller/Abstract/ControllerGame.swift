@@ -92,6 +92,10 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
     
     //MARK: public
     
+    func didMove()
+    {
+    }
+    
     func postScore()
     {
         let score:Int = model.score
@@ -136,7 +140,7 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
                 let deltaTime:TimeInterval = currentTime - lastUpdateTime
                 elapsedTime += deltaTime
                 
-                updateNodes()
+                model.update(elapsedTime:elapsedTime)
             }
             
             lastUpdateTime = currentTime

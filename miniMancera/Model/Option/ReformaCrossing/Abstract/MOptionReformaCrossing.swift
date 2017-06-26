@@ -5,6 +5,7 @@ class MOptionReformaCrossing:MGame
     let textures:MOptionReformaCrossingTextures
     let sounds:MOptionReformaCrossingSounds
     let laneGroup:MOptionReformaCrossingLaneGroup
+    let foe:MOptionReformaCrossingFoe
     let kMaxGameTime:TimeInterval = 31
     private(set) var addedSpeed:CGFloat
     private(set) var level:Int
@@ -16,6 +17,7 @@ class MOptionReformaCrossing:MGame
     {
         textures = MOptionReformaCrossingTextures()
         sounds = MOptionReformaCrossingSounds()
+        foe = MOptionReformaCrossingFoe()
         laneGroup = MOptionReformaCrossingLaneGroup()
         level = kStartingLevel
         addedSpeed = 0
