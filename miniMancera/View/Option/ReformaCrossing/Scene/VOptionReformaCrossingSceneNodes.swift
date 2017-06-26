@@ -13,6 +13,8 @@ extension VOptionReformaCrossingScene
         
         addChild(background)
         addChild(hud)
+        
+        showTitle()
     }
     
     //MARK: private
@@ -30,14 +32,15 @@ extension VOptionReformaCrossingScene
         let levelString:String = String(
             format:String.localizedReformaCrossing(key:"VOptionReformaCrossingScene_labelTitle"),
             level)
-         
-         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
-         labelTitle.text = levelString
-         labelTitle.fontSize = kFontSize
-         labelTitle.fontColor = SKColor.white
-         labelTitle.position = CGPoint(x:sceneWidth_2, y:positionY)
-         self.labelTitle = labelTitle
-         
-         addChild(labelTitle)
+        
+        let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
+        labelTitle.text = levelString
+        labelTitle.fontSize = kFontSize
+        labelTitle.fontColor = SKColor.white
+        labelTitle.position = CGPoint(x:sceneWidth_2, y:positionY)
+        labelTitle.zPosition = MOptionReformaCrossingZPosition.Title.rawValue
+        self.labelTitle = labelTitle
+        
+        addChild(labelTitle)
     }
 }
