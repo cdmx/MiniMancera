@@ -7,7 +7,6 @@ class MOptionReformaCrossing:MGame
     let actions:MOptionReformaCrossingActions
     let laneGroup:MOptionReformaCrossingLaneGroup
     let foe:MOptionReformaCrossingFoe
-    let kMaxGameTime:TimeInterval = 31
     private(set) var addedSpeed:CGFloat
     private(set) var level:Int
     private var strategy:MOptionReformaCrossingStrategy?

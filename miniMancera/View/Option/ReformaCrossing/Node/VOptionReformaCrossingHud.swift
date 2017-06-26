@@ -61,22 +61,9 @@ class VOptionReformaCrossingHud:ViewGameNode<MOptionReformaCrossing>
     
     //MARK: public
     
-    func update(elapsedTime:TimeInterval)
-    {/*
-        let deltaTime:TimeInterval = controller.model.kMaxGameTime - elapsedTime
-        
-        if deltaTime < 0
-        {
-            controller.timeOut()
-        }
-        else
-        {
-            let time:Int = Int(deltaTime)
-            let timeString:String = "\(time)"
-            labelTime.text = timeString
-        }
-        
-        let scoreString:String = "\(controller.model.score)"
-        labelScore.text = scoreString*/
+    func update(time:String, score:String)
+    {
+        labelTime.text = time
+        labelScore.text = score
     }
 }
