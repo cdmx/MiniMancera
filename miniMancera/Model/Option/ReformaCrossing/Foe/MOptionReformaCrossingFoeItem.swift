@@ -5,6 +5,7 @@ class MOptionReformaCrossingFoeItem
     let created:TimeInterval
     weak var lane:MOptionReformaCrossingLane!
     private weak var controller:COptionReformaCrossing!
+    private var strategy:MOptionReformaCrossingFoeStrategy?
     private(set) var texture:MGameTexture?
     private(set) var minSpeed:CGFloat
     private(set) var randomMaxSpeed:UInt32

@@ -2,7 +2,7 @@ import UIKit
 
 class MOptionReformaCrossingLane
 {
-    var foes:[VOptionReformaCrossingFoe]
+    var foes:[MOptionReformaCrossingFoeItem]
     private(set) var possibleFoes:[VOptionReformaCrossingFoe.Type]
     private(set) var scaleHorizontal:CGFloat
     private(set) var direction:CGFloat

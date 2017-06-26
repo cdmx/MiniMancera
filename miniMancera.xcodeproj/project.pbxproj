@@ -150,6 +150,7 @@
 		DA91C3C01F01872C0045FAE2 /* MOptionReformaCrossingFoeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3BF1F01872C0045FAE2 /* MOptionReformaCrossingFoeStrategy.swift */; };
 		DA91C3C21F018AA90045FAE2 /* MOptionReformaCrossingFoeStrategyGas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3C11F018AA90045FAE2 /* MOptionReformaCrossingFoeStrategyGas.swift */; };
 		DA91C3C41F018AB20045FAE2 /* MOptionReformaCrossingFoeStrategyBreaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3C31F018AB20045FAE2 /* MOptionReformaCrossingFoeStrategyBreaks.swift */; };
+		DA91C3C61F0192030045FAE2 /* MOptionReformaCrossingFoeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3C51F0192030045FAE2 /* MOptionReformaCrossingFoeFactory.swift */; };
 		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */; };
 		DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */; };
@@ -390,6 +391,7 @@
 		DA91C3BF1F01872C0045FAE2 /* MOptionReformaCrossingFoeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeStrategy.swift; sourceTree = "<group>"; };
 		DA91C3C11F018AA90045FAE2 /* MOptionReformaCrossingFoeStrategyGas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeStrategyGas.swift; sourceTree = "<group>"; };
 		DA91C3C31F018AB20045FAE2 /* MOptionReformaCrossingFoeStrategyBreaks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeStrategyBreaks.swift; sourceTree = "<group>"; };
+		DA91C3C51F0192030045FAE2 /* MOptionReformaCrossingFoeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeFactory.swift; sourceTree = "<group>"; };
 		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -964,6 +966,7 @@
 			isa = PBXGroup;
 			children = (
 				DA91C3B91F0171BD0045FAE2 /* MOptionReformaCrossingFoe.swift */,
+				DA91C3C51F0192030045FAE2 /* MOptionReformaCrossingFoeFactory.swift */,
 				DA91C3BB1F0181EE0045FAE2 /* MOptionReformaCrossingFoeItem.swift */,
 				DA91C3BF1F01872C0045FAE2 /* MOptionReformaCrossingFoeStrategy.swift */,
 				DA91C3C11F018AA90045FAE2 /* MOptionReformaCrossingFoeStrategyGas.swift */,
@@ -1342,6 +1345,7 @@
 				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
 				DAB70AB61EFB1B89002C706F /* VOptionPollutedGardenBubble.swift in Sources */,
 				DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */,
+				DA91C3C61F0192030045FAE2 /* MOptionReformaCrossingFoeFactory.swift in Sources */,
 				DAB4DAC91EFD903400E433B9 /* VOptionWhistlesVsZombiesMenuWhistle.swift in Sources */,
 				DA69BD5F1EFC7AC1002CEB85 /* VOptionWhistlesVsZombiesBase.swift in Sources */,
 				DACD31401EFB098C00F205A0 /* VOptionReformaCrossing1up.swift in Sources */,
