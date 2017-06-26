@@ -56,7 +56,7 @@ class MOptionReformaCrossing:MGame
     
     func startLevel()
     {
-//        laneGroup.configureForScene(size:size)
+        laneGroup.restart()
         addedSpeed = CGFloat(level) * kSpeedMultiplier
     }
     

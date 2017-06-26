@@ -37,11 +37,11 @@ class MOptionReformaCrossingLaneGroup
     
     //MARK: public
     
-    func configureForScene(size:CGSize)
+    func restart()
     {
         for lane:MOptionReformaCrossingLane in lanes
         {
-            lane.configureForScene(size:size)
+            lane.restart()
         }
     }
     

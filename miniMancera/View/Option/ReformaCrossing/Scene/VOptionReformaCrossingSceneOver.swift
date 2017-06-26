@@ -1,6 +1,6 @@
 import SpriteKit
 
-class VOptionReformaCrossingSceneOver:SKScene
+class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
 {
     private weak var controller:COptionReformaCrossing!
     private let shouldPlaySounds:Bool

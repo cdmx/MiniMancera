@@ -18,9 +18,12 @@ class MOptionReformaCrossingLane
         possibleFoes = []
         scaleHorizontal = 0
         direction = 0
-        verticalPosition = 0
-        sceneWidth = 0
         collectable = false
+        
+        let size:CGSize = MGame.sceneSize
+        let sceneHeight_2:CGFloat = size.height / 2.0
+        sceneWidth = size.width
+        verticalPosition = sceneHeight_2 + deltaVertical
     }
     
     //MARK: public
@@ -67,14 +70,9 @@ class MOptionReformaCrossingLane
         foes = []
     }
     
-    final func configureForScene(size:CGSize)
+    final func restart()
     {
         collectable = true
-        
-        sceneWidth = size.width
-        let sceneHeight_2:CGFloat = size.height / 2.0
-        verticalPosition = sceneHeight_2 + deltaVertical
-        
         foes = []
     }
     
