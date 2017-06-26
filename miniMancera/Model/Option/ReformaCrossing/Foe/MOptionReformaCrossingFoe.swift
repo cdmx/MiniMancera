@@ -1,8 +1,7 @@
-import Foundation
+import SpriteKit
 
 class MOptionReformaCrossingFoe
 {
-    weak var model:MOptionReformaCrossing!
     private var elapsedTime:TimeInterval
     private let kSpawnRate:TimeInterval = 0.1
     private let kSpawnProbability:UInt32 = 6
@@ -13,37 +12,6 @@ class MOptionReformaCrossingFoe
     }
     
     //MARK: private
-    
-    private func spawnFoe()
-    {
-        let should:Bool = shouldSpawn()
-        
-        if should
-        {
-            let lane:MOptionReformaCrossingLane = model.laneGroup.randomLane()
-            
-            let hasFoeWaiting:Bool = lane.hasFoeWaiting(
-                sceneSize:controller.model.size)
-            
-            if hasFoeWaiting
-            {
-                return
-            }
-            
-            guard
-                
-                let foe:VOptionReformaCrossingFoe = VOptionReformaCrossingFoe.randomFoe(
-                    lane:lane,
-                    controller:controller)
-                
-            else
-            {
-                return
-            }
-            
-            addChild(foe)
-        }
-    }
     
     private func shouldSpawn() -> Bool
     {
@@ -57,17 +25,61 @@ class MOptionReformaCrossingFoe
         return false
     }
     
+    private func spawnFoe(scene:VOptionReformaCrossingScene)
+    {
+        let should:Bool = shouldSpawn()
+        
+        if should
+        {
+            confirmedSpawnFoe(scene:scene)
+        }
+    }
+    
+    private func confirmedSpawnFoe(scene:VOptionReformaCrossingScene)
+    {
+        let controller:ControllerGame<MOptionReformaCrossing> = scene.controller
+        
+        guard
+        
+            let lane:MOptionReformaCrossingLane = controller.model.laneGroup.randomLane()
+        
+        else
+        {
+            return
+        }
+        
+        guard
+            
+            let foe:VOptionReformaCrossingFoe = VOptionReformaCrossingFoe.randomFoe(
+                lane:lane,
+                controller:controller)
+            
+        else
+        {
+            return
+        }
+        
+        addChild(foe)
+    }
+    
     //MARK: public
     
-    func update(elapsedTime:TimeInterval)
+    func update(elapsedTime:TimeInterval, scene:SKScene)
     {
+        guard
+            
+            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
+        
+        else
+        {
+            return
+        }
+        
         let deltaTime:TimeInterval = elapsedTime - self.elapsedTime
         
         if deltaTime > kSpawnRate
         {
-            spawnFoe()
+            spawnFoe(scene:scene)
         }
-        
-        self.elapsedTime = elapsedTime
     }
 }

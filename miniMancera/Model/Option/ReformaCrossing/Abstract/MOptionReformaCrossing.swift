@@ -23,8 +23,6 @@ class MOptionReformaCrossing:MGame
         addedSpeed = 0
         
         super.init()
-        
-        foe.model = self
     }
     
     override var startSceneType:SKScene.Type?
@@ -41,6 +39,11 @@ class MOptionReformaCrossing:MGame
         {
            return kSoundBackground
         }
+    }
+    
+    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    {
+        foe.update(elapsedTime:elapsedTime, scene:scene)
     }
     
     //MARK: public

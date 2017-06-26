@@ -27,7 +27,7 @@ class MGame
         gameActive = false
     }
     
-    func update(elapsedTime:TimeInterval)
+    func update(elapsedTime:TimeInterval, scene:SKScene)
     {
     }
 }

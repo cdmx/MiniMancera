@@ -140,7 +140,16 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
                 let deltaTime:TimeInterval = currentTime - lastUpdateTime
                 elapsedTime += deltaTime
                 
-                model.update(elapsedTime:elapsedTime)
+                guard
+                    
+                    let scene:ViewGameScene<T> = scene as? ViewGameScene<T>
+                
+                else
+                {
+                    return
+                }
+                
+                model.update(elapsedTime:elapsedTime, scene:scene)
             }
             
             lastUpdateTime = currentTime

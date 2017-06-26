@@ -2,7 +2,7 @@ import SpriteKit
 
 class ViewGameScene<T:MGame>:SKScene
 {
-    private weak var controller:ControllerGame<T>!
+    private(set) weak var controller:ControllerGame<T>!
     
     required init(controller:ControllerGame<T>)
     {

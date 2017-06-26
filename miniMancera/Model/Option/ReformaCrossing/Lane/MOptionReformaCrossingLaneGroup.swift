@@ -45,10 +45,16 @@ class MOptionReformaCrossingLaneGroup
         }
     }
     
-    func randomLane() -> MOptionReformaCrossingLane
+    func randomLane() -> MOptionReformaCrossingLane?
     {
         let random:Int = Int(arc4random_uniform(countLanes))
         let lane:MOptionReformaCrossingLane = lanes[random]
+        let hasFoeWaiting:Bool = lane.hasFoeWaiting()
+        
+        if hasFoeWaiting
+        {
+            return nil
+        }
         
         return lane
     }

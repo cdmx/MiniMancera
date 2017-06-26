@@ -5,12 +5,6 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
     private let kScaleHorizontal:CGFloat = -1
     private let kDirection:CGFloat = -1
     
-    override init(deltaVertical:CGFloat)
-    {
-        super.init(deltaVertical:deltaVertical)
-        sceneWidth = MGame.sceneSize.width
-    }
-    
     override var scaleHorizontal:CGFloat
     {
         get

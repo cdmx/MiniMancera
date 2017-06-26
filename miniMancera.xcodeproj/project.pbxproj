@@ -146,6 +146,7 @@
 		DA91C3B11F0163390045FAE2 /* MOptionReformaCrossingTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3B01F0163390045FAE2 /* MOptionReformaCrossingTextures.swift */; };
 		DA91C3B31F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3B21F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift */; };
 		DA91C3BA1F0171BD0045FAE2 /* MOptionReformaCrossingFoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3B91F0171BD0045FAE2 /* MOptionReformaCrossingFoe.swift */; };
+		DA91C3BC1F0181EE0045FAE2 /* MOptionReformaCrossingFoeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3BB1F0181EE0045FAE2 /* MOptionReformaCrossingFoeItem.swift */; };
 		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */; };
 		DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */; };
@@ -382,6 +383,7 @@
 		DA91C3B01F0163390045FAE2 /* MOptionReformaCrossingTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingTextures.swift; sourceTree = "<group>"; };
 		DA91C3B21F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSounds.swift; sourceTree = "<group>"; };
 		DA91C3B91F0171BD0045FAE2 /* MOptionReformaCrossingFoe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoe.swift; sourceTree = "<group>"; };
+		DA91C3BB1F0181EE0045FAE2 /* MOptionReformaCrossingFoeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeItem.swift; sourceTree = "<group>"; };
 		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -956,6 +958,7 @@
 			isa = PBXGroup;
 			children = (
 				DA91C3B91F0171BD0045FAE2 /* MOptionReformaCrossingFoe.swift */,
+				DA91C3BB1F0181EE0045FAE2 /* MOptionReformaCrossingFoeItem.swift */,
 			);
 			path = Foe;
 			sourceTree = "<group>";
@@ -1420,6 +1423,7 @@
 				DA2892891EF66B7E00C80D3D /* CHomeSplash.swift in Sources */,
 				DA7E46711EFAC82A00466867 /* VHomeFroobContentActions.swift in Sources */,
 				DAAF2FC71EF6F6F700589BB0 /* VStoreCellPurchasing.swift in Sources */,
+				DA91C3BC1F0181EE0045FAE2 /* MOptionReformaCrossingFoeItem.swift in Sources */,
 				DACD31361EFB04D800F205A0 /* VOptionReformaCrossingBackground.swift in Sources */,
 				DACD31341EFB00C300F205A0 /* VOptionReformaCrossingSceneOver.swift in Sources */,
 				DA446A6F1EF8B59000CB38D9 /* VHomeSplashBackground.swift in Sources */,
