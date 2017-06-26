@@ -4,6 +4,6 @@
 "MOptionReformaCrossingGameOverTimeOut_descr"="MiniMancera no llegó a su junta";
 "MOptionReformaCrossingGameOverHitAndRun_title"="MiniMancera atropellado";
 "MOptionReformaCrossingGameOverHitAndRun_descr"="Cruzar es más difícil de lo que creías";
+"MOptionReformaCrossingTitle_label"="NIVEL %@";
 "VOptionReformaCrossingSceneOver_label1up"="Reintentar";
 "VOptionReformaCrossingSceneOver_labelGameOver"="Salir";
-"VOptionReformaCrossingScene_labelTitle"="NIVEL %@";

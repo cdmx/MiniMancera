@@ -7,7 +7,8 @@ class VOptionReformaCrossingTitle:SKLabelNode
     
     override init()
     {
-        super.init(fontNamed:UIFont.kFontGame)
+        super.init()
+        fontName = UIFont.kFontGame
         fontSize = kFontSize
         fontColor = SKColor.white
         zPosition = MOptionReformaCrossingZPosition.Title.rawValue

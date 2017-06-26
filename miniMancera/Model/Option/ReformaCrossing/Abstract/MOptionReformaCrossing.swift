@@ -8,6 +8,7 @@ class MOptionReformaCrossing:MGame
     let laneGroup:MOptionReformaCrossingLaneGroup
     let foe:MOptionReformaCrossingFoe
     let hud:MOptionReformaCrossingHud
+    let title:MOptionReformaCrossingTitle
     private(set) var addedSpeed:CGFloat
     private(set) var level:Int
     private var strategy:MOptionReformaCrossingStrategy?
@@ -23,6 +24,7 @@ class MOptionReformaCrossing:MGame
         laneGroup = MOptionReformaCrossingLaneGroup()
         foe = MOptionReformaCrossingFoe()
         hud = MOptionReformaCrossingHud()
+        title = MOptionReformaCrossingTitle()
         strategy = MOptionReformaCrossingStrategyBegin()
         level = kStartingLevel
         addedSpeed = 0
@@ -84,6 +86,7 @@ class MOptionReformaCrossing:MGame
     
     func startLevel()
     {
+        title.startLevel(level:level)
         laneGroup.restart()
         addedSpeed = CGFloat(level) * kSpeedMultiplier
     }

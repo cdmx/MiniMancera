@@ -4,6 +4,6 @@
 "MOptionReformaCrossingGameOverTimeOut_descr"="MiniMancera didn't get to the meeting";
 "MOptionReformaCrossingGameOverHitAndRun_title"="MiniMancera was hit";
 "MOptionReformaCrossingGameOverHitAndRun_descr"="Crossing is more dangerous than you think";
+"MOptionReformaCrossingTitle_label"="LEVEL %@";
 "VOptionReformaCrossingSceneOver_label1up"="Try again";
 "VOptionReformaCrossingSceneOver_labelGameOver"="Exit";
-"VOptionReformaCrossingScene_labelTitle"="LEVEL %@";
