@@ -161,6 +161,7 @@
 		DA91C3D61F0193880045FAE2 /* MOptionReformaCrossingFoeItemLordAudi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3D51F0193880045FAE2 /* MOptionReformaCrossingFoeItemLordAudi.swift */; };
 		DA91C3D81F0193950045FAE2 /* MOptionReformaCrossingFoeItemCyclerFemale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3D71F0193950045FAE2 /* MOptionReformaCrossingFoeItemCyclerFemale.swift */; };
 		DA91C3DA1F01A1D30045FAE2 /* VOptionReformaCrossingFoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3D91F01A1D30045FAE2 /* VOptionReformaCrossingFoe.swift */; };
+		DA91C3DC1F01AF8A0045FAE2 /* MOptionReformaCrossingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3DB1F01AF8A0045FAE2 /* MOptionReformaCrossingStrategy.swift */; };
 		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */; };
 		DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */; };
@@ -401,6 +402,7 @@
 		DA91C3D51F0193880045FAE2 /* MOptionReformaCrossingFoeItemLordAudi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeItemLordAudi.swift; sourceTree = "<group>"; };
 		DA91C3D71F0193950045FAE2 /* MOptionReformaCrossingFoeItemCyclerFemale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeItemCyclerFemale.swift; sourceTree = "<group>"; };
 		DA91C3D91F01A1D30045FAE2 /* VOptionReformaCrossingFoe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoe.swift; sourceTree = "<group>"; };
+		DA91C3DB1F01AF8A0045FAE2 /* MOptionReformaCrossingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingStrategy.swift; sourceTree = "<group>"; };
 		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -582,6 +584,7 @@
 				DA91C3A61F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift */,
 				DA91C3B01F0163390045FAE2 /* MOptionReformaCrossingTextures.swift */,
 				DA91C3B21F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift */,
+				DA91C3DB1F01AF8A0045FAE2 /* MOptionReformaCrossingStrategy.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1427,6 +1430,7 @@
 				DACD31341EFB00C300F205A0 /* VOptionReformaCrossingSceneOver.swift in Sources */,
 				DA446A6F1EF8B59000CB38D9 /* VHomeSplashBackground.swift in Sources */,
 				DA91C3CE1F0193510045FAE2 /* MOptionReformaCrossingFoeItemPolice.swift in Sources */,
+				DA91C3DC1F01AF8A0045FAE2 /* MOptionReformaCrossingStrategy.swift in Sources */,
 				DA2DFFDE1EECB16A00365F23 /* ExtensionString.swift in Sources */,
 				DA2D00201EECB68F00365F23 /* VHomeOptionsCell.swift in Sources */,
 				DA3A38751EFC06670028C35E /* MPerkWhistlesVsZombies.swift in Sources */,

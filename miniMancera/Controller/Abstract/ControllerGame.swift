@@ -94,6 +94,7 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
     
     func didMove()
     {
+        model.didMove()
     }
     
     func postScore()
