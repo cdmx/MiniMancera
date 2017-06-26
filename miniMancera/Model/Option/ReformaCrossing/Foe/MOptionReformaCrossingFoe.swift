@@ -50,9 +50,7 @@ class MOptionReformaCrossingFoe
         
         guard
             
-            let foe:VOptionReformaCrossingFoe = VOptionReformaCrossingFoe.randomFoe(
-                lane:lane,
-                controller:controller)
+            let foe:MOptionReformaCrossingFoeItem = MOptionReformaCrossingFoe.randomFoe(lane:lane)
             
         else
         {

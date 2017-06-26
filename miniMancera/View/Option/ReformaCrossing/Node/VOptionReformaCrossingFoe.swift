@@ -1,32 +1,35 @@
 import SpriteKit
 
-class VOptionReformaCrossingFoe:SKSpriteNode
+class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
 {
-    let created:TimeInterval
     private weak var controller:COptionReformaCrossing!
-    private(set) weak var lane:MOptionReformaCrossingLane!
     private(set) var randomMaxSpeed:UInt32
     private(set) var minSpeed:CGFloat
     private let kActionMoving:String = "actionMoving"
-    private let kPauseDuration:TimeInterval = 1
     private let kPhysicsRemoveHeight:CGFloat = 6
     private let kPhysicsAddWidth:CGFloat = 8
     
-    init(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing, image:UIImage)
+    init?(controller:ControllerGame<MOptionReformaCrossing>, model:MOptionReformaCrossingFoeItem)
     {
-        let texture:SKTexture = SKTexture(image:image)
-        let size:CGSize = texture.size()
-        self.controller = controller
-        self.lane = lane
-        randomMaxSpeed = 0
-        minSpeed = 0
-        created = Date().timeIntervalSince1970
+        guard
+            
+            let texture:MGameTexture = model.texture
+            
+            else
+        {
+            return nil
+        }
         
-        super.init(texture:texture, color:UIColor.clear, size:size)
-        movement()
-        scale()
+        super.init(
+            controller:controller,
+            texture:texture.texture,
+            size:texture.size,
+            zPosition:MOptionReformaCrossingZPosition.Foe.rawValue)
+        
+        let lane:MOptionReformaCrossingLane = model.lane
+        xScale = lane.scaleHorizontal
+        movement(lane:lane)
         startPhysics(size:size)
-        lane.foes.append(self)
     }
     
     required init?(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
@@ -41,12 +44,7 @@ class VOptionReformaCrossingFoe:SKSpriteNode
     
     //MARK: private
     
-    private func scale()
-    {
-        xScale = xScale * lane.scaleHorizontal
-    }
-    
-    private func movement()
+    private func movement(lane:MOptionReformaCrossingLane)
     {
         let startingPoint:CGPoint = lane.foeInitialPoint(foe:self)
         let endingPoint:CGPoint = lane.foeEndingPoint(foe:self)
@@ -118,7 +116,7 @@ class VOptionReformaCrossingFoe:SKSpriteNode
             
             let actionMoving:SKAction = action(forKey:kActionMoving)
             
-        else
+            else
         {
             return
         }
@@ -134,7 +132,7 @@ class VOptionReformaCrossingFoe:SKSpriteNode
             
             let actionMoving:SKAction = action(forKey:kActionMoving)
             
-        else
+            else
         {
             return
         }

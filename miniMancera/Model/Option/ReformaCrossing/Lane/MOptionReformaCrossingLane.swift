@@ -45,6 +45,12 @@ class MOptionReformaCrossingLane
     
     //MARK: final
     
+    final func addFoe(foe:MOptionReformaCrossingFoeItem)
+    {
+        foes.append(foe)
+        foe.lane = self
+    }
+    
     final func removeFoe(item:VOptionReformaCrossingFoe)
     {/*
         var foes:[VOptionReformaCrossingFoe] = []

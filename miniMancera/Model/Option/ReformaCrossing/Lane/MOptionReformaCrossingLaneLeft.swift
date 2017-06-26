@@ -40,7 +40,7 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
     
     override func hasFoeWaiting() -> Bool
     {   
-        for foe:VOptionReformaCrossingFoe in foes
+        for foe:MOptionReformaCrossingFoeItem in foes
         {
             let foeWidth_2:CGFloat = foe.size.width / 2.0
             let minWidth:CGFloat = sceneWidth - foeWidth_2

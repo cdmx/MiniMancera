@@ -2,9 +2,7 @@ import Foundation
 
 extension MOptionReformaCrossingFoe
 {
-    class func randomFoe(
-        lane:MOptionReformaCrossingLane,
-        controller:COptionReformaCrossing) -> MOptionReformaCrossingFoeItem?
+    class func randomFoe(lane:MOptionReformaCrossingLane) -> MOptionReformaCrossingFoeItem?
     {
         guard
             
@@ -15,9 +13,8 @@ extension MOptionReformaCrossingFoe
             return nil
         }
         
-        let foe:VOptionReformaCrossingFoe? = foeType.init(
-            lane:lane,
-            controller:controller)
+        let foe:MOptionReformaCrossingFoeItem = foeType.init()
+        lane.addFoe(foe:foe)
         
         return foe
     }
@@ -26,13 +23,12 @@ extension MOptionReformaCrossingFoe
     
     private class func foeTypeFrom(lane:MOptionReformaCrossingLane) -> MOptionReformaCrossingFoeItem.Type?
     {
-        let possibleFoes:[VOptionReformaCrossingFoe.Type] = lane.possibleFoes
-        let countIds:UInt32 = UInt32(possibleFoes.count)
+        let countIds:UInt32 = UInt32(lane.possibleFoes.count)
         
         if countIds > 0
         {
             let randomId:Int = Int(arc4random_uniform(countIds))
-            let foeType:VOptionReformaCrossingFoe.Type = possibleFoes[randomId]
+            let foeType:MOptionReformaCrossingFoeItem.Type = lane.possibleFoes[randomId]
             
             return foeType
         }
