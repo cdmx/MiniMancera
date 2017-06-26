@@ -9,7 +9,7 @@ extension VOptionReformaCrossingScene
         
         let hud:VOptionReformaCrossingHud = VOptionReformaCrossingHud(
             controller:controller)
-        self.hud = hud
+        controller.model.hud.view = hud
         
         addChild(background)
         addChild(hud)

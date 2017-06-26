@@ -19,7 +19,8 @@ class MOptionReformaCrossingStrategyBegin:MOptionReformaCrossingStrategy
                 return
             }
             
-            scene.activateGame()
+            let actionFadeIn:SKAction = model.actions.actionFadeIn
+            model.hud.view?.run(actionFadeIn)
         }
     }
 }

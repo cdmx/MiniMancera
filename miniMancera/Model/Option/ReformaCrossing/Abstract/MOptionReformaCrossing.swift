@@ -7,6 +7,7 @@ class MOptionReformaCrossing:MGame
     let actions:MOptionReformaCrossingActions
     let laneGroup:MOptionReformaCrossingLaneGroup
     let foe:MOptionReformaCrossingFoe
+    let hud:MOptionReformaCrossingHud
     private(set) var addedSpeed:CGFloat
     private(set) var level:Int
     private var strategy:MOptionReformaCrossingStrategy?
@@ -19,11 +20,12 @@ class MOptionReformaCrossing:MGame
         textures = MOptionReformaCrossingTextures()
         sounds = MOptionReformaCrossingSounds()
         actions = MOptionReformaCrossingActions()
-        foe = MOptionReformaCrossingFoe()
         laneGroup = MOptionReformaCrossingLaneGroup()
+        foe = MOptionReformaCrossingFoe()
+        hud = MOptionReformaCrossingHud()
+        strategy = MOptionReformaCrossingStrategyBegin()
         level = kStartingLevel
         addedSpeed = 0
-        strategy = MOptionReformaCrossingStrategyBegin()
         
         super.init()
     }

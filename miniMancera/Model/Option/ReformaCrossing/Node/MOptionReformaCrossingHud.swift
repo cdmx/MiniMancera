@@ -2,7 +2,7 @@ import Foundation
 
 class MOptionReformaCrossingHud
 {
-    private weak var view:VOptionReformaCrossingHud!
+    weak var view:VOptionReformaCrossingHud?
     private let kMaxGameTime:TimeInterval = 31
     
     init()

@@ -3,12 +3,9 @@ import SpriteKit
 class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
 {
     weak var player:VOptionReformaCrossingPlayer!
-    weak var hud:VOptionReformaCrossingHud!
     weak var stop:VOptionReformaCrossingStop!
     weak var menu:VOptionReformaCrossingMenu!
     weak var labelTitle:SKLabelNode?
-    let kTitleVerticalAdd:CGFloat = -12
-    let kFontSize:CGFloat = 20
     private let kWaitTransition:TimeInterval = 1.5
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
@@ -57,14 +54,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     }*/
     
     //MARK: private
-    
-    private func fadeInControls()
-    {
-        let action:SKAction = controller.model.actions.actionFadeIn
-        hud.run(action)
-//        menu.run(action)
-//        stop.run(action)
-    }
     
     private func actionsGameOver(reason:MOptionReformaCrossingGameOverProtocol)
     {
@@ -133,7 +122,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     
     func activateGame()
     {
-         fadeInControls()
          labelTitle?.removeFromParent()
 //         player.startWalking()
     }
