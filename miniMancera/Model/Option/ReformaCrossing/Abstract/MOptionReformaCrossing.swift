@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionReformaCrossing:MGame
 {
+    let textures:MOptionReformaCrossingTextures
     let laneGroup:MOptionReformaCrossingLaneGroup
     let kMaxGameTime:TimeInterval = 31
     private(set) var addedSpeed:CGFloat
@@ -12,6 +13,7 @@ class MOptionReformaCrossing:MGame
     
     required init()
     {
+        textures = MOptionReformaCrossingTextures()
         laneGroup = MOptionReformaCrossingLaneGroup()
         level = kStartingLevel
         addedSpeed = 0

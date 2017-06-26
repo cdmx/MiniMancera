@@ -3,7 +3,6 @@ import SpriteKit
 class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
 {
     private weak var controller:COptionReformaCrossing!
-    private let shouldPlaySounds:Bool
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     private let kSound1up:String = "sound1up"
     private let kTitleFontSize:CGFloat = 20
@@ -19,13 +18,24 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
     {
         super.init(controller:controller)
         
+        guard
+            
+            let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
+                controller:controller)
+        
+        else
+        {
+            return
+        }
+        
+        addChild(background)
+        
         let width_2:CGFloat = size.width / 2.0
         let height_2:CGFloat = size.height / 2.0
         let titleY:CGFloat = height_2 + kTitleAddY
         let descrY:CGFloat = height_2 + kDescrAddY
         
-        let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
-            controller:controller)
+        
         
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
 //        labelTitle.text = reason.title
@@ -74,22 +84,11 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
         return nil
     }
     
-    override func didMove(to view:SKView)
-    {
-        if shouldPlaySounds
-        {
-            let background:SKAudioNode = SKAudioNode(fileNamed:kSoundBackground)
-            background.autoplayLooped = true
-            
-            addChild(background)
-        }
-    }
-    
     //MARK: public
     
     func game1up()
     {
-        if shouldPlaySounds
+        if controller.playSounds
         {
             let action1up:SKAction = SKAction.playSoundFileNamed(
                 kSound1up,
