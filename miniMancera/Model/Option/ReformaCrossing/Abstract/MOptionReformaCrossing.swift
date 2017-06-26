@@ -9,6 +9,7 @@ class MOptionReformaCrossing:MGame
     let kMaxGameTime:TimeInterval = 31
     private(set) var addedSpeed:CGFloat
     private(set) var level:Int
+    private var strategy:MOptionReformaCrossingStrategy?
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     private let kSpeedMultiplier:CGFloat = 50
     private let kStartingLevel:Int = 1
@@ -43,6 +44,10 @@ class MOptionReformaCrossing:MGame
     
     override func update(elapsedTime:TimeInterval, scene:SKScene)
     {
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene,
+            model:self)
         foe.update(elapsedTime:elapsedTime, scene:scene)
     }
     
