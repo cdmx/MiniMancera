@@ -18,11 +18,10 @@ class MOptionReformaCrossingGameOverHitAndRun:MOptionReformaCrossingGameOverProt
         }
     }
     
-    var image:UIImage
+    func texture(textures:MOptionReformaCrossingTextures) -> MGameTexture
     {
-        get
-        {
-            return #imageLiteral(resourceName: "assetReformaCrossingPlayer10")
-        }
+        let texture:MGameTexture = textures.playerHitAndRun
+        
+        return texture
     }
 }

@@ -18,11 +18,10 @@ class MOptionReformaCrossingGameOverTimeOut:MOptionReformaCrossingGameOverProtoc
         }
     }
     
-    var image:UIImage
+    func texture(textures:MOptionReformaCrossingTextures) -> MGameTexture
     {
-        get
-        {
-            return #imageLiteral(resourceName: "assetReformaCrossingPlayer11")
-        }
+        let texture:MGameTexture = textures.playerTimeout
+        
+        return texture
     }
 }

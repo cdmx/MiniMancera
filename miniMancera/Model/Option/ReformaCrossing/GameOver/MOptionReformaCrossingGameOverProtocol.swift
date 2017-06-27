@@ -4,5 +4,6 @@ protocol MOptionReformaCrossingGameOverProtocol
 {
     var title:String { get }
     var descr:String { get }
-    var image:UIImage { get }
+    
+    func texture(textures:MOptionReformaCrossingTextures) -> MGameTexture
 }

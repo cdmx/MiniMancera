@@ -20,9 +20,14 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
         let descr:VOptionReformaCrossingGameOverDescr = VOptionReformaCrossingGameOverDescr(
             model:gameOver)
         
+        let player:VOptionReformaCrossingGameOverPlayer = VOptionReformaCrossingGameOverPlayer(
+            controller:controller,
+            gameOver:gameOver)
+        
         addChild(background)
         addChild(title)
-        addChild(descr)/*
+        addChild(descr)
+        addChild(player)/*
         
         let width_2:CGFloat = size.width / 2.0
         let height_2:CGFloat = size.height / 2.0
