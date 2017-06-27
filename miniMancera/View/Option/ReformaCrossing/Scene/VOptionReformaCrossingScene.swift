@@ -7,7 +7,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     weak var menu:VOptionReformaCrossingMenu!
     weak var labelTitle:SKLabelNode?
     private let kWaitTransition:TimeInterval = 1.5
-    private let kSceneTransitionDuration:TimeInterval = 1
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kTitleDuration:TimeInterval = 1.5
     private let kSpawnProbability:UInt32 = 6

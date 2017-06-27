@@ -19,15 +19,16 @@ class MOptionReformaCrossingHud
     {
         guard
         
-            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene,
-            let controller:COptionReformaCrossing = scene.controller as? COptionReformaCrossing
+            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
         
         else
         {
             return
         }
         
-        controller.timeOut()
+        let model:MOptionReformaCrossing = scene.controller.model
+        model.timeOut()
+        scene.run(model.sounds.soundFail)
     }
     
     private func updateStrings(scene:SKScene, score:Int)

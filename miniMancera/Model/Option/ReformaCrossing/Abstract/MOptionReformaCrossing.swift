@@ -66,13 +66,18 @@ class MOptionReformaCrossing:MGame
         super.activateGame()
     }
     
-    
-    
-    func stopAll()
+    func timeOut()
     {
         deActivateGame()
         laneGroup.stopFoes()
+        strategy = MOptionReformaCrossingStrategyEndFail()
     }
+    
+    
+    
+    
+    
+    
     
     func hitAndRun()
     {
