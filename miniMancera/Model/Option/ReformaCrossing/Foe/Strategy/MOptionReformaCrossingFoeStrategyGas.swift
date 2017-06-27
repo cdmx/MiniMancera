@@ -11,6 +11,6 @@ class MOptionReformaCrossingFoeStrategyGas:MOptionReformaCrossingFoeStrategy
     
     func update(elapsedTime:TimeInterval)
     {
-        
+        model.advance(elapsedTime:elapsedTime)
     }
 }

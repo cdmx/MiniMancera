@@ -38,9 +38,7 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
             return
         }
         
-        position = CGPoint(
-            x:trip.positionX,
-            y:trip.positionY)
+        positionWithTrip(trip:trip)
     }
     
     //MARK: private
@@ -69,5 +67,14 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
 //        lane.removeFoe(item:self)
         removeAllActions()
         removeFromParent()
+    }
+    
+    //MARK: public
+    
+    func positionWithTrip(trip:MOptionReformaCrossingFoeItemTrip)
+    {
+        position = CGPoint(
+            x:trip.positionX,
+            y:trip.positionY)
     }
 }

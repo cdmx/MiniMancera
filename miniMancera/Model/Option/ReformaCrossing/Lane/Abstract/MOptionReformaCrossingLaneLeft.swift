@@ -30,7 +30,7 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
         let endingX:CGFloat = -foeWidth_2
         let foeSpeed:CGFloat = foe.randomSpeed() + addedSpeed
         
-        let trip:MOptionReformaCrossingFoeItemTrip = MOptionReformaCrossingFoeItemTrip(
+        let trip:MOptionReformaCrossingFoeItemTripLeft = MOptionReformaCrossingFoeItemTripLeft(
             speed:foeSpeed,
             initialX:initialX,
             endingX:endingX,

@@ -52,4 +52,28 @@ class MOptionReformaCrossingFoeItem
     {
         strategy?.update(elapsedTime:elapsedTime)
     }
+    
+    func advance(elapsedTime:TimeInterval)
+    {
+        guard
+            
+            let trip:MOptionReformaCrossingFoeItemTrip = self.trip
+        
+        else
+        {
+            return
+        }
+        
+        let reachedDestination:Bool = trip.reachedDestination()
+        
+        if reachedDestination
+        {
+            print("remove foe")
+        }
+        else
+        {
+            trip.advance(elapsedTime:elapsedTime)
+            view.positionWithTrip(trip:trip)
+        }
+    }
 }
