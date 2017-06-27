@@ -36,6 +36,11 @@ class MOptionReformaCrossingFoeItemTrip
         lastElapsedTime = elapsedTime
     }
     
+    func breaks()
+    {
+        lastElapsedTime = nil
+    }
+    
     func advanceWithDelta(delta:CGFloat)
     {
         

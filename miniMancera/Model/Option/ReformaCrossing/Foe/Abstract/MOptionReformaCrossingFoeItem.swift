@@ -34,10 +34,11 @@ class MOptionReformaCrossingFoeItem
     
     func strategyGas()
     {
+        trip?.breaks()
         strategy = MOptionReformaCrossingFoeStrategyGas(model:self)
     }
     
-    func strategyBreaks()
+    func breaks()
     {
         strategy = MOptionReformaCrossingFoeStrategyBreaks(model:self)
     }

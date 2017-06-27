@@ -38,11 +38,11 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
         
         if modelA.created < modelB.created
         {
-            modelB.strategyBreaks()
+            modelB.breaks()
         }
         else
         {
-            modelA.strategyBreaks()
+            modelA.breaks()
         }
     }
     

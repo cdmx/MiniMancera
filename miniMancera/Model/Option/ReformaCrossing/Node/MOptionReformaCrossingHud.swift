@@ -4,8 +4,7 @@ class MOptionReformaCrossingHud
 {
     weak var view:VOptionReformaCrossingHud?
     private var elapsedTime:TimeInterval
-//    private let kMaxTime:TimeInterval = 32
-    private let kMaxTime:TimeInterval = 7
+    private let kMaxTime:TimeInterval = 32
     private let kElapsedTimeDelta:TimeInterval = 0.1
     
     init()
