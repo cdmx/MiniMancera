@@ -8,15 +8,16 @@ extension MOptionReformaCrossingFoe
     {
         guard
             
-            let foeType:MOptionReformaCrossingFoeItem.Type = foeTypeFrom(lane:lane),
-            let foe:MOptionReformaCrossingFoeItem = foeType.init(
-                model:model,
-                lane:lane)
+            let foeType:MOptionReformaCrossingFoeItem.Type = foeTypeFrom(lane:lane)
             
         else
         {
             return nil
         }
+        
+        let foe:MOptionReformaCrossingFoeItem = foeType.init(
+            model:model,
+            lane:lane)
         
         return foe
     }

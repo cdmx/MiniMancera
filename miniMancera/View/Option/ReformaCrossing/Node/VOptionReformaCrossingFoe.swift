@@ -29,16 +29,7 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
     
     override func positionStart()
     {
-        guard
-            
-            let trip:MOptionReformaCrossingFoeItemTrip = model.trip
-        
-        else
-        {
-            return
-        }
-        
-        positionWithTrip(trip:trip)
+        positionWithTrip()
     }
     
     //MARK: private
@@ -71,10 +62,10 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
     
     //MARK: public
     
-    func positionWithTrip(trip:MOptionReformaCrossingFoeItemTrip)
+    func positionWithTrip()
     {
         position = CGPoint(
-            x:trip.positionX,
-            y:trip.positionY)
+            x:model.trip.positionX,
+            y:model.trip.positionY)
     }
 }

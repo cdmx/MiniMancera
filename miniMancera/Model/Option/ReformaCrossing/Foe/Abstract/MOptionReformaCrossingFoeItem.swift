@@ -52,15 +52,6 @@ class MOptionReformaCrossingFoeItem
     
     func advance(elapsedTime:TimeInterval)
     {
-        guard
-            
-            let trip:MOptionReformaCrossingFoeItemTrip = self.trip
-        
-        else
-        {
-            return
-        }
-        
         let reachedDestination:Bool = trip.reachedDestination()
         
         if reachedDestination
@@ -70,7 +61,7 @@ class MOptionReformaCrossingFoeItem
         else
         {
             trip.advance(elapsedTime:elapsedTime)
-            view.positionWithTrip(trip:trip)
+            view.positionWithTrip()
         }
     }
 }
