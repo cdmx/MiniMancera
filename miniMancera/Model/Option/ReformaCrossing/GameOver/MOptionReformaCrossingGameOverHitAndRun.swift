@@ -18,6 +18,14 @@ class MOptionReformaCrossingGameOverHitAndRun:MOptionReformaCrossingGameOverProt
         }
     }
     
+    var keepAdvancing:Bool
+    {
+        get
+        {
+            return true
+        }
+    }
+    
     func texture(textures:MOptionReformaCrossingTextures) -> MGameTexture
     {
         let texture:MGameTexture = textures.playerHitAndRun

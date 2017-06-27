@@ -16,6 +16,25 @@ class MOptionReformaCrossingStrategyEndFail:MOptionReformaCrossingStrategyEnd
         super.init(model:model)
     }
     
+    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    {
+        guard
+            
+            let gameOver:MOptionReformaCrossingGameOverProtocol = self.gameOver
+            
+        else
+        {
+            return
+        }
+        
+        if gameOver.keepAdvancing
+        {
+            model.laneGroup.update(elapsedTime:elapsedTime)
+        }
+        
+        super.update(elapsedTime:elapsedTime, scene:scene)
+    }
+    
     override func timeOut(controller:COptionReformaCrossing)
     {
         guard

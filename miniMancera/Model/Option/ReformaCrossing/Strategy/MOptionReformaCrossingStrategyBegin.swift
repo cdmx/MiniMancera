@@ -14,6 +14,8 @@ class MOptionReformaCrossingStrategyBegin:MOptionReformaCrossingStrategy
         elapsedTime:TimeInterval,
         scene:SKScene)
     {
+        model.laneGroup.update(elapsedTime:elapsedTime)
+        
         if elapsedTime > kTimeout
         {
             model.activateGame()

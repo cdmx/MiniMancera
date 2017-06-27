@@ -18,6 +18,14 @@ class MOptionReformaCrossingGameOverTimeOut:MOptionReformaCrossingGameOverProtoc
         }
     }
     
+    var keepAdvancing:Bool
+    {
+        get
+        {
+            return false
+        }
+    }
+    
     func texture(textures:MOptionReformaCrossingTextures) -> MGameTexture
     {
         let texture:MGameTexture = textures.playerTimeout

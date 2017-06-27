@@ -2,10 +2,40 @@ import SpriteKit
 
 extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
 {
+    func contactBegin(contact:SKPhysicsContact)
+    {
+        let bodyA:SKNode? = contact.bodyA.node
+        let bodyB:SKNode? = contact.bodyB.node
+        
+        if let foe:VOptionReformaCrossingFoe = bodyA as? VOptionReformaCrossingFoe
+        {
+            contactFoeAndBody(foe:foe, body:bodyB)
+        }
+        else if let foe:VOptionReformaCrossingFoe = bodyB as? VOptionReformaCrossingFoe
+        {
+            contactFoeAndBody(foe:foe, body:bodyA)
+        }
+    }
+    
     //MARK: private
     
+    private func contactFoeAndBody(foe:VOptionReformaCrossingFoe, body:SKNode?)
+    {
+        if let player:VOptionReformaCrossingPlayer = body as? VOptionReformaCrossingPlayer
+        {
+            contactPlayerFoe(player:player, foe:foe)
+        }
+        else if let otherFoe:VOptionReformaCrossingFoe = body as? VOptionReformaCrossingFoe
+        {
+            contactFoes(foeA:foe, foeB:otherFoe)
+        }
+    }
+    
     private func contactFoes(foeA:VOptionReformaCrossingFoe, foeB:VOptionReformaCrossingFoe)
-    {/*
+    {
+        let modelA:MOptionReformaCrossingFoeItem = foeA.model
+        let modelB:MOptionReformaCrossingFoeItem = foeB.model
+        
         if foeA.created < foeB.created
         {
             foeB.hitTheBreaks()
@@ -13,7 +43,7 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
         else
         {
             foeA.hitTheBreaks()
-        }*/
+        }
     }
     
     private func contactPlayerFoe(player:VOptionReformaCrossingPlayer, foe:VOptionReformaCrossingFoe)
@@ -25,32 +55,5 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
         {
             controller.hitAndRun()
         }*/
-    }
-    
-    //MARK: public
-    
-    func contactBegin(contact:SKPhysicsContact)
-    {
-        let bodyA:SKNode? = contact.bodyA.node
-        let bodyB:SKNode? = contact.bodyB.node
-        
-        if let foeA:VOptionReformaCrossingFoe = bodyA as? VOptionReformaCrossingFoe
-        {
-            if let player:VOptionReformaCrossingPlayer = bodyB as? VOptionReformaCrossingPlayer
-            {
-                contactPlayerFoe(player:player, foe:foeA)
-            }
-            else if let foeB:VOptionReformaCrossingFoe = bodyB as? VOptionReformaCrossingFoe
-            {
-                contactFoes(foeA:foeA, foeB:foeB)
-            }
-        }
-        else if let player:VOptionReformaCrossingPlayer = bodyA as? VOptionReformaCrossingPlayer
-        {
-            if let foeB:VOptionReformaCrossingFoe = bodyB as? VOptionReformaCrossingFoe
-            {
-                contactPlayerFoe(player:player, foe:foeB)
-            }
-        }
     }
 }

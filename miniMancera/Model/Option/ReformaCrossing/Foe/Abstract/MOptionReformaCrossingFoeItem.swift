@@ -26,6 +26,8 @@ class MOptionReformaCrossingFoeItem
         minSpeed = 0
         randomMaxSpeed = 0
         trip = lane.foeTrip(foe:self)
+        
+        strategyGas()
     }
     
     //MARK: public

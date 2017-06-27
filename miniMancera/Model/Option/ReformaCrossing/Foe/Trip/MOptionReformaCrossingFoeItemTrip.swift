@@ -32,10 +32,8 @@ class MOptionReformaCrossingFoeItemTrip
             let delta:CGFloat = CGFloat(deltaTime)
             advanceWithDelta(delta:delta)
         }
-        else
-        {
-            lastElapsedTime = elapsedTime
-        }
+        
+        lastElapsedTime = elapsedTime
     }
     
     func advanceWithDelta(delta:CGFloat)

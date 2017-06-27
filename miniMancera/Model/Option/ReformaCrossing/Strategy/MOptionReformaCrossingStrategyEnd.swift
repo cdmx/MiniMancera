@@ -11,7 +11,7 @@ class MOptionReformaCrossingStrategyEnd:MOptionReformaCrossingStrategy
         self.model = model
     }
     
-    final func update(
+    func update(
         elapsedTime:TimeInterval,
         scene:SKScene)
     {

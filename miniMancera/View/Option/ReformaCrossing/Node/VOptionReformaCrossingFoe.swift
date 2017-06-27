@@ -2,7 +2,7 @@ import SpriteKit
 
 class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
 {
-    private weak var model:MOptionReformaCrossingFoeItem!
+    private(set) weak var model:MOptionReformaCrossingFoeItem!
     private let kPhysicsRemoveHeight:CGFloat = 6
     private let kPhysicsAddWidth:CGFloat = 8
     
