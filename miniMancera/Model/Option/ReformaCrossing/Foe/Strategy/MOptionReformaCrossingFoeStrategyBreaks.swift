@@ -2,7 +2,14 @@ import Foundation
 
 class MOptionReformaCrossingFoeStrategyBreaks:MOptionReformaCrossingFoeStrategy
 {
-    func update(elapsedTime:TimeInterval, foe:MOptionReformaCrossingFoe)
+    private(set) weak var model:MOptionReformaCrossingFoe!
+    
+    required init(model:MOptionReformaCrossingFoe)
+    {
+        self.model = model
+    }
+    
+    func update(elapsedTime:TimeInterval)
     {
         
     }
