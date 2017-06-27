@@ -66,9 +66,10 @@ class MOptionReformaCrossing:MGame
     
     func timeOut()
     {
+        let gameOver:MOptionReformaCrossingGameOverTimeOut = MOptionReformaCrossingGameOverTimeOut()
         deActivateGame()
         laneGroup.stopFoes()
-        strategy = MOptionReformaCrossingStrategyEndFail()
+        strategy = MOptionReformaCrossingStrategyEndFail(gameOver:gameOver)
     }
     
     func strategyWait()

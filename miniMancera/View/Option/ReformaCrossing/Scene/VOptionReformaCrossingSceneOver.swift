@@ -2,12 +2,7 @@ import SpriteKit
 
 class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
 {
-    private let kSound1up:String = "sound1up"
-    private let kTitleFontSize:CGFloat = 20
-    private let kDescrFontSize:CGFloat = 12
     private let kButtonsFontSize:CGFloat = 12
-    private let kTitleAddY:CGFloat = 167
-    private let kDescrAddY:CGFloat = 150
     private let k1upY:CGFloat = 180
     private let kGameOverY:CGFloat = 80
     private let kAnimationDuration:TimeInterval = 0.5
@@ -18,7 +13,16 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
         
         let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
             controller:controller)
+        
+        let title:VOptionReformaCrossingGameOverTitle = VOptionReformaCrossingGameOverTitle(
+            model:gameOver)
+        
+        let descr:VOptionReformaCrossingGameOverDescr = VOptionReformaCrossingGameOverDescr(
+            model:gameOver)
+        
         addChild(background)
+        addChild(title)
+        addChild(descr)/*
         
         let width_2:CGFloat = size.width / 2.0
         let height_2:CGFloat = size.height / 2.0
@@ -49,7 +53,7 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
         labelGameOver.text = String.localizedReformaCrossing(key:"VOptionReformaCrossingSceneOver_labelGameOver")
         labelGameOver.fontSize = kButtonsFontSize
         labelGameOver.fontColor = SKColor.white
-        labelGameOver.position = CGPoint(x:width_2, y:kGameOverY)
+        labelGameOver.position = CGPoint(x:width_2, y:kGameOverY)*/
         
         /*
          let texture:SKTexture = SKTexture(image:reason.image)
@@ -82,7 +86,7 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
     //MARK: public
     
     func game1up()
-    {
+    {/*
         if controller.playSounds
         {
             let action1up:SKAction = SKAction.playSoundFileNamed(
@@ -90,7 +94,7 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
                 waitForCompletion:false)
             
             run(action1up)
-        }
+        }*/
         
         let transition:SKTransition = SKTransition.crossFade(
             withDuration:kAnimationDuration)

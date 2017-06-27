@@ -9,7 +9,7 @@ class VOptionReformaCrossingGameOverTitle:SKLabelNode
     {
         super.init()
         text = model.title
-        fontName = UIFont.kFontGame
+        fontName = UIFont.kFontBold
         fontSize = kFontSize
         fontColor = SKColor.white
         zPosition = MOptionReformaCrossingZPosition.GameOverTitle.rawValue
