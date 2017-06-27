@@ -2,9 +2,7 @@ import UIKit
 
 class MOptionReformaCrossingFoeItem
 {
-    let initialPositionX:CGFloat
-    let endingPositionX:CGFloat
-    let positionY:CGFloat
+    
     let created:TimeInterval
     weak var view:VOptionReformaCrossingFoe!
     private(set) weak var lane:MOptionReformaCrossingLane!
