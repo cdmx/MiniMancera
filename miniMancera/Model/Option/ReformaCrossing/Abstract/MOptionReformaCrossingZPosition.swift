@@ -7,5 +7,7 @@ enum MOptionReformaCrossingZPosition:CGFloat
     case Hud
     case HudScore
     case HudTime
+    case GameOverTitle
+    case GameOverDescr
     case Title
 }

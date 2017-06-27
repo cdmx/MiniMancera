@@ -12,7 +12,7 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
     private let kGameOverY:CGFloat = 80
     private let kAnimationDuration:TimeInterval = 0.5
     
-    required init(controller:ControllerGame<MOptionReformaCrossing>)
+    init(controller:ControllerGame<MOptionReformaCrossing>, gameOver:MOptionReformaCrossingGameOverProtocol)
     {
         super.init(controller:controller)
         
@@ -28,13 +28,13 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
         
         
         let labelTitle:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
-//        labelTitle.text = reason.title
+        //        labelTitle.text = reason.title
         labelTitle.fontSize = kTitleFontSize
         labelTitle.fontColor = SKColor.white
         labelTitle.position = CGPoint(x:width_2, y:titleY)
         
         let labelDescr:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontBold)
-//        labelDescr.text = reason.descr
+        //        labelDescr.text = reason.descr
         labelDescr.fontSize = kDescrFontSize
         labelDescr.fontColor = SKColor.white
         labelDescr.position = CGPoint(x:width_2, y:descrY)
@@ -52,21 +52,26 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
         labelGameOver.position = CGPoint(x:width_2, y:kGameOverY)
         
         /*
-        let texture:SKTexture = SKTexture(image:reason.image)
-        let image:SKSpriteNode = SKSpriteNode(texture:texture)
-        image.position = CGPoint(x:width_2, y:height_2)
-        
-        let node1up:VOptionReformaCrossing1up = VOptionReformaCrossing1up(controller:controller)
-        let nodeGameOver:VOptionReformaCrossingEnd = VOptionReformaCrossingEnd(controller:controller)
-        
-        addChild(background)
-        addChild(labelTitle)
-        addChild(labelDescr)
-        addChild(label1up)
-        addChild(labelGameOver)
-        addChild(image)
-        addChild(node1up)
-        addChild(nodeGameOver)*/
+         let texture:SKTexture = SKTexture(image:reason.image)
+         let image:SKSpriteNode = SKSpriteNode(texture:texture)
+         image.position = CGPoint(x:width_2, y:height_2)
+         
+         let node1up:VOptionReformaCrossing1up = VOptionReformaCrossing1up(controller:controller)
+         let nodeGameOver:VOptionReformaCrossingEnd = VOptionReformaCrossingEnd(controller:controller)
+         
+         addChild(background)
+         addChild(labelTitle)
+         addChild(labelDescr)
+         addChild(label1up)
+         addChild(labelGameOver)
+         addChild(image)
+         addChild(node1up)
+         addChild(nodeGameOver)*/
+    }
+    
+    required init(controller:ControllerGame<MOptionReformaCrossing>)
+    {
+        super.init(controller:controller)
     }
     
     required init?(coder:NSCoder)
