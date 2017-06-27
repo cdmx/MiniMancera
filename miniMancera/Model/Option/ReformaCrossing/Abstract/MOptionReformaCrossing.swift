@@ -54,8 +54,6 @@ class MOptionReformaCrossing:MGame
             elapsedTime:elapsedTime,
             scene:scene,
             model:self)
-        hud.update(elapsedTime:elapsedTime, scene:scene, score:score)
-        foe.update(elapsedTime:elapsedTime, scene:scene)
     }
     
     //MARK: public
@@ -71,6 +69,11 @@ class MOptionReformaCrossing:MGame
         deActivateGame()
         laneGroup.stopFoes()
         strategy = MOptionReformaCrossingStrategyEndFail()
+    }
+    
+    func strategyWait()
+    {
+        strategy = MOptionReformaCrossingStrategyWait()
     }
     
     

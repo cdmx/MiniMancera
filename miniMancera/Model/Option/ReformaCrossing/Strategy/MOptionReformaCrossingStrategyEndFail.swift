@@ -2,12 +2,24 @@ import SpriteKit
 
 class MOptionReformaCrossingStrategyEndFail:MOptionReformaCrossingStrategyEnd
 {
-    override func timeOut(scene:VOptionReformaCrossingScene)
+    override func timeOut(controller:ControllerGame<MOptionReformaCrossing>)
     {
-        let controller:ControllerGame<MOptionReformaCrossing> = scene.controller
-        let transition:SKTransition = controller.model.actions.transitionCrossFade
-        let scene:VOptionReformaCrossingSceneOver = VOptionReformaCrossingSceneOver(
+        let model:MOptionReformaCrossing = controller.model
+        model.strategyWait()
+        
+        let transition:SKTransition = model.actions.transitionCrossFade
+        let newScene:VOptionReformaCrossingSceneOver = VOptionReformaCrossingSceneOver(
             controller:controller)
-        scene.view?.presentScene(scene, transition:transition)
+        
+        guard
+            
+            let view:SKView = controller.view as? SKView
+        
+        else
+        {
+            return
+        }
+        
+        view.presentScene(newScene, transition:transition)
     }
 }

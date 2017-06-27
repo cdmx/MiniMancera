@@ -1,9 +1,11 @@
 import SpriteKit
 
-protocol MOptionReformaCrossingStrategy
+class MOptionReformaCrossingStrategyWait:MOptionReformaCrossingStrategy
 {
     func update(
         elapsedTime:TimeInterval,
         scene:SKScene,
         model:MOptionReformaCrossing)
+    {
+    }
 }

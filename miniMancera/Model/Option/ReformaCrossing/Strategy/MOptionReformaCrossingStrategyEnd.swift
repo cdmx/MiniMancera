@@ -5,7 +5,10 @@ class MOptionReformaCrossingStrategyEnd:MOptionReformaCrossingStrategy
     private var initialTime:TimeInterval?
     private let kWait:TimeInterval = 1.5
     
-    final func update(elapsedTime:TimeInterval, scene:SKScene, model:MOptionReformaCrossing)
+    final func update(
+        elapsedTime:TimeInterval,
+        scene:SKScene,
+        model:MOptionReformaCrossing)
     {
         if let initialTime:TimeInterval = self.initialTime
         {
@@ -22,18 +25,18 @@ class MOptionReformaCrossingStrategyEnd:MOptionReformaCrossingStrategy
                     return
                 }
                 
-                timeOut(scene:scene)
+                timeOut(controller:scene.controller)
             }
         }
         else
         {
-            initialTime = elapsedTime
+            self.initialTime = elapsedTime
         }
     }
     
     //MARK: public
     
-    func timeOut(scene:VOptionReformaCrossingScene)
+    func timeOut(controller:ControllerGame<MOptionReformaCrossing>)
     {
     }
 }
