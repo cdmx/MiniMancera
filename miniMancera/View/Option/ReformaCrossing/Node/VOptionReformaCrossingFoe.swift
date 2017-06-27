@@ -2,11 +2,13 @@ import SpriteKit
 
 class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
 {
+    private weak var model:MOptionReformaCrossingFoeItem!
     private let kPhysicsRemoveHeight:CGFloat = 6
     private let kPhysicsAddWidth:CGFloat = 8
     
     init(controller:ControllerGame<MOptionReformaCrossing>, model:MOptionReformaCrossingFoeItem)
     {
+        self.model = model
         let texture:MGameTexture = model.texture
         
         super.init(
@@ -23,6 +25,22 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func positionStart()
+    {
+        guard
+            
+            let trip:MOptionReformaCrossingFoeItemTrip = model.trip
+        
+        else
+        {
+            return
+        }
+        
+        position = CGPoint(
+            x:trip.positionX,
+            y:trip.positionY)
     }
     
     //MARK: private

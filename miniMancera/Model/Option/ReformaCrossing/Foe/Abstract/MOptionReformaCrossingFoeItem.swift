@@ -8,8 +8,8 @@ class MOptionReformaCrossingFoeItem
     private(set) weak var texture:MGameTexture!
     private(set) var minSpeed:CGFloat
     private(set) var randomMaxSpeed:UInt32
+    private(set) var trip:MOptionReformaCrossingFoeItemTrip?
     private var strategy:MOptionReformaCrossingFoeStrategy?
-    private var trip:MOptionReformaCrossingFoeItemTrip?
     private let kPauseDuration:TimeInterval = 1
     
     required init?(
@@ -33,7 +33,6 @@ class MOptionReformaCrossingFoeItem
     
     func randomSpeed() -> CGFloat
     {
-        print("min \(minSpeed) max \(randomMaxSpeed)")
         let random:CGFloat = CGFloat(arc4random_uniform(randomMaxSpeed))
         let totalSpeed:CGFloat = minSpeed + random
         
