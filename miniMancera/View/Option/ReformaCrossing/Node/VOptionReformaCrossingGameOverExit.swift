@@ -10,9 +10,7 @@ class VOptionReformaCrossingGameOverExit:ViewGameNode<MOptionReformaCrossing>
         
         super.init(
             controller:controller,
-            texture:texture.texture,
-            size:texture.size,
-            zPosition:MOptionReformaCrossingZPosition.GameOverExit.rawValue)
+            texture:texture)
         isUserInteractionEnabled = true
     }
     

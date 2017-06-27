@@ -13,9 +13,7 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
         
         super.init(
             controller:controller,
-            texture:texture.texture,
-            size:texture.size,
-            zPosition:MOptionReformaCrossingZPosition.Foe.rawValue)
+            texture:texture)
         
         let lane:MOptionReformaCrossingLane = model.lane
         xScale = lane.scaleHorizontal

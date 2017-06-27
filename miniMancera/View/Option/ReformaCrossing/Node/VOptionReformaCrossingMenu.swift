@@ -10,9 +10,7 @@ class VOptionReformaCrossingMenu:ViewGameNode<MOptionReformaCrossing>
         
         super.init(
             controller:controller,
-            texture:texture.texture,
-            size:texture.size,
-            zPosition:MOptionReformaCrossingZPosition.Menu.rawValue)
+            texture:texture)
         isUserInteractionEnabled = true
         alpha = 0
     }
@@ -24,7 +22,10 @@ class VOptionReformaCrossingMenu:ViewGameNode<MOptionReformaCrossing>
     
     override func positionStart()
     {
-        
+        let sceneHeight:CGFloat = MGame.sceneSize.height
+        let width_2:CGFloat = modelTexture.width_2
+        let positionY:CGFloat = sceneHeight - kMargin
+        position = CGPoint(x:width_2, y:positionY)
     }
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
@@ -35,16 +36,4 @@ class VOptionReformaCrossingMenu:ViewGameNode<MOptionReformaCrossing>
             controller.showMenu()
         }
     }
-    
-    //MARK: private
-    /*
-    private func startPosition() -> CGPoint
-    {
-        let sceneHeight:CGFloat = controller.model.size.height
-        let sizeWidth_2:CGFloat = size.width / 2.0
-        let posY:CGFloat = sceneHeight - kMargin
-        let point:CGPoint = CGPoint(x:sizeWidth_2, y:posY)
-        
-        return point
-    }*/
 }

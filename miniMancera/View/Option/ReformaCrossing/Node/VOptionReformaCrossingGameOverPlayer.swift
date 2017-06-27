@@ -9,9 +9,7 @@ class VOptionReformaCrossingGameOverPlayer:ViewGameNode<MOptionReformaCrossing>
         
         super.init(
             controller:controller,
-            texture:texture.texture,
-            size:texture.size,
-            zPosition:MOptionReformaCrossingZPosition.GameOverPlayer.rawValue)
+            texture:texture)
     }
     
     required init?(coder:NSCoder)

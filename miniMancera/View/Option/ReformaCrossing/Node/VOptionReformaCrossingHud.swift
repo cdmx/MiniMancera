@@ -18,9 +18,7 @@ class VOptionReformaCrossingHud:ViewGameNode<MOptionReformaCrossing>
         
         super.init(
             controller:controller,
-            texture:texture.texture,
-            size:texture.size,
-            zPosition:MOptionReformaCrossingZPosition.Hud.rawValue)
+            texture:texture)
         alpha = 0
         
         let labelTime:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
