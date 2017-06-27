@@ -43,13 +43,13 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
     {   
         for foe:MOptionReformaCrossingFoeItem in foes
         {
-            let foeWidth_2:CGFloat = foe.texture.size.width / 2.0
+            let foeWidth_2:CGFloat = foe.texture.width_2
             let minWidth:CGFloat = sceneWidth - foeWidth_2
-            /*
-            if foe.position.x >= minWidth
+            
+            if foe.trip.positionX >= minWidth
             {
                 return true
-            }*/
+            }
         }
         
         return false

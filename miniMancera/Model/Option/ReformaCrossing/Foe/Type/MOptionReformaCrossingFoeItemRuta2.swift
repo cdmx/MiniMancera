@@ -3,10 +3,20 @@ import UIKit
 class MOptionReformaCrossingFoeItemRuta2:MOptionReformaCrossingFoeItem
 {
     private let kRandomMaxSpeed:UInt32 = 100
+    private weak var typeTexture:MGameTexture!
     
-    required init?(model:MOptionReformaCrossing, lane:MOptionReformaCrossingLane)
+    required init(model:MOptionReformaCrossing, lane:MOptionReformaCrossingLane)
     {
-        super.init(lane:lane, texture:model.textures.foeRuta2)
+        typeTexture = model.textures.foeRuta2
+        super.init(model:model, lane:lane)
+    }
+    
+    override weak var texture:MGameTexture!
+    {
+        get
+        {
+            return typeTexture
+        }
     }
     
     override var randomMaxSpeed:UInt32

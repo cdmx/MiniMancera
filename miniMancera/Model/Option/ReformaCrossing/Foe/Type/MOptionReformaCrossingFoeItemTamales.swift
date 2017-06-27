@@ -4,10 +4,20 @@ class MOptionReformaCrossingFoeItemTamales:MOptionReformaCrossingFoeItem
 {
     private let kRandomMaxSpeed:UInt32 = 30
     private let kMinSpeed:CGFloat = -40
+    private weak var typeTexture:MGameTexture!
     
-    required init?(model:MOptionReformaCrossing, lane:MOptionReformaCrossingLane)
+    required init(model:MOptionReformaCrossing, lane:MOptionReformaCrossingLane)
     {
-        super.init(lane:lane, texture:model.textures.foeTamales)
+        typeTexture = model.textures.foeTamales
+        super.init(model:model, lane:lane)
+    }
+    
+    override weak var texture:MGameTexture!
+    {
+        get
+        {
+            return typeTexture
+        }
     }
     
     override var randomMaxSpeed:UInt32

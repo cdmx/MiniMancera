@@ -8,19 +8,13 @@ class MOptionReformaCrossingFoeItem
     private(set) weak var texture:MGameTexture!
     private(set) var minSpeed:CGFloat
     private(set) var randomMaxSpeed:UInt32
-    private(set) var trip:MOptionReformaCrossingFoeItemTrip?
+    private(set) var trip:MOptionReformaCrossingFoeItemTrip!
     private var strategy:MOptionReformaCrossingFoeStrategy?
     
-    required init?(
+    required init(
         model:MOptionReformaCrossing,
         lane:MOptionReformaCrossingLane)
     {
-        return nil
-    }
-    
-    init(lane:MOptionReformaCrossingLane, texture:MGameTexture)
-    {
-        self.texture = texture
         self.lane = lane
         created = Date().timeIntervalSince1970
         minSpeed = 0
