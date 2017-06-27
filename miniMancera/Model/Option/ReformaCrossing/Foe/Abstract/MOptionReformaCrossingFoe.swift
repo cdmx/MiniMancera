@@ -21,7 +21,7 @@ class MOptionReformaCrossingFoe
         {
             return true
         }
-        
+        print("false")
         return false
     }
     
@@ -58,6 +58,11 @@ class MOptionReformaCrossingFoe
     }
     
     //MARK: public
+    
+    func restart()
+    {
+        elapsedTime = 0
+    }
     
     func update(elapsedTime:TimeInterval, scene:SKScene)
     {

@@ -86,6 +86,7 @@ class MOptionReformaCrossing:MGame
         level = kStartingLevel
         score = 0
         hud.restart()
+        foe.restart()
     }
     
     
