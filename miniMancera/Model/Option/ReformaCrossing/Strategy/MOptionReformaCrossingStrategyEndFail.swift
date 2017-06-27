@@ -9,25 +9,14 @@ class MOptionReformaCrossingStrategyEndFail:MOptionReformaCrossingStrategyEnd
         self.gameOver = gameOver
     }
     
-    override func timeOut(controller:ControllerGame<MOptionReformaCrossing>)
+    override func timeOut(controller:COptionReformaCrossing)
     {
-        let model:MOptionReformaCrossing = controller.model
-        model.strategyWait()
+        controller.model.strategyWait()
         
-        let transition:SKTransition = model.actions.transitionCrossFade
         let newScene:VOptionReformaCrossingSceneOver = VOptionReformaCrossingSceneOver(
             controller:controller,
             gameOver:gameOver)
         
-        guard
-            
-            let view:SKView = controller.view as? SKView
-        
-        else
-        {
-            return
-        }
-        
-        view.presentScene(newScene, transition:transition)
+        controller.presentScene(newScene:newScene)
     }
 }

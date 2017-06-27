@@ -5,14 +5,14 @@ class VOptionReformaCrossingGameOverTitle1up:SKLabelNode
     private let kPositionY:CGFloat = 180
     private let kFontSize:CGFloat = 12
     
-    init(model:MOptionReformaCrossingGameOverProtocol)
+    override init()
     {
         super.init()
-        text = model.title
+        text = String.localizedReformaCrossing(key:"VOptionReformaCrossingGameOverTitle1up_label")
         fontName = UIFont.kFontRegular
         fontSize = kFontSize
         fontColor = SKColor.white
-        zPosition = MOptionReformaCrossingZPosition.GameOverTitle.rawValue
+        zPosition = MOptionReformaCrossingZPosition.GameOverTitle1up.rawValue
         
         positionStart()
     }

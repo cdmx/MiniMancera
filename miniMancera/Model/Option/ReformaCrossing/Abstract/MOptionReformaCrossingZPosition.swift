@@ -10,5 +10,9 @@ enum MOptionReformaCrossingZPosition:CGFloat
     case GameOverTitle
     case GameOverDescr
     case GameOverPlayer
+    case GameOverTitle1up
+    case GameOverTitleExit
+    case GameOver1up
+    case GameOverExit
     case Title
 }

@@ -2,7 +2,7 @@ import SpriteKit
 
 class ViewGameNode<T:MGame>:SKSpriteNode
 {
-    private weak var controller:ControllerGame<T>!
+    private(set) weak var controller:ControllerGame<T>!
     
     init(controller:ControllerGame<T>)
     {

@@ -9,6 +9,52 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
     
     //MARK: public
     
+    func newGameScene()
+    {
+        let newScene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
+            controller:self)
+        presentScene(newScene:newScene)
+    }
+    
+    func presentScene(newScene:SKScene)
+    {
+        let transition:SKTransition = model.actions.transitionCrossFade
+        
+        guard
+            
+            let view:SKView = self.view as? SKView
+            
+        else
+        {
+            return
+        }
+        
+        view.presentScene(newScene, transition:transition)
+    }
+    
+    func game1up()
+    {
+        let sound1up:SKAction = model.sounds.sound1up
+        playSound(actionSound:sound1up)
+        
+        model.revertChanges()
+        newGameScene()
+    }
+    
+    func gamePlayNoMore()
+    {
+        let soundFail:SKAction = model.sounds.soundFail
+        playSound(actionSound:soundFail)
+        
+        exitGame()
+    }
+    
+    
+    
+    
+    
+    
+    
     func playerStop()
     {
         guard
@@ -42,21 +88,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         postScore()
     }
     
-    func game1up()
-    {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingSceneOver = view.scene as? VOptionReformaCrossingSceneOver
-            
-        else
-        {
-            return
-        }
-        
-        model.revertChanges()
-        scene.game1up()
-    }
+    
     
     func playerSuccess()
     {

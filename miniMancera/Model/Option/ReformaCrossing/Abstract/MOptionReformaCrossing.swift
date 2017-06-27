@@ -77,6 +77,11 @@ class MOptionReformaCrossing:MGame
         strategy = MOptionReformaCrossingStrategyWait()
     }
     
+    func revertChanges()
+    {
+        level = kStartingLevel
+        score = 0
+    }
     
     
     
@@ -86,12 +91,6 @@ class MOptionReformaCrossing:MGame
     func hitAndRun()
     {
         deActivateGame()
-    }
-    
-    func revertChanges()
-    {
-        level = kStartingLevel
-        score = 0
     }
     
     func startLevel()

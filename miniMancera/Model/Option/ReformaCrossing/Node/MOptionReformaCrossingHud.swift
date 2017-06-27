@@ -29,7 +29,9 @@ class MOptionReformaCrossingHud
         
         let model:MOptionReformaCrossing = scene.controller.model
         model.timeOut()
-        scene.run(model.sounds.soundFail)
+        
+        let soundFail:SKAction = model.sounds.soundFail
+        scene.controller.playSound(actionSound:soundFail)
     }
     
     private func updateStrings(scene:SKScene, score:Int)

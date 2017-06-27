@@ -18,14 +18,15 @@ class MOptionReformaCrossingStrategyEnd:MOptionReformaCrossingStrategy
             {
                 guard
                 
-                    let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
+                    let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene,
+                    let controller:COptionReformaCrossing = scene.controller as? COptionReformaCrossing
                 
                 else
                 {
                     return
                 }
                 
-                timeOut(controller:scene.controller)
+                timeOut(controller:controller)
             }
         }
         else
@@ -36,7 +37,7 @@ class MOptionReformaCrossingStrategyEnd:MOptionReformaCrossingStrategy
     
     //MARK: public
     
-    func timeOut(controller:ControllerGame<MOptionReformaCrossing>)
+    func timeOut(controller:COptionReformaCrossing)
     {
     }
 }
