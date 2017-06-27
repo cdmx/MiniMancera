@@ -36,13 +36,13 @@ extension VOptionReformaCrossingScene:SKPhysicsContactDelegate
         let modelA:MOptionReformaCrossingFoeItem = foeA.model
         let modelB:MOptionReformaCrossingFoeItem = foeB.model
         
-        if foeA.created < foeB.created
+        if modelA.created < modelB.created
         {
-            foeB.hitTheBreaks()
+            modelB.strategyBreaks()
         }
         else
         {
-            foeA.hitTheBreaks()
+            modelA.strategyBreaks()
         }
     }
     
