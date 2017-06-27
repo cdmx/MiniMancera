@@ -2,9 +2,9 @@ import Foundation
 
 class MOptionReformaCrossingFoeStrategyGas:MOptionReformaCrossingFoeStrategy
 {
-    private(set) weak var model:MOptionReformaCrossingFoe!
+    private(set) weak var model:MOptionReformaCrossingFoeItem!
     
-    required init(model:MOptionReformaCrossingFoe)
+    required init(model:MOptionReformaCrossingFoeItem)
     {
         self.model = model
     }

@@ -10,7 +10,6 @@ class MOptionReformaCrossingFoeItem
     private(set) var randomMaxSpeed:UInt32
     private(set) var trip:MOptionReformaCrossingFoeItemTrip?
     private var strategy:MOptionReformaCrossingFoeStrategy?
-    private let kPauseDuration:TimeInterval = 1
     
     required init?(
         model:MOptionReformaCrossing,
@@ -31,6 +30,16 @@ class MOptionReformaCrossingFoeItem
     
     //MARK: public
     
+    func strategyGas()
+    {
+        strategy = MOptionReformaCrossingFoeStrategyGas(model:self)
+    }
+    
+    func strategyBreaks()
+    {
+        strategy = MOptionReformaCrossingFoeStrategyBreaks(model:self)
+    }
+    
     func randomSpeed() -> CGFloat
     {
         let random:CGFloat = CGFloat(arc4random_uniform(randomMaxSpeed))
@@ -41,6 +50,6 @@ class MOptionReformaCrossingFoeItem
     
     func update(elapsedTime:TimeInterval)
     {
-        
+        strategy?.update(elapsedTime:elapsedTime)
     }
 }

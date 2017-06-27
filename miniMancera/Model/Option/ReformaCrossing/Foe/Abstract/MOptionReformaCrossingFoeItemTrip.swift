@@ -15,9 +15,17 @@ class MOptionReformaCrossingFoeItemTrip
         positionY:CGFloat)
     {
         positionX = initialX
-        self.speed = speed
         self.initialX = initialX
         self.endingX = endingX
         self.positionY = positionY
+        
+        if endingX > initialX
+        {
+            self.speed = speed
+        }
+        else
+        {
+            self.speed = -speed
+        }
     }
 }

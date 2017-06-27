@@ -2,9 +2,9 @@ import Foundation
 
 protocol MOptionReformaCrossingFoeStrategy
 {
-    weak var model:MOptionReformaCrossingFoe! { get }
+    weak var model:MOptionReformaCrossingFoeItem! { get }
     
-    init(model:MOptionReformaCrossingFoe)
+    init(model:MOptionReformaCrossingFoeItem)
     
     func update(elapsedTime:TimeInterval)
 }
