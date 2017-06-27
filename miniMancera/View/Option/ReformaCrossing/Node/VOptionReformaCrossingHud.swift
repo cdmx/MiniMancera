@@ -29,6 +29,7 @@ class VOptionReformaCrossingHud:ViewGameNode<MOptionReformaCrossing>
         labelTime.position = CGPoint(x:kTimePositionX, y:kTimePositionY)
         labelTime.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.right
         labelTime.verticalAlignmentMode = SKLabelVerticalAlignmentMode.baseline
+        labelTime.zPosition = MOptionReformaCrossingZPosition.HudTime.rawValue
         self.labelTime = labelTime
         
         let labelScore:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
@@ -37,6 +38,7 @@ class VOptionReformaCrossingHud:ViewGameNode<MOptionReformaCrossing>
         labelScore.position = CGPoint(x:kScorePositionX, y:kScorePositionY)
         labelScore.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
         labelScore.verticalAlignmentMode = SKLabelVerticalAlignmentMode.baseline
+        labelScore.zPosition = MOptionReformaCrossingZPosition.HudScore.rawValue
         self.labelScore = labelScore
         
         addChild(labelTime)
