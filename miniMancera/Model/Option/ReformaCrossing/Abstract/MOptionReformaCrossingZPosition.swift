@@ -7,6 +7,7 @@ enum MOptionReformaCrossingZPosition:CGFloat
     case Hud
     case HudScore
     case HudTime
+    case Menu
     case GameOverTitle
     case GameOverDescr
     case GameOverPlayer

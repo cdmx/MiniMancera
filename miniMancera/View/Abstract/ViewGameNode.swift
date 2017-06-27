@@ -3,6 +3,7 @@ import SpriteKit
 class ViewGameNode<T:MGame>:SKSpriteNode
 {
     private(set) weak var controller:ControllerGame<T>!
+    private(set) weak var modelTexture:MGameTexture!
     
     init(controller:ControllerGame<T>)
     {
@@ -11,16 +12,19 @@ class ViewGameNode<T:MGame>:SKSpriteNode
     
     init(
         controller:ControllerGame<T>,
-        texture:SKTexture?,
-        colour:UIColor = UIColor.clear,
-        size:CGSize,
-        zPosition:CGFloat)
+        texture:MGameTexture,
+        colour:UIColor = UIColor.clear)
     {
         self.controller = controller
+        self.modelTexture = texture
         
-        super.init(texture:texture, color:colour, size:size)
+        super.init(
+            texture:texture.texture,
+            color:colour,
+            size:texture.size)
+
+        zPosition = texture.zPosition
         positionStart()
-        self.zPosition = zPosition
     }
     
     required init?(coder:NSCoder)

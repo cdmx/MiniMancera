@@ -1,20 +1,18 @@
 import SpriteKit
 
-class VOptionReformaCrossingMenu:SKSpriteNode
+class VOptionReformaCrossingMenu:ViewGameNode<MOptionReformaCrossing>
 {
-    private weak var controller:COptionReformaCrossing!
     private let kMargin:CGFloat = 45
-    private let kZPosition:CGFloat = 10002
     
-    init(controller:COptionReformaCrossing)
+    override init(controller:ControllerGame<MOptionReformaCrossing>)
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingMenu"))
-        let size:CGSize = texture.size()
-        self.controller = controller
+        let texture:MGameTexture = controller.model.textures.menu
         
-        super.init(texture:texture, color:UIColor.clear, size:size)
-//        position = startPosition()
-        zPosition = kZPosition
+        super.init(
+            controller:controller,
+            texture:texture.texture,
+            size:texture.size,
+            zPosition:MOptionReformaCrossingZPosition.Menu.rawValue)
         isUserInteractionEnabled = true
         alpha = 0
     }
@@ -24,7 +22,12 @@ class VOptionReformaCrossingMenu:SKSpriteNode
         return nil
     }
     
-    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
+    override func positionStart()
+    {
+        
+    }
+    
+    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
         if controller.model.gameActive
         {
