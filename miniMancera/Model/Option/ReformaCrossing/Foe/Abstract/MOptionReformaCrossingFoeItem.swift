@@ -56,7 +56,8 @@ class MOptionReformaCrossingFoeItem
         
         if reachedDestination
         {
-            print("remove foe")
+            lane.removeFoe(item:self)
+            view.removeFromParent()
         }
         else
         {

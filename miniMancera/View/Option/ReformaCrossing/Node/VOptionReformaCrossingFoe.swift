@@ -53,13 +53,6 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
         self.physicsBody = physicsBody
     }
     
-    private func leaveStreet()
-    {
-//        lane.removeFoe(item:self)
-        removeAllActions()
-        removeFromParent()
-    }
-    
     //MARK: public
     
     func positionWithTrip()

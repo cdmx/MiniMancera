@@ -50,11 +50,11 @@ class MOptionReformaCrossingLane
         }
     }
     
-    final func removeFoe(item:VOptionReformaCrossingFoe)
-    {/*
-        var foes:[VOptionReformaCrossingFoe] = []
+    final func removeFoe(item:MOptionReformaCrossingFoeItem)
+    {
+        var foes:[MOptionReformaCrossingFoeItem] = []
         
-        for foe:VOptionReformaCrossingFoe in self.foes
+        for foe:MOptionReformaCrossingFoeItem in self.foes
         {
             if foe !== item
             {
@@ -62,7 +62,7 @@ class MOptionReformaCrossingLane
             }
         }
         
-        self.foes = foes*/
+        self.foes = foes
     }
     
     final func stopFoes()
