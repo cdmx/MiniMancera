@@ -130,6 +130,12 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
         lastUpdateTime = nil
     }
     
+    func restartTimer()
+    {
+        elapsedTime = 0
+        lastUpdateTime = nil
+    }
+    
     //MARK: scene delegate
     
     func update(_ currentTime:TimeInterval, for scene:SKScene)

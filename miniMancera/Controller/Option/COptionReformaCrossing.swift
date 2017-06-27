@@ -43,8 +43,9 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         let sound1up:SKAction = model.sounds.sound1up
         playSound(actionSound:sound1up)
         
-        model.revertChanges()
+        restartTimer()
         newGameScene()
+        model.revertChanges()
     }
     
     func gamePlayNoMore()

@@ -79,6 +79,7 @@ class MOptionReformaCrossing:MGame
     
     func revertChanges()
     {
+        strategy = MOptionReformaCrossingStrategyBegin()
         level = kStartingLevel
         score = 0
     }
