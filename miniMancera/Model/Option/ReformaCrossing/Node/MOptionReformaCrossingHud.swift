@@ -4,7 +4,6 @@ class MOptionReformaCrossingHud
 {
     weak var view:VOptionReformaCrossingHud?
     private var elapsedTime:TimeInterval
-    private let kTimeOutString:String = "0"
 //    private let kMaxTime:TimeInterval = 32
     private let kMaxTime:TimeInterval = 7
     private let kElapsedTimeDelta:TimeInterval = 0.1
@@ -38,23 +37,28 @@ class MOptionReformaCrossingHud
     {
         let remainTime:TimeInterval = kMaxTime - elapsedTime
         let scoreString:String = "\(score)"
-        let timeString:String
+        let time:Int
         
         if remainTime < 0
         {
-            timeString = kTimeOutString
             timeOut(scene:scene)
+            time = 0
         }
         else
         {
-            let time:Int = Int(remainTime)
-            timeString = "\(time)"
+            time = Int(remainTime)
         }
         
+        let timeString:String = "\(time)"
         view?.update(time:timeString, score:scoreString)
     }
     
     //MARK: public
+    
+    func restart()
+    {
+        elapsedTime = 0
+    }
     
     func update(elapsedTime:TimeInterval, scene:SKScene, score:Int)
     {

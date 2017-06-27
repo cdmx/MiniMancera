@@ -82,6 +82,7 @@ class MOptionReformaCrossing:MGame
         strategy = MOptionReformaCrossingStrategyBegin()
         level = kStartingLevel
         score = 0
+        hud.restart()
     }
     
     
