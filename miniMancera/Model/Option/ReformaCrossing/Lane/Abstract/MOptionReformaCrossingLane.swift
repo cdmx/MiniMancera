@@ -6,9 +6,9 @@ class MOptionReformaCrossingLane
     private(set) var possibleFoes:[MOptionReformaCrossingFoeItem.Type]
     private(set) var scaleHorizontal:CGFloat
     private(set) var direction:CGFloat
-    private(set) var verticalPosition:CGFloat
+    private(set) var positionY:CGFloat
     private(set) var sceneWidth:CGFloat
-    private var addedSpeed:CGFloat
+    private(set) var addedSpeed:CGFloat
     private var collectable:Bool
     private let deltaVertical:CGFloat
     
@@ -25,19 +25,14 @@ class MOptionReformaCrossingLane
         let size:CGSize = MGame.sceneSize
         let sceneHeight_2:CGFloat = size.height / 2.0
         sceneWidth = size.width
-        verticalPosition = sceneHeight_2 + deltaVertical
+        positionY = sceneHeight_2 + deltaVertical
     }
     
     //MARK: public
     
-    func foeInitialX(foeWidth_2:CGFloat) -> CGFloat
+    func foeTrip(foe:MOptionReformaCrossingFoeItem) -> MOptionReformaCrossingFoeItemTrip?
     {
-        return 0
-    }
-    
-    func foeEndingX(foeWidth_2:CGFloat) -> CGFloat
-    {
-        return 0
+        return nil
     }
     
     func hasFoeWaiting() -> Bool
@@ -93,7 +88,7 @@ class MOptionReformaCrossingLane
         {
             let playerY:CGFloat = position.y
             
-            if playerY > verticalPosition
+            if playerY > positionY
             {
                 collectable = false
                 

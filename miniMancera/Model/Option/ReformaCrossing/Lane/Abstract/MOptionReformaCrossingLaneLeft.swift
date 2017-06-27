@@ -21,16 +21,22 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
         }
     }
     
-    override func foeInitialX(foeWidth_2:CGFloat) -> CGFloat
+    override func foeTrip(foe:MOptionReformaCrossingFoeItem) -> MOptionReformaCrossingFoeItemTrip?
     {
-        let position:CGFloat = foeWidth_2 + sceneWidth
+        foes.append(foe)
         
-        return position
-    }
-    
-    override func foeEndingX(foeWidth_2:CGFloat) -> CGFloat
-    {
-        return foeWidth_2
+        let foeWidth_2:CGFloat = foe.texture.width_2
+        let initialX:CGFloat = foeWidth_2 + sceneWidth
+        let endingX:CGFloat = -foeWidth_2
+        let foeSpeed:CGFloat = foe.randomSpeed() + addedSpeed
+        
+        let trip:MOptionReformaCrossingFoeItemTrip = MOptionReformaCrossingFoeItemTrip(
+            speed:foeSpeed,
+            initialX:initialX,
+            endingX:endingX,
+            positionY:positionY)
+        
+        return trip
     }
     
     override func hasFoeWaiting() -> Bool
