@@ -2,12 +2,16 @@ import Foundation
 
 extension MOptionReformaCrossingFoe
 {
-    class func randomFoe(lane:MOptionReformaCrossingLane) -> MOptionReformaCrossingFoeItem?
+    class func randomFoe(
+        model:MOptionReformaCrossing,
+        lane:MOptionReformaCrossingLane) -> MOptionReformaCrossingFoeItem?
     {
         guard
             
             let foeType:MOptionReformaCrossingFoeItem.Type = foeTypeFrom(lane:lane),
-            let foe:MOptionReformaCrossingFoeItem = foeType.init(lane:lane)
+            let foe:MOptionReformaCrossingFoeItem = foeType.init(
+                model:model,
+                lane:lane)
             
         else
         {

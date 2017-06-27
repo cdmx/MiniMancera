@@ -12,7 +12,9 @@ class MOptionReformaCrossingFoeItem
     private var trip:MOptionReformaCrossingFoeItemTrip?
     private let kPauseDuration:TimeInterval = 1
     
-    required init?(lane:MOptionReformaCrossingLane)
+    required init?(
+        model:MOptionReformaCrossing,
+        lane:MOptionReformaCrossingLane)
     {
         return nil
     }
