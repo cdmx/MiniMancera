@@ -88,6 +88,7 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
     
     func notifiedEnterBackground(sender notification:Notification)
     {
+        stopTimer()
     }
     
     //MARK: public

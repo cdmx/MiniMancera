@@ -30,10 +30,6 @@ class VOptionReformaCrossingMenu:ViewGameNode<MOptionReformaCrossing>
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        if controller.model.gameActive
-        {
-            controller.stopTimer()
-            controller.showMenu()
-        }
+        controller.showMenu()
     }
 }

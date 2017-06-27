@@ -5,7 +5,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     weak var player:VOptionReformaCrossingPlayer!
     weak var stop:VOptionReformaCrossingStop!
     weak var menu:VOptionReformaCrossingMenu!
-    weak var labelTitle:SKLabelNode?
     private let kWaitTransition:TimeInterval = 1.5
     private let kSpawnFoeRate:TimeInterval = 0.1
     private let kTitleDuration:TimeInterval = 1.5
@@ -121,7 +120,7 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     
     func activateGame()
     {
-         labelTitle?.removeFromParent()
+         //labelTitle?.removeFromParent()
 //         player.startWalking()
     }
     

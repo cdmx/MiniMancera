@@ -2,11 +2,6 @@ import SpriteKit
 
 class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
 {
-    override func notifiedEnterBackground(sender notification:Notification)
-    {
-        stopTimer()
-    }
-    
     //MARK: public
     
     func newGameScene()
