@@ -8,8 +8,9 @@ class MOptionReformaCrossingLane
     private(set) var direction:CGFloat
     private(set) var verticalPosition:CGFloat
     private(set) var sceneWidth:CGFloat
-    private let deltaVertical:CGFloat
+    private var addedSpeed:CGFloat
     private var collectable:Bool
+    private let deltaVertical:CGFloat
     
     init(deltaVertical:CGFloat)
     {
@@ -19,6 +20,7 @@ class MOptionReformaCrossingLane
         scaleHorizontal = 0
         direction = 0
         collectable = false
+        addedSpeed = 0
         
         let size:CGSize = MGame.sceneSize
         let sceneHeight_2:CGFloat = size.height / 2.0
@@ -45,6 +47,14 @@ class MOptionReformaCrossingLane
     
     //MARK: final
     
+    final func update(elapsedTime:TimeInterval)
+    {
+        for foe:MOptionReformaCrossingFoeItem in foes
+        {
+            foe.update(elapsedTime:elapsedTime)
+        }
+    }
+    
     final func removeFoe(item:VOptionReformaCrossingFoe)
     {/*
         var foes:[VOptionReformaCrossingFoe] = []
@@ -70,8 +80,9 @@ class MOptionReformaCrossingLane
         foes = []*/
     }
     
-    final func restart()
+    final func restart(addedSpeed:CGFloat)
     {
+        self.addedSpeed = addedSpeed
         collectable = true
         foes = []
     }

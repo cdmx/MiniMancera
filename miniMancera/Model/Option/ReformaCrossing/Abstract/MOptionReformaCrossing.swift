@@ -9,11 +9,9 @@ class MOptionReformaCrossing:MGame
     let foe:MOptionReformaCrossingFoe
     let hud:MOptionReformaCrossingHud
     let title:MOptionReformaCrossingTitle
-    private(set) var addedSpeed:CGFloat
     private(set) var level:Int
     private var strategy:MOptionReformaCrossingStrategy?
     private let kSoundBackground:String = "soundReformaCrossing.caf"
-    private let kSpeedMultiplier:CGFloat = 50
     private let kStartingLevel:Int = 1
     
     required init()
@@ -26,7 +24,6 @@ class MOptionReformaCrossing:MGame
         hud = MOptionReformaCrossingHud()
         title = MOptionReformaCrossingTitle()
         level = kStartingLevel
-        addedSpeed = 0
         
         super.init()
         
@@ -57,6 +54,12 @@ class MOptionReformaCrossing:MGame
     }
     
     //MARK: public
+    
+    func startLevel()
+    {
+        title.startLevel(level:level)
+        laneGroup.restart(level:level)
+    }
     
     override func activateGame()
     {
@@ -95,12 +98,7 @@ class MOptionReformaCrossing:MGame
         deActivateGame()
     }
     
-    func startLevel()
-    {
-        title.startLevel(level:level)
-        laneGroup.restart()
-        addedSpeed = CGFloat(level) * kSpeedMultiplier
-    }
+    
     
     func playerSuccess()
     {

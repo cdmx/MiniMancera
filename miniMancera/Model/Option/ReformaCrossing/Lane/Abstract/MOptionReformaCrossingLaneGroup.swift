@@ -4,6 +4,7 @@ class MOptionReformaCrossingLaneGroup
 {
     let lanes:[MOptionReformaCrossingLane]
     private let countLanes:UInt32
+    private let kSpeedMultiplier:CGFloat = 50
     
     private class func factoryLanes() -> [MOptionReformaCrossingLane]
     {
@@ -37,11 +38,21 @@ class MOptionReformaCrossingLaneGroup
     
     //MARK: public
     
-    func restart()
+    func update(elapsedTime:TimeInterval)
     {
         for lane:MOptionReformaCrossingLane in lanes
         {
-            lane.restart()
+            lane.update(elapsedTime:elapsedTime)
+        }
+    }
+    
+    func restart(level:Int)
+    {
+        let addedSpeed:CGFloat = CGFloat(level) * kSpeedMultiplier
+        
+        for lane:MOptionReformaCrossingLane in lanes
+        {
+            lane.restart(addedSpeed:addedSpeed)
         }
     }
     

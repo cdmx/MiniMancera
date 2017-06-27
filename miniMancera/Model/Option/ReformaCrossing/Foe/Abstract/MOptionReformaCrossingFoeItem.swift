@@ -46,4 +46,11 @@ class MOptionReformaCrossingFoeItem
         
         return totalSpeed
     }
+    
+    //MARK: public
+    
+    func update(elapsedTime:TimeInterval)
+    {
+        
+    }
 }

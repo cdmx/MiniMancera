@@ -61,19 +61,19 @@ class MOptionReformaCrossingFoe
     
     func update(elapsedTime:TimeInterval, scene:SKScene)
     {
-        guard
-            
-            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
-        
-        else
-        {
-            return
-        }
-        
         let deltaTime:TimeInterval = elapsedTime - self.elapsedTime
         
         if deltaTime > kSpawnRate
         {
+            guard
+                
+                let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
+                
+            else
+            {
+                return
+            }
+            
             self.elapsedTime = elapsedTime
             spawnFoe(scene:scene)
         }
