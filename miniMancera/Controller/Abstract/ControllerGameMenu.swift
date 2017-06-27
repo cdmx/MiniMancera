@@ -43,18 +43,22 @@ extension ControllerGame
     
     func exitGame()
     {
-        postScore()
-        
         guard
             
-            let parent:UIViewController = UIApplication.shared.keyWindow?.rootViewController
+            let parent:ControllerParent = self.parent as? ControllerParent
             
         else
         {
             return
         }
         
-        parent.dismiss(animated:true, completion:nil)
+        parent.pop(vertical:ControllerParent.Vertical.bottom)
+    }
+    
+    func exitGameAndPostScore()
+    {
+        postScore()
+        exitGame()
     }
     
     //MARK: private
@@ -83,7 +87,7 @@ extension ControllerGame
             UIAlertActionStyle.destructive)
         { [weak self] (action:UIAlertAction) in
             
-            self?.exitGame()
+            self?.exitGameAndPostScore()
         }
         
         alert.addAction(actionResume)

@@ -32,6 +32,12 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         view.presentScene(newScene, transition:transition)
     }
     
+    func showGameOver()
+    {
+        model.strategyWait()
+        postScore()
+    }
+    
     func game1up()
     {
         let sound1up:SKAction = model.sounds.sound1up
@@ -84,8 +90,6 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         
         model.hitAndRun()
         scene.hitAndRun()
-        
-        postScore()
     }
     
     

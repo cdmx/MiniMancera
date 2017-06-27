@@ -11,7 +11,7 @@ class MOptionReformaCrossingStrategyEndFail:MOptionReformaCrossingStrategyEnd
     
     override func timeOut(controller:COptionReformaCrossing)
     {
-        controller.model.strategyWait()
+        controller.showGameOver()
         
         let newScene:VOptionReformaCrossingSceneOver = VOptionReformaCrossingSceneOver(
             controller:controller,
