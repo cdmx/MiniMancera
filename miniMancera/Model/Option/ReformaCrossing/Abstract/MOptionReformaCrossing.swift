@@ -25,11 +25,12 @@ class MOptionReformaCrossing:MGame
         foe = MOptionReformaCrossingFoe()
         hud = MOptionReformaCrossingHud()
         title = MOptionReformaCrossingTitle()
-        strategy = MOptionReformaCrossingStrategyBegin()
         level = kStartingLevel
         addedSpeed = 0
         
         super.init()
+        
+        strategy = MOptionReformaCrossingStrategyBegin(model:self)
     }
     
     override var startSceneType:SKScene.Type?
@@ -52,15 +53,14 @@ class MOptionReformaCrossing:MGame
     {
         strategy?.update(
             elapsedTime:elapsedTime,
-            scene:scene,
-            model:self)
+            scene:scene)
     }
     
     //MARK: public
     
     override func activateGame()
     {
-        strategy = MOptionReformaCrossingStrategyGame()
+        strategy = MOptionReformaCrossingStrategyGame(model:self)
         super.activateGame()
     }
     
@@ -69,17 +69,17 @@ class MOptionReformaCrossing:MGame
         let gameOver:MOptionReformaCrossingGameOverTimeOut = MOptionReformaCrossingGameOverTimeOut()
         deActivateGame()
         laneGroup.stopFoes()
-        strategy = MOptionReformaCrossingStrategyEndFail(gameOver:gameOver)
+        strategy = MOptionReformaCrossingStrategyEndFail(model:self, gameOver:gameOver)
     }
     
     func strategyWait()
     {
-        strategy = MOptionReformaCrossingStrategyWait()
+        strategy = MOptionReformaCrossingStrategyWait(model:self)
     }
     
     func revertChanges()
     {
-        strategy = MOptionReformaCrossingStrategyBegin()
+        strategy = MOptionReformaCrossingStrategyBegin(model:self)
         level = kStartingLevel
         score = 0
         hud.restart()

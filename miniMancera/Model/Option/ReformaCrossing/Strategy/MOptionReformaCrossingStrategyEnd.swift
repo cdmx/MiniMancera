@@ -2,13 +2,18 @@ import SpriteKit
 
 class MOptionReformaCrossingStrategyEnd:MOptionReformaCrossingStrategy
 {
+    private(set) var model:MOptionReformaCrossing!
     private var initialTime:TimeInterval?
     private let kWait:TimeInterval = 1.5
     
+    required init(model:MOptionReformaCrossing)
+    {
+        self.model = model
+    }
+    
     final func update(
         elapsedTime:TimeInterval,
-        scene:SKScene,
-        model:MOptionReformaCrossing)
+        scene:SKScene)
     {
         if let initialTime:TimeInterval = self.initialTime
         {
