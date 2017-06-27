@@ -222,8 +222,6 @@
 		DACD313A1EFB05FA00F205A0 /* VOptionReformaCrossingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31391EFB05FA00F205A0 /* VOptionReformaCrossingMenu.swift */; };
 		DACD313C1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD313B1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift */; };
 		DACD313E1EFB08AD00F205A0 /* VOptionReformaCrossingStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD313D1EFB08AD00F205A0 /* VOptionReformaCrossingStop.swift */; };
-		DACD31401EFB098C00F205A0 /* VOptionReformaCrossing1up.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD313F1EFB098C00F205A0 /* VOptionReformaCrossing1up.swift */; };
-		DACD31421EFB0A1100F205A0 /* VOptionReformaCrossingEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31411EFB0A1100F205A0 /* VOptionReformaCrossingEnd.swift */; };
 		DACD31441EFB0AF300F205A0 /* VOptionReformaCrossingCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31431EFB0AF300F205A0 /* VOptionReformaCrossingCoin.swift */; };
 		DAD3686E1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3686D1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift */; };
 		DAD368721EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD368711EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift */; };
@@ -481,8 +479,6 @@
 		DACD31391EFB05FA00F205A0 /* VOptionReformaCrossingMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingMenu.swift; sourceTree = "<group>"; };
 		DACD313B1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingPlayer.swift; sourceTree = "<group>"; };
 		DACD313D1EFB08AD00F205A0 /* VOptionReformaCrossingStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingStop.swift; sourceTree = "<group>"; };
-		DACD313F1EFB098C00F205A0 /* VOptionReformaCrossing1up.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossing1up.swift; sourceTree = "<group>"; };
-		DACD31411EFB0A1100F205A0 /* VOptionReformaCrossingEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingEnd.swift; sourceTree = "<group>"; };
 		DACD31431EFB0AF300F205A0 /* VOptionReformaCrossingCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingCoin.swift; sourceTree = "<group>"; };
 		DAD3686D1EFC278200CBAC5B /* VOptionWhistlesVsZombiesScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesScene.swift; sourceTree = "<group>"; };
 		DAD368711EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombies.swift; sourceTree = "<group>"; };
@@ -1148,8 +1144,6 @@
 				DACD31391EFB05FA00F205A0 /* VOptionReformaCrossingMenu.swift */,
 				DACD313B1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift */,
 				DACD313D1EFB08AD00F205A0 /* VOptionReformaCrossingStop.swift */,
-				DACD313F1EFB098C00F205A0 /* VOptionReformaCrossing1up.swift */,
-				DACD31411EFB0A1100F205A0 /* VOptionReformaCrossingEnd.swift */,
 				DACD31431EFB0AF300F205A0 /* VOptionReformaCrossingCoin.swift */,
 				DA91C3D91F01A1D30045FAE2 /* VOptionReformaCrossingFoe.swift */,
 				DAC7D3B51F01C5B2008DC416 /* VOptionReformaCrossingTitle.swift */,
@@ -1406,7 +1400,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DACD31421EFB0A1100F205A0 /* VOptionReformaCrossingEnd.swift in Sources */,
 				DA2DFFE51EECB16A00365F23 /* View.swift in Sources */,
 				DAAF2FD61EF6FBB500589BB0 /* MStoreStatusNotAvailable.swift in Sources */,
 				DA7E46811EFAEF0200466867 /* MPerkProtocol.swift in Sources */,
@@ -1448,7 +1441,6 @@
 				DAB4DAC91EFD903400E433B9 /* VOptionWhistlesVsZombiesMenuWhistle.swift in Sources */,
 				DAF37B901F02DB05004C505D /* VOptionReformaCrossingGameOverTitle1up.swift in Sources */,
 				DA69BD5F1EFC7AC1002CEB85 /* VOptionWhistlesVsZombiesBase.swift in Sources */,
-				DACD31401EFB098C00F205A0 /* VOptionReformaCrossing1up.swift in Sources */,
 				DA2DFFDD1EECB16A00365F23 /* ExtensionNSManagedObject.swift in Sources */,
 				DABD4F351EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift in Sources */,
 				DAAF2FC81EF6F6F700589BB0 /* VStoreHeader.swift in Sources */,
