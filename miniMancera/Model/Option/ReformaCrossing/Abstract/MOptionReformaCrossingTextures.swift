@@ -9,6 +9,8 @@ class MOptionReformaCrossingTextures
     let playerTimeout:MGameTexture
     let gameOver1up:MGameTexture
     let gameOverExit:MGameTexture
+    let stop:MGameTexture
+    let stopAnimated:MGameTextureAnimated
     
     let foeCyclerFemale:MGameTexture
     let foeFierroViejo:MGameTexture
@@ -19,6 +21,21 @@ class MOptionReformaCrossingTextures
     let foeTamales:MGameTexture
     let foeTaxiPink:MGameTexture
     let foeVW:MGameTexture
+    
+    private class func factoryStopTextureAnimated() -> MGameTextureAnimated
+    {
+        let images:[UIImage] = [
+            #imageLiteral(resourceName: "assetReformaCrossingStop1"),
+            #imageLiteral(resourceName: "assetReformaCrossingStop2"),
+            #imageLiteral(resourceName: "assetReformaCrossingStop3"),
+            #imageLiteral(resourceName: "assetReformaCrossingStop4"),
+            #imageLiteral(resourceName: "assetReformaCrossingStop5")]
+        
+        let texture:MGameTextureAnimated = MGameTextureAnimated(
+            images:images)
+        
+        return texture
+    }
     
     init()
     {
@@ -43,6 +60,11 @@ class MOptionReformaCrossingTextures
         gameOverExit = MGameTexture(
             image:#imageLiteral(resourceName: "assetReformaCrossingGameOver"),
             zPosition:MOptionReformaCrossingZPosition.GameOverExit.rawValue)
+        
+        stop = MGameTexture(
+            image:#imageLiteral(resourceName: "assetReformaCrossingStop0"),
+            zPosition:MOptionReformaCrossingZPosition.Stop.rawValue)
+        stopAnimated = MOptionReformaCrossingTextures.factoryStopTextureAnimated()
         
         foeCyclerFemale = MGameTexture(
             image:#imageLiteral(resourceName: "assetReformaCrossingCyclerFemale"),

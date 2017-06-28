@@ -1,6 +1,6 @@
 import SpriteKit
 
-class VOptionReformaCrossingStop:SKSpriteNode
+class VOptionReformaCrossingStop:ViewGameNode<MOptionReformaCrossing>
 {
     private weak var controller:COptionReformaCrossing!
     private var lastElapsedTime:TimeInterval
@@ -27,6 +27,10 @@ class VOptionReformaCrossingStop:SKSpriteNode
             texture5]
         
         return textures
+    }
+    
+    override init(controller:ControllerGame<MOptionReformaCrossing>)
+    {
     }
     
     init(controller:COptionReformaCrossing)
