@@ -7,6 +7,7 @@ class MOptionReformaCrossing:MGame
     let sounds:MOptionReformaCrossingSounds
     let actions:MOptionReformaCrossingActions
     let laneGroup:MOptionReformaCrossingLaneGroup
+    let player:MOptionReformaCrossingPlayer
     let foe:MOptionReformaCrossingFoe
     let stop:MOptionReformaCrossingStop
     let hud:MOptionReformaCrossingHud
@@ -23,6 +24,7 @@ class MOptionReformaCrossing:MGame
         sounds = MOptionReformaCrossingSounds()
         actions = MOptionReformaCrossingActions()
         laneGroup = MOptionReformaCrossingLaneGroup()
+        player = MOptionReformaCrossingPlayer()
         foe = MOptionReformaCrossingFoe()
         stop = MOptionReformaCrossingStop()
         hud = MOptionReformaCrossingHud()

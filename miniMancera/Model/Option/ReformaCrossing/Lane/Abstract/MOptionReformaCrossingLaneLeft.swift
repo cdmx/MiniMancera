@@ -46,7 +46,7 @@ class MOptionReformaCrossingLaneLeft:MOptionReformaCrossingLane
             let foeWidth_2:CGFloat = foe.texture.width_2
             let minWidth:CGFloat = sceneWidth - foeWidth_2
             
-            if foe.trip.positionX >= minWidth
+            if foe.trip.positionX > minWidth
             {
                 return true
             }

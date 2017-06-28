@@ -263,6 +263,7 @@
 		DAF37BDC1F037B82004C505D /* MGameTextureAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF37BDB1F037B82004C505D /* MGameTextureAnimated.swift */; };
 		DAF37BDE1F037D39004C505D /* MOptionReformaCrossingStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF37BDD1F037D39004C505D /* MOptionReformaCrossingStop.swift */; };
 		DAF37BE01F038DB8004C505D /* MOptionReformaCrossingContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF37BDF1F038DB8004C505D /* MOptionReformaCrossingContact.swift */; };
+		DAF37BE21F03A45F004C505D /* MOptionReformaCrossingPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF37BE11F03A45F004C505D /* MOptionReformaCrossingPlayer.swift */; };
 		DAF5151C1F01E2D1009A0182 /* VOptionReformaCrossingGameOverTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF5151B1F01E2D1009A0182 /* VOptionReformaCrossingGameOverTitle.swift */; };
 		DAF515201F01E2F2009A0182 /* VOptionReformaCrossingGameOverDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF5151F1F01E2F2009A0182 /* VOptionReformaCrossingGameOverDescr.swift */; };
 		DAF515221F01E58E009A0182 /* VOptionReformaCrossingGameOverPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF515211F01E58E009A0182 /* VOptionReformaCrossingGameOverPlayer.swift */; };
@@ -528,6 +529,7 @@
 		DAF37BDB1F037B82004C505D /* MGameTextureAnimated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameTextureAnimated.swift; sourceTree = "<group>"; };
 		DAF37BDD1F037D39004C505D /* MOptionReformaCrossingStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingStop.swift; sourceTree = "<group>"; };
 		DAF37BDF1F038DB8004C505D /* MOptionReformaCrossingContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingContact.swift; sourceTree = "<group>"; };
+		DAF37BE11F03A45F004C505D /* MOptionReformaCrossingPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingPlayer.swift; sourceTree = "<group>"; };
 		DAF5151B1F01E2D1009A0182 /* VOptionReformaCrossingGameOverTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingGameOverTitle.swift; sourceTree = "<group>"; };
 		DAF5151F1F01E2F2009A0182 /* VOptionReformaCrossingGameOverDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingGameOverDescr.swift; sourceTree = "<group>"; };
 		DAF515211F01E58E009A0182 /* VOptionReformaCrossingGameOverPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingGameOverPlayer.swift; sourceTree = "<group>"; };
@@ -1136,6 +1138,7 @@
 				DAC7D3B11F01C296008DC416 /* MOptionReformaCrossingHud.swift */,
 				DAC7D3B31F01C537008DC416 /* MOptionReformaCrossingTitle.swift */,
 				DAF37BDD1F037D39004C505D /* MOptionReformaCrossingStop.swift */,
+				DAF37BE11F03A45F004C505D /* MOptionReformaCrossingPlayer.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -1651,6 +1654,7 @@
 				DAF37BD11F02E98F004C505D /* MOptionReformaCrossingLaneH.swift in Sources */,
 				DACD313C1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift in Sources */,
 				DA2974E21EFF27A500300455 /* MGame.swift in Sources */,
+				DAF37BE21F03A45F004C505D /* MOptionReformaCrossingPlayer.swift in Sources */,
 				DAB70AB41EFB19F2002C706F /* VOptionPollutedGardenSceneEnd.swift in Sources */,
 				DAAF2FC31EF6F6F700589BB0 /* VStoreCellDeferred.swift in Sources */,
 				DAB70AC21EFB1EF9002C706F /* VOptionPollutedGardenFloor.swift in Sources */,

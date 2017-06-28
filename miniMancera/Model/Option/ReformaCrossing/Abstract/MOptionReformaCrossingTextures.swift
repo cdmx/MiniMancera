@@ -1,4 +1,4 @@
-import UIKit
+import SpriteKit
 
 class MOptionReformaCrossingTextures
 {
@@ -9,8 +9,13 @@ class MOptionReformaCrossingTextures
     let playerTimeout:MGameTexture
     let gameOver1up:MGameTexture
     let gameOverExit:MGameTexture
+    
     let stop:MGameTexture
     let stopAnimated:MGameTextureAnimated
+    
+    let playerStand:MGameTexture
+    let playerAnimatedWalk:MGameTextureAnimated
+    let playerAnimatedStop:MGameTextureAnimated
     
     let foeCyclerFemale:MGameTexture
     let foeFierroViejo:MGameTexture
@@ -22,7 +27,7 @@ class MOptionReformaCrossingTextures
     let foeTaxiPink:MGameTexture
     let foeVW:MGameTexture
     
-    private class func factoryStopTextureAnimated() -> MGameTextureAnimated
+    private class func factoryStopAnimated() -> MGameTextureAnimated
     {
         let images:[UIImage] = [
             #imageLiteral(resourceName: "assetReformaCrossingStop1"),
@@ -33,6 +38,44 @@ class MOptionReformaCrossingTextures
         
         let texture:MGameTextureAnimated = MGameTextureAnimated(
             images:images)
+        
+        return texture
+    }
+    
+    private class func factoryPlayerAnimatedWalk() -> MGameTextureAnimated
+    {
+        let images:[UIImage] = [
+            #imageLiteral(resourceName: "assetReformaCrossingPlayer1"),
+            #imageLiteral(resourceName: "assetReformaCrossingPlayer2"),
+            #imageLiteral(resourceName: "assetReformaCrossingPlayer3"),
+            #imageLiteral(resourceName: "assetReformaCrossingPlayer4"),
+            #imageLiteral(resourceName: "assetReformaCrossingPlayer5"),
+            #imageLiteral(resourceName: "assetReformaCrossingPlayer6")]
+        
+        let texture:MGameTextureAnimated = MGameTextureAnimated(
+            images:images)
+        
+        return texture
+    }
+    
+    private class func factoryPlayerAnimatedStop() -> MGameTextureAnimated
+    {
+        let textureWalking0:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer0"))
+        let textureWalking7:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer7"))
+        let textureWalking8:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer8"))
+        let textureWalking9:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer9"))
+        
+        let textures:[SKTexture] = [
+            textureWalking0,
+            textureWalking7,
+            textureWalking8,
+            textureWalking9,
+            textureWalking8,
+            textureWalking7,
+            textureWalking0]
+        
+        let texture:MGameTextureAnimated = MGameTextureAnimated(
+            textures:textures)
         
         return texture
     }
@@ -64,7 +107,13 @@ class MOptionReformaCrossingTextures
         stop = MGameTexture(
             image:#imageLiteral(resourceName: "assetReformaCrossingStop0"),
             zPosition:MOptionReformaCrossingZPosition.Stop.rawValue)
-        stopAnimated = MOptionReformaCrossingTextures.factoryStopTextureAnimated()
+        stopAnimated = MOptionReformaCrossingTextures.factoryStopAnimated()
+        
+        playerStand = MGameTexture(
+            image:#imageLiteral(resourceName: "assetReformaCrossingPlayer0"),
+            zPosition:MOptionReformaCrossingZPosition.Player.rawValue)
+        playerAnimatedWalk = MOptionReformaCrossingTextures.factoryPlayerAnimatedWalk()
+        playerAnimatedStop = MOptionReformaCrossingTextures.factoryPlayerAnimatedStop()
         
         foeCyclerFemale = MGameTexture(
             image:#imageLiteral(resourceName: "assetReformaCrossingCyclerFemale"),

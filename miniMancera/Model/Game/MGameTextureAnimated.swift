@@ -16,4 +16,9 @@ class MGameTextureAnimated
         
         self.textures = textures
     }
+    
+    init(textures:[SKTexture])
+    {
+        self.textures = textures
+    }
 }
