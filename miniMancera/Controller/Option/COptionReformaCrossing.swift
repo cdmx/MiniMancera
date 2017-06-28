@@ -51,26 +51,30 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         exitGame()
     }
     
-    
-    
-    
-    
-    
-    
     func playerStop()
     {
-        guard
-        
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-        
-        else
+        if model.gameActive
         {
-            return
+            guard
+                
+                let view:SKView = self.view as? SKView,
+                let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
+                
+            else
+            {
+                return
+            }
+            
+            scene.player.stopWalking()
         }
-        
-        scene.player.stopWalking()
     }
+    
+    
+    
+    
+    
+    
+    
     
     func hitAndRun()
     {

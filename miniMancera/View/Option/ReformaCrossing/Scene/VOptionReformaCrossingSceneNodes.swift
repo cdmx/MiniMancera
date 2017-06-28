@@ -18,9 +18,14 @@ extension VOptionReformaCrossingScene
         let title:VOptionReformaCrossingTitle = VOptionReformaCrossingTitle()
         controller.model.title.view = title
         
+        let stop:VOptionReformaCrossingStop = VOptionReformaCrossingStop(
+            controller:controller)
+        controller.model.stop.view = stop
+        
         addChild(background)
         addChild(hud)
         addChild(menu)
+        addChild(stop)
         addChild(title)
     }
 }

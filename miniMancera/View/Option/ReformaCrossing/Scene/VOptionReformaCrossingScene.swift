@@ -3,7 +3,6 @@ import SpriteKit
 class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
 {
     weak var player:VOptionReformaCrossingPlayer!
-    weak var stop:VOptionReformaCrossingStop!
     weak var menu:VOptionReformaCrossingMenu!
     private let kWaitTransition:TimeInterval = 1.5
     private let kSpawnFoeRate:TimeInterval = 0.1

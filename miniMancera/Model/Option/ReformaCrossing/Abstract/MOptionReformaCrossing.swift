@@ -7,6 +7,7 @@ class MOptionReformaCrossing:MGame
     let actions:MOptionReformaCrossingActions
     let laneGroup:MOptionReformaCrossingLaneGroup
     let foe:MOptionReformaCrossingFoe
+    let stop:MOptionReformaCrossingStop
     let hud:MOptionReformaCrossingHud
     let title:MOptionReformaCrossingTitle
     private(set) var level:Int
@@ -21,6 +22,7 @@ class MOptionReformaCrossing:MGame
         actions = MOptionReformaCrossingActions()
         laneGroup = MOptionReformaCrossingLaneGroup()
         foe = MOptionReformaCrossingFoe()
+        stop = MOptionReformaCrossingStop()
         hud = MOptionReformaCrossingHud()
         title = MOptionReformaCrossingTitle()
         level = kStartingLevel
