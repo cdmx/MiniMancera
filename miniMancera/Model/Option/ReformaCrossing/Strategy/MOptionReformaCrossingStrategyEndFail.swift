@@ -14,7 +14,7 @@ class MOptionReformaCrossingStrategyEndFail:MOptionReformaCrossingStrategyEnd
     {
         if gameOver.keepAdvancing
         {
-            model.laneGroup.update(
+            keepAdvancing(
                 elapsedTime:elapsedTime,
                 scene:scene)
         }

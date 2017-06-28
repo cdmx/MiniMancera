@@ -45,6 +45,20 @@ class MOptionReformaCrossingStrategyEnd:MGameStrategy<MOptionReformaCrossing>
     
     //MARK: public
     
+    func keepAdvancing(
+        elapsedTime:TimeInterval,
+        scene:SKScene)
+    {
+        model.laneGroup.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
+        model.foe.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
+        model.contact.update(
+            elapsedTime:elapsedTime)
+    }
+    
     func timeOut(controller:COptionReformaCrossing)
     {
     }

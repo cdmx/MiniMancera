@@ -4,7 +4,7 @@ class MOptionReformaCrossingStrategyEndSuccess:MOptionReformaCrossingStrategyEnd
 {
     override func update(elapsedTime:TimeInterval, scene:SKScene)
     {
-        model.laneGroup.update(
+        keepAdvancing(
             elapsedTime:elapsedTime,
             scene:scene)
         
