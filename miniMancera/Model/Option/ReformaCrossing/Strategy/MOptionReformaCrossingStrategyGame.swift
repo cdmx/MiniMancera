@@ -1,15 +1,8 @@
 import SpriteKit
 
-class MOptionReformaCrossingStrategyGame:MOptionReformaCrossingStrategy
+class MOptionReformaCrossingStrategyGame:MGameStrategy<MOptionReformaCrossing>
 {
-    private(set) var model:MOptionReformaCrossing!
-    
-    required init(model:MOptionReformaCrossing)
-    {
-        self.model = model
-    }
-    
-    func update(
+    override func update(
         elapsedTime:TimeInterval,
         scene:SKScene)
     {
