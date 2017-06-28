@@ -263,6 +263,7 @@
 		DAF37BDA1F030A93004C505D /* MOptionReformaCrossingFoeItemTripRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF37BD91F030A93004C505D /* MOptionReformaCrossingFoeItemTripRight.swift */; };
 		DAF37BDC1F037B82004C505D /* MGameTextureAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF37BDB1F037B82004C505D /* MGameTextureAnimated.swift */; };
 		DAF37BDE1F037D39004C505D /* MOptionReformaCrossingStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF37BDD1F037D39004C505D /* MOptionReformaCrossingStop.swift */; };
+		DAF37BE01F038DB8004C505D /* MOptionReformaCrossingContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF37BDF1F038DB8004C505D /* MOptionReformaCrossingContact.swift */; };
 		DAF5151C1F01E2D1009A0182 /* VOptionReformaCrossingGameOverTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF5151B1F01E2D1009A0182 /* VOptionReformaCrossingGameOverTitle.swift */; };
 		DAF515201F01E2F2009A0182 /* VOptionReformaCrossingGameOverDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF5151F1F01E2F2009A0182 /* VOptionReformaCrossingGameOverDescr.swift */; };
 		DAF515221F01E58E009A0182 /* VOptionReformaCrossingGameOverPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF515211F01E58E009A0182 /* VOptionReformaCrossingGameOverPlayer.swift */; };
@@ -528,6 +529,7 @@
 		DAF37BD91F030A93004C505D /* MOptionReformaCrossingFoeItemTripRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingFoeItemTripRight.swift; sourceTree = "<group>"; };
 		DAF37BDB1F037B82004C505D /* MGameTextureAnimated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameTextureAnimated.swift; sourceTree = "<group>"; };
 		DAF37BDD1F037D39004C505D /* MOptionReformaCrossingStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingStop.swift; sourceTree = "<group>"; };
+		DAF37BDF1F038DB8004C505D /* MOptionReformaCrossingContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingContact.swift; sourceTree = "<group>"; };
 		DAF5151B1F01E2D1009A0182 /* VOptionReformaCrossingGameOverTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingGameOverTitle.swift; sourceTree = "<group>"; };
 		DAF5151F1F01E2F2009A0182 /* VOptionReformaCrossingGameOverDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingGameOverDescr.swift; sourceTree = "<group>"; };
 		DAF515211F01E58E009A0182 /* VOptionReformaCrossingGameOverPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingGameOverPlayer.swift; sourceTree = "<group>"; };
@@ -629,6 +631,7 @@
 				DA91C3B01F0163390045FAE2 /* MOptionReformaCrossingTextures.swift */,
 				DA91C3B21F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift */,
 				DAC7D3AE1F01B9B9008DC416 /* MOptionReformaCrossingActions.swift */,
+				DAF37BDF1F038DB8004C505D /* MOptionReformaCrossingContact.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1539,6 +1542,7 @@
 				DA56679D1EF32342000055D8 /* COptionPollutedGarden.swift in Sources */,
 				DAF37BAA1F02E938004C505D /* MOptionReformaCrossingFoeFactory.swift in Sources */,
 				DAF37BCB1F02E98F004C505D /* MOptionReformaCrossingLaneB.swift in Sources */,
+				DAF37BE01F038DB8004C505D /* MOptionReformaCrossingContact.swift in Sources */,
 				DAC7D3AF1F01B9B9008DC416 /* MOptionReformaCrossingActions.swift in Sources */,
 				DA2974E61EFF399700300455 /* ControllerGameScene.swift in Sources */,
 				DA2D001A1EECB4CF00365F23 /* VHomeFooter.swift in Sources */,

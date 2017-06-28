@@ -13,6 +13,8 @@ class MOptionReformaCrossingStrategyGame:MOptionReformaCrossingStrategy
         elapsedTime:TimeInterval,
         scene:SKScene)
     {
+        model.stop.update(
+            elapsedTime:elapsedTime)
         model.hud.update(
             elapsedTime:elapsedTime,
             scene:scene,

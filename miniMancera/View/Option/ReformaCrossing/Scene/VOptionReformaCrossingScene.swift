@@ -173,6 +173,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
     
     func didBegin(_ contact:SKPhysicsContact)
     {
-        contactBegin(contact:contact)
+        controller.model.contact.addContact(contact:contact)
     }
 }

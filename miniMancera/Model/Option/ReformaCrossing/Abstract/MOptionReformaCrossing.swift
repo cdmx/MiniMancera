@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionReformaCrossing:MGame
 {
+    let contact:MOptionReformaCrossingContact
     let textures:MOptionReformaCrossingTextures
     let sounds:MOptionReformaCrossingSounds
     let actions:MOptionReformaCrossingActions
@@ -17,6 +18,7 @@ class MOptionReformaCrossing:MGame
     
     required init()
     {
+        contact = MOptionReformaCrossingContact()
         textures = MOptionReformaCrossingTextures()
         sounds = MOptionReformaCrossingSounds()
         actions = MOptionReformaCrossingActions()
