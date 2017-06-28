@@ -2,23 +2,21 @@ import SpriteKit
 
 class MOptionReformaCrossingFoeStrategyBreaks:MGameStrategy<MOptionReformaCrossingFoeItem>
 {
-    private var initialTime:TimeInterval?
-    private let kBreaksDuration:TimeInterval = 1
+    private var timeout:TimeInterval?
+    private let kDuration:TimeInterval = 1
     
     override func update(elapsedTime:TimeInterval, scene:SKScene)
     {
-        if let initialTime:TimeInterval = initialTime
+        if let timeout:TimeInterval = self.timeout
         {
-            let deltaTime:TimeInterval = elapsedTime - initialTime
-            
-            if deltaTime > kBreaksDuration
+            if elapsedTime > timeout
             {
                 model.strategyGas()
             }
         }
         else
         {
-            initialTime = elapsedTime
+            timeout = elapsedTime + kDuration
         }
     }
 }

@@ -1,9 +1,11 @@
-//
-//  MOptionReformaCrossingPlayerStrategyWalk.swift
-//  miniMancera
-//
-//  Created by zero on 6/28/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import SpriteKit
 
-import Foundation
+class MOptionReformaCrossingPlayerStrategyWalk:MGameStrategy<MOptionReformaCrossingPlayer>
+{
+    private let kSpeed:CGFloat = 70
+    
+    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    {
+        
+    }
+}

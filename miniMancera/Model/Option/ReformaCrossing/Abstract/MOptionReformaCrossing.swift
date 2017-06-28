@@ -71,6 +71,8 @@ class MOptionReformaCrossing:MGame
     override func activateGame()
     {
         strategy = MOptionReformaCrossingStrategyGame(model:self)
+        player.activateGame()
+        
         super.activateGame()
     }
     
