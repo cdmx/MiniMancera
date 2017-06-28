@@ -1,6 +1,6 @@
-import Foundation
+import SpriteKit
 
-class MOptionReformaCrossingStop
+class MOptionReformaCrossingStop:MGameUpdateProtocol
 {
     weak var view:VOptionReformaCrossingStop?
     private var shouldStop:Bool
@@ -42,5 +42,14 @@ class MOptionReformaCrossingStop
     func playerStop()
     {
         shouldStop = true
+    }
+    
+    //MARK: game update protocol
+
+    typealias modelType = MOptionReformaCrossing
+    
+    func update(elapsedTime:TimeInterval, scene:SKScene, model:MOptionReformaCrossing)
+    {
+        
     }
 }

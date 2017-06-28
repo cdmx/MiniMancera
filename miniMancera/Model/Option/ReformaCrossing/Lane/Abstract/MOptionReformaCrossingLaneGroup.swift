@@ -79,17 +79,4 @@ class MOptionReformaCrossingLaneGroup
             lane.stopFoes()
         }
     }
-    
-    func playerCollectAt(position:CGPoint) -> MOptionReformaCrossingLane?
-    {
-        for lane:MOptionReformaCrossingLane in lanes
-        {
-            if lane.playerCollectAt(position:position)
-            {
-                return lane
-            }
-        }
-        
-        return nil
-    }
 }

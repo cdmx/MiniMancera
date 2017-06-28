@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingCoin:ViewGameNode<MOptionReformaCrossing>
+class VOptionReformaCrossingCoin:ViewGameNode<MOptionReformaCrossing>
 {
     private let positionY:CGFloat
     private let kAddPositionX:CGFloat = 50
