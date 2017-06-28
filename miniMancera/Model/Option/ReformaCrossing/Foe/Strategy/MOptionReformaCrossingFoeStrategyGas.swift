@@ -4,6 +4,17 @@ class MOptionReformaCrossingFoeStrategyGas:MGameStrategy<MOptionReformaCrossingF
 {
     override func update(elapsedTime:TimeInterval, scene:SKScene)
     {
-        model.advance(elapsedTime:elapsedTime)
+        let reachedDestination:Bool = model.trip.reachedDestination()
+        
+        if reachedDestination
+        {
+            model.lane.removeFoe(item:model)
+            model.view.removeFromParent()
+        }
+        else
+        {
+            model.trip.advance(elapsedTime:elapsedTime)
+            model.view.positionWithTrip()
+        }
     }
 }

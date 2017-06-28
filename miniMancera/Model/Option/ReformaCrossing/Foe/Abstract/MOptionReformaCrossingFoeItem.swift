@@ -51,20 +51,4 @@ class MOptionReformaCrossingFoeItem
         
         return totalSpeed
     }
-    
-    func advance(elapsedTime:TimeInterval)
-    {
-        let reachedDestination:Bool = trip.reachedDestination()
-        
-        if reachedDestination
-        {
-            lane.removeFoe(item:self)
-            view.removeFromParent()
-        }
-        else
-        {
-            trip.advance(elapsedTime:elapsedTime)
-            view.positionWithTrip()
-        }
-    }
 }
