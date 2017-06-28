@@ -1,4 +1,4 @@
-import UIKit
+import SpriteKit
 
 class MOptionReformaCrossingLaneGroup
 {
@@ -38,11 +38,13 @@ class MOptionReformaCrossingLaneGroup
     
     //MARK: public
     
-    func update(elapsedTime:TimeInterval)
+    func update(elapsedTime:TimeInterval, scene:SKScene)
     {
         for lane:MOptionReformaCrossingLane in lanes
         {
-            lane.update(elapsedTime:elapsedTime)
+            lane.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
         }
     }
     

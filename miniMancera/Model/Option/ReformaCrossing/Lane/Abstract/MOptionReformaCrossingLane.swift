@@ -1,4 +1,4 @@
-import UIKit
+import SpriteKit
 
 class MOptionReformaCrossingLane
 {
@@ -42,11 +42,13 @@ class MOptionReformaCrossingLane
     
     //MARK: final
     
-    final func update(elapsedTime:TimeInterval)
+    final func update(elapsedTime:TimeInterval, scene:SKScene)
     {
         for foe:MOptionReformaCrossingFoeItem in foes
         {
-            foe.update(elapsedTime:elapsedTime)
+            foe.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
         }
     }
     

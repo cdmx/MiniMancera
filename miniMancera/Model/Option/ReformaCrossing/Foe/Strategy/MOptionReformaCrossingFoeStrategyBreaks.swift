@@ -1,17 +1,11 @@
-import Foundation
+import SpriteKit
 
-class MOptionReformaCrossingFoeStrategyBreaks:MOptionReformaCrossingFoeStrategy
+class MOptionReformaCrossingFoeStrategyBreaks:MGameStrategy<MOptionReformaCrossingFoeItem>
 {
-    private(set) weak var model:MOptionReformaCrossingFoeItem!
     private var initialTime:TimeInterval?
     private let kBreaksDuration:TimeInterval = 1
     
-    required init(model:MOptionReformaCrossingFoeItem)
-    {
-        self.model = model
-    }
-    
-    func update(elapsedTime:TimeInterval)
+    override func update(elapsedTime:TimeInterval, scene:SKScene)
     {
         if let initialTime:TimeInterval = initialTime
         {

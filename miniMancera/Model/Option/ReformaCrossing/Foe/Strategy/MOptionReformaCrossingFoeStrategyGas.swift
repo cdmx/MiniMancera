@@ -1,15 +1,8 @@
-import Foundation
+import SpriteKit
 
-class MOptionReformaCrossingFoeStrategyGas:MOptionReformaCrossingFoeStrategy
+class MOptionReformaCrossingFoeStrategyGas:MGameStrategy<MOptionReformaCrossingFoeItem>
 {
-    private(set) weak var model:MOptionReformaCrossingFoeItem!
-    
-    required init(model:MOptionReformaCrossingFoeItem)
-    {
-        self.model = model
-    }
-    
-    func update(elapsedTime:TimeInterval)
+    override func update(elapsedTime:TimeInterval, scene:SKScene)
     {
         model.advance(elapsedTime:elapsedTime)
     }

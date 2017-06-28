@@ -1,4 +1,4 @@
-import UIKit
+import SpriteKit
 
 class MOptionReformaCrossingFoeItem
 {
@@ -9,7 +9,7 @@ class MOptionReformaCrossingFoeItem
     private(set) var minSpeed:CGFloat
     private(set) var randomMaxSpeed:UInt32
     private(set) var trip:MOptionReformaCrossingFoeItemTrip!
-    private var strategy:MOptionReformaCrossingFoeStrategy?
+    private(set) var strategy:MGameStrategy<MOptionReformaCrossingFoeItem>?
     
     required init(
         model:MOptionReformaCrossing,
@@ -25,6 +25,13 @@ class MOptionReformaCrossingFoeItem
     }
     
     //MARK: public
+    
+    func update(elapsedTime:TimeInterval, scene:SKScene)
+    {
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
+    }
     
     func strategyGas()
     {
@@ -43,11 +50,6 @@ class MOptionReformaCrossingFoeItem
         let totalSpeed:CGFloat = minSpeed + random
         
         return totalSpeed
-    }
-    
-    func update(elapsedTime:TimeInterval)
-    {
-        strategy?.update(elapsedTime:elapsedTime)
     }
     
     func advance(elapsedTime:TimeInterval)

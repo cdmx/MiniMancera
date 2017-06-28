@@ -9,7 +9,8 @@ class MOptionReformaCrossingStrategyBegin:MGameStrategy<MOptionReformaCrossing>
         scene:SKScene)
     {
         model.laneGroup.update(
-            elapsedTime:elapsedTime)
+            elapsedTime:elapsedTime,
+            scene:scene)
         model.contact.update(
             elapsedTime:elapsedTime)
         

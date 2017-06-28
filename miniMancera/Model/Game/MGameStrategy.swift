@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MGameStrategy<T:MGame>
+class MGameStrategy<T:AnyObject>
 {
     private(set) weak var model:T!
     
