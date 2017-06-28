@@ -9,7 +9,7 @@ class MOptionReformaCrossingFoeItem
     private(set) var minSpeed:CGFloat
     private(set) var randomMaxSpeed:UInt32
     private(set) var trip:MOptionReformaCrossingFoeItemTrip!
-    private(set) var strategy:MGameStrategy<MOptionReformaCrossingFoeItem>?
+    private var strategy:MGameStrategy<MOptionReformaCrossingFoeItem>?
     
     required init(
         model:MOptionReformaCrossing,
