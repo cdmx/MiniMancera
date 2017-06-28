@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingHud
+class MOptionReformaCrossingHud:MGameUpdateProtocol
 {
     weak var view:VOptionReformaCrossingHud?
     private var elapsedTime:TimeInterval
@@ -59,12 +59,25 @@ class MOptionReformaCrossingHud
         elapsedTime = 0
     }
     
-    func update(elapsedTime:TimeInterval, scene:SKScene, score:Int)
+    //MARK: game update protocol
+    
+    func update(elapsedTime:TimeInterval, scene:SKScene)
     {
         let deltaElapsedTime:TimeInterval = elapsedTime - self.elapsedTime
         
         if deltaElapsedTime > kElapsedTimeDelta
         {
+            guard
+                
+                let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
+            
+            else
+            {
+                return
+            }
+            
+            let score:Int = scene.controller.model.score
+            
             self.elapsedTime = elapsedTime
             updateStrings(scene:scene, score:score)
         }

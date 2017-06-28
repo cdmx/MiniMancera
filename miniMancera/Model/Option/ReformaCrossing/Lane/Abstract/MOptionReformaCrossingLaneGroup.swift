@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingLaneGroup
+class MOptionReformaCrossingLaneGroup:MGameUpdateProtocol
 {
     let lanes:[MOptionReformaCrossingLane]
     private let countLanes:UInt32
@@ -38,16 +38,6 @@ class MOptionReformaCrossingLaneGroup
     
     //MARK: public
     
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        for lane:MOptionReformaCrossingLane in lanes
-        {
-            lane.update(
-                elapsedTime:elapsedTime,
-                scene:scene)
-        }
-    }
-    
     func restart(level:Int)
     {
         let addedSpeed:CGFloat = CGFloat(level) * kSpeedMultiplier
@@ -77,6 +67,18 @@ class MOptionReformaCrossingLaneGroup
         for lane:MOptionReformaCrossingLane in lanes
         {
             lane.stopFoes()
+        }
+    }
+    
+    //MARK: game update protocol
+    
+    func update(elapsedTime:TimeInterval, scene:SKScene)
+    {
+        for lane:MOptionReformaCrossingLane in lanes
+        {
+            lane.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
         }
     }
 }

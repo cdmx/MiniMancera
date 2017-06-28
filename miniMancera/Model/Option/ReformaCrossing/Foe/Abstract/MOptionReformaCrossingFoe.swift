@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingFoe
+class MOptionReformaCrossingFoe:MGameUpdateProtocol
 {
     private var elapsedTime:TimeInterval
     private let kSpawnRate:TimeInterval = 0.1
@@ -66,6 +66,8 @@ class MOptionReformaCrossingFoe
     {
         elapsedTime = 0
     }
+    
+    //MARK: game update protocol
     
     func update(elapsedTime:TimeInterval, scene:SKScene)
     {

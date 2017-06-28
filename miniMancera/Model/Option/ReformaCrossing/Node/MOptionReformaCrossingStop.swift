@@ -14,7 +14,14 @@ class MOptionReformaCrossingStop:MGameUpdateProtocol
     
     //MARK: public
     
-    func update(elapsedTime:TimeInterval)
+    func playerStop()
+    {
+        shouldStop = true
+    }
+    
+    //MARK: game update protocol
+
+    func update(elapsedTime:TimeInterval, scene:SKScene)
     {
         if shouldStop
         {
@@ -37,19 +44,5 @@ class MOptionReformaCrossingStop:MGameUpdateProtocol
                 }
             }
         }
-    }
-    
-    func playerStop()
-    {
-        shouldStop = true
-    }
-    
-    //MARK: game update protocol
-
-    typealias modelType = MOptionReformaCrossing
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene, model:MOptionReformaCrossing)
-    {
-        
     }
 }

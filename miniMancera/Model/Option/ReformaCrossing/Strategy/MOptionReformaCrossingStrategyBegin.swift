@@ -2,17 +2,27 @@ import SpriteKit
 
 class MOptionReformaCrossingStrategyBegin:MGameStrategy<MOptionReformaCrossing>
 {
+    private let updateItems:[MGameUpdateProtocol]
     private let kTimeout:TimeInterval = 1.5
+    
+    override init(model:MOptionReformaCrossing)
+    {
+        updateItems = [
+            model.laneGroup,
+            model.foe,
+            model.contact]
+        
+        super.init(model:model)
+    }
     
     override func update(
         elapsedTime:TimeInterval,
         scene:SKScene)
     {
-        model.laneGroup.update(
-            elapsedTime:elapsedTime,
-            scene:scene)
-        model.contact.update(
-            elapsedTime:elapsedTime)
+        for item:MGameUpdateProtocol in updateItems
+        {
+            item.update(elapsedTime:elapsedTime, scene:scene)
+        }
         
         if elapsedTime > kTimeout
         {
