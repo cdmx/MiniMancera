@@ -33,7 +33,7 @@ class MOptionReformaCrossing:MGame
         
         super.init()
         
-        actions.createStopAnimation(textureAnimated:textures.stopAnimated)
+        actions.createAnimations(textures:textures)
         strategy = MOptionReformaCrossingStrategyBegin(model:self)
     }
     
