@@ -17,7 +17,8 @@ class MOptionReformaCrossingStrategyGame:MOptionReformaCrossingStrategy
             elapsedTime:elapsedTime,
             scene:scene,
             score:model.score)
-        model.laneGroup.update(elapsedTime:elapsedTime)
+        model.laneGroup.update(
+            elapsedTime:elapsedTime)
         model.foe.update(
             elapsedTime:elapsedTime,
             scene:scene)

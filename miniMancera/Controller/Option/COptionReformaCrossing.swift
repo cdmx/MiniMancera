@@ -55,6 +55,10 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
     {
         if model.gameActive
         {
+            model.playerStop()
+            
+            
+            /*
             guard
                 
                 let view:SKView = self.view as? SKView,
@@ -65,7 +69,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
                 return
             }
             
-            scene.player.stopWalking()
+            scene.player.stopWalking()*/
         }
     }
     

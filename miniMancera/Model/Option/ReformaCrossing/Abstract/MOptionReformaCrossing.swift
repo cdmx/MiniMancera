@@ -29,6 +29,7 @@ class MOptionReformaCrossing:MGame
         
         super.init()
         
+        actions.createStopAnimation(textureAnimated:textures.stopAnimated)
         strategy = MOptionReformaCrossingStrategyBegin(model:self)
     }
     
@@ -89,6 +90,11 @@ class MOptionReformaCrossing:MGame
         score = 0
         hud.restart()
         foe.restart()
+    }
+    
+    func playerStop()
+    {
+        stop.playerStop()
     }
     
     

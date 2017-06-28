@@ -2,13 +2,9 @@ import SpriteKit
 
 class VOptionReformaCrossingStop:ViewGameNode<MOptionReformaCrossing>
 {
-    private weak var textureAnimated:MGameTextureAnimated!
-    
     override init(controller:ControllerGame<MOptionReformaCrossing>)
     {
-        let textures:MOptionReformaCrossingTextures = controller.model.textures
-        let texture:MGameTexture = textures.stop
-        textureAnimated = textures.stopAnimated
+        let texture:MGameTexture = controller.model.textures.stop
         
         super.init(
             controller:controller,
@@ -42,5 +38,18 @@ class VOptionReformaCrossingStop:ViewGameNode<MOptionReformaCrossing>
         }
         
         controller.playerStop()
+    }
+    
+    //MARK: public
+    
+    func animateStop()
+    {
+        let action:SKAction = controller.model.actions.actionStopAnimation
+        run(action)
+    }
+    
+    func restoreStand()
+    {
+        texture = modelTexture.texture
     }
 }
