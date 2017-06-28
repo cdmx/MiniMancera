@@ -2,9 +2,9 @@ import SpriteKit
 
 class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
 {
-    private var lastElapsedTime:TimeInterval
+//    private var lastElapsedTime:TimeInterval
     private var stopTime:TimeInterval?
-    private let stopTextures:[SKTexture]
+//    private let stopTextures:[SKTexture]
     private let kAddPointY:CGFloat = 205
     private let kSpeed:CGFloat = 70
     private let kActionWalking:String = "actionWalking"
@@ -84,7 +84,7 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
     
     private func createActionAnimating() -> SKAction
     {
-        let animationTextures:[SKTexture] = VOptionReformaCrossingPlayer.factoryAnimationTextures()
+        let animationTextures:[SKTexture] = []//VOptionReformaCrossingPlayer.factoryAnimationTextures()
         let actionAnimate:SKAction = SKAction.animate(
             with:animationTextures,
             timePerFrame:kAnimationPerFrame,
@@ -115,14 +115,14 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
     }*/
     
     private func animateStop()
-    {
+    {/*
         let actionAnimate:SKAction = SKAction.animate(
             with:stopTextures,
             timePerFrame:kStopAnimationPerFrame,
             resize:false,
             restore:false)
         
-        run(actionAnimate)
+        run(actionAnimate)*/
     }
     
     private func resumeWalking()
@@ -143,7 +143,7 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
     
     private func measureStopTime()
     {
-        stopTime = lastElapsedTime + kStopDuration
+//        stopTime = lastElapsedTime + kStopDuration
     }
     
     private func showSuccess()
@@ -153,7 +153,7 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
         let textureSuccess:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer12"))
         texture = textureSuccess
         
-        controller.playerSuccess()
+//        controller.playerSuccess()
     }
     
     private func collectLanes()
@@ -175,7 +175,7 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
     
     func update(elapsedTime:TimeInterval)
     {
-        lastElapsedTime = elapsedTime
+//        lastElapsedTime = elapsedTime
         
         if let stopTime:TimeInterval = self.stopTime
         {
