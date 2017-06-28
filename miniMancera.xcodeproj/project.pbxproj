@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA1121721F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121711F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift */; };
+		DA1121741F04448100275465 /* MOptionReformaCrossingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */; };
 		DA11DE3F1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */; };
 		DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */; };
 		DA1BDB181EF705050040FBEA /* CHomeFroob.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB171EF705050040FBEA /* CHomeFroob.swift */; };
@@ -136,7 +137,6 @@
 		DA91C3B11F0163390045FAE2 /* MOptionReformaCrossingTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3B01F0163390045FAE2 /* MOptionReformaCrossingTextures.swift */; };
 		DA91C3B31F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3B21F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift */; };
 		DA91C3DA1F01A1D30045FAE2 /* VOptionReformaCrossingFoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3D91F01A1D30045FAE2 /* VOptionReformaCrossingFoe.swift */; };
-		DA91C3E41F01B1E20045FAE2 /* VOptionReformaCrossingSceneNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3E31F01B1E20045FAE2 /* VOptionReformaCrossingSceneNodes.swift */; };
 		DA91C3EB1F01B82B0045FAE2 /* MOptionReformaCrossingStrategyBegin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3E71F01B82B0045FAE2 /* MOptionReformaCrossingStrategyBegin.swift */; };
 		DA91C3EC1F01B82B0045FAE2 /* MOptionReformaCrossingStrategyEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3E81F01B82B0045FAE2 /* MOptionReformaCrossingStrategyEnd.swift */; };
 		DA91C3ED1F01B82B0045FAE2 /* MOptionReformaCrossingStrategyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3E91F01B82B0045FAE2 /* MOptionReformaCrossingStrategyGame.swift */; };
@@ -273,6 +273,7 @@
 
 /* Begin PBXFileReference section */
 		DA1121711F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingPlayerPosition.swift; sourceTree = "<group>"; };
+		DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingMenu.swift; sourceTree = "<group>"; };
 		DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverHitAndRun.swift; sourceTree = "<group>"; };
 		DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionPurchaseExtension.swift; sourceTree = "<group>"; };
 		DA1BDB171EF705050040FBEA /* CHomeFroob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeFroob.swift; sourceTree = "<group>"; };
@@ -401,7 +402,6 @@
 		DA91C3B01F0163390045FAE2 /* MOptionReformaCrossingTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingTextures.swift; sourceTree = "<group>"; };
 		DA91C3B21F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingSounds.swift; sourceTree = "<group>"; };
 		DA91C3D91F01A1D30045FAE2 /* VOptionReformaCrossingFoe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingFoe.swift; sourceTree = "<group>"; };
-		DA91C3E31F01B1E20045FAE2 /* VOptionReformaCrossingSceneNodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingSceneNodes.swift; sourceTree = "<group>"; };
 		DA91C3E71F01B82B0045FAE2 /* MOptionReformaCrossingStrategyBegin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingStrategyBegin.swift; sourceTree = "<group>"; };
 		DA91C3E81F01B82B0045FAE2 /* MOptionReformaCrossingStrategyEnd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingStrategyEnd.swift; sourceTree = "<group>"; };
 		DA91C3E91F01B82B0045FAE2 /* MOptionReformaCrossingStrategyGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingStrategyGame.swift; sourceTree = "<group>"; };
@@ -1142,6 +1142,7 @@
 				DAC7D3B11F01C296008DC416 /* MOptionReformaCrossingHud.swift */,
 				DAC7D3B31F01C537008DC416 /* MOptionReformaCrossingTitle.swift */,
 				DAF37BDD1F037D39004C505D /* MOptionReformaCrossingStop.swift */,
+				DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -1183,7 +1184,6 @@
 			isa = PBXGroup;
 			children = (
 				DACD312F1EFB001200F205A0 /* VOptionReformaCrossingScene.swift */,
-				DA91C3E31F01B1E20045FAE2 /* VOptionReformaCrossingSceneNodes.swift */,
 				DACD31331EFB00C300F205A0 /* VOptionReformaCrossingSceneOver.swift */,
 			);
 			path = Scene;
@@ -1494,7 +1494,6 @@
 				DAB70AC01EFB1EF0002C706F /* VOptionPollutedGardenMenu.swift in Sources */,
 				DA779A031EF876D500362A44 /* MHomeSplashProtocol.swift in Sources */,
 				DA2D00B31EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift in Sources */,
-				DA91C3E41F01B1E20045FAE2 /* VOptionReformaCrossingSceneNodes.swift in Sources */,
 				DAB70AD41EFB22EC002C706F /* VOptionPollutedGardenEnd.swift in Sources */,
 				DAF37BDE1F037D39004C505D /* MOptionReformaCrossingStop.swift in Sources */,
 				DA5667851EF276CD000055D8 /* MHomeFooterSettings.swift in Sources */,
@@ -1681,6 +1680,7 @@
 				DAAF2FD51EF6FBB500589BB0 /* MStoreStatusDeferred.swift in Sources */,
 				DAF37B941F02DD70004C505D /* VOptionReformaCrossingGameOver1up.swift in Sources */,
 				DA7E46831EFAEF3000466867 /* MPerkFreeProtocol.swift in Sources */,
+				DA1121741F04448100275465 /* MOptionReformaCrossingMenu.swift in Sources */,
 				DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

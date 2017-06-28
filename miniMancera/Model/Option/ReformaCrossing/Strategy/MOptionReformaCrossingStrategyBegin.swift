@@ -25,20 +25,11 @@ class MOptionReformaCrossingStrategyBegin:MGameStrategy<MOptionReformaCrossing>
     private func timeout(scene:SKScene)
     {
         model.activateGame()
-        
-        guard
-            
-            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
+
         let actionFadeIn:SKAction = model.actions.actionFadeIn
         let actionFadeOut:SKAction = model.actions.actionFadeOut
         
-        scene.menu.run(actionFadeIn)
+        model.menu.view?.run(actionFadeIn)
         model.hud.view?.run(actionFadeIn)
         model.stop.view?.run(actionFadeIn)
         model.title.view?.run(actionFadeOut)

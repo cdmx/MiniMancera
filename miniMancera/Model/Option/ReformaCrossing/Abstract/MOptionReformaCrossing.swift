@@ -11,6 +11,7 @@ class MOptionReformaCrossing:MGame
     let foe:MOptionReformaCrossingFoe
     let stop:MOptionReformaCrossingStop
     let hud:MOptionReformaCrossingHud
+    let menu:MOptionReformaCrossingMenu
     let title:MOptionReformaCrossingTitle
     private(set) var level:Int
     private var strategy:MGameStrategy<MOptionReformaCrossing>?
@@ -28,6 +29,7 @@ class MOptionReformaCrossing:MGame
         foe = MOptionReformaCrossingFoe()
         stop = MOptionReformaCrossingStop()
         hud = MOptionReformaCrossingHud()
+        menu = MOptionReformaCrossingMenu()
         title = MOptionReformaCrossingTitle()
         level = kStartingLevel
         

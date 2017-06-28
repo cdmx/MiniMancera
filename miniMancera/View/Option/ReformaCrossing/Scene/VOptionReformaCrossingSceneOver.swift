@@ -2,10 +2,28 @@ import SpriteKit
 
 class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
 {
-    init(controller:ControllerGame<MOptionReformaCrossing>, gameOver:MOptionReformaCrossingGameOverProtocol)
+    init(
+        controller:ControllerGame<MOptionReformaCrossing>,
+        gameOver:MOptionReformaCrossingGameOverProtocol)
     {
         super.init(controller:controller)
-        
+        factoryNodes(gameOver:gameOver)
+    }
+    
+    required init(controller:ControllerGame<MOptionReformaCrossing>)
+    {
+        super.init(controller:controller)
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
+    //MARK: private
+    
+    private func factoryNodes(gameOver:MOptionReformaCrossingGameOverProtocol)
+    {
         let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
             controller:controller)
         
@@ -37,15 +55,5 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
         addChild(player)
         addChild(button1up)
         addChild(buttonExit)
-    }
-    
-    required init(controller:ControllerGame<MOptionReformaCrossing>)
-    {
-        super.init(controller:controller)
-    }
-    
-    required init?(coder:NSCoder)
-    {
-        return nil
     }
 }

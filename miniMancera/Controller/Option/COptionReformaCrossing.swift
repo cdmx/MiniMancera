@@ -98,7 +98,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         }
         
         model.hitAndRun()
-        scene.hitAndRun()
+//        scene.hitAndRun()
     }
     
     
@@ -117,7 +117,7 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
             return
         }
         
-        scene.gameSuccess()
+//        scene.gameSuccess()
     }
     
     func collectedLane(lane:MOptionReformaCrossingLane)
