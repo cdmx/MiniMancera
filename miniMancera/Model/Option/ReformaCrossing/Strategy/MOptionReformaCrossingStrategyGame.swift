@@ -1,12 +1,10 @@
 import SpriteKit
 
-class MOptionReformaCrossingStrategyGame:MGameStrategy<MOptionReformaCrossing>
+class MOptionReformaCrossingStrategyGame:MGameStrategyMain<MOptionReformaCrossing>
 {
-    private let updateItems:[MGameUpdateProtocol]
-    
-    override init(model:MOptionReformaCrossing)
+    init(model:MOptionReformaCrossing)
     {
-        updateItems = [
+        let updateItems:[MGameUpdateProtocol] = [
             model.stop,
             model.hud,
             model.player,
@@ -14,16 +12,6 @@ class MOptionReformaCrossingStrategyGame:MGameStrategy<MOptionReformaCrossing>
             model.foe,
             model.contact]
         
-        super.init(model:model)
-    }
-    
-    override func update(
-        elapsedTime:TimeInterval,
-        scene:SKScene)
-    {
-        for item:MGameUpdateProtocol in updateItems
-        {
-            item.update(elapsedTime:elapsedTime, scene:scene)
-        }
+        super.init(model:model, updateItems:updateItems)
     }
 }

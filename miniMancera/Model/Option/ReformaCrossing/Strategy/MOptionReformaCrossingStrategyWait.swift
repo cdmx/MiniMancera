@@ -1,5 +1,9 @@
 import SpriteKit
 
-class MOptionReformaCrossingStrategyWait:MGameStrategy<MOptionReformaCrossing>
+class MOptionReformaCrossingStrategyWait:MGameStrategyMain<MOptionReformaCrossing>
 {
+    init(model:MOptionReformaCrossing)
+    {
+        super.init(model:model, updateItems:[])
+    }
 }

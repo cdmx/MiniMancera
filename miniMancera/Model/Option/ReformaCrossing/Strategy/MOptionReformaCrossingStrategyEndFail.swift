@@ -2,24 +2,12 @@ import SpriteKit
 
 class MOptionReformaCrossingStrategyEndFail:MOptionReformaCrossingStrategyEnd
 {
-    let gameOver:MOptionReformaCrossingGameOverProtocol
+    private let gameOver:MOptionReformaCrossingGameOverProtocol
     
     init(model:MOptionReformaCrossing, gameOver:MOptionReformaCrossingGameOverProtocol)
     {
         self.gameOver = gameOver
-        super.init(model:model)
-    }
-    
-    override func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        if gameOver.keepAdvancing
-        {
-            keepAdvancing(
-                elapsedTime:elapsedTime,
-                scene:scene)
-        }
-        
-        super.update(elapsedTime:elapsedTime, scene:scene)
+        super.init(model:model, keepAdvancing:gameOver.keepAdvancing)
     }
     
     override func timeOut(controller:COptionReformaCrossing)

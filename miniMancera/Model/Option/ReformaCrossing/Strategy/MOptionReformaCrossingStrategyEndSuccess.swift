@@ -2,13 +2,11 @@ import SpriteKit
 
 class MOptionReformaCrossingStrategyEndSuccess:MOptionReformaCrossingStrategyEnd
 {
-    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    private let kKeepAdvancing:Bool = true
+    
+    init(model:MOptionReformaCrossing)
     {
-        keepAdvancing(
-            elapsedTime:elapsedTime,
-            scene:scene)
-        
-        super.update(elapsedTime:elapsedTime, scene:scene)
+        super.init(model:model, keepAdvancing:kKeepAdvancing)
     }
     
     override func timeOut(controller:COptionReformaCrossing)

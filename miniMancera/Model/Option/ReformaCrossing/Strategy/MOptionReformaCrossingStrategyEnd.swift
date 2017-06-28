@@ -1,25 +1,31 @@
 import SpriteKit
 
-class MOptionReformaCrossingStrategyEnd:MGameStrategy<MOptionReformaCrossing>
+class MOptionReformaCrossingStrategyEnd:MGameStrategyMain<MOptionReformaCrossing>
 {
-    private let updateItems:[MGameUpdateProtocol]
     private var initialTime:TimeInterval?
+    private let keepAdvancing:Bool
     private let kWait:TimeInterval = 1.5
     
-    override init(model:MOptionReformaCrossing)
+    init(model:MOptionReformaCrossing, keepAdvancing:Bool)
     {
-        updateItems = [
+        let updateItems:[MGameUpdateProtocol] = [
             model.laneGroup,
             model.foe,
             model.contact]
+        self.keepAdvancing = keepAdvancing
         
-        super.init(model:model)
+        super.init(model:model, updateItems:updateItems)
     }
     
     override func update(
         elapsedTime:TimeInterval,
         scene:SKScene)
     {
+        if keepAdvancing
+        {
+            super.update(elapsedTime:elapsedTime, scene:scene)
+        }
+        
         if let initialTime:TimeInterval = self.initialTime
         {
             let deltaTime:TimeInterval = elapsedTime - initialTime
@@ -52,16 +58,6 @@ class MOptionReformaCrossingStrategyEnd:MGameStrategy<MOptionReformaCrossing>
     }
     
     //MARK: public
-    
-    func keepAdvancing(
-        elapsedTime:TimeInterval,
-        scene:SKScene)
-    {
-        for item:MGameUpdateProtocol in updateItems
-        {
-            item.update(elapsedTime:elapsedTime, scene:scene)
-        }
-    }
     
     func timeOut(controller:COptionReformaCrossing)
     {

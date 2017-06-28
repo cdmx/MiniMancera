@@ -14,7 +14,7 @@ class MOptionReformaCrossing:MGame
     let menu:MOptionReformaCrossingMenu
     let title:MOptionReformaCrossingTitle
     private(set) var level:Int
-    private var strategy:MGameStrategy<MOptionReformaCrossing>?
+    private var strategy:MGameStrategyMain<MOptionReformaCrossing>?
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     private let kStartingLevel:Int = 1
     
