@@ -24,5 +24,7 @@ class MOptionReformaCrossingStrategyGame:MOptionReformaCrossingStrategy
         model.foe.update(
             elapsedTime:elapsedTime,
             scene:scene)
+        model.contact.update(
+            elapsedTime:elapsedTime)
     }
 }

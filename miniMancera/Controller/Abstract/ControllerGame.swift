@@ -1,6 +1,6 @@
 import SpriteKit
 
-class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
+class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContactDelegate
 {
     let model:T
     let playSounds:Bool
@@ -149,5 +149,15 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate
         }
         
         lastUpdateTime = currentTime
+    }
+    
+    //MARK: contact delegate
+    
+    func didBegin(_ contact:SKPhysicsContact)
+    {
+    }
+    
+    func didEnd(_ contact:SKPhysicsContact)
+    {
     }
 }

@@ -15,7 +15,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         
         super.init(controller:controller)
         physicsWorld.gravity = CGVector.zero
-        physicsWorld.contactDelegate = self
 
         factoryNodes()
         
@@ -167,12 +166,5 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
             controller:controller)
         
         addChild(coin)*/
-    }
-    
-    //MARK: contact delegate
-    
-    func didBegin(_ contact:SKPhysicsContact)
-    {
-        controller.model.contact.addContact(contact:contact)
     }
 }

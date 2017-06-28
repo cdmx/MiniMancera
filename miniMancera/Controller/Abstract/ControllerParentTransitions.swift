@@ -147,16 +147,6 @@ extension ControllerParent
             controllers -= 1
             
             let controller:UIViewController = childViewControllers[controllers]
-            
-            guard
-                
-                let view:ViewProtocol = controller.view as? ViewProtocol
-                
-            else
-            {
-                continue
-            }
-            
             controller.beginAppearanceTransition(false, animated:false)
             controller.view.removeFromSuperview()
             controller.endAppearanceTransition()
@@ -173,18 +163,8 @@ extension ControllerParent
             controllers -= 1
             
             let controller:UIViewController = childViewControllers[controllers]
-            
-            guard
-                
-                let view:UIView = controller.view as? UIView
-                
-            else
-            {
-                continue
-            }
-            
             controller.beginAppearanceTransition(false, animated:false)
-            view.removeFromSuperview()
+            controller.view.removeFromSuperview()
             controller.endAppearanceTransition()
             controller.removeFromParentViewController()
         }

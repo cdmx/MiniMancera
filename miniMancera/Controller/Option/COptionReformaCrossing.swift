@@ -2,6 +2,11 @@ import SpriteKit
 
 class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
 {
+    override func didBegin(_ contact:SKPhysicsContact)
+    {
+        model.contact.addContact(contact:contact)
+    }
+    
     //MARK: public
     
     func newGameScene()

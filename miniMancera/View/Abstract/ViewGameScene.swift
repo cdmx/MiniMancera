@@ -10,6 +10,7 @@ class ViewGameScene<T:MGame>:SKScene
         backgroundColor = SKColor.black
         scaleMode = SKSceneScaleMode.resizeFill
         delegate = controller
+        physicsWorld.contactDelegate = controller
         self.controller = controller
     }
     

@@ -15,28 +15,37 @@ class MOptionReformaCrossingStrategyEnd:MOptionReformaCrossingStrategy
         elapsedTime:TimeInterval,
         scene:SKScene)
     {
+        model.contact.update(
+            elapsedTime:elapsedTime)
+        
         if let initialTime:TimeInterval = self.initialTime
         {
             let deltaTime:TimeInterval = elapsedTime - initialTime
-            
-            if deltaTime > kWait
-            {
-                guard
-                
-                    let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene,
-                    let controller:COptionReformaCrossing = scene.controller as? COptionReformaCrossing
-                
-                else
-                {
-                    return
-                }
-                
-                timeOut(controller:controller)
-            }
+            checkTimeout(deltaTime:deltaTime, scene:scene)
         }
         else
         {
             self.initialTime = elapsedTime
+        }
+    }
+    
+    //MARK: private
+    
+    private func checkTimeout(deltaTime:TimeInterval, scene:SKScene)
+    {
+        if deltaTime > kWait
+        {
+            guard
+                
+                let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene,
+                let controller:COptionReformaCrossing = scene.controller as? COptionReformaCrossing
+                
+            else
+            {
+                return
+            }
+            
+            timeOut(controller:controller)
         }
     }
     
