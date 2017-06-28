@@ -14,6 +14,7 @@
 		DA11217F1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11217E1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift */; };
 		DA1121811F0464FA00275465 /* MOptionReformaCrossingCoinItemStrategyShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121801F0464FA00275465 /* MOptionReformaCrossingCoinItemStrategyShowing.swift */; };
 		DA1121831F04665100275465 /* MGameUpdateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121821F04665100275465 /* MGameUpdateProtocol.swift */; };
+		DA1121851F046C3000275465 /* MGameStrategyMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121841F046C3000275465 /* MGameStrategyMain.swift */; };
 		DA11DE3F1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */; };
 		DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */; };
 		DA1BDB181EF705050040FBEA /* CHomeFroob.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB171EF705050040FBEA /* CHomeFroob.swift */; };
@@ -284,6 +285,7 @@
 		DA11217E1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoinItemStrategyWaiting.swift; sourceTree = "<group>"; };
 		DA1121801F0464FA00275465 /* MOptionReformaCrossingCoinItemStrategyShowing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoinItemStrategyShowing.swift; sourceTree = "<group>"; };
 		DA1121821F04665100275465 /* MGameUpdateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameUpdateProtocol.swift; sourceTree = "<group>"; };
+		DA1121841F046C3000275465 /* MGameStrategyMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameStrategyMain.swift; sourceTree = "<group>"; };
 		DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverHitAndRun.swift; sourceTree = "<group>"; };
 		DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionPurchaseExtension.swift; sourceTree = "<group>"; };
 		DA1BDB171EF705050040FBEA /* CHomeFroob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeFroob.swift; sourceTree = "<group>"; };
@@ -1176,6 +1178,7 @@
 				DA91C3AC1F01625E0045FAE2 /* MGameTexture.swift */,
 				DAF37BDB1F037B82004C505D /* MGameTextureAnimated.swift */,
 				DAF37BE81F03AB4B004C505D /* MGameStrategy.swift */,
+				DA1121841F046C3000275465 /* MGameStrategyMain.swift */,
 				DA1121821F04665100275465 /* MGameUpdateProtocol.swift */,
 			);
 			path = Game;
@@ -1544,6 +1547,7 @@
 				DAF37BDC1F037B82004C505D /* MGameTextureAnimated.swift in Sources */,
 				DACD313A1EFB05FA00F205A0 /* VOptionReformaCrossingMenu.swift in Sources */,
 				DAF37BAB1F02E938004C505D /* MOptionReformaCrossingFoeItem.swift in Sources */,
+				DA1121851F046C3000275465 /* MGameStrategyMain.swift in Sources */,
 				DAB70ABC1EFB1ED7002C706F /* VOptionPollutedGardenHud.swift in Sources */,
 				DA2DFFEF1EECB16A00365F23 /* VSliderBar.swift in Sources */,
 				DAB70AB21EFB19E1002C706F /* VOptionPollutedGardenScenePhysics.swift in Sources */,
