@@ -58,4 +58,19 @@ class MOptionReformaCrossingPlayer
     {
         strategy = MOptionReformaCrossingPlayerStrategyStop(model:self)
     }
+    
+    func timeOut()
+    {
+        view?.timeOut()
+    }
+    
+    func success()
+    {
+        view?.success()
+    }
+    
+    func hitAndRun()
+    {
+        view?.hitAndRun()
+    }
 }

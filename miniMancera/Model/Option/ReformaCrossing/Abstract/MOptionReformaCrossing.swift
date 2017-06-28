@@ -76,12 +76,24 @@ class MOptionReformaCrossing:MGame
         super.activateGame()
     }
     
+    func playerSuccess()
+    {
+        player.success()
+        deActivateGame()
+        level += 1
+        strategy = MOptionReformaCrossingStrategyEndSuccess(model:self)
+    }
+    
     func timeOut()
     {
         let gameOver:MOptionReformaCrossingGameOverTimeOut = MOptionReformaCrossingGameOverTimeOut()
+        
+        player.timeOut()
         deActivateGame()
         laneGroup.stopFoes()
-        strategy = MOptionReformaCrossingStrategyEndFail(model:self, gameOver:gameOver)
+        strategy = MOptionReformaCrossingStrategyEndFail(
+            model:self,
+            gameOver:gameOver)
     }
     
     func strategyWait()
@@ -115,11 +127,7 @@ class MOptionReformaCrossing:MGame
     
     
     
-    func playerSuccess()
-    {
-        deActivateGame()
-        level += 1
-    }
+    
     
     func collectedLane()
     {

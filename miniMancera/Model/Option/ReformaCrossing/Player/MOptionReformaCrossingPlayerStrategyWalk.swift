@@ -2,7 +2,7 @@ import SpriteKit
 
 class MOptionReformaCrossingPlayerStrategyWalk:MGameStrategy<MOptionReformaCrossingPlayer>
 {
-    private var elapsedTime:TimeInterval?
+    private var lastElapsedTime:TimeInterval?
     private let kSpeed:CGFloat = 70
     
     override func update(elapsedTime:TimeInterval, scene:SKScene)
@@ -11,11 +11,39 @@ class MOptionReformaCrossingPlayerStrategyWalk:MGameStrategy<MOptionReformaCross
         
         if isSafe
         {
-            
+            success(scene:scene)
         }
         else
         {
+            if let lastElapsedTime:TimeInterval = self.lastElapsedTime
+            {
+                let deltaTime:TimeInterval = elapsedTime - lastElapsedTime
+                let move:CGFloat = CGFloat(deltaTime) * kSpeed
+                let point:CGPoint = model.position.walk(distance:move)
+                model.view?.position = point
+            }
             
+            lastElapsedTime = elapsedTime
         }
+    }
+    
+    //MARK: private
+    
+    private func success(scene:SKScene)
+    {
+        guard
+            
+            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
+            
+        else
+        {
+            return
+        }
+        
+        let model:MOptionReformaCrossing = scene.controller.model
+        model.playerSuccess()
+        
+        let soundVictory:SKAction = model.sounds.soundVictory
+        scene.controller.playSound(actionSound:soundVictory)
     }
 }

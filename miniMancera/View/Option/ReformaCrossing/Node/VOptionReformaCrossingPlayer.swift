@@ -30,27 +30,6 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
     }
     
     //MARK: private
-    /*
-    private func startPosition() -> CGPoint
-    {
-        let sceneWidth_2:CGFloat = controller.model.size.width / 2.0
-        let height_2:CGFloat = size.height / 2.0
-        let point:CGPoint = CGPoint(x:sceneWidth_2, y:height_2)
-        
-        return point
-    }*/
-    /*
-    private func finalPosition() -> CGPoint
-    {
-        let sceneSize:CGSize = controller.model.size
-        let sceneWidth_2:CGFloat = sceneSize.width / 2.0
-        let sceneHeight_2:CGFloat = sceneSize.height / 2.0
-        let height_2:CGFloat = size.height / 2.0
-        let positionY:CGFloat = sceneHeight_2 + height_2 + kAddPointY
-        let point:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
-        
-        return point
-    }*/
     
     private func startPhysics()
     {
@@ -72,88 +51,6 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
         self.physicsBody = physicsBody
     }
     
-    private func movementDuration(startingPoint:CGPoint, endingPoint:CGPoint) -> TimeInterval
-    {
-        let distance:CGFloat = abs(startingPoint.y - endingPoint.y)
-        let translationTime:TimeInterval = TimeInterval(distance / kSpeed)
-        
-        return translationTime
-    }
-    
-    private func createActionAnimating() -> SKAction
-    {
-        let animationTextures:[SKTexture] = []//VOptionReformaCrossingPlayer.factoryAnimationTextures()
-        let actionAnimate:SKAction = SKAction.animate(
-            with:animationTextures,
-            timePerFrame:kAnimationPerFrame,
-            resize:false,
-            restore:false)
-        let actionRepeat:SKAction = SKAction.repeatForever(actionAnimate)
-        
-        return actionRepeat
-    }
-    /*
-    private func createActionMoving() -> SKAction
-    {
-        let finalPos:CGPoint = finalPosition()
-        let duration:TimeInterval = movementDuration(
-            startingPoint:position,
-            endingPoint:finalPos)
-        
-        let actionWalk:SKAction = SKAction.move(
-            to:finalPos,
-            duration:duration)
-        let actionSuccess:SKAction = SKAction.run(showSuccess)
-        let actions:[SKAction] = [
-            actionWalk,
-            actionSuccess]
-        let actionsSequence:SKAction = SKAction.sequence(actions)
-        
-        return actionsSequence
-    }*/
-    
-    private func animateStop()
-    {/*
-        let actionAnimate:SKAction = SKAction.animate(
-            with:stopTextures,
-            timePerFrame:kStopAnimationPerFrame,
-            resize:false,
-            restore:false)
-        
-        run(actionAnimate)*/
-    }
-    
-    private func resumeWalking()
-    {
-        stopTime = nil
-        
-        guard
-            
-            let actionWalking:SKAction = action(forKey:kActionWalking)
-            
-        else
-        {
-            return
-        }
-        
-        actionWalking.speed = 1
-    }
-    
-    private func measureStopTime()
-    {
-//        stopTime = lastElapsedTime + kStopDuration
-    }
-    
-    private func showSuccess()
-    {
-        removeAllActions()
-        
-        let textureSuccess:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer12"))
-        texture = textureSuccess
-        
-//        controller.playerSuccess()
-    }
-    
     private func collectLanes()
     {/*
         guard
@@ -171,6 +68,35 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
     
     //MARK: public
     
+    func timeOut()
+    {
+        removeAllActions()
+        
+        let texture:MGameTexture = controller.model.textures.playerTimeout
+        self.texture = texture.texture
+    }
+    
+    func success()
+    {
+        removeAllActions()
+        
+        let texture:MGameTexture = controller.model.textures.playerSuccess
+        self.texture = texture.texture
+    }
+    
+    func hitAndRun()
+    {
+        removeAllActions()
+        
+        let texture:MGameTexture = controller.model.textures.playerHitAndRun
+        self.texture = texture.texture
+        size = texture.size
+    }
+    
+    
+    
+    
+    
     func update(elapsedTime:TimeInterval)
     {
 //        lastElapsedTime = elapsedTime
@@ -179,64 +105,12 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
         {
             if stopTime < elapsedTime
             {
-                resumeWalking()
+//                resumeWalking()
             }
         }
         else
         {
             collectLanes()
         }
-    }
-    
-    func startWalking()
-    {/*
-        isHidden = false
-        
-        let actionAnimating:SKAction = createActionAnimating()
-        let actionMoving:SKAction = createActionMoving()
-        let actions:[SKAction] = [
-            actionAnimating,
-            actionMoving]
-        let actionsGroup:SKAction = SKAction.group(actions)
-        
-        run(actionsGroup, withKey:kActionWalking)*/
-    }
-    
-    func stopWalking()
-    {
-        if stopTime == nil
-        {
-            guard
-                
-                let actionWalking:SKAction = action(forKey:kActionWalking)
-                
-            else
-            {
-                return
-            }
-            
-            actionWalking.speed = 0
-        }
-        
-        measureStopTime()
-        animateStop()
-    }
-    
-    func timeOut()
-    {
-        removeAllActions()
-        
-        let textureTimeOut:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer11"))
-        texture = textureTimeOut
-    }
-    
-    func hitAndRun()
-    {
-        removeAllActions()
-        
-        let textureHitAndRun:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer10"))
-        let size:CGSize = textureHitAndRun.size()
-        texture = textureHitAndRun
-        self.size = size
     }
 }

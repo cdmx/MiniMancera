@@ -2,9 +2,9 @@ import UIKit
 
 class MOptionReformaCrossingPlayerPosition
 {
-    private let positionX:CGFloat
     private var positionY:CGFloat
     private var safePositionY:CGFloat
+    private let positionX:CGFloat
     private let kAddPositionY:CGFloat = 205
     
     init()
@@ -13,6 +13,15 @@ class MOptionReformaCrossingPlayerPosition
         positionX = sceneWidth / 2.0
         positionY = 0
         safePositionY = 0
+    }
+    
+    //MARK: private
+    
+    private func makePoint() -> CGPoint
+    {
+        let point:CGPoint = CGPoint(x:positionX, y:positionY)
+        
+        return point
     }
     
     //MARK: public
@@ -27,11 +36,12 @@ class MOptionReformaCrossingPlayerPosition
         view.position = makePoint()
     }
     
-    func makePoint() -> CGPoint
+    func walk(distance:CGFloat) -> CGPoint
     {
-        let point:CGPoint = CGPoint(x:positionX, y:positionY)
+        positionY += distance
+        let newPoint:CGPoint = makePoint()
         
-        return point
+        return newPoint
     }
     
     func isSafe() -> Bool

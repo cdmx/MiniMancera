@@ -5,8 +5,6 @@ class MOptionReformaCrossingTextures
     let background:MGameTexture
     let hud:MGameTexture
     let menu:MGameTexture
-    let playerHitAndRun:MGameTexture
-    let playerTimeout:MGameTexture
     let gameOver1up:MGameTexture
     let gameOverExit:MGameTexture
     
@@ -14,6 +12,9 @@ class MOptionReformaCrossingTextures
     let stopAnimated:MGameTextureAnimated
     
     let playerStand:MGameTexture
+    let playerHitAndRun:MGameTexture
+    let playerTimeout:MGameTexture
+    let playerSuccess:MGameTexture
     let playerAnimatedWalk:MGameTextureAnimated
     let playerAnimatedStop:MGameTextureAnimated
     
@@ -91,12 +92,6 @@ class MOptionReformaCrossingTextures
         menu = MGameTexture(
             image:#imageLiteral(resourceName: "assetReformaCrossingMenu"),
             zPosition:MOptionReformaCrossingZPosition.Menu.rawValue)
-        playerHitAndRun = MGameTexture(
-            image:#imageLiteral(resourceName: "assetReformaCrossingPlayer10"),
-            zPosition:MOptionReformaCrossingZPosition.GameOverPlayer.rawValue)
-        playerTimeout = MGameTexture(
-            image:#imageLiteral(resourceName: "assetReformaCrossingPlayer11"),
-            zPosition:MOptionReformaCrossingZPosition.GameOverPlayer.rawValue)
         gameOver1up = MGameTexture(
             image:#imageLiteral(resourceName: "assetReformaCrossing1up"),
             zPosition:MOptionReformaCrossingZPosition.GameOver1up.rawValue)
@@ -112,6 +107,15 @@ class MOptionReformaCrossingTextures
         playerStand = MGameTexture(
             image:#imageLiteral(resourceName: "assetReformaCrossingPlayer0"),
             zPosition:MOptionReformaCrossingZPosition.Player.rawValue)
+        playerHitAndRun = MGameTexture(
+            image:#imageLiteral(resourceName: "assetReformaCrossingPlayer10"),
+            zPosition:MOptionReformaCrossingZPosition.GameOverPlayer.rawValue)
+        playerTimeout = MGameTexture(
+            image:#imageLiteral(resourceName: "assetReformaCrossingPlayer11"),
+            zPosition:MOptionReformaCrossingZPosition.GameOverPlayer.rawValue)
+        playerSuccess = MGameTexture(
+            image:#imageLiteral(resourceName: "assetReformaCrossingPlayer12"),
+            zPosition:MOptionReformaCrossingZPosition.GameOverPlayer.rawValue)
         playerAnimatedWalk = MOptionReformaCrossingTextures.factoryPlayerAnimatedWalk()
         playerAnimatedStop = MOptionReformaCrossingTextures.factoryPlayerAnimatedStop()
         
