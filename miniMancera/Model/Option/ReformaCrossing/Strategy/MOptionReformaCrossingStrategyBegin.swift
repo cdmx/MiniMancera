@@ -34,6 +34,7 @@ class MOptionReformaCrossingStrategyBegin:MOptionReformaCrossingStrategy
             
             scene.menu.run(actionFadeIn)
             model.hud.view?.run(actionFadeIn)
+            model.stop.view?.run(actionFadeIn)
             model.title.view?.run(actionFadeOut)
         }
     }
