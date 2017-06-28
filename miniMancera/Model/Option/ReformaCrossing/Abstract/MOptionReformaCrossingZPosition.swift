@@ -5,6 +5,7 @@ enum MOptionReformaCrossingZPosition:CGFloat
     case Background
     case Foe
     case Player
+    case Coin
     case Hud
     case HudScore
     case HudTime

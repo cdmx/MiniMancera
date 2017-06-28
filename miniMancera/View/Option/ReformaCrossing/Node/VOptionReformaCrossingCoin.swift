@@ -1,24 +1,22 @@
 import SpriteKit
 
-class MOptionReformaCrossingCoin:SKSpriteNode
+class MOptionReformaCrossingCoin:ViewGameNode<MOptionReformaCrossing>
 {
-    private weak var controller:COptionReformaCrossing!
+    private let positionY:CGFloat
     private let kAddPositionX:CGFloat = 50
     private let kAddPositionY:CGFloat = 10
     private let kDelayFade:TimeInterval = 0.6
     private let kFadeDuration:TimeInterval = 0.5
     private let kZPosition:CGFloat = 10100
-    
-    init(lane:MOptionReformaCrossingLane, controller:COptionReformaCrossing)
+ 
+    init(controller:ControllerGame<MOptionReformaCrossing>, positionY:CGFloat)
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingCoin"))
-        let size:CGSize = texture.size()
-        self.controller = controller
+        self.positionY = positionY
+        let texture:MGameTexture = controller.model.textures.coin
         
-        super.init(texture:texture, color:UIColor.clear, size:size)
-        zPosition = kZPosition
-        startPosition(lane:lane)
-        startActions()
+        super.init(
+            controller:controller,
+            texture:texture)
     }
     
     required init?(coder:NSCoder)
@@ -26,15 +24,16 @@ class MOptionReformaCrossingCoin:SKSpriteNode
         return nil
     }
     
-    //MARK: private
-    
-    private func startPosition(lane:MOptionReformaCrossingLane)
-    {/*
-        let sceneWidth_2:CGFloat = controller.model.size.width / 2.0
+    override func positionStart()
+    {
+        let sceneWidth:CGFloat = MGame.sceneSize.width
+        let sceneWidth_2:CGFloat = sceneWidth / 2.0
         let positionX:CGFloat = sceneWidth_2 + kAddPositionX
-        let positionY:CGFloat = lane.verticalPosition + kAddPositionY
-        position = CGPoint(x:positionX, y:positionY)*/
+        let positionY:CGFloat = self.positionY + kAddPositionY
+        position = CGPoint(x:positionX, y:positionY)
     }
+    
+    //MARK: private
     
     private func startActions()
     {

@@ -2,13 +2,6 @@ import SpriteKit
 
 class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
 {
-//    private var lastElapsedTime:TimeInterval
-    private var stopTime:TimeInterval?
-    private let kAddPointY:CGFloat = 205
-    private let kSpeed:CGFloat = 70
-    private let kAnimationPerFrame:TimeInterval = 0.1
-    private let kStopAnimationPerFrame:TimeInterval = 0.04
-    private let kStopDuration:TimeInterval = 0.3
     private let kPhysicsWidth:CGFloat = 12
     private let kPhysicsHeight:CGFloat = 10
     private let kPhysicsYPos:CGFloat = -10
@@ -49,21 +42,6 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
         physicsBody.contactTestBitMask = MOptionReformaCrossingPhysicsStruct.Foe
         physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.Foe
         self.physicsBody = physicsBody
-    }
-    
-    private func collectLanes()
-    {/*
-        guard
-            
-            let lane:MOptionReformaCrossingLane = controller.model.laneGroup.playerCollectAt(
-                position:position)
-            
-        else
-        {
-            return
-        }
-        
-        controller.collectedLane(lane:lane)*/
     }
     
     //MARK: public
@@ -107,27 +85,5 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
         
         let action:SKAction = controller.model.actions.actionPlayerStopAnimation
         run(action)
-    }
-    
-    
-    
-    
-    
-    
-    func update(elapsedTime:TimeInterval)
-    {
-//        lastElapsedTime = elapsedTime
-        
-        if let stopTime:TimeInterval = self.stopTime
-        {
-            if stopTime < elapsedTime
-            {
-//                resumeWalking()
-            }
-        }
-        else
-        {
-            collectLanes()
-        }
     }
 }

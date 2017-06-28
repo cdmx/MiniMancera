@@ -5,6 +5,7 @@ class MOptionReformaCrossingTextures
     let background:MGameTexture
     let hud:MGameTexture
     let menu:MGameTexture
+    let coin:MGameTexture
     let gameOver1up:MGameTexture
     let gameOverExit:MGameTexture
     
@@ -92,6 +93,9 @@ class MOptionReformaCrossingTextures
         menu = MGameTexture(
             image:#imageLiteral(resourceName: "assetReformaCrossingMenu"),
             zPosition:MOptionReformaCrossingZPosition.Menu.rawValue)
+        coin = MGameTexture(
+            image:#imageLiteral(resourceName: "assetReformaCrossingCoin"),
+            zPosition:MOptionReformaCrossingZPosition.Coin.rawValue)
         gameOver1up = MGameTexture(
             image:#imageLiteral(resourceName: "assetReformaCrossing1up"),
             zPosition:MOptionReformaCrossingZPosition.GameOver1up.rawValue)
