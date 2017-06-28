@@ -215,7 +215,6 @@
 		DAC7D3B81F01D69C008DC416 /* MOptionReformaCrossingStrategyEndFail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC7D3B71F01D69C008DC416 /* MOptionReformaCrossingStrategyEndFail.swift */; };
 		DAC7D3BA1F01D6A5008DC416 /* MOptionReformaCrossingStrategyEndSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC7D3B91F01D6A5008DC416 /* MOptionReformaCrossingStrategyEndSuccess.swift */; };
 		DACD31301EFB001200F205A0 /* VOptionReformaCrossingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD312F1EFB001200F205A0 /* VOptionReformaCrossingScene.swift */; };
-		DACD31321EFB002500F205A0 /* VOptionReformaCrossingScenePhysics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31311EFB002500F205A0 /* VOptionReformaCrossingScenePhysics.swift */; };
 		DACD31341EFB00C300F205A0 /* VOptionReformaCrossingSceneOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31331EFB00C300F205A0 /* VOptionReformaCrossingSceneOver.swift */; };
 		DACD31361EFB04D800F205A0 /* VOptionReformaCrossingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31351EFB04D800F205A0 /* VOptionReformaCrossingBackground.swift */; };
 		DACD31381EFB057D00F205A0 /* VOptionReformaCrossingHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD31371EFB057C00F205A0 /* VOptionReformaCrossingHud.swift */; };
@@ -478,7 +477,6 @@
 		DAC7D3B71F01D69C008DC416 /* MOptionReformaCrossingStrategyEndFail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingStrategyEndFail.swift; sourceTree = "<group>"; };
 		DAC7D3B91F01D6A5008DC416 /* MOptionReformaCrossingStrategyEndSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingStrategyEndSuccess.swift; sourceTree = "<group>"; };
 		DACD312F1EFB001200F205A0 /* VOptionReformaCrossingScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingScene.swift; sourceTree = "<group>"; };
-		DACD31311EFB002500F205A0 /* VOptionReformaCrossingScenePhysics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingScenePhysics.swift; sourceTree = "<group>"; };
 		DACD31331EFB00C300F205A0 /* VOptionReformaCrossingSceneOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingSceneOver.swift; sourceTree = "<group>"; };
 		DACD31351EFB04D800F205A0 /* VOptionReformaCrossingBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingBackground.swift; sourceTree = "<group>"; };
 		DACD31371EFB057C00F205A0 /* VOptionReformaCrossingHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionReformaCrossingHud.swift; sourceTree = "<group>"; };
@@ -1179,7 +1177,6 @@
 			children = (
 				DACD312F1EFB001200F205A0 /* VOptionReformaCrossingScene.swift */,
 				DA91C3E31F01B1E20045FAE2 /* VOptionReformaCrossingSceneNodes.swift */,
-				DACD31311EFB002500F205A0 /* VOptionReformaCrossingScenePhysics.swift */,
 				DACD31331EFB00C300F205A0 /* VOptionReformaCrossingSceneOver.swift */,
 			);
 			path = Scene;
@@ -1460,7 +1457,6 @@
 				DA2DFFED1EECB16A00365F23 /* VPushBackground.swift in Sources */,
 				DA7E46851EFAEF3E00466867 /* MPerkPurchaseProtocol.swift in Sources */,
 				DA1D579C1EF245C800ECA895 /* VHomeFooterCell.swift in Sources */,
-				DACD31321EFB002500F205A0 /* VOptionReformaCrossingScenePhysics.swift in Sources */,
 				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
 				DAB70AB61EFB1B89002C706F /* VOptionPollutedGardenBubble.swift in Sources */,
 				DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */,
