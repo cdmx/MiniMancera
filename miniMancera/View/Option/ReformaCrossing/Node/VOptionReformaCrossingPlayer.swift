@@ -11,66 +11,17 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
     private let kAnimationPerFrame:TimeInterval = 0.1
     private let kStopAnimationPerFrame:TimeInterval = 0.04
     private let kStopDuration:TimeInterval = 0.3
-    private let kZPosition:CGFloat = 10000
     private let kPhysicsWidth:CGFloat = 12
     private let kPhysicsHeight:CGFloat = 10
     private let kPhysicsYPos:CGFloat = -10
     
-    private class func factoryAnimationTextures() -> [SKTexture]
-    {
-        let textureWalking1:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer1"))
-        let textureWalking2:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer2"))
-        let textureWalking3:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer3"))
-        let textureWalking4:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer4"))
-        let textureWalking5:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer5"))
-        let textureWalking6:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer6"))
-        let textures:[SKTexture] = [
-            textureWalking1,
-            textureWalking2,
-            textureWalking3,
-            textureWalking4,
-            textureWalking5,
-            textureWalking6]
-        
-        return textures
-    }
-    
-    private class func factoryStopTextures() -> [SKTexture]
-    {
-        let textureWalking0:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer0"))
-        let textureWalking7:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer7"))
-        let textureWalking8:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer8"))
-        let textureWalking9:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetReformaCrossingPlayer9"))
-        
-        let textures:[SKTexture] = [
-            textureWalking0,
-            textureWalking7,
-            textureWalking8,
-            textureWalking9,
-            textureWalking8,
-            textureWalking7,
-            textureWalking0]
-        
-        return textures
-    }
-    
     override init(controller:ControllerGame<MOptionReformaCrossing>)
     {
+        let texture:MGameTexture = controller.model.textures.playerStand
         
-    }
-    
-    init(controller:COptionReformaCrossing)
-    {
-        self.controller = controller
-        stopTextures = VOptionReformaCrossingPlayer.factoryStopTextures()
-        let texture:SKTexture = stopTextures[0]
-        
-        let size:CGSize = texture.size()
-        lastElapsedTime = 0
-        
-        super.init(texture:texture, color:UIColor.clear, size:size)
-//        position = startPosition()
-        zPosition = kZPosition
+        super.init(
+            controller:controller,
+            texture:texture)
         isHidden = true
         startPhysics()
     }

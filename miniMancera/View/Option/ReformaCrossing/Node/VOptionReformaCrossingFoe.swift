@@ -17,7 +17,7 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
         
         let lane:MOptionReformaCrossingLane = model.lane
         xScale = lane.scaleHorizontal
-        startPhysics(size:size)
+        startPhysics()
     }
     
     required init?(coder:NSCoder)
@@ -32,7 +32,7 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
     
     //MARK: private
     
-    private func startPhysics(size:CGSize)
+    private func startPhysics()
     {
         let physicsHeight:CGFloat = size.height - kPhysicsRemoveHeight
         let physicsWidth:CGFloat = size.width + kPhysicsAddWidth
