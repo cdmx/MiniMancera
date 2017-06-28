@@ -11,7 +11,8 @@ class MOptionReformaCrossingStrategyEndSuccess:MOptionReformaCrossingStrategyEnd
         super.update(elapsedTime:elapsedTime, scene:scene)
     }
     
-    override func timeOut(controller:ControllerGame<MOptionReformaCrossing>)
+    override func timeOut(controller:COptionReformaCrossing)
     {
+        controller.nextLevel()
     }
 }

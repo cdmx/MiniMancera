@@ -2,7 +2,7 @@ import SpriteKit
 
 class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
 {
-    private(set) weak var model:MOptionReformaCrossingFoeItem!
+    private(set) weak var model:MOptionReformaCrossingFoeItem?
     private let kPhysicsRemoveHeight:CGFloat = 6
     private let kPhysicsAddWidth:CGFloat = 8
     
@@ -55,8 +55,17 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
     
     func positionWithTrip()
     {
+        guard
+            
+            let trip:MOptionReformaCrossingFoeItemTrip = model?.trip
+        
+        else
+        {
+            return
+        }
+        
         position = CGPoint(
-            x:model.trip.positionX,
-            y:model.trip.positionY)
+            x:trip.positionX,
+            y:trip.positionY)
     }
 }

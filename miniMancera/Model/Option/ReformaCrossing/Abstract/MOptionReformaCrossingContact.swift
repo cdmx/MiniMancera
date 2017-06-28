@@ -48,8 +48,15 @@ class MOptionReformaCrossingContact
     
     private func contactFoes(foeA:VOptionReformaCrossingFoe, foeB:VOptionReformaCrossingFoe)
     {
-        let modelA:MOptionReformaCrossingFoeItem = foeA.model
-        let modelB:MOptionReformaCrossingFoeItem = foeB.model
+        guard
+        
+            let modelA:MOptionReformaCrossingFoeItem = foeA.model,
+            let modelB:MOptionReformaCrossingFoeItem = foeB.model
+        
+        else
+        {
+            return
+        }
         
         if modelA.created < modelB.created
         {

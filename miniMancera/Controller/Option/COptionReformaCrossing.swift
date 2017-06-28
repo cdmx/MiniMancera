@@ -9,6 +9,13 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
     
     //MARK: public
     
+    func nextLevel()
+    {
+        restartTimer()
+        model.nextLevel()
+        newGameScene()
+    }
+    
     func newGameScene()
     {
         let newScene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
@@ -61,20 +68,6 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         if model.gameActive
         {
             model.playerStop()
-            
-            
-            /*
-            guard
-                
-                let view:SKView = self.view as? SKView,
-                let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-                
-            else
-            {
-                return
-            }
-            
-            scene.player.stopWalking()*/
         }
     }
     

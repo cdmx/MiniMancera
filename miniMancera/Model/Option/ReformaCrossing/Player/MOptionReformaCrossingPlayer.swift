@@ -52,11 +52,13 @@ class MOptionReformaCrossingPlayer
     func walk()
     {
         strategy = MOptionReformaCrossingPlayerStrategyWalk(model:self)
+        view?.animateWalk()
     }
     
     func stop()
     {
         strategy = MOptionReformaCrossingPlayerStrategyStop(model:self)
+        view?.animateStop()
     }
     
     func timeOut()

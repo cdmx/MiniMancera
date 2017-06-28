@@ -45,6 +45,7 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         model.stop.view = stop
         
         addChild(background)
+        addChild(player)
         addChild(hud)
         addChild(menu)
         addChild(stop)

@@ -34,9 +34,7 @@ class MOptionReformaCrossing:MGame
         level = kStartingLevel
         
         super.init()
-        
         actions.createAnimations(textures:textures)
-        strategy = MOptionReformaCrossingStrategyBegin(model:self)
     }
     
     override var startSceneType:SKScene.Type?
@@ -66,8 +64,15 @@ class MOptionReformaCrossing:MGame
     
     func startLevel()
     {
+        strategy = MOptionReformaCrossingStrategyBegin(model:self)
         title.startLevel(level:level)
         laneGroup.restart(level:level)
+    }
+    
+    func nextLevel()
+    {
+        hud.restart()
+        foe.restart()
     }
     
     override func activateGame()
@@ -114,6 +119,7 @@ class MOptionReformaCrossing:MGame
     
     func playerStop()
     {
+        player.stop()
         stop.playerStop()
     }
     

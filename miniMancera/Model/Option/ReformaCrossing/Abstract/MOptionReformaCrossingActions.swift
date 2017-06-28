@@ -34,11 +34,13 @@ class MOptionReformaCrossingActions
     
     private func createPlayerWalkAnimation(textureAnimated:MGameTextureAnimated)
     {
-        actionPlayerWalkAnimation = SKAction.animate(
+        let actionAnimation:SKAction = SKAction.animate(
             with:textureAnimated.textures,
             timePerFrame:kPlayerWalkAnimationFrameTime,
             resize:false,
             restore:false)
+        
+        actionPlayerWalkAnimation = SKAction.repeatForever(actionAnimation)
     }
     
     private func createPlayerStopAnimation(textureAnimated:MGameTextureAnimated)

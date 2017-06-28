@@ -93,6 +93,23 @@ class VOptionReformaCrossingPlayer:ViewGameNode<MOptionReformaCrossing>
         size = texture.size
     }
     
+    func animateWalk()
+    {
+        removeAllActions()
+        
+        let action:SKAction = controller.model.actions.actionPlayerWalkAnimation
+        run(action)
+    }
+    
+    func animateStop()
+    {
+        removeAllActions()
+        
+        let action:SKAction = controller.model.actions.actionPlayerStopAnimation
+        run(action)
+    }
+    
+    
     
     
     
