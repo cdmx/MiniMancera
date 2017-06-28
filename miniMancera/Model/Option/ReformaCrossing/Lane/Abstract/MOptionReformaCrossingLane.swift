@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingLane
+class MOptionReformaCrossingLane:MGameUpdateProtocol
 {
     var foes:[MOptionReformaCrossingFoeItem]
     private(set) var possibleFoes:[MOptionReformaCrossingFoeItem.Type]
@@ -40,19 +40,7 @@ class MOptionReformaCrossingLane
         return false
     }
     
-    //MARK: final
-    
-    final func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        for foe:MOptionReformaCrossingFoeItem in foes
-        {
-            foe.update(
-                elapsedTime:elapsedTime,
-                scene:scene)
-        }
-    }
-    
-    final func removeFoe(item:MOptionReformaCrossingFoeItem)
+    func removeFoe(item:MOptionReformaCrossingFoeItem)
     {
         var foes:[MOptionReformaCrossingFoeItem] = []
         
@@ -67,20 +55,22 @@ class MOptionReformaCrossingLane
         self.foes = foes
     }
     
-    final func stopFoes()
-    {/*
-        for foe:VOptionReformaCrossingFoe in foes
-        {
-            foe.totalStop()
-        }
-        
-        foes = []*/
-    }
-    
-    final func restart(addedSpeed:CGFloat)
+    func restart(addedSpeed:CGFloat)
     {
         self.addedSpeed = addedSpeed
         collectable = true
         foes = []
+    }
+    
+    //MARK: game update protocol
+    
+    func update(elapsedTime:TimeInterval, scene:SKScene)
+    {
+        for foe:MOptionReformaCrossingFoeItem in foes
+        {
+            foe.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
+        }
     }
 }

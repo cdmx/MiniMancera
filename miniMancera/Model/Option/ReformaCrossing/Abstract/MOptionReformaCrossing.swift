@@ -97,7 +97,6 @@ class MOptionReformaCrossing:MGame
         
         player.timeOut()
         deActivateGame()
-        laneGroup.stopFoes()
         strategy = MOptionReformaCrossingStrategyEndFail(
             model:self,
             gameOver:gameOver)

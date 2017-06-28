@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingFoeItem
+class MOptionReformaCrossingFoeItem:MGameUpdateProtocol
 {
     let created:TimeInterval
     weak var view:VOptionReformaCrossingFoe!
@@ -26,13 +26,6 @@ class MOptionReformaCrossingFoeItem
     
     //MARK: public
     
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        strategy?.update(
-            elapsedTime:elapsedTime,
-            scene:scene)
-    }
-    
     func strategyGas()
     {
         trip?.breaks()
@@ -50,5 +43,14 @@ class MOptionReformaCrossingFoeItem
         let totalSpeed:CGFloat = minSpeed + random
         
         return totalSpeed
+    }
+    
+    //MARK: game update protocol
+    
+    func update(elapsedTime:TimeInterval, scene:SKScene)
+    {
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
     }
 }

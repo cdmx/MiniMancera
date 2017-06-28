@@ -62,14 +62,6 @@ class MOptionReformaCrossingLaneGroup:MGameUpdateProtocol
         return lane
     }
     
-    func stopFoes()
-    {
-        for lane:MOptionReformaCrossingLane in lanes
-        {
-            lane.stopFoes()
-        }
-    }
-    
     //MARK: game update protocol
     
     func update(elapsedTime:TimeInterval, scene:SKScene)
