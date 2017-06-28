@@ -2,8 +2,37 @@ import SpriteKit
 
 class MOptionReformaCrossingPlayer
 {
-    weak var view:VOptionReformaCrossingPlayer?
+    let position:MOptionReformaCrossingPlayerPosition
     private var strategy:MGameStrategy<MOptionReformaCrossingPlayer>?
+    
+    init()
+    {
+        position = MOptionReformaCrossingPlayerPosition()
+    }
+    
+    weak var view:VOptionReformaCrossingPlayer?
+    {
+        didSet
+        {
+            measureSafePosition()
+        }
+    }
+    
+    //MARK: private
+    
+    private func measureSafePosition()
+    {
+        guard
+            
+            let view:VOptionReformaCrossingPlayer = self.view
+        
+        else
+        {
+            return
+        }
+        
+        position.playerView(view:view)
+    }
     
     //MARK: public
     
