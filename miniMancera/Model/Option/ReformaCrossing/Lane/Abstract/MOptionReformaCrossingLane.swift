@@ -83,21 +83,4 @@ class MOptionReformaCrossingLane
         collectable = true
         foes = []
     }
-    
-    final func playerCollectAt(position:CGPoint) -> Bool
-    {
-        if collectable
-        {
-            let playerY:CGFloat = position.y
-            
-            if playerY > positionY
-            {
-                collectable = false
-                
-                return true
-            }
-        }
-        
-        return false
-    }
 }

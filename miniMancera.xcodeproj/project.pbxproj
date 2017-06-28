@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		DA1121721F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121711F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift */; };
 		DA1121741F04448100275465 /* MOptionReformaCrossingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */; };
+		DA11217C1F0464C500275465 /* MOptionReformaCrossingCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11217A1F0464C500275465 /* MOptionReformaCrossingCoin.swift */; };
+		DA11217D1F0464C500275465 /* MOptionReformaCrossingCoinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11217B1F0464C500275465 /* MOptionReformaCrossingCoinItem.swift */; };
+		DA11217F1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11217E1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift */; };
+		DA1121811F0464FA00275465 /* MOptionReformaCrossingCoinItemStrategyShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121801F0464FA00275465 /* MOptionReformaCrossingCoinItemStrategyShowing.swift */; };
 		DA11DE3F1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */; };
 		DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */; };
 		DA1BDB181EF705050040FBEA /* CHomeFroob.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB171EF705050040FBEA /* CHomeFroob.swift */; };
@@ -274,6 +278,10 @@
 /* Begin PBXFileReference section */
 		DA1121711F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingPlayerPosition.swift; sourceTree = "<group>"; };
 		DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingMenu.swift; sourceTree = "<group>"; };
+		DA11217A1F0464C500275465 /* MOptionReformaCrossingCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoin.swift; sourceTree = "<group>"; };
+		DA11217B1F0464C500275465 /* MOptionReformaCrossingCoinItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoinItem.swift; sourceTree = "<group>"; };
+		DA11217E1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoinItemStrategyWaiting.swift; sourceTree = "<group>"; };
+		DA1121801F0464FA00275465 /* MOptionReformaCrossingCoinItemStrategyShowing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoinItemStrategyShowing.swift; sourceTree = "<group>"; };
 		DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverHitAndRun.swift; sourceTree = "<group>"; };
 		DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionPurchaseExtension.swift; sourceTree = "<group>"; };
 		DA1BDB171EF705050040FBEA /* CHomeFroob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeFroob.swift; sourceTree = "<group>"; };
@@ -552,6 +560,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA1121791F0464C500275465 /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				DA11217A1F0464C500275465 /* MOptionReformaCrossingCoin.swift */,
+				DA11217B1F0464C500275465 /* MOptionReformaCrossingCoinItem.swift */,
+				DA11217E1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift */,
+				DA1121801F0464FA00275465 /* MOptionReformaCrossingCoinItemStrategyShowing.swift */,
+			);
+			path = Coin;
+			sourceTree = "<group>";
+		};
 		DA1BDB201EF705960040FBEA /* HomeFroob */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +636,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2D005D1EEDE38600365F23 /* Abstract */,
+				DA1121791F0464C500275465 /* Coin */,
 				DAF37BE31F03A88B004C505D /* Player */,
 				DAC7D3B01F01C252008DC416 /* Node */,
 				DA91C3E51F01B82B0045FAE2 /* Strategy */,
@@ -1469,12 +1489,14 @@
 				DAAF2FD81EF6FBB500589BB0 /* MStoreStatusPurchasing.swift in Sources */,
 				DAF37BED1F03B089004C505D /* MOptionReformaCrossingPlayerStrategyStop.swift in Sources */,
 				DA91C3A31F014FD00045FAE2 /* ViewProtocol.swift in Sources */,
+				DA11217D1F0464C500275465 /* MOptionReformaCrossingCoinItem.swift in Sources */,
 				DA2DFFE91EECB16A00365F23 /* VBorder.swift in Sources */,
 				DA2DFFEA1EECB16A00365F23 /* VCollection.swift in Sources */,
 				DA5667841EF276CD000055D8 /* MHomeFooterBoards.swift in Sources */,
 				DA2DFFED1EECB16A00365F23 /* VPushBackground.swift in Sources */,
 				DA7E46851EFAEF3E00466867 /* MPerkPurchaseProtocol.swift in Sources */,
 				DA1D579C1EF245C800ECA895 /* VHomeFooterCell.swift in Sources */,
+				DA11217F1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift in Sources */,
 				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
 				DAB70AB61EFB1B89002C706F /* VOptionPollutedGardenBubble.swift in Sources */,
 				DA2DFFF21EECB16A00365F23 /* VHome.swift in Sources */,
@@ -1578,6 +1600,7 @@
 				DA2DFFDA1EECB16A00365F23 /* ExtensionFileManager.swift in Sources */,
 				DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */,
 				DA61AB0D1F01DC45000C562F /* MOptionReformaCrossingStrategyWait.swift in Sources */,
+				DA11217C1F0464C500275465 /* MOptionReformaCrossingCoin.swift in Sources */,
 				DAB70AD01EFB22C5002C706F /* VOptionPollutedGardenControls.swift in Sources */,
 				DA1D579A1EF238D300ECA895 /* ControllerParentTransitions.swift in Sources */,
 				DAF37BC61F02E98F004C505D /* MOptionReformaCrossingLane.swift in Sources */,
@@ -1613,6 +1636,7 @@
 				DAB70AD21EFB22DB002C706F /* VOptionPollutedGarden1up.swift in Sources */,
 				DA69BD681EFC89C8002CEB85 /* MOptionWhistlesVsZombiesMenu.swift in Sources */,
 				DAC7D3BA1F01D6A5008DC416 /* MOptionReformaCrossingStrategyEndSuccess.swift in Sources */,
+				DA1121811F0464FA00275465 /* MOptionReformaCrossingCoinItemStrategyShowing.swift in Sources */,
 				DA2D001C1EECB4DF00365F23 /* VHomeOptions.swift in Sources */,
 				DAB4F95E1EF974C400C389C7 /* VHomeSplashCellOptions.swift in Sources */,
 				DAF515201F01E2F2009A0182 /* VOptionReformaCrossingGameOverDescr.swift in Sources */,
