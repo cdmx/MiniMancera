@@ -2,6 +2,11 @@ import SpriteKit
 
 class MOptionPollutedGarden:MGame
 {
+    let contact:MOptionPollutedGardenContact
+    let plant:MOptionPollutedGardenPlant
+    
+    
+    
     let petuniaLife:MOptionPollutedGardenPetuniaLife
     let bubbleGenerator:MOptionPollutedGardenBubbleGenerator
     private(set) var currentScore:Int
@@ -10,6 +15,11 @@ class MOptionPollutedGarden:MGame
     
     required init()
     {
+        contact = MOptionPollutedGardenContact()
+        plant = MOptionPollutedGardenPlant()
+        
+        
+        
         petuniaLife = MOptionPollutedGardenPetuniaLife()
         bubbleGenerator = MOptionPollutedGardenBubbleGenerator()
         currentScore = 0

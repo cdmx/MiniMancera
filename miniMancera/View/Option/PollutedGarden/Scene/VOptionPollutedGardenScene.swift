@@ -2,10 +2,13 @@ import SpriteKit
 
 class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
 {
+    private let kGravityY:CGFloat = -0.1
+    private let kExtraEdge:CGFloat = 400
+    
     required init(controller:ControllerGame<MOptionPollutedGarden>)
     {
         super.init(controller:controller)
-        physicsWorld.gravity = CGVector.zero
+        startPhysics()
         factoryNodes()
     }
     
@@ -15,6 +18,25 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
     }
     
     //MARK: private
+    
+    private func startPhysics()
+    {
+        physicsWorld.gravity = CGVector(dx:0, dy:kGravityY)
+        
+        let origin:CGPoint = frame.origin
+        let size:CGSize = frame.size
+        let width:CGFloat = size.width
+        let height:CGFloat = size.height
+        let newHeight:CGFloat = height + kExtraEdge
+        let newSize:CGSize = CGSize(width:width, height:newHeight)
+        let edgeFrame:CGRect = CGRect(origin:origin, size:newSize)
+        
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(edgeLoopFrom:edgeFrame)
+        physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Scene
+        physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.None
+        physicsBody.collisionBitMask = MOptionPollutedGardenPhysicsStruct.None
+        self.physicsBody = physicsBody
+    }
     
     private func factoryNodes()
     {
@@ -56,9 +78,9 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
     private let kFadeInDuration:TimeInterval = 0.5
     private let kSpawnBubbleRate:TimeInterval = 0.1
     private let kWaitTransition:TimeInterval = 1.5
-    private let kGravityY:CGFloat = -0.1
+    
     private let kFontSize:CGFloat = 14
-    private let kExtraEdge:CGFloat = 400
+    
     private let kTitleVerticalAdd:CGFloat = 70
     private let kSpawnProbability:UInt32 = 15
     
@@ -141,24 +163,7 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
     */
     //MARK: private
     
-    private func startPhysics()
-    {
-        physicsWorld.gravity = CGVector(dx:0, dy:kGravityY)
-        physicsWorld.contactDelegate = self
-        
-        let origin:CGPoint = self.frame.origin
-        let size:CGSize = self.frame.size
-        let width:CGFloat = size.width
-        let height:CGFloat = size.height
-        let newSize:CGSize = CGSize(width:width, height:height + kExtraEdge)
-        let frame:CGRect = CGRect(origin:origin, size:newSize)
-        
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(edgeLoopFrom:frame)
-        physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Scene
-        physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.None
-        physicsBody.collisionBitMask = MOptionPollutedGardenPhysicsStruct.None
-        self.physicsBody = physicsBody
-    }
+    
     
     private func spawnPots()
     {/*
