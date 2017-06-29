@@ -3,6 +3,7 @@ import SpriteKit
 class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
 {
     private(set) weak var model:MOptionReformaCrossingFoeItem?
+    private let velocity:CGVector
     private let kPhysicsRemoveHeight:CGFloat = 6
     private let kPhysicsAddWidth:CGFloat = 8
     private let kVelocityMultiplier:CGFloat = 50
@@ -10,16 +11,18 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
     init(controller:ControllerGame<MOptionReformaCrossing>, model:MOptionReformaCrossingFoeItem)
     {
         self.model = model
+        let lane:MOptionReformaCrossingLane = model.lane
         let texture:MGameTexture = model.texture
+        let velocityX:CGFloat = kVelocityMultiplier * lane.direction
+        velocity = CGVector(dx:velocityX, dy:0)
         
         super.init(
             controller:controller,
             texture:texture)
         
-        let lane:MOptionReformaCrossingLane = model.lane
         let direction:CGFloat = lane.direction
         xScale = direction
-        startPhysics(direction:direction)
+        startPhysics()
     }
     
     required init?(coder:NSCoder)
@@ -34,9 +37,8 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
     
     //MARK: private
     
-    private func startPhysics(direction:CGFloat)
+    private func startPhysics()
     {
-        let velocity:CGFloat = direction * kVelocityMultiplier
         let physicsHeight:CGFloat = size.height - kPhysicsRemoveHeight
         let physicsWidth:CGFloat = size.width + kPhysicsAddWidth
         let physicsSize:CGSize = CGSize(width:physicsWidth, height:physicsHeight)
@@ -47,7 +49,7 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
         physicsBody.angularVelocity = 0
         physicsBody.allowsRotation = false
         physicsBody.restitution = 0
-        physicsBody.velocity = CGVector(dx:velocity, dy:0)
+        physicsBody.velocity = velocity
         
         physicsBody.categoryBitMask = MOptionReformaCrossingPhysicsStruct.Foe
         physicsBody.contactTestBitMask = MOptionReformaCrossingPhysicsStruct.Foe
@@ -56,6 +58,16 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
     }
     
     //MARK: public
+    
+    func breaks()
+    {
+        physicsBody?.velocity = CGVector.zero
+    }
+    
+    func gas()
+    {
+        physicsBody?.velocity = velocity
+    }
     
     func positionWithTrip()
     {

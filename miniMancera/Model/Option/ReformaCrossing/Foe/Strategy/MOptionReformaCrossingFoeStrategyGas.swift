@@ -9,12 +9,12 @@ class MOptionReformaCrossingFoeStrategyGas:MGameStrategy<MOptionReformaCrossingF
         if reachedDestination
         {
             model.lane.removeFoe(item:model)
-            model.view.removeFromParent()
+            model.view?.removeFromParent()
         }
         else
         {
             model.trip.advance(elapsedTime:elapsedTime)
-            model.view.positionWithTrip()
+            model.view?.positionWithTrip()
         }
     }
 }

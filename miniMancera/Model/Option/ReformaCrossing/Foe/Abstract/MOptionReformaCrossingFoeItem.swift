@@ -3,7 +3,7 @@ import SpriteKit
 class MOptionReformaCrossingFoeItem:MGameUpdateProtocol
 {
     let created:TimeInterval
-    weak var view:VOptionReformaCrossingFoe!
+    weak var view:VOptionReformaCrossingFoe?
     private(set) weak var lane:MOptionReformaCrossingLane!
     private(set) weak var texture:MGameTexture!
     private(set) var minSpeed:CGFloat
@@ -28,12 +28,14 @@ class MOptionReformaCrossingFoeItem:MGameUpdateProtocol
     
     func strategyGas()
     {
+        view?.gas()
         trip?.breaks()
         strategy = MOptionReformaCrossingFoeStrategyGas(model:self)
     }
     
     func breaks()
     {
+        view?.breaks()
         strategy = MOptionReformaCrossingFoeStrategyBreaks(model:self)
     }
     
