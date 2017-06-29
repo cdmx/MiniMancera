@@ -80,12 +80,6 @@ class MOptionReformaCrossing:MGame
         coin.chargeCoinsWith(laneGroup:laneGroup)
     }
     
-    func nextLevel()
-    {
-        hud.restart()
-        foe.restart()
-    }
-    
     func playerSuccess()
     {
         player.success()
@@ -114,8 +108,6 @@ class MOptionReformaCrossing:MGame
     {
         level = kStartingLevel
         score = 0
-        hud.restart()
-        foe.restart()
     }
     
     func playerStop()

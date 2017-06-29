@@ -2,14 +2,9 @@ import SpriteKit
 
 class MOptionReformaCrossingFoe:MGameUpdateProtocol
 {
-    private var elapsedTime:TimeInterval
+    private var elapsedTime:TimeInterval?
     private let kSpawnRate:TimeInterval = 0.1
     private let kSpawnProbability:UInt32 = 6
-
-    init()
-    {
-        elapsedTime = 0
-    }
     
     //MARK: private
     
@@ -60,32 +55,34 @@ class MOptionReformaCrossingFoe:MGameUpdateProtocol
         scene.addChild(view)
     }
     
-    //MARK: public
-    
-    func restart()
-    {
-        elapsedTime = 0
-    }
-    
     //MARK: game update protocol
     
     func update(elapsedTime:TimeInterval, scene:SKScene)
     {
-        let deltaTime:TimeInterval = elapsedTime - self.elapsedTime
-        
-        if deltaTime > kSpawnRate
+        if let lastElapsedTime:TimeInterval = self.elapsedTime
         {
-            guard
-                
-                let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
-                
-            else
-            {
-                return
-            }
+            let deltaTime:TimeInterval = abs(elapsedTime - lastElapsedTime)
             
+            if deltaTime > kSpawnRate
+            {
+                self.elapsedTime = elapsedTime
+                
+                guard
+                    
+                    let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
+                    
+                else
+                {
+                    return
+                }
+                
+                self.elapsedTime = elapsedTime
+                spawnFoe(scene:scene)
+            }
+        }
+        else
+        {
             self.elapsedTime = elapsedTime
-            spawnFoe(scene:scene)
         }
     }
 }

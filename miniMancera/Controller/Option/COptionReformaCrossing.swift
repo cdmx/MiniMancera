@@ -12,7 +12,6 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
     func nextLevel()
     {
         restartTimer()
-        model.nextLevel()
         newGameScene()
     }
     
