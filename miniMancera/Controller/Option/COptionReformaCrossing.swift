@@ -50,9 +50,9 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         let sound1up:SKAction = model.sounds.sound1up
         playSound(actionSound:sound1up)
         
+        model.revertChanges()
         restartTimer()
         newGameScene()
-        model.revertChanges()
     }
     
     func gamePlayNoMore()
@@ -69,64 +69,5 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         {
             model.playerStop()
         }
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    func hitAndRun()
-    {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
-        model.hitAndRun()
-//        scene.hitAndRun()
-    }
-    
-    
-    
-    func playerSuccess()
-    {
-        model.playerSuccess()
-        
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
-//        scene.gameSuccess()
-    }
-    
-    func collectedLane(lane:MOptionReformaCrossingLane)
-    {
-        model.collectedLane()
-        
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
-        scene.createCoinOn(lane:lane)
     }
 }

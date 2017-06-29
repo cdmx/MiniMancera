@@ -2,14 +2,13 @@ import SpriteKit
 
 class MOptionReformaCrossingLane:MGameUpdateProtocol
 {
+    let positionY:CGFloat
     var foes:[MOptionReformaCrossingFoeItem]
     private(set) var possibleFoes:[MOptionReformaCrossingFoeItem.Type]
     private(set) var scaleHorizontal:CGFloat
     private(set) var direction:CGFloat
-    private(set) var positionY:CGFloat
     private(set) var sceneWidth:CGFloat
     private(set) var addedSpeed:CGFloat
-    private var collectable:Bool
     private let deltaVertical:CGFloat
     
     init(deltaVertical:CGFloat)
@@ -19,7 +18,6 @@ class MOptionReformaCrossingLane:MGameUpdateProtocol
         possibleFoes = []
         scaleHorizontal = 0
         direction = 0
-        collectable = false
         addedSpeed = 0
         
         let size:CGSize = MGame.sceneSize
@@ -58,7 +56,6 @@ class MOptionReformaCrossingLane:MGameUpdateProtocol
     func restart(addedSpeed:CGFloat)
     {
         self.addedSpeed = addedSpeed
-        collectable = true
         foes = []
     }
     

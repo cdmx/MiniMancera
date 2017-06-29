@@ -2,7 +2,7 @@ import UIKit
 
 class MOptionReformaCrossingPlayerPosition
 {
-    private var positionY:CGFloat
+    private(set) var positionY:CGFloat
     private var safePositionY:CGFloat
     private let positionX:CGFloat
     private let kAddPositionY:CGFloat = 205

@@ -9,6 +9,7 @@ class MOptionReformaCrossing:MGame
     let laneGroup:MOptionReformaCrossingLaneGroup
     let player:MOptionReformaCrossingPlayer
     let foe:MOptionReformaCrossingFoe
+    let coin:MOptionReformaCrossingCoin
     let stop:MOptionReformaCrossingStop
     let hud:MOptionReformaCrossingHud
     let menu:MOptionReformaCrossingMenu
@@ -27,6 +28,7 @@ class MOptionReformaCrossing:MGame
         laneGroup = MOptionReformaCrossingLaneGroup()
         player = MOptionReformaCrossingPlayer()
         foe = MOptionReformaCrossingFoe()
+        coin = MOptionReformaCrossingCoin()
         stop = MOptionReformaCrossingStop()
         hud = MOptionReformaCrossingHud()
         menu = MOptionReformaCrossingMenu()
@@ -67,6 +69,7 @@ class MOptionReformaCrossing:MGame
         strategy = MOptionReformaCrossingStrategyBegin(model:self)
         title.startLevel(level:level)
         laneGroup.restart(level:level)
+        coin.chargeCoinsWith(laneGroup:laneGroup)
     }
     
     func nextLevel()
@@ -109,7 +112,6 @@ class MOptionReformaCrossing:MGame
     
     func revertChanges()
     {
-        strategy = MOptionReformaCrossingStrategyBegin(model:self)
         level = kStartingLevel
         score = 0
         hud.restart()
@@ -120,6 +122,11 @@ class MOptionReformaCrossing:MGame
     {
         player.stop()
         stop.playerStop()
+    }
+    
+    func addCoin()
+    {
+        score += 1
     }
     
     
@@ -136,8 +143,5 @@ class MOptionReformaCrossing:MGame
     
     
     
-    func collectedLane()
-    {
-        score += 1
-    }
+    
 }

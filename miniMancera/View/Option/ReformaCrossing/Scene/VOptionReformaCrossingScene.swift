@@ -52,14 +52,18 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         addChild(title)
     }
     
-    func createCoinOn(lane:MOptionReformaCrossingLane)
-    {/*
-        playSound(actionSound:soundCoin)
+    //MARK: public
+    
+    func showCoin(coin:MOptionReformaCrossingCoinItem)
+    {
+        let soundCoin:SKAction = controller.model.sounds.soundCoin
+        controller.playSound(actionSound:soundCoin)
         
-        let coin:MOptionReformaCrossingCoin = MOptionReformaCrossingCoin(
-            lane:lane,
-            controller:controller)
+        let view:VOptionReformaCrossingCoin = VOptionReformaCrossingCoin(
+            controller:controller,
+            positionY:coin.positionY)
+        coin.view = view
         
-        addChild(coin)*/
+        addChild(view)
     }
 }

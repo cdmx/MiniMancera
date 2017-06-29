@@ -10,6 +10,7 @@ class MOptionReformaCrossingStrategyGame:MGameStrategyMain<MOptionReformaCrossin
             model.player,
             model.laneGroup,
             model.foe,
+            model.coin,
             model.contact]
         
         super.init(model:model, updateItems:updateItems)

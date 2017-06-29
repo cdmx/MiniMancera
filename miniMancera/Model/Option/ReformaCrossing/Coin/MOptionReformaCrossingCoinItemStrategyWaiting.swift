@@ -1,9 +1,26 @@
-//
-//  MOptionReformaCrossingCoinItemStrategyWaiting.swift
-//  miniMancera
-//
-//  Created by zero on 6/28/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import SpriteKit
 
-import Foundation
+class MOptionReformaCrossingCoinItemStrategyWaiting:MGameStrategy<MOptionReformaCrossingCoinItem>
+{
+    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    {
+        guard
+        
+            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
+        
+        else
+        {
+            return
+        }
+        
+        let model:MOptionReformaCrossing = scene.controller.model
+        let playerY:CGFloat = model.player.position.positionY
+        
+        if playerY > self.model.positionY
+        {
+            model.addCoin()
+            scene.showCoin(coin:self.model)
+            self.model.showCoin()
+        }
+    }
+}

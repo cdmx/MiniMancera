@@ -8,7 +8,7 @@ class MOptionReformaCrossingActions
     var actionStopAnimation:SKAction!
     var actionPlayerWalkAnimation:SKAction!
     var actionPlayerStopAnimation:SKAction!
-    private let kFadeInDuration:TimeInterval = 0.5
+    private let kFadeDuration:TimeInterval = 0.5
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kStopAnimationFrameTime:TimeInterval = 0.03
     private let kPlayerWalkAnimationFrameTime:TimeInterval = 0.1
@@ -16,8 +16,8 @@ class MOptionReformaCrossingActions
     
     init()
     {
-        actionFadeIn = SKAction.fadeIn(withDuration:kFadeInDuration)
-        actionFadeOut = SKAction.fadeOut(withDuration:kFadeInDuration)
+        actionFadeIn = SKAction.fadeIn(withDuration:kFadeDuration)
+        actionFadeOut = SKAction.fadeOut(withDuration:kFadeDuration)
         transitionCrossFade = SKTransition.crossFade(withDuration:kSceneTransitionDuration)
     }
     
