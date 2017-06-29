@@ -129,19 +129,17 @@ class MOptionReformaCrossing:MGame
         score += 1
     }
     
-    
-    
-    
-    
-    
-    func hitAndRun()
+    func hitAndRun(scene:VOptionReformaCrossingScene)
     {
+        let soundFail:SKAction = sounds.soundHonk
+        scene.controller.playSound(actionSound:soundFail)
+        
+        let gameOver:MOptionReformaCrossingGameOverHitAndRun = MOptionReformaCrossingGameOverHitAndRun()
+        
+        player.timeOut()
         deActivateGame()
+        strategy = MOptionReformaCrossingStrategyEndFail(
+            model:self,
+            gameOver:gameOver)
     }
-    
-    
-    
-    
-    
-    
 }

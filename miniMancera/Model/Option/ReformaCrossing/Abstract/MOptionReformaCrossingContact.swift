@@ -11,34 +11,39 @@ class MOptionReformaCrossingContact:MGameUpdateProtocol
     
     //MARK: private
     
-    private func lookContacts()
+    private func lookContacts(scene:SKScene)
     {
         for contact:SKPhysicsContact in queue
         {
-            contactBegin(contact:contact)
+            contactBegin(contact:contact, scene:scene)
         }
     }
     
-    private func contactBegin(contact:SKPhysicsContact)
+    private func contactBegin(
+        contact:SKPhysicsContact,
+        scene:SKScene)
     {
         let bodyA:SKNode? = contact.bodyA.node
         let bodyB:SKNode? = contact.bodyB.node
         
         if let foe:VOptionReformaCrossingFoe = bodyA as? VOptionReformaCrossingFoe
         {
-            contactFoeAndBody(foe:foe, body:bodyB)
+            contactFoeAndBody(foe:foe, body:bodyB, scene:scene)
         }
         else if let foe:VOptionReformaCrossingFoe = bodyB as? VOptionReformaCrossingFoe
         {
-            contactFoeAndBody(foe:foe, body:bodyA)
+            contactFoeAndBody(foe:foe, body:bodyA, scene:scene)
         }
     }
     
-    private func contactFoeAndBody(foe:VOptionReformaCrossingFoe, body:SKNode?)
+    private func contactFoeAndBody(
+        foe:VOptionReformaCrossingFoe,
+        body:SKNode?,
+        scene:SKScene)
     {
         if let player:VOptionReformaCrossingPlayer = body as? VOptionReformaCrossingPlayer
         {
-            contactPlayerFoe(player:player, foe:foe)
+            contactPlayerFoe(player:player, foe:foe, scene:scene)
         }
         else if let otherFoe:VOptionReformaCrossingFoe = body as? VOptionReformaCrossingFoe
         {
@@ -68,15 +73,21 @@ class MOptionReformaCrossingContact:MGameUpdateProtocol
         }
     }
     
-    private func contactPlayerFoe(player:VOptionReformaCrossingPlayer, foe:VOptionReformaCrossingFoe)
+    private func contactPlayerFoe(
+        player:VOptionReformaCrossingPlayer,
+        foe:VOptionReformaCrossingFoe,
+        scene:SKScene)
     {
-        /*
-         playSound(actionSound:soundHonk)
-         
-         if controller.model.gameActive
-         {
-         controller.hitAndRun()
-         }*/
+        guard
+            
+            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
+            
+        else
+        {
+            return
+        }
+        
+        scene.controller.model.hitAndRun(scene:scene)
     }
     
     //MARK: public
@@ -90,7 +101,7 @@ class MOptionReformaCrossingContact:MGameUpdateProtocol
     
     func update(elapsedTime:TimeInterval, scene:SKScene)
     {
-        lookContacts()
+        lookContacts(scene:scene)
         queue = []
     }
 }
