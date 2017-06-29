@@ -4,8 +4,8 @@ class MOptionPollutedGardenBubbleGenerator
 {
     let explodeAnimation:SKAction
     private weak var controller:COptionPollutedGarden!
-    private var maxX:CGFloat
-    private var maxY:CGFloat
+    private let maxX:CGFloat
+    private let maxY:CGFloat
     private let bubbleTypes:[MOptionPollutedGardenBubbleType]
     private let colours:[UIColor]
     private let kAddYPos:CGFloat = 150
@@ -19,8 +19,10 @@ class MOptionPollutedGardenBubbleGenerator
         explodeAnimation = MOptionPollutedGardenBubbleGenerator.factoryExplodeAnimation()
         countBubbles = UInt32(bubbleTypes.count)
         countColours = UInt32(colours.count)
-        maxX = 0
-        maxY = 0
+        
+        let sceneSize:CGSize = MGame.sceneSize
+        maxX = sceneSize.width
+        maxY = sceneSize.height + kAddYPos
     }
     
     //MARK: private
@@ -57,15 +59,6 @@ class MOptionPollutedGardenBubbleGenerator
     }
     
     //MARK: public
-    
-    func updateController(controller:COptionPollutedGarden)
-    {/*
-        self.controller = controller
-        
-        let size:CGSize = controller.model.size
-        maxX = size.width
-        maxY = size.height + kAddYPos*/
-    }
     
     func randomBubble() -> VOptionPollutedGardenBubble
     {

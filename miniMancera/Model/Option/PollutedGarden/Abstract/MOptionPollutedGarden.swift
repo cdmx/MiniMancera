@@ -14,6 +14,8 @@ class MOptionPollutedGarden:MGame
         bubbleGenerator = MOptionPollutedGardenBubbleGenerator()
         currentScore = 0
         super.init()
+        
+        strategy = MOptionPollutedGardenStrategyBegin(model:self)
     }
     
     override var startSceneType:SKScene.Type?
@@ -34,15 +36,17 @@ class MOptionPollutedGarden:MGame
     
     override func activateGame()
     {
-        strategy = MOptionReformaCrossingStrategyGame(model:self)
-        player.activateGame()
+        strategy = MOptionPollutedGardenStrategyBegin(model:self)
+//        player.activateGame()
         
         super.activateGame()
     }
     
     override func update(elapsedTime:TimeInterval, scene:SKScene)
     {
-        
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
     }
     
     

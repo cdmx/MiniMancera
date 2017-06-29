@@ -2,7 +2,41 @@ import SpriteKit
 
 class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
 {
-    let soundPop:SKAction
+    required init(controller:ControllerGame<MOptionPollutedGarden>)
+    {
+        super.init(controller:controller)
+        physicsWorld.gravity = CGVector.zero
+        factoryNodes()
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
+    //MARK: private
+    
+    private func factoryNodes()
+    {
+        let model:MOptionPollutedGarden = controller.model
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    let soundPop:SKAction
     private weak var player:VOptionPollutedGardenPlayer!
     private weak var controls:VOptionPollutedGardenControls!
     private weak var hud:VOptionPollutedGardenHud!
@@ -28,6 +62,11 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
     private let kTitleVerticalAdd:CGFloat = 70
     private let kSpawnProbability:UInt32 = 15
     
+    
+    
+    
+    
+    /*
     required init(controller:ControllerGame<MOptionPollutedGarden>)
     {
         petunias = []
@@ -39,7 +78,7 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         
         super.init(controller:controller)
         startPhysics()
-        /*
+        
         let background:VOptionPollutedGardenBackground = VOptionPollutedGardenBackground(
             controller:controller)
         
@@ -68,7 +107,7 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         addChild(player)
         addChild(controls)
         addChild(hud)
-        addChild(menu)*/
+        addChild(menu)
     }
     
     required init?(coder:NSCoder)
@@ -91,7 +130,7 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         updateContact(contactQueue:contactQueue)
         contactQueue = []
         checkBubbleSpawning(currentTime:currentTime)
-    }
+    }*/
     /*
     override func updateNodes()
     {

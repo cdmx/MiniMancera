@@ -1,7 +1,12 @@
 import SpriteKit
 
 class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
-{    
+{
+    override func didBegin(_ contact:SKPhysicsContact)
+    {
+        model.contact.addContact(contact:contact)
+    }
+    
     //MARK: public
     
     func collectFlower(petunia:VOptionPollutedGardenPetunia)
