@@ -1,14 +1,20 @@
 import SpriteKit
 
-class MOptionPollutedGardenPlant:MGameUpdateProtocol
+class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
 {
     private var items:[MOptionPollutedGardenPlantItem]
     private let position:MOptionPollutedGardenPlantPosition
     
-    init()
+    override init()
     {
         position = MOptionPollutedGardenPlantPosition()
         items = []
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionPollutedGarden>)
+    {
     }
     
     //MARK: private
@@ -31,12 +37,5 @@ class MOptionPollutedGardenPlant:MGameUpdateProtocol
     func restart(textures:MOptionPollutedGardenTextures)
     {
         newPlants(textures:textures)
-    }
-    
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        
     }
 }

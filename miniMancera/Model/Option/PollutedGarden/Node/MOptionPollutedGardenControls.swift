@@ -1,17 +1,17 @@
 import SpriteKit
 
-class MOptionPollutedGardenControls:MGameUpdateProtocol
+class MOptionPollutedGardenControls:MGameUpdate<MOptionPollutedGarden>
 {
     weak var view:VOptionPollutedGardenControls?
     
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionPollutedGarden>)
     {
         guard
-        
+            
             let positionX:CGFloat = view?.touchPositionX()
-        
+            
         else
         {
             return

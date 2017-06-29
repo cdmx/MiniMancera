@@ -1,6 +1,8 @@
 import SpriteKit
 
-class MOptionReformaCrossingFoeStrategyGas:MGameStrategy<MOptionReformaCrossingFoeItem>
+class MOptionReformaCrossingFoeStrategyGas:MGameStrategy<
+    MOptionReformaCrossingFoeItem,
+    MOptionReformaCrossing>
 {
     override func update(elapsedTime:TimeInterval, scene:SKScene)
     {

@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingLane:MGameUpdateProtocol
+class MOptionReformaCrossingLane:MGameUpdate<MOptionReformaCrossing>
 {
     let positionY:CGFloat
     var foes:[MOptionReformaCrossingFoeItem]
@@ -22,6 +22,18 @@ class MOptionReformaCrossingLane:MGameUpdateProtocol
         let sceneHeight_2:CGFloat = size.height / 2.0
         sceneWidth = size.width
         positionY = sceneHeight_2 + deltaVertical
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
+    {
+        for foe:MOptionReformaCrossingFoeItem in foes
+        {
+            foe.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
+        }
     }
     
     //MARK: public
@@ -55,17 +67,5 @@ class MOptionReformaCrossingLane:MGameUpdateProtocol
     {
         self.addedSpeed = addedSpeed
         foes = []
-    }
-    
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        for foe:MOptionReformaCrossingFoeItem in foes
-        {
-            foe.update(
-                elapsedTime:elapsedTime,
-                scene:scene)
-        }
     }
 }

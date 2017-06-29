@@ -1,5 +1,7 @@
 import SpriteKit
 
-class MOptionPollutedGardenPlantItemStrategyGrow:MGameStrategy<MOptionPollutedGardenPlantItem>
+class MOptionPollutedGardenPlantItemStrategyGrow:MGameStrategy<
+    MOptionPollutedGardenPlantItem,
+    MOptionPollutedGarden>
 {
 }

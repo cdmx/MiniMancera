@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingFoeItem:MGameUpdateProtocol
+class MOptionReformaCrossingFoeItem:MGameUpdate<MOptionReformaCrossing>
 {
     let created:TimeInterval
     weak var view:VOptionReformaCrossingFoe?
@@ -9,7 +9,7 @@ class MOptionReformaCrossingFoeItem:MGameUpdateProtocol
     private(set) var minSpeed:CGFloat
     private(set) var randomMaxSpeed:UInt32
     private(set) var trip:MOptionReformaCrossingFoeItemTrip!
-    private var strategy:MGameStrategy<MOptionReformaCrossingFoeItem>?
+    private var strategy:MGameStrategy<MOptionReformaCrossingFoeItem, MOptionReformaCrossing>?
     
     required init(
         model:MOptionReformaCrossing,
@@ -19,9 +19,20 @@ class MOptionReformaCrossingFoeItem:MGameUpdateProtocol
         created = Date().timeIntervalSince1970
         minSpeed = 0
         randomMaxSpeed = 0
+        super.init()
+        
         trip = lane.foeTrip(foe:self)
         
         strategyGas()
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
+    {
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
     }
     
     //MARK: public
@@ -45,14 +56,5 @@ class MOptionReformaCrossingFoeItem:MGameUpdateProtocol
         let totalSpeed:CGFloat = minSpeed + random
         
         return totalSpeed
-    }
-    
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        strategy?.update(
-            elapsedTime:elapsedTime,
-            scene:scene)
     }
 }

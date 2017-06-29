@@ -1,27 +1,20 @@
 import SpriteKit
 
-class MOptionReformaCrossingStop:MGameUpdateProtocol
+class MOptionReformaCrossingStop:MGameUpdate<MOptionReformaCrossing>
 {
     weak var view:VOptionReformaCrossingStop?
     private var shouldStop:Bool
     private var unblockTimeout:TimeInterval?
     private let kBlockDuration:TimeInterval = 0.2
     
-    init()
+    override init()
     {
         shouldStop = false
     }
     
-    //MARK: public
-    
-    func playerStop()
-    {
-        shouldStop = true
-    }
-    
-    //MARK: game update protocol
-
-    func update(elapsedTime:TimeInterval, scene:SKScene)
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
     {
         if shouldStop
         {
@@ -44,5 +37,12 @@ class MOptionReformaCrossingStop:MGameUpdateProtocol
                 }
             }
         }
+    }
+    
+    //MARK: public
+    
+    func playerStop()
+    {
+        shouldStop = true
     }
 }

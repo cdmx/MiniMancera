@@ -1,11 +1,19 @@
 import SpriteKit
 
-class MOptionPollutedGardenContact:MGameUpdateProtocol
+class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
 {
     private var queue:[SKPhysicsContact]
     
-    init()
+    override init()
     {
+        queue = []
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionPollutedGarden>)
+    {
+        lookContacts()
         queue = []
     }
     
@@ -82,13 +90,5 @@ class MOptionPollutedGardenContact:MGameUpdateProtocol
     func addContact(contact:SKPhysicsContact)
     {
         queue.append(contact)
-    }
-    
-    //MARK: game upate protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        lookContacts()
-        queue = []
     }
 }

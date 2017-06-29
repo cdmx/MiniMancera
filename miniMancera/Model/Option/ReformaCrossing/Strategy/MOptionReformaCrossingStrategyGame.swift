@@ -4,7 +4,7 @@ class MOptionReformaCrossingStrategyGame:MGameStrategyMain<MOptionReformaCrossin
 {
     init(model:MOptionReformaCrossing)
     {
-        let updateItems:[MGameUpdateProtocol] = [
+        let updateItems:[MGameUpdate<MOptionReformaCrossing>] = [
             model.stop,
             model.hud,
             model.player,

@@ -1,11 +1,19 @@
 import SpriteKit
 
-class MOptionReformaCrossingContact:MGameUpdateProtocol
+class MOptionReformaCrossingContact:MGameUpdate<MOptionReformaCrossing>
 {
     private var queue:[SKPhysicsContact]
     
-    init()
+    override init()
     {
+        queue = []
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
+    {
+        lookContacts(scene:scene)
         queue = []
     }
     
@@ -95,13 +103,5 @@ class MOptionReformaCrossingContact:MGameUpdateProtocol
     func addContact(contact:SKPhysicsContact)
     {
         queue.append(contact)
-    }
-    
-    //MARK: game upate protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        lookContacts(scene:scene)
-        queue = []
     }
 }

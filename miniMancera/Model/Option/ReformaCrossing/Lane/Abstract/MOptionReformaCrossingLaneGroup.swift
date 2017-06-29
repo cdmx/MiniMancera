@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossingLaneGroup:MGameUpdateProtocol
+class MOptionReformaCrossingLaneGroup:MGameUpdate<MOptionReformaCrossing>
 {
     let lanes:[MOptionReformaCrossingLane]
     private let countLanes:UInt32
@@ -30,10 +30,22 @@ class MOptionReformaCrossingLaneGroup:MGameUpdateProtocol
         return lanes
     }
     
-    init()
+    override init()
     {
         lanes = MOptionReformaCrossingLaneGroup.factoryLanes()
         countLanes = UInt32(lanes.count)
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
+    {
+        for lane:MOptionReformaCrossingLane in lanes
+        {
+            lane.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
+        }
     }
     
     //MARK: public
@@ -60,17 +72,5 @@ class MOptionReformaCrossingLaneGroup:MGameUpdateProtocol
         }
         
         return lane
-    }
-    
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        for lane:MOptionReformaCrossingLane in lanes
-        {
-            lane.update(
-                elapsedTime:elapsedTime,
-                scene:scene)
-        }
     }
 }

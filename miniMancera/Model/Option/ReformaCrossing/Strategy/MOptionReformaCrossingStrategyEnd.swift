@@ -8,7 +8,7 @@ class MOptionReformaCrossingStrategyEnd:MGameStrategyMain<MOptionReformaCrossing
     
     init(model:MOptionReformaCrossing, keepAdvancing:Bool)
     {
-        let updateItems:[MGameUpdateProtocol] = [
+        let updateItems:[MGameUpdate<MOptionReformaCrossing>] = [
             model.laneGroup,
             model.foe,
             model.contact]
@@ -19,7 +19,7 @@ class MOptionReformaCrossingStrategyEnd:MGameStrategyMain<MOptionReformaCrossing
     
     override func update(
         elapsedTime:TimeInterval,
-        scene:SKScene)
+        scene:ViewGameScene<MOptionReformaCrossing>)
     {
         if keepAdvancing
         {
@@ -39,13 +39,12 @@ class MOptionReformaCrossingStrategyEnd:MGameStrategyMain<MOptionReformaCrossing
     
     //MARK: private
     
-    private func checkTimeout(deltaTime:TimeInterval, scene:SKScene)
+    private func checkTimeout(deltaTime:TimeInterval, scene:ViewGameScene<MOptionReformaCrossing>)
     {
         if deltaTime > kWait
         {
             guard
                 
-                let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene,
                 let controller:COptionReformaCrossing = scene.controller as? COptionReformaCrossing
                 
             else

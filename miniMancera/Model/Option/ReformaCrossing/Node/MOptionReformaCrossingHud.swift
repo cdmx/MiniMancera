@@ -1,15 +1,36 @@
 import SpriteKit
 
-class MOptionReformaCrossingHud:MGameUpdateProtocol
+class MOptionReformaCrossingHud:MGameUpdate<MOptionReformaCrossing>
 {
     weak var view:VOptionReformaCrossingHud?
     private var elapsedTime:TimeInterval?
     private let kMaxTime:TimeInterval = 32
     private let kTimeDelta:TimeInterval = 0.1
     
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
+    {
+        if let lastElapsedTime:TimeInterval = self.elapsedTime
+        {
+            let deltaTime:TimeInterval = abs(elapsedTime - lastElapsedTime)
+            
+            if deltaTime > kTimeDelta
+            {
+                self.elapsedTime = elapsedTime
+                let score:Int = scene.controller.model.score
+                updateStrings(scene:scene, score:score)
+            }
+        }
+        else
+        {
+            self.elapsedTime = elapsedTime
+        }
+    }
+    
     //MARK: private
     
-    private func timeOut(scene:VOptionReformaCrossingScene)
+    private func timeOut(scene:ViewGameScene<MOptionReformaCrossing>)
     {
         let model:MOptionReformaCrossing = scene.controller.model
         model.timeOut()
@@ -18,7 +39,7 @@ class MOptionReformaCrossingHud:MGameUpdateProtocol
         scene.controller.playSound(actionSound:soundFail)
     }
     
-    private func updateStrings(scene:VOptionReformaCrossingScene, score:Int)
+    private func updateStrings(scene:ViewGameScene<MOptionReformaCrossing>, score:Int)
     {
         guard
             
@@ -45,36 +66,5 @@ class MOptionReformaCrossingHud:MGameUpdateProtocol
         
         let timeString:String = "\(time)"
         view?.update(time:timeString, score:scoreString)
-    }
-    
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        if let lastElapsedTime:TimeInterval = self.elapsedTime
-        {
-            let deltaTime:TimeInterval = abs(elapsedTime - lastElapsedTime)
-            
-            if deltaTime > kTimeDelta
-            {
-                self.elapsedTime = elapsedTime
-                
-                guard
-                    
-                    let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
-                    
-                else
-                {
-                    return
-                }
-                
-                let score:Int = scene.controller.model.score
-                updateStrings(scene:scene, score:score)
-            }
-        }
-        else
-        {
-            self.elapsedTime = elapsedTime
-        }
     }
 }

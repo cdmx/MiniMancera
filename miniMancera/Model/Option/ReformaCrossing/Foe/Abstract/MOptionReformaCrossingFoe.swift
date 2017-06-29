@@ -1,10 +1,30 @@
 import SpriteKit
 
-class MOptionReformaCrossingFoe:MGameUpdateProtocol
+class MOptionReformaCrossingFoe:MGameUpdate<MOptionReformaCrossing>
 {
     private var elapsedTime:TimeInterval?
     private let kSpawnRate:TimeInterval = 0.1
     private let kSpawnProbability:UInt32 = 6
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
+    {
+        if let lastElapsedTime:TimeInterval = self.elapsedTime
+        {
+            let deltaTime:TimeInterval = abs(elapsedTime - lastElapsedTime)
+            
+            if deltaTime > kSpawnRate
+            {
+                self.elapsedTime = elapsedTime
+                spawnFoe(scene:scene)
+            }
+        }
+        else
+        {
+            self.elapsedTime = elapsedTime
+        }
+    }
     
     //MARK: private
     
@@ -20,7 +40,7 @@ class MOptionReformaCrossingFoe:MGameUpdateProtocol
         return false
     }
     
-    private func spawnFoe(scene:VOptionReformaCrossingScene)
+    private func spawnFoe(scene:ViewGameScene<MOptionReformaCrossing>)
     {
         let should:Bool = shouldSpawn()
         
@@ -30,7 +50,7 @@ class MOptionReformaCrossingFoe:MGameUpdateProtocol
         }
     }
     
-    private func confirmedSpawnFoe(scene:VOptionReformaCrossingScene)
+    private func confirmedSpawnFoe(scene:ViewGameScene<MOptionReformaCrossing>)
     {
         let controller:ControllerGame<MOptionReformaCrossing> = scene.controller
         let model:MOptionReformaCrossing = scene.controller.model
@@ -53,36 +73,5 @@ class MOptionReformaCrossingFoe:MGameUpdateProtocol
         foe.view = view
         
         scene.addChild(view)
-    }
-    
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        if let lastElapsedTime:TimeInterval = self.elapsedTime
-        {
-            let deltaTime:TimeInterval = abs(elapsedTime - lastElapsedTime)
-            
-            if deltaTime > kSpawnRate
-            {
-                self.elapsedTime = elapsedTime
-                
-                guard
-                    
-                    let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
-                    
-                else
-                {
-                    return
-                }
-                
-                self.elapsedTime = elapsedTime
-                spawnFoe(scene:scene)
-            }
-        }
-        else
-        {
-            self.elapsedTime = elapsedTime
-        }
     }
 }

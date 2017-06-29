@@ -6,7 +6,7 @@ class MOptionReformaCrossingStrategyBegin:MGameStrategyMain<MOptionReformaCrossi
     
     init(model:MOptionReformaCrossing)
     {
-        let updateItems:[MGameUpdateProtocol] = [
+        let updateItems:[MGameUpdate<MOptionReformaCrossing>] = [
             model.laneGroup,
             model.foe,
             model.contact]
@@ -16,19 +16,19 @@ class MOptionReformaCrossingStrategyBegin:MGameStrategyMain<MOptionReformaCrossi
     
     override func update(
         elapsedTime:TimeInterval,
-        scene:SKScene)
+        scene:ViewGameScene<MOptionReformaCrossing>)
     {
         super.update(elapsedTime:elapsedTime, scene:scene)
         
         if elapsedTime > kTimeout
         {
-            timeout(scene:scene)
+            timeout()
         }
     }
     
     //MARK: private
     
-    private func timeout(scene:SKScene)
+    private func timeout()
     {
         model.activateGame()
 

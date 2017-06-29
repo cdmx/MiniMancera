@@ -1,6 +1,8 @@
 import SpriteKit
 
-class MOptionReformaCrossingFoeStrategyBreaks:MGameStrategy<MOptionReformaCrossingFoeItem>
+class MOptionReformaCrossingFoeStrategyBreaks:MGameStrategy<
+    MOptionReformaCrossingFoeItem,
+    MOptionReformaCrossing>
 {
     private var timeout:TimeInterval?
     private let kDuration:TimeInterval = 1

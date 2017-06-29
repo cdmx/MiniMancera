@@ -1,6 +1,8 @@
 import SpriteKit
 
-class MOptionReformaCrossingPlayerStrategyStop:MGameStrategy<MOptionReformaCrossingPlayer>
+class MOptionReformaCrossingPlayerStrategyStop:MGameStrategy<
+    MOptionReformaCrossingPlayer,
+    MOptionReformaCrossing>
 {
     private var timeout:TimeInterval?
     private let kDuration:TimeInterval = 0.3

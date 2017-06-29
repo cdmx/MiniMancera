@@ -6,7 +6,7 @@ class MOptionPollutedGardenStrategyBegin:MGameStrategyMain<MOptionPollutedGarden
     
     init(model:MOptionPollutedGarden)
     {
-        let updateItems:[MGameUpdateProtocol] = [
+        let updateItems:[MGameUpdate<MOptionPollutedGarden>] = [
             ]
         
         super.init(model:model, updateItems:updateItems)
@@ -14,19 +14,19 @@ class MOptionPollutedGardenStrategyBegin:MGameStrategyMain<MOptionPollutedGarden
     
     override func update(
         elapsedTime:TimeInterval,
-        scene:SKScene)
+        scene:ViewGameScene<MOptionPollutedGarden>)
     {
         super.update(elapsedTime:elapsedTime, scene:scene)
         
         if elapsedTime > kTimeout
         {
-            timeout(scene:scene)
+            timeout()
         }
     }
     
     //MARK: private
     
-    private func timeout(scene:SKScene)
+    private func timeout()
     {
         model.activateGame()
     }

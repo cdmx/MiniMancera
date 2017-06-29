@@ -1,6 +1,8 @@
 import SpriteKit
 
-class MOptionReformaCrossingPlayerStrategyWalk:MGameStrategy<MOptionReformaCrossingPlayer>
+class MOptionReformaCrossingPlayerStrategyWalk:MGameStrategy<
+    MOptionReformaCrossingPlayer,
+    MOptionReformaCrossing>
 {
     private var lastElapsedTime:TimeInterval?
     private let kSpeed:CGFloat = 70

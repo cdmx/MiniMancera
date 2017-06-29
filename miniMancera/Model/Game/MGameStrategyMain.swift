@@ -1,20 +1,18 @@
 import SpriteKit
 
-class MGameStrategyMain<T:MGame>:MGameStrategy<T>
+class MGameStrategyMain<T:MGame>:MGameStrategy<T, T>
 {
-    private let updateItems:[MGameUpdateProtocol]
+    private let updateItems:[MGameUpdate<T>]
     
-    init(model:T, updateItems:[MGameUpdateProtocol])
+    init(model:T, updateItems:[MGameUpdate<T>])
     {
         self.updateItems = updateItems
         super.init(model:model)
     }
     
-    override func update(
-        elapsedTime:TimeInterval,
-        scene:SKScene)
+    override func update(elapsedTime:TimeInterval, scene:ViewGameScene<T>)
     {
-        for item:MGameUpdateProtocol in updateItems
+        for item:MGameUpdate in updateItems
         {
             item.update(elapsedTime:elapsedTime, scene:scene)
         }

@@ -1,6 +1,8 @@
 import SpriteKit
 
-class MOptionReformaCrossingCoinItemStrategyWaiting:MGameStrategy<MOptionReformaCrossingCoinItem>
+class MOptionReformaCrossingCoinItemStrategyWaiting:MGameStrategy<
+    MOptionReformaCrossingCoinItem,
+    MOptionReformaCrossing>
 {
     override func update(elapsedTime:TimeInterval, scene:SKScene)
     {

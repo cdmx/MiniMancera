@@ -1,21 +1,14 @@
 import SpriteKit
 
-class MOptionPollutedGardenHud:MGameUpdateProtocol
+class MOptionPollutedGardenHud:MGameUpdate<MOptionPollutedGarden>
 {
     weak var view:VOptionPollutedGardenHud?
     private var elapsedTime:TimeInterval?
     private let kTimeDelta:TimeInterval = 0.8
     
-    //MARK: private
-    
-    private func updateStrings(model:MOptionPollutedGarden)
-    {
-        
-    }
-
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionPollutedGarden>)
     {
         if let lastElapsedTime:TimeInterval = self.elapsedTime
         {
@@ -25,15 +18,6 @@ class MOptionPollutedGardenHud:MGameUpdateProtocol
             {
                 self.elapsedTime = elapsedTime
                 
-                guard
-                    
-                    let scene:VOptionPollutedGardenScene = scene as? VOptionPollutedGardenScene
-                    
-                else
-                {
-                    return
-                }
-                
                 let model:MOptionPollutedGarden = scene.controller.model
                 updateStrings(model:model)
             }
@@ -42,5 +26,12 @@ class MOptionPollutedGardenHud:MGameUpdateProtocol
         {
             self.elapsedTime = elapsedTime
         }
+    }
+    
+    //MARK: private
+    
+    private func updateStrings(model:MOptionPollutedGarden)
+    {
+        
     }
 }

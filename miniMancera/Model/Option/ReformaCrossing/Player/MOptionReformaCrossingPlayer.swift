@@ -1,11 +1,11 @@
 import SpriteKit
 
-class MOptionReformaCrossingPlayer:MGameUpdateProtocol
+class MOptionReformaCrossingPlayer:MGameUpdate<MOptionReformaCrossing>
 {
     let position:MOptionReformaCrossingPlayerPosition
-    private var strategy:MGameStrategy<MOptionReformaCrossingPlayer>?
+    private var strategy:MGameStrategy<MOptionReformaCrossingPlayer, MOptionReformaCrossing>?
     
-    init()
+    override init()
     {
         position = MOptionReformaCrossingPlayerPosition()
     }
@@ -16,6 +16,15 @@ class MOptionReformaCrossingPlayer:MGameUpdateProtocol
         {
             measureSafePosition()
         }
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
+    {
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
     }
     
     //MARK: private
@@ -67,14 +76,5 @@ class MOptionReformaCrossingPlayer:MGameUpdateProtocol
     func hitAndRun()
     {
         view?.hitAndRun()
-    }
-    
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        strategy?.update(
-            elapsedTime:elapsedTime,
-            scene:scene)
     }
 }

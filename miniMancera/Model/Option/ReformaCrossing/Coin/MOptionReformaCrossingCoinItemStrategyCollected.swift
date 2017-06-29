@@ -1,5 +1,7 @@
 import SpriteKit
 
-class MOptionReformaCrossingCoinItemStrategyCollected:MGameStrategy<MOptionReformaCrossingCoinItem>
+class MOptionReformaCrossingCoinItemStrategyCollected:MGameStrategy<
+    MOptionReformaCrossingCoinItem,
+    MOptionReformaCrossing>
 {
 }

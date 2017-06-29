@@ -1,6 +1,8 @@
 import SpriteKit
 
-class MOptionReformaCrossingCoinItemStrategyFading:MGameStrategy<MOptionReformaCrossingCoinItem>
+class MOptionReformaCrossingCoinItemStrategyFading:MGameStrategy<
+    MOptionReformaCrossingCoinItem,
+    MOptionReformaCrossing>
 {
     private var elapsedTime:TimeInterval?
     private let kDuration:TimeInterval = 1

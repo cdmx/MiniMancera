@@ -64,10 +64,10 @@ class MOptionReformaCrossing:MGame
     }
     
     override func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
+    {/*
         strategy?.update(
             elapsedTime:elapsedTime,
-            scene:scene)
+            scene:scene)*/
     }
     
     //MARK: public

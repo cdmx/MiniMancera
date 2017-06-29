@@ -1,11 +1,10 @@
 import SpriteKit
 
-class MOptionPollutedGardenPlayer:MGameUpdateProtocol
+class MOptionPollutedGardenPlayer:MGameUpdate<MOptionPollutedGarden>
 {
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionPollutedGarden>)
     {
-        
     }
 }

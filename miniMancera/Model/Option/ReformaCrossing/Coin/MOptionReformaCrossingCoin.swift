@@ -1,12 +1,22 @@
 import SpriteKit
 
-class MOptionReformaCrossingCoin:MGameUpdateProtocol
+class MOptionReformaCrossingCoin:MGameUpdate<MOptionReformaCrossing>
 {
     private var items:[MOptionReformaCrossingCoinItem]
     
-    init()
+    override init()
     {
         items = []
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
+    {
+        for coin:MOptionReformaCrossingCoinItem in items
+        {
+            coin.update(elapsedTime:elapsedTime, scene:scene)
+        }
     }
     
     //MARK: public
@@ -24,15 +34,5 @@ class MOptionReformaCrossingCoin:MGameUpdateProtocol
         }
         
         self.items = items
-    }
-    
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        for coin:MOptionReformaCrossingCoinItem in items
-        {
-            coin.update(elapsedTime:elapsedTime, scene:scene)
-        }
     }
 }

@@ -1,15 +1,26 @@
 import SpriteKit
 
-class MOptionReformaCrossingCoinItem:MGameUpdateProtocol
+class MOptionReformaCrossingCoinItem:MGameUpdate<MOptionReformaCrossing>
 {
     let positionY:CGFloat
     weak var view:VOptionReformaCrossingCoin?
-    private var strategy:MGameStrategy<MOptionReformaCrossingCoinItem>?
+    private var strategy:MGameStrategy<MOptionReformaCrossingCoinItem, MOptionReformaCrossing>?
     
     init(positionY:CGFloat)
     {
         self.positionY = positionY
+        super.init()
+        
         strategy = MOptionReformaCrossingCoinItemStrategyWaiting(model:self)
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
+    {
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
     }
     
     //MARK: public
@@ -28,14 +39,5 @@ class MOptionReformaCrossingCoinItem:MGameUpdateProtocol
     {
         view?.collected()
         strategy = MOptionReformaCrossingCoinItemStrategyCollected(model:self)
-    }
-    
-    //MARK: game update protocol
-    
-    func update(elapsedTime:TimeInterval, scene:SKScene)
-    {
-        strategy?.update(
-            elapsedTime:elapsedTime,
-            scene:scene)
     }
 }
