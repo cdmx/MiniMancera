@@ -3,6 +3,7 @@ import SpriteKit
 class MGameTextureAnimated
 {
     let textures:[SKTexture]
+    let size:Int
     
     init(images:[UIImage])
     {
@@ -15,6 +16,7 @@ class MGameTextureAnimated
         }
         
         self.textures = textures
+        size = textures.count
     }
     
     init(textures:[SKTexture])

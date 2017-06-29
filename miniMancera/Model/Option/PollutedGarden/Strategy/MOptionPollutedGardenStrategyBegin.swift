@@ -2,7 +2,7 @@ import SpriteKit
 
 class MOptionPollutedGardenStrategyBegin:MGameStrategyMain<MOptionPollutedGarden>
 {
-    private let kTimeout:TimeInterval = 1.5
+    private let kTimeout:TimeInterval = 1.25
     
     init(model:MOptionPollutedGarden)
     {

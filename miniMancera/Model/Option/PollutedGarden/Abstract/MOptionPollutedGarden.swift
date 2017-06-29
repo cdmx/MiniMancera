@@ -2,8 +2,9 @@ import SpriteKit
 
 class MOptionPollutedGarden:MGame
 {
-    let contact:MOptionPollutedGardenContact
     let plant:MOptionPollutedGardenPlant
+    let textures:MOptionPollutedGardenTextures
+    let contact:MOptionPollutedGardenContact
     
     
     
@@ -15,8 +16,9 @@ class MOptionPollutedGarden:MGame
     
     required init()
     {
-        contact = MOptionPollutedGardenContact()
         plant = MOptionPollutedGardenPlant()
+        textures = MOptionPollutedGardenTextures()
+        contact = MOptionPollutedGardenContact()
         
         
         
@@ -24,8 +26,6 @@ class MOptionPollutedGarden:MGame
         bubbleGenerator = MOptionPollutedGardenBubbleGenerator()
         currentScore = 0
         super.init()
-        
-        strategy = MOptionPollutedGardenStrategyBegin(model:self)
     }
     
     override var startSceneType:SKScene.Type?
@@ -63,7 +63,21 @@ class MOptionPollutedGarden:MGame
     
     
     
+    
+    
     //MARK: public
+    
+    func startLevel()
+    {
+        strategy = MOptionPollutedGardenStrategyBegin(model:self)
+        plant.restart()
+    }
+    
+    
+    
+    
+    
+    
     
     func collectedFlower()
     {
