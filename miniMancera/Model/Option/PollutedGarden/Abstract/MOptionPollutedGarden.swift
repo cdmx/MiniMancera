@@ -69,9 +69,13 @@ class MOptionPollutedGarden:MGame
     
     func startLevel()
     {
+        score = 0
+        currentScore = 0
         strategy = MOptionPollutedGardenStrategyBegin(model:self)
-        plant.restart()
+        plant.restart(textures:textures)
     }
+    
+    
     
     
     

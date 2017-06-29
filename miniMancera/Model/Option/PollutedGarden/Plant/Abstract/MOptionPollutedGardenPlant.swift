@@ -30,7 +30,7 @@ class MOptionPollutedGardenPlant:MGameUpdateProtocol
     
     func restart(textures:MOptionPollutedGardenTextures)
     {
-        newPlants()
+        newPlants(textures:textures)
     }
     
     //MARK: game update protocol

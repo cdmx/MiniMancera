@@ -44,6 +44,10 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
     {
         let model:MOptionPollutedGarden = controller.model
     
+        let background:VOptionPollutedGardenBackground = VOptionPollutedGardenBackground(
+            controller:controller)
+        
+        addChild(background)
     }
     
     
@@ -67,11 +71,11 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
     private weak var menu:VOptionPollutedGardenMenu!
     private weak var floor:VOptionPollutedGardenFloor!
     private weak var labelTitle:SKLabelNode?
-    private var petunias:[VOptionPollutedGardenPetunia]
-    private var contactQueue:[SKPhysicsContact]
-    private var nextBubbleSpawns:TimeInterval
-    private let soundCoin:SKAction
-    private let soundFail:SKAction
+//    private var petunias:[VOptionPollutedGardenPetunia]
+//    private var contactQueue:[SKPhysicsContact]
+//    private var nextBubbleSpawns:TimeInterval
+//    private let soundCoin:SKAction
+//    private let soundFail:SKAction
     private let kSoundCoin:String = "soundCoin.caf"
     private let kSoundPop:String = "soundPop.caf"
     private let kSoundFail:String = "soundFail.caf"
@@ -270,11 +274,11 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
     
     private func checkBubbleSpawning(currentTime:TimeInterval)
     {
-        if currentTime > nextBubbleSpawns
-        {
-            nextBubbleSpawns = currentTime + kSpawnBubbleRate
-            spawnBubble()
-        }
+//        if currentTime > nextBubbleSpawns
+//        {
+//            nextBubbleSpawns = currentTime + kSpawnBubbleRate
+//            spawnBubble()
+//        }
     }
     
     private func spawnBubble()
@@ -352,12 +356,5 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         let actionsSequence:SKAction = SKAction.sequence(actions)
         
         run(actionsSequence)
-    }
-    
-    //MARK: contact delegate
-    
-    func didBegin(_ contact:SKPhysicsContact)
-    {
-        contactQueue.append(contact)
     }
 }

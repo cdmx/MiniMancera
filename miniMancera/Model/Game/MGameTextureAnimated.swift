@@ -22,5 +22,6 @@ class MGameTextureAnimated
     init(textures:[SKTexture])
     {
         self.textures = textures
+        size = textures.count
     }
 }
