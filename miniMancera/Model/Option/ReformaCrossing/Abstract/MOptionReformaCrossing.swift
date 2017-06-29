@@ -1,7 +1,9 @@
 import SpriteKit
 
-class MOptionReformaCrossing:MGame
+class MOptionReformaCrossing:MGame, MGameProtocol
 {
+    typealias modelType = MOptionReformaCrossing
+    
     let contact:MOptionReformaCrossingContact
     let textures:MOptionReformaCrossingTextures
     let sounds:MOptionReformaCrossingSounds
@@ -14,8 +16,8 @@ class MOptionReformaCrossing:MGame
     let hud:MOptionReformaCrossingHud
     let menu:MOptionReformaCrossingMenu
     let title:MOptionReformaCrossingTitle
+    private(set) var strategy:MGameStrategyMain<MOptionReformaCrossing>?
     private(set) var level:Int
-    private var strategy:MGameStrategyMain<MOptionReformaCrossing>?
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     private let kStartingLevel:Int = 1
     

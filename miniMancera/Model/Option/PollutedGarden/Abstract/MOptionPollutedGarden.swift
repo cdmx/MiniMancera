@@ -1,20 +1,21 @@
 import SpriteKit
 
-class MOptionPollutedGarden:MGame
+class MOptionPollutedGarden:MGame, MGameProtocol
 {
+    typealias modelType = MOptionPollutedGarden
+
     let controls:MOptionPollutedGardenControls
     let plant:MOptionPollutedGardenPlant
     let hud:MOptionPollutedGardenHud
     let menu:MOptionPollutedGardenMenu
     let textures:MOptionPollutedGardenTextures
     let contact:MOptionPollutedGardenContact
-    
+    private(set) var strategy:MGameStrategyMain<MOptionPollutedGarden>?
     
     
     let petuniaLife:MOptionPollutedGardenPetuniaLife
     let bubbleGenerator:MOptionPollutedGardenBubbleGenerator
     private(set) var currentScore:Int
-    private var strategy:MGameStrategyMain<MOptionPollutedGarden>?
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     
     required init()
