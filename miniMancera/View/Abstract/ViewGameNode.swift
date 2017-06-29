@@ -3,7 +3,7 @@ import SpriteKit
 class ViewGameNode<T:MGame>:SKSpriteNode
 {
     private(set) weak var controller:ControllerGame<T>!
-    private(set) weak var modelTexture:MGameTexture!
+    private(set) weak var modelTexture:MGameTexture?
     
     init(controller:ControllerGame<T>)
     {
@@ -24,6 +24,22 @@ class ViewGameNode<T:MGame>:SKSpriteNode
             size:texture.size)
 
         zPosition = texture.zPosition
+        positionStart()
+    }
+    
+    init(
+        controller:ControllerGame<T>,
+        size:CGSize,
+        zPosition:CGFloat)
+    {
+        self.controller = controller
+        
+        super.init(
+            texture:nil,
+            color:UIColor.clear,
+            size:size)
+        
+        self.zPosition = zPosition
         positionStart()
     }
     

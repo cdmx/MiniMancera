@@ -1,11 +1,14 @@
 import SpriteKit
 
-class VOptionPollutedGardenControls:SKSpriteNode
+class VOptionPollutedGardenControls:ViewGameNode<MOptionPollutedGarden>
 {
     private var lastTouch:UITouch?
-    private weak var controller:COptionPollutedGarden!
     private let kHeight:CGFloat = 250
-    private let kZPosition:CGFloat = 999999
+    
+    override init(controller:ControllerGame<MOptionPollutedGarden>)
+    {
+        super.init(controller: <#T##ControllerGame<MOptionPollutedGarden>#>)
+    }
     
     init(controller:COptionPollutedGarden)
     {
