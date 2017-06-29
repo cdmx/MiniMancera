@@ -3,6 +3,7 @@ import SpriteKit
 class MOptionPollutedGarden:MGame
 {
     let plant:MOptionPollutedGardenPlant
+    let menu:MOptionPollutedGardenMenu
     let textures:MOptionPollutedGardenTextures
     let contact:MOptionPollutedGardenContact
     
@@ -17,6 +18,7 @@ class MOptionPollutedGarden:MGame
     required init()
     {
         plant = MOptionPollutedGardenPlant()
+        menu = MOptionPollutedGardenMenu()
         textures = MOptionPollutedGardenTextures()
         contact = MOptionPollutedGardenContact()
         

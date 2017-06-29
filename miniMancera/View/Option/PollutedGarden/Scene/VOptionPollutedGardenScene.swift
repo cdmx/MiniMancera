@@ -47,7 +47,12 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         let background:VOptionPollutedGardenBackground = VOptionPollutedGardenBackground(
             controller:controller)
         
+        let menu:VOptionPollutedGardenMenu = VOptionPollutedGardenMenu(
+            controller:controller)
+        model.menu.view = menu
+        
         addChild(background)
+        addChild(menu)
     }
     
     
