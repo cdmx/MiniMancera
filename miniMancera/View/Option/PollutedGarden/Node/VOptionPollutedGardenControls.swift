@@ -36,7 +36,7 @@ class VOptionPollutedGardenControls:ViewGameNode<MOptionPollutedGarden>
     
     //MARK: public
     
-    func lastTouchPositionX() -> CGFloat?
+    func touchPositionX() -> CGFloat?
     {
         guard
             
