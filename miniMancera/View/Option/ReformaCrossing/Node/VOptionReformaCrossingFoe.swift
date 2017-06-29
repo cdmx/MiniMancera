@@ -5,6 +5,7 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
     private(set) weak var model:MOptionReformaCrossingFoeItem?
     private let kPhysicsRemoveHeight:CGFloat = 6
     private let kPhysicsAddWidth:CGFloat = 8
+    private let kVelocityMultiplier:CGFloat = 50
     
     init(controller:ControllerGame<MOptionReformaCrossing>, model:MOptionReformaCrossingFoeItem)
     {
@@ -16,8 +17,9 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
             texture:texture)
         
         let lane:MOptionReformaCrossingLane = model.lane
-        xScale = lane.scaleHorizontal
-        startPhysics()
+        let direction:CGFloat = lane.direction
+        xScale = direction
+        startPhysics(direction:direction)
     }
     
     required init?(coder:NSCoder)
@@ -32,8 +34,9 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
     
     //MARK: private
     
-    private func startPhysics()
+    private func startPhysics(direction:CGFloat)
     {
+        let velocity:CGFloat = direction * kVelocityMultiplier
         let physicsHeight:CGFloat = size.height - kPhysicsRemoveHeight
         let physicsWidth:CGFloat = size.width + kPhysicsAddWidth
         let physicsSize:CGSize = CGSize(width:physicsWidth, height:physicsHeight)
@@ -44,6 +47,7 @@ class VOptionReformaCrossingFoe:ViewGameNode<MOptionReformaCrossing>
         physicsBody.angularVelocity = 0
         physicsBody.allowsRotation = false
         physicsBody.restitution = 0
+        physicsBody.velocity = CGVector(dx:velocity, dy:0)
         
         physicsBody.categoryBitMask = MOptionReformaCrossingPhysicsStruct.Foe
         physicsBody.contactTestBitMask = MOptionReformaCrossingPhysicsStruct.Foe

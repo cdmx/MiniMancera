@@ -136,7 +136,7 @@ class MOptionReformaCrossing:MGame
         
         let gameOver:MOptionReformaCrossingGameOverHitAndRun = MOptionReformaCrossingGameOverHitAndRun()
         
-        player.timeOut()
+        player.hitAndRun()
         deActivateGame()
         strategy = MOptionReformaCrossingStrategyEndFail(
             model:self,

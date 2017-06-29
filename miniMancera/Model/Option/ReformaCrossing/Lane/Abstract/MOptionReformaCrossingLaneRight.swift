@@ -2,16 +2,7 @@ import UIKit
 
 class MOptionReformaCrossingLaneRight:MOptionReformaCrossingLane
 {
-    private let kScaleHorizontal:CGFloat = 1
     private let kDirection:CGFloat = 1
-    
-    override var scaleHorizontal:CGFloat
-    {
-        get
-        {
-            return kScaleHorizontal
-        }
-    }
     
     override var direction:CGFloat
     {

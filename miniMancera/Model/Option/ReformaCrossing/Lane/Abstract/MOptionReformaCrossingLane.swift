@@ -5,7 +5,6 @@ class MOptionReformaCrossingLane:MGameUpdateProtocol
     let positionY:CGFloat
     var foes:[MOptionReformaCrossingFoeItem]
     private(set) var possibleFoes:[MOptionReformaCrossingFoeItem.Type]
-    private(set) var scaleHorizontal:CGFloat
     private(set) var direction:CGFloat
     private(set) var sceneWidth:CGFloat
     private(set) var addedSpeed:CGFloat
@@ -16,7 +15,6 @@ class MOptionReformaCrossingLane:MGameUpdateProtocol
         self.deltaVertical = deltaVertical
         foes = []
         possibleFoes = []
-        scaleHorizontal = 0
         direction = 0
         addedSpeed = 0
         
