@@ -225,16 +225,16 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
     
     private func updatePlayer()
     {
-        guard
-            
-            let lastTouchPositionX:CGFloat = controls.lastTouchPositionX()
-            
-            else
-        {
-            return
-        }
-        
-        player.walkToPosition(positionX:lastTouchPositionX)
+//        guard
+//            
+//            let lastTouchPositionX:CGFloat = controls.lastTouchPositionX()
+//            
+//            else
+//        {
+//            return
+//        }
+//        
+//        player.walkToPosition(positionX:lastTouchPositionX)
     }
     
     private func showTitle()
