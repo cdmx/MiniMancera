@@ -47,16 +47,20 @@ extension ControllerGame
     
     func exitGame()
     {
-        guard
+        DispatchQueue.main.async
+        { [weak self] in
             
-            let parent:ControllerParent = self.parent as? ControllerParent
+            guard
+                
+                let parent:ControllerParent = self?.parent as? ControllerParent
+                
+            else
+            {
+                return
+            }
             
-        else
-        {
-            return
+            parent.pop(vertical:ControllerParent.Vertical.bottom)
         }
-        
-        parent.pop(vertical:ControllerParent.Vertical.bottom)
     }
     
     func exitGameAndPostScore()
