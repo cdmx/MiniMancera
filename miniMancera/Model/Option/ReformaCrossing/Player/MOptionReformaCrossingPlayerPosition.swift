@@ -28,9 +28,18 @@ class MOptionReformaCrossingPlayerPosition
     
     func playerView(view:VOptionReformaCrossingPlayer)
     {
+        guard
+            
+            let modelTexture:MGameTexture = view.modelTexture
+        
+        else
+        {
+            return
+        }
+        
         let sceneHeight:CGFloat = MGame.sceneSize.height
         let sceneHeight_2:CGFloat = sceneHeight / 2.0
-        let height_2:CGFloat = view.modelTexture.height_2
+        let height_2:CGFloat = modelTexture.height_2
         positionY = height_2
         safePositionY = sceneHeight_2 + height_2 + kAddPositionY
         view.position = makePoint()

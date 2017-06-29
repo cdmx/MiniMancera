@@ -7,25 +7,26 @@ class VOptionPollutedGardenControls:ViewGameNode<MOptionPollutedGarden>
     
     override init(controller:ControllerGame<MOptionPollutedGarden>)
     {
-        super.init(controller: <#T##ControllerGame<MOptionPollutedGarden>#>)
-    }
-    
-    init(controller:COptionPollutedGarden)
-    {
-        let sceneWidth:CGFloat = 0//controller.model.size.width
-        let sceneWidth_2:CGFloat = sceneWidth / 2.0
+        let sceneWidth:CGFloat = MGame.sceneSize.width
         let size:CGSize = CGSize(width:sceneWidth, height:kHeight)
-        let height_2:CGFloat = kHeight / 2.0
         
-        super.init(texture:nil, color:UIColor.clear, size:size)
-        isUserInteractionEnabled = true
-        zPosition = kZPosition
-        position = CGPoint(x:sceneWidth_2, y:height_2)
+        super.init(
+            controller:controller,
+            size:size,
+            zPosition:MOptionPollutedGardenZPosition.Controls.rawValue)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func positionStart()
+    {
+        let sceneWidth:CGFloat = MGame.sceneSize.width
+        let sceneWidth_2:CGFloat = sceneWidth / 2.0
+        let height_2:CGFloat = kHeight / 2.0
+        position = CGPoint(x:sceneWidth_2, y:height_2)
     }
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)

@@ -18,6 +18,15 @@ class VOptionPollutedGardenBackground:ViewGameNode<MOptionPollutedGarden>
     
     override func positionStart()
     {
+        guard
+            
+            let modelTexture:MGameTexture = modelTexture
+            
+        else
+        {
+            return
+        }
+        
         let textureHeight:CGFloat = modelTexture.height
         let sceneSize:CGSize = MGame.sceneSize
         let sceneWidth:CGFloat = sceneSize.width

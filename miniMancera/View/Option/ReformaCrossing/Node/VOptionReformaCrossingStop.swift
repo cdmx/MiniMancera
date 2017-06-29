@@ -20,6 +20,15 @@ class VOptionReformaCrossingStop:ViewGameNode<MOptionReformaCrossing>
     
     override func positionStart()
     {
+        guard
+            
+            let modelTexture:MGameTexture = modelTexture
+            
+        else
+        {
+            return
+        }
+        
         let sceneWidth:CGFloat = MGame.sceneSize.width
         let sceneWidth_2:CGFloat = sceneWidth / 2.0
         let height_2:CGFloat = modelTexture.height_2
@@ -50,6 +59,6 @@ class VOptionReformaCrossingStop:ViewGameNode<MOptionReformaCrossing>
     
     func restoreStand()
     {
-        texture = modelTexture.texture
+        texture = modelTexture?.texture
     }
 }

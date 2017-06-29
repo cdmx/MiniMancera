@@ -22,6 +22,15 @@ class VOptionReformaCrossingMenu:ViewGameNode<MOptionReformaCrossing>
     
     override func positionStart()
     {
+        guard
+            
+            let modelTexture:MGameTexture = modelTexture
+            
+        else
+        {
+            return
+        }
+        
         let sceneHeight:CGFloat = MGame.sceneSize.height
         let width_2:CGFloat = modelTexture.width_2
         let positionY:CGFloat = sceneHeight - kMargin
