@@ -17,6 +17,7 @@
 		DA1121851F046C3000275465 /* MGameStrategyMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121841F046C3000275465 /* MGameStrategyMain.swift */; };
 		DA1121871F047B5700275465 /* MOptionReformaCrossingCoinItemStrategyFading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121861F047B5700275465 /* MOptionReformaCrossingCoinItemStrategyFading.swift */; };
 		DA1121891F047C8700275465 /* MOptionReformaCrossingCoinItemStrategyCollected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121881F047C8700275465 /* MOptionReformaCrossingCoinItemStrategyCollected.swift */; };
+		DA11218B1F04E61E00275465 /* DummySKAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11218A1F04E61E00275465 /* DummySKAction.swift */; };
 		DA11DE3F1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */; };
 		DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */; };
 		DA1BDB181EF705050040FBEA /* CHomeFroob.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB171EF705050040FBEA /* CHomeFroob.swift */; };
@@ -290,6 +291,7 @@
 		DA1121841F046C3000275465 /* MGameStrategyMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGameStrategyMain.swift; sourceTree = "<group>"; };
 		DA1121861F047B5700275465 /* MOptionReformaCrossingCoinItemStrategyFading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoinItemStrategyFading.swift; sourceTree = "<group>"; };
 		DA1121881F047C8700275465 /* MOptionReformaCrossingCoinItemStrategyCollected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoinItemStrategyCollected.swift; sourceTree = "<group>"; };
+		DA11218A1F04E61E00275465 /* DummySKAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummySKAction.swift; sourceTree = "<group>"; };
 		DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverHitAndRun.swift; sourceTree = "<group>"; };
 		DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionPurchaseExtension.swift; sourceTree = "<group>"; };
 		DA1BDB171EF705050040FBEA /* CHomeFroob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeFroob.swift; sourceTree = "<group>"; };
@@ -667,6 +669,7 @@
 				DA91C3B21F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift */,
 				DAC7D3AE1F01B9B9008DC416 /* MOptionReformaCrossingActions.swift */,
 				DAF37BDF1F038DB8004C505D /* MOptionReformaCrossingContact.swift */,
+				DA11218A1F04E61E00275465 /* DummySKAction.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1483,6 +1486,7 @@
 				DAB4DAC31EFD815E00E433B9 /* MOptionWhistlesVsZombiesMenuItemPink.swift in Sources */,
 				DAF37BB41F02E938004C505D /* MOptionReformaCrossingFoeItemRuta2.swift in Sources */,
 				DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */,
+				DA11218B1F04E61E00275465 /* DummySKAction.swift in Sources */,
 				DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */,
 				DAB70AB81EFB1C0E002C706F /* VOptionPollutedGardenBackground.swift in Sources */,
 				DA2892831EF61A3800C80D3D /* DOptionExtension.swift in Sources */,
