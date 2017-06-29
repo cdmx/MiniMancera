@@ -55,6 +55,14 @@ class MOptionReformaCrossing:MGame
         }
     }
     
+    override func activateGame()
+    {
+        strategy = MOptionReformaCrossingStrategyGame(model:self)
+        player.activateGame()
+        
+        super.activateGame()
+    }
+    
     override func update(elapsedTime:TimeInterval, scene:SKScene)
     {
         strategy?.update(
@@ -76,14 +84,6 @@ class MOptionReformaCrossing:MGame
     {
         hud.restart()
         foe.restart()
-    }
-    
-    override func activateGame()
-    {
-        strategy = MOptionReformaCrossingStrategyGame(model:self)
-        player.activateGame()
-        
-        super.activateGame()
     }
     
     func playerSuccess()

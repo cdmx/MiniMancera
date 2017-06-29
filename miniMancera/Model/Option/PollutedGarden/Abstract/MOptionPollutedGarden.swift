@@ -5,6 +5,7 @@ class MOptionPollutedGarden:MGame
     let petuniaLife:MOptionPollutedGardenPetuniaLife
     let bubbleGenerator:MOptionPollutedGardenBubbleGenerator
     private(set) var currentScore:Int
+    private var strategy:MGameStrategyMain<MOptionPollutedGarden>?
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     
     required init()
@@ -30,6 +31,23 @@ class MOptionPollutedGarden:MGame
             return kSoundBackground
         }
     }
+    
+    override func activateGame()
+    {
+        strategy = MOptionReformaCrossingStrategyGame(model:self)
+        player.activateGame()
+        
+        super.activateGame()
+    }
+    
+    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    {
+        
+    }
+    
+    
+    
+    
     
     //MARK: public
     
