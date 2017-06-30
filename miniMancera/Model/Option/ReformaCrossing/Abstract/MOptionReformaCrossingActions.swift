@@ -2,12 +2,12 @@ import SpriteKit
 
 class MOptionReformaCrossingActions
 {
-    var actionStopAnimation:SKAction!
-    var actionPlayerWalkAnimation:SKAction!
-    var actionPlayerStopAnimation:SKAction!
     let actionFadeIn:SKAction
     let actionFadeOut:SKAction
     let transitionCrossFade:SKTransition
+    private(set) var actionStopAnimation:SKAction!
+    private(set) var actionPlayerWalkAnimation:SKAction!
+    private(set) var actionPlayerStopAnimation:SKAction!
     private let kFadeDuration:TimeInterval = 0.5
     private let kSceneTransitionDuration:TimeInterval = 1
     private let kStopAnimationFrameTime:TimeInterval = 0.03

@@ -2,10 +2,10 @@ import SpriteKit
 
 class MOptionPollutedGardenActions
 {
-    var actionPlayerAnimation:SKAction!
     let actionFadeIn:SKAction
     let actionFadeOut:SKAction
     let transitionCrossFade:SKTransition
+    private(set) var actionPlayerAnimation:SKAction!
     private let kPlayerAnimationFrameTime:TimeInterval = 0.2
     private let kFadeDuration:TimeInterval = 0.5
     private let kSceneTransitionDuration:TimeInterval = 1
