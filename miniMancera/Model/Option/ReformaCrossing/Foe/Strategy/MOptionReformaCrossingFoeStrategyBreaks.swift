@@ -7,7 +7,9 @@ class MOptionReformaCrossingFoeStrategyBreaks:MGameStrategy<
     private var timeout:TimeInterval?
     private let kDuration:TimeInterval = 1
     
-    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
     {
         if let timeout:TimeInterval = self.timeout
         {

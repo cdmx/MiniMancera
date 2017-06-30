@@ -39,7 +39,9 @@ class MOptionReformaCrossingStrategyEnd:MGameStrategyMain<MOptionReformaCrossing
     
     //MARK: private
     
-    private func checkTimeout(deltaTime:TimeInterval, scene:ViewGameScene<MOptionReformaCrossing>)
+    private func checkTimeout(
+        deltaTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
     {
         if deltaTime > kWait
         {

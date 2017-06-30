@@ -15,7 +15,7 @@ class MOptionPollutedGardenStrategyEnd:MGameStrategyMain<MOptionPollutedGarden>
     
     override func update(
         elapsedTime:TimeInterval,
-        scene:SKScene)
+        scene:ViewGameScene<MOptionPollutedGarden>)
     {
         if let initialTime:TimeInterval = self.initialTime
         {

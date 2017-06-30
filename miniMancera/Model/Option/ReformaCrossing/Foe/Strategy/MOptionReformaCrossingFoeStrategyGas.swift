@@ -4,7 +4,9 @@ class MOptionReformaCrossingFoeStrategyGas:MGameStrategy<
     MOptionReformaCrossingFoeItem,
     MOptionReformaCrossing>
 {
-    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
     {
         let reachedDestination:Bool = model.trip.reachedDestination()
         

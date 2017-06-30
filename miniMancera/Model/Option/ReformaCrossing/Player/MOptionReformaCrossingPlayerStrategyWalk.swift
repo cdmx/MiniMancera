@@ -7,7 +7,9 @@ class MOptionReformaCrossingPlayerStrategyWalk:MGameStrategy<
     private var lastElapsedTime:TimeInterval?
     private let kSpeed:CGFloat = 70
     
-    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
     {
         let isSafe:Bool = model.position.isSafe()
         
@@ -31,17 +33,8 @@ class MOptionReformaCrossingPlayerStrategyWalk:MGameStrategy<
     
     //MARK: private
     
-    private func success(scene:SKScene)
+    private func success(scene:ViewGameScene<MOptionReformaCrossing>)
     {
-        guard
-            
-            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
         let model:MOptionReformaCrossing = scene.controller.model
         model.playerSuccess()
         

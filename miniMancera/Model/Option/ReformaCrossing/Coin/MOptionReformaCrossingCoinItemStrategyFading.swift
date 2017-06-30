@@ -7,7 +7,9 @@ class MOptionReformaCrossingCoinItemStrategyFading:MGameStrategy<
     private var elapsedTime:TimeInterval?
     private let kDuration:TimeInterval = 1
     
-    override func update(elapsedTime:TimeInterval, scene:SKScene)
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionReformaCrossing>)
     {
         if let currentTime:TimeInterval = self.elapsedTime
         {

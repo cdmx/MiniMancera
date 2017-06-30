@@ -121,7 +121,7 @@ class MOptionReformaCrossing:MGame
         score += 1
     }
     
-    func hitAndRun(scene:VOptionReformaCrossingScene)
+    func hitAndRun(scene:ViewGameScene<MOptionReformaCrossing>)
     {
         let soundFail:SKAction = sounds.soundHonk
         scene.controller.playSound(actionSound:soundFail)
