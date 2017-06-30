@@ -59,7 +59,7 @@ class MOptionPollutedGardenBubbleGenerator
     }
     
     //MARK: public
-    
+    /*
     func randomBubble() -> VOptionPollutedGardenBubble
     {
         let bubbleType:MOptionPollutedGardenBubbleType = randomType()
@@ -72,5 +72,5 @@ class MOptionPollutedGardenBubbleGenerator
             position:position)
         
         return bubble
-    }
+    }*/
 }

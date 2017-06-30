@@ -1,55 +1,105 @@
 import UIKit
 
-class MOptionPollutedGardenBubble
+class MOptionPollutedGardenBubble:MGameUpdate<MOptionPollutedGarden>
 {
     private(set) var items:[MOptionPollutedGardenBubbleItem]
-    private let itemTypes:[MOptionPollutedGardenBubbleItemType]
+    private var itemTypes:[MOptionPollutedGardenBubbleItemType]!
+    private var countTypes:UInt32
+    private var lastSpawn:TimeInterval
     private let maxX:CGFloat
     private let maxY:CGFloat
-    private let colours:[UIColor]
     private let kAddYPos:CGFloat = 150
-    private let countBubbles:UInt32
-    private let countColours:UInt32
+    private let kSpawnRate:TimeInterval = 0.1
+    private let kSpawnProbability:UInt32 = 15
     
-    init()
+    override init()
     {
-        items = []
-        bubbleTypes = MOptionPollutedGardenBubbleGenerator.factoryBubbleTypes()
-        colours = MOptionPollutedGardenBubbleGenerator.factoryColours()
-        countBubbles = UInt32(bubbleTypes.count)
-        countColours = UInt32(colours.count)
-        
         let sceneSize:CGSize = MGame.sceneSize
         maxX = sceneSize.width
         maxY = sceneSize.height + kAddYPos
+        items = []
+        countTypes = 0
+        lastSpawn = 0
         
-        MOptionPollutedGardenBubble.factoryBubbles()
+        super.init()
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionPollutedGarden>)
+    {
+        for item:MOptionPollutedGardenBubbleItem in items
+        {
+            item.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
+        }
+        
+        trySpawn(
+            elapsedTime:elapsedTime,
+            scene:scene)
     }
     
     //MARK: private
     
-    private func randomType() -> MOptionPollutedGardenBubbleType
+    private func trySpawn(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionPollutedGarden>)
     {
-        let random:UInt32 = arc4random_uniform(countBubbles)
-        let randomInt:Int = Int(random)
-        let bubble:MOptionPollutedGardenBubbleType = bubbleTypes[randomInt]
+        let deltaSpawn:TimeInterval = abs(elapsedTime - lastSpawn)
         
-        return bubble
+        if deltaSpawn > kSpawnRate
+        {
+            lastSpawn = elapsedTime
+            let spawn:Bool = shouldSpawn()
+            
+            if spawn
+            {
+                spawnBubble(scene:scene)
+            }
+        }
     }
     
-    private func randomColour() -> UIColor
+    private func spawnBubble(scene:ViewGameScene<MOptionPollutedGarden>)
     {
-        let random:UInt32 = arc4random_uniform(countColours)
-        let randomInt:Int = Int(random)
-        let colour:UIColor = colours[randomInt]
+        let type:MOptionPollutedGardenBubbleItemType = randomType()
+        let position:CGPoint = randomPosition(texture:type.texture)
+        let item:MOptionPollutedGardenBubbleItem = MOptionPollutedGardenBubbleItem(
+            type:type,
+            position:position)
+        items.append(item)
         
-        return colour
+        guard
+        
+            let scene:VOptionPollutedGardenScene = scene as? VOptionPollutedGardenScene
+        
+        else
+        {
+            return
+        }
     }
     
-    private func randomPosition(size:CGSize) -> CGPoint
+    private func shouldSpawn() -> Bool
     {
-        let width:CGFloat = size.width
-        let width_2:CGFloat = width / 2.0
+        let random:UInt32 = arc4random_uniform(kSpawnProbability)
+        let spawn:Bool = random == 0
+        
+        return spawn
+    }
+    
+    private func randomType() -> MOptionPollutedGardenBubbleItemType
+    {
+        let random:UInt32 = arc4random_uniform(countTypes)
+        let randomInt:Int = Int(random)
+        let type:MOptionPollutedGardenBubbleItemType = itemTypes[randomInt]
+        
+        return type
+    }
+    
+    private func randomPosition(texture:MGameTexture) -> CGPoint
+    {
+        let width:CGFloat = texture.width
+        let width_2:CGFloat = texture.width_2
         let remainWidth:UInt32 = UInt32(maxX - width)
         let randomX:UInt32 = arc4random_uniform(remainWidth)
         let randomXFloat:CGFloat = CGFloat(randomX)
@@ -61,17 +111,10 @@ class MOptionPollutedGardenBubble
     
     //MARK: public
     
-    func randomBubble() -> VOptionPollutedGardenBubble
+    func createTypes(textures:MOptionPollutedGardenTextures)
     {
-        let bubbleType:MOptionPollutedGardenBubbleType = randomType()
-        let colour:UIColor = randomColour()
-        let position:CGPoint = randomPosition(size:bubbleType.size)
-        let bubble:VOptionPollutedGardenBubble = VOptionPollutedGardenBubble(
-            controller:controller,
-            bubbleType:bubbleType,
-            colour:colour,
-            position:position)
-        
-        return bubble
+        itemTypes = MOptionPollutedGardenBubble.factoryBubbles(
+            textures:textures)
+        countTypes = UInt32(itemTypes.count)
     }
 }

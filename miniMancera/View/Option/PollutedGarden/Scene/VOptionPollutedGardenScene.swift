@@ -69,7 +69,17 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         addChild(menu)
     }
     
+    //MARK: public
     
+    func addBubble(model:MOptionPollutedGardenBubbleItem)
+    {
+        let view:VOptionPollutedGardenBubble = VOptionPollutedGardenBubble(
+            controller:controller,
+            model:model)
+        model.view = view
+        
+        addChild(view)
+    }
     
     
     

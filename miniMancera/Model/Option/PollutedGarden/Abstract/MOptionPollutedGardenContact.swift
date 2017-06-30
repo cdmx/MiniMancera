@@ -44,7 +44,7 @@ class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
     }
     
     private func bubbleAndBody(bubble:VOptionPollutedGardenBubble, body:SKNode?)
-    {
+    {/*
         if bubble.alive
         {
             if let player:VOptionPollutedGardenPlayer = body as? VOptionPollutedGardenPlayer
@@ -59,7 +59,7 @@ class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
             {
                 contactBubbleFloor(bubble:bubble, floor:floor)
             }
-        }
+        }*/
     }
     
     private func contactBubbleUmbrella(
@@ -67,14 +67,14 @@ class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
         player:VOptionPollutedGardenPlayer)
     {
         //        playSound(actionSound:soundPop)
-        bubble.explode()
+//        bubble.explode()
     }
     
     private func contactBubblePetunia(
         bubble:VOptionPollutedGardenBubble,
         petunia:VOptionPollutedGardenPetunia)
     {
-        bubble.explode()
+//        bubble.explode()
         petunia.polluted()
     }
     
@@ -83,7 +83,7 @@ class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
         floor:VOptionPollutedGardenFloor)
     {
         //        playSound(actionSound:soundPop)
-        bubble.explode()
+//        bubble.explode()
     }
     
     //MARK: public
