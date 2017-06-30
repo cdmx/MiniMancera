@@ -37,16 +37,7 @@ class VOptionReformaCrossingStop:ViewGameNode<MOptionReformaCrossing>
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        guard
-        
-            let controller:COptionReformaCrossing = self.controller as? COptionReformaCrossing
-        
-        else
-        {
-            return
-        }
-        
-        controller.playerStop()
+        controller.model.playerStop()
     }
     
     //MARK: public

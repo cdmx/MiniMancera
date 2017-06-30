@@ -26,6 +26,10 @@ class MOptionReformaCrossingPlayerStrategyWalk:MGameStrategy<
                 let point:CGPoint = model.position.walk(distance:move)
                 model.view?.position = point
             }
+            else
+            {
+                model.view?.animateWalk()
+            }
             
             lastElapsedTime = elapsedTime
         }

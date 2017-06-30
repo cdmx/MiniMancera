@@ -61,12 +61,4 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         
         exitGame()
     }
-    
-    func playerStop()
-    {
-        if model.gameActive
-        {
-            model.playerStop()
-        }
-    }
 }

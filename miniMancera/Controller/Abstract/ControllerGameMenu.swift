@@ -4,16 +4,13 @@ extension ControllerGame
 {
     func showMenu()
     {
-        if model.gameActive
-        {
-            pause()
-            stopTimer()
+        pause()
+        stopTimer()
+        
+        DispatchQueue.main.async
+        { [weak self] in
             
-            DispatchQueue.main.async
-            { [weak self] in
-                
-                self?.asyncShowMenu()
-            }
+            self?.asyncShowMenu()
         }
     }
     

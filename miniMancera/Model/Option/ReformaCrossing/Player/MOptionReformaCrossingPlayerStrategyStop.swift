@@ -21,6 +21,7 @@ class MOptionReformaCrossingPlayerStrategyStop:MGameStrategy<
         else
         {
             timeout = elapsedTime + kDuration
+            model.view?.animateStop()
         }
     }
 }
