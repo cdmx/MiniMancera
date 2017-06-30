@@ -2,16 +2,24 @@ import SpriteKit
 
 class VOptionPollutedGardenBubble:ViewGameNode<MOptionPollutedGarden>
 {
+    
+    
+    
+    
+    
+    /*
     private(set) var alive:Bool
-    private weak var controller:COptionPollutedGarden!
     private weak var bubbleType:MOptionPollutedGardenBubbleType!
     private let velocityExplosion:CGVector
     private let kExplosionVelocityY:CGFloat = 50
     private let kMaxVelocity:UInt32 = 100
-    
+
+
+
+
     override init(controller:ControllerGame<MOptionPollutedGarden>)
     {
-        <#code#>
+        
     }
     
     init(
@@ -99,5 +107,5 @@ class VOptionPollutedGardenBubble:ViewGameNode<MOptionPollutedGarden>
         alive = false
         physicsBody?.velocity = velocityExplosion
         animateAndLeave()
-    }
+    }*/
 }

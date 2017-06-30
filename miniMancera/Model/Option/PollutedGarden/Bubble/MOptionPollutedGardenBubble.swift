@@ -1,10 +1,11 @@
-import SpriteKit
+import UIKit
 
 class MOptionPollutedGardenBubble
 {
+    private(set) var items:[MOptionPollutedGardenBubbleItem]
+    private let itemTypes:[MOptionPollutedGardenBubbleItemType]
     private let maxX:CGFloat
     private let maxY:CGFloat
-    private let bubbleTypes:[MOptionPollutedGardenBubbleType]
     private let colours:[UIColor]
     private let kAddYPos:CGFloat = 150
     private let countBubbles:UInt32
@@ -12,6 +13,7 @@ class MOptionPollutedGardenBubble
     
     init()
     {
+        items = []
         bubbleTypes = MOptionPollutedGardenBubbleGenerator.factoryBubbleTypes()
         colours = MOptionPollutedGardenBubbleGenerator.factoryColours()
         countBubbles = UInt32(bubbleTypes.count)
@@ -20,6 +22,8 @@ class MOptionPollutedGardenBubble
         let sceneSize:CGSize = MGame.sceneSize
         maxX = sceneSize.width
         maxY = sceneSize.height + kAddYPos
+        
+        MOptionPollutedGardenBubble.factoryBubbles()
     }
     
     //MARK: private
