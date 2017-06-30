@@ -1,13 +1,18 @@
-import SpriteKit
+import Foundation
 
 class MOptionReformaCrossingStrategyEndFail:MOptionReformaCrossingStrategyEnd
 {
     private let gameOver:MOptionReformaCrossingGameOverProtocol
     
-    init(model:MOptionReformaCrossing, gameOver:MOptionReformaCrossingGameOverProtocol)
+    init(
+        model:MOptionReformaCrossing,
+        gameOver:MOptionReformaCrossingGameOverProtocol,
+        updateItems:[MGameUpdate<MOptionReformaCrossing>])
     {
         self.gameOver = gameOver
-        super.init(model:model, keepAdvancing:gameOver.keepAdvancing)
+        super.init(
+            model:model,
+            updateItems:updateItems)
     }
     
     override func timeOut(controller:COptionReformaCrossing)

@@ -1,12 +1,15 @@
-import SpriteKit
+import Foundation
 
 class MOptionReformaCrossingStrategyEndSuccess:MOptionReformaCrossingStrategyEnd
 {
-    private let kKeepAdvancing:Bool = true
-    
     init(model:MOptionReformaCrossing)
     {
-        super.init(model:model, keepAdvancing:kKeepAdvancing)
+        let updateItems:[MGameUpdate<MOptionReformaCrossing>] = [
+            model.laneGroup,
+            model.foe,
+            model.contact]
+        
+        super.init(model:model, updateItems:updateItems)
     }
     
     override func timeOut(controller:COptionReformaCrossing)

@@ -90,13 +90,9 @@ class MOptionReformaCrossing:MGame
     
     func timeOut()
     {
-        let gameOver:MOptionReformaCrossingGameOverTimeOut = MOptionReformaCrossingGameOverTimeOut()
-        
         player.timeOut()
         deActivateGame()
-        strategy = MOptionReformaCrossingStrategyEndFail(
-            model:self,
-            gameOver:gameOver)
+        strategy = MOptionReformaCrossingStrategyEndFailTimeOut(model:self)
     }
     
     func strategyWait()
@@ -126,12 +122,8 @@ class MOptionReformaCrossing:MGame
         let soundFail:SKAction = sounds.soundHonk
         scene.controller.playSound(actionSound:soundFail)
         
-        let gameOver:MOptionReformaCrossingGameOverHitAndRun = MOptionReformaCrossingGameOverHitAndRun()
-        
         player.hitAndRun()
         deActivateGame()
-        strategy = MOptionReformaCrossingStrategyEndFail(
-            model:self,
-            gameOver:gameOver)
+        strategy = MOptionReformaCrossingStrategyEndFailHitAndRun(model:self)
     }
 }
