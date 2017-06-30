@@ -2,14 +2,12 @@ import SpriteKit
 
 class MOptionPollutedGarden:MGame
 {
-    
-    typealias modelType = MOptionPollutedGarden
-
     let controls:MOptionPollutedGardenControls
     let plant:MOptionPollutedGardenPlant
     let hud:MOptionPollutedGardenHud
     let menu:MOptionPollutedGardenMenu
     let textures:MOptionPollutedGardenTextures
+    let actions:MOptionPollutedGardenActions
     let contact:MOptionPollutedGardenContact
     private var strategy:MGameStrategyMain<MOptionPollutedGarden>?
     
@@ -26,6 +24,7 @@ class MOptionPollutedGarden:MGame
         hud = MOptionPollutedGardenHud()
         menu = MOptionPollutedGardenMenu()
         textures = MOptionPollutedGardenTextures()
+        actions = MOptionPollutedGardenActions()
         contact = MOptionPollutedGardenContact()
         
         
@@ -34,6 +33,7 @@ class MOptionPollutedGarden:MGame
         bubbleGenerator = MOptionPollutedGardenBubbleGenerator()
         currentScore = 0
         super.init()
+        actions.createAnimations(textures:textures)
     }
     
     override var startSceneType:SKScene.Type?

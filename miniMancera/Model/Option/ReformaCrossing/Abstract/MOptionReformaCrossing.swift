@@ -2,8 +2,6 @@ import SpriteKit
 
 class MOptionReformaCrossing:MGame
 {
-    typealias modelType = MOptionReformaCrossing
-    
     let contact:MOptionReformaCrossingContact
     let textures:MOptionReformaCrossingTextures
     let sounds:MOptionReformaCrossingSounds
