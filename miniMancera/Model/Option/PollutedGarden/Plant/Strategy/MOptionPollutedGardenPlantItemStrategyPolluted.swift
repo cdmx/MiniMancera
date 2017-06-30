@@ -1,4 +1,4 @@
-import SpriteKit
+import Foundation
 
 class MOptionPollutedGardenPlantItemStrategyPolluted:MGameStrategy<
     MOptionPollutedGardenPlantItem,
