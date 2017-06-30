@@ -7,6 +7,7 @@ class MOptionPollutedGardenBubbleItem:MGameUpdate<MOptionPollutedGarden>
     let position:CGPoint
     let radius:CGFloat
     let mass:CGFloat
+    let scaleX:CGFloat
     let angularVelocity:CGFloat
     let velocityY:CGFloat
     let velocityX:CGFloat
@@ -30,10 +31,12 @@ class MOptionPollutedGardenBubbleItem:MGameUpdate<MOptionPollutedGarden>
         colour = type.colour
         radius = type.radius
         mass = type.mass
+        scaleX = type.scaleX
         angularVelocity = type.angularVelocity
         velocityXExplosion = type.velocityXExplosion
         velocityX = type.velocityX
         velocityY = MOptionPollutedGardenBubbleItem.randomVelocity()
+        
         self.position = position
         
         super.init()
@@ -43,6 +46,5 @@ class MOptionPollutedGardenBubbleItem:MGameUpdate<MOptionPollutedGarden>
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionPollutedGarden>)
     {
-        
     }
 }

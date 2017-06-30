@@ -3,6 +3,7 @@ import SpriteKit
 class VOptionPollutedGardenBubble:ViewGameNode<MOptionPollutedGarden>
 {
     private weak var model:MOptionPollutedGardenBubbleItem?
+    private let kColorBlendFactor:CGFloat = 1
     
     init(
         controller:ControllerGame<MOptionPollutedGarden>,
@@ -13,6 +14,9 @@ class VOptionPollutedGardenBubble:ViewGameNode<MOptionPollutedGarden>
             controller:controller,
             texture:model.texture,
             colour:model.colour)
+        xScale = model.scaleX
+        colorBlendFactor = kColorBlendFactor
+        startPhysics()
     }
     
     required init?(coder:NSCoder)

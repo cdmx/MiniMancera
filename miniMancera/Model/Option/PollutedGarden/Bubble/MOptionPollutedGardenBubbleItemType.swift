@@ -5,6 +5,7 @@ class MOptionPollutedGardenBubbleItemType
     let colour:UIColor
     let radius:CGFloat
     let mass:CGFloat
+    let scaleX:CGFloat
     let angularVelocity:CGFloat
     let velocityX:CGFloat
     let velocityXExplosion:CGFloat
@@ -22,6 +23,7 @@ class MOptionPollutedGardenBubbleItemType
         self.colour = colour
         radius = texture.width_2
         mass = texture.width_2 * kMassMultiplier
+        scaleX = orientation
         angularVelocity = orientation
         velocityXExplosion = orientation * kExplosionMultiplier
         velocityX = orientation * kVelocityMultiplier
