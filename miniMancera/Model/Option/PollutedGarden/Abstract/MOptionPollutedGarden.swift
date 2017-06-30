@@ -3,6 +3,7 @@ import SpriteKit
 class MOptionPollutedGarden:MGame
 {
     let controls:MOptionPollutedGardenControls
+    let bubble:MOptionPollutedGardenBubble
     let plant:MOptionPollutedGardenPlant
     let player:MOptionPollutedGardenPlayer
     let hud:MOptionPollutedGardenHud
@@ -14,13 +15,13 @@ class MOptionPollutedGarden:MGame
     
     
     let petuniaLife:MOptionPollutedGardenPetuniaLife
-    let bubbleGenerator:MOptionPollutedGardenBubbleGenerator
     private(set) var currentScore:Int
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     
     required init()
     {
         controls = MOptionPollutedGardenControls()
+        bubble = MOptionPollutedGardenBubble()
         plant = MOptionPollutedGardenPlant()
         player = MOptionPollutedGardenPlayer()
         hud = MOptionPollutedGardenHud()
@@ -32,10 +33,10 @@ class MOptionPollutedGarden:MGame
         
         
         petuniaLife = MOptionPollutedGardenPetuniaLife()
-        bubbleGenerator = MOptionPollutedGardenBubbleGenerator()
         currentScore = 0
         super.init()
         actions.createAnimations(textures:textures)
+        bubble.createTypes(textures:textures)
     }
     
     override var startSceneType:SKScene.Type?

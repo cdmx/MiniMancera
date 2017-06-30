@@ -8,7 +8,7 @@ class MOptionPollutedGardenStrategyEnd:MGameStrategyMain<MOptionPollutedGarden>
     init(model:MOptionPollutedGarden)
     {
         let updateItems:[MGameUpdate<MOptionPollutedGarden>] = [
-            ]
+            model.bubble]
         
         super.init(model:model, updateItems:updateItems)
     }

@@ -77,6 +77,8 @@ class MOptionPollutedGardenBubble:MGameUpdate<MOptionPollutedGarden>
         {
             return
         }
+        
+        scene.addBubble(model:item)
     }
     
     private func shouldSpawn() -> Bool
