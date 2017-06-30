@@ -50,6 +50,10 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         let floor:VOptionPollutedGardenFloor = VOptionPollutedGardenFloor(
             controller:controller)
         
+        let player:VOptionPollutedGardenPlayer = VOptionPollutedGardenPlayer(
+            controller:controller)
+        model.player.view = player
+        
         let hud:VOptionPollutedGardenHud = VOptionPollutedGardenHud(
             controller:controller)
         model.hud.view = hud
@@ -60,6 +64,7 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         
         addChild(background)
         addChild(floor)
+        addChild(player)
         addChild(hud)
         addChild(menu)
     }

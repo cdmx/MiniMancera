@@ -4,6 +4,7 @@ class MOptionPollutedGarden:MGame
 {
     let controls:MOptionPollutedGardenControls
     let plant:MOptionPollutedGardenPlant
+    let player:MOptionPollutedGardenPlayer
     let hud:MOptionPollutedGardenHud
     let menu:MOptionPollutedGardenMenu
     let textures:MOptionPollutedGardenTextures
@@ -21,6 +22,7 @@ class MOptionPollutedGarden:MGame
     {
         controls = MOptionPollutedGardenControls()
         plant = MOptionPollutedGardenPlant()
+        player = MOptionPollutedGardenPlayer()
         hud = MOptionPollutedGardenHud()
         menu = MOptionPollutedGardenMenu()
         textures = MOptionPollutedGardenTextures()
@@ -54,7 +56,7 @@ class MOptionPollutedGarden:MGame
     
     override func activateGame()
     {
-        strategy = MOptionPollutedGardenStrategyBegin(model:self)
+        strategy = MOptionPollutedGardenStrategyGame(model:self)
 //        player.activateGame()
         
         super.activateGame()

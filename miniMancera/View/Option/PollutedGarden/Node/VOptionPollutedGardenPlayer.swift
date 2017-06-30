@@ -2,33 +2,20 @@ import SpriteKit
 
 class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
 {
-    private let actionAnimate:SKAction
-    private let textureStand:SKTexture
     private let kSpeed:CGFloat = 150
-    private let kZPosition:CGFloat = 1
-    private let kYPosition:CGFloat = 93
+    private let kPositionY:CGFloat = 93
     private let kPhysicsWidth:CGFloat = 42
     private let kPhysicsHeight:CGFloat = 11
     private let kPhysicsY:CGFloat = 23
     
     override init(controller:ControllerGame<MOptionPollutedGarden>)
     {
-        let texture:MGameTexture = controller.model.te
+        let texture:MGameTexture = controller.model.textures.playerStand
         
-        super.init(controller:controller, texture: <#T##MGameTexture#>)
-    }
-    
-    init(controller:COptionPollutedGarden)
-    {
-        actionAnimate = VOptionPollutedGardenPlayer.factoryAnimation()
-        textureStand = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenPlayer1"))
-        let textureSize:CGSize = textureStand.size()
-        self.controller = controller
-        
-        super.init(texture:textureStand, color:UIColor.clear, size:textureSize)
-        zPosition = kZPosition
-        startPosition()
-        startPhysics(size:textureSize)
+        super.init(
+            controller:controller,
+            texture:texture)
+        startPhysics()
     }
     
     required init?(coder:NSCoder)
@@ -38,14 +25,14 @@ class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
     
     //MARK: private
     
-    private func startPosition()
-    {/*
-        let sceneWidth:CGFloat = controller.model.size.width
+    override func positionStart()
+    {
+        let sceneWidth:CGFloat = MGame.sceneSize.width
         let sceneWidth_2:CGFloat = sceneWidth / 2.0
-        position = CGPoint(x:sceneWidth_2, y:kYPosition)*/
+        position = CGPoint(x:sceneWidth_2, y:kPositionY)
     }
     
-    private func startPhysics(size:CGSize)
+    private func startPhysics()
     {
         let physicsSize:CGSize = CGSize(width:kPhysicsWidth, height:kPhysicsHeight)
         let physicsCenter:CGPoint = CGPoint(x:0, y:kPhysicsY)
@@ -63,7 +50,7 @@ class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
         physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.None
         self.physicsBody = physicsBody
     }
-    
+    /*
     private func createActionMove(positionX:CGFloat) -> SKAction
     {
         let deltaX:CGFloat = abs(position.x - positionX)
@@ -110,5 +97,5 @@ class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
         }
         
         actionsWalk(positionX:positionX)
-    }
+    }*/
 }
