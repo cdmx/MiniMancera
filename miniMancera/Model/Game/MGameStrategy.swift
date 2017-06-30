@@ -7,5 +7,6 @@ class MGameStrategy<T:AnyObject, S:MGame>:MGameUpdate<S>
     init(model:T)
     {
         self.model = model
+        super.init()
     }
 }

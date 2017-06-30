@@ -7,6 +7,7 @@ class MOptionReformaCrossingCoin:MGameUpdate<MOptionReformaCrossing>
     override init()
     {
         items = []
+        super.init()
     }
     
     override func update(

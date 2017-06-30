@@ -10,6 +10,7 @@ class MOptionReformaCrossingStop:MGameUpdate<MOptionReformaCrossing>
     override init()
     {
         shouldStop = false
+        super.init()
     }
     
     override func update(

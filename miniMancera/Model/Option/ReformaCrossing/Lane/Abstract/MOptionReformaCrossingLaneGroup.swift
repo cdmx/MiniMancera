@@ -34,6 +34,7 @@ class MOptionReformaCrossingLaneGroup:MGameUpdate<MOptionReformaCrossing>
     {
         lanes = MOptionReformaCrossingLaneGroup.factoryLanes()
         countLanes = UInt32(lanes.count)
+        super.init()
     }
     
     override func update(

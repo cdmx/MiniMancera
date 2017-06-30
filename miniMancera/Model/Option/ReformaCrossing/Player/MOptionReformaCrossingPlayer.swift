@@ -8,6 +8,7 @@ class MOptionReformaCrossingPlayer:MGameUpdate<MOptionReformaCrossing>
     override init()
     {
         position = MOptionReformaCrossingPlayerPosition()
+        super.init()
     }
     
     weak var view:VOptionReformaCrossingPlayer?

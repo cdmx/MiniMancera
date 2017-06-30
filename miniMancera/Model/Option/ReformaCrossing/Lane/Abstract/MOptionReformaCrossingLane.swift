@@ -22,6 +22,8 @@ class MOptionReformaCrossingLane:MGameUpdate<MOptionReformaCrossing>
         let sceneHeight_2:CGFloat = size.height / 2.0
         sceneWidth = size.width
         positionY = sceneHeight_2 + deltaVertical
+        
+        super.init()
     }
     
     override func update(

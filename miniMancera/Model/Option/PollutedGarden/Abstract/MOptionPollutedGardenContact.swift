@@ -7,6 +7,7 @@ class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
     override init()
     {
         queue = []
+        super.init()
     }
     
     override func update(

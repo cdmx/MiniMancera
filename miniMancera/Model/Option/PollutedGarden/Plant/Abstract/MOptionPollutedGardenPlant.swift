@@ -9,6 +9,7 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
     {
         position = MOptionPollutedGardenPlantPosition()
         items = []
+        super.init()
     }
     
     override func update(

@@ -22,7 +22,6 @@ class MOptionReformaCrossingFoeItem:MGameUpdate<MOptionReformaCrossing>
         super.init()
         
         trip = lane.foeTrip(foe:self)
-        
         strategyGas()
     }
     

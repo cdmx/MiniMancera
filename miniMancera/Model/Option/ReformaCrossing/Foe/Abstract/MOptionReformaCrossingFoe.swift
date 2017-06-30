@@ -53,11 +53,11 @@ class MOptionReformaCrossingFoe:MGameUpdate<MOptionReformaCrossing>
     private func confirmedSpawnFoe(scene:ViewGameScene<MOptionReformaCrossing>)
     {
         let controller:ControllerGame<MOptionReformaCrossing> = scene.controller
-        let model:MOptionReformaCrossing = scene.controller.model
+        let model:MOptionReformaCrossing = controller.model
         
         guard
         
-            let lane:MOptionReformaCrossingLane = controller.model.laneGroup.randomLane(),
+            let lane:MOptionReformaCrossingLane = model.laneGroup.randomLane(),
             let foe:MOptionReformaCrossingFoeItem = MOptionReformaCrossingFoe.randomFoe(
                 model:model,
                 lane:lane)

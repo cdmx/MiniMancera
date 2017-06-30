@@ -7,6 +7,7 @@ class MOptionReformaCrossingContact:MGameUpdate<MOptionReformaCrossing>
     override init()
     {
         queue = []
+        super.init()
     }
     
     override func update(
@@ -19,7 +20,7 @@ class MOptionReformaCrossingContact:MGameUpdate<MOptionReformaCrossing>
     
     //MARK: private
     
-    private func lookContacts(scene:SKScene)
+    private func lookContacts(scene:ViewGameScene<MOptionReformaCrossing>)
     {
         for contact:SKPhysicsContact in queue
         {
@@ -29,7 +30,7 @@ class MOptionReformaCrossingContact:MGameUpdate<MOptionReformaCrossing>
     
     private func contactBegin(
         contact:SKPhysicsContact,
-        scene:SKScene)
+        scene:ViewGameScene<MOptionReformaCrossing>)
     {
         let bodyA:SKNode? = contact.bodyA.node
         let bodyB:SKNode? = contact.bodyB.node
@@ -47,11 +48,11 @@ class MOptionReformaCrossingContact:MGameUpdate<MOptionReformaCrossing>
     private func contactFoeAndBody(
         foe:VOptionReformaCrossingFoe,
         body:SKNode?,
-        scene:SKScene)
+        scene:ViewGameScene<MOptionReformaCrossing>)
     {
         if let player:VOptionReformaCrossingPlayer = body as? VOptionReformaCrossingPlayer
         {
-            contactPlayerFoe(player:player, foe:foe, scene:scene)
+            scene.controller.model.hitAndRun(scene:scene)
         }
         else if let otherFoe:VOptionReformaCrossingFoe = body as? VOptionReformaCrossingFoe
         {
@@ -59,7 +60,9 @@ class MOptionReformaCrossingContact:MGameUpdate<MOptionReformaCrossing>
         }
     }
     
-    private func contactFoes(foeA:VOptionReformaCrossingFoe, foeB:VOptionReformaCrossingFoe)
+    private func contactFoes(
+        foeA:VOptionReformaCrossingFoe,
+        foeB:VOptionReformaCrossingFoe)
     {
         guard
         
@@ -79,23 +82,6 @@ class MOptionReformaCrossingContact:MGameUpdate<MOptionReformaCrossing>
         {
             modelA.breaks()
         }
-    }
-    
-    private func contactPlayerFoe(
-        player:VOptionReformaCrossingPlayer,
-        foe:VOptionReformaCrossingFoe,
-        scene:SKScene)
-    {
-        guard
-            
-            let scene:VOptionReformaCrossingScene = scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
-        scene.controller.model.hitAndRun(scene:scene)
     }
     
     //MARK: public
