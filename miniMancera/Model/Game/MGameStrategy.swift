@@ -1,4 +1,4 @@
-import SpriteKit
+import Foundation
 
 class MGameStrategy<T:AnyObject, S:MGame>:MGameUpdate<S>
 {

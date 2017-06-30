@@ -1,4 +1,4 @@
-import SpriteKit
+import Foundation
 
 class MOptionReformaCrossingStop:MGameUpdate<MOptionReformaCrossing>
 {

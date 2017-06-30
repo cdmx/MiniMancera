@@ -1,4 +1,4 @@
-import SpriteKit
+import Foundation
 
 class MOptionPollutedGardenPlayer:MGameUpdate<MOptionPollutedGarden>
 {

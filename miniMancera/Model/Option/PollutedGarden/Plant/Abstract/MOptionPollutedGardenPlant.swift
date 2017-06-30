@@ -1,4 +1,4 @@
-import SpriteKit
+import UIKit
 
 class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
 {
