@@ -7,12 +7,10 @@ class MGame
     var score:Int
     private(set) var startSceneType:SKScene.Type?
     private(set) var soundBackground:String?
-    private(set) var gameActive:Bool
     
     required init()
     {
         score = 0
-        gameActive = false
     }
     
     //MARK: public
@@ -23,12 +21,10 @@ class MGame
     
     func activateGame()
     {
-        gameActive = true
     }
     
     func deActivateGame()
     {
-        gameActive = false
     }
     
     func gameStrategy<T:MGame>(modelType:T) -> MGameStrategyMain<T>?
