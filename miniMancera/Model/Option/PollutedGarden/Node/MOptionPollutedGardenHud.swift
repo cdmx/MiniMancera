@@ -32,6 +32,9 @@ class MOptionPollutedGardenHud:MGameUpdate<MOptionPollutedGarden>
     
     private func updateStrings(model:MOptionPollutedGarden)
     {
+        let score:String = "\(model.currentScore)"
+        let max:String = "\(model.score)"
         
+        view?.update(score:score, max:max)
     }
 }

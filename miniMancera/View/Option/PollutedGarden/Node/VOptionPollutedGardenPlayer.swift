@@ -1,8 +1,7 @@
 import SpriteKit
 
-class VOptionPollutedGardenPlayer:SKSpriteNode
+class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
 {
-    private weak var controller:COptionPollutedGarden!
     private let actionAnimate:SKAction
     private let textureStand:SKTexture
     private let kSpeed:CGFloat = 150
@@ -11,6 +10,13 @@ class VOptionPollutedGardenPlayer:SKSpriteNode
     private let kPhysicsWidth:CGFloat = 42
     private let kPhysicsHeight:CGFloat = 11
     private let kPhysicsY:CGFloat = 23
+    
+    override init(controller:ControllerGame<MOptionPollutedGarden>)
+    {
+        let texture:MGameTexture = controller.model.te
+        
+        super.init(controller:controller, texture: <#T##MGameTexture#>)
+    }
     
     init(controller:COptionPollutedGarden)
     {
