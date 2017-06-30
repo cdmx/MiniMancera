@@ -50,7 +50,7 @@ class MOptionReformaCrossingContact:MGameUpdate<MOptionReformaCrossing>
         body:SKNode?,
         scene:ViewGameScene<MOptionReformaCrossing>)
     {
-        if let player:VOptionReformaCrossingPlayer = body as? VOptionReformaCrossingPlayer
+        if let _:VOptionReformaCrossingPlayer = body as? VOptionReformaCrossingPlayer
         {
             scene.controller.model.hitAndRun(scene:scene)
         }
