@@ -1,6 +1,6 @@
 import SpriteKit
 
-class VOptionPollutedGardenBubble:SKSpriteNode
+class VOptionPollutedGardenBubble:ViewGameNode<MOptionPollutedGarden>
 {
     private(set) var alive:Bool
     private weak var controller:COptionPollutedGarden!
@@ -8,6 +8,11 @@ class VOptionPollutedGardenBubble:SKSpriteNode
     private let velocityExplosion:CGVector
     private let kExplosionVelocityY:CGFloat = 50
     private let kMaxVelocity:UInt32 = 100
+    
+    override init(controller:ControllerGame<MOptionPollutedGarden>)
+    {
+        <#code#>
+    }
     
     init(
         controller:COptionPollutedGarden,
