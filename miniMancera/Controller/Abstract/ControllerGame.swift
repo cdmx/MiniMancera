@@ -145,7 +145,18 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
         {
             let deltaTime:TimeInterval = currentTime - lastUpdateTime
             elapsedTime += deltaTime
-            model.update(elapsedTime:elapsedTime, scene:scene)
+            
+            guard
+                
+                let strategy:MGameStrategyMain<T> = model.gameStrategy(modelType:model),
+                let scene:ViewGameScene<T> = scene as? ViewGameScene<T>
+            
+            else
+            {
+                return
+            }
+            
+            strategy.update(elapsedTime:elapsedTime, scene:scene)
         }
         
         lastUpdateTime = currentTime

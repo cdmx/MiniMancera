@@ -31,7 +31,8 @@ class MGame
         gameActive = false
     }
     
-    func update(elapsedTime:TimeInterval, scene:SKScene)
+    func gameStrategy<T:MGame>(modelType:T) -> MGameStrategyMain<T>?
     {
+        return nil
     }
 }

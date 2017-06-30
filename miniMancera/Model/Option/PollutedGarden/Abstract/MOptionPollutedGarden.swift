@@ -1,7 +1,8 @@
 import SpriteKit
 
-class MOptionPollutedGarden:MGame, MGameProtocol
+class MOptionPollutedGarden:MGame
 {
+    
     typealias modelType = MOptionPollutedGarden
 
     let controls:MOptionPollutedGardenControls
@@ -10,7 +11,7 @@ class MOptionPollutedGarden:MGame, MGameProtocol
     let menu:MOptionPollutedGardenMenu
     let textures:MOptionPollutedGardenTextures
     let contact:MOptionPollutedGardenContact
-    private(set) var strategy:MGameStrategyMain<MOptionPollutedGarden>?
+    private var strategy:MGameStrategyMain<MOptionPollutedGarden>?
     
     
     let petuniaLife:MOptionPollutedGardenPetuniaLife
@@ -59,16 +60,10 @@ class MOptionPollutedGarden:MGame, MGameProtocol
         super.activateGame()
     }
     
-    override func update(elapsedTime:TimeInterval, scene:SKScene)
-    {/*
-        strategy?.update(
-            elapsedTime:elapsedTime,
-            scene:scene)*/
+    override func gameStrategy<T>(modelType:T) -> MGameStrategyMain<T>? where T:MGame
+    {
+        return strategy as? MGameStrategyMain<T>
     }
-    
-    
-    
-    
     
     
     

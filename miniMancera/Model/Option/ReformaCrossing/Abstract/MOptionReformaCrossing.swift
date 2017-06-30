@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionReformaCrossing:MGame, MGameProtocol
+class MOptionReformaCrossing:MGame
 {
     typealias modelType = MOptionReformaCrossing
     
@@ -16,7 +16,7 @@ class MOptionReformaCrossing:MGame, MGameProtocol
     let hud:MOptionReformaCrossingHud
     let menu:MOptionReformaCrossingMenu
     let title:MOptionReformaCrossingTitle
-    private(set) var strategy:MGameStrategyMain<MOptionReformaCrossing>?
+    private var strategy:MGameStrategyMain<MOptionReformaCrossing>?
     private(set) var level:Int
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     private let kStartingLevel:Int = 1
@@ -65,11 +65,9 @@ class MOptionReformaCrossing:MGame, MGameProtocol
         super.activateGame()
     }
     
-    override func update(elapsedTime:TimeInterval, scene:SKScene)
-    {/*
-        strategy?.update(
-            elapsedTime:elapsedTime,
-            scene:scene)*/
+    override func gameStrategy<T>(modelType:T) -> MGameStrategyMain<T>? where T:MGame
+    {
+        return strategy as? MGameStrategyMain<T>
     }
     
     //MARK: public
