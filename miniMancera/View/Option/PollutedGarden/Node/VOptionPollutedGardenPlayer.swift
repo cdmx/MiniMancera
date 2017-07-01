@@ -2,8 +2,6 @@ import SpriteKit
 
 class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
 {
-    private let kSpeed:CGFloat = 150
-    private let kPositionY:CGFloat = 93
     private let kPhysicsWidth:CGFloat = 42
     private let kPhysicsHeight:CGFloat = 11
     private let kPhysicsY:CGFloat = 23
@@ -25,13 +23,6 @@ class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
     
     //MARK: private
     
-    override func positionStart()
-    {
-        let sceneWidth:CGFloat = MGame.sceneSize.width
-        let sceneWidth_2:CGFloat = sceneWidth / 2.0
-        position = CGPoint(x:sceneWidth_2, y:kPositionY)
-    }
-    
     private func startPhysics()
     {
         let physicsSize:CGSize = CGSize(width:kPhysicsWidth, height:kPhysicsHeight)
@@ -50,6 +41,22 @@ class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
         physicsBody.collisionBitMask = MOptionReformaCrossingPhysicsStruct.None
         self.physicsBody = physicsBody
     }
+    
+    //MARK: public
+    
+    func animateWalk()
+    {
+        removeAllActions()
+        
+        let action:SKAction = controller.model.actions.actionPlayerAnimation
+        run(action)
+    }
+    
+    func animateStop()
+    {
+        removeAllActions()
+    }
+    
     /*
     private func createActionMove(positionX:CGFloat) -> SKAction
     {

@@ -1,14 +1,28 @@
-import Foundation
+import UIKit
 
 class MOptionPollutedGardenPlayer:MGameUpdate<MOptionPollutedGarden>
 {
-    weak var view:VOptionPollutedGardenPlayer?
+    private(set) var desiredPositionX:CGFloat
+    private(set) var positionX:CGFloat
     private var strategy:MGameStrategy<MOptionPollutedGardenPlayer, MOptionPollutedGarden>?
+    private let kSpeed:CGFloat = 150
+    private let kPositionY:CGFloat = 93
     
     override init()
     {
+        let sceneWidth:CGFloat = MGame.sceneSize.width
+        positionX = sceneWidth / 2.0
+        desiredPositionX = positionX
+        
         super.init()
-        strategy = MOptionPollutedGardenPlayerStrategyWait(model:self)
+    }
+    
+    weak var view:VOptionPollutedGardenPlayer?
+    {
+        didSet
+        {
+            updateViewPosition()
+        }
     }
     
     override func update(
@@ -20,10 +34,51 @@ class MOptionPollutedGardenPlayer:MGameUpdate<MOptionPollutedGarden>
             scene:scene)
     }
     
+    //MARK: private
+    
+    private func updateViewPosition()
+    {
+        let point:CGPoint = CGPoint(x:positionX, y:kPositionY)
+        
+        view?.position = point
+    }
+    
     //MARK: public
     
     func activateGame()
     {
-        strategy = MOptionPollutedGardenPlayerStrategyWalk(model:self)
+        strategy = MOptionPollutedGardenPlayerStrategyWait(model:self)
+    }
+    
+    func reachedPosition()
+    {
+        strategy = MOptionPollutedGardenPlayerStrategyWait(model:self)
+    }
+    
+    func walkToPoint(desiredPositionX:CGFloat)
+    {
+        self.desiredPositionX = desiredPositionX
+        
+        if desiredPositionX > positionX
+        {
+            strategy = MOptionPollutedGardenPlayerStrategyWalkRight(model:self)
+        }
+        else if desiredPositionX < positionX
+        {
+            strategy = MOptionPollutedGardenPlayerStrategyWalkLeft(model:self)
+        }
+        else
+        {
+            reachedPosition()
+        }
+    }
+    
+    func walk(direction:CGFloat, elapsedTime:TimeInterval)
+    {
+        let time:CGFloat = CGFloat(elapsedTime) * direction
+        let walkAmount:CGFloat = time * kSpeed
+        positionX += walkAmount
+        
+        updateViewPosition()
     }
 }
