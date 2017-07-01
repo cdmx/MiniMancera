@@ -1,4 +1,4 @@
-import Foundation
+import SpriteKit
 
 class MOptionPollutedGardenStrategyBegin:MGameStrategyMain<MOptionPollutedGarden>
 {
@@ -30,5 +30,12 @@ class MOptionPollutedGardenStrategyBegin:MGameStrategyMain<MOptionPollutedGarden
     private func timeout()
     {
         model.activateGame()
+        
+        let actionFadeIn:SKAction = model.actions.actionFadeIn
+        let actionFadeOut:SKAction = model.actions.actionFadeOut
+        
+        model.menu.view?.run(actionFadeIn)
+        model.hud.view?.run(actionFadeIn)
+        model.title.view?.run(actionFadeOut)
     }
 }

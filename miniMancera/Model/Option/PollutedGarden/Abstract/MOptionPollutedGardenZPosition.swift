@@ -11,4 +11,5 @@ enum MOptionPollutedGardenZPosition:CGFloat
     case HudMax
     case Menu
     case Controls
+    case Title
 }

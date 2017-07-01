@@ -66,12 +66,16 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
             controller:controller)
         model.controls.view = controls
         
+        let title:VOptionPollutedGardenTitle = VOptionPollutedGardenTitle()
+        model.title.view = title
+        
         addChild(background)
         addChild(floor)
         addChild(player)
         addChild(hud)
         addChild(menu)
         addChild(controls)
+        addChild(title)
     }
     
     //MARK: public

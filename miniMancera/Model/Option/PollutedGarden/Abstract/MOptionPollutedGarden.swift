@@ -8,6 +8,7 @@ class MOptionPollutedGarden:MGame
     let player:MOptionPollutedGardenPlayer
     let hud:MOptionPollutedGardenHud
     let menu:MOptionPollutedGardenMenu
+    let title:MOptionPollutedGardenTitle
     let textures:MOptionPollutedGardenTextures
     let actions:MOptionPollutedGardenActions
     let contact:MOptionPollutedGardenContact
@@ -26,6 +27,7 @@ class MOptionPollutedGarden:MGame
         player = MOptionPollutedGardenPlayer()
         hud = MOptionPollutedGardenHud()
         menu = MOptionPollutedGardenMenu()
+        title = MOptionPollutedGardenTitle()
         textures = MOptionPollutedGardenTextures()
         actions = MOptionPollutedGardenActions()
         contact = MOptionPollutedGardenContact()
