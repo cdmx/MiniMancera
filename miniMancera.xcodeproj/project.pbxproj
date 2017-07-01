@@ -132,6 +132,7 @@
 		DA69BD6C1EFC914F002CEB85 /* VOptionWhistlesVsZombiesMenuAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD6B1EFC914F002CEB85 /* VOptionWhistlesVsZombiesMenuAnimation.swift */; };
 		DA69BD6E1EFC9829002CEB85 /* VOptionWhistlesVsZombiesMenuNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD6D1EFC9829002CEB85 /* VOptionWhistlesVsZombiesMenuNode.swift */; };
 		DA69BD701EFC99BC002CEB85 /* VOptionWhistlesVsZombiesMenuCancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD6F1EFC99BC002CEB85 /* VOptionWhistlesVsZombiesMenuCancel.swift */; };
+		DA717F8D1F086BD800033BA4 /* VOptionPollutedGardenPot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA717F8C1F086BD800033BA4 /* VOptionPollutedGardenPot.swift */; };
 		DA779A011EF875FD00362A44 /* MHomeSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A001EF875FD00362A44 /* MHomeSplash.swift */; };
 		DA779A031EF876D500362A44 /* MHomeSplashProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A021EF876D500362A44 /* MHomeSplashProtocol.swift */; };
 		DA779A051EF884E900362A44 /* MHomeSplashDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */; };
@@ -437,6 +438,7 @@
 		DA69BD6B1EFC914F002CEB85 /* VOptionWhistlesVsZombiesMenuAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesMenuAnimation.swift; sourceTree = "<group>"; };
 		DA69BD6D1EFC9829002CEB85 /* VOptionWhistlesVsZombiesMenuNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesMenuNode.swift; sourceTree = "<group>"; };
 		DA69BD6F1EFC99BC002CEB85 /* VOptionWhistlesVsZombiesMenuCancel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesMenuCancel.swift; sourceTree = "<group>"; };
+		DA717F8C1F086BD800033BA4 /* VOptionPollutedGardenPot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionPollutedGardenPot.swift; sourceTree = "<group>"; };
 		DA779A001EF875FD00362A44 /* MHomeSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplash.swift; sourceTree = "<group>"; };
 		DA779A021EF876D500362A44 /* MHomeSplashProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashProtocol.swift; sourceTree = "<group>"; };
 		DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashDescr.swift; sourceTree = "<group>"; };
@@ -1072,8 +1074,8 @@
 			isa = PBXGroup;
 			children = (
 				DAD3686A1EFC275A00CBAC5B /* WhistlesVsZombies */,
-				DA7E46791EFAED3B00466867 /* PollutedGarden */,
 				DA7E467A1EFAED3B00466867 /* ReformaCrossing */,
+				DA7E46791EFAED3B00466867 /* PollutedGarden */,
 			);
 			path = Option;
 			sourceTree = "<group>";
@@ -1278,6 +1280,7 @@
 				DAB70AD11EFB22DB002C706F /* VOptionPollutedGarden1up.swift */,
 				DAB70AD31EFB22EC002C706F /* VOptionPollutedGardenEnd.swift */,
 				DA25B0661F072C4E0042462A /* VOptionPollutedGardenTitle.swift */,
+				DA717F8C1F086BD800033BA4 /* VOptionPollutedGardenPot.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -1649,6 +1652,7 @@
 				DA91C3A51F01550E0045FAE2 /* ViewParentTransitions.swift in Sources */,
 				DAAF2FD81EF6FBB500589BB0 /* MStoreStatusPurchasing.swift in Sources */,
 				DAF37BED1F03B089004C505D /* MOptionReformaCrossingPlayerStrategyStop.swift in Sources */,
+				DA717F8D1F086BD800033BA4 /* VOptionPollutedGardenPot.swift in Sources */,
 				DA91C3A31F014FD00045FAE2 /* ViewProtocol.swift in Sources */,
 				DA11217D1F0464C500275465 /* MOptionReformaCrossingCoinItem.swift in Sources */,
 				DA2DFFE91EECB16A00365F23 /* VBorder.swift in Sources */,

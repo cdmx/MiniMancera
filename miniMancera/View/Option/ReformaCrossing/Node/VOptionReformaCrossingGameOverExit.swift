@@ -1,4 +1,4 @@
-import SpriteKit
+import UIKit
 
 class VOptionReformaCrossingGameOverExit:ViewGameNode<MOptionReformaCrossing>
 {

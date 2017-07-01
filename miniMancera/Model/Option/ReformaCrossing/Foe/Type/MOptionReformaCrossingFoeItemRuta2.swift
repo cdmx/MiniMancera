@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 class MOptionReformaCrossingFoeItemRuta2:MOptionReformaCrossingFoeItem
 {

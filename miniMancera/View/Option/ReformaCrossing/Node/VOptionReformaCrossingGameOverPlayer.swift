@@ -1,8 +1,10 @@
-import SpriteKit
+import UIKit
 
 class VOptionReformaCrossingGameOverPlayer:ViewGameNode<MOptionReformaCrossing>
 {
-    init(controller:ControllerGame<MOptionReformaCrossing>, gameOver:MOptionReformaCrossingGameOverProtocol)
+    init(
+        controller:ControllerGame<MOptionReformaCrossing>,
+        gameOver:MOptionReformaCrossingGameOverProtocol)
     {
         let model:MOptionReformaCrossing = controller.model
         let texture:MGameTexture = gameOver.texture(textures:model.textures)
