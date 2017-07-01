@@ -2,8 +2,8 @@ import SpriteKit
 
 class VOptionPollutedGardenTitle:SKLabelNode
 {
-    private let kVerticalAdd:CGFloat = -12
-    private let kFontSize:CGFloat = 20
+    private let kVerticalAdd:CGFloat = 70
+    private let kFontSize:CGFloat = 14
     
     override init()
     {

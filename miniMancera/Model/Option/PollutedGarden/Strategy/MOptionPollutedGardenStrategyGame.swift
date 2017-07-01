@@ -8,7 +8,8 @@ class MOptionPollutedGardenStrategyGame:MGameStrategyMain<MOptionPollutedGarden>
             model.controls,
             model.plant,
             model.bubble,
-            model.player]
+            model.player,
+            model.hud]
         
         super.init(model:model, updateItems:updateItems)
     }
