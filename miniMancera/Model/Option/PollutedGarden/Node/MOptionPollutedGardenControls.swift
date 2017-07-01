@@ -16,5 +16,7 @@ class MOptionPollutedGardenControls:MGameUpdate<MOptionPollutedGarden>
         {
             return
         }
+        
+        scene.controller.model.player.walkToPoint(desiredPositionX:positionX)
     }
 }

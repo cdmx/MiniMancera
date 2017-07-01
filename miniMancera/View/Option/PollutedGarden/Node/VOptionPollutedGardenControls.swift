@@ -14,6 +14,7 @@ class VOptionPollutedGardenControls:ViewGameNode<MOptionPollutedGarden>
             controller:controller,
             size:size,
             zPosition:MOptionPollutedGardenZPosition.Controls.rawValue)
+        isUserInteractionEnabled = true
     }
     
     required init?(coder:NSCoder)

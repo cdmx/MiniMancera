@@ -1,30 +1,16 @@
 import UIKit
 
-class MOptionPollutedGardenPlayerStrategyWalkLeft:MGameStrategy<
-    MOptionPollutedGardenPlayer,
-    MOptionPollutedGarden>
+class MOptionPollutedGardenPlayerStrategyWalkLeft:MOptionPollutedGardenPlayerStrategyWalk
 {
     private let kDirection:CGFloat = -1
     
-    override init(model:MOptionPollutedGardenPlayer)
+    init(model:MOptionPollutedGardenPlayer)
     {
-        super.init(model:model)
-        model.view?.xScale = kDirection
+        super.init(model:model, direction:kDirection)
     }
     
-    override func update(
-        elapsedTime:TimeInterval,
-        scene:ViewGameScene<MOptionPollutedGarden>)
+    override func reachedPosition() -> Bool
     {
-        if model.positionX > model.desiredPositionX
-        {
-            model.walk(
-                direction:kDirection,
-                elapsedTime:elapsedTime)
-        }
-        else
-        {
-            model.reachedPosition()
-        }
+        return model.positionX < model.desiredPositionX
     }
 }
