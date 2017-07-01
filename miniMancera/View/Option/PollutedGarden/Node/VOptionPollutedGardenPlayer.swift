@@ -44,17 +44,19 @@ class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
     
     //MARK: public
     
-    func animateWalk()
+    func animateWalk(direction:CGFloat)
     {
         removeAllActions()
         
+        xScale = direction
         let action:SKAction = controller.model.actions.actionPlayerAnimation
         run(action)
     }
     
-    func animateStop()
+    func stop()
     {
         removeAllActions()
+        texture = modelTexture?.texture
     }
     
     /*

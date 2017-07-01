@@ -52,6 +52,7 @@ class MOptionPollutedGardenPlayer:MGameUpdate<MOptionPollutedGarden>
     
     func reachedPosition()
     {
+        view?.stop()
         strategy = MOptionPollutedGardenPlayerStrategyWait(model:self)
     }
     

@@ -21,11 +21,13 @@ class MOptionPollutedGardenActions
     
     private func createPlayerAnimation(textureAnimated:MGameTextureAnimated)
     {
-        actionPlayerAnimation = SKAction.animate(
+        let actionAnimation:SKAction = SKAction.animate(
             with:textureAnimated.textures,
             timePerFrame:kPlayerAnimationFrameTime,
             resize:false,
             restore:false)
+        
+        actionPlayerAnimation = SKAction.repeatForever(actionAnimation)
     }
     
     //MARK: public

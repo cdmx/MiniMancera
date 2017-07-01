@@ -11,7 +11,7 @@ class MOptionPollutedGardenPlayerStrategyWalk:MGameStrategy<
     {
         self.direction = direction
         super.init(model:model)
-        model.view?.xScale = direction
+        model.view?.animateWalk(direction:direction)
     }
     
     override func update(
