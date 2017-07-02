@@ -5,7 +5,7 @@ class MOptionPollutedGardenPlantItemStrategyCollect:MGameStrategy<
     MOptionPollutedGarden>
 {
     private var elapsedTime:TimeInterval?
-    private let kDelay:TimeInterval = 6
+    private let kDelay:TimeInterval = 7.5
     
     override func update(
         elapsedTime:TimeInterval,

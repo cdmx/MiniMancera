@@ -5,44 +5,41 @@ class MOptionPollutedGardenPlantItemStrategyPop:MGameStrategy<
     MOptionPollutedGarden>
 {
     private var potSpeed:CGFloat?
-    private var elapsedTime:TimeInterval
+    private var lastElapsedTime:TimeInterval?
     private let kPotExpectedPositionY:CGFloat = 66
     private let kMaxSpeed:UInt32 = 35
     private let kMinSpeed:UInt32 = 3
-    
-    override init(model:MOptionPollutedGardenPlantItem)
-    {
-        elapsedTime = 0
-        super.init(model:model)
-    }
     
     override func update(
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionPollutedGarden>)
     {
-        if let potSpeed:CGFloat = self.potSpeed
+        if let lastElapsedTime:TimeInterval = self.lastElapsedTime
         {
-            if model.positionY < kPotExpectedPositionY
+            if let potSpeed:CGFloat = self.potSpeed
             {
-                let deltaTime:TimeInterval = elapsedTime - self.elapsedTime
-                let deltaY:CGFloat = CGFloat(deltaTime) * potSpeed
-                model.movePotUpBy(deltaY:deltaY)
+                if model.positionY < kPotExpectedPositionY
+                {
+                    let deltaTime:TimeInterval = elapsedTime - lastElapsedTime
+                    let deltaY:CGFloat = CGFloat(deltaTime) * potSpeed
+                    model.movePotUpBy(deltaY:deltaY)
+                }
+                else
+                {
+                    addPlant(scene:scene)
+                    model.grow()
+                }
             }
             else
             {
-                addPlant(scene:scene)
-                model.grow()
+                potSpeed = randomPotSpeed()
+                addPot(scene:scene)
+                
+                model.collectFlower(scene:scene)
             }
         }
-        else
-        {
-            potSpeed = randomPotSpeed()
-            addPot(scene:scene)
-            
-            model.collectFlower(scene:scene)
-        }
         
-        self.elapsedTime = elapsedTime
+        lastElapsedTime = elapsedTime
     }
     
     //MARK: private

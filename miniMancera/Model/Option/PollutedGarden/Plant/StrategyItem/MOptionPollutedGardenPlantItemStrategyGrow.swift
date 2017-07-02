@@ -8,7 +8,7 @@ class MOptionPollutedGardenPlantItemStrategyGrow:MGameStrategy<
     private var level:Int
     private let maxLevel:Int
     private let kInitialLevel:Int = -1
-    private let kDeltaTime:TimeInterval = 5
+    private let kDeltaTime:TimeInterval = 3.5
     
     override init(model:MOptionPollutedGardenPlantItem)
     {
