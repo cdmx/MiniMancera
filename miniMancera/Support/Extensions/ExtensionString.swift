@@ -4,6 +4,7 @@ extension String
 {
     private static let tableReformaCrossing:String = "ReformaCrossing"
     private static let tablePollutedGarden:String = "PollutedGarden"
+    private static let tableWhistlesVsZombies:String = "WhistlesVsZombies"
     
     static func localized(key:String) -> String
     {
@@ -18,6 +19,11 @@ extension String
     static func localizedPollutedGarden(key:String) -> String
     {
         return NSLocalizedString(key, tableName:tablePollutedGarden, comment:"")
+    }
+    
+    static func localizedWhistlesVsZombies(key:String) -> String
+    {
+        return NSLocalizedString(key, tableName:tableWhistlesVsZombies, comment:"")
     }
     
     func capitalizedFirstLetter() -> String

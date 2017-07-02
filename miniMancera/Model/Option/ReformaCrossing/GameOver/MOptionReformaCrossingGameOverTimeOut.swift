@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 class MOptionReformaCrossingGameOverTimeOut:MOptionReformaCrossingGameOverProtocol
 {
@@ -18,11 +18,18 @@ class MOptionReformaCrossingGameOverTimeOut:MOptionReformaCrossingGameOverProtoc
         }
     }
     
-    var image:UIImage
+    var keepAdvancing:Bool
     {
         get
         {
-            return #imageLiteral(resourceName: "assetReformaCrossingPlayer11")
+            return false
         }
+    }
+    
+    func texture(textures:MOptionReformaCrossingTextures) -> MGameTexture
+    {
+        let texture:MGameTexture = textures.playerTimeout
+        
+        return texture
     }
 }

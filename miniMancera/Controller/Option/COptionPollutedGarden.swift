@@ -1,72 +1,64 @@
-import UIKit
 import SpriteKit
 
 class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
 {
-    override func postScore()
+    override func didBegin(_ contact:SKPhysicsContact)
     {
-        let maxScore:Int = model.maxScore
-        postScoreWithScore(score:maxScore)
+        model.contact.addContact(contact:contact)
+    }
+    
+    //MAKR: private
+    
+    private func newGameScene()
+    {
+        let newScene:VOptionPollutedGardenScene = VOptionPollutedGardenScene(
+            controller:self)
+        presentScene(newScene:newScene)
+    }
+    
+    private func presentScene(newScene:SKScene)
+    {
+        let transition:SKTransition = model.actions.transitionCrossFade
+        
+        guard
+            
+            let view:SKView = self.view as? SKView
+            
+        else
+        {
+            return
+        }
+        
+        view.presentScene(newScene, transition:transition)
     }
     
     //MARK: public
     
-    func collectFlower(petunia:VOptionPollutedGardenPetunia)
+    func showGameOver()
     {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionPollutedGardenScene = view.scene as? VOptionPollutedGardenScene
-            
-        else
-        {
-            return
-        }
+        model.strategyWait()
+        postScore()
         
-        model.collectedFlower()
-        scene.collectFlower(petunia:petunia)
-    }
-    
-    func pollutedFlower(petunia:VOptionPollutedGardenPetunia)
-    {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionPollutedGardenScene = view.scene as? VOptionPollutedGardenScene
-            
-        else
-        {
-            return
-        }
+        let newScene:VOptionPollutedGardenSceneOver = VOptionPollutedGardenSceneOver(
+            controller:self)
         
-        scene.flowerPolluted(petunia:petunia)
-        
-        if model.score > 0
-        {
-            model.pollutedFlower()
-        }
-        else
-        {
-            model.allFlowersPolluted()
-            scene.allFlowersPolluted()
-            
-            postScore()
-        }
+        presentScene(newScene:newScene)
     }
     
     func game1up()
     {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionPollutedGardenSceneEnd = view.scene as? VOptionPollutedGardenSceneEnd
-            
-        else
-        {
-            return
-        }
+        let sound1up:SKAction = model.sounds.sound1up
+        playSound(actionSound:sound1up)
         
-        model.revertChanges()
-        scene.game1up()
+        restartTimer()
+        newGameScene()
+    }
+    
+    func gamePlayNoMore()
+    {
+        let soundFail:SKAction = model.sounds.soundFail
+        playSound(actionSound:soundFail)
+        
+        exitGame()
     }
 }

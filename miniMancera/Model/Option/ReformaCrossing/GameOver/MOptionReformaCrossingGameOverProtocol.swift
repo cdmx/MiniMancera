@@ -1,8 +1,10 @@
-import UIKit
+import Foundation
 
 protocol MOptionReformaCrossingGameOverProtocol
 {
     var title:String { get }
     var descr:String { get }
-    var image:UIImage { get }
+    var keepAdvancing:Bool { get }
+    
+    func texture(textures:MOptionReformaCrossingTextures) -> MGameTexture
 }

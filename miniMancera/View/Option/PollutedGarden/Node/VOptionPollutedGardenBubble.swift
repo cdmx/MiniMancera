@@ -1,36 +1,21 @@
-import UIKit
 import SpriteKit
 
-class VOptionPollutedGardenBubble:SKSpriteNode
+class VOptionPollutedGardenBubble:ViewGameNode<MOptionPollutedGarden>
 {
-    private(set) var alive:Bool
-    private weak var controller:COptionPollutedGarden!
-    private weak var bubbleType:MOptionPollutedGardenBubbleType!
-    private let velocityExplosion:CGVector
-    private let kExplosionVelocityY:CGFloat = 50
-    private let kMaxVelocity:UInt32 = 100
+    private(set) weak var model:MOptionPollutedGardenBubbleItem?
+    private let kColorBlendFactor:CGFloat = 1
     
     init(
-        controller:COptionPollutedGarden,
-        bubbleType:MOptionPollutedGardenBubbleType,
-        colour:UIColor,
-        position:CGPoint)
+        controller:ControllerGame<MOptionPollutedGarden>,
+        model:MOptionPollutedGardenBubbleItem)
     {
-        alive = true
-        velocityExplosion = CGVector(
-            dx:bubbleType.velocityXExplosion,
-            dy:kExplosionVelocityY)
-        
+        self.model = model
         super.init(
-            texture:bubbleType.texture,
-            color:colour,
-            size:bubbleType.size)
-        xScale = bubbleType.orientation.rawValue
-        colorBlendFactor = 1
-        self.position = position
-        self.bubbleType = bubbleType
-        self.controller = controller
-        
+            controller:controller,
+            texture:model.texture,
+            colour:model.colour)
+        xScale = model.scaleX
+        colorBlendFactor = kColorBlendFactor
         startPhysics()
     }
     
@@ -39,36 +24,44 @@ class VOptionPollutedGardenBubble:SKSpriteNode
         return nil
     }
     
-    //MARK: private
-    
-    private func leaveGarden()
+    override func positionStart()
     {
-        removeAllActions()
-        removeFromParent()
-    }
-    
-    private func randomVelocity() -> CGFloat
-    {
-        let random:UInt32 = arc4random_uniform(kMaxVelocity)
-        let vectorVelocity:CGFloat = -CGFloat(random)
+        guard
+            
+            let model:MOptionPollutedGardenBubbleItem = self.model
         
-        return vectorVelocity
+        else
+        {
+            return
+        }
+        
+        position = model.position
     }
+    
+    //MARK: private
     
     private func startPhysics()
     {
-        let velocityY:CGFloat = randomVelocity()
+        guard
+            
+            let model:MOptionPollutedGardenBubbleItem = self.model
+        
+        else
+        {
+            return
+        }
+        
         let physicsBody:SKPhysicsBody = SKPhysicsBody(
-            circleOfRadius:bubbleType.radius)
+            circleOfRadius:model.radius)
         physicsBody.isDynamic = true
         physicsBody.friction = 0
         physicsBody.allowsRotation = true
         physicsBody.restitution = 1
-        physicsBody.angularVelocity = bubbleType.orientation.rawValue
-        physicsBody.density = bubbleType.mass
+        physicsBody.angularVelocity = model.angularVelocity
+        physicsBody.density = model.mass
         physicsBody.velocity = CGVector(
-            dx:bubbleType.velocityX,
-            dy:velocityY)
+            dx:model.velocityX,
+            dy:model.velocityY)
         
         physicsBody.categoryBitMask = MOptionPollutedGardenPhysicsStruct.Bubble
         physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.None
@@ -76,24 +69,28 @@ class VOptionPollutedGardenBubble:SKSpriteNode
         self.physicsBody = physicsBody
     }
     
-    private func animateAndLeave()
-    {
-        let actionExplosion:SKAction = controller.model.bubbleGenerator.explodeAnimation
-        let actionLeave:SKAction = SKAction.run(leaveGarden)
-        let actions:[SKAction] = [
-            actionExplosion,
-            actionLeave]
-        let actionsSequence:SKAction = SKAction.sequence(actions)
-        
-        run(actionsSequence)
-    }
-    
     //MARK: public
     
-    func explode()
+    func explodeStart(animation:SKAction)
     {
-        alive = false
-        physicsBody?.velocity = velocityExplosion
-        animateAndLeave()
+        guard
+            
+            let model:MOptionPollutedGardenBubbleItem = self.model
+        
+        else
+        {
+            return
+        }
+        
+        physicsBody?.velocity = CGVector(
+            dx:model.velocityXExplosion,
+            dy:model.velocityY)
+        run(animation)
+    }
+    
+    func explodeEnded()
+    {
+        removeAllActions()
+        removeFromParent()
     }
 }

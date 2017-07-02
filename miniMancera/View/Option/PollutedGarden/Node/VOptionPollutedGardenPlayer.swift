@@ -1,29 +1,19 @@
-import UIKit
 import SpriteKit
 
-class VOptionPollutedGardenPlayer:SKSpriteNode
+class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
 {
-    private weak var controller:COptionPollutedGarden!
-    private let actionAnimate:SKAction
-    private let textureStand:SKTexture
-    private let kSpeed:CGFloat = 150
-    private let kZPosition:CGFloat = 1
-    private let kYPosition:CGFloat = 93
     private let kPhysicsWidth:CGFloat = 42
     private let kPhysicsHeight:CGFloat = 11
     private let kPhysicsY:CGFloat = 23
     
-    init(controller:COptionPollutedGarden)
+    override init(controller:ControllerGame<MOptionPollutedGarden>)
     {
-        actionAnimate = VOptionPollutedGardenPlayer.factoryAnimation()
-        textureStand = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenPlayer1"))
-        let textureSize:CGSize = textureStand.size()
-        self.controller = controller
+        let texture:MGameTexture = controller.model.textures.playerStand
         
-        super.init(texture:textureStand, color:UIColor.clear, size:textureSize)
-        zPosition = kZPosition
-        startPosition()
-        startPhysics(size:textureSize)
+        super.init(
+            controller:controller,
+            texture:texture)
+        startPhysics()
     }
     
     required init?(coder:NSCoder)
@@ -33,14 +23,7 @@ class VOptionPollutedGardenPlayer:SKSpriteNode
     
     //MARK: private
     
-    private func startPosition()
-    {
-        let sceneWidth:CGFloat = controller.model.size.width
-        let sceneWidth_2:CGFloat = sceneWidth / 2.0
-        position = CGPoint(x:sceneWidth_2, y:kYPosition)
-    }
-    
-    private func startPhysics(size:CGSize)
+    private func startPhysics()
     {
         let physicsSize:CGSize = CGSize(width:kPhysicsWidth, height:kPhysicsHeight)
         let physicsCenter:CGPoint = CGPoint(x:0, y:kPhysicsY)
@@ -59,51 +42,26 @@ class VOptionPollutedGardenPlayer:SKSpriteNode
         self.physicsBody = physicsBody
     }
     
-    private func createActionMove(positionX:CGFloat) -> SKAction
-    {
-        let deltaX:CGFloat = abs(position.x - positionX)
-        let duration:CGFloat = deltaX / kSpeed
-        let durationTime:TimeInterval = TimeInterval(duration)
-        let point:CGPoint = CGPoint(x:positionX, y:position.y)
-        let actionMove:SKAction = SKAction.move(to:point, duration:durationTime)
-        
-        return actionMove
-    }
-    
-    private func actionsWalk(positionX:CGFloat)
-    {
-        removeAllActions()
-        
-        let actionMove:SKAction = createActionMove(positionX:positionX)
-        let actionReached:SKAction = SKAction.run(reachedPosition)
-        let actions:[SKAction] = [
-            actionMove,
-            actionReached]
-        let actionsSequence:SKAction = SKAction.sequence(actions)
-        
-        run(actionAnimate)
-        run(actionsSequence)
-    }
-    
-    private func reachedPosition()
-    {
-        removeAllActions()
-        texture = textureStand
-    }
-    
     //MARK: public
     
-    func walkToPosition(positionX:CGFloat)
+    func animateWalk(direction:CGFloat)
     {
-        if positionX >= position.x
-        {
-            xScale = 1
-        }
-        else
-        {
-            xScale = -1
-        }
+        removeAllActions()
         
-        actionsWalk(positionX:positionX)
+        xScale = direction
+        let action:SKAction = controller.model.actions.actionPlayerAnimation
+        run(action)
+    }
+    
+    func stop()
+    {
+        removeAllActions()
+        texture = modelTexture?.texture
+    }
+    
+    func defeated(texture:MGameTexture)
+    {
+        removeAllActions()
+        self.texture = texture.texture
     }
 }

@@ -1,9 +1,7 @@
-import UIKit
 import SpriteKit
 
-class VOptionPollutedGardenHud:SKSpriteNode
+class VOptionPollutedGardenHud:ViewGameNode<MOptionPollutedGarden>
 {
-    private weak var controller:COptionPollutedGarden!
     private weak var labelScore:SKLabelNode!
     private weak var labelMax:SKLabelNode!
     private let kScoreFontSize:CGFloat = 14
@@ -13,19 +11,14 @@ class VOptionPollutedGardenHud:SKSpriteNode
     private let kScorePositionY:CGFloat = -8
     private let kMaxPositionX:CGFloat = 37
     private let kMaxPositionY:CGFloat = -7
-    private let kZPosition:CGFloat = 10001
-    private let kScoreZPosition:CGFloat = 10005
-    private let kMaxZPosition:CGFloat = 10006
     
-    init(controller:COptionPollutedGarden)
+    override init(controller:ControllerGame<MOptionPollutedGarden>)
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenHud"))
-        let size:CGSize = texture.size()
-        self.controller = controller
+        let texture:MGameTexture = controller.model.textures.hud
         
-        super.init(texture:texture, color:UIColor.clear, size:size)
-        position = startPosition()
-        zPosition = kZPosition
+        super.init(
+            controller:controller,
+            texture:texture)
         alpha = 0
         
         let labelScore:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
@@ -34,7 +27,7 @@ class VOptionPollutedGardenHud:SKSpriteNode
         labelScore.position = CGPoint(x:kScorePositionX, y:kScorePositionY)
         labelScore.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
         labelScore.verticalAlignmentMode = SKLabelVerticalAlignmentMode.baseline
-        labelScore.zPosition = kScoreZPosition
+        labelScore.zPosition = MOptionPollutedGardenZPosition.HudScore.rawValue
         self.labelScore = labelScore
         
         let labelMax:SKLabelNode = SKLabelNode(fontNamed:UIFont.kFontGame)
@@ -43,7 +36,7 @@ class VOptionPollutedGardenHud:SKSpriteNode
         labelMax.position = CGPoint(x:kMaxPositionX, y:kMaxPositionY)
         labelMax.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
         labelMax.verticalAlignmentMode = SKLabelVerticalAlignmentMode.baseline
-        labelMax.zPosition = kMaxZPosition
+        labelMax.zPosition = MOptionPollutedGardenZPosition.HudMax.rawValue
         self.labelMax = labelMax
         
         addChild(labelScore)
@@ -55,29 +48,31 @@ class VOptionPollutedGardenHud:SKSpriteNode
         return nil
     }
     
-    //MARK: private
-    
-    private func startPosition() -> CGPoint
+    override func positionStart()
     {
-        let sceneSize:CGSize = controller.model.size
+        guard
+            
+            let modelTexture:MGameTexture = modelTexture
+            
+        else
+        {
+            return
+        }
+        
+        let sceneSize:CGSize = MGame.sceneSize
         let sceneWidth:CGFloat = sceneSize.width
         let sceneHeight:CGFloat = sceneSize.height
-        let sizeWidth_2:CGFloat = size.width / 2.0
+        let sizeWidth_2:CGFloat = modelTexture.width_2
         let posX:CGFloat = sceneWidth - sizeWidth_2
         let posY:CGFloat = sceneHeight - kMargin
-        let point:CGPoint = CGPoint(x:posX, y:posY)
-        
-        return point
+        position = CGPoint(x:posX, y:posY)
     }
     
     //MARK: public
     
-    func update(elapsedTime:TimeInterval)
+    func update(score:String, max:String)
     {
-        let scoreString:String = "\(controller.model.score)"
-        labelScore.text = scoreString
-        
-        let maxString:String = "\(controller.model.maxScore)"
-        labelMax.text = maxString
+        labelScore.text = score
+        labelMax.text = max
     }
 }

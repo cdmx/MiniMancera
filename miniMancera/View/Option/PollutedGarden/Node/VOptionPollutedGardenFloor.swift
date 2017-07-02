@@ -1,28 +1,15 @@
-import UIKit
 import SpriteKit
 
-class VOptionPollutedGardenFloor:SKSpriteNode
+class VOptionPollutedGardenFloor:ViewGameNode<MOptionPollutedGarden>
 {
-    private weak var controller:COptionPollutedGarden!
-    private let kZPosition:CGFloat = 100000
-    
-    init(controller:COptionPollutedGarden)
+    override init(controller:ControllerGame<MOptionPollutedGarden>)
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenFloor"))
-        let textureSize:CGSize = texture.size()
-        self.controller = controller
+        let texture:MGameTexture = controller.model.textures.floor
         
-        super.init(texture:texture, color:UIColor.clear, size:textureSize)
-        
-        let sceneSize:CGSize = controller.model.size
-        let sceneWidth:CGFloat = sceneSize.width
-        let sceneWidth_2:CGFloat = sceneWidth / 2.0
-        let height_2:CGFloat = size.height / 2.0
-        let centerPosition:CGPoint = CGPoint(x:sceneWidth_2, y:height_2)
-        position = centerPosition
-        zPosition = kZPosition
-        
-        startPhysics(size:textureSize)
+        super.init(
+            controller:controller,
+            texture:texture)
+        startPhysics()
     }
     
     required init?(coder:NSCoder)
@@ -30,9 +17,26 @@ class VOptionPollutedGardenFloor:SKSpriteNode
         return nil
     }
     
+    override func positionStart()
+    {
+        guard
+            
+            let modelTexture:MGameTexture = self.modelTexture
+        
+        else
+        {
+            return
+        }
+        
+        let sceneWidth:CGFloat = MGame.sceneSize.width
+        let sceneWidth_2:CGFloat = sceneWidth / 2.0
+        let height_2:CGFloat = modelTexture.height_2
+        position = CGPoint(x:sceneWidth_2, y:height_2)
+    }
+    
     //MARK: private
     
-    private func startPhysics(size:CGSize)
+    private func startPhysics()
     {
         let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
         physicsBody.isDynamic = false

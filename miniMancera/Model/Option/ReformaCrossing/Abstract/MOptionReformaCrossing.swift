@@ -1,40 +1,101 @@
-import UIKit
 import SpriteKit
 
-class MOptionReformaCrossing:MGameProtocol
+class MOptionReformaCrossing:MGame
 {
+    let contact:MOptionReformaCrossingContact
+    let textures:MOptionReformaCrossingTextures
+    let sounds:MOptionReformaCrossingSounds
+    let actions:MOptionReformaCrossingActions
     let laneGroup:MOptionReformaCrossingLaneGroup
-    let kMaxGameTime:TimeInterval = 31
-    private(set) var addedSpeed:CGFloat
+    let player:MOptionReformaCrossingPlayer
+    let foe:MOptionReformaCrossingFoe
+    let coin:MOptionReformaCrossingCoin
+    let stop:MOptionReformaCrossingStop
+    let hud:MOptionReformaCrossingHud
+    let menu:MOptionReformaCrossingMenu
+    let title:MOptionReformaCrossingTitle
     private(set) var level:Int
-    private(set) var size:CGSize
-    private(set) var score:Int
-    private(set) var gameActive:Bool
+    private var strategy:MGameStrategyMain<MOptionReformaCrossing>?
     private let kSoundBackground:String = "soundReformaCrossing.caf"
-    private let kSpeedMultiplier:CGFloat = 50
     private let kStartingLevel:Int = 1
     
     required init()
     {
+        contact = MOptionReformaCrossingContact()
+        textures = MOptionReformaCrossingTextures()
+        sounds = MOptionReformaCrossingSounds()
+        actions = MOptionReformaCrossingActions()
         laneGroup = MOptionReformaCrossingLaneGroup()
-        size = CGSize.zero
-        score = 0
-        gameActive = false
+        player = MOptionReformaCrossingPlayer()
+        foe = MOptionReformaCrossingFoe()
+        coin = MOptionReformaCrossingCoin()
+        stop = MOptionReformaCrossingStop()
+        hud = MOptionReformaCrossingHud()
+        menu = MOptionReformaCrossingMenu()
+        title = MOptionReformaCrossingTitle()
         level = kStartingLevel
-        addedSpeed = 0
+        
+        super.init()
+        actions.createAnimations(textures:textures)
+    }
+    
+    override var startSceneType:SKScene.Type?
+    {
+        get
+        {
+            return VOptionReformaCrossingScene.self
+        }
+    }
+    
+    override var soundBackground:String?
+    {
+        get
+        {
+           return kSoundBackground
+        }
+    }
+    
+    override func activateGame()
+    {
+        strategy = MOptionReformaCrossingStrategyGame(model:self)
+        player.activateGame()
+        
+        super.activateGame()
+    }
+    
+    override func gameStrategy<T>(modelType:T) -> MGameStrategyMain<T>? where T:MGame
+    {
+        return strategy as? MGameStrategyMain<T>
     }
     
     //MARK: public
     
-    func stopAll()
+    func startLevel()
     {
-        gameActive = false
-        laneGroup.stopFoes()
+        strategy = MOptionReformaCrossingStrategyBegin(model:self)
+        title.startLevel(level:level)
+        laneGroup.restart(level:level)
+        coin.chargeCoinsWith(laneGroup:laneGroup)
     }
     
-    func hitAndRun()
+    func playerSuccess()
     {
-        gameActive = false
+        player.success()
+        deActivateGame()
+        level += 1
+        strategy = MOptionReformaCrossingStrategyEndSuccess(model:self)
+    }
+    
+    func timeOut()
+    {
+        player.timeOut()
+        deActivateGame()
+        strategy = MOptionReformaCrossingStrategyEndFailTimeOut(model:self)
+    }
+    
+    func strategyWait()
+    {
+        strategy = MOptionReformaCrossingStrategyWait(model:self)
     }
     
     func revertChanges()
@@ -43,55 +104,24 @@ class MOptionReformaCrossing:MGameProtocol
         score = 0
     }
     
-    func startLevel()
+    func playerStop()
     {
-        laneGroup.configureForScene(size:size)
-        addedSpeed = CGFloat(level) * kSpeedMultiplier
+        player.stop()
+        stop.playerStop()
     }
     
-    func playerSuccess()
-    {
-        gameActive = false
-        level += 1
-    }
-    
-    func collectedLane()
+    func addCoin()
     {
         score += 1
     }
     
-    //MARK: option protocol
-    
-    var soundBackground:String?
+    func hitAndRun(scene:ViewGameScene<MOptionReformaCrossing>)
     {
-        get
-        {
-            return kSoundBackground
-        }
-    }
-    
-    func activateGame()
-    {
-        gameActive = true
-    }
-    
-    func sceneWithSize(
-        controller:UIViewController,
-        size:CGSize) -> SKScene?
-    {
-        guard
-            
-            let controller:COptionReformaCrossing = controller as? COptionReformaCrossing
+        let soundFail:SKAction = sounds.soundHonk
+        scene.controller.playSound(actionSound:soundFail)
         
-        else
-        {
-            return nil
-        }
-        
-        self.size = size
-        let scene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
-            controller:controller)
-        
-        return scene
+        player.hitAndRun()
+        deActivateGame()
+        strategy = MOptionReformaCrossingStrategyEndFailHitAndRun(model:self)
     }
 }

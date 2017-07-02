@@ -1,21 +1,16 @@
 import UIKit
-import SpriteKit
 
-class VOptionPollutedGardenMenu:SKSpriteNode
+class VOptionPollutedGardenMenu:ViewGameNode<MOptionPollutedGarden>
 {
-    private weak var controller:COptionPollutedGarden!
     private let kMargin:CGFloat = 45
-    private let kZPosition:CGFloat = 10002
     
-    init(controller:COptionPollutedGarden)
+    override init(controller:ControllerGame<MOptionPollutedGarden>)
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenMenu"))
-        let size:CGSize = texture.size()
-        self.controller = controller
+        let texture:MGameTexture = controller.model.textures.menu
         
-        super.init(texture:texture, color:UIColor.clear, size:size)
-        position = startPosition()
-        zPosition = kZPosition
+        super.init(
+            controller:controller,
+            texture:texture)
         isUserInteractionEnabled = true
         alpha = 0
     }
@@ -25,23 +20,25 @@ class VOptionPollutedGardenMenu:SKSpriteNode
         return nil
     }
     
-    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
+    override func positionStart()
     {
-        if controller.model.gameActive
+        guard
+            
+            let modelTexture:MGameTexture = modelTexture
+            
+        else
         {
-            controller.showMenu()
+            return
         }
+        
+        let sceneHeight:CGFloat = MGame.sceneSize.height
+        let width_2:CGFloat = modelTexture.width_2
+        let positionY:CGFloat = sceneHeight - kMargin
+        position = CGPoint(x:width_2, y:positionY)
     }
     
-    //MARK: private
-    
-    private func startPosition() -> CGPoint
+    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        let sceneHeight:CGFloat = controller.model.size.height
-        let sizeWidth_2:CGFloat = size.width / 2.0
-        let posY:CGFloat = sceneHeight - kMargin
-        let point:CGPoint = CGPoint(x:sizeWidth_2, y:posY)
-        
-        return point
+        controller.showMenu()
     }
 }

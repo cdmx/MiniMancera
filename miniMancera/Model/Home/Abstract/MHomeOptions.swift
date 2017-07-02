@@ -23,6 +23,22 @@ class MHomeOptions
     
     //MARK: final
     
+    final func gameControllerWith<T:MGame>(type:ControllerGame<T>.Type) -> ControllerGame<T>?
+    {
+        guard
+        
+            let dataOption:DOption = self.dataOption
+        
+        else
+        {
+            return nil
+        }
+        
+        let controller:ControllerGame<T> = type.init(dataOption:dataOption)
+        
+        return controller
+    }
+    
     final func available() -> Bool
     {
         guard

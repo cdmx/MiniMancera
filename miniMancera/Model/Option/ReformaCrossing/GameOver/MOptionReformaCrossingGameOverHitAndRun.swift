@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 class MOptionReformaCrossingGameOverHitAndRun:MOptionReformaCrossingGameOverProtocol
 {
@@ -18,11 +18,18 @@ class MOptionReformaCrossingGameOverHitAndRun:MOptionReformaCrossingGameOverProt
         }
     }
     
-    var image:UIImage
+    var keepAdvancing:Bool
     {
         get
         {
-            return #imageLiteral(resourceName: "assetReformaCrossingPlayer10")
+            return true
         }
+    }
+    
+    func texture(textures:MOptionReformaCrossingTextures) -> MGameTexture
+    {
+        let texture:MGameTexture = textures.playerHitAndRun
+        
+        return texture
     }
 }
