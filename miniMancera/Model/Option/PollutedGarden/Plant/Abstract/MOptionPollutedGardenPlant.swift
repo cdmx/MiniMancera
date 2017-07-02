@@ -3,6 +3,7 @@ import UIKit
 class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
 {
     private var items:[MOptionPollutedGardenPlantItem]
+    private var collect:[MOptionPollutedGardenPlantCollect]
     private let animations:MOptionPollutedGardenPlantAnimations
     private let position:MOptionPollutedGardenPlantPosition
     
@@ -11,6 +12,7 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         position = MOptionPollutedGardenPlantPosition()
         animations = MOptionPollutedGardenPlantAnimations()
         items = []
+        collect = []
         super.init()
     }
     
@@ -19,6 +21,13 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         scene:ViewGameScene<MOptionPollutedGarden>)
     {
         for item:MOptionPollutedGardenPlantItem in items
+        {
+            item.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
+        }
+        
+        for item:MOptionPollutedGardenPlantCollect in collect
         {
             item.update(
                 elapsedTime:elapsedTime,
@@ -52,5 +61,20 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         }
         
         self.items = items
+    }
+    
+    func collectFinished(collectItem:MOptionPollutedGardenPlantCollect)
+    {
+        var items:[MOptionPollutedGardenPlantCollect] = []
+        
+        for item:MOptionPollutedGardenPlantCollect in collect
+        {
+            if item !== collectItem
+            {
+                items.append(item)
+            }
+        }
+        
+        collect = items
     }
 }

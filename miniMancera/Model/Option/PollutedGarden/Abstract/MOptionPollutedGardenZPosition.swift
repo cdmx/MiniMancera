@@ -8,6 +8,8 @@ enum MOptionPollutedGardenZPosition:CGFloat
     case Pot
     case Floor
     case Bubble
+    case Collect
+    case Poison
     case Hud
     case HudScore
     case HudMax

@@ -110,7 +110,7 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         addChild(view)
     }
     
-    func showCollect(plant:MOptionPollutedGardenPlantItem)
+    func addCollect(model:MOptionPollutedGardenPlantCollect)
     {
         let soundCoin:SKAction = controller.model.sounds.soundCoin
         controller.playSound(actionSound:soundCoin)
