@@ -7,48 +7,59 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
         model.contact.addContact(contact:contact)
     }
     
-    //MARK: public
+    //MAKR: private
     
-    func pollutedFlower(petunia:VOptionPollutedGardenPetunia)
+    private func newGameScene()
     {
+        let newScene:VOptionPollutedGardenScene = VOptionPollutedGardenScene(
+            controller:self)
+        presentScene(newScene:newScene)
+    }
+    
+    private func presentScene(newScene:SKScene)
+    {
+        let transition:SKTransition = model.actions.transitionCrossFade
+        
         guard
             
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionPollutedGardenScene = view.scene as? VOptionPollutedGardenScene
+            let view:SKView = self.view as? SKView
             
         else
         {
             return
         }
         
-        scene.flowerPolluted(petunia:petunia)
-        /*
-        if model.score > 0
-        {
-            model.pollutedFlower()
-        }
-        else
-        {
-            model.allFlowersPolluted()
-            scene.allFlowersPolluted()
-            
-            postScore()
-        }*/
+        view.presentScene(newScene, transition:transition)
+    }
+    
+    //MARK: public
+    
+    func showGameOver()
+    {
+        model.strategyWait()
+        postScore()
+        
+        let newScene:VOptionPollutedGardenSceneOver = VOptionPollutedGardenSceneOver(
+            controller:self)
+        
+        presentScene(newScene:newScene)
     }
     
     func game1up()
     {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionPollutedGardenSceneEnd = view.scene as? VOptionPollutedGardenSceneEnd
-            
-        else
-        {
-            return
-        }
-        /*
+        let sound1up:SKAction = model.sounds.sound1up
+        playSound(actionSound:sound1up)
+        
         model.revertChanges()
-        scene.game1up()*/
+        restartTimer()
+        newGameScene()
+    }
+    
+    func gamePlayNoMore()
+    {
+        let soundFail:SKAction = model.sounds.soundFail
+        playSound(actionSound:soundFail)
+        
+        exitGame()
     }
 }

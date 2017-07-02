@@ -7,6 +7,8 @@ class MOptionPollutedGardenTextures
     let pot:MGameTexture
     let hud:MGameTexture
     let menu:MGameTexture
+    let gameOver1up:MGameTexture
+    let gameOverExit:MGameTexture
     let collect:MGameTexture
     let poison:MGameTexture
     let plantPoisoned:MGameTexture
@@ -38,6 +40,12 @@ class MOptionPollutedGardenTextures
         menu = MGameTexture(
             image:#imageLiteral(resourceName: "assetPollutedGardenMenu"),
             zPosition:MOptionPollutedGardenZPosition.Menu.rawValue)
+        gameOver1up = MGameTexture(
+            image:#imageLiteral(resourceName: "assetReformaCrossing1up"),
+            zPosition:MOptionPollutedGardenZPosition.GameOver1up.rawValue)
+        gameOverExit = MGameTexture(
+            image:#imageLiteral(resourceName: "assetReformaCrossingGameOver"),
+            zPosition:MOptionPollutedGardenZPosition.GameOverExit.rawValue)
         collect = MGameTexture(
             image:#imageLiteral(resourceName: "assetPollutedGardenPlusFlower"),
             zPosition:MOptionPollutedGardenZPosition.Collect.rawValue)

@@ -7,19 +7,21 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         model.contact.addContact(contact:contact)
     }
     
+    //MARK: private
+    
+    private func newGameScene()
+    {
+        let newScene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
+            controller:self)
+        presentScene(newScene:newScene)
+    }
+    
     //MARK: public
     
     func nextLevel()
     {
         restartTimer()
         newGameScene()
-    }
-    
-    func newGameScene()
-    {
-        let newScene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
-            controller:self)
-        presentScene(newScene:newScene)
     }
     
     func presentScene(newScene:SKScene)

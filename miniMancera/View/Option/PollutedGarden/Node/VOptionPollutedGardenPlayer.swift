@@ -59,6 +59,12 @@ class VOptionPollutedGardenPlayer:ViewGameNode<MOptionPollutedGarden>
         texture = modelTexture?.texture
     }
     
+    func defeated(texture:MGameTexture)
+    {
+        removeAllActions()
+        self.texture = texture.texture
+    }
+    
     /*
     private func createActionMove(positionX:CGFloat) -> SKAction
     {

@@ -72,9 +72,9 @@ class MOptionPollutedGardenPlantItem:MGameUpdate<MOptionPollutedGarden>
         
         else
         {
-            return false
+            return true
         }
         
-        return true
+        return false
     }
 }

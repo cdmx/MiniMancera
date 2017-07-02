@@ -82,4 +82,9 @@ class MOptionPollutedGardenPlayer:MGameUpdate<MOptionPollutedGarden>
         
         updateViewPosition()
     }
+    
+    func defeated()
+    {
+        strategy = MOptionPollutedGardenPlayerStrategyDefeated(model:self)
+    }
 }

@@ -75,21 +75,31 @@ class MOptionPollutedGarden:MGame
         return strategy as? MGameStrategyMain<T>
     }
     
+    //MARK: private
+    
+    private func allPlantsPolluted()
+    {
+        deActivateGame()
+        player.defeated()
+        strategy = MOptionPollutedGardenStrategyEnd(model:self)
+    }
+    
     //MARK: public
     
     func startLevel()
     {
         score = 0
         currentScore = 0
-        strategy = MOptionPollutedGardenStrategyBegin(model:self)
         plant.restart()
+        bubble.restart()
+        strategy = MOptionPollutedGardenStrategyBegin(model:self)
     }
     
     func collectedFlower(plantItem:MOptionPollutedGardenPlantItem)
     {
         currentScore += 1
         
-        if currentScore > currentScore
+        if currentScore > score
         {
             score = currentScore
         }
@@ -101,11 +111,17 @@ class MOptionPollutedGarden:MGame
     {
         currentScore -= 1
         plant.poisonStart(plantItem:plantItem)
+        
+        if currentScore < 0
+        {
+            currentScore = 0
+            allPlantsPolluted()
+        }
     }
     
-    func bubbleExplode(bubbleItem:MOptionPollutedGardenBubbleItem)
+    func strategyWait()
     {
-        
+        strategy = MOptionPollutedGardenStrategyWait(model:self)
     }
     
     

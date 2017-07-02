@@ -113,6 +113,11 @@ class MOptionPollutedGardenBubble:MGameUpdate<MOptionPollutedGarden>
     
     //MARK: public
     
+    func restart()
+    {
+        items = []
+    }
+    
     func createTypes(textures:MOptionPollutedGardenTextures)
     {
         itemTypes = MOptionPollutedGardenBubble.factoryBubbles(

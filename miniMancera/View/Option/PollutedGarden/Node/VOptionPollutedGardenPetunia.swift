@@ -153,12 +153,12 @@ class VOptionPollutedGardenPetunia:SKSpriteNode
     }
     
     func polluted()
-    {
+    {/*
         if level > kInitialLevel
         {
             controller.pollutedFlower(petunia:self)
             level = kPollutedLevel
             growTime = lastElapsedTime
-        }
+        }*/
     }
 }
