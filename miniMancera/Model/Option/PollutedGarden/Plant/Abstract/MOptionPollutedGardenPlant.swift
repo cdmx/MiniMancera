@@ -3,11 +3,13 @@ import UIKit
 class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
 {
     private var items:[MOptionPollutedGardenPlantItem]
+    private let animations:MOptionPollutedGardenPlantAnimations
     private let position:MOptionPollutedGardenPlantPosition
     
     override init()
     {
         position = MOptionPollutedGardenPlantPosition()
+        animations = MOptionPollutedGardenPlantAnimations()
         items = []
         super.init()
     }
@@ -24,9 +26,18 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         }
     }
     
-    //MARK: private
+    //MARK: public
     
-    private func newPlants(textures:MOptionPollutedGardenTextures)
+    func factoryAnimations(
+        textures:MOptionPollutedGardenTextures,
+        actions:MOptionPollutedGardenActions)
+    {
+        animations.factoryAnimations(
+            textures:textures,
+            actions:actions)
+    }
+    
+    func restart()
     {
         let positions:[CGFloat] = position.randomPositions()
         var items:[MOptionPollutedGardenPlantItem] = []
@@ -34,19 +45,12 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         for position:CGFloat in positions
         {
             let item:MOptionPollutedGardenPlantItem = MOptionPollutedGardenPlantItem(
-                textures:textures,
+                animations:animations,
                 positionX:position)
             
             items.append(item)
         }
         
         self.items = items
-    }
-    
-    //MARK: public
-    
-    func restart(textures:MOptionPollutedGardenTextures)
-    {
-        newPlants(textures:textures)
     }
 }

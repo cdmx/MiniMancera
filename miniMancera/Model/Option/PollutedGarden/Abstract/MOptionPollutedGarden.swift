@@ -39,6 +39,9 @@ class MOptionPollutedGarden:MGame
         super.init()
         actions.createAnimations(textures:textures)
         bubble.createTypes(textures:textures)
+        plant.factoryAnimations(
+            textures:textures,
+            actions:actions)
     }
     
     override var startSceneType:SKScene.Type?
@@ -77,7 +80,7 @@ class MOptionPollutedGarden:MGame
         score = 0
         currentScore = 0
         strategy = MOptionPollutedGardenStrategyBegin(model:self)
-        plant.restart(textures:textures)
+        plant.restart()
     }
     
     
