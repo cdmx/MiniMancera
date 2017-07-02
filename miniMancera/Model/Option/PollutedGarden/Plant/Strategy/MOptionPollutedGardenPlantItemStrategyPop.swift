@@ -30,23 +30,14 @@ class MOptionPollutedGardenPlantItemStrategyPop:MGameStrategy<
             }
             else
             {
+                addPlant(scene:scene)
                 model.grow()
             }
         }
         else
         {
             potSpeed = randomPotSpeed()
-            
-            guard
-            
-                let scene:VOptionPollutedGardenScene = scene as? VOptionPollutedGardenScene
-            
-            else
-            {
-                return
-            }
-            
-            scene.addPot(model:model)
+            addPot(scene:scene)
         }
         
         self.elapsedTime = elapsedTime
@@ -60,5 +51,33 @@ class MOptionPollutedGardenPlantItemStrategyPop:MGameStrategy<
         let randomFloat:CGFloat = CGFloat(random)
         
         return randomFloat
+    }
+    
+    private func addPot(scene:ViewGameScene<MOptionPollutedGarden>)
+    {
+        guard
+            
+            let scene:VOptionPollutedGardenScene = scene as? VOptionPollutedGardenScene
+            
+        else
+        {
+            return
+        }
+        
+        scene.addPot(model:model)
+    }
+    
+    private func addPlant(scene:ViewGameScene<MOptionPollutedGarden>)
+    {
+        guard
+            
+            let scene:VOptionPollutedGardenScene = scene as? VOptionPollutedGardenScene
+            
+        else
+        {
+            return
+        }
+        
+        scene.addPlant(model:model)
     }
 }

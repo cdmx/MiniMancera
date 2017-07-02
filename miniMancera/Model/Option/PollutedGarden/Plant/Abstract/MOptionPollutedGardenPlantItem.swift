@@ -4,6 +4,7 @@ class MOptionPollutedGardenPlantItem:MGameUpdate<MOptionPollutedGarden>
 {
     let positionX:CGFloat
     weak var viewPot:VOptionPollutedGardenPot?
+    weak var viewPlant:VOptionPollutedGardenPlant?
     private(set) weak var animations:MOptionPollutedGardenPlantAnimations!
     private(set) var positionY:CGFloat
     private var strategy:MGameStrategy<MOptionPollutedGardenPlantItem, MOptionPollutedGarden>?
