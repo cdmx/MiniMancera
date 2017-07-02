@@ -11,6 +11,7 @@ class MOptionPollutedGarden:MGame
     let title:MOptionPollutedGardenTitle
     let textures:MOptionPollutedGardenTextures
     let actions:MOptionPollutedGardenActions
+    let sounds:MOptionPollutedGardenSounds
     let contact:MOptionPollutedGardenContact
     private var strategy:MGameStrategyMain<MOptionPollutedGarden>?
     
@@ -30,6 +31,7 @@ class MOptionPollutedGarden:MGame
         title = MOptionPollutedGardenTitle()
         textures = MOptionPollutedGardenTextures()
         actions = MOptionPollutedGardenActions()
+        sounds = MOptionPollutedGardenSounds()
         contact = MOptionPollutedGardenContact()
         
         
@@ -83,14 +85,6 @@ class MOptionPollutedGarden:MGame
         plant.restart()
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
     func collectedFlower()
     {
         currentScore += 1
@@ -100,6 +94,15 @@ class MOptionPollutedGarden:MGame
             score = currentScore
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func pollutedFlower()
     {

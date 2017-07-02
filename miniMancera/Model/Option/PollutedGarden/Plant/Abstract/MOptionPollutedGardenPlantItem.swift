@@ -31,6 +31,21 @@ class MOptionPollutedGardenPlantItem:MGameUpdate<MOptionPollutedGarden>
     
     //MARK: public
     
+    func collectFlower(scene:ViewGameScene<MOptionPollutedGarden>)
+    {
+        guard
+        
+            let scene:VOptionPollutedGardenScene = scene as? VOptionPollutedGardenScene
+        
+        else
+        {
+            return
+        }
+        
+        scene.controller.model.collectedFlower()
+        scene.showCollect(plant:self)
+    }
+    
     func grow()
     {
         strategy = MOptionPollutedGardenPlantItemStrategyGrow(model:self)

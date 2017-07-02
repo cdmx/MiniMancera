@@ -9,22 +9,6 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
     
     //MARK: public
     
-    func collectFlower(petunia:VOptionPollutedGardenPetunia)
-    {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionPollutedGardenScene = view.scene as? VOptionPollutedGardenScene
-            
-        else
-        {
-            return
-        }
-        
-//        model.collectedFlower()
-        scene.collectFlower(petunia:petunia)
-    }
-    
     func pollutedFlower(petunia:VOptionPollutedGardenPetunia)
     {
         guard
