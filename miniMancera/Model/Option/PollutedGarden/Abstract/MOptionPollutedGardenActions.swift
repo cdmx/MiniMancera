@@ -6,7 +6,9 @@ class MOptionPollutedGardenActions
     let actionFadeOut:SKAction
     let transitionCrossFade:SKTransition
     private(set) var actionPlayerAnimation:SKAction!
+    private(set) var actionBubbleAnimation:SKAction!
     private let kPlayerAnimationFrameTime:TimeInterval = 0.2
+    private let kBubbleAnimationFrameTime:TimeInterval = 0.15
     private let kFadeDuration:TimeInterval = 0.5
     private let kSceneTransitionDuration:TimeInterval = 1
     
@@ -30,10 +32,20 @@ class MOptionPollutedGardenActions
         actionPlayerAnimation = SKAction.repeatForever(actionAnimation)
     }
     
+    private func createBubbleAnimation(textureAnimated:MGameTextureAnimated)
+    {
+        actionBubbleAnimation = SKAction.animate(
+            with:textureAnimated.textures,
+            timePerFrame:kBubbleAnimationFrameTime,
+            resize:false,
+            restore:false)
+    }
+    
     //MARK: public
     
     func createAnimations(textures:MOptionPollutedGardenTextures)
     {
         createPlayerAnimation(textureAnimated:textures.playerAnimated)
+        createBubbleAnimation(textureAnimated:textures.bubbleAnimated)
     }
 }

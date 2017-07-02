@@ -19,6 +19,7 @@ class MOptionPollutedGardenTextures
     let bubbleMedium:MGameTexture
     let bubbleSmall:MGameTexture
     let bubbleMini:MGameTexture
+    let bubbleAnimated:MGameTextureAnimated
     
     init()
     {
@@ -67,6 +68,7 @@ class MOptionPollutedGardenTextures
         bubbleMini = MGameTexture(
             image:#imageLiteral(resourceName: "assetPollutedGardenBubbleMini"),
             zPosition:MOptionPollutedGardenZPosition.Bubble.rawValue)
+        bubbleAnimated = MOptionPollutedGardenTextures.factoryBubbleAnimated()
     }
     
     //MARK: private
@@ -76,6 +78,22 @@ class MOptionPollutedGardenTextures
         let images:[UIImage] = [
             #imageLiteral(resourceName: "assetPollutedGardenPlayer2"),
             #imageLiteral(resourceName: "assetPollutedGardenPlayer3")]
+        
+        let texture:MGameTextureAnimated = MGameTextureAnimated(
+            images:images)
+        
+        return texture
+    }
+    
+    private class func factoryBubbleAnimated() -> MGameTextureAnimated
+    {
+        let images:[UIImage] = [
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion0"),
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion1"),
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion2"),
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion3"),
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion4"),
+            #imageLiteral(resourceName: "assetPollutedGardenBubbleExplosion5")]
         
         let texture:MGameTextureAnimated = MGameTextureAnimated(
             images:images)
