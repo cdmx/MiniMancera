@@ -2,7 +2,7 @@ import SpriteKit
 
 class VOptionPollutedGardenPlant:ViewGameNode<MOptionPollutedGarden>
 {
-    private weak var model:MOptionPollutedGardenPlantItem?
+    private(set) weak var model:MOptionPollutedGardenPlantItem?
     private let kPhysicsWidth:CGFloat = 18
     private let kPhysicsHeight:CGFloat = 20
     private let kPhysicsY:CGFloat = -16
@@ -67,5 +67,12 @@ class VOptionPollutedGardenPlant:ViewGameNode<MOptionPollutedGarden>
         physicsBody.contactTestBitMask = MOptionPollutedGardenPhysicsStruct.Bubble
         physicsBody.collisionBitMask = MOptionPollutedGardenPhysicsStruct.None
         self.physicsBody = physicsBody
+    }
+    
+    //MARK: public
+    
+    func polluted()
+    {
+        texture = modelTexture?.texture
     }
 }

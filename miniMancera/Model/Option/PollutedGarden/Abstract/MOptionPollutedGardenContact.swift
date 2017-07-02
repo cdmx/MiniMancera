@@ -14,39 +14,41 @@ class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionPollutedGarden>)
     {
-        lookContacts()
+        lookContacts(scene:scene)
         queue = []
     }
     
     //MARK: private
     
-    private func lookContacts()
+    private func lookContacts(scene:ViewGameScene<MOptionPollutedGarden>)
     {
         for contact:SKPhysicsContact in queue
         {
-            contactBegin(contact:contact)
+            contactBegin(contact:contact, scene:scene)
         }
     }
     
     private func contactBegin(
-        contact:SKPhysicsContact)
+        contact:SKPhysicsContact,
+        scene:ViewGameScene<MOptionPollutedGarden>)
     {
         let bodyA:SKNode? = contact.bodyA.node
         let bodyB:SKNode? = contact.bodyB.node
         
         if let bubble:VOptionPollutedGardenBubble = bodyA as? VOptionPollutedGardenBubble
         {
-            bubbleAndBody(bubble:bubble, body:bodyB)
+            bubbleAndBody(bubble:bubble, body:bodyB, scene:scene)
         }
         else if let bubble:VOptionPollutedGardenBubble = bodyB as? VOptionPollutedGardenBubble
         {
-            bubbleAndBody(bubble:bubble, body:bodyA)
+            bubbleAndBody(bubble:bubble, body:bodyA, scene:scene)
         }
     }
     
     private func bubbleAndBody(
         bubble:VOptionPollutedGardenBubble,
-        body:SKNode?)
+        body:SKNode?,
+        scene:ViewGameScene<MOptionPollutedGarden>)
     {
         guard
         
@@ -67,7 +69,7 @@ class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
             }
             else if let plant:VOptionPollutedGardenPlant = body as? VOptionPollutedGardenPlant
             {
-                contactBubblePlant(bubble:bubble, plant:plant)
+                contactBubblePlant(modelBubble:modelBubble, plant:plant, scene:scene)
             }
             else if let _:VOptionPollutedGardenFloor = body as? VOptionPollutedGardenFloor
             {
@@ -77,11 +79,27 @@ class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
     }
     
     private func contactBubblePlant(
-        bubble:VOptionPollutedGardenBubble,
-        plant:VOptionPollutedGardenPlant)
+        modelBubble:MOptionPollutedGardenBubbleItem,
+        plant:VOptionPollutedGardenPlant,
+        scene:ViewGameScene<MOptionPollutedGarden>)
     {
-//        bubble.explode()
-//        petunia.polluted()
+        modelBubble.explode()
+        
+        guard
+            
+            let modelPlant:MOptionPollutedGardenPlantItem = plant.model
+        
+        else
+        {
+            return
+        }
+        
+        let pollutable:Bool = modelPlant.pollutable()
+        
+        if pollutable
+        {
+            scene.controller.model.poisonPlant(plantItem:modelPlant)
+        }
     }
     
     //MARK: public

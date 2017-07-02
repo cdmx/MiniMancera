@@ -63,4 +63,18 @@ class MOptionPollutedGardenPlantItem:MGameUpdate<MOptionPollutedGarden>
         
         return point
     }
+    
+    func pollutable() -> Bool
+    {
+        guard
+        
+            let _:MOptionPollutedGardenPlantItemStrategyPolluted = strategy as? MOptionPollutedGardenPlantItemStrategyPolluted
+        
+        else
+        {
+            return false
+        }
+        
+        return true
+    }
 }

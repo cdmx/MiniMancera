@@ -101,6 +101,8 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         let poisonItem:MOptionPollutedGardenPlantPoison = MOptionPollutedGardenPlantPoison(
             plantItem:plantItem)
         poison.append(poisonItem)
+        
+        plantItem.polluted()
     }
     
     func poisonFinished(poisonItem:MOptionPollutedGardenPlantPoison)

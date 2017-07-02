@@ -6,7 +6,7 @@ class MOptionPollutedGardenPlantPoisonStrategyFade:MGameStrategy<
 {
     private var lastElapsedTime:TimeInterval?
     private var alpha:CGFloat = 1
-    private let kMoveSpeed:CGFloat = 55
+    private let kMoveSpeed:CGFloat = 70
     private let kAlphaDecreaseSpeed:CGFloat = 0.6
     
     override func update(
