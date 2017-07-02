@@ -21,16 +21,16 @@ extension VOptionWhistlesVsZombiesMenu
     }
     
     func factoryWhistles()
-    {
+    {/*
         for item:MOptionWhistlesVsZombiesMenuItem in model.items
         {
-            /*
+            
             let whistle:VOptionWhistlesVsZombiesMenuWhistle = VOptionWhistlesVsZombiesMenuWhistle(
                 controller:controller,
                 modelMenu:model,
                 model:item)
             
-            addChild(whistle)*/
-        }
+            addChild(whistle)
+        }*/
     }
 }
