@@ -100,8 +100,26 @@ extension ControllerGame
         
         if let popover:UIPopoverPresentationController = alert.popoverPresentationController
         {
+            let actionResumePopOver:UIAlertAction = UIAlertAction(
+                title:
+                String.localized(key:"ControllerGame_menuResume"),
+                style:
+                UIAlertActionStyle.default)
+            { [weak self] (action:UIAlertAction) in
+                
+                self?.resume()
+            }
+            
+            alert.addAction(actionResumePopOver)
+            
+            let rect:CGRect = CGRect(
+                x:view.frame.midX,
+                y:0,
+                width:1,
+                height:1)
+            
             popover.sourceView = view
-            popover.sourceRect = CGRect.zero
+            popover.sourceRect = rect
             popover.permittedArrowDirections = UIPopoverArrowDirection.up
         }
         
