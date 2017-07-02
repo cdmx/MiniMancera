@@ -246,12 +246,8 @@
 		DABD4F161EF4635E003DF861 /* PollutedGarden.strings in Resources */ = {isa = PBXBuildFile; fileRef = DABD4F141EF4635E003DF861 /* PollutedGarden.strings */; };
 		DABD4F221EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F211EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift */; };
 		DABD4F281EF4E0C7003DF861 /* assetBackgrounds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABD4F271EF4E0C7003DF861 /* assetBackgrounds.xcassets */; };
-		DABD4F311EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F301EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift */; };
 		DABD4F351EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F341EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift */; };
-		DABD4F371EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F361EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift */; };
-		DABD4F391EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F381EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift */; };
 		DABD4F3B1EF51412003DF861 /* MOptionPollutedGardenPhysicsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F3A1EF51412003DF861 /* MOptionPollutedGardenPhysicsStruct.swift */; };
-		DABD4F3F1EF5B572003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryExplosion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD4F3E1EF5B572003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryExplosion.swift */; };
 		DAC7D3AF1F01B9B9008DC416 /* MOptionReformaCrossingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC7D3AE1F01B9B9008DC416 /* MOptionReformaCrossingActions.swift */; };
 		DAC7D3B21F01C296008DC416 /* MOptionReformaCrossingHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC7D3B11F01C296008DC416 /* MOptionReformaCrossingHud.swift */; };
 		DAC7D3B41F01C537008DC416 /* MOptionReformaCrossingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC7D3B31F01C537008DC416 /* MOptionReformaCrossingTitle.swift */; };
@@ -563,12 +559,8 @@
 		DABD4F151EF4635E003DF861 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/PollutedGarden.strings; sourceTree = "<group>"; };
 		DABD4F211EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPetuniaLife.swift; sourceTree = "<group>"; };
 		DABD4F271EF4E0C7003DF861 /* assetBackgrounds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assetBackgrounds.xcassets; sourceTree = "<group>"; };
-		DABD4F301EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleGenerator.swift; sourceTree = "<group>"; };
 		DABD4F341EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleType.swift; sourceTree = "<group>"; };
-		DABD4F361EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift; sourceTree = "<group>"; };
-		DABD4F381EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleGeneratorFactoryColours.swift; sourceTree = "<group>"; };
 		DABD4F3A1EF51412003DF861 /* MOptionPollutedGardenPhysicsStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPhysicsStruct.swift; sourceTree = "<group>"; };
-		DABD4F3E1EF5B572003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryExplosion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleGeneratorFactoryExplosion.swift; sourceTree = "<group>"; };
 		DAC7D3AE1F01B9B9008DC416 /* MOptionReformaCrossingActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingActions.swift; sourceTree = "<group>"; };
 		DAC7D3B11F01C296008DC416 /* MOptionReformaCrossingHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingHud.swift; sourceTree = "<group>"; };
 		DAC7D3B31F01C537008DC416 /* MOptionReformaCrossingTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingTitle.swift; sourceTree = "<group>"; };
@@ -1346,10 +1338,6 @@
 		DABD4F2B1EF4F778003DF861 /* Bubble */ = {
 			isa = PBXGroup;
 			children = (
-				DABD4F301EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift */,
-				DABD4F361EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift */,
-				DABD4F381EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift */,
-				DABD4F3E1EF5B572003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryExplosion.swift */,
 				DABD4F341EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift */,
 				DA25B04E1F06DBE80042462A /* MOptionPollutedGardenBubble.swift */,
 				DA25B05C1F06E4FA0042462A /* MOptionPollutedGardenBubbleFactory.swift */,
@@ -1831,7 +1819,6 @@
 				DAB631C61F057F31003C6934 /* MOptionPollutedGardenStrategyBegin.swift in Sources */,
 				DAF37BCD1F02E98F004C505D /* MOptionReformaCrossingLaneD.swift in Sources */,
 				DA25B0651F0726710042462A /* MOptionPollutedGardenPlayerStrategyWalk.swift in Sources */,
-				DABD4F311EF4FABB003DF861 /* MOptionPollutedGardenBubbleGenerator.swift in Sources */,
 				DA27A60E1EF9A1EB009378E2 /* MHomeSplashOptions.swift in Sources */,
 				DAB0618A1F05A00C00F90E85 /* MOptionPollutedGardenHud.swift in Sources */,
 				DA6928C91F097FE2001E9326 /* MOptionPollutedGardenPlantPoisonStrategyWait.swift in Sources */,
@@ -1891,7 +1878,6 @@
 				DA25B04F1F06DBE80042462A /* MOptionPollutedGardenBubble.swift in Sources */,
 				DA2DFFE81EECB16A00365F23 /* VBlur.swift in Sources */,
 				DAAF2FD41EF6FBB500589BB0 /* MStoreItem.swift in Sources */,
-				DABD4F371EF4FD3E003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryBubbles.swift in Sources */,
 				DAF37BAD1F02E938004C505D /* MOptionReformaCrossingFoeStrategyBreaks.swift in Sources */,
 				DA2DFFF01EECB16A00365F23 /* VSpinner.swift in Sources */,
 				DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */,
@@ -1925,10 +1911,8 @@
 				DAB4DACF1EFDF44500E433B9 /* MOptionWhistlesVsZombiesWhistleTextures.swift in Sources */,
 				DAAF2FC21EF6F6F700589BB0 /* VStoreCell.swift in Sources */,
 				DA56678E1EF2772A000055D8 /* MHomeOptionsReformaCrossing.swift in Sources */,
-				DABD4F391EF50193003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryColours.swift in Sources */,
 				DA717FA11F0895E000033BA4 /* VOptionPollutedGardenCollect.swift in Sources */,
 				DA91C3B31F0164D00045FAE2 /* MOptionReformaCrossingSounds.swift in Sources */,
-				DABD4F3F1EF5B572003DF861 /* MOptionPollutedGardenBubbleGeneratorFactoryExplosion.swift in Sources */,
 				DABD4F221EF49CF1003DF861 /* MOptionPollutedGardenPetuniaLife.swift in Sources */,
 				DA56676A1EF27427000055D8 /* MSession.swift in Sources */,
 				DAEBF4031F0607720083C09E /* MOptionReformaCrossingStrategyEndFailTimeOut.swift in Sources */,
