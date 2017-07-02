@@ -13,11 +13,8 @@ class MOptionPollutedGarden:MGame
     let actions:MOptionPollutedGardenActions
     let sounds:MOptionPollutedGardenSounds
     let contact:MOptionPollutedGardenContact
-    private var strategy:MGameStrategyMain<MOptionPollutedGarden>?
-    
-    
-    let petuniaLife:MOptionPollutedGardenPetuniaLife
     private(set) var currentScore:Int
+    private var strategy:MGameStrategyMain<MOptionPollutedGarden>?
     private let kSoundBackground:String = "soundReformaCrossing.caf"
     
     required init()
@@ -33,11 +30,8 @@ class MOptionPollutedGarden:MGame
         actions = MOptionPollutedGardenActions()
         sounds = MOptionPollutedGardenSounds()
         contact = MOptionPollutedGardenContact()
-        
-        
-        
-        petuniaLife = MOptionPollutedGardenPetuniaLife()
         currentScore = 0
+        
         super.init()
         actions.createAnimations(textures:textures)
         bubble.createTypes(textures:textures)
@@ -123,55 +117,4 @@ class MOptionPollutedGarden:MGame
     {
         strategy = MOptionPollutedGardenStrategyWait(model:self)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    func pollutedFlower()
-    {
-        currentScore -= 1
-    }
-    
-    func allFlowersPolluted()
-    {
-        deActivateGame()
-    }
-    
-    func revertChanges()
-    {
-        currentScore = 0
-        score = 0
-    }/*
-    
-    //MARK: option protocol
-    
-    func activateGame()
-    {
-        gameActive = true
-    }
-    
-    func sceneWithSize(controller:UIViewController, size:CGSize) -> SKScene?
-    {
-        guard
-            
-            let controller:COptionPollutedGarden = controller as? COptionPollutedGarden
-            
-        else
-        {
-            return nil
-        }
-        
-        self.size = size
-        bubbleGenerator.updateController(controller:controller)
-        let scene:VOptionPollutedGardenScene = VOptionPollutedGardenScene(
-            controller:controller)
-        
-        return scene
-    }*/
 }
