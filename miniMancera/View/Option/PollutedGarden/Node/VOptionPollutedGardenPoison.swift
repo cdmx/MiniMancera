@@ -2,14 +2,14 @@ import UIKit
 
 class VOptionPollutedGardenPoison:ViewGameNode<MOptionPollutedGarden>
 {
-    private weak var model:MOptionPollutedGardenPlantCollect?
+    private weak var model:MOptionPollutedGardenPlantPoison?
     
     init(
         controller:ControllerGame<MOptionPollutedGarden>,
-        model:MOptionPollutedGardenPlantCollect)
+        model:MOptionPollutedGardenPlantPoison)
     {
         self.model = model
-        let texture:MGameTexture = controller.model.textures.collect
+        let texture:MGameTexture = controller.model.textures.poison
         
         super.init(
             controller:controller,
@@ -25,9 +25,9 @@ class VOptionPollutedGardenPoison:ViewGameNode<MOptionPollutedGarden>
     {
         guard
             
-            let model:MOptionPollutedGardenPlantCollect = self.model
+            let model:MOptionPollutedGardenPlantPoison = self.model
             
-            else
+        else
         {
             return
         }

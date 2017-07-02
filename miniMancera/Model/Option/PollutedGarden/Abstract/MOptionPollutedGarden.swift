@@ -97,6 +97,12 @@ class MOptionPollutedGarden:MGame
         plant.collectStart(plantItem:plantItem)
     }
     
+    func poisonFlower(plantItem:MOptionPollutedGardenPlantItem)
+    {
+        currentScore -= 1
+        plant.poisonStart(plantItem:plantItem)
+    }
+    
     
     
     

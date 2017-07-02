@@ -123,6 +123,19 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         addChild(view)
     }
     
+    func addPoison(model:MOptionPollutedGardenPlantPoison)
+    {
+        let soundFail:SKAction = controller.model.sounds.soundFail
+        controller.playSound(actionSound:soundFail)
+        
+        let view:VOptionPollutedGardenPoison = VOptionPollutedGardenPoison(
+            controller:controller,
+            model:model)
+        model.view = view
+        
+        addChild(view)
+    }
+    
     
     
     

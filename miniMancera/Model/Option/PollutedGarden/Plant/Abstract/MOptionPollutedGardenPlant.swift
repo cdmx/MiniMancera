@@ -4,6 +4,7 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
 {
     private var items:[MOptionPollutedGardenPlantItem]
     private var collect:[MOptionPollutedGardenPlantCollect]
+    private var poison:[MOptionPollutedGardenPlantPoison]
     private let animations:MOptionPollutedGardenPlantAnimations
     private let position:MOptionPollutedGardenPlantPosition
     
@@ -13,6 +14,7 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         animations = MOptionPollutedGardenPlantAnimations()
         items = []
         collect = []
+        poison = []
         super.init()
     }
     
@@ -28,6 +30,13 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         }
         
         for item:MOptionPollutedGardenPlantCollect in collect
+        {
+            item.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
+        }
+        
+        for item:MOptionPollutedGardenPlantPoison in poison
         {
             item.update(
                 elapsedTime:elapsedTime,
@@ -61,6 +70,8 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         }
         
         self.items = items
+        poison = []
+        collect = []
     }
     
     func collectStart(plantItem:MOptionPollutedGardenPlantItem)
@@ -83,5 +94,27 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         }
         
         collect = items
+    }
+    
+    func poisonStart(plantItem:MOptionPollutedGardenPlantItem)
+    {
+        let poisonItem:MOptionPollutedGardenPlantPoison = MOptionPollutedGardenPlantPoison(
+            plantItem:plantItem)
+        poison.append(poisonItem)
+    }
+    
+    func poisonFinished(poisonItem:MOptionPollutedGardenPlantPoison)
+    {
+        var items:[MOptionPollutedGardenPlantPoison] = []
+        
+        for item:MOptionPollutedGardenPlantPoison in poison
+        {
+            if item !== poisonItem
+            {
+                items.append(item)
+            }
+        }
+        
+        poison = items
     }
 }
