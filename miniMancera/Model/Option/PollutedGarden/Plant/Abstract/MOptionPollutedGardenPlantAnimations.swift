@@ -27,9 +27,11 @@ class MOptionPollutedGardenPlantAnimations
         return animations
     }
     
-    private class func factoryAnimationPoisoned(actions:MOptionPollutedGardenActions) -> SKAction
+    private class func factoryAnimationPoisoned(
+        actions:MOptionPollutedGardenActions,
+        textures:MOptionPollutedGardenTextures) -> SKAction
     {
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetPollutedGardenPetunia12"))
+        let texture:SKTexture = textures.plantPoisoned.texture
         let actionFadeOut:SKAction = actions.actionFadeOut
         let actionFadeIn:SKAction = actions.actionFadeIn
         
@@ -83,11 +85,14 @@ class MOptionPollutedGardenPlantAnimations
     
     //MARK: public
     
-    func factoryAnimations(actions:MOptionPollutedGardenActions)
+    func factoryAnimations(
+        actions:MOptionPollutedGardenActions,
+        textures:MOptionPollutedGardenTextures)
     {
         animationsPlantGrow = MOptionPollutedGardenPlantAnimations.factoryAnimations(
             actions:actions)
         animationPlantPoisoned = MOptionPollutedGardenPlantAnimations.factoryAnimationPoisoned(
-            actions:actions)
+            actions:actions,
+            textures:textures)
     }
 }

@@ -7,6 +7,7 @@ class MOptionPollutedGardenTextures
     let pot:MGameTexture
     let hud:MGameTexture
     let menu:MGameTexture
+    let plantPoisoned:MGameTexture
     
     let playerStand:MGameTexture
     let playerDefeated:MGameTexture
@@ -34,6 +35,9 @@ class MOptionPollutedGardenTextures
         menu = MGameTexture(
             image:#imageLiteral(resourceName: "assetPollutedGardenMenu"),
             zPosition:MOptionPollutedGardenZPosition.Menu.rawValue)
+        plantPoisoned = MGameTexture(
+            image:#imageLiteral(resourceName: "assetPollutedGardenPetunia12"),
+            zPosition:MOptionPollutedGardenZPosition.Plant.rawValue)
         
         playerStand = MGameTexture(
             image:#imageLiteral(resourceName: "assetPollutedGardenPlayer1"),

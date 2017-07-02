@@ -1,4 +1,4 @@
-import Foundation
+import SpriteKit
 
 class MOptionPollutedGardenPlantItemStrategyGrow:MGameStrategy<
     MOptionPollutedGardenPlantItem,
@@ -36,7 +36,8 @@ class MOptionPollutedGardenPlantItemStrategyGrow:MGameStrategy<
                 }
                 else
                 {
-                    
+                    let nextLevelAnimation:SKAction = model.animations.animationsPlantGrow[level]
+                    model.viewPlant?.run(nextLevelAnimation)
                 }
             }
         }
