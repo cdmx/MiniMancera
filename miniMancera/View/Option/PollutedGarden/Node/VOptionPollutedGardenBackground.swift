@@ -1,4 +1,4 @@
-import SpriteKit
+import UIKit
 
 class VOptionPollutedGardenBackground:ViewGameNode<MOptionPollutedGarden>
 {

@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 class VOptionPollutedGardenPot:ViewGameNode<MOptionPollutedGarden>
 {
