@@ -37,9 +37,8 @@ extension ControllerParent:GKGameCenterControllerDelegate
     
     func notifiedEnterForeground(sender notification:Notification)
     {
-        let warning:String = "remove comments"
-//        let localPlayer:GKLocalPlayer = GKLocalPlayer.localPlayer()
-//        localPlayer.authenticateHandler = gameControllerAuthHandler(controller:error:)
+        let localPlayer:GKLocalPlayer = GKLocalPlayer.localPlayer()
+        localPlayer.authenticateHandler = gameControllerAuthHandler(controller:error:)
     }
     
     //MARK: public

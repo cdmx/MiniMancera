@@ -2,135 +2,65 @@ import SpriteKit
 
 class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
 {
-    override func pause()
+    override func didBegin(_ contact:SKPhysicsContact)
     {
-        super.pause()
-        
-        stopTimer()
-    }
-    
-    override func notifiedEnterBackground(sender notification:Notification)
-    {
-        stopTimer()
+        model.contact.addContact(contact:contact)
     }
     
     //MARK: private
     
-    private func stopTimer()
+    private func newGameScene()
     {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
-        scene.lastUpdateTime = nil
+        let newScene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
+            controller:self)
+        presentScene(newScene:newScene)
     }
     
     //MARK: public
     
-    func playerStop()
+    func nextLevel()
     {
-        guard
-        
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-        
-        else
-        {
-            return
-        }
-        
-        scene.player.stopWalking()
+        restartTimer()
+        newGameScene()
     }
     
-    func timeOut()
+    func presentScene(newScene:SKScene)
     {
+        let transition:SKTransition = model.actions.transitionCrossFade
+        
         guard
             
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
+            let view:SKView = self.view as? SKView
             
         else
         {
             return
         }
         
-        model.stopAll()
-        scene.timeOut()
-        
-        postScore()
+        view.presentScene(newScene, transition:transition)
     }
     
-    func hitAndRun()
+    func showGameOver()
     {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
-        model.hitAndRun()
-        scene.hitAndRun()
-        
+        model.strategyWait()
         postScore()
     }
     
     func game1up()
     {
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingSceneOver = view.scene as? VOptionReformaCrossingSceneOver
-            
-        else
-        {
-            return
-        }
+        let sound1up:SKAction = model.sounds.sound1up
+        playSound(actionSound:sound1up)
         
         model.revertChanges()
-        scene.game1up()
+        restartTimer()
+        newGameScene()
     }
     
-    func playerSuccess()
+    func gamePlayNoMore()
     {
-        model.playerSuccess()
+        let soundFail:SKAction = model.sounds.soundFail
+        playSound(actionSound:soundFail)
         
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
-        scene.gameSuccess()
-    }
-    
-    func collectedLane(lane:MOptionReformaCrossingLane)
-    {
-        model.collectedLane()
-        
-        guard
-            
-            let view:SKView = self.view as? SKView,
-            let scene:VOptionReformaCrossingScene = view.scene as? VOptionReformaCrossingScene
-            
-        else
-        {
-            return
-        }
-        
-        scene.createCoinOn(lane:lane)
+        exitGame()
     }
 }

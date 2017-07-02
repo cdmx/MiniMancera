@@ -11,13 +11,13 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
     init(controller:COptionWhistlesVsZombies)
     {
         self.controller = controller
-        model = controller.model.menu
+//        model = controller.model.menu
         let backgroundColour:UIColor = UIColor(white:0, alpha:kAlpha)
-        let size:CGSize = controller.model.size
+//        let size:CGSize = controller.model.size
         animationAppear = VOptionWhistlesVsZombiesMenu.factoryAnimationAppear()
         animationDisappear = VOptionWhistlesVsZombiesMenu.factoryAnimationDisappear()
         
-        super.init(texture:nil, color:backgroundColour, size:size)
+        super.init(texture:nil, color:backgroundColour, size:MGame.sceneSize)
         alpha = 0
         position = model.position
         zPosition = MOptionWhistlesVsZombiesZPosition.Menu.rawValue

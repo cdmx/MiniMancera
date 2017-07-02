@@ -1,6 +1,6 @@
 import UIKit
 
-class View:UIView
+class View:UIView, ViewProtocol
 {
     private(set) weak var controller:UIViewController!
     weak var layoutLeft:NSLayoutConstraint!

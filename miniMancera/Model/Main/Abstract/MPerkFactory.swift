@@ -11,7 +11,8 @@ class MPerkFactory
         let perks:[MPerkProtocol] = [
             perkReformaCrossing,
             perkPollutedGarden,
-            perkWhistlesVsZombies]
+//            perkWhistlesVsZombies
+        ]
         
         return perks
     }

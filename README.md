@@ -2,6 +2,8 @@
 
 ![iOS](https://img.shields.io/badge/iOS-9.0%2B-orange.svg) 
 ![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)
+![Devices](https://img.shields.io/badge/Devices-Universal-orange.svg)
+![Arch](https://img.shields.io/badge/Arc-CMV-orange.svg)
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&style=plastic)](https://twitter.com/MiniManceraApp)
 
@@ -14,6 +16,7 @@ MiniMancera Adventures on CDMX
 
 ## Features
 
+
 ■ SpriteKit
 
 ■ GameKit
@@ -21,5 +24,7 @@ MiniMancera Adventures on CDMX
 ■ StoreKit
 
 ■ CoreGraphics animations
+
+■ CMV (Controller-Manager-View)
 
 ■ English and Spanish localization

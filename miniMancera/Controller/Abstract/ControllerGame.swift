@@ -1,14 +1,29 @@
 import SpriteKit
 
-class ControllerGame<T:MGameProtocol>:UIViewController
+class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContactDelegate
 {
     let model:T
+    let playSounds:Bool
     private(set) weak var dataOption:DOption?
+    private(set) var lastUpdateTime:TimeInterval?
+    private(set) var elapsedTime:TimeInterval
     
-    init(dataOption:DOption)
+    required init(dataOption:DOption)
     {
         self.dataOption = dataOption
         model = T()
+        
+        if let playSounds:Bool = MSession.sharedInstance.settings?.sounds
+        {
+            self.playSounds = playSounds
+        }
+        else
+        {
+            playSounds = true
+        }
+        
+        elapsedTime = 0
+        
         super.init(nibName:nil, bundle:nil)
     }
     
@@ -34,7 +49,7 @@ class ControllerGame<T:MGameProtocol>:UIViewController
     
     override func loadView()
     {
-        let view:SKView = SKView(frame:UIScreen.main.bounds)
+        let view:ViewGame = ViewGame(controller:self)
         self.view = view
     }
     
@@ -45,24 +60,6 @@ class ControllerGame<T:MGameProtocol>:UIViewController
         extendedLayoutIncludesOpaqueBars = false
         automaticallyAdjustsScrollViewInsets = false
         
-        let size:CGSize = view.bounds.size
-        
-        guard
-            
-            let scene:SKScene = model.sceneWithSize(controller:self, size:size),
-            let view:SKView = self.view as? SKView
-        
-        else
-        {
-            return
-        }
-        
-        scene.scaleMode = SKSceneScaleMode.resizeFill
-        view.showsFPS = false
-        view.showsNodeCount = false
-        view.ignoresSiblingOrder = true
-        view.presentScene(scene)
-        
         NotificationCenter.default.addObserver(
             self,
             selector:#selector(notifiedEnterBackground(sender:)),
@@ -70,64 +67,41 @@ class ControllerGame<T:MGameProtocol>:UIViewController
             object:nil)
     }
     
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        guard
+        
+            let parent:ControllerParent = self.parent as? ControllerParent,
+            let view:ViewParent = parent.view as? ViewParent
+        
+        else
+        {
+            return
+        }
+        
+        view.panRecognizer.isEnabled = false
+    }
+    
     //MARK: notified
     
     func notifiedEnterBackground(sender notification:Notification)
     {
-    }
-    
-    //MARK: private
-    
-    private func asyncShowMenu()
-    {
-        let alert:UIAlertController = UIAlertController(
-            title:nil,
-            message:nil,
-            preferredStyle:UIAlertControllerStyle.actionSheet)
-        
-        let actionResume:UIAlertAction = UIAlertAction(
-            title:
-            String.localized(key:"ControllerGame_menuResume"),
-            style:
-            UIAlertActionStyle.cancel)
-        { [weak self] (action:UIAlertAction) in
-            
-            self?.resume()
-        }
-        
-        let actionExit:UIAlertAction = UIAlertAction(
-            title:
-            String.localized(key:"ControllerGame_menuExit"),
-            style:
-            UIAlertActionStyle.destructive)
-        { [weak self] (action:UIAlertAction) in
-            
-            self?.exitGame()
-        }
-        
-        alert.addAction(actionResume)
-        alert.addAction(actionExit)
-        
-        if let popover:UIPopoverPresentationController = alert.popoverPresentationController
-        {
-            popover.sourceView = view
-            popover.sourceRect = CGRect.zero
-            popover.permittedArrowDirections = UIPopoverArrowDirection.up
-        }
-        
-        present(alert, animated:true, completion:nil)
+        stopTimer()
     }
     
     //MARK: public
     
-    func postScore()
+    func didMove()
     {
-        let gameScore:Int = model.score
-        postScoreWithScore(score:gameScore)
+        model.didMove()
     }
     
-    func postScoreWithScore(score:Int)
+    func postScore()
     {
+        let score:Int = model.score
+        
         guard
             
             let dataOption:DOption = self.dataOption
@@ -152,58 +126,49 @@ class ControllerGame<T:MGameProtocol>:UIViewController
         parent.gameScore(score:score, gameId:gameId)
     }
     
-    func pause()
+    func stopTimer()
     {
-        guard
-        
-            let view:SKView = self.view as? SKView
-        
-        else
-        {
-            return
-        }
-        
-        view.isPaused = true
+        lastUpdateTime = nil
     }
     
-    func resume()
+    func restartTimer()
     {
-        guard
-            
-            let view:SKView = self.view as? SKView
-            
-        else
-        {
-            return
-        }
-        
-        view.isPaused = false
+        elapsedTime = 0
+        lastUpdateTime = nil
     }
     
-    func showMenu()
+    //MARK: scene delegate
+    
+    func update(_ currentTime:TimeInterval, for scene:SKScene)
     {
-        pause()
-        
-        DispatchQueue.main.async
-        { [weak self] in
+        if let lastUpdateTime:TimeInterval = self.lastUpdateTime
+        {
+            let deltaTime:TimeInterval = currentTime - lastUpdateTime
+            elapsedTime += deltaTime
+            
+            guard
                 
-            self?.asyncShowMenu()
+                let strategy:MGameStrategyMain<T> = model.gameStrategy(modelType:model),
+                let scene:ViewGameScene<T> = scene as? ViewGameScene<T>
+            
+            else
+            {
+                return
+            }
+            
+            strategy.update(elapsedTime:elapsedTime, scene:scene)
         }
+        
+        lastUpdateTime = currentTime
     }
     
-    func exitGame()
+    //MARK: contact delegate
+    
+    func didBegin(_ contact:SKPhysicsContact)
     {
-        postScore()
-        
-        guard
-            
-            let parent:UIViewController = UIApplication.shared.keyWindow?.rootViewController
-        
-        else
-        {
-            return
-        }
-        
-        parent.dismiss(animated:true, completion:nil)
+    }
+    
+    func didEnd(_ contact:SKPhysicsContact)
+    {
     }
 }

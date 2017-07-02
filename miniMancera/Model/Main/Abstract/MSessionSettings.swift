@@ -133,8 +133,7 @@ extension MSession
             
             option.gameId = perk.gameId
             option.optionsClass = optionsClass
-            
-            self.settings?.addToOptions(option)
+            option.settings = self.settings
             
             dispatchGroup.leave()
         }
@@ -162,8 +161,7 @@ extension MSession
             option.gameId = perk.gameId
             option.optionsClass = optionsClass
             option.purchaseId = perk.purchaseId
-            
-            self.settings?.addToOptions(option)
+            option.settings = self.settings
             
             dispatchGroup.leave()
         }

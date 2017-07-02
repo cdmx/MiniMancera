@@ -24,8 +24,8 @@ extension ControllerParent
             
             let view:ViewParent = self.view as? ViewParent,
             let currentController:UIViewController = childViewControllers.last,
-            let newView:View = controller.view as? View,
-            let currentView:View = currentController.view as? View
+            let newView:ViewProtocol = controller.view as? ViewProtocol,
+            let currentView:ViewProtocol = currentController.view as? ViewProtocol
             
         else
         {
@@ -63,7 +63,7 @@ extension ControllerParent
         guard
             
             let view:ViewParent = self.view as? ViewParent,
-            let newView:View = controller.view as? View
+            let newView:ViewProtocol = controller.view as? ViewProtocol
             
         else
         {
@@ -84,7 +84,7 @@ extension ControllerParent
             
             let view:ViewParent = self.view as? ViewParent,
             let currentController:UIViewController = childViewControllers.last,
-            let newView:View = controller.view as? View
+            let newView:ViewProtocol = controller.view as? ViewProtocol
             
         else
         {
@@ -119,7 +119,7 @@ extension ControllerParent
             
             let view:ViewParent = self.view as? ViewParent,
             let currentController:UIViewController = childViewControllers.last,
-            let newView:View = controller.view as? View
+            let newView:ViewProtocol = controller.view as? ViewProtocol
             
         else
         {
@@ -147,18 +147,8 @@ extension ControllerParent
             controllers -= 1
             
             let controller:UIViewController = childViewControllers[controllers]
-            
-            guard
-                
-                let view:View = controller.view as? View
-                
-            else
-            {
-                continue
-            }
-            
             controller.beginAppearanceTransition(false, animated:false)
-            view.removeFromSuperview()
+            controller.view.removeFromSuperview()
             controller.endAppearanceTransition()
             controller.removeFromParentViewController()
         }
@@ -173,18 +163,8 @@ extension ControllerParent
             controllers -= 1
             
             let controller:UIViewController = childViewControllers[controllers]
-            
-            guard
-                
-                let view:View = controller.view as? View
-                
-            else
-            {
-                continue
-            }
-            
             controller.beginAppearanceTransition(false, animated:false)
-            view.removeFromSuperview()
+            controller.view.removeFromSuperview()
             controller.endAppearanceTransition()
             controller.removeFromParentViewController()
         }
@@ -209,7 +189,7 @@ extension ControllerParent
             guard
                 
                 let view:ViewParent = self.view as? ViewParent,
-                let currentView:View = currentController.view as? View
+                let currentView:ViewProtocol = currentController.view as? ViewProtocol
                 
             else
             {
@@ -253,7 +233,7 @@ extension ControllerParent
             guard
                 
                 let view:ViewParent = self.view as? ViewParent,
-                let removeView:View = removeController.view as? View
+                let removeView:ViewProtocol = removeController.view as? ViewProtocol
                 
             else
             {
@@ -261,7 +241,7 @@ extension ControllerParent
             }
             
             removeView.pushBackground?.removeFromSuperview()
-            removeView.removeFromSuperview()
+            removeController.view.removeFromSuperview()
             removeController.removeFromParentViewController()
             
             if childViewControllers.count < 2
@@ -276,8 +256,7 @@ extension ControllerParent
         guard
             
             let view:ViewParent = self.view as? ViewParent,
-            let currentController:UIViewController = childViewControllers.last,
-            let currentView:View = currentController.view as? View
+            let currentController:UIViewController = childViewControllers.last
             
         else
         {
@@ -299,7 +278,7 @@ extension ControllerParent
         previousController.beginAppearanceTransition(true, animated:true)
         
         view.dismissAnimateOver(
-            currentView:currentView)
+            currentView:currentController.view)
         {
             currentController.endAppearanceTransition()
             previousController.endAppearanceTransition()

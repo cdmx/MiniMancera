@@ -1,13 +1,13 @@
 import SpriteKit
 
-class VOptionWhistlesVsZombiesScene:ViewGame<MOptionWhistlesVsZombies, COptionWhistlesVsZombies>
+class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
 {
     private(set) weak var menu:VOptionWhistlesVsZombiesMenu!
     
-    override init(controller:COptionWhistlesVsZombies)
+    required init(controller:ControllerGame<MOptionWhistlesVsZombies>)
     {
         super.init(controller:controller)
-        
+        /*
         let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
             controller:controller)
         
@@ -17,8 +17,8 @@ class VOptionWhistlesVsZombiesScene:ViewGame<MOptionWhistlesVsZombies, COptionWh
         
         addChild(background)
         addChild(menu)
-        
-        addBase()
+ 
+        addBase()*/
     }
     
     required init?(coder:NSCoder)
@@ -27,7 +27,7 @@ class VOptionWhistlesVsZombiesScene:ViewGame<MOptionWhistlesVsZombies, COptionWh
     }
     
     //MARK: private
-    
+    /*
     private func addBase()
     {
         let items:[MOptionWhistlesVsZombiesBaseItem] = controller.model.base.items
@@ -40,5 +40,5 @@ class VOptionWhistlesVsZombiesScene:ViewGame<MOptionWhistlesVsZombies, COptionWh
             
             addChild(viewItem)
         }
-    }
+    }*/
 }
