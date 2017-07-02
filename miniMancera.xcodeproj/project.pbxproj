@@ -139,6 +139,7 @@
 		DA717F9B1F08943000033BA4 /* MOptionPollutedGardenPlantItemStrategyGrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA717F971F08943000033BA4 /* MOptionPollutedGardenPlantItemStrategyGrow.swift */; };
 		DA717F9C1F08943000033BA4 /* MOptionPollutedGardenPlantItemStrategyPolluted.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA717F981F08943000033BA4 /* MOptionPollutedGardenPlantItemStrategyPolluted.swift */; };
 		DA717F9D1F08943000033BA4 /* MOptionPollutedGardenPlantItemStrategyPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA717F991F08943000033BA4 /* MOptionPollutedGardenPlantItemStrategyPop.swift */; };
+		DA717F9F1F08945C00033BA4 /* MOptionPollutedGardenPlantCollect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA717F9E1F08945C00033BA4 /* MOptionPollutedGardenPlantCollect.swift */; };
 		DA779A011EF875FD00362A44 /* MHomeSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A001EF875FD00362A44 /* MHomeSplash.swift */; };
 		DA779A031EF876D500362A44 /* MHomeSplashProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A021EF876D500362A44 /* MHomeSplashProtocol.swift */; };
 		DA779A051EF884E900362A44 /* MHomeSplashDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */; };
@@ -448,6 +449,7 @@
 		DA717F971F08943000033BA4 /* MOptionPollutedGardenPlantItemStrategyGrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPlantItemStrategyGrow.swift; sourceTree = "<group>"; };
 		DA717F981F08943000033BA4 /* MOptionPollutedGardenPlantItemStrategyPolluted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPlantItemStrategyPolluted.swift; sourceTree = "<group>"; };
 		DA717F991F08943000033BA4 /* MOptionPollutedGardenPlantItemStrategyPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPlantItemStrategyPop.swift; sourceTree = "<group>"; };
+		DA717F9E1F08945C00033BA4 /* MOptionPollutedGardenPlantCollect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPlantCollect.swift; sourceTree = "<group>"; };
 		DA779A001EF875FD00362A44 /* MHomeSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplash.swift; sourceTree = "<group>"; };
 		DA779A021EF876D500362A44 /* MHomeSplashProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashProtocol.swift; sourceTree = "<group>"; };
 		DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashDescr.swift; sourceTree = "<group>"; };
@@ -1274,6 +1276,7 @@
 				DA717F8E1F08848300033BA4 /* MOptionPollutedGardenPlantAnimations.swift */,
 				DAB631E01F05972F003C6934 /* MOptionPollutedGardenPlantItem.swift */,
 				DAB631E11F05972F003C6934 /* MOptionPollutedGardenPlantPosition.swift */,
+				DA717F9E1F08945C00033BA4 /* MOptionPollutedGardenPlantCollect.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1691,6 +1694,7 @@
 				DA2DFFDD1EECB16A00365F23 /* ExtensionNSManagedObject.swift in Sources */,
 				DAF14F591F05B3190091EB63 /* MOptionPollutedGardenPlayerStrategyWait.swift in Sources */,
 				DABD4F351EF4FB3D003DF861 /* MOptionPollutedGardenBubbleType.swift in Sources */,
+				DA717F9F1F08945C00033BA4 /* MOptionPollutedGardenPlantCollect.swift in Sources */,
 				DAAF2FC81EF6F6F700589BB0 /* VStoreHeader.swift in Sources */,
 				DAAF2F8E1EF6EC9A00589BB0 /* MSettingsReview.swift in Sources */,
 				DA717F931F088B0800033BA4 /* VOptionPollutedGardenPlant.swift in Sources */,
