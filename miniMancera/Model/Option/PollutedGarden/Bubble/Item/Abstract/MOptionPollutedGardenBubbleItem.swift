@@ -13,6 +13,7 @@ class MOptionPollutedGardenBubbleItem:MGameUpdate<MOptionPollutedGarden>
     let velocityX:CGFloat
     let velocityXExplosion:CGFloat
     private(set) weak var texture:MGameTexture!
+    private var strategy:MGameStrategy<MOptionPollutedGardenBubbleItem, MOptionPollutedGarden>?
     private static let kMaxVelocity:UInt32 = 100
     
     private class func randomVelocity() -> CGFloat
@@ -36,15 +37,39 @@ class MOptionPollutedGardenBubbleItem:MGameUpdate<MOptionPollutedGarden>
         velocityXExplosion = type.velocityXExplosion
         velocityX = type.velocityX
         velocityY = MOptionPollutedGardenBubbleItem.randomVelocity()
-        
         self.position = position
         
         super.init()
+        strategy = MOptionPollutedGardenBubbleItemStrategyAlive(model:self)
     }
     
     override func update(
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionPollutedGarden>)
     {
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
+    }
+    
+    //MARK: public
+    
+    func explode()
+    {
+        strategy = MOptionPollutedGardenBubbleItemStrategyExploded(model:self)
+    }
+    
+    func alive() -> Bool
+    {
+        guard
+        
+            let _:MOptionPollutedGardenBubbleItemStrategyAlive = strategy as? MOptionPollutedGardenBubbleItemStrategyAlive
+        
+        else
+        {
+            return false
+        }
+        
+        return true
     }
 }
