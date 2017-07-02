@@ -7,8 +7,8 @@ class MOptionPollutedGardenPlantItemStrategyPop:MGameStrategy<
     private var potSpeed:CGFloat?
     private var elapsedTime:TimeInterval
     private let kPotExpectedPositionY:CGFloat = 66
-    private let kMaxSpeed:UInt32 = 30
-    private let kMinSpeed:UInt32 = 4
+    private let kMaxSpeed:UInt32 = 35
+    private let kMinSpeed:UInt32 = 3
     
     override init(model:MOptionPollutedGardenPlantItem)
     {

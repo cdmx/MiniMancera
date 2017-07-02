@@ -27,23 +27,30 @@ class MOptionPollutedGardenPlantItemStrategyGrow:MGameStrategy<
             
             if deltaTime > kDeltaTime
             {
-                self.lastElapsedTime = elapsedTime
-                level += 1
-                
-                if level >= maxLevel
-                {
-                    model.collect()
-                }
-                else
-                {
-                    let nextLevelAnimation:SKAction = model.animations.animationsPlantGrow[level]
-                    model.viewPlant?.run(nextLevelAnimation)
-                }
+                levelUp(elapsedTime:elapsedTime)
             }
         }
         else
         {
-            lastElapsedTime = elapsedTime
+            levelUp(elapsedTime:elapsedTime)
+        }
+    }
+    
+    //MARK: private
+    
+    private func levelUp(elapsedTime:TimeInterval)
+    {
+        lastElapsedTime = elapsedTime
+        level += 1
+        
+        if level >= maxLevel
+        {
+            model.collect()
+        }
+        else
+        {
+            let nextLevelAnimation:SKAction = model.animations.animationsPlantGrow[level]
+            model.viewPlant?.run(nextLevelAnimation)
         }
     }
 }
