@@ -39,9 +39,7 @@ class MOptionPollutedGarden:MGame
         super.init()
         actions.createAnimations(textures:textures)
         bubble.createTypes(textures:textures)
-        plant.factoryAnimations(
-            textures:textures,
-            actions:actions)
+        plant.factoryAnimations(actions:actions)
     }
     
     override var startSceneType:SKScene.Type?

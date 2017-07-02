@@ -28,13 +28,9 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
     
     //MARK: public
     
-    func factoryAnimations(
-        textures:MOptionPollutedGardenTextures,
-        actions:MOptionPollutedGardenActions)
+    func factoryAnimations(actions:MOptionPollutedGardenActions)
     {
-        animations.factoryAnimations(
-            textures:textures,
-            actions:actions)
+        animations.factoryAnimations(actions:actions)
     }
     
     func restart()
