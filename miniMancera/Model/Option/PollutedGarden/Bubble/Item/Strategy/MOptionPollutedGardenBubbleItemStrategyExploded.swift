@@ -17,6 +17,7 @@ class MOptionPollutedGardenBubbleItemStrategyExploded:MGameStrategy<
             
             if deltaTime > kDuration
             {
+                model.view?.explodeEnded()
                 scene.controller.model.bubble.bubbleExplodeFinished(
                     bubbleItem:model)
             }
@@ -25,7 +26,7 @@ class MOptionPollutedGardenBubbleItemStrategyExploded:MGameStrategy<
         {
             startingTime = elapsedTime
             let explodeAnimation:SKAction = scene.controller.model.actions.actionBubbleAnimation
-            model.view?.run(explodeAnimation)
+            model.view?.explodeStart(animation:explodeAnimation)
             
             guard
             

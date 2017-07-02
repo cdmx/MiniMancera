@@ -69,87 +69,28 @@ class VOptionPollutedGardenBubble:ViewGameNode<MOptionPollutedGarden>
         self.physicsBody = physicsBody
     }
     
+    //MARK: public
     
-    /*
-    private(set) var alive:Bool
-    private weak var bubbleType:MOptionPollutedGardenBubbleType!
-    private let velocityExplosion:CGVector
-    private let kExplosionVelocityY:CGFloat = 50
-    private let kMaxVelocity:UInt32 = 100
-
-
-
-
-    override init(controller:ControllerGame<MOptionPollutedGarden>)
+    func explodeStart(animation:SKAction)
     {
+        guard
+            
+            let model:MOptionPollutedGardenBubbleItem = self.model
         
+        else
+        {
+            return
+        }
+        
+        physicsBody?.velocity = CGVector(
+            dx:model.velocityXExplosion,
+            dy:model.velocityY)
+        run(animation)
     }
     
-    init(
-        controller:COptionPollutedGarden,
-        bubbleType:MOptionPollutedGardenBubbleType,
-        colour:UIColor,
-        position:CGPoint)
-    {
-        alive = true
-        velocityExplosion = CGVector(
-            dx:bubbleType.velocityXExplosion,
-            dy:kExplosionVelocityY)
-        
-        super.init(
-            texture:bubbleType.texture,
-            color:colour,
-            size:bubbleType.size)
-        xScale = bubbleType.orientation.rawValue
-        colorBlendFactor = 1
-        self.position = position
-        self.bubbleType = bubbleType
-        self.controller = controller
-        
-        startPhysics()
-    }
-    
-    required init?(coder:NSCoder)
-    {
-        return nil
-    }
-    
-    //MARK: private
-    
-    private func leaveGarden()
+    func explodeEnded()
     {
         removeAllActions()
         removeFromParent()
     }
-    
-    private func randomVelocity() -> CGFloat
-    {
-        let random:UInt32 = arc4random_uniform(kMaxVelocity)
-        let vectorVelocity:CGFloat = -CGFloat(random)
-        
-        return vectorVelocity
-    }
-    
-    
-    
-    private func animateAndLeave()
-    {/*
-        let actionExplosion:SKAction = controller.model.bubbleGenerator.explodeAnimation
-        let actionLeave:SKAction = SKAction.run(leaveGarden)
-        let actions:[SKAction] = [
-            actionExplosion,
-            actionLeave]
-        let actionsSequence:SKAction = SKAction.sequence(actions)
-        
-        run(actionsSequence)*/
-    }
-    
-    //MARK: public
-    
-    func explode()
-    {
-        alive = false
-        physicsBody?.velocity = velocityExplosion
-        animateAndLeave()
-    }*/
 }

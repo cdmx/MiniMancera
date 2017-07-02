@@ -9,7 +9,8 @@ class MOptionPollutedGardenStrategyBegin:MGameStrategyMain<MOptionPollutedGarden
         let updateItems:[MGameUpdate<MOptionPollutedGarden>] = [
             model.plant,
             model.bubble,
-            model.hud]
+            model.hud,
+            model.contact]
         
         super.init(model:model, updateItems:updateItems)
     }
