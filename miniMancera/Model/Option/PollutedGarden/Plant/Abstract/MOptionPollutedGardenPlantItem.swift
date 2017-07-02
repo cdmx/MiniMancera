@@ -35,6 +35,11 @@ class MOptionPollutedGardenPlantItem:MGameUpdate<MOptionPollutedGarden>
         strategy = MOptionPollutedGardenPlantItemStrategyGrow(model:self)
     }
     
+    func collect()
+    {
+        strategy = MOptionPollutedGardenPlantItemStrategyCollect(model:self)
+    }
+    
     func polluted()
     {
         strategy = MOptionPollutedGardenPlantItemStrategyPolluted(model:self)
