@@ -4,6 +4,7 @@ class MOptionPollutedGardenTextures
 {
     let background:MGameTexture
     let floor:MGameTexture
+    let pot:MGameTexture
     let hud:MGameTexture
     let menu:MGameTexture
     
@@ -24,6 +25,9 @@ class MOptionPollutedGardenTextures
         floor = MGameTexture(
             image:#imageLiteral(resourceName: "assetPollutedGardenFloor"),
             zPosition:MOptionPollutedGardenZPosition.Floor.rawValue)
+        pot = MGameTexture(
+            image:#imageLiteral(resourceName: "assetPollutedGardenFlowerPot"),
+            zPosition:MOptionPollutedGardenZPosition.Pot.rawValue)
         hud = MGameTexture(
             image:#imageLiteral(resourceName: "assetPollutedGardenHud"),
             zPosition:MOptionPollutedGardenZPosition.Hud.rawValue)

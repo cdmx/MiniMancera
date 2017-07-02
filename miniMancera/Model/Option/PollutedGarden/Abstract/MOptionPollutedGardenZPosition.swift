@@ -3,6 +3,8 @@ import UIKit
 enum MOptionPollutedGardenZPosition:CGFloat
 {
     case Background
+    case Plant
+    case Pot
     case Floor
     case Player
     case Bubble
