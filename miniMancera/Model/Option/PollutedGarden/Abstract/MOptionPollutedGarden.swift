@@ -93,6 +93,8 @@ class MOptionPollutedGarden:MGame
         {
             score = currentScore
         }
+        
+        plant.collectStart(plantItem:plantItem)
     }
     
     
