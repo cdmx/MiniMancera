@@ -115,10 +115,10 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         let soundCoin:SKAction = controller.model.sounds.soundCoin
         controller.playSound(actionSound:soundCoin)
         
-        let view:VOptionReformaCrossingCoin = VOptionReformaCrossingCoin(
+        let view:VOptionPollutedGardenCollect = VOptionPollutedGardenCollect(
             controller:controller,
-            positionY:coin.positionY)
-        coin.view = view
+            model:model)
+        model.view = view
         
         addChild(view)
     }

@@ -2,17 +2,28 @@ import UIKit
 
 class MOptionPollutedGardenPlantCollect:MGameUpdate<MOptionPollutedGarden>
 {
-    weak var view:VOptionPollutedGardenCollect?
     let positionX:CGFloat
+    weak var view:VOptionPollutedGardenCollect?
     private(set) var positionY:CGFloat
+    private var strategy:MGameStrategy<MOptionPollutedGardenPlantCollect, MOptionPollutedGarden>?
     private let kAddPositionY:CGFloat = 30
     
-    init(plant:MOptionPollutedGardenPlantItem)
+    init(plantItem:MOptionPollutedGardenPlantItem)
     {
-        positionX = plant.positionX
-        positionY = plant.positionY + kAddPositionY
+        positionX = plantItem.positionX
+        positionY = plantItem.positionY + kAddPositionY
         
         super.init()
+        strategy = MOptionPollutedGardenPlantCollectStrategyWait(model:self)
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionPollutedGarden>)
+    {
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
     }
     
     //MARK: public
@@ -22,5 +33,16 @@ class MOptionPollutedGardenPlantCollect:MGameUpdate<MOptionPollutedGarden>
         let point:CGPoint = CGPoint(x:positionX, y:positionY)
         
         return point
+    }
+    
+    func fade()
+    {
+        strategy = MOptionPollutedGardenPlantCollectStrategyFade(model:self)
+    }
+    
+    func movePositionBy(deltaY:CGFloat)
+    {
+        positionY += deltaY
+        view?.position = position()
     }
 }

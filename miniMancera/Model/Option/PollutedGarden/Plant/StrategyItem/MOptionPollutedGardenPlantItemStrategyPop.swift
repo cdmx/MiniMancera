@@ -38,6 +38,8 @@ class MOptionPollutedGardenPlantItemStrategyPop:MGameStrategy<
         {
             potSpeed = randomPotSpeed()
             addPot(scene:scene)
+            
+            model.collectFlower(scene:scene)
         }
         
         self.elapsedTime = elapsedTime

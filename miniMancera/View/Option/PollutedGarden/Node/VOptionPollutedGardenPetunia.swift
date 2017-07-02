@@ -131,7 +131,7 @@ class VOptionPollutedGardenPetunia:SKSpriteNode
     
     private func collectFlower()
     {
-        controller.collectFlower(petunia:self)
+//        controller.collectFlower(petunia:self)
     }
     
     //MARK: public

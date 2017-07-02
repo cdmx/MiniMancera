@@ -63,6 +63,13 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         self.items = items
     }
     
+    func collectStart(plantItem:MOptionPollutedGardenPlantItem)
+    {
+        let collectItem:MOptionPollutedGardenPlantCollect = MOptionPollutedGardenPlantCollect(
+            plantItem:plantItem)
+        collect.append(collectItem)
+    }
+    
     func collectFinished(collectItem:MOptionPollutedGardenPlantCollect)
     {
         var items:[MOptionPollutedGardenPlantCollect] = []

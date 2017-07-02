@@ -85,7 +85,7 @@ class MOptionPollutedGarden:MGame
         plant.restart()
     }
     
-    func collectedFlower()
+    func collectedFlower(plantItem:MOptionPollutedGardenPlantItem)
     {
         currentScore += 1
         
