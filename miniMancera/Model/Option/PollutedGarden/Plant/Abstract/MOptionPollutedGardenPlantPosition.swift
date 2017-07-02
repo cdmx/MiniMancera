@@ -9,10 +9,12 @@ class MOptionPollutedGardenPlantPosition
     private class func allPositions() -> [CGFloat]
     {
         let width:CGFloat = MGame.sceneSize.width
+        let potWidth_2:CGFloat = kPotWidth / 2.0
+        let usableWidth:CGFloat = width - kPotWidth
         var positions:[CGFloat] = []
-        var currentPosition:CGFloat = kPotWidth / 2.0
+        var currentPosition:CGFloat = potWidth_2
         
-        while currentPosition < width
+        while currentPosition < usableWidth
         {
             positions.append(currentPosition)
             currentPosition += kPotWidth

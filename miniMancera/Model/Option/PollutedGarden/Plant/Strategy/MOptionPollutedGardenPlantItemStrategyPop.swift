@@ -7,9 +7,8 @@ class MOptionPollutedGardenPlantItemStrategyPop:MGameStrategy<
     private var potSpeed:CGFloat?
     private var elapsedTime:TimeInterval
     private let kPotExpectedPositionY:CGFloat = 66
-    private let kSpeedDivider:CGFloat = 500
-    private let kMaxSpeed:UInt32 = 300
-    private let kMinSpeed:UInt32 = 1
+    private let kMaxSpeed:UInt32 = 30
+    private let kMinSpeed:UInt32 = 4
     
     override init(model:MOptionPollutedGardenPlantItem)
     {
@@ -59,8 +58,7 @@ class MOptionPollutedGardenPlantItemStrategyPop:MGameStrategy<
     {
         let random:UInt32 = arc4random_uniform(kMaxSpeed) + kMinSpeed
         let randomFloat:CGFloat = CGFloat(random)
-        let dividedSpeed:CGFloat = randomFloat / kSpeedDivider
         
-        return dividedSpeed
+        return randomFloat
     }
 }

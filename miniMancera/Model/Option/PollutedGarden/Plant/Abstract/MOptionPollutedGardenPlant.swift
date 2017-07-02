@@ -16,6 +16,12 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionPollutedGarden>)
     {
+        for item:MOptionPollutedGardenPlantItem in items
+        {
+            item.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
+        }
     }
     
     //MARK: private
