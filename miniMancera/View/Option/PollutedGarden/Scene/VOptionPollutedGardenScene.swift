@@ -136,6 +136,12 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         addChild(view)
     }
     
+    func bubbleExploded()
+    {
+        let soundPop:SKAction = controller.model.sounds.soundPop
+        controller.playSound(actionSound:soundPop)
+    }
+    
     
     
     

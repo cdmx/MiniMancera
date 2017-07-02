@@ -28,7 +28,8 @@ class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
         }
     }
     
-    private func contactBegin(contact:SKPhysicsContact)
+    private func contactBegin(
+        contact:SKPhysicsContact)
     {
         let bodyA:SKNode? = contact.bodyA.node
         let bodyB:SKNode? = contact.bodyB.node
@@ -43,47 +44,44 @@ class MOptionPollutedGardenContact:MGameUpdate<MOptionPollutedGarden>
         }
     }
     
-    private func bubbleAndBody(bubble:VOptionPollutedGardenBubble, body:SKNode?)
-    {/*
-        if bubble.alive
+    private func bubbleAndBody(
+        bubble:VOptionPollutedGardenBubble,
+        body:SKNode?)
+    {
+        guard
+        
+            let modelBubble:MOptionPollutedGardenBubbleItem = bubble.model
+        
+        else
         {
-            if let player:VOptionPollutedGardenPlayer = body as? VOptionPollutedGardenPlayer
+            return
+        }
+        
+        let alive:Bool = modelBubble.alive()
+        
+        if alive
+        {
+            if let _:VOptionPollutedGardenPlayer = body as? VOptionPollutedGardenPlayer
             {
-                contactBubbleUmbrella(bubble:bubble, player:player)
+                modelBubble.explode()
             }
-            else if let petunia:VOptionPollutedGardenPetunia = body as? VOptionPollutedGardenPetunia
+            else if let plant:VOptionPollutedGardenPlant = body as? VOptionPollutedGardenPlant
             {
-                contactBubblePetunia(bubble:bubble, petunia:petunia)
+                contactBubblePlant(bubble:bubble, plant:plant)
             }
-            else if let floor:VOptionPollutedGardenFloor = body as? VOptionPollutedGardenFloor
+            else if let _:VOptionPollutedGardenFloor = body as? VOptionPollutedGardenFloor
             {
-                contactBubbleFloor(bubble:bubble, floor:floor)
+                modelBubble.explode()
             }
-        }*/
+        }
     }
     
-    private func contactBubbleUmbrella(
+    private func contactBubblePlant(
         bubble:VOptionPollutedGardenBubble,
-        player:VOptionPollutedGardenPlayer)
-    {
-        //        playSound(actionSound:soundPop)
-//        bubble.explode()
-    }
-    
-    private func contactBubblePetunia(
-        bubble:VOptionPollutedGardenBubble,
-        petunia:VOptionPollutedGardenPetunia)
+        plant:VOptionPollutedGardenPlant)
     {
 //        bubble.explode()
-        petunia.polluted()
-    }
-    
-    private func contactBubbleFloor(
-        bubble:VOptionPollutedGardenBubble,
-        floor:VOptionPollutedGardenFloor)
-    {
-        //        playSound(actionSound:soundPop)
-//        bubble.explode()
+//        petunia.polluted()
     }
     
     //MARK: public

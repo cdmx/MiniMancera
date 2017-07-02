@@ -2,7 +2,7 @@ import UIKit
 
 class MOptionPollutedGardenBubble:MGameUpdate<MOptionPollutedGarden>
 {
-    private(set) var items:[MOptionPollutedGardenBubbleItem]
+    private var items:[MOptionPollutedGardenBubbleItem]
     private var itemTypes:[MOptionPollutedGardenBubbleItemType]!
     private var countTypes:UInt32
     private var lastSpawn:TimeInterval
@@ -118,5 +118,20 @@ class MOptionPollutedGardenBubble:MGameUpdate<MOptionPollutedGarden>
         itemTypes = MOptionPollutedGardenBubble.factoryBubbles(
             textures:textures)
         countTypes = UInt32(itemTypes.count)
+    }
+    
+    func bubbleExplodeFinished(bubbleItem:MOptionPollutedGardenBubbleItem)
+    {
+        var items:[MOptionPollutedGardenBubbleItem] = []
+        
+        for item:MOptionPollutedGardenBubbleItem in self.items
+        {
+            if item !== bubbleItem
+            {
+                items.append(item)
+            }
+        }
+        
+        self.items = items
     }
 }

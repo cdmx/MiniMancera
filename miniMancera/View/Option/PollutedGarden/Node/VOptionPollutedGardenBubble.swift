@@ -2,7 +2,7 @@ import SpriteKit
 
 class VOptionPollutedGardenBubble:ViewGameNode<MOptionPollutedGarden>
 {
-    private weak var model:MOptionPollutedGardenBubbleItem?
+    private(set) weak var model:MOptionPollutedGardenBubbleItem?
     private let kColorBlendFactor:CGFloat = 1
     
     init(

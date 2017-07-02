@@ -103,6 +103,11 @@ class MOptionPollutedGarden:MGame
         plant.poisonStart(plantItem:plantItem)
     }
     
+    func bubbleExplode(bubbleItem:MOptionPollutedGardenBubbleItem)
+    {
+        
+    }
+    
     
     
     
