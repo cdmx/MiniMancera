@@ -27,7 +27,11 @@ class MOptionPollutedGardenPlant:MGameUpdate<MOptionPollutedGarden>
         
         for position:CGFloat in positions
         {
+            let item:MOptionPollutedGardenPlantItem = MOptionPollutedGardenPlantItem(
+                textures:textures,
+                positionX:position)
             
+            items.append(item)
         }
         
         self.items = items

@@ -90,7 +90,15 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         addChild(view)
     }
     
-    
+    func addPot(model:MOptionPollutedGardenPlantItem)
+    {
+        let view:VOptionPollutedGardenPot = VOptionPollutedGardenPot(
+            controller:controller,
+            model:model)
+        model.viewPot = view
+        
+        addChild(view)
+    }
     
     
     

@@ -3,13 +3,17 @@ import UIKit
 class MOptionPollutedGardenPlantItem:MGameUpdate<MOptionPollutedGarden>
 {
     let positionX:CGFloat
+    weak var viewPot:VOptionPollutedGardenPot?
     private(set) weak var textures:MOptionPollutedGardenTextures!
+    private(set) var positionY:CGFloat
     private var strategy:MGameStrategy<MOptionPollutedGardenPlantItem, MOptionPollutedGarden>?
+    private let kPositionY:CGFloat = 45
     
     init(textures:MOptionPollutedGardenTextures, positionX:CGFloat)
     {
         self.textures = textures
         self.positionX = positionX
+        positionY = kPositionY
         super.init()
         
         strategy = MOptionPollutedGardenPlantItemStrategyPop(model:self)
@@ -34,5 +38,18 @@ class MOptionPollutedGardenPlantItem:MGameUpdate<MOptionPollutedGarden>
     func polluted()
     {
         strategy = MOptionPollutedGardenPlantItemStrategyPolluted(model:self)
+    }
+    
+    func movePotUpBy(deltaY:CGFloat)
+    {
+        positionY += deltaY
+        viewPot?.position = potPosition()
+    }
+    
+    func potPosition() -> CGPoint
+    {
+        let point:CGPoint = CGPoint(x:positionX, y:positionY)
+        
+        return point
     }
 }

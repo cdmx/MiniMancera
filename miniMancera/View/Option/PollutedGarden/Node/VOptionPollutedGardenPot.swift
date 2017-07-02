@@ -3,7 +3,6 @@ import UIKit
 class VOptionPollutedGardenPot:ViewGameNode<MOptionPollutedGarden>
 {
     private weak var model:MOptionPollutedGardenPlantItem?
-    private let kPositionY:CGFloat = 45
     
     init(
         controller:ControllerGame<MOptionPollutedGarden>,
@@ -33,6 +32,6 @@ class VOptionPollutedGardenPot:ViewGameNode<MOptionPollutedGarden>
             return
         }
         
-        position = CGPoint(x:model.positionX, y:kPositionY)
+        position = model.potPosition()
     }
 }

@@ -60,7 +60,7 @@ class MOptionPollutedGarden:MGame
     override func activateGame()
     {
         strategy = MOptionPollutedGardenStrategyGame(model:self)
-//        player.activateGame()
+        player.activateGame()
         
         super.activateGame()
     }
@@ -69,8 +69,6 @@ class MOptionPollutedGarden:MGame
     {
         return strategy as? MGameStrategyMain<T>
     }
-    
-    
     
     //MARK: public
     
