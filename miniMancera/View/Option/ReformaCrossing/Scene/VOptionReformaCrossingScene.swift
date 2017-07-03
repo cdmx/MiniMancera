@@ -4,8 +4,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
 {
     required init(controller:ControllerGame<MOptionReformaCrossing>)
     {
-        controller.model.startLevel()
-        
         super.init(controller:controller)
         physicsWorld.gravity = CGVector.zero
         factoryNodes()

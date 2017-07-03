@@ -7,8 +7,6 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
     
     required init(controller:ControllerGame<MOptionPollutedGarden>)
     {
-        controller.model.startLevel()
-        
         super.init(controller:controller)
         startPhysics()
         factoryNodes()

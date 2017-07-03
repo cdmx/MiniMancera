@@ -5,6 +5,7 @@ class MOptionWhistlesVsZombies:MGame
     let whistle:MOptionWhistlesVsZombiesWhistle
     let textures:MOptionWhistlesVsZombiesTextures
     let actions:MOptionWhistlesVsZombiesActions
+    private var strategy:MGameStrategyMain<MOptionWhistlesVsZombies>?
     
     required init()
     {
@@ -22,4 +23,8 @@ class MOptionWhistlesVsZombies:MGame
             return VOptionWhistlesVsZombiesScene.self
         }
     }
+    
+    //MARK: public
+    
+    
 }

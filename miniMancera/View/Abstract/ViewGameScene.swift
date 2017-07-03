@@ -6,6 +6,8 @@ class ViewGameScene<T:MGame>:SKScene
     
     required init(controller:ControllerGame<T>)
     {
+        controller.model.startLevel()
+        
         super.init(size:MGame.sceneSize)
         backgroundColor = SKColor.black
         scaleMode = SKSceneScaleMode.resizeFill

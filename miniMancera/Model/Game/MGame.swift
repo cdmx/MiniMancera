@@ -19,6 +19,10 @@ class MGame
     {
     }
     
+    func startLevel()
+    {
+    }
+    
     func activateGame()
     {
     }

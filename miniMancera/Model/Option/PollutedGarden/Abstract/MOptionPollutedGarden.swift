@@ -56,6 +56,15 @@ class MOptionPollutedGarden:MGame
         }
     }
     
+    override func startLevel()
+    {
+        score = 0
+        currentScore = 0
+        plant.restart()
+        bubble.restart()
+        strategy = MOptionPollutedGardenStrategyBegin(model:self)
+    }
+    
     override func activateGame()
     {
         strategy = MOptionPollutedGardenStrategyGame(model:self)
@@ -79,15 +88,6 @@ class MOptionPollutedGarden:MGame
     }
     
     //MARK: public
-    
-    func startLevel()
-    {
-        score = 0
-        currentScore = 0
-        plant.restart()
-        bubble.restart()
-        strategy = MOptionPollutedGardenStrategyBegin(model:self)
-    }
     
     func collectedFlower(plantItem:MOptionPollutedGardenPlantItem)
     {

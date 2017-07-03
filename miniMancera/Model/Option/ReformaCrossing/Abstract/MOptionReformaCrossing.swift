@@ -55,6 +55,14 @@ class MOptionReformaCrossing:MGame
         }
     }
     
+    override func startLevel()
+    {
+        strategy = MOptionReformaCrossingStrategyBegin(model:self)
+        title.startLevel(level:level)
+        laneGroup.restart(level:level)
+        coin.chargeCoinsWith(laneGroup:laneGroup)
+    }
+    
     override func activateGame()
     {
         strategy = MOptionReformaCrossingStrategyGame(model:self)
@@ -69,14 +77,6 @@ class MOptionReformaCrossing:MGame
     }
     
     //MARK: public
-    
-    func startLevel()
-    {
-        strategy = MOptionReformaCrossingStrategyBegin(model:self)
-        title.startLevel(level:level)
-        laneGroup.restart(level:level)
-        coin.chargeCoinsWith(laneGroup:laneGroup)
-    }
     
     func playerSuccess()
     {
