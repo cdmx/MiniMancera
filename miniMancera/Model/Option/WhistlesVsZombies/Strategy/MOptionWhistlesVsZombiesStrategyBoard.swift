@@ -26,16 +26,51 @@ class MOptionWhistlesVsZombiesStrategyBoard:MGameStrategyMain<MOptionWhistlesVsZ
             elapsedTime:elapsedTime,
             scene:scene)
         
+        checkCancel()
+    }
+    
+    //MARK: private
+    
+    private func closeBoard()
+    {
+        model.board.hide(model:model)
+        model.strategyGame()
+    }
+    
+    private func checkCancel()
+    {
         guard
-        
+            
             let _:UITouch = model.board.view.cancel.lastTouch()
-        
+            
         else
         {
+            checkWhistles()
+            
             return
         }
         
-        model.board.hide(model:model)
-        model.strategyGame()
+        closeBoard()
+    }
+    
+    private func checkWhistles()
+    {
+        let types:[MOptionWhistlesVsZombiesWhistleType] = model.whistle.types
+        
+        for type:MOptionWhistlesVsZombiesWhistleType in types
+        {
+            guard
+            
+                let _:UITouch = type.view?.lastTouch()
+            
+            else
+            {
+                continue
+            }
+            
+            closeBoard()
+            
+            break
+        }
     }
 }

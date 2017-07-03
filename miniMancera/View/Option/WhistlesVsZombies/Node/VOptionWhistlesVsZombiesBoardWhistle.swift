@@ -6,10 +6,10 @@ class VOptionWhistlesVsZombiesBoardWhistle:ViewGameNodeTouch<MOptionWhistlesVsZo
     private weak var animationOutIn:SKAction!
     private let positionY:CGFloat
     private let kTitleFontSize:CGFloat = 20
-    private let kDescrFontSize:CGFloat = 14
+    private let kDescrFontSize:CGFloat = 13
     private let kLabelsPositionX:CGFloat = -50
     private let kTitlePositionY:CGFloat = 0
-    private let kDescrPositionY:CGFloat = -20
+    private let kDescrPositionY:CGFloat = -22
     
     init?(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
