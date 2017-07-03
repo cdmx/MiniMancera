@@ -7,7 +7,7 @@ class MOptionWhistlesVsZombiesTextures
     init()
     {
         background = MGameTexture(
-            image:#imageLiteral(resourceName: "assetPollutedGardenBackground"),
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesBackground"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Background.rawValue)
     }
 }

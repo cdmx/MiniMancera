@@ -20,6 +20,9 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
 
     private func factoryNodes()
     {
+        let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
+            controller:controller)
         
+        addChild(background)
     }
 }

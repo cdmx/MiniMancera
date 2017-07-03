@@ -19,10 +19,11 @@ class VOptionWhistlesVsZombiesBase:SKSpriteNode
             texture:modelBase.texture,
             color:UIColor.clear,
             size:modelBase.textureSize)
+        /*
         zPosition = MOptionWhistlesVsZombiesZPosition.Base.rawValue
         position = CGPoint(x:model.positionX, y:model.positionY)
         isUserInteractionEnabled = true
-        model.view = self
+        model.view = self*/
     }
     
     required init?(coder:NSCoder)

@@ -18,6 +18,7 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
         animationDisappear = VOptionWhistlesVsZombiesMenu.factoryAnimationDisappear()
         
         super.init(texture:nil, color:backgroundColour, size:MGame.sceneSize)
+        /*
         alpha = 0
         position = model.position
         zPosition = MOptionWhistlesVsZombiesZPosition.Menu.rawValue
@@ -31,7 +32,7 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
         addChild(labelTitle)
         addChild(menuCancel)
         
-        factoryWhistles()
+        factoryWhistles()*/
     }
     
     required init?(coder:NSCoder)
