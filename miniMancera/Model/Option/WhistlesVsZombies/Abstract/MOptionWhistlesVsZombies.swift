@@ -2,42 +2,20 @@ import SpriteKit
 
 class MOptionWhistlesVsZombies:MGame
 {
-    let menu:MOptionWhistlesVsZombiesMenu
-    let base:MOptionWhistlesVsZombiesBase
+    let textures:MOptionWhistlesVsZombiesTextures
     
     required init()
     {
-        menu = MOptionWhistlesVsZombiesMenu()
-        base = MOptionWhistlesVsZombiesBase()
+        textures = MOptionWhistlesVsZombiesTextures()
         
         super.init()
     }
-    /*
-    //MARK: game protocol
     
-    func activateGame()
+    override var startSceneType:SKScene.Type?
     {
-        
-    }
-    
-    func sceneWithSize(controller:UIViewController, size:CGSize) -> SKScene?
-    {
-        guard
-            
-            let controller:COptionWhistlesVsZombies = controller as? COptionWhistlesVsZombies
-            
-        else
+        get
         {
-            return nil
+            return VOptionPollutedGardenScene.self
         }
-        
-        self.size = size
-        menu.update(sceneSize:size)
-        base.createItems(sceneSize:size)
-        
-        let scene:VOptionWhistlesVsZombiesScene = VOptionWhistlesVsZombiesScene(
-            controller:controller)
-        
-        return scene
-    }*/
+    }
 }

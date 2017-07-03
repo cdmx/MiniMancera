@@ -1,8 +1,11 @@
 import SpriteKit
 
-class VOptionWhistlesVsZombiesBackground:SKSpriteNode
+class VOptionWhistlesVsZombiesBackground:ViewGameNode<MOptionWhistlesVsZombies>
 {
-    private weak var controller:COptionWhistlesVsZombies!
+    override init(controller:ControllerGame<MOptionWhistlesVsZombies>)
+    {
+        
+    }
     
     init(controller:COptionWhistlesVsZombies)
     {

@@ -174,6 +174,7 @@
 		DA7E46871EFAEF6900466867 /* MPerkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46861EFAEF6900466867 /* MPerkFactory.swift */; };
 		DA7E46891EFAEFC200466867 /* MPerkReformaCrossing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E46881EFAEFC200466867 /* MPerkReformaCrossing.swift */; };
 		DA7E468B1EFAEFCC00466867 /* MPerkPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E468A1EFAEFCC00466867 /* MPerkPollutedGarden.swift */; };
+		DA8ACFA51F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */; };
 		DA91C3A31F014FD00045FAE2 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A21F014FD00045FAE2 /* ViewProtocol.swift */; };
 		DA91C3A51F01550E0045FAE2 /* ViewParentTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A41F01550E0045FAE2 /* ViewParentTransitions.swift */; };
 		DA91C3A71F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A61F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift */; };
@@ -488,6 +489,7 @@
 		DA7E46861EFAEF6900466867 /* MPerkFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkFactory.swift; sourceTree = "<group>"; };
 		DA7E46881EFAEFC200466867 /* MPerkReformaCrossing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkReformaCrossing.swift; sourceTree = "<group>"; };
 		DA7E468A1EFAEFCC00466867 /* MPerkPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkPollutedGarden.swift; sourceTree = "<group>"; };
+		DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesTextures.swift; sourceTree = "<group>"; };
 		DA91C3A21F014FD00045FAE2 /* ViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		DA91C3A41F01550E0045FAE2 /* ViewParentTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParentTransitions.swift; sourceTree = "<group>"; };
 		DA91C3A61F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingZPosition.swift; sourceTree = "<group>"; };
@@ -1486,6 +1488,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD368711EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift */,
+				DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */,
 				DA69BD621EFC7E22002CEB85 /* MOptionWhistlesVsZombiesZPosition.swift */,
 			);
 			path = Abstract;
@@ -1827,6 +1830,7 @@
 				DA7E46771EFAD8D300466867 /* VHomeFroobContentActionsStore.swift in Sources */,
 				DAB631E41F05972F003C6934 /* MOptionPollutedGardenPlantItem.swift in Sources */,
 				DAAF2F981EF6ECB800589BB0 /* VSettingsCell.swift in Sources */,
+				DA8ACFA51F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift in Sources */,
 				DA5667621EF26D24000055D8 /* DMiniMancera.xcdatamodeld in Sources */,
 				DA5667A41EF325E9000055D8 /* MOptionPollutedGarden.swift in Sources */,
 				DA69BD6C1EFC914F002CEB85 /* VOptionWhistlesVsZombiesMenuAnimation.swift in Sources */,

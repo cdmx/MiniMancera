@@ -7,18 +7,8 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
     required init(controller:ControllerGame<MOptionWhistlesVsZombies>)
     {
         super.init(controller:controller)
-        /*
-        let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
-            controller:controller)
-        
-        let menu:VOptionWhistlesVsZombiesMenu = VOptionWhistlesVsZombiesMenu(
-            controller:controller)
-        self.menu = menu
-        
-        addChild(background)
-        addChild(menu)
- 
-        addBase()*/
+        physicsWorld.gravity = CGVector.zero
+        factoryNodes()
     }
     
     required init?(coder:NSCoder)
@@ -27,18 +17,9 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
     }
     
     //MARK: private
-    /*
-    private func addBase()
+
+    private func factoryNodes()
     {
-        let items:[MOptionWhistlesVsZombiesBaseItem] = controller.model.base.items
         
-        for item:MOptionWhistlesVsZombiesBaseItem in items
-        {
-            let viewItem:VOptionWhistlesVsZombiesBase = VOptionWhistlesVsZombiesBase(
-                controller:controller,
-                model:item)
-            
-            addChild(viewItem)
-        }
-    }*/
+    }
 }
