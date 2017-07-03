@@ -1,6 +1,6 @@
 import SpriteKit
 
-class VOptionWhistlesVsZombiesBase:ViewGameNode<MOptionWhistlesVsZombies>
+class VOptionWhistlesVsZombiesBase:ViewGameNodeTouch<MOptionWhistlesVsZombies>
 {
     private weak var model:MOptionWhistlesVsZombiesWhistleBase!
     private weak var animationOutIn:SKAction!
@@ -16,7 +16,6 @@ class VOptionWhistlesVsZombiesBase:ViewGameNode<MOptionWhistlesVsZombies>
         super.init(
             controller:controller,
             texture:texture)
-        isUserInteractionEnabled = true
     }
     
     required init?(coder:NSCoder)
@@ -32,17 +31,5 @@ class VOptionWhistlesVsZombiesBase:ViewGameNode<MOptionWhistlesVsZombies>
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
         run(animationOutIn)
-    }
-    
-    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
-    {
-        controller.model.openBoardFor(base:model)
-    }
-    
-    //MARK: private
-    
-    private func openMenu()
-    {
-        
     }
 }

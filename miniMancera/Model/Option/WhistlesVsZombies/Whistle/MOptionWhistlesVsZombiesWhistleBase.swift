@@ -21,4 +21,18 @@ class MOptionWhistlesVsZombiesWhistleBase
         
         return point
     }
+    
+    func showBoard() -> Bool
+    {
+        guard
+        
+            let _:UITouch = view?.lastTouch()
+        
+        else
+        {
+            return false
+        }
+        
+        return true
+    }
 }

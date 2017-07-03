@@ -11,7 +11,6 @@ class VOptionWhistlesVsZombiesBoardCancel:ViewGameNodeTouch<MOptionWhistlesVsZom
         super.init(
             controller:controller,
             texture:texture)
-        isUserInteractionEnabled = true
     }
     
     required init?(coder:NSCoder)
