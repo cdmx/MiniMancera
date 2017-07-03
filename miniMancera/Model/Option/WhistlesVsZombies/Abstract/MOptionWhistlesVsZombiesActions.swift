@@ -6,7 +6,7 @@ class MOptionWhistlesVsZombiesActions
     let actionFadeOut:SKAction
     let actionFadeOutIn:SKAction
     let transitionCrossFade:SKTransition
-    private let kFadeDuration:TimeInterval = 0.5
+    private let kFadeDuration:TimeInterval = 0.3
     private let kSceneTransitionDuration:TimeInterval = 1
     
     init()

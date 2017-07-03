@@ -15,23 +15,22 @@ class MOptionWhistlesVsZombiesWhistle:MGameUpdate<MOptionWhistlesVsZombies>
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        updateBases(scene:scene)
+        updateBases(
+            elapsedTime:elapsedTime,
+            scene:scene)
     }
     
     //MARK: private
     
-    private func updateBases(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    private func updateBases(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         for base:MOptionWhistlesVsZombiesWhistleBase in bases
         {
-            let showBoard:Bool = base.showBoard()
-            
-            if showBoard
-            {
-                scene.controller.model.openBoardFor(base:base)
-                
-                break
-            }
+            base.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
         }
     }
     

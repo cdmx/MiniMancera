@@ -1,14 +1,27 @@
 import UIKit
 
-class MOptionWhistlesVsZombiesWhistleBase
+class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
 {
     weak var view:VOptionWhistlesVsZombiesBase?
+    private var strategy:MGameStrategy<MOptionWhistlesVsZombiesWhistleBase, MOptionWhistlesVsZombies>?
     private let positionX:CGFloat
     private let kPositionY:CGFloat = 100
     
     init(positionX:CGFloat)
     {
         self.positionX = positionX
+        super.init()
+        
+        strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyWait(model:self)
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
     }
     
     //MARK: public
@@ -22,17 +35,8 @@ class MOptionWhistlesVsZombiesWhistleBase
         return point
     }
     
-    func showBoard() -> Bool
+    func charge(whistleType:MOptionWhistlesVsZombiesWhistleType)
     {
-        guard
-        
-            let _:UITouch = view?.lastTouch()
-        
-        else
-        {
-            return false
-        }
-        
-        return true
+        strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyCharged(model:self)
     }
 }
