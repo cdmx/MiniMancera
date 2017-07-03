@@ -1,9 +1,9 @@
 "MHomeOptionsWhistlesVsZombies_title"="Silbatos vs Zombies";
-"MOptionWhistlesVsZombiesMenuItemPink_title"="Rosa";
-"MOptionWhistlesVsZombiesMenuItemBlue_title"="Azul";
-"MOptionWhistlesVsZombiesMenuItemOrange_title"="Naranja";
-"MOptionWhistlesVsZombiesMenuItemPink_descr"="Máxima velocidad";
-"MOptionWhistlesVsZombiesMenuItemBlue_descr"="Máximo Alcance";
-"MOptionWhistlesVsZombiesMenuItemOrange_descr"="Máxima Destrucción";
+"MOptionWhistlesVsZombiesWhistleTypePink_title"="Rosa";
+"MOptionWhistlesVsZombiesWhistleTypeBlue_title"="Azul";
+"MOptionWhistlesVsZombiesWhistleTypeOrange_title"="Naranja";
+"MOptionWhistlesVsZombiesWhistleTypePink_descr"="Máxima velocidad";
+"MOptionWhistlesVsZombiesWhistleTypeBlue_descr"="Máximo Alcance";
+"MOptionWhistlesVsZombiesWhistleTypeOrange_descr"="Máxima Destrucción";
 
 "VOptionWhistlesVsZombiesBoardTitle_label"="SILBATOS";

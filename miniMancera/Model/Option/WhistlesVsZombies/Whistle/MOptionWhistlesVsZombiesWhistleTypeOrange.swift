@@ -9,4 +9,22 @@ class MOptionWhistlesVsZombiesWhistleTypeOrange:MOptionWhistlesVsZombiesWhistleT
             return textures.whistleOrangeBoard
         }
     }
+    
+    override var titleBoard:String?
+    {
+        get
+        {
+            return String.localizedWhistlesVsZombies(
+                key:"MOptionWhistlesVsZombiesWhistleTypeOrange_title")
+        }
+    }
+    
+    override var descrBoard:String?
+    {
+        get
+        {
+            return String.localizedWhistlesVsZombies(
+                key:"MOptionWhistlesVsZombiesWhistleTypeOrange_descr")
+        }
+    }
 }
