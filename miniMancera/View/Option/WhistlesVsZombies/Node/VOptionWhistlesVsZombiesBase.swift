@@ -1,29 +1,20 @@
 import SpriteKit
 
-class VOptionWhistlesVsZombiesBase:SKSpriteNode
+class VOptionWhistlesVsZombiesBase:ViewGameNode<MOptionWhistlesVsZombies>
 {
-    private weak var controller:COptionWhistlesVsZombies!
-    private weak var modelBase:MOptionWhistlesVsZombiesBase!
-    private weak var model:MOptionWhistlesVsZombiesBaseItem!
-    private let kAlphaCharged:CGFloat = 0.5
+    private weak var model:MOptionWhistlesVsZombiesWhistleBase!
     
     init(
-        controller:COptionWhistlesVsZombies,
-        model:MOptionWhistlesVsZombiesBaseItem)
+        controller:ControllerGame<MOptionWhistlesVsZombies>,
+        model:MOptionWhistlesVsZombiesWhistleBase)
     {
-        self.controller = controller
         self.model = model
-//        modelBase = controller.model.base
+        let texture:MGameTexture = controller.model.textures.base
         
         super.init(
-            texture:modelBase.texture,
-            color:UIColor.clear,
-            size:modelBase.textureSize)
-        /*
-        zPosition = MOptionWhistlesVsZombiesZPosition.Base.rawValue
-        position = CGPoint(x:model.positionX, y:model.positionY)
+            controller:controller,
+            texture:texture)
         isUserInteractionEnabled = true
-        model.view = self*/
     }
     
     required init?(coder:NSCoder)
@@ -31,20 +22,16 @@ class VOptionWhistlesVsZombiesBase:SKSpriteNode
         return nil
     }
     
+    override func positionStart()
+    {
+        position = model.position()
+    }
+    
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        run(modelBase.actionAnimation)
     }
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        controller.editBase(editingBase:model)
-    }
-    
-    //MARK: public
-    
-    func charged()
-    {
-        alpha = kAlphaCharged
     }
 }
