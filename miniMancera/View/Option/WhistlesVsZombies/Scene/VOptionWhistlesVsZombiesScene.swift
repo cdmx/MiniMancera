@@ -47,19 +47,4 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
             addChild(view)
         }
     }
-    
-    //MARK: public
-    
-    func showBoard() -> VOptionWhistlesVsZombiesBoard
-    {
-        let animationFadeIn:SKAction = controller.model.actions.actionFadeIn
-        let view:VOptionWhistlesVsZombiesBoard = VOptionWhistlesVsZombiesBoard(
-            controller:controller)
-        
-        addChild(view)
-        
-        view.run(animationFadeIn)
-        
-        return view
-    }
 }
