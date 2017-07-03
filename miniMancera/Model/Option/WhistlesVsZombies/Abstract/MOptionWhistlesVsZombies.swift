@@ -36,8 +36,7 @@ class MOptionWhistlesVsZombies:MGame
     override func activateGame()
     {
         super.activateGame()
-        
-        strategy = MOptionWhistlesVsZombiesStrategyGame(model:self)
+        strategyGame()
     }
     
     override func gameStrategy<T>(modelType:T) -> MGameStrategyMain<T>? where T:MGame
@@ -46,6 +45,11 @@ class MOptionWhistlesVsZombies:MGame
     }
     
     //MARK: public
+    
+    func strategyGame()
+    {
+        strategy = MOptionWhistlesVsZombiesStrategyGame(model:self)
+    }
     
     func openBoardFor(base:MOptionWhistlesVsZombiesWhistleBase)
     {

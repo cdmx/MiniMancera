@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MOptionWhistlesVsZombiesStrategyBoard:MGameStrategyMain<MOptionWhistlesVsZombies>
 {
@@ -16,5 +16,26 @@ class MOptionWhistlesVsZombiesStrategyBoard:MGameStrategyMain<MOptionWhistlesVsZ
             updateItems:updateItems)
         
         model.board.show(model:model)
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        super.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
+        
+        guard
+        
+            let _:UITouch = model.board.view.cancel.lastTouch()
+        
+        else
+        {
+            return
+        }
+        
+        model.board.hide(model:model)
+        model.strategyGame()
     }
 }
