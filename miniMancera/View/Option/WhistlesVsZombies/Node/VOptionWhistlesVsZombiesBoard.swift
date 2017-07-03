@@ -37,10 +37,13 @@ class VOptionWhistlesVsZombiesBoard:ViewGameNode<MOptionWhistlesVsZombies>
     
     private func factoryNodes()
     {
+        let title:VOptionWhistlesVsZombiesBoardTitle = VOptionWhistlesVsZombiesBoardTitle()
+        
         let cancel:VOptionWhistlesVsZombiesBoardCancel = VOptionWhistlesVsZombiesBoardCancel(
             controller:controller)
         self.cancel = cancel
         
+        addChild(title)
         addChild(cancel)
     }
 }

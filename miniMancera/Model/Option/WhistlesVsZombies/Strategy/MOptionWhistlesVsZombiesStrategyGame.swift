@@ -4,7 +4,8 @@ class MOptionWhistlesVsZombiesStrategyGame:MGameStrategyMain<MOptionWhistlesVsZo
 {
     init(model:MOptionWhistlesVsZombies)
     {
-        let updateItems:[MGameUpdate<MOptionWhistlesVsZombies>] = []
+        let updateItems:[MGameUpdate<MOptionWhistlesVsZombies>] = [
+            model.whistle]
         
         super.init(
             model:model,
