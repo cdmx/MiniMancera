@@ -2,10 +2,12 @@ import Foundation
 
 class MOptionWhistlesVsZombiesWhistle:MGameUpdate<MOptionWhistlesVsZombies>
 {
+    let types:[MOptionWhistlesVsZombiesWhistleType]
     let bases:[MOptionWhistlesVsZombiesWhistleBase]
     
     override init()
     {
+        types = MOptionWhistlesVsZombiesWhistle.factoryTypes()
         bases = MOptionWhistlesVsZombiesWhistle.factoryBases()
     }
     

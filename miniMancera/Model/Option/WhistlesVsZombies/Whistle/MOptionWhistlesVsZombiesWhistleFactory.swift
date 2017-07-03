@@ -24,6 +24,20 @@ extension MOptionWhistlesVsZombiesWhistle
         return items
     }
     
+    class func factoryTypes() -> [MOptionWhistlesVsZombiesWhistleType]
+    {
+        let itemPink:MOptionWhistlesVsZombiesWhistleTypePink = MOptionWhistlesVsZombiesWhistleTypePink()
+        let itemBlue:MOptionWhistlesVsZombiesWhistleTypeBlue = MOptionWhistlesVsZombiesWhistleTypeBlue()
+        let itemOrange:MOptionWhistlesVsZombiesWhistleTypeOrange = MOptionWhistlesVsZombiesWhistleTypeOrange()
+        
+        let items:[MOptionWhistlesVsZombiesWhistleType] = [
+            itemPink,
+            itemBlue,
+            itemOrange]
+        
+        return items
+    }
+    
     //MARK: private
     
     private class func positionsFromFile() -> [CGFloat]
