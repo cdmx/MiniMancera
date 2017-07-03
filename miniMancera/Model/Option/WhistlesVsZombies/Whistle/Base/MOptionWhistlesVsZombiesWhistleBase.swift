@@ -4,6 +4,7 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
 {
     weak var view:VOptionWhistlesVsZombiesBase?
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesWhistleBase, MOptionWhistlesVsZombies>?
+    private(set) var whistleType:MOptionWhistlesVsZombiesWhistleType?
     private let positionX:CGFloat
     private let kPositionY:CGFloat = 100
     
@@ -37,6 +38,7 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
     
     func charge(whistleType:MOptionWhistlesVsZombiesWhistleType)
     {
+        self.whistleType = whistleType
         strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyCharged(model:self)
     }
 }

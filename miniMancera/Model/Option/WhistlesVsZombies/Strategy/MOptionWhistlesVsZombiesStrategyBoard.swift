@@ -68,6 +68,7 @@ class MOptionWhistlesVsZombiesStrategyBoard:MGameStrategyMain<MOptionWhistlesVsZ
                 continue
             }
             
+            base.charge(whistleType:type)
             closeBoard()
             
             break
