@@ -36,6 +36,7 @@ class VOptionWhistlesVsZombiesBase:ViewGameNode<MOptionWhistlesVsZombies>
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
+        controller.model.openBoardFor(base:model)
     }
     
     //MARK: private

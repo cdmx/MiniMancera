@@ -18,12 +18,19 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
 
     private func factoryNodes()
     {
+        let model:MOptionWhistlesVsZombies = controller.model
+        
         let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
             controller:controller)
         
-        addChild(background)
+        let board:VOptionWhistlesVsZombiesBoard = VOptionWhistlesVsZombiesBoard(
+            controller:controller)
+        model.board.view = board
         
+        addChild(background)
         factoryBases()
+        
+        addChild(board)
     }
     
     private func factoryBases()
@@ -39,5 +46,20 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
             
             addChild(view)
         }
+    }
+    
+    //MARK: public
+    
+    func showBoard() -> VOptionWhistlesVsZombiesBoard
+    {
+        let animationFadeIn:SKAction = controller.model.actions.actionFadeIn
+        let view:VOptionWhistlesVsZombiesBoard = VOptionWhistlesVsZombiesBoard(
+            controller:controller)
+        
+        addChild(view)
+        
+        view.run(animationFadeIn)
+        
+        return view
     }
 }

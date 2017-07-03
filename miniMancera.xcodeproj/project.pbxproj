@@ -182,6 +182,8 @@
 		DA8ACFB11F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFB01F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift */; };
 		DA8ACFB31F0AA3300065C26C /* MOptionWhistlesVsZombiesStrategyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFB21F0AA3300065C26C /* MOptionWhistlesVsZombiesStrategyBoard.swift */; };
 		DA8ACFB51F0AA34C0065C26C /* MOptionWhistlesVsZombiesStrategyBegin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFB41F0AA34C0065C26C /* MOptionWhistlesVsZombiesStrategyBegin.swift */; };
+		DA8ACFB71F0AB5B20065C26C /* VOptionWhistlesVsZombiesBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFB61F0AB5B20065C26C /* VOptionWhistlesVsZombiesBoard.swift */; };
+		DA8ACFBA1F0ABB9C0065C26C /* MOptionWhistlesVsZombiesBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFB91F0ABB9C0065C26C /* MOptionWhistlesVsZombiesBoard.swift */; };
 		DA91C3A31F014FD00045FAE2 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A21F014FD00045FAE2 /* ViewProtocol.swift */; };
 		DA91C3A51F01550E0045FAE2 /* ViewParentTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A41F01550E0045FAE2 /* ViewParentTransitions.swift */; };
 		DA91C3A71F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A61F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift */; };
@@ -502,6 +504,8 @@
 		DA8ACFB01F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesStrategyGame.swift; sourceTree = "<group>"; };
 		DA8ACFB21F0AA3300065C26C /* MOptionWhistlesVsZombiesStrategyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesStrategyBoard.swift; sourceTree = "<group>"; };
 		DA8ACFB41F0AA34C0065C26C /* MOptionWhistlesVsZombiesStrategyBegin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesStrategyBegin.swift; sourceTree = "<group>"; };
+		DA8ACFB61F0AB5B20065C26C /* VOptionWhistlesVsZombiesBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesBoard.swift; sourceTree = "<group>"; };
+		DA8ACFB91F0ABB9C0065C26C /* MOptionWhistlesVsZombiesBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBoard.swift; sourceTree = "<group>"; };
 		DA91C3A21F014FD00045FAE2 /* ViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		DA91C3A41F01550E0045FAE2 /* ViewParentTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParentTransitions.swift; sourceTree = "<group>"; };
 		DA91C3A61F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingZPosition.swift; sourceTree = "<group>"; };
@@ -1221,6 +1225,14 @@
 			path = Strategy;
 			sourceTree = "<group>";
 		};
+		DA8ACFB81F0ABB7E0065C26C /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				DA8ACFB91F0ABB9C0065C26C /* MOptionWhistlesVsZombiesBoard.swift */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
 		DA91C3B81F0171A50045FAE2 /* Foe */ = {
 			isa = PBXGroup;
 			children = (
@@ -1489,6 +1501,7 @@
 				DA69BD6D1EFC9829002CEB85 /* VOptionWhistlesVsZombiesMenuNode.swift */,
 				DA69BD6F1EFC99BC002CEB85 /* VOptionWhistlesVsZombiesMenuCancel.swift */,
 				DAB4DAC81EFD903400E433B9 /* VOptionWhistlesVsZombiesMenuWhistle.swift */,
+				DA8ACFB61F0AB5B20065C26C /* VOptionWhistlesVsZombiesBoard.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -1505,6 +1518,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD368701EFC27F600CBAC5B /* Abstract */,
+				DA8ACFB81F0ABB7E0065C26C /* Node */,
 				DA8ACFA61F0A89540065C26C /* Whistle */,
 				DA8ACFAF1F0AA2E60065C26C /* Strategy */,
 				DA69BD661EFC89B4002CEB85 /* Menu */,
@@ -1815,11 +1829,13 @@
 				DA5667651EF26DFD000055D8 /* DManager.swift in Sources */,
 				DAC7D3B61F01C5B2008DC416 /* VOptionReformaCrossingTitle.swift in Sources */,
 				DAB4DAC71EFD816F00E433B9 /* MOptionWhistlesVsZombiesMenuItemOrange.swift in Sources */,
+				DA8ACFB71F0AB5B20065C26C /* VOptionWhistlesVsZombiesBoard.swift in Sources */,
 				DAF5151C1F01E2D1009A0182 /* VOptionReformaCrossingGameOverTitle.swift in Sources */,
 				DA6928E11F098498001E9326 /* MOptionPollutedGardenBubbleItemStrategyAlive.swift in Sources */,
 				DA27A6161EF9C647009378E2 /* MHomeSplashScore.swift in Sources */,
 				DAF37BDC1F037B82004C505D /* MGameTextureAnimated.swift in Sources */,
 				DA6928F21F09947A001E9326 /* VOptionPollutedGardenGameOver1up.swift in Sources */,
+				DA8ACFBA1F0ABB9C0065C26C /* MOptionWhistlesVsZombiesBoard.swift in Sources */,
 				DACD313A1EFB05FA00F205A0 /* VOptionReformaCrossingMenu.swift in Sources */,
 				DAF37BAB1F02E938004C505D /* MOptionReformaCrossingFoeItem.swift in Sources */,
 				DA1121851F046C3000275465 /* MGameStrategyMain.swift in Sources */,

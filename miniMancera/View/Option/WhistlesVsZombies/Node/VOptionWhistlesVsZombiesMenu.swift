@@ -42,7 +42,7 @@ class VOptionWhistlesVsZombiesMenu:SKSpriteNode
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        controller.clearEditBase()
+//        controller.clearEditBase()
     }
     
     //MARK: public

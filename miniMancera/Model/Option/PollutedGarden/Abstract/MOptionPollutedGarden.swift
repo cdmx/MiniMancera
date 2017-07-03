@@ -58,6 +58,8 @@ class MOptionPollutedGarden:MGame
     
     override func startLevel()
     {
+        super.startLevel()
+        
         score = 0
         currentScore = 0
         plant.restart()
@@ -67,10 +69,10 @@ class MOptionPollutedGarden:MGame
     
     override func activateGame()
     {
+        super.activateGame()
+        
         strategy = MOptionPollutedGardenStrategyGame(model:self)
         player.activateGame()
-        
-        super.activateGame()
     }
     
     override func gameStrategy<T>(modelType:T) -> MGameStrategyMain<T>? where T:MGame

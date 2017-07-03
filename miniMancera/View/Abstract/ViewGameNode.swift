@@ -30,13 +30,14 @@ class ViewGameNode<T:MGame>:SKSpriteNode
     init(
         controller:ControllerGame<T>,
         size:CGSize,
-        zPosition:CGFloat)
+        zPosition:CGFloat,
+        colour:UIColor = UIColor.clear)
     {
         self.controller = controller
         
         super.init(
             texture:nil,
-            color:UIColor.clear,
+            color:colour,
             size:size)
         
         self.zPosition = zPosition

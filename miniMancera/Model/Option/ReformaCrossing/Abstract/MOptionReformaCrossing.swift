@@ -57,6 +57,8 @@ class MOptionReformaCrossing:MGame
     
     override func startLevel()
     {
+        super.startLevel()
+        
         strategy = MOptionReformaCrossingStrategyBegin(model:self)
         title.startLevel(level:level)
         laneGroup.restart(level:level)
@@ -65,10 +67,10 @@ class MOptionReformaCrossing:MGame
     
     override func activateGame()
     {
+        super.activateGame()
+        
         strategy = MOptionReformaCrossingStrategyGame(model:self)
         player.activateGame()
-        
-        super.activateGame()
     }
     
     override func gameStrategy<T>(modelType:T) -> MGameStrategyMain<T>? where T:MGame
