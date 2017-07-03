@@ -2,12 +2,12 @@ import Foundation
 
 class MOptionWhistlesVsZombiesWhistle:MGameUpdate<MOptionWhistlesVsZombies>
 {
-    let types:[MOptionWhistlesVsZombiesWhistleType]
     let bases:[MOptionWhistlesVsZombiesWhistleBase]
+    private(set) var types:[MOptionWhistlesVsZombiesWhistleType]
     
     override init()
     {
-        types = MOptionWhistlesVsZombiesWhistle.factoryTypes()
+        types = []
         bases = MOptionWhistlesVsZombiesWhistle.factoryBases()
     }
     
@@ -33,5 +33,12 @@ class MOptionWhistlesVsZombiesWhistle:MGameUpdate<MOptionWhistlesVsZombies>
                 break
             }
         }
+    }
+    
+    //MARK: public
+    
+    func factoryWithTextures(textures:MOptionWhistlesVsZombiesTextures)
+    {
+        types = MOptionWhistlesVsZombiesWhistle.factoryTypes(textures:textures)
     }
 }

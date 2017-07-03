@@ -3,6 +3,8 @@ import UIKit
 class VOptionWhistlesVsZombiesBoard:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private(set) var cancel:VOptionWhistlesVsZombiesBoardCancel!
+    private let kWhistlesPositionYStart:CGFloat = -110
+    private let kWhistlesYSpace:CGFloat = -80
     private let kAlpha:CGFloat = 0.85
     
     override init(controller:ControllerGame<MOptionWhistlesVsZombies>)
@@ -45,5 +47,35 @@ class VOptionWhistlesVsZombiesBoard:ViewGameNode<MOptionWhistlesVsZombies>
         
         addChild(title)
         addChild(cancel)
+        
+        factoryWhistles()
+    }
+    
+    private func factoryWhistles()
+    {
+        let sceneHeight:CGFloat = MGame.sceneSize.height
+        let sceneHeight_2:CGFloat = sceneHeight / 2.0
+        var positionY:CGFloat = sceneHeight_2 + kWhistlesPositionYStart
+        let types:[MOptionWhistlesVsZombiesWhistleType] = controller.model.whistle.types
+        
+        for type:MOptionWhistlesVsZombiesWhistleType in types
+        {
+            guard
+            
+                let view:VOptionWhistlesVsZombiesBoardWhistle = VOptionWhistlesVsZombiesBoardWhistle(
+                    controller:controller,
+                    model:type,
+                    positionY:positionY)
+            
+            else
+            {
+                continue
+            }
+            
+            positionY += kWhistlesYSpace
+            type.view = view
+            
+            addChild(view)
+        }
     }
 }

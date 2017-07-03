@@ -191,6 +191,7 @@
 		DA8ACFCF1F0ADC140065C26C /* MOptionWhistlesVsZombiesWhistleTypePink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFCE1F0ADC140065C26C /* MOptionWhistlesVsZombiesWhistleTypePink.swift */; };
 		DA8ACFD11F0ADC1E0065C26C /* MOptionWhistlesVsZombiesWhistleTypeBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFD01F0ADC1E0065C26C /* MOptionWhistlesVsZombiesWhistleTypeBlue.swift */; };
 		DA8ACFD31F0ADC270065C26C /* MOptionWhistlesVsZombiesWhistleTypeOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFD21F0ADC270065C26C /* MOptionWhistlesVsZombiesWhistleTypeOrange.swift */; };
+		DA8ACFD51F0AE5100065C26C /* VOptionWhistlesVsZombiesBoardWhistle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFD41F0AE5100065C26C /* VOptionWhistlesVsZombiesBoardWhistle.swift */; };
 		DA91C3A31F014FD00045FAE2 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A21F014FD00045FAE2 /* ViewProtocol.swift */; };
 		DA91C3A51F01550E0045FAE2 /* ViewParentTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A41F01550E0045FAE2 /* ViewParentTransitions.swift */; };
 		DA91C3A71F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A61F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift */; };
@@ -520,6 +521,7 @@
 		DA8ACFCE1F0ADC140065C26C /* MOptionWhistlesVsZombiesWhistleTypePink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistleTypePink.swift; sourceTree = "<group>"; };
 		DA8ACFD01F0ADC1E0065C26C /* MOptionWhistlesVsZombiesWhistleTypeBlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistleTypeBlue.swift; sourceTree = "<group>"; };
 		DA8ACFD21F0ADC270065C26C /* MOptionWhistlesVsZombiesWhistleTypeOrange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistleTypeOrange.swift; sourceTree = "<group>"; };
+		DA8ACFD41F0AE5100065C26C /* VOptionWhistlesVsZombiesBoardWhistle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesBoardWhistle.swift; sourceTree = "<group>"; };
 		DA91C3A21F014FD00045FAE2 /* ViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		DA91C3A41F01550E0045FAE2 /* ViewParentTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParentTransitions.swift; sourceTree = "<group>"; };
 		DA91C3A61F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingZPosition.swift; sourceTree = "<group>"; };
@@ -1530,6 +1532,7 @@
 				DA8ACFB61F0AB5B20065C26C /* VOptionWhistlesVsZombiesBoard.swift */,
 				DA8ACFBC1F0AC12B0065C26C /* VOptionWhistlesVsZombiesBoardCancel.swift */,
 				DA8ACFC21F0AD4C50065C26C /* VOptionWhistlesVsZombiesBoardTitle.swift */,
+				DA8ACFD41F0AE5100065C26C /* VOptionWhistlesVsZombiesBoardWhistle.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -1562,8 +1565,8 @@
 			children = (
 				DAD368711EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift */,
 				DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */,
-				DA69BD621EFC7E22002CEB85 /* MOptionWhistlesVsZombiesZPosition.swift */,
 				DA8ACFAD1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift */,
+				DA69BD621EFC7E22002CEB85 /* MOptionWhistlesVsZombiesZPosition.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1899,6 +1902,7 @@
 				DAB4DACD1EFDF3D900E433B9 /* MOptionWhistlesVsZombiesWhistlePink.swift in Sources */,
 				DAAF2FD71EF6FBB500589BB0 /* MStore.swift in Sources */,
 				DA91C3DA1F01A1D30045FAE2 /* VOptionReformaCrossingFoe.swift in Sources */,
+				DA8ACFD51F0AE5100065C26C /* VOptionWhistlesVsZombiesBoardWhistle.swift in Sources */,
 				DA779A011EF875FD00362A44 /* MHomeSplash.swift in Sources */,
 				DACD31441EFB0AF300F205A0 /* VOptionReformaCrossingCoin.swift in Sources */,
 				DAF14F551F05B2F40091EB63 /* MOptionPollutedGardenPlayer.swift in Sources */,

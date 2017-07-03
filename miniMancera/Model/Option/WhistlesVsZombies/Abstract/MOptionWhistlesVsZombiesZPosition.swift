@@ -7,4 +7,5 @@ enum MOptionWhistlesVsZombiesZPosition:CGFloat
     case Board
     case BoardTitle
     case BoardCancel
+    case BoardWhistle
 }

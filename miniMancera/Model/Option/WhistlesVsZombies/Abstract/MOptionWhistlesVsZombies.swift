@@ -16,6 +16,8 @@ class MOptionWhistlesVsZombies:MGame
         actions = MOptionWhistlesVsZombiesActions()
         
         super.init()
+        
+        whistle.factoryWithTextures(textures:textures)
     }
     
     override var startSceneType:SKScene.Type?

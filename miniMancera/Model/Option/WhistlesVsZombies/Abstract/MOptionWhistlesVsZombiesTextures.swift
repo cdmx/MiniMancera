@@ -6,6 +6,10 @@ class MOptionWhistlesVsZombiesTextures
     let base:MGameTexture
     let boardCancel:MGameTexture
     
+    let whistlePinkBoard:MGameTexture
+    let whistleBlueBoard:MGameTexture
+    let whistleOrangeBoard:MGameTexture
+    
     init()
     {
         background = MGameTexture(
@@ -17,5 +21,15 @@ class MOptionWhistlesVsZombiesTextures
         boardCancel = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleMenuCancel"),
             zPosition:MOptionWhistlesVsZombiesZPosition.BoardCancel.rawValue)
+        
+        whistlePinkBoard = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePinkHorizontal"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.BoardWhistle.rawValue)
+        whistleBlueBoard = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleBlueHorizontal"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.BoardWhistle.rawValue)
+        whistleOrangeBoard = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleOrangeHorizontal"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.BoardWhistle.rawValue)
     }
 }
