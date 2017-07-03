@@ -2,10 +2,12 @@ import SpriteKit
 
 class MOptionWhistlesVsZombies:MGame
 {
+    let whistle:MOptionWhistlesVsZombiesWhistle
     let textures:MOptionWhistlesVsZombiesTextures
     
     required init()
     {
+        whistle = MOptionWhistlesVsZombiesWhistle()
         textures = MOptionWhistlesVsZombiesTextures()
         
         super.init()
@@ -15,7 +17,7 @@ class MOptionWhistlesVsZombies:MGame
     {
         get
         {
-            return VOptionPollutedGardenScene.self
+            return VOptionWhistlesVsZombiesScene.self
         }
     }
 }

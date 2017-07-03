@@ -32,9 +32,12 @@ class MOptionWhistlesVsZombiesMenuItem
             return nil
         }
         
+        return nil
+        /*
+        
         let whistle:MOptionWhistlesVsZombiesWhistle = whistleType.init(
             textures:whistleTextures)
         
-        return whistle
+        return whistle*/
     }
 }
