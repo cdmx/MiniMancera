@@ -25,7 +25,7 @@ class VOptionWhistlesVsZombiesBase:ViewGameNodeTouch<MOptionWhistlesVsZombies>
     
     override func positionStart()
     {
-        position = model.position()
+        position = model.position
     }
     
     override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)

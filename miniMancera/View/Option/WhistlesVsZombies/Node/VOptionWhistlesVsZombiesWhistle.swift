@@ -30,6 +30,6 @@ class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
     
     override func positionStart()
     {
-        position = model.position()
+        position = model.position
     }
 }

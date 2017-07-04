@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
-	<real>-130</real>
-    <real>-65</real>
-    <real>0</real>
-    <real>65</real>
-    <real>130</real>
-</array>
+<dict>
+	<key>x</key>
+    <array>
+        <real>100</real>
+        <real>150</real>
+        <real>200</real>
+    </array>
+	<key>y</key>
+    <array>
+        <real>-130</real>
+        <real>-65</real>
+        <real>0</real>
+        <real>65</real>
+        <real>130</real>
+    </array>
+</dict>
 </plist>

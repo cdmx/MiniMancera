@@ -2,16 +2,15 @@ import UIKit
 
 class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
 {
+    let position:CGPoint
     weak var viewBase:VOptionWhistlesVsZombiesBase?
     weak var viewWhistle:VOptionWhistlesVsZombiesWhistle?
     private(set) weak var whistleType:MOptionWhistlesVsZombiesWhistleType?
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesWhistleBase, MOptionWhistlesVsZombies>?
-    private let positionX:CGFloat
-    private let kPositionY:CGFloat = 100
     
-    init(positionX:CGFloat)
+    init(position:CGPoint)
     {
-        self.positionX = positionX
+        self.position = position
         super.init()
         
         strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyWait(model:self)
@@ -27,15 +26,6 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
     }
     
     //MARK: public
-    
-    func position() -> CGPoint
-    {
-        let point:CGPoint = CGPoint(
-            x:positionX,
-            y:kPositionY)
-        
-        return point
-    }
     
     func charge(whistleType:MOptionWhistlesVsZombiesWhistleType)
     {
