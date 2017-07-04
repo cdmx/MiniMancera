@@ -10,6 +10,14 @@ class MOptionWhistlesVsZombiesWhistleTypeOrange:MOptionWhistlesVsZombiesWhistleT
         }
     }
     
+    override var textureGame:MGameTexture?
+    {
+        get
+        {
+            return textures.whistleOrangeGame
+        }
+    }
+    
     override var titleBoard:String?
     {
         get
