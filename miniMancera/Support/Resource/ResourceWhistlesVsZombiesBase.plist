@@ -4,17 +4,17 @@
 <dict>
 	<key>x</key>
     <array>
-        <real>100</real>
-        <real>150</real>
-        <real>200</real>
-    </array>
-	<key>y</key>
-    <array>
         <real>-130</real>
         <real>-65</real>
         <real>0</real>
         <real>65</real>
         <real>130</real>
+    </array>
+	<key>y</key>
+    <array>
+        <real>100</real>
+        <real>150</real>
+        <real>200</real>
     </array>
 </dict>
 </plist>

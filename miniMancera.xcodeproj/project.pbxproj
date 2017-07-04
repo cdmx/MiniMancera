@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0BB2721F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2711F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift */; };
 		DA1121721F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121711F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift */; };
 		DA1121741F04448100275465 /* MOptionReformaCrossingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */; };
 		DA11217C1F0464C500275465 /* MOptionReformaCrossingCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11217A1F0464C500275465 /* MOptionReformaCrossingCoin.swift */; };
@@ -324,6 +325,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA0BB2711F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoom.swift; sourceTree = "<group>"; };
 		DA1121711F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingPlayerPosition.swift; sourceTree = "<group>"; };
 		DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingMenu.swift; sourceTree = "<group>"; };
 		DA11217A1F0464C500275465 /* MOptionReformaCrossingCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoin.swift; sourceTree = "<group>"; };
@@ -656,6 +658,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0BB26E1F0B76FD001E1BCA /* SonicBoom */ = {
+			isa = PBXGroup;
+			children = (
+				DA0BB2711F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift */,
+			);
+			path = SonicBoom;
+			sourceTree = "<group>";
+		};
 		DA1121791F0464C500275465 /* Coin */ = {
 			isa = PBXGroup;
 			children = (
@@ -1507,6 +1517,7 @@
 			children = (
 				DAD368701EFC27F600CBAC5B /* Abstract */,
 				DA8ACFB81F0ABB7E0065C26C /* Node */,
+				DA0BB26E1F0B76FD001E1BCA /* SonicBoom */,
 				DA8ACFA61F0A89540065C26C /* Whistle */,
 				DA8ACFAF1F0AA2E60065C26C /* Strategy */,
 			);
@@ -1928,6 +1939,7 @@
 				DA717F9B1F08943000033BA4 /* MOptionPollutedGardenPlantItemStrategyGrow.swift in Sources */,
 				DA2DFFEE1EECB16A00365F23 /* VSlider.swift in Sources */,
 				DA2D00711EEDE38600365F23 /* MOptionReformaCrossing.swift in Sources */,
+				DA0BB2721F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift in Sources */,
 				DA2DFFE61EECB16A00365F23 /* ViewParent.swift in Sources */,
 				DAB70ACC1EFB2064002C706F /* VOptionPollutedGardenPlayer.swift in Sources */,
 				DA2DFFF11EECB16A00365F23 /* VToast.swift in Sources */,
