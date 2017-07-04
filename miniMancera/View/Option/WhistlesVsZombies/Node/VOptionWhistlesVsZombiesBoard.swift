@@ -28,8 +28,8 @@ class VOptionWhistlesVsZombiesBoard:ViewGameNode<MOptionWhistlesVsZombies>
     override func positionStart()
     {
         let sceneSize:CGSize = MGame.sceneSize
-        let sceneWidth:CGFloat = sceneSize.width
-        let sceneHeight:CGFloat = sceneSize.height
+        let sceneWidth:CGFloat = sceneSize.height
+        let sceneHeight:CGFloat = sceneSize.width
         let sceneWidth_2:CGFloat = sceneWidth / 2.0
         let sceneHeight_2:CGFloat = sceneHeight / 2.0
         position = CGPoint(x:sceneWidth_2, y:sceneHeight_2)
