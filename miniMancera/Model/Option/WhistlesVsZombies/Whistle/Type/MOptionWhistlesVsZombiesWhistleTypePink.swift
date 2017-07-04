@@ -2,7 +2,7 @@ import UIKit
 
 class MOptionWhistlesVsZombiesWhistleTypePink:MOptionWhistlesVsZombiesWhistleType
 {
-    private let kSpeed:CGFloat = 10
+    private let kSpeed:TimeInterval = 10
     private let kPower:CGFloat = 10
     
     override var textureBoard:MGameTexture?
@@ -39,7 +39,7 @@ class MOptionWhistlesVsZombiesWhistleTypePink:MOptionWhistlesVsZombiesWhistleTyp
         }
     }
     
-    override var speed:CGFloat
+    override var speed:TimeInterval
     {
         get
         {

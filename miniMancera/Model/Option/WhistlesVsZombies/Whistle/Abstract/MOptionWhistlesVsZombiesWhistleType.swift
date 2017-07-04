@@ -9,13 +9,15 @@ class MOptionWhistlesVsZombiesWhistleType
     private(set) var titleBoard:String?
     private(set) var descrBoard:String?
     private(set) var colour:UIColor?
-    private(set) var speed:CGFloat
+    private(set) var speed:TimeInterval
     private(set) var power:CGFloat
+    private let kDefaultSpeed:TimeInterval = 1
+    private let kDefaultPower:CGFloat = 1
     
     init(textures:MOptionWhistlesVsZombiesTextures)
     {
         self.textures = textures
-        speed = 0
-        power = 0
+        speed = kDefaultSpeed
+        power = kDefaultPower
     }
 }

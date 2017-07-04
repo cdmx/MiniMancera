@@ -30,7 +30,9 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
     func charge(whistleType:MOptionWhistlesVsZombiesWhistleType)
     {
         self.whistleType = whistleType
-        strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyCharged(model:self)
+        strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyCharged(
+            model:self,
+            whistleType:whistleType)
         viewBase?.charged()
     }
 }
