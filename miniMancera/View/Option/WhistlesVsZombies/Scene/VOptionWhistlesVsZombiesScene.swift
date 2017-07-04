@@ -77,4 +77,9 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         
         addChild(view)
     }
+    
+    func addSonicBoom(model:MOptionWhistlesVsZombiesSonicBoomItem)
+    {
+        
+    }
 }

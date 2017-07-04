@@ -22,13 +22,13 @@ class MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease:MGameStrategy<MOption
         else
         {
             startingTime = elapsedTime
-            addView(scene:scene)
+            createView(scene:scene)
         }
     }
     
     //MARK: private
     
-    private func addView(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    private func createView(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         guard
         
