@@ -5,13 +5,9 @@ class MOptionWhistlesVsZombiesTextures
     let background:MGameTexture
     let base:MGameTexture
     let menu:MGameTexture
-    let boardCancel:MGameTexture
     let sonicBoom:MGameTexture
     let sonicReleaseAnimated:MGameTextureAnimated
-    
-    let whistlePinkBoard:MGameTexture
-    let whistleBlueBoard:MGameTexture
-    let whistleOrangeBoard:MGameTexture
+
     let whistlePinkGame:MGameTexture
     let whistleBlueGame:MGameTexture
     let whistleOrangeGame:MGameTexture
@@ -27,23 +23,11 @@ class MOptionWhistlesVsZombiesTextures
         menu = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesMenu"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Menu.rawValue)
-        boardCancel = MGameTexture(
-            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleMenuCancel"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.BoardCancel.rawValue)
         sonicBoom = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesSonicBoom"),
             zPosition:MOptionWhistlesVsZombiesZPosition.SonicBoom.rawValue)
         sonicReleaseAnimated = MOptionWhistlesVsZombiesTextures.factorySonicReleaseAnimated()
-        
-        whistlePinkBoard = MGameTexture(
-            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePinkHorizontal"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.BoardWhistle.rawValue)
-        whistleBlueBoard = MGameTexture(
-            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleBlueHorizontal"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.BoardWhistle.rawValue)
-        whistleOrangeBoard = MGameTexture(
-            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleOrangeHorizontal"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.BoardWhistle.rawValue)
+  
         whistlePinkGame = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePinkStand"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)

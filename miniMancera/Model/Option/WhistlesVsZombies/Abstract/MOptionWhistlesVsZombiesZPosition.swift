@@ -8,10 +8,4 @@ enum MOptionWhistlesVsZombiesZPosition:CGFloat
     case SonicBoom
     case Base
     case Menu
-    case Board
-    case BoardTitle
-    case BoardCancel
-    case BoardWhistle
-    case BoardWhistleTitle
-    case BoardWhistleDescr
 }

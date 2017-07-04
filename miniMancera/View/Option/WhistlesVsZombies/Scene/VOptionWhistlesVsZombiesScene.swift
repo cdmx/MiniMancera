@@ -29,15 +29,10 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
             orientation:UIInterfaceOrientation.landscapeLeft)
         model.viewMenu = menu
         
-        let board:VOptionWhistlesVsZombiesBoard = VOptionWhistlesVsZombiesBoard(
-            controller:controller)
-        model.board.view = board
-        
         addChild(background)
         factoryBases()
         
         addChild(menu)
-        addChild(board)
     }
     
     private func factoryBases()

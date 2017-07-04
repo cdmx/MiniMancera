@@ -12,15 +12,4 @@ class MOptionWhistlesVsZombiesStrategyGame:MGameStrategyMain<MOptionWhistlesVsZo
             model:model,
             updateItems:updateItems)
     }
-    
-    //MARK: public
-    
-    func openBoardFor(base:MOptionWhistlesVsZombiesWhistleBase)
-    {
-        let strategy:MOptionWhistlesVsZombiesStrategyBoard = MOptionWhistlesVsZombiesStrategyBoard(
-            model:model,
-            base:base)
-        
-        model.boardStrategy(strategy:strategy)
-    }
 }

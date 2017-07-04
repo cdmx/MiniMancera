@@ -18,6 +18,6 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyWait:MGameStrategy<
         }
         
         let model:MOptionWhistlesVsZombies = scene.controller.model
-        model.openBoardFor(base:self.model)
+//        model.openBoardFor(base:self.model)
     }
 }

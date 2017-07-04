@@ -5,7 +5,6 @@ class MOptionWhistlesVsZombies:MGame
     weak var viewMenu:ViewGameNodeMenu<MOptionWhistlesVsZombies>?
     let whistle:MOptionWhistlesVsZombiesWhistle
     let sonicBoom:MOptionWhistlesVsZombiesSonicBoom
-    let board:MOptionWhistlesVsZombiesBoard
     let textures:MOptionWhistlesVsZombiesTextures
     let actions:MOptionWhistlesVsZombiesActions
     private var strategy:MGameStrategyMain<MOptionWhistlesVsZombies>?
@@ -14,7 +13,6 @@ class MOptionWhistlesVsZombies:MGame
     {
         whistle = MOptionWhistlesVsZombiesWhistle()
         sonicBoom = MOptionWhistlesVsZombiesSonicBoom()
-        board = MOptionWhistlesVsZombiesBoard()
         textures = MOptionWhistlesVsZombiesTextures()
         actions = MOptionWhistlesVsZombiesActions()
         
@@ -55,24 +53,5 @@ class MOptionWhistlesVsZombies:MGame
     func strategyGame()
     {
         strategy = MOptionWhistlesVsZombiesStrategyGame(model:self)
-    }
-    
-    func openBoardFor(base:MOptionWhistlesVsZombiesWhistleBase)
-    {
-        guard
-        
-            let strategy:MOptionWhistlesVsZombiesStrategyGame = self.strategy as? MOptionWhistlesVsZombiesStrategyGame
-        
-        else
-        {
-            return
-        }
-        
-        strategy.openBoardFor(base:base)
-    }
-    
-    func boardStrategy(strategy:MOptionWhistlesVsZombiesStrategyBoard)
-    {
-        self.strategy = strategy
     }
 }

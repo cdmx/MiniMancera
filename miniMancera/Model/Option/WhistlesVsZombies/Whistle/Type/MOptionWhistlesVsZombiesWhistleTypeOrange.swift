@@ -6,37 +6,11 @@ class MOptionWhistlesVsZombiesWhistleTypeOrange:MOptionWhistlesVsZombiesWhistleT
     private let kPower:CGFloat = 13
     private let kBarrelLength:CGFloat = 20
     
-    override var textureBoard:MGameTexture?
-    {
-        get
-        {
-            return textures.whistleOrangeBoard
-        }
-    }
-    
     override var textureGame:MGameTexture?
     {
         get
         {
             return textures.whistleOrangeGame
-        }
-    }
-    
-    override var titleBoard:String?
-    {
-        get
-        {
-            return String.localizedWhistlesVsZombies(
-                key:"MOptionWhistlesVsZombiesWhistleTypeOrange_title")
-        }
-    }
-    
-    override var descrBoard:String?
-    {
-        get
-        {
-            return String.localizedWhistlesVsZombies(
-                key:"MOptionWhistlesVsZombiesWhistleTypeOrange_descr")
         }
     }
     
