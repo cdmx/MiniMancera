@@ -194,6 +194,7 @@
 		DA8ACFEA1F0AF71A0065C26C /* MOptionWhistlesVsZombiesWhistleBaseStrategyCharged.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFE91F0AF71A0065C26C /* MOptionWhistlesVsZombiesWhistleBaseStrategyCharged.swift */; };
 		DA8DF0FE1F0B9238005F3680 /* VOptionWhistlesVsZombiesSonicRelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF0FD1F0B9238005F3680 /* VOptionWhistlesVsZombiesSonicRelease.swift */; };
 		DA8DF1001F0C1942005F3680 /* VOptionWhistlesVsZombiesSonicBoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF0FF1F0C1942005F3680 /* VOptionWhistlesVsZombiesSonicBoom.swift */; };
+		DA8DF1021F0C1A9F005F3680 /* MOptionWhistlesVsZombiesPhysicsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF1011F0C1A9F005F3680 /* MOptionWhistlesVsZombiesPhysicsStruct.swift */; };
 		DA91C3A31F014FD00045FAE2 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A21F014FD00045FAE2 /* ViewProtocol.swift */; };
 		DA91C3A51F01550E0045FAE2 /* ViewParentTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A41F01550E0045FAE2 /* ViewParentTransitions.swift */; };
 		DA91C3A71F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91C3A61F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift */; };
@@ -518,6 +519,7 @@
 		DA8ACFE91F0AF71A0065C26C /* MOptionWhistlesVsZombiesWhistleBaseStrategyCharged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistleBaseStrategyCharged.swift; sourceTree = "<group>"; };
 		DA8DF0FD1F0B9238005F3680 /* VOptionWhistlesVsZombiesSonicRelease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesSonicRelease.swift; sourceTree = "<group>"; };
 		DA8DF0FF1F0C1942005F3680 /* VOptionWhistlesVsZombiesSonicBoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesSonicBoom.swift; sourceTree = "<group>"; };
+		DA8DF1011F0C1A9F005F3680 /* MOptionWhistlesVsZombiesPhysicsStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesPhysicsStruct.swift; sourceTree = "<group>"; };
 		DA91C3A21F014FD00045FAE2 /* ViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		DA91C3A41F01550E0045FAE2 /* ViewParentTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParentTransitions.swift; sourceTree = "<group>"; };
 		DA91C3A61F015BA70045FAE2 /* MOptionReformaCrossingZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingZPosition.swift; sourceTree = "<group>"; };
@@ -1546,6 +1548,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD368711EFC280500CBAC5B /* MOptionWhistlesVsZombies.swift */,
+				DA8DF1011F0C1A9F005F3680 /* MOptionWhistlesVsZombiesPhysicsStruct.swift */,
 				DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */,
 				DA8ACFAD1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift */,
 				DA69BD621EFC7E22002CEB85 /* MOptionWhistlesVsZombiesZPosition.swift */,
@@ -1910,6 +1913,7 @@
 				DA2974E41EFF38DD00300455 /* ControllerGameMenu.swift in Sources */,
 				DAAF2F9A1EF6ECB800589BB0 /* VSettingsCellShare.swift in Sources */,
 				DAAF2FC51EF6F6F700589BB0 /* VStoreCellNotAvailable.swift in Sources */,
+				DA8DF1021F0C1A9F005F3680 /* MOptionWhistlesVsZombiesPhysicsStruct.swift in Sources */,
 				DAB631CA1F057F46003C6934 /* MOptionPollutedGardenStrategyEnd.swift in Sources */,
 				DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */,
 				DAEBF4051F06077F0083C09E /* MOptionReformaCrossingStrategyEndFailHitAndRun.swift in Sources */,
