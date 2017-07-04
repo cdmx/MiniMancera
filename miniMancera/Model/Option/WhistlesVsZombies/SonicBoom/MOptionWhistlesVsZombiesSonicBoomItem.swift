@@ -2,7 +2,7 @@ import Foundation
 
 class MOptionWhistlesVsZombiesSonicBoomItem:MGameUpdate<MOptionWhistlesVsZombies>
 {
-    weak var viewRelease:VOptionWhistlesVsZombiesSonicBoomRelease?
+    weak var viewRelease:VOptionWhistlesVsZombiesSonicRelease?
     private(set) weak var base:MOptionWhistlesVsZombiesWhistleBase!
     private(set) weak var whistleType:MOptionWhistlesVsZombiesWhistleType!
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesSonicBoomItem, MOptionWhistlesVsZombies>?

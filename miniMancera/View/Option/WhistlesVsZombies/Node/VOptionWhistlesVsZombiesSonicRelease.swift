@@ -1,6 +1,6 @@
 import SpriteKit
 
-class VOptionWhistlesVsZombiesSonicBoomRelease:ViewGameNode<MOptionWhistlesVsZombies>
+class VOptionWhistlesVsZombiesSonicRelease:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private weak var model:MOptionWhistlesVsZombiesSonicBoomItem?
     
@@ -28,9 +28,9 @@ class VOptionWhistlesVsZombiesSonicBoomRelease:ViewGameNode<MOptionWhistlesVsZom
     override func positionStart()
     {
         guard
-        
+            
             let model:MOptionWhistlesVsZombiesSonicBoomItem = self.model
-        
+            
         else
         {
             return
