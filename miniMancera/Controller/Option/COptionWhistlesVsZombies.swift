@@ -12,7 +12,7 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
             
         else
         {
-            fatalError("shit")
+            return
         }
         
         parent.landscapeOrientation()
@@ -47,7 +47,10 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
             return
         }
         
+        pause()
+        
         let controller:COptionWhistlesVsZombiesBoard = COptionWhistlesVsZombiesBoard(
+            controllerGame:self,
             modelBase:modelBase)
         parent.animateOver(controller:controller)
     }

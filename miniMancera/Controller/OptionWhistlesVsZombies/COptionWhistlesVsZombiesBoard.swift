@@ -2,10 +2,14 @@ import UIKit
 
 class COptionWhistlesVsZombiesBoard:Controller<VOptionWhistlesVsZombiesBoard>
 {
+    private weak var controllerGame:COptionWhistlesVsZombies?
     private weak var modelBase:MOptionWhistlesVsZombiesWhistleBase!
     
-    init(modelBase:MOptionWhistlesVsZombiesWhistleBase)
+    init(
+        controllerGame:COptionWhistlesVsZombies,
+        modelBase:MOptionWhistlesVsZombiesWhistleBase)
     {
+        self.controllerGame = controllerGame
         self.modelBase = modelBase
         super.init()
     }
@@ -28,6 +32,10 @@ class COptionWhistlesVsZombiesBoard:Controller<VOptionWhistlesVsZombiesBoard>
             return
         }
         
-        parent.dismissAnimateOver(completion:nil)
+        parent.dismissAnimateOver
+        { [weak self] in
+            
+            self?.controllerGame?.resume()
+        }
     }
 }

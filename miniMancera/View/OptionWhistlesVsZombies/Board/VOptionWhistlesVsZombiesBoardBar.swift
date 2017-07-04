@@ -14,6 +14,8 @@ class VOptionWhistlesVsZombiesBoardBar:UIView
         self.controller = controller
         
         let buttonCancel:UIButton = UIButton()
+        buttonCancel.clipsToBounds = true
+        buttonCancel.translatesAutoresizingMaskIntoConstraints = false
         buttonCancel.setImage(
             #imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleBoardCancel"),
             for:UIControlState.normal)
