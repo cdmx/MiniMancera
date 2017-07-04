@@ -19,6 +19,7 @@ class MOptionWhistlesVsZombies:MGame
         
         super.init()
         
+        actions.factoryAnimations(textures:textures)
         whistle.factoryWithTextures(textures:textures)
     }
     

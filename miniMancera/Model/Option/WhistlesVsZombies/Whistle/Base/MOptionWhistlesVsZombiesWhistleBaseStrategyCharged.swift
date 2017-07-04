@@ -42,6 +42,8 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyCharged:MGameStrategy<
     
     private func releaseSonicBoom(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        
+        scene.controller.model.sonicBoom.release(
+            base:model,
+            whistleType:whistleType)
     }
 }

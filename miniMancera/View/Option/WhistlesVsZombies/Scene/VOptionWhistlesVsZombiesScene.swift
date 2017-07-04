@@ -67,4 +67,14 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         
         addChild(view)
     }
+    
+    func addSonicBoomRelease(model:MOptionWhistlesVsZombiesSonicBoomItem)
+    {
+        let view:VOptionWhistlesVsZombiesSonicBoomRelease = VOptionWhistlesVsZombiesSonicBoomRelease(
+            controller:controller,
+            model:model)
+        model.viewRelease = view
+        
+        addChild(view)
+    }
 }

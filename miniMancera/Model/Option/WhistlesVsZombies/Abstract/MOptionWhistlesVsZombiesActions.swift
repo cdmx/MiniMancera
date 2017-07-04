@@ -6,7 +6,9 @@ class MOptionWhistlesVsZombiesActions
     let actionFadeOut:SKAction
     let actionFadeOutIn:SKAction
     let transitionCrossFade:SKTransition
+    private(set) var actionSonicReleaseAnimation:SKAction!
     private let kFadeDuration:TimeInterval = 0.3
+    private let kSonicReleaseFrameDuration:TimeInterval = 0.05
     private let kSceneTransitionDuration:TimeInterval = 1
     
     init()
@@ -19,5 +21,23 @@ class MOptionWhistlesVsZombiesActions
             actionFadeIn]
         actionFadeOutIn = SKAction.sequence(sequenceOutIn)
         transitionCrossFade = SKTransition.crossFade(withDuration:kSceneTransitionDuration)
+    }
+    
+    //MARK: private
+    
+    private func factorySonicReleaseAnimation(texture:MGameTextureAnimated)
+    {
+        actionSonicReleaseAnimation = SKAction.animate(
+            with:texture.textures,
+            timePerFrame:kSonicReleaseFrameDuration,
+            resize:false,
+            restore:false)
+    }
+    
+    //MARK: public
+    
+    func factoryAnimations(textures:MOptionWhistlesVsZombiesTextures)
+    {
+        factorySonicReleaseAnimation(texture:textures.sonicReleaseAnimated)
     }
 }

@@ -2,8 +2,9 @@ import Foundation
 
 class MOptionWhistlesVsZombiesSonicBoomItem:MGameUpdate<MOptionWhistlesVsZombies>
 {
-    private weak var base:MOptionWhistlesVsZombiesWhistleBase!
-    private weak var whistleType:MOptionWhistlesVsZombiesWhistleType!
+    weak var viewRelease:VOptionWhistlesVsZombiesSonicBoomRelease?
+    private(set) weak var base:MOptionWhistlesVsZombiesWhistleBase!
+    private(set) weak var whistleType:MOptionWhistlesVsZombiesWhistleType!
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesSonicBoomItem, MOptionWhistlesVsZombies>?
     
     init(
@@ -31,6 +32,7 @@ class MOptionWhistlesVsZombiesSonicBoomItem:MGameUpdate<MOptionWhistlesVsZombies
     
     func moving()
     {
+        viewRelease?.endRelease()
         strategy = MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving(
             model:self)
     }
