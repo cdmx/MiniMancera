@@ -3,6 +3,7 @@ import SpriteKit
 class VOptionWhistlesVsZombiesSonicRelease:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private weak var model:MOptionWhistlesVsZombiesSonicBoomItem?
+    private let kColourBlendFactor:CGFloat = 1
     
     init(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
@@ -16,6 +17,12 @@ class VOptionWhistlesVsZombiesSonicRelease:ViewGameNode<MOptionWhistlesVsZombies
             controller:controller,
             size:size,
             zPosition:MOptionWhistlesVsZombiesZPosition.SonicBoom.rawValue)
+        
+        if let colour:UIColor = model.whistleType.colour
+        {
+            self.color = colour
+            colorBlendFactor = kColourBlendFactor
+        }
         
         run(animation)
     }
@@ -36,7 +43,13 @@ class VOptionWhistlesVsZombiesSonicRelease:ViewGameNode<MOptionWhistlesVsZombies
             return
         }
         
-        position = model.base.position
+        let barrelLength:CGFloat = model.whistleType.barrelLength
+        let basePosition:CGPoint = model.base.position
+        let positionX:CGFloat = basePosition.x
+        let positionY:CGFloat = basePosition.y + barrelLength
+        position = CGPoint(
+            x:positionX,
+            y:positionY)
     }
     
     //MARK: public

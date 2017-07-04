@@ -8,7 +8,7 @@ class MOptionWhistlesVsZombiesActions
     let transitionCrossFade:SKTransition
     private(set) var actionSonicReleaseAnimation:SKAction!
     private let kFadeDuration:TimeInterval = 0.3
-    private let kSonicReleaseFrameDuration:TimeInterval = 0.05
+    private let kSonicReleaseFrameDuration:TimeInterval = 0.1
     private let kSceneTransitionDuration:TimeInterval = 1
     
     init()

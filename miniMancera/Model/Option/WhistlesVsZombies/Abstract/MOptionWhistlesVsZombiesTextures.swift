@@ -55,7 +55,9 @@ class MOptionWhistlesVsZombiesTextures
             #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease0"),
             #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease1"),
             #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease2"),
-            #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease3")]
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease3"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease4"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease5")]
         
         let texture:MGameTextureAnimated = MGameTextureAnimated(
             images:images)

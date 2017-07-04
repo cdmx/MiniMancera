@@ -11,6 +11,7 @@ class MOptionWhistlesVsZombiesWhistleType
     private(set) var colour:UIColor?
     private(set) var speed:TimeInterval
     private(set) var power:CGFloat
+    private(set) var barrelLength:CGFloat
     private let kDefaultSpeed:TimeInterval = 1
     private let kDefaultPower:CGFloat = 1
     
@@ -19,5 +20,6 @@ class MOptionWhistlesVsZombiesWhistleType
         self.textures = textures
         speed = kDefaultSpeed
         power = kDefaultPower
+        barrelLength = 0
     }
 }

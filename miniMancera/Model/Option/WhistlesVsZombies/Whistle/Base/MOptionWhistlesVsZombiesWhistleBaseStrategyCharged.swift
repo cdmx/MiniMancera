@@ -7,7 +7,7 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyCharged:MGameStrategy<
     private weak var whistleType:MOptionWhistlesVsZombiesWhistleType!
     private var lastElapsedTime:TimeInterval?
     private let deltaTime:TimeInterval
-    private let kDeltaDividend:TimeInterval = 10
+    private let kDeltaDividend:TimeInterval = 45
     
     init(
         model:MOptionWhistlesVsZombiesWhistleBase,

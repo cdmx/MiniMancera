@@ -4,6 +4,7 @@ class MOptionWhistlesVsZombiesWhistleTypePink:MOptionWhistlesVsZombiesWhistleTyp
 {
     private let kSpeed:TimeInterval = 10
     private let kPower:CGFloat = 10
+    private let kBarrelLength:CGFloat = 20
     
     override var textureBoard:MGameTexture?
     {
@@ -52,6 +53,14 @@ class MOptionWhistlesVsZombiesWhistleTypePink:MOptionWhistlesVsZombiesWhistleTyp
         get
         {
             return kPower
+        }
+    }
+    
+    override var barrelLength:CGFloat
+    {
+        get
+        {
+            return kBarrelLength
         }
     }
 }
