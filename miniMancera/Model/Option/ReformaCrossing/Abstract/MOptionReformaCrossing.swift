@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionReformaCrossing:MGame
 {
+    weak var viewMenu:ViewGameNodeMenu<MOptionReformaCrossing>?
     let contact:MOptionReformaCrossingContact
     let textures:MOptionReformaCrossingTextures
     let sounds:MOptionReformaCrossingSounds
@@ -12,7 +13,6 @@ class MOptionReformaCrossing:MGame
     let coin:MOptionReformaCrossingCoin
     let stop:MOptionReformaCrossingStop
     let hud:MOptionReformaCrossingHud
-    let menu:MOptionReformaCrossingMenu
     let title:MOptionReformaCrossingTitle
     private(set) var level:Int
     private var strategy:MGameStrategyMain<MOptionReformaCrossing>?
@@ -31,7 +31,6 @@ class MOptionReformaCrossing:MGame
         coin = MOptionReformaCrossingCoin()
         stop = MOptionReformaCrossingStop()
         hud = MOptionReformaCrossingHud()
-        menu = MOptionReformaCrossingMenu()
         title = MOptionReformaCrossingTitle()
         level = kStartingLevel
         

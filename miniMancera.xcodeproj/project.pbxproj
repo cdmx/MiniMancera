@@ -13,7 +13,6 @@
 		DA0BB2781F0B82EA001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2771F0B82EA001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving.swift */; };
 		DA0BB27A1F0B82F8001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyCollision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2791F0B82F8001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyCollision.swift */; };
 		DA1121721F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121711F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift */; };
-		DA1121741F04448100275465 /* MOptionReformaCrossingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */; };
 		DA11217C1F0464C500275465 /* MOptionReformaCrossingCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11217A1F0464C500275465 /* MOptionReformaCrossingCoin.swift */; };
 		DA11217D1F0464C500275465 /* MOptionReformaCrossingCoinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11217B1F0464C500275465 /* MOptionReformaCrossingCoinItem.swift */; };
 		DA11217F1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11217E1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift */; };
@@ -337,7 +336,6 @@
 		DA0BB2771F0B82EA001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving.swift; sourceTree = "<group>"; };
 		DA0BB2791F0B82F8001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyCollision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoomItemStrategyCollision.swift; sourceTree = "<group>"; };
 		DA1121711F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingPlayerPosition.swift; sourceTree = "<group>"; };
-		DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingMenu.swift; sourceTree = "<group>"; };
 		DA11217A1F0464C500275465 /* MOptionReformaCrossingCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoin.swift; sourceTree = "<group>"; };
 		DA11217B1F0464C500275465 /* MOptionReformaCrossingCoinItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoinItem.swift; sourceTree = "<group>"; };
 		DA11217E1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoinItemStrategyWaiting.swift; sourceTree = "<group>"; };
@@ -1480,7 +1478,6 @@
 				DAC7D3B11F01C296008DC416 /* MOptionReformaCrossingHud.swift */,
 				DAC7D3B31F01C537008DC416 /* MOptionReformaCrossingTitle.swift */,
 				DAF37BDD1F037D39004C505D /* MOptionReformaCrossingStop.swift */,
-				DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -2083,7 +2080,6 @@
 				DAAF2FD51EF6FBB500589BB0 /* MStoreStatusDeferred.swift in Sources */,
 				DAF37B941F02DD70004C505D /* VOptionReformaCrossingGameOver1up.swift in Sources */,
 				DA7E46831EFAEF3000466867 /* MPerkFreeProtocol.swift in Sources */,
-				DA1121741F04448100275465 /* MOptionReformaCrossingMenu.swift in Sources */,
 				DA8ACFE61F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleTypePink.swift in Sources */,
 				DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */,
 			);

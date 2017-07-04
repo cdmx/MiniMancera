@@ -35,7 +35,7 @@ class MOptionReformaCrossingStrategyBegin:MGameStrategyMain<MOptionReformaCrossi
         let actionFadeIn:SKAction = model.actions.actionFadeIn
         let actionFadeOut:SKAction = model.actions.actionFadeOut
         
-        model.menu.view?.run(actionFadeIn)
+        model.viewMenu?.run(actionFadeIn)
         model.hud.view?.run(actionFadeIn)
         model.stop.view?.run(actionFadeIn)
         model.title.view?.run(actionFadeOut)

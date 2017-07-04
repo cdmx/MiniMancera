@@ -34,7 +34,7 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
         let menu:ViewGameNodeMenu<MOptionReformaCrossing> = ViewGameNodeMenu<MOptionReformaCrossing>(
             controller:controller,
             texture:model.textures.menu)
-        model.menu.view = menu
+        model.viewMenu = menu
         
         let title:VOptionReformaCrossingTitle = VOptionReformaCrossingTitle()
         model.title.view = title
