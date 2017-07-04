@@ -2,5 +2,23 @@ import Foundation
 
 class MOptionWhistlesVsZombiesSonicBoom:MGameUpdate<MOptionWhistlesVsZombies>
 {
+    private(set) var items:[MOptionWhistlesVsZombiesSonicBoomItem]
     
+    override init()
+    {
+        items = []
+        super.init()
+    }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        for item:MOptionWhistlesVsZombiesSonicBoomItem in items
+        {
+            item.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
+        }
+    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA0BB2721F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2711F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift */; };
+		DA0BB2741F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2731F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift */; };
 		DA1121721F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121711F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift */; };
 		DA1121741F04448100275465 /* MOptionReformaCrossingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */; };
 		DA11217C1F0464C500275465 /* MOptionReformaCrossingCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11217A1F0464C500275465 /* MOptionReformaCrossingCoin.swift */; };
@@ -326,6 +327,7 @@
 
 /* Begin PBXFileReference section */
 		DA0BB2711F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoom.swift; sourceTree = "<group>"; };
+		DA0BB2731F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoomItem.swift; sourceTree = "<group>"; };
 		DA1121711F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingPlayerPosition.swift; sourceTree = "<group>"; };
 		DA1121731F04448100275465 /* MOptionReformaCrossingMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingMenu.swift; sourceTree = "<group>"; };
 		DA11217A1F0464C500275465 /* MOptionReformaCrossingCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingCoin.swift; sourceTree = "<group>"; };
@@ -662,6 +664,7 @@
 			isa = PBXGroup;
 			children = (
 				DA0BB2711F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift */,
+				DA0BB2731F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift */,
 			);
 			path = SonicBoom;
 			sourceTree = "<group>";
@@ -1736,6 +1739,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2DFFE51EECB16A00365F23 /* View.swift in Sources */,
+				DA0BB2741F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift in Sources */,
 				DAAF2FD61EF6FBB500589BB0 /* MStoreStatusNotAvailable.swift in Sources */,
 				DA7E46811EFAEF0200466867 /* MPerkProtocol.swift in Sources */,
 				DA6928CD1F098006001E9326 /* MOptionPollutedGardenPlantPoison.swift in Sources */,

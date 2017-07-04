@@ -3,6 +3,7 @@ import SpriteKit
 class MOptionWhistlesVsZombies:MGame
 {
     let whistle:MOptionWhistlesVsZombiesWhistle
+    let sonicBoom:MOptionWhistlesVsZombiesSonicBoom
     let board:MOptionWhistlesVsZombiesBoard
     let textures:MOptionWhistlesVsZombiesTextures
     let actions:MOptionWhistlesVsZombiesActions
@@ -11,6 +12,7 @@ class MOptionWhistlesVsZombies:MGame
     required init()
     {
         whistle = MOptionWhistlesVsZombiesWhistle()
+        sonicBoom = MOptionWhistlesVsZombiesSonicBoom()
         board = MOptionWhistlesVsZombiesBoard()
         textures = MOptionWhistlesVsZombiesTextures()
         actions = MOptionWhistlesVsZombiesActions()
