@@ -59,14 +59,14 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
         let menu:ViewGameNodeMenu<MOptionPollutedGarden> = ViewGameNodeMenu<MOptionPollutedGarden>(
             controller:controller,
             texture:model.textures.menu)
-        model.menu.view = menu
+        model.viewMenu = menu
         
         let controls:VOptionPollutedGardenControls = VOptionPollutedGardenControls(
             controller:controller)
         model.controls.view = controls
         
         let title:VOptionPollutedGardenTitle = VOptionPollutedGardenTitle()
-        model.title.view = title
+        model.viewTitle = title
         
         addChild(background)
         addChild(floor)

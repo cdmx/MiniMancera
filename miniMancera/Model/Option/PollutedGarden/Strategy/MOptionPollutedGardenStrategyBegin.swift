@@ -36,8 +36,8 @@ class MOptionPollutedGardenStrategyBegin:MGameStrategyMain<MOptionPollutedGarden
         let actionFadeIn:SKAction = model.actions.actionFadeIn
         let actionFadeOut:SKAction = model.actions.actionFadeOut
         
-        model.menu.view?.run(actionFadeIn)
+        model.viewTitle?.run(actionFadeOut)
+        model.viewMenu?.run(actionFadeIn)
         model.hud.view?.run(actionFadeIn)
-        model.title.view?.run(actionFadeOut)
     }
 }
