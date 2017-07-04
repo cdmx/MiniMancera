@@ -5,6 +5,7 @@ class MOptionWhistlesVsZombiesTextures
     let background:MGameTexture
     let base:MGameTexture
     let boardCancel:MGameTexture
+    let sonicReleaseAnimated:MGameTextureAnimated
     
     let whistlePinkBoard:MGameTexture
     let whistleBlueBoard:MGameTexture
@@ -24,6 +25,7 @@ class MOptionWhistlesVsZombiesTextures
         boardCancel = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleMenuCancel"),
             zPosition:MOptionWhistlesVsZombiesZPosition.BoardCancel.rawValue)
+        sonicReleaseAnimated = MOptionWhistlesVsZombiesTextures.factorySonicReleaseAnimated()
         
         whistlePinkBoard = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePinkHorizontal"),
@@ -43,5 +45,21 @@ class MOptionWhistlesVsZombiesTextures
         whistleOrangeGame = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePinkStand"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
+    }
+    
+    //MARK: private
+    
+    private class func factorySonicReleaseAnimated() -> MGameTextureAnimated
+    {
+        let images:[UIImage] = [
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease0"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease1"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease2"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicRelease3")]
+        
+        let texture:MGameTextureAnimated = MGameTextureAnimated(
+            images:images)
+        
+        return texture
     }
 }
