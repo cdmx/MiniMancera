@@ -47,10 +47,8 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
             return
         }
         
-        self.pause()
-        
         let controller:COptionWhistlesVsZombiesBoard = COptionWhistlesVsZombiesBoard(
             modelBase:modelBase)
-        parent.push(controller:controller, horizontal:ControllerParent.Horizontal.right)
+        parent.animateOver(controller:controller)
     }
 }

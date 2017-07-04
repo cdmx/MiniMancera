@@ -14,4 +14,20 @@ class COptionWhistlesVsZombiesBoard:Controller<VOptionWhistlesVsZombiesBoard>
     {
         return nil
     }
+    
+    //MARK: public
+    
+    func back()
+    {
+        guard
+        
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        parent.dismissAnimateOver(completion:nil)
+    }
 }
