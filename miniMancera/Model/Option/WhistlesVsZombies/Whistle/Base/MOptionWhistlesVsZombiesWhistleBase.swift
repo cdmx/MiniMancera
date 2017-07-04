@@ -41,5 +41,6 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
     {
         self.whistleType = whistleType
         strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyCharged(model:self)
+        viewBase?.charged()
     }
 }

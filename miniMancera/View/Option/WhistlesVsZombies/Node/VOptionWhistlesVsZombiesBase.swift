@@ -32,4 +32,16 @@ class VOptionWhistlesVsZombiesBase:ViewGameNodeTouch<MOptionWhistlesVsZombies>
     {
         run(animationOutIn)
     }
+    
+    //MARK: public
+    
+    func charged()
+    {
+        alpha = 0
+    }
+    
+    func disCharged()
+    {
+        alpha = 1
+    }
 }
