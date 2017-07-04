@@ -4,6 +4,7 @@ class MOptionWhistlesVsZombiesTextures
 {
     let background:MGameTexture
     let base:MGameTexture
+    let menu:MGameTexture
     let boardCancel:MGameTexture
     let sonicBoom:MGameTexture
     let sonicReleaseAnimated:MGameTextureAnimated
@@ -23,6 +24,9 @@ class MOptionWhistlesVsZombiesTextures
         base = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleBase"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Base.rawValue)
+        menu = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesMenu"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.Menu.rawValue)
         boardCancel = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleMenuCancel"),
             zPosition:MOptionWhistlesVsZombiesZPosition.BoardCancel.rawValue)

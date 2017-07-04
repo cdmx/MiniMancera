@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionWhistlesVsZombies:MGame
 {
+    weak var viewMenu:ViewGameNodeMenu<MOptionWhistlesVsZombies>?
     let whistle:MOptionWhistlesVsZombiesWhistle
     let sonicBoom:MOptionWhistlesVsZombiesSonicBoom
     let board:MOptionWhistlesVsZombiesBoard

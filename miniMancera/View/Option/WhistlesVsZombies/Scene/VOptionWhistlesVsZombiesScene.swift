@@ -23,6 +23,12 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
             controller:controller)
         
+        let menu:ViewGameNodeMenu<MOptionWhistlesVsZombies> = ViewGameNodeMenu(
+            controller:controller,
+            texture:model.textures.menu,
+            orientation:UIInterfaceOrientation.landscapeLeft)
+        model.viewMenu = menu
+        
         let board:VOptionWhistlesVsZombiesBoard = VOptionWhistlesVsZombiesBoard(
             controller:controller)
         model.board.view = board
@@ -30,6 +36,7 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         addChild(background)
         factoryBases()
         
+        addChild(menu)
         addChild(board)
     }
     

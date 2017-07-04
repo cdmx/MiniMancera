@@ -8,8 +8,7 @@ class ViewGameNodeMenu<T:MGame>:ViewGameNode<T>
     init(
         controller:ControllerGame<T>,
         texture:MGameTexture,
-        orientation:UIInterfaceOrientation = UIInterfaceOrientation.portrait,
-        alpha:CGFloat = 0)
+        orientation:UIInterfaceOrientation = UIInterfaceOrientation.portrait)
     {
         self.orientation = orientation
         
@@ -17,7 +16,7 @@ class ViewGameNodeMenu<T:MGame>:ViewGameNode<T>
             controller:controller,
             texture:texture)
         isUserInteractionEnabled = true
-        self.alpha = alpha
+        alpha = 0
     }
     
     required init?(coder:NSCoder)
