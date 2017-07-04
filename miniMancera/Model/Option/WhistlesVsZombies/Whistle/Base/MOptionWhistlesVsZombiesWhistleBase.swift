@@ -2,9 +2,10 @@ import UIKit
 
 class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
 {
-    weak var view:VOptionWhistlesVsZombiesBase?
+    weak var viewBase:VOptionWhistlesVsZombiesBase?
+    weak var viewWhistle:VOptionWhistlesVsZombiesWhistle?
+    private(set) weak var whistleType:MOptionWhistlesVsZombiesWhistleType?
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesWhistleBase, MOptionWhistlesVsZombies>?
-    private(set) var whistleType:MOptionWhistlesVsZombiesWhistleType?
     private let positionX:CGFloat
     private let kPositionY:CGFloat = 100
     

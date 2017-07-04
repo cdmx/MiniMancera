@@ -42,9 +42,29 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
             let view:VOptionWhistlesVsZombiesBase = VOptionWhistlesVsZombiesBase(
                 controller:controller,
                 model:base)
-            base.view = view
+            base.viewBase = view
             
             addChild(view)
         }
+    }
+    
+    //MARK: public
+    
+    func addWhistle(base:MOptionWhistlesVsZombiesWhistleBase)
+    {
+        guard
+            
+            let view:VOptionWhistlesVsZombiesWhistle = VOptionWhistlesVsZombiesWhistle(
+                controller:controller,
+                model:base)
+        
+        else
+        {
+            return
+        }
+        
+        base.viewWhistle = view
+        
+        addChild(view)
     }
 }

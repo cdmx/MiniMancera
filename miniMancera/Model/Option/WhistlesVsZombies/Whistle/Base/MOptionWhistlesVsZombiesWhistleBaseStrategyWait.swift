@@ -10,7 +10,7 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyWait:MGameStrategy<
     {
         guard
             
-            let _:UITouch = self.model.view?.lastTouch()
+            let _:UITouch = self.model.viewBase?.lastTouch()
             
         else
         {

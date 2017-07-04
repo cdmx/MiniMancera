@@ -26,7 +26,7 @@ class MOptionWhistlesVsZombiesStrategyBoard:MGameStrategyMain<MOptionWhistlesVsZ
             elapsedTime:elapsedTime,
             scene:scene)
         
-        checkCancel()
+        checkCancel(scene:scene)
     }
     
     //MARK: private
@@ -37,7 +37,7 @@ class MOptionWhistlesVsZombiesStrategyBoard:MGameStrategyMain<MOptionWhistlesVsZ
         model.strategyGame()
     }
     
-    private func checkCancel()
+    private func checkCancel(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         guard
             
@@ -45,7 +45,7 @@ class MOptionWhistlesVsZombiesStrategyBoard:MGameStrategyMain<MOptionWhistlesVsZ
             
         else
         {
-            checkWhistles()
+            checkWhistles(scene:scene)
             
             return
         }
@@ -53,7 +53,7 @@ class MOptionWhistlesVsZombiesStrategyBoard:MGameStrategyMain<MOptionWhistlesVsZ
         closeBoard()
     }
     
-    private func checkWhistles()
+    private func checkWhistles(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         let types:[MOptionWhistlesVsZombiesWhistleType] = model.whistle.types
         
@@ -68,10 +68,27 @@ class MOptionWhistlesVsZombiesStrategyBoard:MGameStrategyMain<MOptionWhistlesVsZ
                 continue
             }
             
-            base.charge(whistleType:type)
-            closeBoard()
+            whistleSelected(type:type, scene:scene)
             
             break
         }
+    }
+    
+    private func whistleSelected(
+        type:MOptionWhistlesVsZombiesWhistleType,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        guard
+            
+            let scene:VOptionWhistlesVsZombiesScene = scene as? VOptionWhistlesVsZombiesScene
+        
+        else
+        {
+            return
+        }
+        
+        base.charge(whistleType:type)
+        scene.addWhistle(base:base)
+        closeBoard()
     }
 }
