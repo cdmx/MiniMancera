@@ -21,4 +21,16 @@ class MOptionWhistlesVsZombiesSonicBoom:MGameUpdate<MOptionWhistlesVsZombies>
                 scene:scene)
         }
     }
+    
+    //MARK: public
+    
+    func release(
+        base:MOptionWhistlesVsZombiesWhistleBase,
+        whistleType:MOptionWhistlesVsZombiesWhistleType)
+    {
+        let item:MOptionWhistlesVsZombiesSonicBoomItem = MOptionWhistlesVsZombiesSonicBoomItem(
+            base:base,
+            whistleType:whistleType)
+        items.append(item)
+    }
 }
