@@ -1,7 +1,10 @@
-import Foundation
+import UIKit
 
 class MOptionWhistlesVsZombiesWhistleTypeBlue:MOptionWhistlesVsZombiesWhistleType
 {
+    private let kSpeed:CGFloat = 20
+    private let kPower:CGFloat = 4
+    
     override var textureBoard:MGameTexture?
     {
         get
@@ -33,6 +36,22 @@ class MOptionWhistlesVsZombiesWhistleTypeBlue:MOptionWhistlesVsZombiesWhistleTyp
         {
             return String.localizedWhistlesVsZombies(
                 key:"MOptionWhistlesVsZombiesWhistleTypeBlue_descr")
+        }
+    }
+    
+    override var speed:CGFloat
+    {
+        get
+        {
+            return kSpeed
+        }
+    }
+    
+    override var power:CGFloat
+    {
+        get
+        {
+            return kPower
         }
     }
 }

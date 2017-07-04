@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MOptionWhistlesVsZombiesWhistleType
 {
@@ -8,9 +8,14 @@ class MOptionWhistlesVsZombiesWhistleType
     private(set) weak var textureGame:MGameTexture?
     private(set) var titleBoard:String?
     private(set) var descrBoard:String?
+    private(set) var colour:UIColor?
+    private(set) var speed:CGFloat
+    private(set) var power:CGFloat
     
     init(textures:MOptionWhistlesVsZombiesTextures)
     {
         self.textures = textures
+        speed = 0
+        power = 0
     }
 }
