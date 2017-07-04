@@ -33,4 +33,22 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
         
         parent.portraitOrientation()
     }
+    
+    //MARK: public
+    
+    func showBoard(modelBase:MOptionWhistlesVsZombiesWhistleBase)
+    {
+        guard
+            
+            let parent:ControllerParent = self.parent as? ControllerParent
+        
+        else
+        {
+            return
+        }
+        
+        let controller:COptionWhistlesVsZombiesBoard = COptionWhistlesVsZombiesBoard(
+            modelBase:modelBase)
+        parent.animateOver(controller:controller)
+    }
 }

@@ -10,14 +10,14 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyWait:MGameStrategy<
     {
         guard
             
-            let _:UITouch = self.model.viewBase?.lastTouch()
+            let _:UITouch = self.model.viewBase?.lastTouch(),
+            let controller:COptionWhistlesVsZombies = scene.controller as? COptionWhistlesVsZombies
             
         else
         {
             return
         }
         
-        let model:MOptionWhistlesVsZombies = scene.controller.model
-//        model.openBoardFor(base:self.model)
+        controller.showBoard(modelBase:model)
     }
 }
