@@ -1,6 +1,6 @@
-import SpriteKit
+import UIKit
 
-class VOptionWhistlesVsZombiesSonicRelease:ViewGameNode<MOptionWhistlesVsZombies>
+class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private weak var model:MOptionWhistlesVsZombiesSonicBoomItem?
     private let kColourBlendFactor:CGFloat = 1
@@ -10,17 +10,14 @@ class VOptionWhistlesVsZombiesSonicRelease:ViewGameNode<MOptionWhistlesVsZombies
         model:MOptionWhistlesVsZombiesSonicBoomItem)
     {
         self.model = model
-        let size:CGSize = controller.model.textures.sonicReleaseAnimated.textureSize
-        let animation:SKAction = controller.model.actions.actionSonicReleaseAnimation
+        let texture:MGameTexture = controller.model.textures.sonicBoom
+        let colour:UIColor = model.whistleType.colour
         
         super.init(
             controller:controller,
-            size:size,
-            zPosition:MOptionWhistlesVsZombiesZPosition.SonicRelease.rawValue,
-            colour:model.whistleType.colour)
+            texture:texture,
+            colour:colour)
         colorBlendFactor = kColourBlendFactor
-        
-        run(animation)
     }
     
     required init?(coder:NSCoder)
@@ -46,13 +43,5 @@ class VOptionWhistlesVsZombiesSonicRelease:ViewGameNode<MOptionWhistlesVsZombies
         position = CGPoint(
             x:positionX,
             y:positionY)
-    }
-    
-    //MARK: public
-    
-    func endRelease()
-    {
-        removeAllActions()
-        removeFromParent()
     }
 }

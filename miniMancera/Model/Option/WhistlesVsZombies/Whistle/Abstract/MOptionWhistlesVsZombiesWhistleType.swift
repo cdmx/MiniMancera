@@ -8,7 +8,7 @@ class MOptionWhistlesVsZombiesWhistleType
     private(set) weak var textureGame:MGameTexture?
     private(set) var titleBoard:String?
     private(set) var descrBoard:String?
-    private(set) var colour:UIColor?
+    private(set) var colour:UIColor
     private(set) var speed:TimeInterval
     private(set) var power:CGFloat
     private(set) var barrelLength:CGFloat
@@ -18,6 +18,7 @@ class MOptionWhistlesVsZombiesWhistleType
     init(textures:MOptionWhistlesVsZombiesTextures)
     {
         self.textures = textures
+        colour = UIColor.clear
         speed = kDefaultSpeed
         power = kDefaultPower
         barrelLength = 0

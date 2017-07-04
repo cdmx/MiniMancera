@@ -40,7 +40,7 @@ class MOptionWhistlesVsZombiesWhistleTypeBlue:MOptionWhistlesVsZombiesWhistleTyp
         }
     }
     
-    override var colour:UIColor?
+    override var colour:UIColor
     {
         get
         {
