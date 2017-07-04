@@ -42,24 +42,6 @@ extension ControllerGame
         view.isPaused = false
     }
     
-    func exitGame()
-    {
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            guard
-                
-                let parent:ControllerParent = self?.parent as? ControllerParent
-                
-            else
-            {
-                return
-            }
-            
-            parent.pop(vertical:ControllerParent.Vertical.bottom)
-        }
-    }
-    
     func exitGameAndPostScore()
     {
         postScore()

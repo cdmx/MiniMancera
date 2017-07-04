@@ -101,6 +101,24 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
     
     //MARK: public
     
+    func exitGame()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            guard
+                
+                let parent:ControllerParent = self?.parent as? ControllerParent
+                
+            else
+            {
+                return
+            }
+            
+            parent.pop(vertical:ControllerParent.Vertical.bottom)
+        }
+    }
+    
     func didMove()
     {
         model.didMove()

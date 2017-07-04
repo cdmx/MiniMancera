@@ -18,20 +18,20 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
         parent.landscapeOrientation()
     }
     
-    override func viewWillDisappear(_ animated:Bool)
+    override func exitGame()
     {
-        super.viewWillDisappear(animated)
-        
         guard
             
             let parent:ControllerParent = parent as? ControllerParent
             
         else
         {
-            fatalError("shit")
+            return
         }
         
         parent.portraitOrientation()
+        
+        super.exitGame()
     }
     
     //MARK: public
@@ -47,8 +47,10 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
             return
         }
         
+        self.pause()
+        
         let controller:COptionWhistlesVsZombiesBoard = COptionWhistlesVsZombiesBoard(
             modelBase:modelBase)
-        parent.animateOver(controller:controller)
+        parent.push(controller:controller, horizontal:ControllerParent.Horizontal.right)
     }
 }
