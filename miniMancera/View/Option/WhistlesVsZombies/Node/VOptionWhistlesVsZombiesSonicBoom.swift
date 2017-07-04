@@ -1,9 +1,10 @@
-import UIKit
+import SpriteKit
 
 class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private weak var model:MOptionWhistlesVsZombiesSonicBoomItem?
     private let kColourBlendFactor:CGFloat = 1
+    private let kVelocityY:CGFloat = 1
     
     init(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
@@ -43,5 +44,37 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         position = CGPoint(
             x:positionX,
             y:positionY)
+    }
+    
+    //MARK: private
+    
+    private func startPhysics()
+    {
+        guard
+            
+            let model:MOptionWhistlesVsZombiesSonicBoomItem = self.model,
+            let modelTexture:MGameTexture = self.modelTexture
+            
+        else
+        {
+            return
+        }
+        
+        let size:CGSize = modelTexture.size
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
+        physicsBody.isDynamic = true
+        physicsBody.friction = 0
+        physicsBody.allowsRotation = false
+        physicsBody.restitution = 1
+        physicsBody.angularVelocity = 0
+//        physicsBody.density = model.mass
+        physicsBody.velocity = CGVector(
+            dx:0,
+            dy:kVelocityY)
+        
+        physicsBody.categoryBitMask = MOptionWhistlesVsZombiesPhysicsStruct.SonicBoom
+        physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
+        physicsBody.collisionBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
+        self.physicsBody = physicsBody
     }
 }

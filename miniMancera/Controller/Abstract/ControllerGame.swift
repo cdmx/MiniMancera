@@ -47,6 +47,14 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
         return true
     }
     
+    override var shouldAutorotate:Bool
+    {
+        get
+        {
+            return true
+        }
+    }
+    
     override func loadView()
     {
         let view:ViewGame = ViewGame(controller:self)
