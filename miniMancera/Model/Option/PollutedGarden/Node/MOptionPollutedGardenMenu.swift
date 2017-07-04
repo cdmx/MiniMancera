@@ -2,5 +2,5 @@ import Foundation
 
 class MOptionPollutedGardenMenu
 {
-    weak var view:VOptionPollutedGardenMenu?
+    weak var view:ViewGameNodeMenu<MOptionPollutedGarden>?
 }

@@ -56,8 +56,9 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
             controller:controller)
         model.hud.view = hud
         
-        let menu:VOptionPollutedGardenMenu = VOptionPollutedGardenMenu(
-            controller:controller)
+        let menu:ViewGameNodeMenu<MOptionPollutedGarden> = ViewGameNodeMenu<MOptionPollutedGarden>(
+            controller:controller,
+            texture:model.textures.menu)
         model.menu.view = menu
         
         let controls:VOptionPollutedGardenControls = VOptionPollutedGardenControls(
