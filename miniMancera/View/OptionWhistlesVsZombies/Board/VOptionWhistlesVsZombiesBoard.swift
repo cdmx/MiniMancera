@@ -1,8 +1,10 @@
 import UIKit
 
-class VOptionWhistlesVsZombiesBoard:View
+class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+    private weak var collectionView:VCollection!
     private let kBarHeight:CGFloat = 100
+    private let kCellWidth:CGFloat = 200
     
     required init(controller:UIViewController)
     {
@@ -23,8 +25,21 @@ class VOptionWhistlesVsZombiesBoard:View
         let bar:VOptionWhistlesVsZombiesBoardBar = VOptionWhistlesVsZombiesBoardBar(
             controller:controller)
         
+        let collectionView:VCollection = VCollection()
+        collectionView.alwaysBounceHorizontal = true
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.registerCell(cell:VOptionWhistlesVsZombiesBoardCell.self)
+        self.collectionView = collectionView
+        
+        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+        {
+            flow.scrollDirection = UICollectionViewScrollDirection.horizontal
+        }
+        
         addSubview(blur)
         addSubview(bar)
+        addSubview(collectionView)
         
         NSLayoutConstraint.equals(
             view:blur,
@@ -39,10 +54,27 @@ class VOptionWhistlesVsZombiesBoard:View
         NSLayoutConstraint.equalsHorizontal(
             view:bar,
             toView:self)
+        
+        NSLayoutConstraint.topToBottom(
+            view:collectionView,
+            toView:bar)
+        NSLayoutConstraint.bottomToBottom(
+            view:collectionView,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
+            view:collectionView,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: collectionView delegate
+    
+    func numberOfSections(in collectionView:UICollectionView) -> Int
+    {
+        return 1
     }
 }
