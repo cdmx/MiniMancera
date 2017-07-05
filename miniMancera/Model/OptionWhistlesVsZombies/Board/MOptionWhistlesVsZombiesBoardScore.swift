@@ -4,7 +4,7 @@ class MOptionWhistlesVsZombiesBoardScore
 {
     let items:[MOptionWhistlesVsZombiesBoardScoreItem]
     
-    init()
+    init(whistle:MOptionWhistlesVsZombiesWhistleProtocol)
     {
         items = []
     }

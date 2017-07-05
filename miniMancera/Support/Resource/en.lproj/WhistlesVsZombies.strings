@@ -1,9 +1,4 @@
 "MHomeOptionsWhistlesVsZombies_title"="Silbatos vs Zombies";
-"MOptionWhistlesVsZombiesWhistleTypePink_title"="Rosa";
-"MOptionWhistlesVsZombiesWhistleTypeBlue_title"="Azul";
-"MOptionWhistlesVsZombiesWhistleTypeOrange_title"="Naranja";
-"MOptionWhistlesVsZombiesWhistleTypePink_descr"="Máxima Velocidad";
-"MOptionWhistlesVsZombiesWhistleTypeBlue_descr"="Máximo Alcance";
-"MOptionWhistlesVsZombiesWhistleTypeOrange_descr"="Máxima Destrucción";
+"MOptionWhistlesVsZombiesBoardItemBlue_title"="Azul";
 
 "VOptionWhistlesVsZombiesBoardBar_labelTitle"="Elige un Silbato";

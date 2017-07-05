@@ -14,7 +14,7 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyCharged:MGameStrategy<
         whistleType:MOptionWhistlesVsZombiesWhistleType)
     {
         self.whistleType = whistleType
-        deltaTime = kDeltaDividend / whistleType.speed
+        deltaTime = kDeltaDividend / whistleType.whistle.speed
         super.init(model:model)
     }
     
