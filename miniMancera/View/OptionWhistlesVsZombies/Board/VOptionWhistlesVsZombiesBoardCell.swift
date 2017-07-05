@@ -7,12 +7,13 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
     private weak var labelPrice:UILabel!
     private let kAlphaSelected:CGFloat = 0.3
     private let kAlphaNotSelected:CGFloat = 1
-    private let kImageHeight:CGFloat = 110
-    private let kTitleHeight:CGFloat = 20
-    private let kCoinHeight:CGFloat = 40
-    private let kCoinRight:CGFloat = -80
-    private let kCoinWidth:CGFloat = 30
-    private let kPriceWidth:CGFloat = 60
+    private let kImageHeight:CGFloat = 105
+    private let kTitleHeight:CGFloat = 11
+    private let kCoinHeight:CGFloat = 50
+    private let kCoinRight:CGFloat = -55
+    private let kCoinWidth:CGFloat = 45
+    private let kPriceTop:CGFloat = -3
+    private let kPriceWidth:CGFloat = 80
     
     override init(frame:CGRect)
     {
@@ -32,7 +33,7 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.game(size:10)
+        labelTitle.font = UIFont.game(size:6)
         labelTitle.textColor = UIColor.white
         self.labelTitle = labelTitle
         
@@ -48,7 +49,7 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
         labelPrice.translatesAutoresizingMaskIntoConstraints = false
         labelPrice.backgroundColor = UIColor.clear
         labelPrice.textAlignment = NSTextAlignment.right
-        labelPrice.font = UIFont.game(size:16)
+        labelPrice.font = UIFont.game(size:17)
         labelPrice.textColor = UIColor(
             red:0.972549019607843,
             green:0.905882352941176,
@@ -95,9 +96,13 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
             view:imageCoin,
             constant:kCoinWidth)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToBottom(
             view:labelPrice,
-            toView:imageCoin)
+            toView:labelTitle,
+            constant:kPriceTop)
+        NSLayoutConstraint.height(
+            view:labelPrice,
+            constant:kCoinHeight)
         NSLayoutConstraint.rightToLeft(
             view:labelPrice,
             toView:imageCoin)

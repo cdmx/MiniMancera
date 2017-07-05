@@ -15,7 +15,10 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
             return
         }
         
-        parent.landscapeOrientation()
+        if parent.supportedInterfaceOrientations != UIInterfaceOrientationMask.landscape
+        {
+            parent.landscapeOrientation()
+        }
     }
     
     override func exitGame()
