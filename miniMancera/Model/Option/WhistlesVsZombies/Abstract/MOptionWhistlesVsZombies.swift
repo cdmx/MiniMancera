@@ -20,6 +20,8 @@ class MOptionWhistlesVsZombies:MGame
         
         actions.factoryAnimations(textures:textures)
         whistle.factoryWithTextures(textures:textures)
+        
+        startLevel()
     }
     
     override var startSceneType:SKScene.Type?

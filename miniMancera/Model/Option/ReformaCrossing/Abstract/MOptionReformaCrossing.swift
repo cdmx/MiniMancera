@@ -36,6 +36,8 @@ class MOptionReformaCrossing:MGame
         
         super.init()
         actions.createAnimations(textures:textures)
+        
+        startLevel()
     }
     
     override var startSceneType:SKScene.Type?

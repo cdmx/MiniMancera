@@ -14,6 +14,8 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
         let newScene:VOptionPollutedGardenScene = VOptionPollutedGardenScene(
             controller:self)
         presentScene(newScene:newScene)
+        
+        model.startLevel()
     }
     
     private func presentScene(newScene:SKScene)

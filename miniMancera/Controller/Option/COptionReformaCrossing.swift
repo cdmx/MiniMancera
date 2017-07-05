@@ -14,6 +14,8 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         let newScene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
             controller:self)
         presentScene(newScene:newScene)
+        
+        model.startLevel()
     }
     
     //MARK: public

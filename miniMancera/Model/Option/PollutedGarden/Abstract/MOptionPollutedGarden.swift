@@ -36,6 +36,8 @@ class MOptionPollutedGarden:MGame
         plant.factoryAnimations(
             actions:actions,
             textures:textures)
+        
+        startLevel()
     }
     
     override var startSceneType:SKScene.Type?
