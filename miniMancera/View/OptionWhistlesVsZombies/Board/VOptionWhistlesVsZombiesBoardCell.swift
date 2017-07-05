@@ -1,7 +1,8 @@
 import UIKit
 
-class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
+class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+    private weak var collectionView:VCollection!
     private weak var imageView:UIImageView!
     private weak var labelTitle:UILabel!
     private weak var labelPrice:UILabel!
@@ -14,6 +15,7 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
     private let kCoinWidth:CGFloat = 45
     private let kPriceTop:CGFloat = -3
     private let kPriceWidth:CGFloat = 80
+    private let kScoreCellHeight:CGFloat = 40
     
     override init(frame:CGRect)
     {
@@ -57,10 +59,27 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
             alpha:1)
         self.labelPrice = labelPrice
         
+        let collectionView:VCollection = VCollection()
+        collectionView.isUserInteractionEnabled = false
+        collectionView.isScrollEnabled = false
+        collectionView.bounces = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.registerCell(cell:VOptionWhistlesVsZombiesBoardCellScore.self)
+        self.collectionView = collectionView
+        
+        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+        {
+            flow.itemSize = CGSize(
+                width:collectionView.bounds.width,
+                height:kScoreCellHeight)
+        }
+        
         addSubview(imageCoin)
         addSubview(imageView)
         addSubview(labelTitle)
         addSubview(labelPrice)
+        addSubview(collectionView)
         
         NSLayoutConstraint.topToTop(
             view:imageView,
@@ -109,6 +128,16 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
         NSLayoutConstraint.width(
             view:labelPrice,
             constant:kPriceWidth)
+        
+        NSLayoutConstraint.topToBottom(
+            view:collectionView,
+            toView:imageCoin)
+        NSLayoutConstraint.bottomToBottom(
+            view:collectionView,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
+            view:collectionView,
+            toView:self)
     }
     
     required init?(coder:NSCoder)
