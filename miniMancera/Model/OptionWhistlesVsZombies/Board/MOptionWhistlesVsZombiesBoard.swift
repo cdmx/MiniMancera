@@ -6,6 +6,13 @@ class MOptionWhistlesVsZombiesBoard
     
     init()
     {
-        items = []
+        let itemPink:MOptionWhistlesVsZombiesBoardItemPink = MOptionWhistlesVsZombiesBoardItemPink()
+        let itemBlue:MOptionWhistlesVsZombiesBoardItemBlue = MOptionWhistlesVsZombiesBoardItemBlue()
+        let itemOrange:MOptionWhistlesVsZombiesBoardItemOrange = MOptionWhistlesVsZombiesBoardItemOrange()
+        
+        items = [
+            itemPink,
+            itemBlue,
+            itemOrange]
     }
 }
