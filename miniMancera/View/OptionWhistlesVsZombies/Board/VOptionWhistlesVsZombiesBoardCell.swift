@@ -72,7 +72,7 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDe
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.itemSize = CGSize(
-                width:collectionView.bounds.width,
+                width:frame.width,
                 height:kScoreCellHeight)
         }
         

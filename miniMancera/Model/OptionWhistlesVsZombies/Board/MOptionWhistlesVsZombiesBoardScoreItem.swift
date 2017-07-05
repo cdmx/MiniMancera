@@ -1,6 +1,7 @@
 import Foundation
 
-class MOptionWhistlesVsZombiesBoardScoreItem
+struct MOptionWhistlesVsZombiesBoardScoreItem
 {
-    
+    let title:String
+    let amount:Int
 }
