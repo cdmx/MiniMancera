@@ -71,10 +71,39 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
         return nil
     }
     
+    //MARK: private
+    
+    private func modelAtIndex(index:IndexPath) -> MOptionWhistlesVsZombiesBoardItemProtocol
+    {
+        let controller:COptionWhistlesVsZombiesBoard = self.controller as! COptionWhistlesVsZombiesBoard
+        let item:MOptionWhistlesVsZombiesBoardItemProtocol = controller.model.items[index.item]
+        
+        return item
+    }
+    
     //MARK: collectionView delegate
     
     func numberOfSections(in collectionView:UICollectionView) -> Int
     {
         return 1
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
+    {
+        let controller:COptionWhistlesVsZombiesBoard = self.controller as! COptionWhistlesVsZombiesBoard
+        let count:Int = controller.model.items.count
+        
+        return count
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let item:MOptionWhistlesVsZombiesBoardItemProtocol = modelAtIndex(index:indexPath)
+        let cell:VOptionWhistlesVsZombiesBoardCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier:VOptionWhistlesVsZombiesBoardCell.reusableIdentifier,
+            for:indexPath) as! VOptionWhistlesVsZombiesBoardCell
+        cell.config(model:item)
+        
+        return cell
     }
 }

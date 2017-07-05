@@ -4,6 +4,7 @@ class COptionWhistlesVsZombiesBoard:Controller<VOptionWhistlesVsZombiesBoard>
 {
     private weak var controllerGame:COptionWhistlesVsZombies?
     private weak var modelBase:MOptionWhistlesVsZombiesWhistleBase!
+    let model:MOptionWhistlesVsZombiesBoard
     
     init(
         controllerGame:COptionWhistlesVsZombies,
@@ -11,6 +12,8 @@ class COptionWhistlesVsZombiesBoard:Controller<VOptionWhistlesVsZombiesBoard>
     {
         self.controllerGame = controllerGame
         self.modelBase = modelBase
+        model = MOptionWhistlesVsZombiesBoard()
+        
         super.init()
     }
     
