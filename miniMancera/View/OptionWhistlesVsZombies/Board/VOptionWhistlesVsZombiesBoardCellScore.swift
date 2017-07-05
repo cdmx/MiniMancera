@@ -4,7 +4,8 @@ class VOptionWhistlesVsZombiesBoardCellScore:UICollectionViewCell
 {
     private weak var imageView:UIImageView!
     private weak var labelTitle:UILabel!
-    private let kImageWidth:CGFloat = 75
+    private let kImageWidth:CGFloat = 90
+    private let kImageRight:CGFloat = -30
     
     override init(frame:CGRect)
     {
@@ -24,7 +25,7 @@ class VOptionWhistlesVsZombiesBoardCellScore:UICollectionViewCell
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
-        labelTitle.font = UIFont.regular(size:14)
+        labelTitle.font = UIFont.regular(size:11)
         labelTitle.textColor = UIColor.white
         labelTitle.textAlignment = NSTextAlignment.right
         self.labelTitle = labelTitle
@@ -37,7 +38,8 @@ class VOptionWhistlesVsZombiesBoardCellScore:UICollectionViewCell
             toView:self)
         NSLayoutConstraint.rightToRight(
             view:imageView,
-            toView:self)
+            toView:self,
+            constant:kImageRight)
         NSLayoutConstraint.width(
             view:imageView,
             constant:kImageWidth)

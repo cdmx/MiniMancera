@@ -5,6 +5,8 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
     private weak var collectionView:VCollection!
     private let kBarHeight:CGFloat = 70
     private let kCellWidth:CGFloat = 200
+    private let kInterItem:CGFloat = 10
+    private let kCollectionBottom:CGFloat = 10
     private let kDeselectTime:TimeInterval = 0.3
     
     required init(controller:UIViewController)
@@ -36,6 +38,8 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
+            flow.minimumLineSpacing = kInterItem
+            flow.minimumInteritemSpacing = kInterItem
         }
         
         addSubview(blur)
@@ -88,23 +92,31 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
     {
         let controller:COptionWhistlesVsZombiesBoard = self.controller as! COptionWhistlesVsZombiesBoard
         let count:Int = controller.model.items.count
+        let countFloat:CGFloat = CGFloat(count)
         let width:CGFloat = collectionView.bounds.width
-        let cellsWidth:CGFloat = CGFloat(count) * kCellWidth
+        let cellsWidth:CGFloat = countFloat * kCellWidth
+        let interItemWidths:CGFloat = (countFloat + 1) * kInterItem
+        let contentWidth:CGFloat = cellsWidth + interItemWidths
         let insets:UIEdgeInsets
         
-        if cellsWidth >= width
+        if contentWidth >= width
         {
-            insets = UIEdgeInsets.zero
+            insets = UIEdgeInsets(
+                top:0,
+                left:kInterItem,
+                bottom:kCollectionBottom,
+                right:kInterItem)
         }
         else
         {
-            let deltaWidth:CGFloat = width - cellsWidth
+            let deltaWidth:CGFloat = width - contentWidth
             let margin:CGFloat = deltaWidth / 2.0
+            let marginBorder:CGFloat = margin + kInterItem
             insets = UIEdgeInsets(
                 top:0,
-                left:margin,
-                bottom:0,
-                right:margin)
+                left:marginBorder,
+                bottom:kCollectionBottom,
+                right:marginBorder)
         }
         
         return insets
@@ -113,7 +125,8 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
     {
         let height:CGFloat = collectionView.bounds.height
-        let size:CGSize = CGSize(width:kCellWidth, height:height)
+        let usableHeight:CGFloat = height - kCollectionBottom
+        let size:CGSize = CGSize(width:kCellWidth, height:usableHeight)
         
         return size
     }

@@ -9,20 +9,25 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDe
     private weak var labelPrice:UILabel!
     private let kAlphaSelected:CGFloat = 0.3
     private let kAlphaNotSelected:CGFloat = 1
-    private let kImageHeight:CGFloat = 105
+    private let kImageHeight:CGFloat = 125
     private let kTitleHeight:CGFloat = 11
     private let kCoinHeight:CGFloat = 50
     private let kCoinRight:CGFloat = -55
     private let kCoinWidth:CGFloat = 45
     private let kPriceTop:CGFloat = -3
     private let kPriceWidth:CGFloat = 80
-    private let kScoreCellHeight:CGFloat = 40
+    private let kScoreCellHeight:CGFloat = 26
+    private let kBorderWidth:CGFloat = 1
+    private let kCornerRadius:CGFloat = 7
     
     override init(frame:CGRect)
     {
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clear
+        layer.borderWidth = kBorderWidth
+        layer.cornerRadius = kCornerRadius
+        layer.borderColor = UIColor.white.cgColor
         
         let imageView:UIImageView = UIImageView()
         imageView.isUserInteractionEnabled = false
