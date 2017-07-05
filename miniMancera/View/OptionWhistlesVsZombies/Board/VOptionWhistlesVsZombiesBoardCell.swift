@@ -2,6 +2,7 @@ import UIKit
 
 class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
+    private weak var model:MOptionWhistlesVsZombiesBoardItemProtocol?
     private weak var collectionView:VCollection!
     private weak var imageView:UIImageView!
     private weak var labelTitle:UILabel!
@@ -175,12 +176,66 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDe
         }
     }
     
+    private func modelAtIndex(index:IndexPath) -> MOptionWhistlesVsZombiesBoardScoreItem
+    {
+        let item:MOptionWhistlesVsZombiesBoardScoreItem = model!.score.items[index.item]
+        
+        return item
+    }
+    
     //MARK: public
     
     func config(model:MOptionWhistlesVsZombiesBoardItemProtocol)
     {
+        self.model = model
         imageView.image = model.image
         labelTitle.text = model.title
         labelPrice.text = "\(model.price)"
+        
+        hover()
+        collectionView.reloadData()
+    }
+    
+    //MARK: collectionView delegate
+    
+    func numberOfSections(in collectionView:UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
+    {
+        guard
+        
+            let count:Int = model?.score.items.count
+        
+        else
+        {
+            return 0
+        }
+        
+        return count
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let item:MOptionWhistlesVsZombiesBoardScoreItem = modelAtIndex(index:indexPath)
+        let cell:VOptionWhistlesVsZombiesBoardCellScore = collectionView.dequeueReusableCell(
+            withReuseIdentifier:
+            VOptionWhistlesVsZombiesBoardCellScore.reusableIdentifier,
+            for:indexPath) as! VOptionWhistlesVsZombiesBoardCellScore
+        cell.config(model:item)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        return false
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldHighlightItemAt indexPath:IndexPath) -> Bool
+    {
+        return false
     }
 }

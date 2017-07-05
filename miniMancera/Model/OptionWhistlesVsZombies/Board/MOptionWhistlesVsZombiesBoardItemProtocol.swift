@@ -1,6 +1,6 @@
 import UIKit
 
-protocol MOptionWhistlesVsZombiesBoardItemProtocol
+protocol MOptionWhistlesVsZombiesBoardItemProtocol:class
 {
     var score:MOptionWhistlesVsZombiesBoardScore { get }
     var image:UIImage { get }
