@@ -153,7 +153,7 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
         { [weak collectionView] in
             
             collectionView?.selectItem(
-                at:indexPath,
+                at:nil,
                 animated:true,
                 scrollPosition:UICollectionViewScrollPosition())
             collectionView?.isUserInteractionEnabled = true
