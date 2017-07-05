@@ -2,10 +2,10 @@ import UIKit
 
 class MOptionWhistlesVsZombiesWhistlePink:MOptionWhistlesVsZombiesWhistleProtocol
 {
-    private let kSpeed:CGFloat = 10
+    private let kSpeed:TimeInterval = 10
     private let kPower:CGFloat = 10
     
-    var speed:CGFloat
+    var speed:TimeInterval
     {
         get
         {

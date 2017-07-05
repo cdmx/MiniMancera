@@ -2,9 +2,14 @@ import UIKit
 
 class MOptionWhistlesVsZombiesWhistleTypeBlue:MOptionWhistlesVsZombiesWhistleType
 {
-    private let kSpeed:TimeInterval = 20
-    private let kPower:CGFloat = 4
     private let kBarrelLength:CGFloat = 20
+    
+    init(textures:MOptionWhistlesVsZombiesTextures)
+    {
+        let whistle:MOptionWhistlesVsZombiesWhistleBlue = MOptionWhistlesVsZombiesWhistleBlue()
+        
+        super.init(whistle:whistle, textures:textures)
+    }
     
     override var textureGame:MGameTexture?
     {
@@ -19,22 +24,6 @@ class MOptionWhistlesVsZombiesWhistleTypeBlue:MOptionWhistlesVsZombiesWhistleTyp
         get
         {
             return UIColor.colourSuccess
-        }
-    }
-    
-    override var speed:TimeInterval
-    {
-        get
-        {
-            return kSpeed
-        }
-    }
-    
-    override var power:CGFloat
-    {
-        get
-        {
-            return kPower
         }
     }
     

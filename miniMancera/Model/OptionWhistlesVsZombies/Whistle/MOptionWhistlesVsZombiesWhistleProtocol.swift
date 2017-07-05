@@ -2,6 +2,6 @@ import UIKit
 
 protocol MOptionWhistlesVsZombiesWhistleProtocol
 {
-    var speed:CGFloat { get }
+    var speed:TimeInterval { get }
     var power:CGFloat { get }
 }
