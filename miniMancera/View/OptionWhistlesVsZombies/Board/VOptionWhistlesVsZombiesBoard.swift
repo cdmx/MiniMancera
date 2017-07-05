@@ -3,7 +3,7 @@ import UIKit
 class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     private weak var collectionView:VCollection!
-    private let kBarHeight:CGFloat = 100
+    private let kBarHeight:CGFloat = 70
     private let kCellWidth:CGFloat = 200
     
     required init(controller:UIViewController)
@@ -82,6 +82,40 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
     }
     
     //MARK: collectionView delegate
+    
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section:Int) -> UIEdgeInsets
+    {
+        let controller:COptionWhistlesVsZombiesBoard = self.controller as! COptionWhistlesVsZombiesBoard
+        let count:Int = controller.model.items.count
+        let width:CGFloat = collectionView.bounds.width
+        let cellsWidth:CGFloat = CGFloat(count) * kCellWidth
+        let insets:UIEdgeInsets
+        
+        if cellsWidth >= width
+        {
+            insets = UIEdgeInsets.zero
+        }
+        else
+        {
+            let deltaWidth:CGFloat = width - cellsWidth
+            let margin:CGFloat = deltaWidth / 2.0
+            insets = UIEdgeInsets(
+                top:0,
+                left:margin,
+                bottom:0,
+                right:margin)
+        }
+        
+        return insets
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath:IndexPath) -> CGSize
+    {
+        let height:CGFloat = collectionView.bounds.height
+        let size:CGSize = CGSize(width:kCellWidth, height:height)
+        
+        return size
+    }
     
     func numberOfSections(in collectionView:UICollectionView) -> Int
     {

@@ -3,7 +3,7 @@ import UIKit
 class VOptionWhistlesVsZombiesBoardBar:UIView
 {
     private weak var controller:COptionWhistlesVsZombiesBoard!
-    private let kCancelWidth:CGFloat = 100
+    private let kCancelWidth:CGFloat = 80
     
     init(controller:COptionWhistlesVsZombiesBoard)
     {
@@ -19,7 +19,7 @@ class VOptionWhistlesVsZombiesBoardBar:UIView
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
         labelTitle.textColor = UIColor.white
-        labelTitle.font = UIFont.game(size:14)
+        labelTitle.font = UIFont.bold(size:16)
         labelTitle.text = String.localizedWhistlesVsZombies(
             key:"VOptionWhistlesVsZombiesBoardBar_labelTitle")
         
