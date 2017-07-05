@@ -13,6 +13,16 @@ class VOptionWhistlesVsZombiesBoardBar:UIView
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
+        let labelTitle:UILabel = UILabel()
+        labelTitle.isUserInteractionEnabled = false
+        labelTitle.translatesAutoresizingMaskIntoConstraints = false
+        labelTitle.backgroundColor = UIColor.clear
+        labelTitle.textAlignment = NSTextAlignment.center
+        labelTitle.textColor = UIColor.white
+        labelTitle.font = UIFont.game(size:14)
+        labelTitle.text = String.localizedWhistlesVsZombies(
+            key:"VOptionWhistlesVsZombiesBoardBar_labelTitle")
+        
         let buttonCancel:UIButton = UIButton()
         buttonCancel.clipsToBounds = true
         buttonCancel.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +36,12 @@ class VOptionWhistlesVsZombiesBoardBar:UIView
             action:#selector(actionCancel(sender:)),
             for:UIControlEvents.touchUpInside)
         
+        addSubview(labelTitle)
         addSubview(buttonCancel)
+        
+        NSLayoutConstraint.equals(
+            view:labelTitle,
+            toView:self)
         
         NSLayoutConstraint.equalsVertical(
             view:buttonCancel,
