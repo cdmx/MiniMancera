@@ -2,5 +2,7 @@
 "MOptionWhistlesVsZombiesBoardItemBlue_title"="AZUL";
 "MOptionWhistlesVsZombiesBoardItemPink_title"="ROSA";
 "MOptionWhistlesVsZombiesBoardItemOrange_title"="NARANJA";
+"MOptionWhistlesVsZombiesBoardScore_titleSpeed"="Velocidad";
+"MOptionWhistlesVsZombiesBoardScore_titlePower"="Fuerza";
 
 "VOptionWhistlesVsZombiesBoardBar_labelTitle"="Elige un Silbato";
