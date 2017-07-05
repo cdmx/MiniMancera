@@ -34,24 +34,35 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
         super.exitGame()
     }
     
-    //MARK: public
+    //MARK: private
     
-    func showBoard(modelBase:MOptionWhistlesVsZombiesWhistleBase)
+    private func asyncShowBoard(modelBase:MOptionWhistlesVsZombiesWhistleBase)
     {
         guard
             
             let parent:ControllerParent = self.parent as? ControllerParent
-        
+            
         else
         {
             return
         }
         
-        pause()
-        
         let controller:COptionWhistlesVsZombiesBoard = COptionWhistlesVsZombiesBoard(
             controllerGame:self,
             modelBase:modelBase)
         parent.animateOver(controller:controller)
+    }
+    
+    //MARK: public
+    
+    func showBoard(modelBase:MOptionWhistlesVsZombiesWhistleBase)
+    {
+        pause()
+        
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncShowBoard(modelBase:modelBase)
+        }
     }
 }

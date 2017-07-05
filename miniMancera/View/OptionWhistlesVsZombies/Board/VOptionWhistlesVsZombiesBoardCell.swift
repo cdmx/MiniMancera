@@ -4,8 +4,10 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
 {
     private weak var imageView:UIImageView!
     private weak var labelTitle:UILabel!
+    private let kAlphaSelected:CGFloat = 0.3
+    private let kAlphaNotSelected:CGFloat = 1
     private let kImageHeight:CGFloat = 110
-    private let kTitleHeight:CGFloat = 30
+    private let kTitleHeight:CGFloat = 25
     
     override init(frame:CGRect)
     {
@@ -25,7 +27,7 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.game(size:12)
+        labelTitle.font = UIFont.game(size:11)
         labelTitle.textColor = UIColor.white
         self.labelTitle = labelTitle
         
@@ -56,6 +58,36 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override var isSelected:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    override var isHighlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    //MARK: private
+    
+    private func hover()
+    {
+        if isSelected || isHighlighted
+        {
+            alpha = kAlphaSelected
+        }
+        else
+        {
+            alpha = kAlphaNotSelected
+        }
     }
     
     //MARK: public

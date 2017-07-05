@@ -5,6 +5,7 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
     private weak var collectionView:VCollection!
     private let kBarHeight:CGFloat = 70
     private let kCellWidth:CGFloat = 200
+    private let kDeselectTime:TimeInterval = 0.3
     
     required init(controller:UIViewController)
     {
@@ -139,5 +140,23 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
         cell.config(model:item)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath:IndexPath)
+    {
+        collectionView.isUserInteractionEnabled = false
+        
+        let item:MOptionWhistlesVsZombiesBoardItemProtocol = modelAtIndex(index:indexPath)
+        
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kDeselectTime)
+        { [weak collectionView] in
+            
+            collectionView?.selectItem(
+                at:indexPath,
+                animated:true,
+                scrollPosition:UICollectionViewScrollPosition())
+            collectionView?.isUserInteractionEnabled = true
+        }
     }
 }
