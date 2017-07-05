@@ -3,8 +3,8 @@ import UIKit
 class MOptionWhistlesVsZombiesBoardScore
 {
     let items:[MOptionWhistlesVsZombiesBoardScoreItem]
-    private static let kSpeedDivider:TimeInterval = 10
-    private static let kPowerDivider:CGFloat = 10
+    private static let kSpeedDivider:TimeInterval = 5
+    private static let kPowerDivider:CGFloat = 5
     
     init(whistle:MOptionWhistlesVsZombiesWhistleProtocol)
     {

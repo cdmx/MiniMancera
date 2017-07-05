@@ -64,7 +64,44 @@ class VOptionWhistlesVsZombiesBoardCellScore:UICollectionViewCell
     
     private func imageForAmount(amount:Int)
     {
-        imageView.image = #imageLiteral(resourceName: "assetWhistlesVsZombiesBoardScore5")
+        switch amount
+        {
+        case 0:
+            
+            imageView.image = #imageLiteral(resourceName: "assetWhistlesVsZombiesBoardScore0")
+            
+            break
+            
+        case 1:
+            
+            imageView.image = #imageLiteral(resourceName: "assetWhistlesVsZombiesBoardScore1")
+            
+            break
+            
+        case 2:
+            
+            imageView.image = #imageLiteral(resourceName: "assetWhistlesVsZombiesBoardScore2")
+            
+            break
+            
+        case 3:
+            
+            imageView.image = #imageLiteral(resourceName: "assetWhistlesVsZombiesBoardScore3")
+            
+            break
+            
+        case 4:
+            
+            imageView.image = #imageLiteral(resourceName: "assetWhistlesVsZombiesBoardScore4")
+            
+            break
+            
+        default:
+            
+            imageView.image = #imageLiteral(resourceName: "assetWhistlesVsZombiesBoardScore5")
+            
+            break
+        }
     }
     
     //MARK: public

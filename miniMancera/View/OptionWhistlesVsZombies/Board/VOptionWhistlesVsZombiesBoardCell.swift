@@ -10,7 +10,8 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDe
     private let kAlphaSelected:CGFloat = 0.3
     private let kAlphaNotSelected:CGFloat = 1
     private let kImageHeight:CGFloat = 125
-    private let kTitleHeight:CGFloat = 11
+    private let kTitleHeight:CGFloat = 13
+    private let kTitleTop:CGFloat = -10
     private let kCoinHeight:CGFloat = 50
     private let kCoinRight:CGFloat = -55
     private let kCoinWidth:CGFloat = 45
@@ -99,7 +100,8 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDe
         
         NSLayoutConstraint.topToBottom(
             view:labelTitle,
-            toView:imageView)
+            toView:imageView,
+            constant:kTitleTop)
         NSLayoutConstraint.height(
             view:labelTitle,
             constant:kTitleHeight)
