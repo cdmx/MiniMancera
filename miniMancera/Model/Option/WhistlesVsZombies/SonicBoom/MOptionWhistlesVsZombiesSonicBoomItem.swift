@@ -51,8 +51,6 @@ class MOptionWhistlesVsZombiesSonicBoomItem:MGameUpdate<MOptionWhistlesVsZombies
     {
         strategy = MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving(
             model:self)
-        
-        viewRelease?.endRelease()
         createBoom(scene:scene)
     }
     

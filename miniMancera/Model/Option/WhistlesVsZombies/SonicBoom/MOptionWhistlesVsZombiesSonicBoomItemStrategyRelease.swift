@@ -4,7 +4,7 @@ class MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease:MGameStrategy<MOption
     MOptionWhistlesVsZombies>
 {
     private var startingTime:TimeInterval?
-    private let kDuration:TimeInterval = 0.7
+    private let kDuration:TimeInterval = 0.2
     
     override func update(
         elapsedTime:TimeInterval,

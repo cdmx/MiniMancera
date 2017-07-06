@@ -3,6 +3,7 @@ import SpriteKit
 class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private weak var model:MOptionWhistlesVsZombiesSonicBoomItem?
+    private weak var animatedTexture:MGameTextureAnimated!
     private let kColourBlendFactor:CGFloat = 1
     private let kVelocityX:CGFloat = 100
     
@@ -11,15 +12,19 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         model:MOptionWhistlesVsZombiesSonicBoomItem)
     {
         self.model = model
-        let texture:MGameTexture = controller.model.textures.sonicBoom
+        animatedTexture = controller.model.textures.sonicBoomAnimated
+        let animation:SKAction = controller.model.actions.actionSonicBoomAnimation
         let colour:UIColor = model.whistleType.colour
         
         super.init(
             controller:controller,
-            texture:texture,
+            size:animatedTexture.textureSize,
+            zPosition:MOptionWhistlesVsZombiesZPosition.SonicBoom.rawValue,
             colour:colour)
         colorBlendFactor = kColourBlendFactor
         startPhysics()
+        
+        run(animation)
     }
     
     required init?(coder:NSCoder)
@@ -54,14 +59,14 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         guard
             
             let model:MOptionWhistlesVsZombiesSonicBoomItem = self.model,
-            let modelTexture:MGameTexture = self.modelTexture
+            let animatedTexture:MGameTextureAnimated = self.animatedTexture
             
         else
         {
             return
         }
         
-        let size:CGSize = modelTexture.size
+        let size:CGSize = animatedTexture.textureSize
         let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
         physicsBody.isDynamic = true
         physicsBody.friction = 0
