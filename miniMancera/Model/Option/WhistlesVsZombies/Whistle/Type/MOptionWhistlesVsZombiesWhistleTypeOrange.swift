@@ -7,7 +7,7 @@ class MOptionWhistlesVsZombiesWhistleTypeOrange:MOptionWhistlesVsZombiesWhistleT
     private(set) var textureGame:MGameTexture
     private(set) var colour:UIColor
     private(set) var barrelLength:CGFloat
-    private let kBarrelLength:CGFloat = 20
+    private let kBarrelLength:CGFloat = 18
     
     init(textures:MOptionWhistlesVsZombiesTextures)
     {
