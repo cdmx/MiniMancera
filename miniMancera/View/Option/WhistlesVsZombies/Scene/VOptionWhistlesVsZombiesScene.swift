@@ -26,6 +26,9 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         let physicHome:VOptionWhistlesVsZombiesPhysicHome = VOptionWhistlesVsZombiesPhysicHome(
             controller:controller)
         
+        let physicSonicLimit:VOptionWhistlesVsZombiesPhysicSonicLimit = VOptionWhistlesVsZombiesPhysicSonicLimit(
+            controller:controller)
+        
         let menu:ViewGameNodeMenu<MOptionWhistlesVsZombies> = ViewGameNodeMenu(
             controller:controller,
             texture:model.textures.menu,
@@ -35,6 +38,7 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         addChild(background)
         factoryBases()
         addChild(physicHome)
+        addChild(physicSonicLimit)
         
         addChild(menu)
     }
