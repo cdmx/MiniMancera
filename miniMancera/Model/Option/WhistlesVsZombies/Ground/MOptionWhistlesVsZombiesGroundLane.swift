@@ -2,5 +2,11 @@ import UIKit
 
 class MOptionWhistlesVsZombiesGroundLane
 {
-    private let kHeight:CGFloat = 56
+    let positionY:CGFloat
+    private let kHeight_2:CGFloat = 28
+    
+    init(positionY:CGFloat)
+    {
+        self.positionY = positionY
+    }
 }

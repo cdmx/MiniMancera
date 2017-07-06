@@ -8,7 +8,9 @@ extension MOptionWhistlesVsZombiesGround
         
         for positionY:CGFloat in area.lane
         {
-            
+            let lane:MOptionWhistlesVsZombiesGroundLane = MOptionWhistlesVsZombiesGroundLane(
+                positionY:positionY)
+            lanes.append(lane)
         }
         
         return lanes
