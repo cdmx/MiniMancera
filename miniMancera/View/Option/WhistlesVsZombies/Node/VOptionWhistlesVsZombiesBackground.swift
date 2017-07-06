@@ -28,11 +28,10 @@ class VOptionWhistlesVsZombiesBackground:ViewGameNode<MOptionWhistlesVsZombies>
         }
         
         let sceneSize:CGSize = MGame.sceneSize
-        let sceneWidth:CGFloat = sceneSize.width
-        let sceneHeight:CGFloat = sceneSize.height
-        let sceneWidth_2:CGFloat = sceneWidth / 2.0
+        let sceneWidth:CGFloat = sceneSize.height
+        let width_2:CGFloat = modelTexture.width_2
         let height_2:CGFloat = modelTexture.height_2
-        let positionY:CGFloat = sceneHeight - height_2
-        position = CGPoint(x:sceneWidth_2, y:positionY)
+        let positionX:CGFloat = -width_2 + sceneWidth
+        position = CGPoint(x:positionX, y:height_2)
     }
 }
