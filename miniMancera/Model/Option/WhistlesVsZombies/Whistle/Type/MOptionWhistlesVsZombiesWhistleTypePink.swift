@@ -14,7 +14,11 @@ class MOptionWhistlesVsZombiesWhistleTypePink:MOptionWhistlesVsZombiesWhistleTyp
         whistle = MOptionWhistlesVsZombiesWhistlePink()
         boardItemType = MOptionWhistlesVsZombiesBoardItemPink.self
         textureGame = textures.whistlePinkGame
-        colour = UIColor.colourSuccess
+        colour = UIColor(
+            red:1,
+            green:0.352941176470588,
+            blue:1,
+            alpha:1)
         barrelLength = kBarrelLength
     }
 }
