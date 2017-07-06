@@ -5,6 +5,7 @@ class MHomeSplashDescr:MHomeSplashProtocol
     let attributedString:NSAttributedString
     let kVerticalMargin:CGFloat = 30
     let kMarginHorizontal:CGFloat = 10
+    private(set) var reusableIdentifier:String
     private let verticalMargin2:CGFloat
     private let marginHorizontal2:CGFloat
     private let drawingOptions:NSStringDrawingOptions
@@ -12,6 +13,7 @@ class MHomeSplashDescr:MHomeSplashProtocol
     
     init(model:MHomeOptions)
     {
+        reusableIdentifier = VHomeSplashCellDescr.reusableIdentifier
         marginHorizontal2 = kMarginHorizontal + kMarginHorizontal
         verticalMargin2 = kVerticalMargin + kVerticalMargin
         drawingOptions = NSStringDrawingOptions([
@@ -51,14 +53,6 @@ class MHomeSplashDescr:MHomeSplashProtocol
     }
     
     //MARK: splash protocol
-    
-    var reusableIdentifier:String
-    {
-        get
-        {
-            return VHomeSplashCellDescr.reusableIdentifier
-        }
-    }
     
     func cellHeightFor(width:CGFloat) -> CGFloat
     {

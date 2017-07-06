@@ -2,53 +2,19 @@ import UIKit
 
 class MOptionWhistlesVsZombiesWhistleTypeBlue:MOptionWhistlesVsZombiesWhistleTypeProtocol
 {
-    private weak var gameTexture:MGameTexture!
-    private let modelWhistle:MOptionWhistlesVsZombiesWhistleBlue
+    private(set) var whistle:MOptionWhistlesVsZombiesWhistleProtocol
+    private(set) var boardItemType:MOptionWhistlesVsZombiesBoardItemProtocol.Type
+    private(set) var textureGame:MGameTexture
+    private(set) var colour:UIColor
+    private(set) var barrelLength:CGFloat
     private let kBarrelLength:CGFloat = 20
     
     init(textures:MOptionWhistlesVsZombiesTextures)
     {
-        modelWhistle = MOptionWhistlesVsZombiesWhistleBlue()
-        gameTexture = textures.whistleBlueGame
-    }
-    
-    var whistle:MOptionWhistlesVsZombiesWhistleProtocol
-    {
-        get
-        {
-            return modelWhistle
-        }
-    }
-    
-    var textureGame:MGameTexture
-    {
-        get
-        {
-            return gameTexture
-        }
-    }
-    
-    var colour:UIColor
-    {
-        get
-        {
-            return UIColor.colourSuccess
-        }
-    }
-    
-    var barrelLength:CGFloat
-    {
-        get
-        {
-            return kBarrelLength
-        }
-    }
-    
-    var boardItemType:MOptionWhistlesVsZombiesBoardItemProtocol.Type
-    {
-        get
-        {
-            return MOptionWhistlesVsZombiesBoardItemBlue.self
-        }
+        whistle = MOptionWhistlesVsZombiesWhistleBlue()
+        boardItemType = MOptionWhistlesVsZombiesBoardItemBlue.self
+        textureGame = textures.whistleBlueGame
+        colour = UIColor.colourSuccess
+        barrelLength = kBarrelLength
     }
 }

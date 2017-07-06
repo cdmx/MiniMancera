@@ -23,22 +23,6 @@ class CStore:Controller<VStore>, SKProductsRequestDelegate, SKPaymentTransaction
         SKPaymentQueue.default().remove(self)
     }
     
-    override var supportedInterfaceOrientations:UIInterfaceOrientationMask
-        {
-        get
-        {
-            return UIInterfaceOrientationMask.landscape
-        }
-    }
-    
-    override var shouldAutorotate:Bool
-        {
-        get
-        {
-            return true
-        }
-    }
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
