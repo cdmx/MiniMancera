@@ -4,7 +4,7 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private weak var model:MOptionWhistlesVsZombiesSonicBoomItem?
     private let kColourBlendFactor:CGFloat = 1
-    private let kVelocityY:CGFloat = 1
+    private let kVelocityX:CGFloat = 1
     
     init(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
@@ -39,8 +39,8 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         
         let barrelLength:CGFloat = model.whistleType.barrelLength
         let basePosition:CGPoint = model.base.position
-        let positionX:CGFloat = basePosition.x
-        let positionY:CGFloat = basePosition.y + barrelLength
+        let positionX:CGFloat = basePosition.x + barrelLength
+        let positionY:CGFloat = basePosition.y
         position = CGPoint(
             x:positionX,
             y:positionY)
@@ -69,8 +69,8 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         physicsBody.angularVelocity = 0
 //        physicsBody.density = model.mass
         physicsBody.velocity = CGVector(
-            dx:0,
-            dy:kVelocityY)
+            dx:kVelocityX,
+            dy:0)
         
         physicsBody.categoryBitMask = MOptionWhistlesVsZombiesPhysicsStruct.SonicBoom
         physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None

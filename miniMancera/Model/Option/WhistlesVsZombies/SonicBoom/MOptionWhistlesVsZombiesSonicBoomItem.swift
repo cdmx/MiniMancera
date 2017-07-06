@@ -3,6 +3,7 @@ import Foundation
 class MOptionWhistlesVsZombiesSonicBoomItem:MGameUpdate<MOptionWhistlesVsZombies>
 {
     weak var viewRelease:VOptionWhistlesVsZombiesSonicRelease?
+    weak var viewBoom:VOptionWhistlesVsZombiesSonicBoom?
     private(set) weak var base:MOptionWhistlesVsZombiesWhistleBase!
     private(set) weak var whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol!
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesSonicBoomItem, MOptionWhistlesVsZombies>?
@@ -28,13 +29,31 @@ class MOptionWhistlesVsZombiesSonicBoomItem:MGameUpdate<MOptionWhistlesVsZombies
             scene:scene)
     }
     
+    //MARK: private
+    
+    private func createBoom(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        guard
+            
+            let scene:VOptionWhistlesVsZombiesScene = scene as? VOptionWhistlesVsZombiesScene
+            
+        else
+        {
+            return
+        }
+        
+        scene.addSonicBoom(model:self)
+    }
+    
     //MARK: public
     
-    func moving()
+    func moving(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        viewRelease?.endRelease()
         strategy = MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving(
             model:self)
+        
+        viewRelease?.endRelease()
+        createBoom(scene:scene)
     }
     
     func collision()

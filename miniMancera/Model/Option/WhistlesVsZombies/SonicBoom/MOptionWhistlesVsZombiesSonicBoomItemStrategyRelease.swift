@@ -16,7 +16,7 @@ class MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease:MGameStrategy<MOption
             
             if deltaTime > kDuration
             {
-                model.moving()
+                model.moving(scene:scene)
             }
         }
         else
