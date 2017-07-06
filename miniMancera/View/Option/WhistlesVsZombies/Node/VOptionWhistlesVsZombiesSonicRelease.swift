@@ -41,8 +41,8 @@ class VOptionWhistlesVsZombiesSonicRelease:ViewGameNode<MOptionWhistlesVsZombies
         
         let barrelLength:CGFloat = model.whistleType.barrelLength
         let basePosition:CGPoint = model.base.position
-        let positionX:CGFloat = basePosition.x
-        let positionY:CGFloat = basePosition.y + barrelLength
+        let positionX:CGFloat = basePosition.x + barrelLength
+        let positionY:CGFloat = basePosition.y
         position = CGPoint(
             x:positionX,
             y:positionY)
