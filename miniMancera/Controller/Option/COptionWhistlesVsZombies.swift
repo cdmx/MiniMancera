@@ -37,6 +37,11 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
         super.exitGame()
     }
     
+    override func didBegin(_ contact:SKPhysicsContact)
+    {
+        model.contact.addContact(contact:contact)
+    }
+    
     //MARK: private
     
     private func asyncShowBoard(modelBase:MOptionWhistlesVsZombiesWhistleBase)

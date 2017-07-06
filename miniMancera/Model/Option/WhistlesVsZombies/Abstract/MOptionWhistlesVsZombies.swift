@@ -8,6 +8,7 @@ class MOptionWhistlesVsZombies:MGame
     let sonicBoom:MOptionWhistlesVsZombiesSonicBoom
     let textures:MOptionWhistlesVsZombiesTextures
     let actions:MOptionWhistlesVsZombiesActions
+    let contact:MOptionWhistlesVsZombiesContact
     private(set) var coins:Int
     private var strategy:MGameStrategyMain<MOptionWhistlesVsZombies>?
     private let kInitialCoins:Int = 30
@@ -21,6 +22,7 @@ class MOptionWhistlesVsZombies:MGame
         sonicBoom = MOptionWhistlesVsZombiesSonicBoom()
         textures = MOptionWhistlesVsZombiesTextures()
         actions = MOptionWhistlesVsZombiesActions()
+        contact = MOptionWhistlesVsZombiesContact()
         coins = kInitialCoins
         
         super.init()
