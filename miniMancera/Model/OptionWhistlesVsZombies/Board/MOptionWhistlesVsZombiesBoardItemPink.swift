@@ -7,6 +7,7 @@ class MOptionWhistlesVsZombiesBoardItemPink:MOptionWhistlesVsZombiesBoardItemPro
     private(set) var image:UIImage
     private(set) var available:Bool
     private(set) var title:String
+    private(set) var price:Int
     private let kPrice:Int = 7
     
     required init(
@@ -20,13 +21,6 @@ class MOptionWhistlesVsZombiesBoardItemPink:MOptionWhistlesVsZombiesBoardItemPro
         title = String.localizedWhistlesVsZombies(
             key:"MOptionWhistlesVsZombiesBoardItemPink_title")
         available = playerCoins >= kPrice
-    }
-    
-    var price:Int
-    {
-        get
-        {
-            return kPrice
-        }
+        price = kPrice
     }
 }
