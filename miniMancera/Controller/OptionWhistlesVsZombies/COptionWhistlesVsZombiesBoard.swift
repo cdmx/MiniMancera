@@ -10,11 +10,10 @@ class COptionWhistlesVsZombiesBoard:Controller<VOptionWhistlesVsZombiesBoard>
         controllerGame:COptionWhistlesVsZombies,
         modelBase:MOptionWhistlesVsZombiesWhistleBase)
     {
-        let coins:Int = controllerGame.model.coins
-        
         self.controllerGame = controllerGame
         self.modelBase = modelBase
-        model = MOptionWhistlesVsZombiesBoard(coins:coins)
+        model = MOptionWhistlesVsZombiesBoard(
+            model:controllerGame.model)
         
         super.init()
     }

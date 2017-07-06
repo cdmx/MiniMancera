@@ -4,18 +4,26 @@ class MOptionWhistlesVsZombiesBoard
 {
     let items:[MOptionWhistlesVsZombiesBoardItemProtocol]
     
-    init(coins:Int)
+    private class func factoryItemsWithModel(model:MOptionWhistlesVsZombies) -> [MOptionWhistlesVsZombiesBoardItemProtocol]
     {
-        let itemPink:MOptionWhistlesVsZombiesBoardItemPink = MOptionWhistlesVsZombiesBoardItemPink(
-            coins:coins)
-        let itemBlue:MOptionWhistlesVsZombiesBoardItemBlue = MOptionWhistlesVsZombiesBoardItemBlue(
-            coins:coins)
-        let itemOrange:MOptionWhistlesVsZombiesBoardItemOrange = MOptionWhistlesVsZombiesBoardItemOrange(
-            coins:coins)
+        let coins:Int = model.coins
+        var items:[MOptionWhistlesVsZombiesBoardItemProtocol] = []
         
-        items = [
-            itemPink,
-            itemBlue,
-            itemOrange]
+        for whistle:MOptionWhistlesVsZombiesWhistleTypeProtocol in model.whistle.types
+        {
+            let itemType:MOptionWhistlesVsZombiesBoardItemProtocol.Type = whistle.boardItemType
+            let item:MOptionWhistlesVsZombiesBoardItemProtocol = itemType.init(
+                whistleType:whistle,
+                playerCoins:coins)
+            items.append(item)
+        }
+        
+        return items
+    }
+    
+    init(model:MOptionWhistlesVsZombies)
+    {
+        items = MOptionWhistlesVsZombiesBoard.factoryItemsWithModel(
+            model:model)
     }
 }

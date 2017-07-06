@@ -43,4 +43,12 @@ class MOptionWhistlesVsZombiesWhistleTypeBlue:MOptionWhistlesVsZombiesWhistleTyp
             return kBarrelLength
         }
     }
+    
+    var boardItemType:MOptionWhistlesVsZombiesBoardItemProtocol.Type
+    {
+        get
+        {
+            return MOptionWhistlesVsZombiesBoardItemBlue.self
+        }
+    }
 }

@@ -6,4 +6,5 @@ protocol MOptionWhistlesVsZombiesWhistleTypeProtocol:class
     var textureGame:MGameTexture { get }
     var colour:UIColor { get }
     var barrelLength:CGFloat { get }
+    var boardItemType:MOptionWhistlesVsZombiesBoardItemProtocol.Type { get }
 }
