@@ -26,7 +26,7 @@ class MOptionWhistlesVsZombiesSonicBoom:MGameUpdate<MOptionWhistlesVsZombies>
     
     func release(
         base:MOptionWhistlesVsZombiesWhistleBase,
-        whistleType:MOptionWhistlesVsZombiesWhistleType)
+        whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol)
     {
         let item:MOptionWhistlesVsZombiesSonicBoomItem = MOptionWhistlesVsZombiesSonicBoomItem(
             base:base,

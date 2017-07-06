@@ -4,14 +4,14 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyCharged:MGameStrategy<
     MOptionWhistlesVsZombiesWhistleBase,
     MOptionWhistlesVsZombies>
 {
-    private weak var whistleType:MOptionWhistlesVsZombiesWhistleType!
+    private weak var whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol!
     private var lastElapsedTime:TimeInterval?
     private let deltaTime:TimeInterval
     private let kDeltaDividend:TimeInterval = 45
     
     init(
         model:MOptionWhistlesVsZombiesWhistleBase,
-        whistleType:MOptionWhistlesVsZombiesWhistleType)
+        whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol)
     {
         self.whistleType = whistleType
         deltaTime = kDeltaDividend / whistleType.whistle.speed

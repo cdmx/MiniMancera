@@ -1,25 +1,42 @@
 import UIKit
 
-class MOptionWhistlesVsZombiesWhistleTypePink:MOptionWhistlesVsZombiesWhistleType
+class MOptionWhistlesVsZombiesWhistleTypePink:MOptionWhistlesVsZombiesWhistleTypeProtocol
 {
+    private weak var gameTexture:MGameTexture!
+    private let modelWhistle:MOptionWhistlesVsZombiesWhistlePink
     private let kBarrelLength:CGFloat = 20
     
     init(textures:MOptionWhistlesVsZombiesTextures)
     {
-        let whistle:MOptionWhistlesVsZombiesWhistlePink = MOptionWhistlesVsZombiesWhistlePink()
-        
-        super.init(whistle:whistle, textures:textures)
+        modelWhistle = MOptionWhistlesVsZombiesWhistlePink()
+        gameTexture = textures.whistlePinkGame
     }
     
-    override var textureGame:MGameTexture?
+    var whistle:MOptionWhistlesVsZombiesWhistleProtocol
     {
         get
         {
-            return textures.whistlePinkGame
+            return modelWhistle
         }
     }
     
-    override var barrelLength:CGFloat
+    var textureGame:MGameTexture
+    {
+        get
+        {
+            return gameTexture
+        }
+    }
+    
+    var colour:UIColor
+    {
+        get
+        {
+            return UIColor.colourSuccess
+        }
+    }
+    
+    var barrelLength:CGFloat
     {
         get
         {

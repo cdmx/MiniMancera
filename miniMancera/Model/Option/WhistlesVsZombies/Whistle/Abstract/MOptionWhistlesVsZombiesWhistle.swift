@@ -3,7 +3,7 @@ import Foundation
 class MOptionWhistlesVsZombiesWhistle:MGameUpdate<MOptionWhistlesVsZombies>
 {
     let bases:[MOptionWhistlesVsZombiesWhistleBase]
-    private(set) var types:[MOptionWhistlesVsZombiesWhistleType]
+    private(set) var types:[MOptionWhistlesVsZombiesWhistleTypeProtocol]
     
     override init()
     {

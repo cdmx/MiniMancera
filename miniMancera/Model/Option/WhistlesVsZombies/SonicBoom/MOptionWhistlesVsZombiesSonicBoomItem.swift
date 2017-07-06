@@ -4,12 +4,12 @@ class MOptionWhistlesVsZombiesSonicBoomItem:MGameUpdate<MOptionWhistlesVsZombies
 {
     weak var viewRelease:VOptionWhistlesVsZombiesSonicRelease?
     private(set) weak var base:MOptionWhistlesVsZombiesWhistleBase!
-    private(set) weak var whistleType:MOptionWhistlesVsZombiesWhistleType!
+    private(set) weak var whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol!
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesSonicBoomItem, MOptionWhistlesVsZombies>?
     
     init(
         base:MOptionWhistlesVsZombiesWhistleBase,
-        whistleType:MOptionWhistlesVsZombiesWhistleType)
+        whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol)
     {
         self.base = base
         self.whistleType = whistleType

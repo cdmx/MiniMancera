@@ -23,7 +23,7 @@ extension MOptionWhistlesVsZombiesWhistle
         return items
     }
     
-    class func factoryTypes(textures:MOptionWhistlesVsZombiesTextures) -> [MOptionWhistlesVsZombiesWhistleType]
+    class func factoryTypes(textures:MOptionWhistlesVsZombiesTextures) -> [MOptionWhistlesVsZombiesWhistleTypeProtocol]
     {
         let itemPink:MOptionWhistlesVsZombiesWhistleTypePink = MOptionWhistlesVsZombiesWhistleTypePink(
             textures:textures)
@@ -32,7 +32,7 @@ extension MOptionWhistlesVsZombiesWhistle
         let itemOrange:MOptionWhistlesVsZombiesWhistleTypeOrange = MOptionWhistlesVsZombiesWhistleTypeOrange(
             textures:textures)
         
-        let items:[MOptionWhistlesVsZombiesWhistleType] = [
+        let items:[MOptionWhistlesVsZombiesWhistleTypeProtocol] = [
             itemPink,
             itemBlue,
             itemOrange]

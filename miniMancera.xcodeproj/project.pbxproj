@@ -188,7 +188,6 @@
 		DA8ACFB51F0AA34C0065C26C /* MOptionWhistlesVsZombiesStrategyBegin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFB41F0AA34C0065C26C /* MOptionWhistlesVsZombiesStrategyBegin.swift */; };
 		DA8ACFE01F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFD71F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistle.swift */; };
 		DA8ACFE11F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFD81F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleFactory.swift */; };
-		DA8ACFE21F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFD91F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleType.swift */; };
 		DA8ACFE31F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFDB1F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleBase.swift */; };
 		DA8ACFE41F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleTypeBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFDD1F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleTypeBlue.swift */; };
 		DA8ACFE51F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleTypeOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFDE1F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleTypeOrange.swift */; };
@@ -521,7 +520,6 @@
 		DA8ACFB41F0AA34C0065C26C /* MOptionWhistlesVsZombiesStrategyBegin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesStrategyBegin.swift; sourceTree = "<group>"; };
 		DA8ACFD71F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistle.swift; sourceTree = "<group>"; };
 		DA8ACFD81F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistleFactory.swift; sourceTree = "<group>"; };
-		DA8ACFD91F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistleType.swift; sourceTree = "<group>"; };
 		DA8ACFDB1F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistleBase.swift; sourceTree = "<group>"; };
 		DA8ACFDD1F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleTypeBlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistleTypeBlue.swift; sourceTree = "<group>"; };
 		DA8ACFDE1F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleTypeOrange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistleTypeOrange.swift; sourceTree = "<group>"; };
@@ -1271,7 +1269,6 @@
 			children = (
 				DA8ACFD71F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistle.swift */,
 				DA8ACFD81F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleFactory.swift */,
-				DA8ACFD91F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleType.swift */,
 				DA3B38401F0DCA3A00810688 /* MOptionWhistlesVsZombiesWhistleTypeProtocol.swift */,
 			);
 			path = Abstract;
@@ -1972,7 +1969,6 @@
 				DA1BDB251EF705960040FBEA /* VHomeFroobContent.swift in Sources */,
 				DA2DFFEB1EECB16A00365F23 /* VCollectionFlow.swift in Sources */,
 				DA2DFFDB1EECB16A00365F23 /* ExtensionNotification.swift in Sources */,
-				DA8ACFE21F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleType.swift in Sources */,
 				DA8ACFB51F0AA34C0065C26C /* MOptionWhistlesVsZombiesStrategyBegin.swift in Sources */,
 				DA6928DF1F09840B001E9326 /* MOptionPollutedGardenBubbleItemTypePositive.swift in Sources */,
 				DA91C3ED1F01B82B0045FAE2 /* MOptionReformaCrossingStrategyGame.swift in Sources */,

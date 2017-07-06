@@ -5,7 +5,7 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
     let position:CGPoint
     weak var viewBase:VOptionWhistlesVsZombiesBase?
     weak var viewWhistle:VOptionWhistlesVsZombiesWhistle?
-    private(set) weak var whistleType:MOptionWhistlesVsZombiesWhistleType?
+    private(set) weak var whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol?
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesWhistleBase, MOptionWhistlesVsZombies>?
     
     init(position:CGPoint)
@@ -27,7 +27,7 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
     
     //MARK: public
     
-    func charge(whistleType:MOptionWhistlesVsZombiesWhistleType)
+    func charge(whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol)
     {
         self.whistleType = whistleType
         strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyCharged(
