@@ -77,13 +77,8 @@ extension MOptionWhistlesVsZombiesWhistle
             return points
         }
         
-        let sceneWidth:CGFloat = MGame.sceneSize.width
-        let sceneWidth_2:CGFloat = sceneWidth / 2.0
-        
-        for addPositionX:CGFloat in arrayX
+        for positionX:CGFloat in arrayX
         {
-            let positionX:CGFloat = sceneWidth_2 + addPositionX
-            
             for positionY:CGFloat in arrayY
             {
                 let point:CGPoint = CGPoint(
