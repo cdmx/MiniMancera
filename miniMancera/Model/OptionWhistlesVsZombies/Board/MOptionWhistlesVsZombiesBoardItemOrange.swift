@@ -3,13 +3,16 @@ import UIKit
 class MOptionWhistlesVsZombiesBoardItemOrange:MOptionWhistlesVsZombiesBoardItemProtocol
 {
     private let modelScore:MOptionWhistlesVsZombiesBoardScore
+    private let enoughCoins:Bool
     private let kPrice:Int = 12
     
-    init()
+    init(coins:Int)
     {
         let whistle:MOptionWhistlesVsZombiesWhistleOrange = MOptionWhistlesVsZombiesWhistleOrange()
         modelScore = MOptionWhistlesVsZombiesBoardScore(
             whistle:whistle)
+        
+        enoughCoins = coins > kPrice
     }
     
     var score:MOptionWhistlesVsZombiesBoardScore
@@ -42,6 +45,14 @@ class MOptionWhistlesVsZombiesBoardItemOrange:MOptionWhistlesVsZombiesBoardItemP
         get
         {
             return kPrice
+        }
+    }
+    
+    var available:Bool
+    {
+        get
+        {
+            return enoughCoins
         }
     }
 }

@@ -172,4 +172,20 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
             collectionView?.isUserInteractionEnabled = true
         }
     }
+    
+    func collectionView(_ collectionView:UICollectionView, shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        let item:MOptionWhistlesVsZombiesBoardItemProtocol = modelAtIndex(index:indexPath)
+        let available:Bool = item.available
+        
+        return available
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool
+    {
+        let item:MOptionWhistlesVsZombiesBoardItemProtocol = modelAtIndex(index:indexPath)
+        let available:Bool = item.available
+        
+        return available
+    }
 }

@@ -7,7 +7,8 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDe
     private weak var imageView:UIImageView!
     private weak var labelTitle:UILabel!
     private weak var labelPrice:UILabel!
-    private let kAlphaSelected:CGFloat = 0.3
+    private let kAlphaSelected:CGFloat = 0.2
+    private let kAlphaNotAvailable:CGFloat = 0.6
     private let kAlphaNotSelected:CGFloat = 1
     private let kImageHeight:CGFloat = 125
     private let kTitleHeight:CGFloat = 13
@@ -59,11 +60,6 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDe
         labelPrice.backgroundColor = UIColor.clear
         labelPrice.textAlignment = NSTextAlignment.right
         labelPrice.font = UIFont.game(size:17)
-        labelPrice.textColor = UIColor(
-            red:0.972549019607843,
-            green:0.905882352941176,
-            blue:0.109803921568627,
-            alpha:1)
         self.labelPrice = labelPrice
         
         let collectionView:VCollection = VCollection()
@@ -171,7 +167,7 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDe
     
     //MARK: private
     
-    private func hover()
+    private func hoverAvailable()
     {
         if isSelected || isHighlighted
         {
@@ -180,6 +176,43 @@ class VOptionWhistlesVsZombiesBoardCell:UICollectionViewCell, UICollectionViewDe
         else
         {
             alpha = kAlphaNotSelected
+        }
+        
+        labelPrice.textColor = UIColor(
+            red:0.972549019607843,
+            green:0.905882352941176,
+            blue:0.109803921568627,
+            alpha:1)
+    }
+    
+    private func hoverNotAvailable()
+    {
+        alpha = kAlphaNotAvailable
+        labelPrice.textColor = UIColor.red
+    }
+    
+    private func hover()
+    {
+        guard
+        
+            let model:MOptionWhistlesVsZombiesBoardItemProtocol = self.model
+        
+        else
+        {
+            hoverNotAvailable()
+            
+            return
+        }
+        
+        let available:Bool = model.available
+        
+        if available
+        {
+            hoverAvailable()
+        }
+        else
+        {
+            hoverNotAvailable()
         }
     }
     

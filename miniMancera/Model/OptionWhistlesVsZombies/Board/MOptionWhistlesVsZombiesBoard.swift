@@ -4,11 +4,14 @@ class MOptionWhistlesVsZombiesBoard
 {
     let items:[MOptionWhistlesVsZombiesBoardItemProtocol]
     
-    init()
+    init(coins:Int)
     {
-        let itemPink:MOptionWhistlesVsZombiesBoardItemPink = MOptionWhistlesVsZombiesBoardItemPink()
-        let itemBlue:MOptionWhistlesVsZombiesBoardItemBlue = MOptionWhistlesVsZombiesBoardItemBlue()
-        let itemOrange:MOptionWhistlesVsZombiesBoardItemOrange = MOptionWhistlesVsZombiesBoardItemOrange()
+        let itemPink:MOptionWhistlesVsZombiesBoardItemPink = MOptionWhistlesVsZombiesBoardItemPink(
+            coins:coins)
+        let itemBlue:MOptionWhistlesVsZombiesBoardItemBlue = MOptionWhistlesVsZombiesBoardItemBlue(
+            coins:coins)
+        let itemOrange:MOptionWhistlesVsZombiesBoardItemOrange = MOptionWhistlesVsZombiesBoardItemOrange(
+            coins:coins)
         
         items = [
             itemPink,

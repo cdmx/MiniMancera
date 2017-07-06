@@ -6,4 +6,5 @@ protocol MOptionWhistlesVsZombiesBoardItemProtocol:class
     var image:UIImage { get }
     var title:String { get }
     var price:Int { get }
+    var available:Bool { get }
 }
