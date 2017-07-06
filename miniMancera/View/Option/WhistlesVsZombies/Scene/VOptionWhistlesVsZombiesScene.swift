@@ -22,6 +22,9 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         
         let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
             controller:controller)
+     
+        let physicHome:VOptionWhistlesVsZombiesPhysicHome = VOptionWhistlesVsZombiesPhysicHome(
+            controller:controller)
         
         let menu:ViewGameNodeMenu<MOptionWhistlesVsZombies> = ViewGameNodeMenu(
             controller:controller,
@@ -31,6 +34,7 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         
         addChild(background)
         factoryBases()
+        addChild(physicHome)
         
         addChild(menu)
     }

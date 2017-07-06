@@ -7,5 +7,6 @@ enum MOptionWhistlesVsZombiesZPosition:CGFloat
     case SonicRelease
     case SonicBoom
     case Base
+    case Physics
     case Menu
 }
