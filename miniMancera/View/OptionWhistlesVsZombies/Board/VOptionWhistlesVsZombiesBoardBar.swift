@@ -5,7 +5,8 @@ class VOptionWhistlesVsZombiesBoardBar:UIView
     private weak var controller:COptionWhistlesVsZombiesBoard!
     private let kCancelWidth:CGFloat = 80
     private let kCoinWidth:CGFloat = 50
-    private let kCoinLabelWidth:CGFloat = 150
+    private let kCoinLabelTop:CGFloat = -6
+    private let kCoinLabelWidth:CGFloat = 200
     
     init(controller:COptionWhistlesVsZombiesBoard)
     {
@@ -87,7 +88,11 @@ class VOptionWhistlesVsZombiesBoardBar:UIView
             view:imageCoin,
             constant:kCoinWidth)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToTop(
+            view:labelCoins,
+            toView:self,
+            constant:kCoinLabelTop)
+        NSLayoutConstraint.bottomToBottom(
             view:labelCoins,
             toView:self)
         NSLayoutConstraint.rightToLeft(
