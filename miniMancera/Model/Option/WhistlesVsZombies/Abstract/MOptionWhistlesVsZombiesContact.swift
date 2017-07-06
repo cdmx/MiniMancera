@@ -14,21 +14,23 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        lookContacts()
+        lookContacts(scene:scene)
         queue = []
     }
     
     //MARK: private
     
-    private func lookContacts()
+    private func lookContacts(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         for contact:SKPhysicsContact in queue
         {
-            contactBegin(contact:contact)
+            contactBegin(contact:contact, scene:scene)
         }
     }
     
-    private func contactBegin(contact:SKPhysicsContact)
+    private func contactBegin(
+        contact:SKPhysicsContact,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         let bodyA:SKNode? = contact.bodyA.node
         let bodyB:SKNode? = contact.bodyB.node
@@ -37,21 +39,41 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
         {
             sonicBoomAndBody(
                 sonicBoom:sonicBoom,
-                body:bodyB)
+                body:bodyB,
+                scene:scene)
         }
         else if let sonicBoom:VOptionWhistlesVsZombiesSonicBoom = bodyB as? VOptionWhistlesVsZombiesSonicBoom
         {
             sonicBoomAndBody(
                 sonicBoom:sonicBoom,
-                body:bodyA)
+                body:bodyA,
+                scene:scene)
         }
     }
     
     private func sonicBoomAndBody(
         sonicBoom:VOptionWhistlesVsZombiesSonicBoom,
-        body:SKNode?)
+        body:SKNode?,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
+        guard
         
+            let sonicBoomModel:MOptionWhistlesVsZombiesSonicBoomItem = sonicBoom.model
+        
+        else
+        {
+            return
+        }
+        
+        let alive:Bool = sonicBoomModel.alive()
+        
+        if alive
+        {
+            if let _:VOptionWhistlesVsZombiesPhysicSonicLimit = body as? VOptionWhistlesVsZombiesPhysicSonicLimit
+            {
+                sonicBoomModel.collisionFinish(scene:scene)
+            }
+        }
     }
     
     //MARK: public

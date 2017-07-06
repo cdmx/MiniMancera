@@ -2,7 +2,7 @@ import SpriteKit
 
 class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
 {
-    private weak var model:MOptionWhistlesVsZombiesSonicBoomItem?
+    private(set) weak var model:MOptionWhistlesVsZombiesSonicBoomItem?
     private weak var animatedTexture:MGameTextureAnimated!
     private let kColourBlendFactor:CGFloat = 1
     private let kVelocityX:CGFloat = 100
@@ -82,5 +82,13 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
         physicsBody.collisionBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
         self.physicsBody = physicsBody
+    }
+    
+    //MARK: public
+    
+    func collisionFinish()
+    {
+        removeAllActions()
+        removeFromParent()
     }
 }

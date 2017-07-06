@@ -47,6 +47,20 @@ class MOptionWhistlesVsZombiesSonicBoomItem:MGameUpdate<MOptionWhistlesVsZombies
     
     //MARK: public
     
+    func alive() -> Bool
+    {
+        guard
+        
+            let _:MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving = self.strategy as? MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving
+        
+        else
+        {
+            return false
+        }
+        
+        return true
+    }
+    
     func moving(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         strategy = MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving(
@@ -54,9 +68,18 @@ class MOptionWhistlesVsZombiesSonicBoomItem:MGameUpdate<MOptionWhistlesVsZombies
         createBoom(scene:scene)
     }
     
-    func collision()
+    func collisionStart()
     {
         strategy = MOptionWhistlesVsZombiesSonicBoomItemStrategyCollision(
             model:self)
+    }
+    
+    func collisionFinish(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        strategy = nil
+        viewRelease?.endRelease()
+        viewBoom?.collisionFinish()
+        
+        scene.controller.model.sonicBoom.collisionFinish(boomItem:self)
     }
 }

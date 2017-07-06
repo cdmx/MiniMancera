@@ -33,4 +33,19 @@ class MOptionWhistlesVsZombiesSonicBoom:MGameUpdate<MOptionWhistlesVsZombies>
             whistleType:whistleType)
         items.append(item)
     }
+    
+    func collisionFinish(boomItem:MOptionWhistlesVsZombiesSonicBoomItem)
+    {
+        var items:[MOptionWhistlesVsZombiesSonicBoomItem] = []
+        
+        for item:MOptionWhistlesVsZombiesSonicBoomItem in self.items
+        {
+            if item !== boomItem
+            {
+                items.append(item)
+            }
+        }
+        
+        self.items = items
+    }
 }

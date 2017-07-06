@@ -39,7 +39,7 @@ class VOptionWhistlesVsZombiesPhysicSonicLimit:ViewGameNode<MOptionWhistlesVsZom
     {
         let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
         physicsBody.categoryBitMask = MOptionWhistlesVsZombiesPhysicsStruct.SonicLimit
-        physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
+        physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.SonicBoom
         physicsBody.collisionBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
         self.physicsBody = physicsBody
     }
