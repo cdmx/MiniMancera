@@ -114,6 +114,8 @@
 		DA56679B1EF31023000055D8 /* ReformaCrossing.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5667991EF31023000055D8 /* ReformaCrossing.strings */; };
 		DA56679D1EF32342000055D8 /* COptionPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56679C1EF32342000055D8 /* COptionPollutedGarden.swift */; };
 		DA5667A41EF325E9000055D8 /* MOptionPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5667A31EF325E9000055D8 /* MOptionPollutedGarden.swift */; };
+		DA5E78211F0E261400BDFFE4 /* MOptionWhistlesVsZombiesGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E78201F0E261400BDFFE4 /* MOptionWhistlesVsZombiesGround.swift */; };
+		DA5E78231F0E264B00BDFFE4 /* MOptionWhistlesVsZombiesGroundLane.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E78221F0E264B00BDFFE4 /* MOptionWhistlesVsZombiesGroundLane.swift */; };
 		DA60C5031F0C5E6500CF0207 /* VOptionWhistlesVsZombiesBoardBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60C5021F0C5E6500CF0207 /* VOptionWhistlesVsZombiesBoardBar.swift */; };
 		DA60C5051F0C5E6F00CF0207 /* VOptionWhistlesVsZombiesBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60C5041F0C5E6F00CF0207 /* VOptionWhistlesVsZombiesBoardCell.swift */; };
 		DA60C5071F0C5FB200CF0207 /* assetWhistlesVsZombies.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA60C5061F0C5FB200CF0207 /* assetWhistlesVsZombies.xcassets */; };
@@ -446,6 +448,8 @@
 		DA56679A1EF31023000055D8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/ReformaCrossing.strings; sourceTree = "<group>"; };
 		DA56679C1EF32342000055D8 /* COptionPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COptionPollutedGarden.swift; sourceTree = "<group>"; };
 		DA5667A31EF325E9000055D8 /* MOptionPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGarden.swift; sourceTree = "<group>"; };
+		DA5E78201F0E261400BDFFE4 /* MOptionWhistlesVsZombiesGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesGround.swift; sourceTree = "<group>"; };
+		DA5E78221F0E264B00BDFFE4 /* MOptionWhistlesVsZombiesGroundLane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesGroundLane.swift; sourceTree = "<group>"; };
 		DA60C5021F0C5E6500CF0207 /* VOptionWhistlesVsZombiesBoardBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesBoardBar.swift; sourceTree = "<group>"; };
 		DA60C5041F0C5E6F00CF0207 /* VOptionWhistlesVsZombiesBoardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesBoardCell.swift; sourceTree = "<group>"; };
 		DA60C5061F0C5FB200CF0207 /* assetWhistlesVsZombies.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assetWhistlesVsZombies.xcassets; sourceTree = "<group>"; };
@@ -1086,6 +1090,15 @@
 			path = Abstract;
 			sourceTree = "<group>";
 		};
+		DA5E781F1F0E25FF00BDFFE4 /* Ground */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E78201F0E261400BDFFE4 /* MOptionWhistlesVsZombiesGround.swift */,
+				DA5E78221F0E264B00BDFFE4 /* MOptionWhistlesVsZombiesGroundLane.swift */,
+			);
+			path = Ground;
+			sourceTree = "<group>";
+		};
 		DA6928C71F097FBE001E9326 /* StrategyPoison */ = {
 			isa = PBXGroup;
 			children = (
@@ -1639,6 +1652,7 @@
 			children = (
 				DAD368701EFC27F600CBAC5B /* Abstract */,
 				DA8ACFB81F0ABB7E0065C26C /* Node */,
+				DA5E781F1F0E25FF00BDFFE4 /* Ground */,
 				DA0BB26E1F0B76FD001E1BCA /* SonicBoom */,
 				DA8ACFA61F0A89540065C26C /* Whistle */,
 				DA8ACFAF1F0AA2E60065C26C /* Strategy */,
@@ -2035,6 +2049,7 @@
 				DA1121721F043ABF00275465 /* MOptionReformaCrossingPlayerPosition.swift in Sources */,
 				DA8ACFE01F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistle.swift in Sources */,
 				DA2DFFDA1EECB16A00365F23 /* ExtensionFileManager.swift in Sources */,
+				DA5E78211F0E261400BDFFE4 /* MOptionWhistlesVsZombiesGround.swift in Sources */,
 				DA6928EA1F099448001E9326 /* VOptionPollutedGardenGameOverDescr.swift in Sources */,
 				DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */,
 				DA61AB0D1F01DC45000C562F /* MOptionReformaCrossingStrategyWait.swift in Sources */,
@@ -2125,6 +2140,7 @@
 				DA8DF10F1F0C34A9005F3680 /* View.swift in Sources */,
 				DAB631C81F057F3D003C6934 /* MOptionPollutedGardenStrategyGame.swift in Sources */,
 				DAB631CC1F05883A003C6934 /* MOptionPollutedGardenContact.swift in Sources */,
+				DA5E78231F0E264B00BDFFE4 /* MOptionWhistlesVsZombiesGroundLane.swift in Sources */,
 				DA2DFFDF1EECB16A00365F23 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA8DF1101F0C34A9005F3680 /* ViewParent.swift in Sources */,
 				DAD814381EF9FE8E00ACA230 /* VHomeFroobContentHeader.swift in Sources */,
