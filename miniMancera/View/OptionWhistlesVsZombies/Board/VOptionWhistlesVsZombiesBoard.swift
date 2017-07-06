@@ -159,8 +159,6 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
     {
         collectionView.isUserInteractionEnabled = false
         
-        let item:MOptionWhistlesVsZombiesBoardItemProtocol = modelAtIndex(index:indexPath)
-        
         DispatchQueue.main.asyncAfter(
             deadline:DispatchTime.now() + kDeselectTime)
         { [weak collectionView] in
@@ -171,6 +169,17 @@ class VOptionWhistlesVsZombiesBoard:View, UICollectionViewDelegate, UICollection
                 scrollPosition:UICollectionViewScrollPosition())
             collectionView?.isUserInteractionEnabled = true
         }
+        
+        guard
+        
+            let controller:COptionWhistlesVsZombiesBoard = self.controller as? COptionWhistlesVsZombiesBoard
+        else
+        {
+            return
+        }
+        
+        let item:MOptionWhistlesVsZombiesBoardItemProtocol = modelAtIndex(index:indexPath)
+        controller.whistleSelected(item:item)
     }
     
     func collectionView(_ collectionView:UICollectionView, shouldSelectItemAt indexPath:IndexPath) -> Bool

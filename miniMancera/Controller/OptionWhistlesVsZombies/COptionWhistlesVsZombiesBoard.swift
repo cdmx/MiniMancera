@@ -42,4 +42,13 @@ class COptionWhistlesVsZombiesBoard:Controller<VOptionWhistlesVsZombiesBoard>
             self?.controllerGame?.resume()
         }
     }
+    
+    func whistleSelected(item:MOptionWhistlesVsZombiesBoardItemProtocol)
+    {
+        controllerGame?.model.whistleSelected(
+            base:modelBase,
+            item:item)
+        
+        back()
+    }
 }

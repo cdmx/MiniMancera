@@ -48,7 +48,7 @@ class ViewGameNodeTouch<T:MGame>:ViewGameNode<T>
     
     //MARK: public
     
-    func lastTouch() -> UITouch?
+    @discardableResult func lastTouch() -> UITouch?
     {
         guard
             

@@ -59,4 +59,12 @@ class MOptionWhistlesVsZombies:MGame
     {
         strategy = MOptionWhistlesVsZombiesStrategyGame(model:self)
     }
+    
+    func whistleSelected(
+        base:MOptionWhistlesVsZombiesWhistleBase,
+        item:MOptionWhistlesVsZombiesBoardItemProtocol)
+    {
+        coins -= item.price
+        base.charge(whistleType:item.whistleType)
+    }
 }

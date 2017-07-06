@@ -35,10 +35,25 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyCharged:MGameStrategy<
         else
         {
             lastElapsedTime = elapsedTime
+            createView(scene:scene)
         }
     }
     
     //MARK: private
+    
+    private func createView(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        guard
+        
+            let scene:VOptionWhistlesVsZombiesScene = scene as? VOptionWhistlesVsZombiesScene
+        
+        else
+        {
+            return
+        }
+        
+        scene.addWhistle(base:model)
+    }
     
     private func releaseSonicBoom(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {

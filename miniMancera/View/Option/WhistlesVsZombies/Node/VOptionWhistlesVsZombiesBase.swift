@@ -38,10 +38,13 @@ class VOptionWhistlesVsZombiesBase:ViewGameNodeTouch<MOptionWhistlesVsZombies>
     func charged()
     {
         alpha = 0
+        isUserInteractionEnabled = false
+        lastTouch()
     }
     
     func disCharged()
     {
         alpha = 1
+        isUserInteractionEnabled = true
     }
 }
