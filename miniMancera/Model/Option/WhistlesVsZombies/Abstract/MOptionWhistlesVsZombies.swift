@@ -3,6 +3,7 @@ import SpriteKit
 class MOptionWhistlesVsZombies:MGame
 {
     weak var viewMenu:ViewGameNodeMenu<MOptionWhistlesVsZombies>?
+    let ground:MOptionWhistlesVsZombiesGround
     let whistle:MOptionWhistlesVsZombiesWhistle
     let sonicBoom:MOptionWhistlesVsZombiesSonicBoom
     let textures:MOptionWhistlesVsZombiesTextures
@@ -13,7 +14,10 @@ class MOptionWhistlesVsZombies:MGame
     
     required init()
     {
-        whistle = MOptionWhistlesVsZombiesWhistle()
+        let area:MOptionWhistlesVsZombiesArea = MOptionWhistlesVsZombies.loadArea()
+        
+        ground = MOptionWhistlesVsZombiesGround(area:area)
+        whistle = MOptionWhistlesVsZombiesWhistle(area:area)
         sonicBoom = MOptionWhistlesVsZombiesSonicBoom()
         textures = MOptionWhistlesVsZombiesTextures()
         actions = MOptionWhistlesVsZombiesActions()

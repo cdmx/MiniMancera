@@ -5,10 +5,11 @@ class MOptionWhistlesVsZombiesWhistle:MGameUpdate<MOptionWhistlesVsZombies>
     let bases:[MOptionWhistlesVsZombiesWhistleBase]
     private(set) var types:[MOptionWhistlesVsZombiesWhistleTypeProtocol]
     
-    override init()
+    init(area:MOptionWhistlesVsZombiesArea)
     {
         types = []
-        bases = MOptionWhistlesVsZombiesWhistle.factoryBases()
+        bases = MOptionWhistlesVsZombiesWhistle.factoryBases(area:area)
+        super.init()
     }
     
     override func update(

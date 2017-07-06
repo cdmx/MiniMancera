@@ -2,15 +2,10 @@ import UIKit
 
 extension MOptionWhistlesVsZombiesWhistle
 {
-    private static let kResourceName:String = "ResourceWhistlesVsZombiesBase"
-    private static let kResourceExtension:String = "plist"
-    private static let kKeyX:String = "x"
-    private static let kKeyY:String = "y"
-    
-    class func factoryBases() -> [MOptionWhistlesVsZombiesWhistleBase]
+    class func factoryBases(area:MOptionWhistlesVsZombiesArea) -> [MOptionWhistlesVsZombiesWhistleBase]
     {
         var items:[MOptionWhistlesVsZombiesWhistleBase] = []
-        let positions:[CGPoint] = positionsFromFile()
+        let positions:[CGPoint] = pointsFromArea(area:area)
         
         for position:CGPoint in positions
         {
@@ -42,44 +37,13 @@ extension MOptionWhistlesVsZombiesWhistle
     
     //MARK: private
     
-    private class func positionsFromFile() -> [CGPoint]
-    {
-        guard
-            
-            let resourceBase:URL = Bundle.main.url(
-                forResource:kResourceName,
-                withExtension:kResourceExtension),
-            let baseDictionary:NSDictionary = NSDictionary(
-                contentsOf:resourceBase),
-            let map:[String:[CGFloat]] = baseDictionary as? [String:[CGFloat]]
-            
-        else
-        {
-            return []
-        }
-        
-        let points:[CGPoint] = pointsFromMap(map:map)
-        
-        return points
-    }
-    
-    private class func pointsFromMap(map:[String:[CGFloat]]) -> [CGPoint]
+    private class func pointsFromArea(area:MOptionWhistlesVsZombiesArea) -> [CGPoint]
     {
         var points:[CGPoint] = []
         
-        guard
-        
-            let arrayX:[CGFloat] = map[kKeyX],
-            let arrayY:[CGFloat] = map[kKeyY]
-        
-        else
+        for positionX:CGFloat in area.base
         {
-            return points
-        }
-        
-        for positionX:CGFloat in arrayX
-        {
-            for positionY:CGFloat in arrayY
+            for positionY:CGFloat in area.lane
             {
                 let point:CGPoint = CGPoint(
                     x:positionX,
