@@ -57,7 +57,6 @@ class VOptionWhistlesVsZombiesBoardBar:UIView
             green:0.905882352941176,
             blue:0.109803921568627,
             alpha:1)
-        labelCoins.text = "12434"
         
         addSubview(labelTitle)
         addSubview(labelCoins)
@@ -101,6 +100,18 @@ class VOptionWhistlesVsZombiesBoardBar:UIView
         NSLayoutConstraint.width(
             view:labelCoins,
             constant:kCoinLabelWidth)
+        
+        guard
+            
+            let coins:Int = controller.controllerGame?.model.coins
+        
+        else
+        {
+            return
+        }
+        
+        let coinsString:String = "\(coins)"
+        labelCoins.text = coinsString
     }
     
     required init?(coder:NSCoder)

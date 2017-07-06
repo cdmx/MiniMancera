@@ -2,9 +2,9 @@ import UIKit
 
 class COptionWhistlesVsZombiesBoard:Controller<VOptionWhistlesVsZombiesBoard>
 {
-    private weak var controllerGame:COptionWhistlesVsZombies?
-    private weak var modelBase:MOptionWhistlesVsZombiesWhistleBase!
     let model:MOptionWhistlesVsZombiesBoard
+    private(set) weak var controllerGame:COptionWhistlesVsZombies?
+    private weak var modelBase:MOptionWhistlesVsZombiesWhistleBase!
     
     init(
         controllerGame:COptionWhistlesVsZombies,
