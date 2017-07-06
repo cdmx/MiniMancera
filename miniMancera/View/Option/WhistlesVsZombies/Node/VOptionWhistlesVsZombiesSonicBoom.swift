@@ -4,7 +4,7 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private weak var model:MOptionWhistlesVsZombiesSonicBoomItem?
     private let kColourBlendFactor:CGFloat = 1
-    private let kVelocityX:CGFloat = 1
+    private let kVelocityX:CGFloat = 100
     
     init(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
@@ -19,6 +19,7 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
             texture:texture,
             colour:colour)
         colorBlendFactor = kColourBlendFactor
+        startPhysics()
     }
     
     required init?(coder:NSCoder)
