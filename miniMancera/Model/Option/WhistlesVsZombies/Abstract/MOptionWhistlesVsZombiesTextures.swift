@@ -29,13 +29,13 @@ class MOptionWhistlesVsZombiesTextures
         sonicReleaseAnimated = MOptionWhistlesVsZombiesTextures.factorySonicReleaseAnimated()
   
         whistlePinkGame = MGameTexture(
-            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePinkStand"),
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePink"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
         whistleBlueGame = MGameTexture(
-            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePinkStand"),
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleBlue"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
         whistleOrangeGame = MGameTexture(
-            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePinkStand"),
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleOrange"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
     }
     
