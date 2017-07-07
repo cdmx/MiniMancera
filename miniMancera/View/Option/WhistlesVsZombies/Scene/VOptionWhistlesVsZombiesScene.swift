@@ -97,4 +97,9 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         
         addChild(view)
     }
+    
+    func addZombie(model:MOptionWhistlesVsZombiesZombieItem)
+    {
+        
+    }
 }

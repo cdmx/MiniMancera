@@ -4,7 +4,7 @@ class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
 {
     let types:[MOptionWhistlesVsZombiesZombieItemProtocol]
     private(set) weak var ground:MOptionWhistlesVsZombiesGround!
-    private var items:[MOptionWhistlesVsZombiesZombieItem]
+    private(set) var items:[MOptionWhistlesVsZombiesZombieItem]
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesZombie, MOptionWhistlesVsZombies>?
     let countTypes:UInt32
     
@@ -51,5 +51,17 @@ class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
     func spawnZombie(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         let item:MOptionWhistlesVsZombiesZombieItem = factoryZombie()
+        items.append(item)
+        
+        guard
+        
+            let scene:VOptionWhistlesVsZombiesScene = scene as? VOptionWhistlesVsZombiesScene
+        
+        else
+        {
+            return
+        }
+        
+        scene.addZombie(model:item)
     }
 }

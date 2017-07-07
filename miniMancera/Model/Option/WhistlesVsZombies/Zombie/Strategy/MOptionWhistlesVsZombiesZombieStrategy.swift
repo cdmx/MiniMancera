@@ -19,6 +19,20 @@ class MOptionWhistlesVsZombiesZombieStrategy:MGameStrategy<
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
+        updateSpawn(
+            elapsedTime:elapsedTime,
+            scene:scene)
+        updateItems(
+            elapsedTime:elapsedTime,
+            scene:scene)
+    }
+    
+    //MARK: private
+    
+    private func updateSpawn(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
         if let lastElapsedTime:TimeInterval = self.lastElapsedTime
         {
             let deltaTime:TimeInterval = elapsedTime - lastElapsedTime
@@ -35,7 +49,17 @@ class MOptionWhistlesVsZombiesZombieStrategy:MGameStrategy<
         }
     }
     
-    //MARK: private
+    private func updateItems(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        for item:MOptionWhistlesVsZombiesZombieItem in model.items
+        {
+            item.update(
+                elapsedTime:elapsedTime,
+                scene:scene)
+        }
+    }
     
     private func trySpawnZombie(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
