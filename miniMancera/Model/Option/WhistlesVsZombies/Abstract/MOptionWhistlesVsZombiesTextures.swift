@@ -12,6 +12,9 @@ class MOptionWhistlesVsZombiesTextures
     let whistleBlueGame:MGameTexture
     let whistleOrangeGame:MGameTexture
     
+    let zombieFootballStand:MGameTexture
+    let zombieFootballWalkingAnimated:MGameTextureAnimated
+    
     init()
     {
         background = MGameTexture(
@@ -35,6 +38,11 @@ class MOptionWhistlesVsZombiesTextures
         whistleOrangeGame = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleOrange"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
+        
+        zombieFootballStand = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesZombieFootballStand"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.Zombie.rawValue)
+        zombieFootballWalkingAnimated = MOptionWhistlesVsZombiesTextures.factoryFootballWalkingAnimated()
     }
     
     //MARK: private
@@ -63,6 +71,18 @@ class MOptionWhistlesVsZombiesTextures
             #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicBoom2"),
             #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicBoom3"),
             #imageLiteral(resourceName: "assetWhistlesVsZombiesSonicBoom4")]
+        
+        let texture:MGameTextureAnimated = MGameTextureAnimated(
+            images:images)
+        
+        return texture
+    }
+    
+    private class func factoryFootballWalkingAnimated() -> MGameTextureAnimated
+    {
+        let images:[UIImage] = [
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesZombieFootballWalking0"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesZombieFootballWalking1")]
         
         let texture:MGameTextureAnimated = MGameTextureAnimated(
             images:images)

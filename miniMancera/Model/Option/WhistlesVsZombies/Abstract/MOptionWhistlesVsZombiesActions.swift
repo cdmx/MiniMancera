@@ -8,9 +8,11 @@ class MOptionWhistlesVsZombiesActions
     let transitionCrossFade:SKTransition
     private(set) var actionSonicReleaseAnimation:SKAction!
     private(set) var actionSonicBoomAnimation:SKAction!
+    private(set) var actionZombieFootballWakingAnimation:SKAction!
     private let kFadeDuration:TimeInterval = 0.3
     private let kSonicReleaseFrameDuration:TimeInterval = 0.1
     private let kSonicBoomFrameDuration:TimeInterval = 0.1
+    private let kZombieWalkingFrameDuration:TimeInterval = 0.2
     private let kSceneTransitionDuration:TimeInterval = 1
     
     init()
@@ -48,11 +50,24 @@ class MOptionWhistlesVsZombiesActions
             animation)
     }
     
+    private func factoryZombieFootballAnimation(texture:MGameTextureAnimated)
+    {
+        let animation:SKAction = SKAction.animate(
+            with:texture.textures,
+            timePerFrame:kZombieWalkingFrameDuration,
+            resize:false,
+            restore:false)
+        
+        actionZombieFootballWakingAnimation = SKAction.repeatForever(
+            animation)
+    }
+    
     //MARK: public
     
     func factoryAnimations(textures:MOptionWhistlesVsZombiesTextures)
     {
         factorySonicReleaseAnimation(texture:textures.sonicReleaseAnimated)
         factorySonicBoomAnimation(texture:textures.sonicBoomAnimated)
+        factoryZombieFootballAnimation(texture:textures.zombieFootballWalkingAnimated)
     }
 }

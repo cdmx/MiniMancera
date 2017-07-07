@@ -1,12 +1,16 @@
-import Foundation
+import SpriteKit
 
-protocol MOptionWhistlesVsZombiesZombieItemProtocol
+protocol MOptionWhistlesVsZombiesZombieItemProtocol:class
 {
-    init(textures:MOptionWhistlesVsZombiesTextures)
+    init(
+        textures:MOptionWhistlesVsZombiesTextures,
+        actions:MOptionWhistlesVsZombiesActions)
     
     weak var textureStand:MGameTexture! { get }
-    weak var textureAnimatedWalking:MGameTextureAnimated! { get }
+    weak var animatedWalking:SKAction! { get }
     var speed:Int { get }
+    var intelligence:Int { get }
+    var strength:Int { get }
     var life:Int { get }
     var coins:Int { get }
 }
