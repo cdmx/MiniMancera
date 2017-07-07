@@ -26,6 +26,7 @@ class MOptionWhistlesVsZombiesZombieItemStrategyWait:MGameStrategy<
         else
         {
             startingTime = elapsedTime
+            model.view?.wait()
         }
     }
     

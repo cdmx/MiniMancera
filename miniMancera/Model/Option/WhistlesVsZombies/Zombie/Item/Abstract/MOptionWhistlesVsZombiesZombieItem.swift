@@ -1,10 +1,11 @@
-import Foundation
+import UIKit
 
 class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
 {
     weak var view:VOptionWhistlesVsZombiesZombie?
     private(set) weak var type:MOptionWhistlesVsZombiesZombieItemProtocol!
-    private(set) weak var lane:MOptionWhistlesVsZombiesGroundLane!
+    private weak var lane:MOptionWhistlesVsZombiesGroundLane!
+    private var positionX:CGFloat
     
     init(
         type:MOptionWhistlesVsZombiesZombieItemProtocol,
@@ -12,6 +13,10 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
     {
         self.type = type
         self.lane = lane
+        
+        let sceneWidth:CGFloat = MGame.sceneSize.height
+        let width_2:CGFloat = type.textureStand.width_2
+        positionX = sceneWidth - width_2
     }
     
     //MARK: public
@@ -24,5 +29,19 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
     func walk()
     {
         
+    }
+    
+    func position() -> CGPoint
+    {
+        let point:CGPoint = CGPoint(
+            x:positionX,
+            y:lane.positionY)
+        
+        return point
+    }
+    
+    func movePositionX(deltaX:CGFloat)
+    {
+        positionX += deltaX
     }
 }

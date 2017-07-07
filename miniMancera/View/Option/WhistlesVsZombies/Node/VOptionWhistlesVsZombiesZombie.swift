@@ -1,4 +1,4 @@
-import UIKit
+import SpriteKit
 
 class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
 {
@@ -24,18 +24,36 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
     {
         guard
         
-            let model:MOptionWhistlesVsZombiesZombieItem = self.model,
-            let modelTexture:MGameTexture = self.modelTexture
+            let model:MOptionWhistlesVsZombiesZombieItem = self.model
         
         else
         {
             return
         }
         
-        let sceneWidth:CGFloat = MGame.sceneSize.height
-        let width_2:CGFloat = modelTexture.width_2
-        let positionX:CGFloat = sceneWidth - width_2
-        let positionY:CGFloat = model.lane.positionY
-        position = CGPoint(x:positionX, y:positionY)
+        position = model.position()
+    }
+    
+    //MARK: public
+    
+    func walk()
+    {
+        guard
+            
+            let model:MOptionWhistlesVsZombiesZombieItem = self.model
+            
+        else
+        {
+            return
+        }
+        
+        let animation:SKAction = model.type.animatedWalking
+        run(animation)
+    }
+    
+    func wait()
+    {
+        removeAllActions()
+        texture = modelTexture?.texture
     }
 }
