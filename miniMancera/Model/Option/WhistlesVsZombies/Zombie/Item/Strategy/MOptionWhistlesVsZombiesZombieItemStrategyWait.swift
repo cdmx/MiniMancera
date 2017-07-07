@@ -5,8 +5,27 @@ class MOptionWhistlesVsZombiesZombieItemStrategyWait:MGameStrategy<
     MOptionWhistlesVsZombies>
 {
     private var startingTime:TimeInterval?
-    private let kWaitTime:TimeInterval = 0.2
-    private let kWalkRate:UInt32 = 10
+    private let walkRate:UInt32
+    private let kWaitTime:TimeInterval = 0.1
+    private let kWalkMultiplier:Int = 10
+    private let kWalkMax:Int = 100
+    private let kWalkMin:Int = 10
+    
+    override init(model:MOptionWhistlesVsZombiesZombieItem)
+    {
+        let zombieWalk:Int = model.type.intelligence * kWalkMultiplier
+        var zombieWalkSubtract:Int = kWalkMax - zombieWalk
+        
+        if zombieWalkSubtract < 0
+        {
+            zombieWalkSubtract = 0
+        }
+        
+        let totalZombieWalk:Int = zombieWalkSubtract + kWalkMin
+        walkRate = UInt32(totalZombieWalk)
+        
+        super.init(model:model)
+    }
     
     override func update(
         elapsedTime:TimeInterval,
@@ -34,7 +53,7 @@ class MOptionWhistlesVsZombiesZombieItemStrategyWait:MGameStrategy<
     
     private func tryWalk()
     {
-        let random:UInt32 = arc4random_uniform(kWalkRate)
+        let random:UInt32 = arc4random_uniform(walkRate)
         
         if random == 0
         {

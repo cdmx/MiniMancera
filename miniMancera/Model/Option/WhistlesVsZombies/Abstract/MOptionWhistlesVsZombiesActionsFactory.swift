@@ -4,7 +4,7 @@ extension MOptionWhistlesVsZombiesActions
 {
     private static let kSonicReleaseFrameDuration:TimeInterval = 0.1
     private static let kSonicBoomFrameDuration:TimeInterval = 0.1
-    private static let kZombieWalkingFrameDuration:TimeInterval = 0.2
+    private static let kZombieWalkingFrameDuration:TimeInterval = 0.4
     
     class func factorySonicReleaseAnimation(texture:MGameTextureAnimated) -> SKAction
     {

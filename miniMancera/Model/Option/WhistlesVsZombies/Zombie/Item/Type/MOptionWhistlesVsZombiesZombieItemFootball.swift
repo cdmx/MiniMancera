@@ -9,7 +9,7 @@ class MOptionWhistlesVsZombiesZombieItemFootball:MOptionWhistlesVsZombiesZombieI
     private(set) var strength:Int
     private(set) var life:Int
     private(set) var coins:Int
-    private let kSpeed:Int = 5
+    private let kSpeed:Int = 7
     private let kIntelligence:Int = 2
     private let kStrength:Int = 3
     private let kLife:Int = 6

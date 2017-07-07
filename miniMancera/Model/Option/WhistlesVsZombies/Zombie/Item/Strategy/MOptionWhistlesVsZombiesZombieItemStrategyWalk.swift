@@ -6,13 +6,18 @@ class MOptionWhistlesVsZombiesZombieItemStrategyWalk:MGameStrategy<
 {
     private var lastElapsedTime:TimeInterval?
     private let speed:CGFloat
-    private let kSpeedDivider:CGFloat = -10
-    private let kWaitRate:UInt32 = 30
+    private let waitRate:UInt32
+    private let kSpeedMultiplier:CGFloat = -2
+    private let kWaitMin:Int = 150
+    private let kWaitMultiplier:Int = 25
     
     override init(model:MOptionWhistlesVsZombiesZombieItem)
     {
         let zombieSpeed:CGFloat = CGFloat(model.type.speed)
-        speed = zombieSpeed / kSpeedDivider
+        let zombieWait:Int = model.type.intelligence * kWaitMultiplier
+        let totalZombieWait:Int = zombieWait + kWaitMin
+        speed = zombieSpeed * kSpeedMultiplier
+        waitRate = UInt32(totalZombieWait)
         
         super.init(model:model)
     }
@@ -38,7 +43,7 @@ class MOptionWhistlesVsZombiesZombieItemStrategyWalk:MGameStrategy<
     
     private func tryWait(deltaTime:TimeInterval)
     {
-        let random:UInt32 = arc4random_uniform(kWaitRate)
+        let random:UInt32 = arc4random_uniform(waitRate)
         
         if random == 0
         {

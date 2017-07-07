@@ -17,7 +17,7 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
         
         let sceneWidth:CGFloat = MGame.sceneSize.height
         let width_2:CGFloat = type.textureStand.width_2
-        positionX = sceneWidth - width_2
+        positionX = sceneWidth + width_2
         
         super.init()
         
@@ -57,5 +57,6 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
     func movePositionX(deltaX:CGFloat)
     {
         positionX += deltaX
+        view?.position = position()
     }
 }
