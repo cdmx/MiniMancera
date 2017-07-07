@@ -18,11 +18,13 @@ class MOptionWhistlesVsZombies:MGame
     {
         let area:MOptionWhistlesVsZombiesArea = MOptionWhistlesVsZombies.loadArea()
         
-        ground = MOptionWhistlesVsZombiesGround(area:area)
-        whistle = MOptionWhistlesVsZombiesWhistle(area:area)
-        sonicBoom = MOptionWhistlesVsZombiesSonicBoom()
         textures = MOptionWhistlesVsZombiesTextures()
-        actions = MOptionWhistlesVsZombiesActions()
+        actions = MOptionWhistlesVsZombiesActions(textures:textures)
+        ground = MOptionWhistlesVsZombiesGround(area:area)
+        whistle = MOptionWhistlesVsZombiesWhistle(
+            area:area,
+            textures:textures)
+        sonicBoom = MOptionWhistlesVsZombiesSonicBoom()
         contact = MOptionWhistlesVsZombiesContact()
         zombie = MOptionWhistlesVsZombiesZombie(
             ground:ground,
@@ -31,9 +33,6 @@ class MOptionWhistlesVsZombies:MGame
         coins = kInitialCoins
         
         super.init()
-        
-        actions.factoryAnimations(textures:textures)
-        whistle.factoryWithTextures(textures:textures)
         
         startLevel()
     }

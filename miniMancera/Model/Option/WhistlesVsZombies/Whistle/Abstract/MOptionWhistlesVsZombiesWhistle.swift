@@ -3,12 +3,14 @@ import Foundation
 class MOptionWhistlesVsZombiesWhistle:MGameUpdate<MOptionWhistlesVsZombies>
 {
     let bases:[MOptionWhistlesVsZombiesWhistleBase]
-    private(set) var types:[MOptionWhistlesVsZombiesWhistleTypeProtocol]
+    let types:[MOptionWhistlesVsZombiesWhistleTypeProtocol]
     
-    init(area:MOptionWhistlesVsZombiesArea)
+    init(
+        area:MOptionWhistlesVsZombiesArea,
+        textures:MOptionWhistlesVsZombiesTextures)
     {
-        types = []
         bases = MOptionWhistlesVsZombiesWhistle.factoryBases(area:area)
+        types = MOptionWhistlesVsZombiesWhistle.factoryTypes(textures:textures)
         super.init()
     }
     
@@ -33,12 +35,5 @@ class MOptionWhistlesVsZombiesWhistle:MGameUpdate<MOptionWhistlesVsZombies>
                 elapsedTime:elapsedTime,
                 scene:scene)
         }
-    }
-    
-    //MARK: public
-    
-    func factoryWithTextures(textures:MOptionWhistlesVsZombiesTextures)
-    {
-        types = MOptionWhistlesVsZombiesWhistle.factoryTypes(textures:textures)
     }
 }

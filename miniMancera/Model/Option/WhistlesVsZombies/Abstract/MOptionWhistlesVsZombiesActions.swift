@@ -21,6 +21,7 @@ class MOptionWhistlesVsZombiesActions
             actionFadeOut,
             actionFadeIn]
         actionFadeOutIn = SKAction.sequence(sequenceOutIn)
+        
         transitionCrossFade = SKTransition.crossFade(withDuration:kSceneTransitionDuration)
         
         actionSonicReleaseAnimation = MOptionWhistlesVsZombiesActions.factorySonicReleaseAnimation(
