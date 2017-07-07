@@ -32,5 +32,7 @@ class MOptionWhistlesVsZombiesSonicBoomItemStrategyMoving:MGameStrategy<MOptionW
         {
             startingTime = elapsedTime
         }
+        
+        model.viewBoom?.move()
     }
 }
