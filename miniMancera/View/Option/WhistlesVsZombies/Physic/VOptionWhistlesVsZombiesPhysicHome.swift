@@ -2,6 +2,8 @@ import SpriteKit
 
 class VOptionWhistlesVsZombiesPhysicHome:ViewGameNode<MOptionWhistlesVsZombies>
 {
+    private let width_2:CGFloat
+    private let height_2:CGFloat
     private let kWidth:CGFloat = 62
     private let kHeight:CGFloat = 224
     
@@ -10,6 +12,8 @@ class VOptionWhistlesVsZombiesPhysicHome:ViewGameNode<MOptionWhistlesVsZombies>
         let size:CGSize = CGSize(
             width:kWidth,
             height:kHeight)
+        width_2 = kWidth / 2.0
+        height_2 = kHeight / 2.0
         
         super.init(
             controller:controller,
@@ -27,15 +31,17 @@ class VOptionWhistlesVsZombiesPhysicHome:ViewGameNode<MOptionWhistlesVsZombies>
     
     override func positionStart()
     {
-        let width_2:CGFloat = kWidth / 2.0
-        let height_2:CGFloat = kHeight / 2.0
-        
         position = CGPoint(x:width_2, y:height_2)
     }
     
     private func startPhysics()
     {
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
+        let edgeFrame:CGRect = CGRect(
+            x:-width_2,
+            y:-height_2,
+            width:kWidth,
+            height:kHeight)
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(edgeLoopFrom:edgeFrame)
         physicsBody.categoryBitMask = MOptionWhistlesVsZombiesPhysicsStruct.Home
         physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
         physicsBody.collisionBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
