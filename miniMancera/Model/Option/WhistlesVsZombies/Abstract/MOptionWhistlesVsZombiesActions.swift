@@ -6,9 +6,9 @@ class MOptionWhistlesVsZombiesActions
     let actionFadeOut:SKAction
     let actionFadeOutIn:SKAction
     let transitionCrossFade:SKTransition
-    private let actionSonicReleaseAnimation:SKAction
-    private let actionSonicBoomAnimation:SKAction
-    private let actionZombieFootballWakingAnimation:SKAction
+    let actionSonicReleaseAnimation:SKAction
+    let actionSonicBoomAnimation:SKAction
+    let actionZombieFootballWakingAnimation:SKAction
     private let kFadeDuration:TimeInterval = 0.3
     private let kSceneTransitionDuration:TimeInterval = 1
     

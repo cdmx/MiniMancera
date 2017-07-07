@@ -2,33 +2,36 @@ import Foundation
 
 class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
 {
-    private weak var ground:MOptionWhistlesVsZombiesGround!
-    private let types:[MOptionWhistlesVsZombiesZombieItemProtocol]
+    let types:[MOptionWhistlesVsZombiesZombieItemProtocol]
+    private(set) weak var ground:MOptionWhistlesVsZombiesGround!
     private var items:[MOptionWhistlesVsZombiesZombieItem]
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesZombie, MOptionWhistlesVsZombies>?
-    private let countTypes:UInt32
+    let countTypes:UInt32
     
     init(
         ground:MOptionWhistlesVsZombiesGround,
         textures:MOptionWhistlesVsZombiesTextures,
         actions:MOptionWhistlesVsZombiesActions)
     {
-        items = []
-        super.init()
         self.ground = ground
+        types = MOptionWhistlesVsZombiesZombie.factoryTypes(
+            textures:textures,
+            actions:actions)
+        items = []
+        countTypes = UInt32(types.count)
+        
+        super.init()
+        
+        calm()
     }
     
     override func update(
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        
-    }
-    
-    private func factoryZombie() -> MOptionWhistlesVsZombiesZombieItem
-    {
-        let lane:MOptionWhistlesVsZombiesGroundLane = ground.randomLane()
-        let 
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
     }
     
     //MARK: public
