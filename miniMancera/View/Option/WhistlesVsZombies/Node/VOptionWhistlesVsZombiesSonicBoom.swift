@@ -6,7 +6,7 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
     private weak var animatedTexture:MGameTextureAnimated!
     private let vectorForce:CGVector
     private let kColourBlendFactor:CGFloat = 1
-    private let kVelocityX:CGFloat = 270
+    private let kVelocityX:CGFloat = 280
     
     init(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
@@ -70,8 +70,8 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
             return
         }
         
-        let size:CGSize = animatedTexture.textureSize
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
+        let radius:CGFloat = animatedTexture.textureSize.width / 2.0
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(circleOfRadius:radius)
         physicsBody.isDynamic = true
         physicsBody.friction = 0
         physicsBody.allowsRotation = false

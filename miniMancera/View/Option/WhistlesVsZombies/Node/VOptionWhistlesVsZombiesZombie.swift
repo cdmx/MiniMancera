@@ -49,8 +49,8 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
             return
         }
         
-        let size:CGSize = modelTexture.size
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
+        let radius:CGFloat = modelTexture.width_2
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(circleOfRadius:radius)
         physicsBody.isDynamic = true
         physicsBody.friction = 10000
         physicsBody.allowsRotation = false
