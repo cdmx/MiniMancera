@@ -5,7 +5,6 @@ extension ControllerGame
     func showMenu()
     {
         pause()
-        stopTimer()
         
         DispatchQueue.main.async
         { [weak self] in
@@ -16,6 +15,8 @@ extension ControllerGame
     
     func pause()
     {
+        stopTimer()
+        
         guard
             
             let view:SKView = self.view as? SKView

@@ -5,8 +5,8 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
     let model:T
     let playSounds:Bool
     private(set) weak var dataOption:DOption?
-    private(set) var lastUpdateTime:TimeInterval?
-    private(set) var elapsedTime:TimeInterval
+    private var lastUpdateTime:TimeInterval?
+    private var elapsedTime:TimeInterval
     
     required init(dataOption:DOption)
     {
@@ -182,10 +182,13 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
                 return
             }
             
+            self.lastUpdateTime = currentTime
             strategy.update(elapsedTime:elapsedTime, scene:scene)
         }
-        
-        lastUpdateTime = currentTime
+        else
+        {
+            lastUpdateTime = currentTime
+        }
     }
     
     //MARK: contact delegate
