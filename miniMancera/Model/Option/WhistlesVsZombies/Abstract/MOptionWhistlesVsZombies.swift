@@ -20,11 +20,14 @@ class MOptionWhistlesVsZombies:MGame
         
         ground = MOptionWhistlesVsZombiesGround(area:area)
         whistle = MOptionWhistlesVsZombiesWhistle(area:area)
-        zombie = MOptionWhistlesVsZombiesZombie(ground:ground)
         sonicBoom = MOptionWhistlesVsZombiesSonicBoom()
         textures = MOptionWhistlesVsZombiesTextures()
         actions = MOptionWhistlesVsZombiesActions()
         contact = MOptionWhistlesVsZombiesContact()
+        zombie = MOptionWhistlesVsZombiesZombie(
+            ground:ground,
+            textures:textures,
+            actions:actions)
         coins = kInitialCoins
         
         super.init()

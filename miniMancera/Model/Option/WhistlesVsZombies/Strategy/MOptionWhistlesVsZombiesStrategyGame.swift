@@ -7,6 +7,7 @@ class MOptionWhistlesVsZombiesStrategyGame:MGameStrategyMain<MOptionWhistlesVsZo
         let updateItems:[MGameUpdate<MOptionWhistlesVsZombies>] = [
             model.whistle,
             model.sonicBoom,
+            model.zombie,
             model.contact]
         
         super.init(

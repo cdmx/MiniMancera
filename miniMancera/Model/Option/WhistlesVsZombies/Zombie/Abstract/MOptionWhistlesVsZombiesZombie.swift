@@ -3,10 +3,15 @@ import Foundation
 class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
 {
     private weak var ground:MOptionWhistlesVsZombiesGround!
+    private let types:[MOptionWhistlesVsZombiesZombieItemProtocol]
     private var items:[MOptionWhistlesVsZombiesZombieItem]
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesZombie, MOptionWhistlesVsZombies>?
+    private let countTypes:UInt32
     
-    init(ground:MOptionWhistlesVsZombiesGround)
+    init(
+        ground:MOptionWhistlesVsZombiesGround,
+        textures:MOptionWhistlesVsZombiesTextures,
+        actions:MOptionWhistlesVsZombiesActions)
     {
         items = []
         super.init()
@@ -18,6 +23,12 @@ class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
         scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         
+    }
+    
+    private func factoryZombie() -> MOptionWhistlesVsZombiesZombieItem
+    {
+        let lane:MOptionWhistlesVsZombiesGroundLane = ground.randomLane()
+        let 
     }
     
     //MARK: public
@@ -32,5 +43,10 @@ class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
     {
         strategy = MOptionWhistlesVsZombiesZombieStrategyRush(
             model:self)
+    }
+    
+    func spawnZombie(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        let item:MOptionWhistlesVsZombiesZombieItem = factoryZombie()
     }
 }
