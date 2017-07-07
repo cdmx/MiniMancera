@@ -5,6 +5,7 @@ class MOptionWhistlesVsZombies:MGame
     weak var viewMenu:ViewGameNodeMenu<MOptionWhistlesVsZombies>?
     let ground:MOptionWhistlesVsZombiesGround
     let whistle:MOptionWhistlesVsZombiesWhistle
+    let zombie:MOptionWhistlesVsZombiesZombie
     let sonicBoom:MOptionWhistlesVsZombiesSonicBoom
     let textures:MOptionWhistlesVsZombiesTextures
     let actions:MOptionWhistlesVsZombiesActions
@@ -19,6 +20,7 @@ class MOptionWhistlesVsZombies:MGame
         
         ground = MOptionWhistlesVsZombiesGround(area:area)
         whistle = MOptionWhistlesVsZombiesWhistle(area:area)
+        zombie = MOptionWhistlesVsZombiesZombie(ground:ground)
         sonicBoom = MOptionWhistlesVsZombiesSonicBoom()
         textures = MOptionWhistlesVsZombiesTextures()
         actions = MOptionWhistlesVsZombiesActions()

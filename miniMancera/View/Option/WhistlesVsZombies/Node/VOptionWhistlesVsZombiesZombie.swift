@@ -2,9 +2,13 @@ import Foundation
 
 class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
 {
-    override init(controller:ControllerGame<MOptionWhistlesVsZombies>)
+    private weak var model:MOptionWhistlesVsZombiesZombieItem?
+    
+    override init(
+        controller:ControllerGame<MOptionWhistlesVsZombies>,
+        model:MOptionWhistlesVsZombiesZombieItem)
     {
-        
+        self.model = model
     }
     
     required init?(coder:NSCoder)
