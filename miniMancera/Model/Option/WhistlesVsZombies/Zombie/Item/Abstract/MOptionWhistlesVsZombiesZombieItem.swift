@@ -13,4 +13,16 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
         self.type = type
         self.lane = lane
     }
+    
+    //MARK: public
+    
+    func wait()
+    {
+        
+    }
+    
+    func walk()
+    {
+        
+    }
 }
