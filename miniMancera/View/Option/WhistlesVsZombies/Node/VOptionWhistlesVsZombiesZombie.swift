@@ -3,6 +3,8 @@ import SpriteKit
 class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private(set) weak var model:MOptionWhistlesVsZombiesZombieItem?
+    private weak var animationHit:SKAction!
+    private let kActionWalkingKey:String = "actionWalking"
     private let kFriction:CGFloat = 1
     private let kRestitution:CGFloat = 0.1
     private let kDensity:CGFloat = 2
@@ -12,6 +14,7 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
         model:MOptionWhistlesVsZombiesZombieItem)
     {
         self.model = model
+        animationHit = controller.model.actions.actionZombieSonicHit
         
         super.init(
             controller:controller,
@@ -80,12 +83,13 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
         }
         
         let animation:SKAction = model.type.animatedWalking
-        run(animation)
+        run(animation, withKey:kActionWalkingKey)
     }
     
     func wait()
     {
-        removeAllActions()
+        removeAction(forKey:kActionWalkingKey)
+        
         physicsBody?.velocity = CGVector.zero
         texture = modelTexture?.texture
     }
@@ -94,5 +98,10 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
     {
         let vector:CGVector = CGVector(dx:force, dy:0)
         physicsBody?.applyForce(vector)
+    }
+    
+    func sonicHit()
+    {
+        
     }
 }
