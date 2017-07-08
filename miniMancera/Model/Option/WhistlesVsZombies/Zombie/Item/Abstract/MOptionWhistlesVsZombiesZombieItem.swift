@@ -6,7 +6,7 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
     private(set) weak var type:MOptionWhistlesVsZombiesZombieItemProtocol!
     private weak var lane:MOptionWhistlesVsZombiesGroundLane!
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesZombieItem, MOptionWhistlesVsZombies>?
-    private var positionX:CGFloat
+    private let initialPositionX:CGFloat
     
     init(
         type:MOptionWhistlesVsZombiesZombieItemProtocol,
@@ -17,7 +17,7 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
         
         let sceneWidth:CGFloat = MGame.sceneSize.height
         let width_2:CGFloat = type.textureStand.width_2
-        positionX = sceneWidth + width_2
+        initialPositionX = sceneWidth - width_2
         
         super.init()
         
@@ -45,18 +45,12 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
         strategy = MOptionWhistlesVsZombiesZombieItemStrategyWalk(model:self)
     }
     
-    func position() -> CGPoint
+    func initialPosition() -> CGPoint
     {
         let point:CGPoint = CGPoint(
-            x:positionX,
+            x:initialPositionX,
             y:lane.positionY)
         
         return point
-    }
-    
-    func movePositionX(deltaX:CGFloat)
-    {
-        positionX += deltaX
-        view?.position = position()
     }
 }

@@ -56,6 +56,8 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
         body:SKNode?,
         scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
+        sonicBoom.stop()
+        
         guard
         
             let sonicBoomModel:MOptionWhistlesVsZombiesSonicBoomItem = sonicBoom.model

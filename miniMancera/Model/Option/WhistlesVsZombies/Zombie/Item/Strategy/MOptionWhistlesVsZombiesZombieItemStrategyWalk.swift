@@ -7,7 +7,7 @@ class MOptionWhistlesVsZombiesZombieItemStrategyWalk:MGameStrategy<
     private var lastElapsedTime:TimeInterval?
     private let speed:CGFloat
     private let waitRate:UInt32
-    private let kSpeedMultiplier:CGFloat = -2
+    private let kSpeedMultiplier:CGFloat = -4
     private let kWaitMin:Int = 150
     private let kWaitMultiplier:Int = 25
     
@@ -59,6 +59,6 @@ class MOptionWhistlesVsZombiesZombieItemStrategyWalk:MGameStrategy<
     {
         let deltaTime:CGFloat = CGFloat(deltaTime)
         let moveDelta:CGFloat = deltaTime * speed
-        model.movePositionX(deltaX:moveDelta)
+        model.view?.move(force:moveDelta)
     }
 }

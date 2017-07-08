@@ -32,7 +32,7 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
             return
         }
         
-        position = model.position()
+        position = model.initialPosition()
     }
     
     //MARK: private
@@ -52,14 +52,14 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
         let radius:CGFloat = modelTexture.width_2
         let physicsBody:SKPhysicsBody = SKPhysicsBody(circleOfRadius:radius)
         physicsBody.isDynamic = true
-        physicsBody.friction = 10000
+        physicsBody.friction = 1
         physicsBody.allowsRotation = false
-        physicsBody.restitution = 0
+        physicsBody.restitution = 0.1
         physicsBody.angularVelocity = 0
-        physicsBody.density = 1000
+        physicsBody.density = 2
         
         physicsBody.categoryBitMask = MOptionWhistlesVsZombiesPhysicsStruct.Zombie
-        physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
+        physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.SonicBoom
         physicsBody.collisionBitMask = MOptionWhistlesVsZombiesPhysicsStruct.SonicBoom
         self.physicsBody = physicsBody
     }
@@ -84,6 +84,13 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
     func wait()
     {
         removeAllActions()
+        physicsBody?.velocity = CGVector.zero
         texture = modelTexture?.texture
+    }
+    
+    func move(force:CGFloat)
+    {
+        let vector:CGVector = CGVector(dx:force, dy:0)
+        physicsBody?.applyForce(vector)
     }
 }
