@@ -3,6 +3,9 @@ import SpriteKit
 class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private weak var model:MOptionWhistlesVsZombiesZombieItem?
+    private let kFriction:CGFloat = 1
+    private let kRestitution:CGFloat = 0.1
+    private let kDensity:CGFloat = 2
     
     init(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
@@ -41,7 +44,6 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
     {
         guard
             
-            let model:MOptionWhistlesVsZombiesZombieItem = self.model,
             let modelTexture:MGameTexture = self.modelTexture
             
         else
@@ -52,11 +54,11 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
         let radius:CGFloat = modelTexture.width_2
         let physicsBody:SKPhysicsBody = SKPhysicsBody(circleOfRadius:radius)
         physicsBody.isDynamic = true
-        physicsBody.friction = 1
+        physicsBody.friction = kFriction
         physicsBody.allowsRotation = false
-        physicsBody.restitution = 0.1
+        physicsBody.restitution = kRestitution
         physicsBody.angularVelocity = 0
-        physicsBody.density = 2
+        physicsBody.density = kDensity
         
         physicsBody.categoryBitMask = MOptionWhistlesVsZombiesPhysicsStruct.Zombie
         physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.SonicBoom

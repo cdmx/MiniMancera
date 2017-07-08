@@ -6,7 +6,8 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
     private weak var animatedTexture:MGameTextureAnimated!
     private let vectorImpulse:CGVector
     private let kColourBlendFactor:CGFloat = 1
-    private let kVelocityX:CGFloat = 0.01
+    private let kVelocityX:CGFloat = 0.001
+    private let kDensity:CGFloat = 0.0001
     
     init(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
@@ -62,7 +63,6 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
     {
         guard
             
-            let model:MOptionWhistlesVsZombiesSonicBoomItem = self.model,
             let animatedTexture:MGameTextureAnimated = self.animatedTexture
             
         else
@@ -77,7 +77,8 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         physicsBody.allowsRotation = false
         physicsBody.restitution = 0
         physicsBody.angularVelocity = 0
-        physicsBody.density = 0.001
+        physicsBody.density = kDensity
+        
         physicsBody.categoryBitMask = MOptionWhistlesVsZombiesPhysicsStruct.SonicBoom
         physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
         physicsBody.collisionBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
