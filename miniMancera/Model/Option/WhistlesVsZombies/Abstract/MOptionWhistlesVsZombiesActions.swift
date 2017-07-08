@@ -11,6 +11,7 @@ class MOptionWhistlesVsZombiesActions
     let actionSonicCollisionAnimation:SKAction
     let actionZombieSonicHit:SKAction
     let actionZombieFootballWakingAnimation:SKAction
+    let actionZombieFootballDefeatedAnimation:SKAction
     private let kFadeDuration:TimeInterval = 0.3
     private let kSceneTransitionDuration:TimeInterval = 1
     
@@ -35,7 +36,9 @@ class MOptionWhistlesVsZombiesActions
         
         actionZombieSonicHit = MOptionWhistlesVsZombiesActions.factoryZombieSonicHitAnimation()
         
-        actionZombieFootballWakingAnimation = MOptionWhistlesVsZombiesActions.factoryZombieFootballAnimation(
+        actionZombieFootballWakingAnimation = MOptionWhistlesVsZombiesActions.factoryZombieFootballWalkingAnimation(
             texture:textures.zombieFootballWalkingAnimated)
+        actionZombieFootballDefeatedAnimation = MOptionWhistlesVsZombiesActions.factoryZombieFootballDefeatedAnimation(
+            texture:textures.zombieFootballDefeatedAnimated)
     }
 }
