@@ -60,7 +60,16 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
     
     func sonicHit(sonicBoom:MOptionWhistlesVsZombiesSonicBoomItem)
     {
+        guard
         
+            let strategy:MOptionWhistlesVsZombiesZombieItemStrategyAlive = self.strategy as? MOptionWhistlesVsZombiesZombieItemStrategyAlive
+        
+        else
+        {
+            return
+        }
+        
+        strategy.sonicHit(sonicBoom:sonicBoom)
     }
     
     func reduceLife(amount:Int)
