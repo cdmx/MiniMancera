@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0601451F117C2200A147C0 /* MOptionWhistlesVsZombiesZombieItemStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0601441F117C2200A147C0 /* MOptionWhistlesVsZombiesZombieItemStrategy.swift */; };
 		DA0BB2721F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2711F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift */; };
 		DA0BB2741F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2731F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift */; };
 		DA0BB2761F0B82CB001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2751F0B82CB001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease.swift */; };
@@ -359,6 +360,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA0601441F117C2200A147C0 /* MOptionWhistlesVsZombiesZombieItemStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesZombieItemStrategy.swift; sourceTree = "<group>"; };
 		DA0BB2711F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoom.swift; sourceTree = "<group>"; };
 		DA0BB2731F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoomItem.swift; sourceTree = "<group>"; };
 		DA0BB2751F0B82CB001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease.swift; sourceTree = "<group>"; };
@@ -1097,6 +1099,7 @@
 		DA36A6A11F0F65A300BC8BDD /* Strategy */ = {
 			isa = PBXGroup;
 			children = (
+				DA0601441F117C2200A147C0 /* MOptionWhistlesVsZombiesZombieItemStrategy.swift */,
 				DA36A6EA1F10209D00D8552C /* MOptionWhistlesVsZombiesZombieItemStrategyWalk.swift */,
 				DA36A6EC1F1020A900D8552C /* MOptionWhistlesVsZombiesZombieItemStrategyWait.swift */,
 			);
@@ -2305,6 +2308,7 @@
 				DACD313C1EFB06AC00F205A0 /* VOptionReformaCrossingPlayer.swift in Sources */,
 				DA2974E21EFF27A500300455 /* MGame.swift in Sources */,
 				DAB631D91F058F2F003C6934 /* MOptionPollutedGardenActions.swift in Sources */,
+				DA0601451F117C2200A147C0 /* MOptionWhistlesVsZombiesZombieItemStrategy.swift in Sources */,
 				DAF37BE51F03A88B004C505D /* MOptionReformaCrossingPlayer.swift in Sources */,
 				DAAF2FC31EF6F6F700589BB0 /* VStoreCellDeferred.swift in Sources */,
 				DAB70AC21EFB1EF9002C706F /* VOptionPollutedGardenFloor.swift in Sources */,

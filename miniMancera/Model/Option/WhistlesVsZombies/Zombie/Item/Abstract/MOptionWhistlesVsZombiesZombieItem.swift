@@ -53,4 +53,9 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
         
         return point
     }
+    
+    func sonicHit(sonicBoom:MOptionWhistlesVsZombiesSonicBoomItem)
+    {
+        
+    }
 }

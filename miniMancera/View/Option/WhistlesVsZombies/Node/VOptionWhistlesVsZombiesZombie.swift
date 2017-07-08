@@ -2,7 +2,7 @@ import SpriteKit
 
 class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
 {
-    private weak var model:MOptionWhistlesVsZombiesZombieItem?
+    private(set) weak var model:MOptionWhistlesVsZombiesZombieItem?
     private let kFriction:CGFloat = 1
     private let kRestitution:CGFloat = 0.1
     private let kDensity:CGFloat = 2

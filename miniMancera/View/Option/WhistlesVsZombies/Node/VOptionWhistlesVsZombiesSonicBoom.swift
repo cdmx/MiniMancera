@@ -117,9 +117,4 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
     {
         physicsBody?.applyImpulse(vectorImpulse)
     }
-    
-    func sonicHit(sonicBoom:MOptionWhistlesVsZombiesSonicBoomItem)
-    {
-        
-    }
 }

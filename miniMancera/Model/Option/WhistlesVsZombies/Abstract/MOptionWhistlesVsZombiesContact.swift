@@ -77,9 +77,29 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
             }
             else if let zombie:VOptionWhistlesVsZombiesZombie = body as? VOptionWhistlesVsZombiesZombie
             {
-                sonicBoomModel.collisionStart()
+                sonicBoomAndZombie(
+                    sonicBoomModel:sonicBoomModel,
+                    zombie:zombie)
             }
         }
+    }
+    
+    private func sonicBoomAndZombie(
+        sonicBoomModel:MOptionWhistlesVsZombiesSonicBoomItem,
+        zombie:VOptionWhistlesVsZombiesZombie)
+    {
+        sonicBoomModel.collisionStart()
+        
+        guard
+        
+            let modelZombie:MOptionWhistlesVsZombiesZombieItem = zombie.model
+        
+        else
+        {
+            return
+        }
+        
+        modelZombie.sonicHit(sonicBoom:sonicBoomModel)
     }
     
     //MARK: public
