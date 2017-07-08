@@ -8,7 +8,8 @@ extension MOptionWhistlesVsZombiesActions
     private static let kZombieSonicColourTransition:TimeInterval = 0.2
     private static let kZombieSonicColourDuration:TimeInterval = 0.5
     private static let kZombieWalkingFrameDuration:TimeInterval = 0.4
-    private static let kZombieDefeatedFrameDuration:TimeInterval = 0.3
+    private static let kZombieDefeatedFrameDuration:TimeInterval = 0.2
+    private static let kZombieDefeatedFadeOut:TimeInterval = 1
     private static let kZombieColourBlendFactor:CGFloat = 0.8
     
     class func factorySonicReleaseAnimation(texture:MGameTextureAnimated) -> SKAction
@@ -92,7 +93,15 @@ extension MOptionWhistlesVsZombiesActions
             timePerFrame:kZombieDefeatedFrameDuration,
             resize:false,
             restore:false)
+        let fadeOut:SKAction = SKAction.fadeOut(
+            withDuration:kZombieDefeatedFadeOut)
         
-        return animation
+        let actions:[SKAction] = [
+            animation,
+            fadeOut]
+        
+        let sequence:SKAction = SKAction.sequence(actions)
+        
+        return sequence
     }
 }

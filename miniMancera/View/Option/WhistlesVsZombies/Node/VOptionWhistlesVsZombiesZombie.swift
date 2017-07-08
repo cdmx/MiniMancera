@@ -108,6 +108,7 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
     func defeated()
     {
         removeAction(forKey:kActionWalkingKey)
+        physicsBody?.velocity = CGVector.zero
         
         guard
             
