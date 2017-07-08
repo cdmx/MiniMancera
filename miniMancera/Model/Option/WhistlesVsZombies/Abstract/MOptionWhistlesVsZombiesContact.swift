@@ -75,6 +75,10 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
             {
                 sonicBoomModel.collisionFinish(scene:scene)
             }
+            else if let zombie:VOptionWhistlesVsZombiesZombie = body as? VOptionWhistlesVsZombiesZombie
+            {
+                sonicBoomModel.collisionStart()
+            }
         }
     }
     

@@ -4,6 +4,7 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private(set) weak var model:MOptionWhistlesVsZombiesSonicBoomItem?
     private weak var animatedTexture:MGameTextureAnimated!
+    private weak var animatedCollision:SKAction!
     private let vectorImpulse:CGVector
     private let kColourBlendFactor:CGFloat = 1
     private let kVelocityX:CGFloat = 0.001
@@ -13,9 +14,12 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         controller:ControllerGame<MOptionWhistlesVsZombies>,
         model:MOptionWhistlesVsZombiesSonicBoomItem)
     {
+        let mainModel:MOptionWhistlesVsZombies = controller.model
+        
         self.model = model
-        animatedTexture = controller.model.textures.sonicBoomAnimated
-        let animation:SKAction = controller.model.actions.actionSonicBoomAnimation
+        animatedTexture = mainModel.textures.sonicBoomAnimated
+        animatedCollision = mainModel.actions.actionSonicCollisionAnimation
+        let animation:SKAction = mainModel.actions.actionSonicBoomAnimation
         let colour:UIColor = model.whistleType.colour
         vectorImpulse = CGVector(
             dx:kVelocityX,
@@ -90,6 +94,11 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
     func stop()
     {
         physicsBody?.velocity = CGVector.zero
+    }
+    
+    func collisionAnimate()
+    {
+        run(animatedCollision)
     }
     
     func collisionFinish()
