@@ -1,8 +1,6 @@
 import UIKit
 
-class MOptionWhistlesVsZombiesZombieItemStrategyWalk:MGameStrategy<
-    MOptionWhistlesVsZombiesZombieItem,
-    MOptionWhistlesVsZombies>
+class MOptionWhistlesVsZombiesZombieItemStrategyAliveWalk:MOptionWhistlesVsZombiesZombieItemStrategyAlive
 {
     private var lastElapsedTime:TimeInterval?
     private let speed:CGFloat
@@ -26,6 +24,10 @@ class MOptionWhistlesVsZombiesZombieItemStrategyWalk:MGameStrategy<
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
+        super.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
+        
         if let lastElapsedTime:TimeInterval = self.lastElapsedTime
         {
             let deltaTime:TimeInterval = elapsedTime - lastElapsedTime

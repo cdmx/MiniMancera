@@ -1,8 +1,6 @@
 import Foundation
 
-class MOptionWhistlesVsZombiesZombieItemStrategyWait:MGameStrategy<
-    MOptionWhistlesVsZombiesZombieItem,
-    MOptionWhistlesVsZombies>
+class MOptionWhistlesVsZombiesZombieItemStrategyAliveWait:MOptionWhistlesVsZombiesZombieItemStrategyAlive
 {
     private var startingTime:TimeInterval?
     private let walkRate:UInt32
@@ -31,6 +29,10 @@ class MOptionWhistlesVsZombiesZombieItemStrategyWait:MGameStrategy<
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
+        super.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
+        
         if let startingTime:TimeInterval = self.startingTime
         {
             let deltaTime:TimeInterval = elapsedTime - startingTime

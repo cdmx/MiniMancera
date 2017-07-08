@@ -4,6 +4,7 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
 {
     weak var view:VOptionWhistlesVsZombiesZombie?
     private(set) weak var type:MOptionWhistlesVsZombiesZombieItemProtocol!
+    private(set) var life:Int
     private weak var lane:MOptionWhistlesVsZombiesGroundLane!
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesZombieItem, MOptionWhistlesVsZombies>?
     private let initialPositionX:CGFloat
@@ -14,6 +15,7 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
     {
         self.type = type
         self.lane = lane
+        life = type.life
         
         let sceneWidth:CGFloat = MGame.sceneSize.height
         let width_2:CGFloat = type.textureStand.width_2
@@ -37,12 +39,14 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
     
     func wait()
     {
-        strategy = MOptionWhistlesVsZombiesZombieItemStrategyWait(model:self)
+        strategy = MOptionWhistlesVsZombiesZombieItemStrategyAliveWait(
+            model:self)
     }
     
     func walk()
     {
-        strategy = MOptionWhistlesVsZombiesZombieItemStrategyWalk(model:self)
+        strategy = MOptionWhistlesVsZombiesZombieItemStrategyAliveWalk(
+            model:self)
     }
     
     func initialPosition() -> CGPoint
@@ -57,5 +61,15 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
     func sonicHit(sonicBoom:MOptionWhistlesVsZombiesSonicBoomItem)
     {
         
+    }
+    
+    func reduceLife(amount:Int)
+    {
+        life -= amount
+        
+        if life < 0
+        {
+            life = 0
+        }
     }
 }
