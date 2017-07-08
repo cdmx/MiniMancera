@@ -37,7 +37,7 @@ class MOptionWhistlesVsZombiesZombieItemStrategyAlive:MGameStrategy<
     
     private func zombieDefeated()
     {
-        
+        model.defeated()
     }
     
     private func animateHit()

@@ -5,7 +5,9 @@ extension MOptionWhistlesVsZombiesActions
     private static let kSonicReleaseFrameDuration:TimeInterval = 0.1
     private static let kSonicBoomFrameDuration:TimeInterval = 0.1
     private static let kSonicCollisionFrameDuration:TimeInterval = 0.1
+    private static let kZombieSonicColourDuration:TimeInterval = 0.3
     private static let kZombieWalkingFrameDuration:TimeInterval = 0.4
+    private static let kZombieColourBlendFactor:CGFloat = 0.8
     
     class func factorySonicReleaseAnimation(texture:MGameTextureAnimated) -> SKAction
     {
@@ -41,6 +43,30 @@ extension MOptionWhistlesVsZombiesActions
             restore:false)
         
         return action
+    }
+    
+    class func factoryZombieSonicHitAnimation() -> SKAction
+    {
+        let colour:UIColor = UIColor.red
+        let actionAddColour:SKAction = SKAction.colorize(
+            with:colour,
+            colorBlendFactor:kZombieColourBlendFactor,
+            duration:kZombieSonicColourDuration)
+        let actionWait:SKAction = SKAction.wait(
+            forDuration:kZombieSonicColourDuration)
+        let actionRemoveColour:SKAction = SKAction.colorize(
+            with:colour,
+            colorBlendFactor:0,
+            duration:kZombieSonicColourDuration)
+        
+        let actions:[SKAction] = [
+            actionAddColour,
+            actionWait,
+            actionRemoveColour]
+        
+        let sequence:SKAction = SKAction.sequence(actions)
+        
+        return sequence
     }
     
     class func factoryZombieFootballAnimation(texture:MGameTextureAnimated) -> SKAction

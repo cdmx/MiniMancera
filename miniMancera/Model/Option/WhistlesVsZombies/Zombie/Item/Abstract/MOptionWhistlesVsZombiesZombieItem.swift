@@ -49,6 +49,12 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
             model:self)
     }
     
+    func defeated()
+    {
+        strategy = MOptionWhistlesVsZombiesZombieItemStrategyDefeated(
+            model:self)
+    }
+    
     func initialPosition() -> CGPoint
     {
         let point:CGPoint = CGPoint(
