@@ -104,4 +104,27 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
     {
         run(animationHit)
     }
+    
+    func defeated()
+    {
+        removeAction(forKey:kActionWalkingKey)
+        
+        guard
+            
+            let model:MOptionWhistlesVsZombiesZombieItem = self.model
+            
+        else
+        {
+            return
+        }
+        
+        let animation:SKAction = model.type.animatedDefeat
+        run(animation)
+    }
+    
+    func defeatedFinished()
+    {
+        removeAllActions()
+        removeFromParent()
+    }
 }

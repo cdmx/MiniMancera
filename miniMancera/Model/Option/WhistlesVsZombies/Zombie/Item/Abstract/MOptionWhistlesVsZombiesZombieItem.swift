@@ -92,4 +92,10 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
             life = 0
         }
     }
+    
+    func defeated(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        view?.defeatedFinished()
+        scene.controller.model.zombie.zombieDefeated(zombie:self)
+    }
 }

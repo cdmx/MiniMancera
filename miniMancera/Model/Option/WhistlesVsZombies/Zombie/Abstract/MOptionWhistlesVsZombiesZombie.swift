@@ -64,4 +64,19 @@ class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
         
         scene.addZombie(model:item)
     }
+    
+    func zombieDefeated(zombie:MOptionWhistlesVsZombiesZombieItem)
+    {
+        var items:[MOptionWhistlesVsZombiesZombieItem] = []
+        
+        for item:MOptionWhistlesVsZombiesZombieItem in self.items
+        {
+            if item !== zombie
+            {
+                items.append(item)
+            }
+        }
+        
+        self.items = items
+    }
 }
