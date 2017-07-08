@@ -17,7 +17,7 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         model:MOptionWhistlesVsZombiesSonicBoomItem)
     {
         let mainModel:MOptionWhistlesVsZombies = controller.model
-        let power:CGFloat = model.whistleType.whistle.power
+        let power:CGFloat = CGFloat(model.whistleType.whistle.power)
         velocityX = kVelocityX * power
         density = kDensity * power
         

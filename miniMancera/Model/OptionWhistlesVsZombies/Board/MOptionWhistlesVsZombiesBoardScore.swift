@@ -38,7 +38,8 @@ class MOptionWhistlesVsZombiesBoardScore
     {
         let title:String = String.localizedWhistlesVsZombies(
             key:"MOptionWhistlesVsZombiesBoardScore_titlePower")
-        let power:CGFloat = whistle.power / kPowerDivider
+        let whistlePower:CGFloat = CGFloat(whistle.power)
+        let power:CGFloat = whistlePower / kPowerDivider
         let powerAmount:Int = Int(round(power))
         
         let item:MOptionWhistlesVsZombiesBoardScoreItem = MOptionWhistlesVsZombiesBoardScoreItem(

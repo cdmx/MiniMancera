@@ -1,9 +1,9 @@
-import UIKit
+import Foundation
 
 class MOptionWhistlesVsZombiesWhistlePink:MOptionWhistlesVsZombiesWhistleProtocol
 {
     private let kSpeed:TimeInterval = 9
-    private let kPower:CGFloat = 9
+    private let kPower:Int = 9
     
     var speed:TimeInterval
     {
@@ -13,7 +13,7 @@ class MOptionWhistlesVsZombiesWhistlePink:MOptionWhistlesVsZombiesWhistleProtoco
         }
     }
     
-    var power:CGFloat
+    var power:Int
     {
         get
         {
