@@ -4,6 +4,7 @@ class MOptionWhistlesVsZombiesZombieItemFootball:MOptionWhistlesVsZombiesZombieI
 {
     private(set) weak var textureStand:MGameTexture!
     private(set) weak var animatedWalking:SKAction!
+    private(set) var animatedDefeat:SKAction!
     private(set) var speed:Int
     private(set) var intelligence:Int
     private(set) var strength:Int
@@ -21,6 +22,7 @@ class MOptionWhistlesVsZombiesZombieItemFootball:MOptionWhistlesVsZombiesZombieI
     {
         textureStand = textures.zombieFootballStand
         animatedWalking = actions.actionZombieFootballWakingAnimation
+        animatedDefeat = actions.actionZombieFootballDefeatedAnimation
         speed = kSpeed
         intelligence = kIntelligence
         strength = kStrength
