@@ -7,6 +7,9 @@ enum MOptionWhistlesVsZombiesZPosition:CGFloat
     case Zombie
     case SonicRelease
     case SonicBoom
+    case Points
+    case PointsAmount
+    case PointsCoin
     case Base
     case Physics
     case Menu

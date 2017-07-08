@@ -3,8 +3,10 @@ import UIKit
 class MOptionWhistlesVsZombiesTextures
 {
     let background:MGameTexture
+    let coin:MGameTexture
     let base:MGameTexture
     let menu:MGameTexture
+    
     let sonicBoomAnimated:MGameTextureAnimated
     let sonicCollisionAnimated:MGameTextureAnimated
     let sonicReleaseAnimated:MGameTextureAnimated
@@ -22,12 +24,16 @@ class MOptionWhistlesVsZombiesTextures
         background = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesBackground"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Background.rawValue)
+        coin = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesZombieCoin"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.PointsCoin.rawValue)
         base = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleBase"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Base.rawValue)
         menu = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesMenu"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Menu.rawValue)
+        
         sonicBoomAnimated = MOptionWhistlesVsZombiesTextures.factorySonicBoomAnimated()
         sonicReleaseAnimated = MOptionWhistlesVsZombiesTextures.factorySonicReleaseAnimated()
         sonicCollisionAnimated = MOptionWhistlesVsZombiesTextures.factorySonicCollisionAnimated()

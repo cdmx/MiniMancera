@@ -6,3 +6,4 @@
 "MOptionWhistlesVsZombiesBoardScore_titlePower"="Fuerza";
 
 "VOptionWhistlesVsZombiesBoardBar_labelTitle"="Elige un Silbato";
+"VOptionWhistlesVsZombiesPointsAmount_label"="+%@";
