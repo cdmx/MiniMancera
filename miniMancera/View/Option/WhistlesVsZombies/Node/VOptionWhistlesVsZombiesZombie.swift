@@ -69,6 +69,38 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
         self.physicsBody = physicsBody
     }
     
+    private func removePhysics()
+    {
+        guard
+            
+            let physicsBody:SKPhysicsBody = self.physicsBody
+            
+        else
+        {
+            return
+        }
+        
+        physicsBody.velocity = CGVector.zero
+        physicsBody.categoryBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
+        physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
+        physicsBody.collisionBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
+    }
+    
+    private func animateDefeat()
+    {
+        guard
+            
+            let model:MOptionWhistlesVsZombiesZombieItem = self.model
+            
+        else
+        {
+            return
+        }
+        
+        let animation:SKAction = model.type.animatedDefeat
+        run(animation)
+    }
+    
     //MARK: public
     
     func walk()
@@ -108,19 +140,8 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
     func defeated()
     {
         removeAction(forKey:kActionWalkingKey)
-        physicsBody?.velocity = CGVector.zero
-        
-        guard
-            
-            let model:MOptionWhistlesVsZombiesZombieItem = self.model
-            
-        else
-        {
-            return
-        }
-        
-        let animation:SKAction = model.type.animatedDefeat
-        run(animation)
+        removePhysics()
+        animateDefeat()
     }
     
     func defeatedFinished()
