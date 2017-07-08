@@ -17,7 +17,7 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
         
         let sceneWidth:CGFloat = MGame.sceneSize.height
         let width_2:CGFloat = type.textureStand.width_2
-        initialPositionX = sceneWidth - width_2
+        initialPositionX = sceneWidth + width_2
         
         super.init()
         

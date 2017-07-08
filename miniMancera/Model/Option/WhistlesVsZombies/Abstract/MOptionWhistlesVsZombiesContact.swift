@@ -56,8 +56,6 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
         body:SKNode?,
         scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        sonicBoom.stop()
-        
         guard
         
             let sonicBoomModel:MOptionWhistlesVsZombiesSonicBoomItem = sonicBoom.model
@@ -71,6 +69,8 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
         
         if alive
         {
+            sonicBoom.stop()
+            
             if let _:VOptionWhistlesVsZombiesPhysicSonicLimit = body as? VOptionWhistlesVsZombiesPhysicSonicLimit
             {
                 sonicBoomModel.collisionFinish(scene:scene)

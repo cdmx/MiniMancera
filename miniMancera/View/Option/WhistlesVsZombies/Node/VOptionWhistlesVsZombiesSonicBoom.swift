@@ -6,15 +6,20 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
     private weak var animatedTexture:MGameTextureAnimated!
     private weak var animatedCollision:SKAction!
     private let vectorImpulse:CGVector
+    private let velocityX:CGFloat
+    private let density:CGFloat
     private let kColourBlendFactor:CGFloat = 1
-    private let kVelocityX:CGFloat = 0.001
-    private let kDensity:CGFloat = 0.0001
+    private let kVelocityX:CGFloat = 0.000005
+    private let kDensity:CGFloat = 0.0000005
     
     init(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
         model:MOptionWhistlesVsZombiesSonicBoomItem)
     {
         let mainModel:MOptionWhistlesVsZombies = controller.model
+        let power:CGFloat = model.whistleType.whistle.power
+        velocityX = kVelocityX * power
+        density = kDensity * power
         
         self.model = model
         animatedTexture = mainModel.textures.sonicBoomAnimated
@@ -22,7 +27,7 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         let animation:SKAction = mainModel.actions.actionSonicBoomAnimation
         let colour:UIColor = model.whistleType.colour
         vectorImpulse = CGVector(
-            dx:kVelocityX,
+            dx:velocityX,
             dy:0)
         
         super.init(
@@ -81,7 +86,7 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
         physicsBody.allowsRotation = false
         physicsBody.restitution = 0
         physicsBody.angularVelocity = 0
-        physicsBody.density = kDensity
+        physicsBody.density = density
         
         physicsBody.categoryBitMask = MOptionWhistlesVsZombiesPhysicsStruct.SonicBoom
         physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
@@ -98,6 +103,7 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
     
     func collisionAnimate()
     {
+        removeAllActions()
         run(animatedCollision)
     }
     
@@ -110,5 +116,10 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
     func shoot()
     {
         physicsBody?.applyImpulse(vectorImpulse)
+    }
+    
+    func sonicHit(sonicBoom:MOptionWhistlesVsZombiesSonicBoomItem)
+    {
+        
     }
 }
