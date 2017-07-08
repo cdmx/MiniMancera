@@ -28,17 +28,22 @@ class MOptionWhistlesVsZombiesZombieItemStrategyAliveWalk:MOptionWhistlesVsZombi
             elapsedTime:elapsedTime,
             scene:scene)
         
-        if let lastElapsedTime:TimeInterval = self.lastElapsedTime
-        {
-            let deltaTime:TimeInterval = elapsedTime - lastElapsedTime
-            tryWait(deltaTime:deltaTime)
-        }
-        else
-        {
-            model.view?.walk()
-        }
+        let alive:Bool = model.alive()
         
-        lastElapsedTime = elapsedTime
+        if alive
+        {
+            if let lastElapsedTime:TimeInterval = self.lastElapsedTime
+            {
+                let deltaTime:TimeInterval = elapsedTime - lastElapsedTime
+                tryWait(deltaTime:deltaTime)
+            }
+            else
+            {
+                model.view?.walk()
+            }
+            
+            lastElapsedTime = elapsedTime
+        }
     }
     
     //MARK: private

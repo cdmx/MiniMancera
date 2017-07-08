@@ -5,7 +5,8 @@ extension MOptionWhistlesVsZombiesActions
     private static let kSonicReleaseFrameDuration:TimeInterval = 0.1
     private static let kSonicBoomFrameDuration:TimeInterval = 0.1
     private static let kSonicCollisionFrameDuration:TimeInterval = 0.1
-    private static let kZombieSonicColourDuration:TimeInterval = 0.3
+    private static let kZombieSonicColourTransition:TimeInterval = 0.2
+    private static let kZombieSonicColourDuration:TimeInterval = 0.5
     private static let kZombieWalkingFrameDuration:TimeInterval = 0.4
     private static let kZombieColourBlendFactor:CGFloat = 0.8
     
@@ -47,17 +48,17 @@ extension MOptionWhistlesVsZombiesActions
     
     class func factoryZombieSonicHitAnimation() -> SKAction
     {
-        let colour:UIColor = UIColor.red
+        let colour:UIColor = UIColor(red:1, green:0, blue:0, alpha:0.8)
         let actionAddColour:SKAction = SKAction.colorize(
             with:colour,
             colorBlendFactor:kZombieColourBlendFactor,
-            duration:kZombieSonicColourDuration)
+            duration:kZombieSonicColourTransition)
         let actionWait:SKAction = SKAction.wait(
             forDuration:kZombieSonicColourDuration)
         let actionRemoveColour:SKAction = SKAction.colorize(
             with:colour,
             colorBlendFactor:0,
-            duration:kZombieSonicColourDuration)
+            duration:kZombieSonicColourTransition)
         
         let actions:[SKAction] = [
             actionAddColour,

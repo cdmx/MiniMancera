@@ -33,21 +33,26 @@ class MOptionWhistlesVsZombiesZombieItemStrategyAliveWait:MOptionWhistlesVsZombi
             elapsedTime:elapsedTime,
             scene:scene)
         
-        if let startingTime:TimeInterval = self.startingTime
+        let alive:Bool = model.alive()
+        
+        if alive
         {
-            let deltaTime:TimeInterval = elapsedTime - startingTime
-            
-            if deltaTime > kWaitTime
+            if let startingTime:TimeInterval = self.startingTime
             {
-                self.startingTime = elapsedTime
+                let deltaTime:TimeInterval = elapsedTime - startingTime
                 
-                tryWalk()
+                if deltaTime > kWaitTime
+                {
+                    self.startingTime = elapsedTime
+                    
+                    tryWalk()
+                }
             }
-        }
-        else
-        {
-            startingTime = elapsedTime
-            model.view?.wait()
+            else
+            {
+                startingTime = elapsedTime
+                model.view?.wait()
+            }
         }
     }
     

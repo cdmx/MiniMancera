@@ -22,7 +22,9 @@ class MOptionWhistlesVsZombiesZombieItemStrategyAlive:MGameStrategy<
             model.reduceLife(amount:accumulatedHit)
             accumulatedHit = 0
             
-            if model.life > 0
+            let alive:Bool = model.alive()
+            
+            if alive
             {
                 animateHit()
             }
@@ -42,7 +44,7 @@ class MOptionWhistlesVsZombiesZombieItemStrategyAlive:MGameStrategy<
     
     private func animateHit()
     {
-        
+        model.view?.sonicHit()
     }
     
     //MARK: public

@@ -102,6 +102,6 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
     
     func sonicHit()
     {
-        
+        run(animationHit)
     }
 }

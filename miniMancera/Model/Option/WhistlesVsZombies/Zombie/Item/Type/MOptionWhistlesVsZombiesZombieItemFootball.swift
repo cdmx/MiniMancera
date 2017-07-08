@@ -12,7 +12,7 @@ class MOptionWhistlesVsZombiesZombieItemFootball:MOptionWhistlesVsZombiesZombieI
     private let kSpeed:Int = 7
     private let kIntelligence:Int = 2
     private let kStrength:Int = 3
-    private let kLife:Int = 6
+    private let kLife:Int = 17
     private let kCoins:Int = 2
     
     required init(

@@ -78,6 +78,11 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
         strategy.sonicHit(sonicBoom:sonicBoom)
     }
     
+    func alive() -> Bool
+    {
+        return life > 0
+    }
+    
     func reduceLife(amount:Int)
     {
         life -= amount
