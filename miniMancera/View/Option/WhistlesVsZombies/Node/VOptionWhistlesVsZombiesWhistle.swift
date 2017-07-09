@@ -4,6 +4,7 @@ class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private(set) weak var model:MOptionWhistlesVsZombiesWhistleBase!
     private weak var explodeAnimation:SKAction!
+    private let kRadius:CGFloat = 15
     
     init?(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
@@ -44,17 +45,7 @@ class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
     
     private func startPhysics()
     {
-        guard
-            
-            let modelTexture:MGameTexture = self.modelTexture
-            
-        else
-        {
-            return
-        }
-        
-        let radius:CGFloat = modelTexture.width_2
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(circleOfRadius:radius)
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(circleOfRadius:kRadius)
         physicsBody.isDynamic = false
         physicsBody.friction = 0
         physicsBody.allowsRotation = false

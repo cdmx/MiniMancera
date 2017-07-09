@@ -5,7 +5,7 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyExploded:MGameStrategy<
     MOptionWhistlesVsZombies>
 {
     private var startingTime:TimeInterval?
-    private let kWait:TimeInterval = 2
+    private let kWait:TimeInterval = 1
     
     override func update(
         elapsedTime:TimeInterval,

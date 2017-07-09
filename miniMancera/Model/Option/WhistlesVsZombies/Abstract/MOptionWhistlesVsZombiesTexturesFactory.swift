@@ -54,7 +54,8 @@ extension MOptionWhistlesVsZombiesTextures
         let images:[UIImage] = [
             #imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleExploded0"),
             #imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleExploded1"),
-            #imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleExploded2")]
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleExploded2"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleExploded3")]
         
         let texture:MGameTextureAnimated = MGameTextureAnimated(
             images:images)
