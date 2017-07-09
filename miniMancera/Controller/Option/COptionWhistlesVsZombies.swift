@@ -61,6 +61,31 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
         parent.animateOver(controller:controller)
     }
     
+    private func newGameScene()
+    {
+        let newScene:VOptionWhistlesVsZombiesScene = VOptionWhistlesVsZombiesScene(
+            controller:self)
+        presentScene(newScene:newScene)
+        
+        model.startLevel()
+    }
+    
+    private func presentScene(newScene:SKScene)
+    {
+        let transition:SKTransition = model.actions.transitionCrossFade
+        
+        guard
+            
+            let view:SKView = self.view as? SKView
+            
+        else
+        {
+            return
+        }
+        
+        view.presentScene(newScene, transition:transition)
+    }
+    
     //MARK: public
     
     func showBoard(modelBase:MOptionWhistlesVsZombiesWhistleBase)
@@ -72,5 +97,32 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
             
             self?.asyncShowBoard(modelBase:modelBase)
         }
+    }
+    
+    func showGameOver()
+    {
+        postScore()
+        
+        let newScene:VOptionPollutedGardenSceneOver = VOptionPollutedGardenSceneOver(
+            controller:self)
+        
+        presentScene(newScene:newScene)
+    }
+    
+    func game1up()
+    {
+//        let sound1up:SKAction = model.sounds.sound1up
+//        playSound(actionSound:sound1up)
+        
+        restartTimer()
+        newGameScene()
+    }
+    
+    func gamePlayNoMore()
+    {
+//        let soundFail:SKAction = model.sounds.soundFail
+//        playSound(actionSound:soundFail)
+        
+        exitGame()
     }
 }

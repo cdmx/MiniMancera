@@ -67,12 +67,14 @@ class MOptionWhistlesVsZombies:MGame
         return strategy as? MGameStrategyMain<T>
     }
     
-    //MARK: public
+    //MARK: private
     
-    func strategyGame()
+    private func strategyGame()
     {
         strategy = MOptionWhistlesVsZombiesStrategyGame(model:self)
     }
+    
+    //MARK: public
     
     func whistleSelected(
         base:MOptionWhistlesVsZombiesWhistleBase,
@@ -88,5 +90,11 @@ class MOptionWhistlesVsZombies:MGame
         coins += zombie.type.coins
         
         points.addPoints(zombie:zombie)
+    }
+    
+    func zombiesGotHome()
+    {
+        player.defeated()
+        strategy = MOptionWhistlesVsZombiesStrategyDefeated(model:self)
     }
 }

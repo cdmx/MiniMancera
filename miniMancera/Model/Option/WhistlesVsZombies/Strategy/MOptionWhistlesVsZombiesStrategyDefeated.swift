@@ -1,6 +1,6 @@
 import SpriteKit
 
-class MOptionWhistlesVsZombiesStrategyBegin:MGameStrategyMain<MOptionWhistlesVsZombies>
+class MOptionWhistlesVsZombiesStrategyDefeated:MGameStrategyMain<MOptionWhistlesVsZombies>
 {
     private var startingTime:TimeInterval?
     private let kWait:TimeInterval = 1.5
@@ -10,7 +10,9 @@ class MOptionWhistlesVsZombiesStrategyBegin:MGameStrategyMain<MOptionWhistlesVsZ
         let updateItems:[MGameUpdate<MOptionWhistlesVsZombies>] = [
             model.player,
             model.sonicBoom,
-            model.zombie]
+            model.zombie,
+            model.points,
+            model.contact]
         
         super.init(
             model:model,
@@ -29,7 +31,7 @@ class MOptionWhistlesVsZombiesStrategyBegin:MGameStrategyMain<MOptionWhistlesVsZ
             
             if deltaTime > kWait
             {
-                timeOut()
+                timeOut(scene:scene)
             }
         }
         else
@@ -40,15 +42,17 @@ class MOptionWhistlesVsZombiesStrategyBegin:MGameStrategyMain<MOptionWhistlesVsZ
     
     //MARK: private
     
-    private func timeOut()
+    private func timeOut(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        model.activateGame()
+        guard
         
-        let actionFadeIn:SKAction = model.actions.actionFadeIn
-        let actionFadeOut:SKAction = model.actions.actionFadeOut
+            let controller:COptionWhistlesVsZombies = scene.controller as? COptionWhistlesVsZombies
         
-        model.viewMenu?.run(actionFadeIn)
-//        model.hud.view?.run(actionFadeIn)
-//        model.title.view?.run(actionFadeOut)
+        else
+        {
+            return
+        }
+        
+        controller.showGameOver()
     }
 }

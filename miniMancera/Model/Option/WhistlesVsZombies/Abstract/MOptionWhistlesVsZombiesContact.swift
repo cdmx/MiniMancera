@@ -49,17 +49,19 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
                 body:bodyA,
                 scene:scene)
         }
-        else if let whistle:VOptionWhistlesVsZombiesWhistle = bodyA as? VOptionWhistlesVsZombiesWhistle
+        else if let zombie:VOptionWhistlesVsZombiesZombie = bodyA as? VOptionWhistlesVsZombiesZombie
         {
-            whistleAndBody(
-                whistle:whistle,
-                body:bodyB)
+            zombieAndBody(
+                zombie:zombie,
+                body:bodyB,
+                scene:scene)
         }
-        else if let whistle:VOptionWhistlesVsZombiesWhistle = bodyB as? VOptionWhistlesVsZombiesWhistle
+        else if let zombie:VOptionWhistlesVsZombiesZombie = bodyB as? VOptionWhistlesVsZombiesZombie
         {
-            whistleAndBody(
-                whistle:whistle,
-                body:bodyA)
+            zombieAndBody(
+                zombie:zombie,
+                body:bodyA,
+                scene:scene)
         }
     }
     
@@ -96,21 +98,20 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
         }
     }
     
-    private func whistleAndBody(
-        whistle:VOptionWhistlesVsZombiesWhistle,
-        body:SKNode?)
+    private func zombieAndBody(
+        zombie:VOptionWhistlesVsZombiesZombie,
+        body:SKNode?,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        let whistleModel:MOptionWhistlesVsZombiesWhistleBase = whistle.model
-        let alive:Bool = whistleModel.alive()
-        
-        if alive
+        if let whistle:VOptionWhistlesVsZombiesWhistle = body as? VOptionWhistlesVsZombiesWhistle
         {
-            if let zombie:VOptionWhistlesVsZombiesZombie = body as? VOptionWhistlesVsZombiesZombie
-            {
-                whistleAndZombie(
-                    whistleModel:whistleModel,
-                    zombie:zombie)
-            }
+            zombieAndWhistle(
+                zombie:zombie,
+                whistle:whistle)
+        }
+        else if let _:VOptionWhistlesVsZombiesPhysicHome = body as? VOptionWhistlesVsZombiesPhysicHome
+        {
+            zombieAndHome(scene:scene)
         }
     }
     
@@ -132,22 +133,33 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
         modelZombie.sonicHit(sonicBoom:sonicBoomModel)
     }
     
-    private func whistleAndZombie(
-        whistleModel:MOptionWhistlesVsZombiesWhistleBase,
-        zombie:VOptionWhistlesVsZombiesZombie)
+    private func zombieAndWhistle(
+        zombie:VOptionWhistlesVsZombiesZombie,
+        whistle:VOptionWhistlesVsZombiesWhistle)
     {
-        whistleModel.explodeStart()
+        let whistleModel:MOptionWhistlesVsZombiesWhistleBase = whistle.model
+        let alive:Bool = whistleModel.alive()
         
-        guard
-            
-            let modelZombie:MOptionWhistlesVsZombiesZombieItem = zombie.model
-            
-        else
+        if alive
         {
-            return
+            whistleModel.explodeStart()
+            
+            guard
+                
+                let modelZombie:MOptionWhistlesVsZombiesZombieItem = zombie.model
+                
+            else
+            {
+                return
+            }
+            
+            modelZombie.exploded()
         }
-        
-        modelZombie.exploded()
+    }
+    
+    private func zombieAndHome(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        scene.controller.model.zombiesGotHome()
     }
     
     //MARK: public
