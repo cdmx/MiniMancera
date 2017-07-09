@@ -3,7 +3,7 @@ import SpriteKit
 class ViewGameNodeGameOverInfo:SKSpriteNode
 {
     private let orientation:UIInterfaceOrientation
-    private let kAddPositionY:CGFloat = -100
+    private let kAddPositionY:CGFloat = -110
     private let kHeight:CGFloat = 50
     private let kTitlePositionY:CGFloat = 5
     private let kDescrPositionY:CGFloat = -10

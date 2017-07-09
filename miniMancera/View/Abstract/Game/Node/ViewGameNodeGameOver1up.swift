@@ -3,7 +3,7 @@ import UIKit
 class ViewGameNodeGameOver1up<T:MGame>:ViewGameNode<T>
 {
     private let orientation:UIInterfaceOrientation
-    private let kPositionY:CGFloat = 100
+    private let kPositionY:CGFloat = 95
     
     init(
         controller:ControllerGame<T>,
