@@ -6,6 +6,8 @@ class MOptionWhistlesVsZombiesTextures
     let coin:MGameTexture
     let base:MGameTexture
     let menu:MGameTexture
+    let gameOver1up:MGameTexture
+    let gameOverExit:MGameTexture
     
     let sonicBoomAnimated:MGameTextureAnimated
     let sonicCollisionAnimated:MGameTextureAnimated
@@ -40,6 +42,12 @@ class MOptionWhistlesVsZombiesTextures
         menu = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesMenu"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Menu.rawValue)
+        gameOver1up = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombies1up"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.GameOver1up.rawValue)
+        gameOverExit = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesGameOver"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.GameOverExit.rawValue)
         
         sonicBoomAnimated = MOptionWhistlesVsZombiesTextures.factorySonicBoomAnimated()
         sonicReleaseAnimated = MOptionWhistlesVsZombiesTextures.factorySonicReleaseAnimated()
