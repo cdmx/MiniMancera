@@ -3,7 +3,7 @@ import UIKit
 class VOptionWhistlesVsZombiesPlayer:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private let kPositionX:CGFloat = 30
-    private let kPositionY:CGFloat = 244
+    private let kPositionY:CGFloat = 222
     
     override init(controller:ControllerGame<MOptionWhistlesVsZombies>)
     {

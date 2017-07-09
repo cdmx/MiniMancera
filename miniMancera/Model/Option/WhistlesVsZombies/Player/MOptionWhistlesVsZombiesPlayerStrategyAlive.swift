@@ -5,7 +5,7 @@ class MOptionWhistlesVsZombiesPlayerStrategyAlive:MGameStrategy<
     MOptionWhistlesVsZombies>
 {
     private var lastElapsedTime:TimeInterval?
-    private let kChangeRatio:UInt32 = 100
+    private let kChangeRatio:UInt32 = 60
     private let kWaitTime:TimeInterval = 0.2
     
     override func update(
@@ -51,6 +51,12 @@ class MOptionWhistlesVsZombiesPlayerStrategyAlive:MGameStrategy<
             break
             
         case 2:
+            
+            model.shut()
+            
+            break
+            
+        case 3:
             
             model.scared()
             

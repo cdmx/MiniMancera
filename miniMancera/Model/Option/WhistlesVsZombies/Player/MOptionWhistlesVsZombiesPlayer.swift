@@ -12,6 +12,15 @@ class MOptionWhistlesVsZombiesPlayer:MGameUpdate<MOptionWhistlesVsZombies>
         stand()
     }
     
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        strategy?.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
+    }
+    
     //MARK: public
     
     func stand()
@@ -22,6 +31,11 @@ class MOptionWhistlesVsZombiesPlayer:MGameUpdate<MOptionWhistlesVsZombies>
     func sweat()
     {
         strategy = MOptionWhistlesVsZombiesPlayerStrategyAliveSweat(model:self)
+    }
+    
+    func shut()
+    {
+        strategy = MOptionWhistlesVsZombiesPlayerStrategyAliveShut(model:self)
     }
     
     func scared()

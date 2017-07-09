@@ -18,6 +18,7 @@ class MOptionWhistlesVsZombiesTextures
     
     let playerStand:MGameTexture
     let playerSweat:MGameTexture
+    let playerShut:MGameTexture
     let playerScared:MGameTexture
     let playerDefeated:MGameTexture
     
@@ -60,6 +61,9 @@ class MOptionWhistlesVsZombiesTextures
             zPosition:MOptionWhistlesVsZombiesZPosition.Player.rawValue)
         playerSweat = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesPlayer2"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.Player.rawValue)
+        playerShut = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesPlayer4"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Player.rawValue)
         playerScared = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesPlayer1"),
