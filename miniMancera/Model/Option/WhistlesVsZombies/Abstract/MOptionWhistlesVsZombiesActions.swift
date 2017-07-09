@@ -9,6 +9,7 @@ class MOptionWhistlesVsZombiesActions
     let actionSonicReleaseAnimation:SKAction
     let actionSonicBoomAnimation:SKAction
     let actionSonicCollisionAnimation:SKAction
+    let actionWhistleExplodedAnimation:SKAction
     let actionZombieSonicHit:SKAction
     let actionZombieFootballWakingAnimation:SKAction
     let actionZombieFootballDefeatedAnimation:SKAction
@@ -33,6 +34,8 @@ class MOptionWhistlesVsZombiesActions
             texture:textures.sonicBoomAnimated)
         actionSonicCollisionAnimation = MOptionWhistlesVsZombiesActions.factorySonicCollisionAnimation(
             texture:textures.sonicCollisionAnimated)
+        
+        actionWhistleExplodedAnimation = MOptionWhistlesVsZombiesActions.factoryWhistleExplodeAnimation()
         
         actionZombieSonicHit = MOptionWhistlesVsZombiesActions.factoryZombieSonicHitAnimation()
         

@@ -37,7 +37,7 @@ class MOptionWhistlesVsZombiesTextures
         
         sonicBoomAnimated = MOptionWhistlesVsZombiesTextures.factorySonicBoomAnimated()
         sonicReleaseAnimated = MOptionWhistlesVsZombiesTextures.factorySonicReleaseAnimated()
-        sonicCollisionAnimated = MOptionWhistlesVsZombiesTextures.factorySonicCollisionAnimated()
+        sonicCollisionAnimated = MOptionWhistlesVsZombiesTextures.factoryWhistleExplodedAnimated()
   
         whistlePink = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePink"),

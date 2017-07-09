@@ -5,6 +5,7 @@ extension MOptionWhistlesVsZombiesActions
     private static let kSonicReleaseFrameDuration:TimeInterval = 0.1
     private static let kSonicBoomFrameDuration:TimeInterval = 0.1
     private static let kSonicCollisionFrameDuration:TimeInterval = 0.1
+    private static let kWhistleExplodeFrameDuration:TimeInterval = 0.2
     private static let kZombieSonicColourTransition:TimeInterval = 0.2
     private static let kZombieSonicColourDuration:TimeInterval = 0.5
     private static let kZombieWalkingFrameDuration:TimeInterval = 0.4
@@ -43,6 +44,17 @@ extension MOptionWhistlesVsZombiesActions
             with:texture.textures,
             timePerFrame:kSonicCollisionFrameDuration,
             resize:true,
+            restore:false)
+        
+        return action
+    }
+    
+    class func factoryWhistleExplodeAnimation(texture:MGameTextureAnimated) -> SKAction
+    {
+        let action:SKAction = SKAction.animate(
+            with:texture.textures,
+            timePerFrame:kWhistleExplodeFrameDuration,
+            resize:false,
             restore:false)
         
         return action
