@@ -4,7 +4,7 @@ class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private(set) weak var model:MOptionWhistlesVsZombiesWhistleBase!
     private weak var explodeAnimation:SKAction!
-    private let kRadius:CGFloat = 15
+    private let kRadius:CGFloat = 10
     
     init?(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
