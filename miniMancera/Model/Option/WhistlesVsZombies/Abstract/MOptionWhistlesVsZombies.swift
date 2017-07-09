@@ -12,6 +12,7 @@ class MOptionWhistlesVsZombies:MGame
     let textures:MOptionWhistlesVsZombiesTextures
     let actions:MOptionWhistlesVsZombiesActions
     let contact:MOptionWhistlesVsZombiesContact
+    let hud:MOptionWhistlesVsZombiesHud
     private(set) var coins:Int
     private var strategy:MGameStrategyMain<MOptionWhistlesVsZombies>?
     private let kInitialCoins:Int = 30
@@ -34,10 +35,12 @@ class MOptionWhistlesVsZombies:MGame
             textures:textures,
             actions:actions)
         points = MOptionWhistlesVsZombiesPoints()
+        hud = MOptionWhistlesVsZombiesHud()
         coins = kInitialCoins
         
         super.init()
         
+        hud.model = self
         startLevel()
     }
     
