@@ -1,7 +1,7 @@
 "MHomeOptionsPollutedGarden_title"="Contingencia en el Jardín";
 "MHomeOptionsPollutedGarden_descr"="\nNuevamente hay Contingencia Ambiental en la Ciudad de México y además empezó a llover, logrando que el Ozono y las Partículas lleguen al suelo.\n\nAyuda a que MiniMancera proteja las Petunias de su jardín en contra de la contaminación.";
 "VOptionPollutedGardenTitle_label"="PROTEGE TUS PETUNIAS";
-"VOptionPollutedGardenGameOverTitle_label"="Ganó la Contingencia";
-"VOptionPollutedGardenGameOverDescr_label"="Tus petunias fueron contaminadas";
-"VOptionPollutedGardenGameOverTitle1up_label"="Reintentar";
-"VOptionPollutedGardenGameOverTitleExit_label"="Salir";
+"VOptionPollutedGardenSceneOver_infoTitle"="Ganó la Contingencia";
+"VOptionPollutedGardenSceneOver_infoDescr"="Tus petunias fueron contaminadas";
+"VOptionPollutedGardenSceneOver_1up"="Reintentar";
+"VOptionPollutedGardenSceneOver_exit"="Salir";

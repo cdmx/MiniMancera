@@ -17,26 +17,41 @@ class VOptionPollutedGardenSceneOver:ViewGameScene<MOptionPollutedGarden>
     
     private func factoryNodes()
     {
+        let textures:MOptionPollutedGardenTextures = controller.model.textures
+        
         let background:VOptionPollutedGardenBackground = VOptionPollutedGardenBackground(
             controller:controller)
         
-        let title:VOptionPollutedGardenGameOverTitle = VOptionPollutedGardenGameOverTitle()
-        let descr:VOptionPollutedGardenGameOverDescr = VOptionPollutedGardenGameOverDescr()
-        let title1up:VOptionPollutedGardenGameOverTitle1up = VOptionPollutedGardenGameOverTitle1up()
-        let titleExit:VOptionPollutedGardenGameOverTitleExit = VOptionPollutedGardenGameOverTitleExit()
+        let info:ViewGameNodeGameOverInfo = ViewGameNodeGameOverInfo(
+            title:String.localizedPollutedGarden(
+                key:"VOptionPollutedGardenSceneOver_infoTitle"),
+            descr:String.localizedPollutedGarden(
+                key:"VOptionPollutedGardenSceneOver_infoDescr"),
+            zPosition:MOptionPollutedGardenZPosition.GameOverInfo.rawValue)
         
-        let player:VOptionPollutedGardenGameOverPlayer = VOptionPollutedGardenGameOverPlayer(
-            controller:controller)
+        let title1up:ViewGameNodeGameOverTitle1up = ViewGameNodeGameOverTitle1up(
+            text:String.localizedPollutedGarden(
+                key:"VOptionPollutedGardenSceneOver_1up"),
+            zPosition:MOptionPollutedGardenZPosition.GameOverTitle1up.rawValue)
+        let titleExit:ViewGameNodeGameOverTitleExit = ViewGameNodeGameOverTitleExit(
+            text:String.localizedPollutedGarden(
+                key:"VOptionPollutedGardenSceneOver_exit"),
+            zPosition:MOptionPollutedGardenZPosition.GameOverTitleExit.rawValue)
         
-        let button1up:VOptionPollutedGardenGameOver1up = VOptionPollutedGardenGameOver1up(
-            controller:controller)
+        let player:ViewGameNodeGameOverPlayer<MOptionPollutedGarden> = ViewGameNodeGameOverPlayer<MOptionPollutedGarden>(
+            controller:controller,
+            texture:textures.playerDefeated)
         
-        let buttonExit:VOptionPollutedGardenGameOverExit = VOptionPollutedGardenGameOverExit(
-            controller:controller)
+        let button1up:ViewGameNodeGameOver1up<MOptionPollutedGarden> = ViewGameNodeGameOver1up<MOptionPollutedGarden>(
+            controller:controller,
+            texture:textures.gameOver1up)
+        
+        let buttonExit:ViewGameNodeGameOverExit<MOptionPollutedGarden> = ViewGameNodeGameOverExit<MOptionPollutedGarden>(
+            controller:controller,
+            texture:textures.gameOverExit)
         
         addChild(background)
-        addChild(title)
-        addChild(descr)
+        addChild(info)
         addChild(title1up)
         addChild(titleExit)
         addChild(player)

@@ -33,7 +33,7 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         let physicSonicLimit:VOptionWhistlesVsZombiesPhysicSonicLimit = VOptionWhistlesVsZombiesPhysicSonicLimit(
             controller:controller)
         
-        let menu:ViewGameNodeMenu<MOptionWhistlesVsZombies> = ViewGameNodeMenu(
+        let menu:ViewGameNodeMenu<MOptionWhistlesVsZombies> = ViewGameNodeMenu<MOptionWhistlesVsZombies>(
             controller:controller,
             texture:model.textures.menu,
             orientation:UIInterfaceOrientation.landscapeLeft)
