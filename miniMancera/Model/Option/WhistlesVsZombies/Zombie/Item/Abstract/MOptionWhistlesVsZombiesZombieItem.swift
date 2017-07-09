@@ -51,7 +51,7 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
     
     func defeated(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        scene.controller.model.addPoints(zombie:self)
+        scene.controller.model.zombieDefeated(zombie:self)
         
         strategy = MOptionWhistlesVsZombiesZombieItemStrategyDefeated(
             model:self)

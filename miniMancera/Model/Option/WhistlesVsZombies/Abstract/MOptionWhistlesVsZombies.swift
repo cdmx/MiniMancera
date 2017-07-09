@@ -80,9 +80,11 @@ class MOptionWhistlesVsZombies:MGame
         base.charge(whistleType:item.whistleType)
     }
     
-    func addPoints(zombie:MOptionWhistlesVsZombiesZombieItem)
+    func zombieDefeated(zombie:MOptionWhistlesVsZombiesZombieItem)
     {
+        score += 1
         coins += zombie.type.coins
+        
         points.addPoints(zombie:zombie)
     }
 }
