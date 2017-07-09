@@ -13,7 +13,7 @@ class MOptionWhistlesVsZombiesWhistleTypeOrange:MOptionWhistlesVsZombiesWhistleT
     {
         whistle = MOptionWhistlesVsZombiesWhistleOrange()
         boardItemType = MOptionWhistlesVsZombiesBoardItemOrange.self
-        textureGame = textures.whistleOrangeGame
+        textureGame = textures.whistleOrange
         colour = UIColor(
             red:0.96078431372549,
             green:0.650980392156863,

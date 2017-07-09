@@ -11,9 +11,10 @@ class MOptionWhistlesVsZombiesTextures
     let sonicCollisionAnimated:MGameTextureAnimated
     let sonicReleaseAnimated:MGameTextureAnimated
 
-    let whistlePinkGame:MGameTexture
-    let whistleBlueGame:MGameTexture
-    let whistleOrangeGame:MGameTexture
+    let whistlePink:MGameTexture
+    let whistleBlue:MGameTexture
+    let whistleOrange:MGameTexture
+    let whistleExploded:MGameTexture
     
     let zombieFootballStand:MGameTexture
     let zombieFootballWalkingAnimated:MGameTextureAnimated
@@ -38,14 +39,17 @@ class MOptionWhistlesVsZombiesTextures
         sonicReleaseAnimated = MOptionWhistlesVsZombiesTextures.factorySonicReleaseAnimated()
         sonicCollisionAnimated = MOptionWhistlesVsZombiesTextures.factorySonicCollisionAnimated()
   
-        whistlePinkGame = MGameTexture(
+        whistlePink = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistlePink"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
-        whistleBlueGame = MGameTexture(
+        whistleBlue = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleBlue"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
-        whistleOrangeGame = MGameTexture(
+        whistleOrange = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleOrange"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
+        whistleExploded = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleExploded"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
         
         zombieFootballStand = MGameTexture(
