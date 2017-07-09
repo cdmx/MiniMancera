@@ -12,7 +12,8 @@ class MOptionWhistlesVsZombiesStrategyDefeated:MGameStrategyMain<MOptionWhistles
             model.sonicBoom,
             model.zombie,
             model.points,
-            model.contact]
+            model.contact,
+            model.hud]
         
         super.init(
             model:model,
