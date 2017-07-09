@@ -208,6 +208,10 @@
 		DA76890B1F121E6900D51B6B /* MOptionWhistlesVsZombiesPlayerStrategyAliveShut.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76890A1F121E6900D51B6B /* MOptionWhistlesVsZombiesPlayerStrategyAliveShut.swift */; };
 		DA76890D1F1222DB00D51B6B /* MOptionWhistlesVsZombiesStrategyDefeated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76890C1F1222DB00D51B6B /* MOptionWhistlesVsZombiesStrategyDefeated.swift */; };
 		DA76890F1F12257F00D51B6B /* VOptionWhistlesVsZombiesSceneOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76890E1F12257F00D51B6B /* VOptionWhistlesVsZombiesSceneOver.swift */; };
+		DA7689111F122C3800D51B6B /* ViewGameNodeGameOverExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7689101F122C3800D51B6B /* ViewGameNodeGameOverExit.swift */; };
+		DA7689131F122C4200D51B6B /* ViewGameNodeGameOver1up.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7689121F122C4200D51B6B /* ViewGameNodeGameOver1up.swift */; };
+		DA7689151F122C6E00D51B6B /* ViewGameNodeGameOverTitle1up.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7689141F122C6E00D51B6B /* ViewGameNodeGameOverTitle1up.swift */; };
+		DA7689171F122C7500D51B6B /* ViewGameNodeGameOverTitleExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7689161F122C7500D51B6B /* ViewGameNodeGameOverTitleExit.swift */; };
 		DA779A011EF875FD00362A44 /* MHomeSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A001EF875FD00362A44 /* MHomeSplash.swift */; };
 		DA779A031EF876D500362A44 /* MHomeSplashProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A021EF876D500362A44 /* MHomeSplashProtocol.swift */; };
 		DA779A051EF884E900362A44 /* MHomeSplashDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */; };
@@ -581,6 +585,10 @@
 		DA76890A1F121E6900D51B6B /* MOptionWhistlesVsZombiesPlayerStrategyAliveShut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesPlayerStrategyAliveShut.swift; sourceTree = "<group>"; };
 		DA76890C1F1222DB00D51B6B /* MOptionWhistlesVsZombiesStrategyDefeated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesStrategyDefeated.swift; sourceTree = "<group>"; };
 		DA76890E1F12257F00D51B6B /* VOptionWhistlesVsZombiesSceneOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesSceneOver.swift; sourceTree = "<group>"; };
+		DA7689101F122C3800D51B6B /* ViewGameNodeGameOverExit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGameNodeGameOverExit.swift; sourceTree = "<group>"; };
+		DA7689121F122C4200D51B6B /* ViewGameNodeGameOver1up.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGameNodeGameOver1up.swift; sourceTree = "<group>"; };
+		DA7689141F122C6E00D51B6B /* ViewGameNodeGameOverTitle1up.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGameNodeGameOverTitle1up.swift; sourceTree = "<group>"; };
+		DA7689161F122C7500D51B6B /* ViewGameNodeGameOverTitleExit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewGameNodeGameOverTitleExit.swift; sourceTree = "<group>"; };
 		DA779A001EF875FD00362A44 /* MHomeSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplash.swift; sourceTree = "<group>"; };
 		DA779A021EF876D500362A44 /* MHomeSplashProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashProtocol.swift; sourceTree = "<group>"; };
 		DA779A041EF884E900362A44 /* MHomeSplashDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashDescr.swift; sourceTree = "<group>"; };
@@ -1524,6 +1532,10 @@
 			isa = PBXGroup;
 			children = (
 				DA8DF1171F0C34D7005F3680 /* ViewGameNodeMenu.swift */,
+				DA7689121F122C4200D51B6B /* ViewGameNodeGameOver1up.swift */,
+				DA7689101F122C3800D51B6B /* ViewGameNodeGameOverExit.swift */,
+				DA7689141F122C6E00D51B6B /* ViewGameNodeGameOverTitle1up.swift */,
+				DA7689161F122C7500D51B6B /* ViewGameNodeGameOverTitleExit.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -2085,6 +2097,7 @@
 				DA717F8F1F08848300033BA4 /* MOptionPollutedGardenPlantAnimations.swift in Sources */,
 				DAB631D71F058F26003C6934 /* MOptionPollutedGardenSounds.swift in Sources */,
 				DA6928D91F09840B001E9326 /* MOptionPollutedGardenBubble.swift in Sources */,
+				DA7689131F122C4200D51B6B /* ViewGameNodeGameOver1up.swift in Sources */,
 				DAF37BB41F02E938004C505D /* MOptionReformaCrossingFoeItemRuta2.swift in Sources */,
 				DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */,
 				DA2DFFD31EECB16A00365F23 /* AppDelegate.swift in Sources */,
@@ -2118,6 +2131,7 @@
 				DA5667841EF276CD000055D8 /* MHomeFooterBoards.swift in Sources */,
 				DA2DFFED1EECB16A00365F23 /* VPushBackground.swift in Sources */,
 				DA7E46851EFAEF3E00466867 /* MPerkPurchaseProtocol.swift in Sources */,
+				DA7689111F122C3800D51B6B /* ViewGameNodeGameOverExit.swift in Sources */,
 				DA1D579C1EF245C800ECA895 /* VHomeFooterCell.swift in Sources */,
 				DA11217F1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift in Sources */,
 				DA228C341F121271004542CE /* MOptionWhistlesVsZombiesPlayerStrategyAliveSweat.swift in Sources */,
@@ -2230,6 +2244,7 @@
 				DA7E46771EFAD8D300466867 /* VHomeFroobContentActionsStore.swift in Sources */,
 				DAB631E41F05972F003C6934 /* MOptionPollutedGardenPlantItem.swift in Sources */,
 				DAAF2F981EF6ECB800589BB0 /* VSettingsCell.swift in Sources */,
+				DA7689171F122C7500D51B6B /* ViewGameNodeGameOverTitleExit.swift in Sources */,
 				DA8ACFA51F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift in Sources */,
 				DA5667621EF26D24000055D8 /* DMiniMancera.xcdatamodeld in Sources */,
 				DA5667A41EF325E9000055D8 /* MOptionPollutedGarden.swift in Sources */,
@@ -2418,6 +2433,7 @@
 				DAF37B941F02DD70004C505D /* VOptionReformaCrossingGameOver1up.swift in Sources */,
 				DA7E46831EFAEF3000466867 /* MPerkFreeProtocol.swift in Sources */,
 				DA8ACFE61F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleTypePink.swift in Sources */,
+				DA7689151F122C6E00D51B6B /* ViewGameNodeGameOverTitle1up.swift in Sources */,
 				DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

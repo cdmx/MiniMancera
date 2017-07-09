@@ -163,6 +163,16 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
         lastUpdateTime = nil
     }
     
+    func game1up()
+    {
+        restartTimer()
+    }
+    
+    func gamePlayNoMore()
+    {
+        exitGame()
+    }
+    
     //MARK: scene delegate
     
     func update(_ currentTime:TimeInterval, for scene:SKScene)

@@ -95,6 +95,7 @@ class MOptionWhistlesVsZombies:MGame
     func zombiesGotHome()
     {
         player.defeated()
+        deActivateGame()
         strategy = MOptionWhistlesVsZombiesStrategyDefeated(model:self)
     }
 }
