@@ -6,3 +6,7 @@
 "MOptionWhistlesVsZombiesBoardScore_titlePower"="Fuerza";
 
 "VOptionWhistlesVsZombiesBoardBar_labelTitle"="Elige un Silbato";
+"VOptionWhistlesVsZombiesSceneOver_infoTitle"="Ganaron los Zombies";
+"VOptionWhistlesVsZombiesSceneOver_infoDescr"="No pudiste detenerlos";
+"VOptionWhistlesVsZombiesSceneOver_1up"="Reintentar";
+"VOptionWhistlesVsZombiesSceneOver_exit"="Salir";

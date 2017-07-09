@@ -14,4 +14,11 @@ enum MOptionWhistlesVsZombiesZPosition:CGFloat
     case Base
     case Physics
     case Menu
+    case GameOverInfo
+    case GameOverPlayer
+    case GameOverTitle1up
+    case GameOverTitleExit
+    case GameOver1up
+    case GameOverExit
+    case Title
 }
