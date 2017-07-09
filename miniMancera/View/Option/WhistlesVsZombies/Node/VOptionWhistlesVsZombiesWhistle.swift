@@ -66,4 +66,10 @@ class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
         colorBlendFactor = 1
         run(explodeAnimation)
     }
+    
+    func explodeFinished()
+    {
+        removeAllActions()
+        removeFromParent()
+    }
 }

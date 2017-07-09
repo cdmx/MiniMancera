@@ -17,7 +17,7 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyExploded:MGameStrategy<
             
             if deltaTime > kWait
             {
-                timeOut()
+                model.explodeFinish()
             }
         }
         else
@@ -32,10 +32,5 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyExploded:MGameStrategy<
     private func showExploded()
     {
         model.viewWhistle?.explode()
-    }
-    
-    private func timeOut()
-    {
-        
     }
 }

@@ -13,7 +13,7 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
         self.position = position
         super.init()
         
-        strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyWait(model:self)
+        wait()
     }
     
     override func update(
@@ -41,6 +41,11 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
         return true
     }
     
+    func wait()
+    {
+        strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyWait(model:self)
+    }
+    
     func charge(whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol)
     {
         self.whistleType = whistleType
@@ -57,6 +62,8 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
     
     func explodeFinish()
     {
-        
+        wait()
+        viewBase?.disCharged()
+        viewWhistle?.explodeFinished()
     }
 }
