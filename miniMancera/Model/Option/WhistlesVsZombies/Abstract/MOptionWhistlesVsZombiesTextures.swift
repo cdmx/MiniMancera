@@ -14,7 +14,7 @@ class MOptionWhistlesVsZombiesTextures
     let whistlePink:MGameTexture
     let whistleBlue:MGameTexture
     let whistleOrange:MGameTexture
-    let whistleExploded:MGameTexture
+    let whistleExplodedAnimated:MGameTextureAnimated
     
     let zombieFootballStand:MGameTexture
     let zombieFootballWalkingAnimated:MGameTextureAnimated
@@ -48,9 +48,7 @@ class MOptionWhistlesVsZombiesTextures
         whistleOrange = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleOrange"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
-        whistleExploded = MGameTexture(
-            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleExploded"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
+        whistleExplodedAnimated = MOptionWhistlesVsZombiesTextures.factorySonicCollisionAnimated()
         
         zombieFootballStand = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesZombieFootballStand"),

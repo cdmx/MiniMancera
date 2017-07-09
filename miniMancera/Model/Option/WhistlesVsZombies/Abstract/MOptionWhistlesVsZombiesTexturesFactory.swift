@@ -49,6 +49,19 @@ extension MOptionWhistlesVsZombiesTextures
         return texture
     }
     
+    class func factoryWhistleExplodedAnimated() -> MGameTextureAnimated
+    {
+        let images:[UIImage] = [
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleExploded0"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleExploded1"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleExploded2")]
+        
+        let texture:MGameTextureAnimated = MGameTextureAnimated(
+            images:images)
+        
+        return texture
+    }
+    
     class func factoryFootballWalkingAnimated() -> MGameTextureAnimated
     {
         let images:[UIImage] = [
