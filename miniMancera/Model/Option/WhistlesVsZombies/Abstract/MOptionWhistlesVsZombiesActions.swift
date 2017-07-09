@@ -35,7 +35,8 @@ class MOptionWhistlesVsZombiesActions
         actionSonicCollisionAnimation = MOptionWhistlesVsZombiesActions.factorySonicCollisionAnimation(
             texture:textures.sonicCollisionAnimated)
         
-        actionWhistleExplodedAnimation = MOptionWhistlesVsZombiesActions.factoryWhistleExplodeAnimation()
+        actionWhistleExplodedAnimation = MOptionWhistlesVsZombiesActions.factoryWhistleExplodeAnimation(
+            texture:textures.whistleExplodedAnimated)
         
         actionZombieSonicHit = MOptionWhistlesVsZombiesActions.factoryZombieSonicHitAnimation()
         

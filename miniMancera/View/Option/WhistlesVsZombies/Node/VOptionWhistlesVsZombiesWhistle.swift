@@ -3,7 +3,7 @@ import SpriteKit
 class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private(set) weak var model:MOptionWhistlesVsZombiesWhistleBase!
-    private weak var textureExploded:MGameTexture!
+    private weak var explodeAnimation:SKAction!
     
     init?(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
@@ -11,7 +11,7 @@ class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
     {
         guard
         
-            let texture:MGameTexture = model.whistleType?.texture
+            let whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol = model.whistleType
         
         else
         {
@@ -19,13 +19,15 @@ class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
         }
         
         self.model = model
-        textureExploded = controller.model.textures.whistleExploded
+        explodeAnimation = controller.model.actions.actionWhistleExplodedAnimation
         
         super.init(
             controller:controller,
-            texture:texture)
+            texture:whistleType.texture)
         
         startPhysics()
+        color = whistleType.colour
+        colorBlendFactor = 0
     }
     
     required init?(coder:NSCoder)
@@ -70,6 +72,7 @@ class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
     
     func explode()
     {
-        texture = textureExploded.texture
+        colorBlendFactor = 1
+        run(explodeAnimation)
     }
 }
