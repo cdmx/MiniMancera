@@ -119,6 +119,7 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
     
     func showGameOver()
     {
+        model.strategyWait()
         postScore()
         
         let newScene:VOptionWhistlesVsZombiesSceneOver = VOptionWhistlesVsZombiesSceneOver(

@@ -76,6 +76,11 @@ class MOptionWhistlesVsZombies:MGame
     
     //MARK: public
     
+    func strategyWait()
+    {
+        strategy = MOptionWhistlesVsZombiesStrategyWait(model:self)
+    }
+    
     func whistleSelected(
         base:MOptionWhistlesVsZombiesWhistleBase,
         item:MOptionWhistlesVsZombiesBoardItemProtocol)
