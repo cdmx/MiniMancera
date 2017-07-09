@@ -170,13 +170,6 @@
 		DA6928E11F098498001E9326 /* MOptionPollutedGardenBubbleItemStrategyAlive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928E01F098498001E9326 /* MOptionPollutedGardenBubbleItemStrategyAlive.swift */; };
 		DA6928E31F0984A9001E9326 /* MOptionPollutedGardenBubbleItemStrategyExploded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928E21F0984A9001E9326 /* MOptionPollutedGardenBubbleItemStrategyExploded.swift */; };
 		DA6928E61F099369001E9326 /* VOptionPollutedGardenSceneOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928E51F099369001E9326 /* VOptionPollutedGardenSceneOver.swift */; };
-		DA6928E81F09943D001E9326 /* VOptionPollutedGardenGameOverTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928E71F09943D001E9326 /* VOptionPollutedGardenGameOverTitle.swift */; };
-		DA6928EA1F099448001E9326 /* VOptionPollutedGardenGameOverDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928E91F099448001E9326 /* VOptionPollutedGardenGameOverDescr.swift */; };
-		DA6928EC1F099454001E9326 /* VOptionPollutedGardenGameOverPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928EB1F099454001E9326 /* VOptionPollutedGardenGameOverPlayer.swift */; };
-		DA6928EE1F09945E001E9326 /* VOptionPollutedGardenGameOverTitle1up.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928ED1F09945E001E9326 /* VOptionPollutedGardenGameOverTitle1up.swift */; };
-		DA6928F01F099471001E9326 /* VOptionPollutedGardenGameOverTitleExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928EF1F099471001E9326 /* VOptionPollutedGardenGameOverTitleExit.swift */; };
-		DA6928F21F09947A001E9326 /* VOptionPollutedGardenGameOver1up.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928F11F09947A001E9326 /* VOptionPollutedGardenGameOver1up.swift */; };
-		DA6928F41F099484001E9326 /* VOptionPollutedGardenGameOverExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928F31F099484001E9326 /* VOptionPollutedGardenGameOverExit.swift */; };
 		DA6928F61F099A7C001E9326 /* MOptionPollutedGardenStrategyWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928F51F099A7C001E9326 /* MOptionPollutedGardenStrategyWait.swift */; };
 		DA6928FA1F099E82001E9326 /* MOptionPollutedGardenPlayerStrategyDefeated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6928F91F099E82001E9326 /* MOptionPollutedGardenPlayerStrategyDefeated.swift */; };
 		DA69BD5F1EFC7AC1002CEB85 /* VOptionWhistlesVsZombiesBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69BD5E1EFC7AC1002CEB85 /* VOptionWhistlesVsZombiesBase.swift */; };
@@ -549,13 +542,6 @@
 		DA6928E01F098498001E9326 /* MOptionPollutedGardenBubbleItemStrategyAlive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleItemStrategyAlive.swift; sourceTree = "<group>"; };
 		DA6928E21F0984A9001E9326 /* MOptionPollutedGardenBubbleItemStrategyExploded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenBubbleItemStrategyExploded.swift; sourceTree = "<group>"; };
 		DA6928E51F099369001E9326 /* VOptionPollutedGardenSceneOver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionPollutedGardenSceneOver.swift; sourceTree = "<group>"; };
-		DA6928E71F09943D001E9326 /* VOptionPollutedGardenGameOverTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionPollutedGardenGameOverTitle.swift; sourceTree = "<group>"; };
-		DA6928E91F099448001E9326 /* VOptionPollutedGardenGameOverDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionPollutedGardenGameOverDescr.swift; sourceTree = "<group>"; };
-		DA6928EB1F099454001E9326 /* VOptionPollutedGardenGameOverPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionPollutedGardenGameOverPlayer.swift; sourceTree = "<group>"; };
-		DA6928ED1F09945E001E9326 /* VOptionPollutedGardenGameOverTitle1up.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionPollutedGardenGameOverTitle1up.swift; sourceTree = "<group>"; };
-		DA6928EF1F099471001E9326 /* VOptionPollutedGardenGameOverTitleExit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionPollutedGardenGameOverTitleExit.swift; sourceTree = "<group>"; };
-		DA6928F11F09947A001E9326 /* VOptionPollutedGardenGameOver1up.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionPollutedGardenGameOver1up.swift; sourceTree = "<group>"; };
-		DA6928F31F099484001E9326 /* VOptionPollutedGardenGameOverExit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionPollutedGardenGameOverExit.swift; sourceTree = "<group>"; };
 		DA6928F51F099A7C001E9326 /* MOptionPollutedGardenStrategyWait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenStrategyWait.swift; sourceTree = "<group>"; };
 		DA6928F91F099E82001E9326 /* MOptionPollutedGardenPlayerStrategyDefeated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionPollutedGardenPlayerStrategyDefeated.swift; sourceTree = "<group>"; };
 		DA69BD5E1EFC7AC1002CEB85 /* VOptionWhistlesVsZombiesBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesBase.swift; sourceTree = "<group>"; };
@@ -1736,13 +1722,6 @@
 				DA717F921F088B0800033BA4 /* VOptionPollutedGardenPlant.swift */,
 				DA717FA01F0895E000033BA4 /* VOptionPollutedGardenCollect.swift */,
 				DAC9A1771F0976890010483C /* VOptionPollutedGardenPoison.swift */,
-				DA6928E71F09943D001E9326 /* VOptionPollutedGardenGameOverTitle.swift */,
-				DA6928E91F099448001E9326 /* VOptionPollutedGardenGameOverDescr.swift */,
-				DA6928EB1F099454001E9326 /* VOptionPollutedGardenGameOverPlayer.swift */,
-				DA6928ED1F09945E001E9326 /* VOptionPollutedGardenGameOverTitle1up.swift */,
-				DA6928EF1F099471001E9326 /* VOptionPollutedGardenGameOverTitleExit.swift */,
-				DA6928F11F09947A001E9326 /* VOptionPollutedGardenGameOver1up.swift */,
-				DA6928F31F099484001E9326 /* VOptionPollutedGardenGameOverExit.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -2173,7 +2152,6 @@
 				DA36A6B41F0F98A800BC8BDD /* MOptionWhistlesVsZombiesActionsFactory.swift in Sources */,
 				DAF37BCE1F02E98F004C505D /* MOptionReformaCrossingLaneE.swift in Sources */,
 				DA779A031EF876D500362A44 /* MHomeSplashProtocol.swift in Sources */,
-				DA6928F01F099471001E9326 /* VOptionPollutedGardenGameOverTitleExit.swift in Sources */,
 				DA2D00B31EEFD86B00365F23 /* MOptionReformaCrossingGameOverTimeOut.swift in Sources */,
 				DAF37BDE1F037D39004C505D /* MOptionReformaCrossingStop.swift in Sources */,
 				DA36A6AC1F0F67E800BC8BDD /* MOptionWhistlesVsZombiesZombieStrategyCalm.swift in Sources */,
@@ -2201,7 +2179,6 @@
 				DA6928E11F098498001E9326 /* MOptionPollutedGardenBubbleItemStrategyAlive.swift in Sources */,
 				DA27A6161EF9C647009378E2 /* MHomeSplashScore.swift in Sources */,
 				DAF37BDC1F037B82004C505D /* MGameTextureAnimated.swift in Sources */,
-				DA6928F21F09947A001E9326 /* VOptionPollutedGardenGameOver1up.swift in Sources */,
 				DAF37BAB1F02E938004C505D /* MOptionReformaCrossingFoeItem.swift in Sources */,
 				DA1121851F046C3000275465 /* MGameStrategyMain.swift in Sources */,
 				DA36A6AE1F0F67F100BC8BDD /* MOptionWhistlesVsZombiesZombieStrategyRush.swift in Sources */,
@@ -2244,7 +2221,6 @@
 				DA1BDB241EF705960040FBEA /* VHomeFroob.swift in Sources */,
 				DA1121891F047C8700275465 /* MOptionReformaCrossingCoinItemStrategyCollected.swift in Sources */,
 				DA5BFD161F0EB6AD00C4DFB8 /* MOptionWhistlesVsZombiesLoader.swift in Sources */,
-				DA6928EE1F09945E001E9326 /* VOptionPollutedGardenGameOverTitle1up.swift in Sources */,
 				DA36A6A81F0F665E00BC8BDD /* MOptionWhistlesVsZombiesZombieItemProtocol.swift in Sources */,
 				DAF37BB71F02E938004C505D /* MOptionReformaCrossingFoeItemVW.swift in Sources */,
 				DA7E46771EFAD8D300466867 /* VHomeFroobContentActionsStore.swift in Sources */,
@@ -2290,15 +2266,12 @@
 				DA8ACFE01F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistle.swift in Sources */,
 				DA2DFFDA1EECB16A00365F23 /* ExtensionFileManager.swift in Sources */,
 				DA5E78211F0E261400BDFFE4 /* MOptionWhistlesVsZombiesGround.swift in Sources */,
-				DA6928EA1F099448001E9326 /* VOptionPollutedGardenGameOverDescr.swift in Sources */,
 				DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */,
 				DA61AB0D1F01DC45000C562F /* MOptionReformaCrossingStrategyWait.swift in Sources */,
 				DA6928FA1F099E82001E9326 /* MOptionPollutedGardenPlayerStrategyDefeated.swift in Sources */,
 				DA5BFD311F0EF1F800C4DFB8 /* VOptionWhistlesVsZombiesPhysicSonicLimit.swift in Sources */,
 				DA228C2C1F120FB7004542CE /* MOptionWhistlesVsZombiesPlayerStrategyAliveStand.swift in Sources */,
 				DA7689091F121A4B00D51B6B /* MOptionWhistlesVsZombiesPlayerStrategyDefeated.swift in Sources */,
-				DA6928E81F09943D001E9326 /* VOptionPollutedGardenGameOverTitle.swift in Sources */,
-				DA6928F41F099484001E9326 /* VOptionPollutedGardenGameOverExit.swift in Sources */,
 				DA8DF1151F0C34A9005F3680 /* ViewGameNodeTouch.swift in Sources */,
 				DA11217C1F0464C500275465 /* MOptionReformaCrossingCoin.swift in Sources */,
 				DAB70AD01EFB22C5002C706F /* VOptionPollutedGardenControls.swift in Sources */,
@@ -2372,7 +2345,6 @@
 				DA2DFFF01EECB16A00365F23 /* VSpinner.swift in Sources */,
 				DA2DFFD41EECB16A00365F23 /* Controller.swift in Sources */,
 				DA8ACFE51F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleTypeOrange.swift in Sources */,
-				DA6928EC1F099454001E9326 /* VOptionPollutedGardenGameOverPlayer.swift in Sources */,
 				DACD31381EFB057D00F205A0 /* VOptionReformaCrossingHud.swift in Sources */,
 				DA8ACFAE1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift in Sources */,
 				DA7E46871EFAEF6900466867 /* MPerkFactory.swift in Sources */,

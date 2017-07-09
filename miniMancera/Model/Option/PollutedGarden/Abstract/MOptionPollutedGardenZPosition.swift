@@ -16,8 +16,6 @@ enum MOptionPollutedGardenZPosition:CGFloat
     case Menu
     case Controls
     case GameOverInfo
-    case GameOverTitle
-    case GameOverDescr
     case GameOverPlayer
     case GameOverTitle1up
     case GameOverTitleExit
