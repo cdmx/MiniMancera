@@ -49,6 +49,18 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
                 body:bodyA,
                 scene:scene)
         }
+        else if let whistle:VOptionWhistlesVsZombiesWhistle = bodyA as? VOptionWhistlesVsZombiesWhistle
+        {
+            whistleAndBody(
+                whistle:whistle,
+                body:bodyB)
+        }
+        else if let whistle:VOptionWhistlesVsZombiesWhistle = bodyB as? VOptionWhistlesVsZombiesWhistle
+        {
+            whistleAndBody(
+                whistle:whistle,
+                body:bodyA)
+        }
     }
     
     private func sonicBoomAndBody(
@@ -84,6 +96,24 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
         }
     }
     
+    private func whistleAndBody(
+        whistle:VOptionWhistlesVsZombiesWhistle,
+        body:SKNode?)
+    {
+        let whistleModel:MOptionWhistlesVsZombiesWhistleBase = whistle.model
+        let alive:Bool = whistleModel.alive()
+        
+        if alive
+        {
+            if let zombie:VOptionWhistlesVsZombiesZombie = body as? VOptionWhistlesVsZombiesZombie
+            {
+                whistleAndZombie(
+                    whistleModel:whistleModel,
+                    zombie:zombie)
+            }
+        }
+    }
+    
     private func sonicBoomAndZombie(
         sonicBoomModel:MOptionWhistlesVsZombiesSonicBoomItem,
         zombie:VOptionWhistlesVsZombiesZombie)
@@ -100,6 +130,24 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
         }
         
         modelZombie.sonicHit(sonicBoom:sonicBoomModel)
+    }
+    
+    private func whistleAndZombie(
+        whistleModel:MOptionWhistlesVsZombiesWhistleBase,
+        zombie:VOptionWhistlesVsZombiesZombie)
+    {
+        whistleModel.explodeStart()
+        
+        guard
+            
+            let modelZombie:MOptionWhistlesVsZombiesZombieItem = zombie.model
+            
+        else
+        {
+            return
+        }
+        
+        modelZombie.exploded()
     }
     
     //MARK: public

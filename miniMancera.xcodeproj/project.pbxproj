@@ -19,6 +19,7 @@
 		DA06015E1F11A63C00A147C0 /* MOptionWhistlesVsZombiesPointsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06015D1F11A63C00A147C0 /* MOptionWhistlesVsZombiesPointsItem.swift */; };
 		DA0601601F11A67500A147C0 /* MOptionWhistlesVsZombiesPointsItemStrategyWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06015F1F11A67500A147C0 /* MOptionWhistlesVsZombiesPointsItemStrategyWait.swift */; };
 		DA0601621F11A68200A147C0 /* MOptionWhistlesVsZombiesPointsItemStrategyFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0601611F11A68200A147C0 /* MOptionWhistlesVsZombiesPointsItemStrategyFade.swift */; };
+		DA0601641F11BFCC00A147C0 /* MOptionWhistlesVsZombiesWhistleBaseStrategyExploded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0601631F11BFCC00A147C0 /* MOptionWhistlesVsZombiesWhistleBaseStrategyExploded.swift */; };
 		DA0BB2721F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2711F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift */; };
 		DA0BB2741F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2731F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift */; };
 		DA0BB2761F0B82CB001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BB2751F0B82CB001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease.swift */; };
@@ -381,6 +382,7 @@
 		DA06015D1F11A63C00A147C0 /* MOptionWhistlesVsZombiesPointsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesPointsItem.swift; sourceTree = "<group>"; };
 		DA06015F1F11A67500A147C0 /* MOptionWhistlesVsZombiesPointsItemStrategyWait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesPointsItemStrategyWait.swift; sourceTree = "<group>"; };
 		DA0601611F11A68200A147C0 /* MOptionWhistlesVsZombiesPointsItemStrategyFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesPointsItemStrategyFade.swift; sourceTree = "<group>"; };
+		DA0601631F11BFCC00A147C0 /* MOptionWhistlesVsZombiesWhistleBaseStrategyExploded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesWhistleBaseStrategyExploded.swift; sourceTree = "<group>"; };
 		DA0BB2711F0B771F001E1BCA /* MOptionWhistlesVsZombiesSonicBoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoom.swift; sourceTree = "<group>"; };
 		DA0BB2731F0B77DE001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoomItem.swift; sourceTree = "<group>"; };
 		DA0BB2751F0B82CB001E1BCA /* MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSonicBoomItemStrategyRelease.swift; sourceTree = "<group>"; };
@@ -1437,6 +1439,7 @@
 				DA8ACFDB1F0AF6B90065C26C /* MOptionWhistlesVsZombiesWhistleBase.swift */,
 				DA8ACFE71F0AF70E0065C26C /* MOptionWhistlesVsZombiesWhistleBaseStrategyWait.swift */,
 				DA8ACFE91F0AF71A0065C26C /* MOptionWhistlesVsZombiesWhistleBaseStrategyCharged.swift */,
+				DA0601631F11BFCC00A147C0 /* MOptionWhistlesVsZombiesWhistleBaseStrategyExploded.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -2130,6 +2133,7 @@
 				DA5667651EF26DFD000055D8 /* DManager.swift in Sources */,
 				DAC7D3B61F01C5B2008DC416 /* VOptionReformaCrossingTitle.swift in Sources */,
 				DA60C5031F0C5E6500CF0207 /* VOptionWhistlesVsZombiesBoardBar.swift in Sources */,
+				DA0601641F11BFCC00A147C0 /* MOptionWhistlesVsZombiesWhistleBaseStrategyExploded.swift in Sources */,
 				DA64BFBA1F0B0B4E00AD7CC3 /* VOptionWhistlesVsZombiesWhistle.swift in Sources */,
 				DAF5151C1F01E2D1009A0182 /* VOptionReformaCrossingGameOverTitle.swift in Sources */,
 				DA6928E11F098498001E9326 /* MOptionPollutedGardenBubbleItemStrategyAlive.swift in Sources */,

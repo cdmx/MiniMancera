@@ -2,8 +2,8 @@ import SpriteKit
 
 class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
 {
+    private(set) weak var model:MOptionWhistlesVsZombiesWhistleBase!
     private weak var textureExploded:MGameTexture!
-    private weak var model:MOptionWhistlesVsZombiesWhistleBase!
     
     init?(
         controller:ControllerGame<MOptionWhistlesVsZombies>,

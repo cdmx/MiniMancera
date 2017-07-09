@@ -27,6 +27,20 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
     
     //MARK: public
     
+    func alive() -> Bool
+    {
+        guard
+        
+            let _:MOptionWhistlesVsZombiesWhistleBaseStrategyCharged = strategy as? MOptionWhistlesVsZombiesWhistleBaseStrategyCharged
+        
+        else
+        {
+            return false
+        }
+        
+        return true
+    }
+    
     func charge(whistleType:MOptionWhistlesVsZombiesWhistleTypeProtocol)
     {
         self.whistleType = whistleType
@@ -34,5 +48,15 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
             model:self,
             whistleType:whistleType)
         viewBase?.charged()
+    }
+    
+    func explodeStart()
+    {
+        strategy = MOptionWhistlesVsZombiesWhistleBaseStrategyExploded(model:self)
+    }
+    
+    func explodeFinish()
+    {
+        
     }
 }

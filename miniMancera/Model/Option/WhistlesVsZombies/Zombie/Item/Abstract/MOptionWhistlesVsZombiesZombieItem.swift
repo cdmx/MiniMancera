@@ -57,6 +57,14 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
             model:self)
     }
     
+    func exploded()
+    {
+        life = 0
+        
+        strategy = MOptionWhistlesVsZombiesZombieItemStrategyDefeated(
+            model:self)
+    }
+    
     func defeatedFinished(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         view?.defeatedFinished()
