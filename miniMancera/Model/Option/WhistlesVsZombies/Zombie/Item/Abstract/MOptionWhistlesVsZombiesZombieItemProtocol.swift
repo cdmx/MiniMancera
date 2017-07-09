@@ -11,7 +11,6 @@ protocol MOptionWhistlesVsZombiesZombieItemProtocol:class
     weak var animatedDefeat:SKAction! { get }
     var speed:Int { get }
     var intelligence:Int { get }
-    var strength:Int { get }
     var life:Int { get }
     var coins:Int { get }
 }

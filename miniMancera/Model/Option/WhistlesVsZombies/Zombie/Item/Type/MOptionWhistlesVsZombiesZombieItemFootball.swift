@@ -7,12 +7,10 @@ class MOptionWhistlesVsZombiesZombieItemFootball:MOptionWhistlesVsZombiesZombieI
     private(set) var animatedDefeat:SKAction!
     private(set) var speed:Int
     private(set) var intelligence:Int
-    private(set) var strength:Int
     private(set) var life:Int
     private(set) var coins:Int
     private let kSpeed:Int = 7
     private let kIntelligence:Int = 2
-    private let kStrength:Int = 3
     private let kLife:Int = 25
     private let kCoins:Int = 1
     
@@ -25,7 +23,6 @@ class MOptionWhistlesVsZombiesZombieItemFootball:MOptionWhistlesVsZombiesZombieI
         animatedDefeat = actions.actionZombieFootballDefeatedAnimation
         speed = kSpeed
         intelligence = kIntelligence
-        strength = kStrength
         life = kLife
         coins = kCoins
     }
