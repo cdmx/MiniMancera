@@ -1,4 +1,4 @@
-import Foundation
+import SpriteKit
 
 class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
 {
@@ -24,6 +24,8 @@ class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
         super.init(
             controller:controller,
             texture:texture)
+        
+        startPhysics()
     }
     
     required init?(coder:NSCoder)
@@ -34,6 +36,34 @@ class VOptionWhistlesVsZombiesWhistle:ViewGameNode<MOptionWhistlesVsZombies>
     override func positionStart()
     {
         position = model.position
+    }
+    
+    //MARK: private
+    
+    private func startPhysics()
+    {
+        guard
+            
+            let modelTexture:MGameTexture = self.modelTexture
+            
+        else
+        {
+            return
+        }
+        
+        let radius:CGFloat = modelTexture.width_2
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(circleOfRadius:radius)
+        physicsBody.isDynamic = false
+        physicsBody.friction = 0
+        physicsBody.allowsRotation = false
+        physicsBody.restitution = 0
+        physicsBody.angularVelocity = 0
+        physicsBody.density = 0
+        
+        physicsBody.categoryBitMask = MOptionWhistlesVsZombiesPhysicsStruct.Whistle
+        physicsBody.contactTestBitMask = MOptionWhistlesVsZombiesPhysicsStruct.Zombie
+        physicsBody.collisionBitMask = MOptionWhistlesVsZombiesPhysicsStruct.None
+        self.physicsBody = physicsBody
     }
     
     //MARK: public
