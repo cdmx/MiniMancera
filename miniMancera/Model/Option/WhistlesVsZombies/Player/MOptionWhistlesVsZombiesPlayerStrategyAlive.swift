@@ -52,7 +52,7 @@ class MOptionWhistlesVsZombiesPlayerStrategyAlive:MGameStrategy<
             
         case 2:
             
-            model.scare()
+            model.scared()
             
             break
             

@@ -16,6 +16,11 @@ class MOptionWhistlesVsZombiesTextures
     let whistleOrange:MGameTexture
     let whistleExplodedAnimated:MGameTextureAnimated
     
+    let playerStand:MGameTexture
+    let playerSweat:MGameTexture
+    let playerScared:MGameTexture
+    let playerDefeated:MGameTexture
+    
     let zombieFootballStand:MGameTexture
     let zombieFootballWalkingAnimated:MGameTextureAnimated
     let zombieFootballDefeatedAnimated:MGameTextureAnimated
@@ -49,6 +54,19 @@ class MOptionWhistlesVsZombiesTextures
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesWhistleOrange"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Whistle.rawValue)
         whistleExplodedAnimated = MOptionWhistlesVsZombiesTextures.factoryWhistleExplodedAnimated()
+        
+        playerStand = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesPlayer0"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.Player.rawValue)
+        playerSweat = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesPlayer2"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.Player.rawValue)
+        playerScared = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesPlayer1"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.Player.rawValue)
+        playerDefeated = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesPlayer3"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.Player.rawValue)
         
         zombieFootballStand = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesZombieFootballStand"),

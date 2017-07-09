@@ -2,6 +2,7 @@ import Foundation
 
 class MOptionWhistlesVsZombiesPlayer:MGameUpdate<MOptionWhistlesVsZombies>
 {
+    weak var view:VOptionWhistlesVsZombiesPlayer?
     private var strategy:MGameStrategy<MOptionWhistlesVsZombiesPlayer, MOptionWhistlesVsZombies>?
     
     override init()
@@ -15,21 +16,21 @@ class MOptionWhistlesVsZombiesPlayer:MGameUpdate<MOptionWhistlesVsZombies>
     
     func stand()
     {
-        strategy
-    }
-    
-    func scare()
-    {
-        
+        strategy = MOptionWhistlesVsZombiesPlayerStrategyAliveStand(model:self)
     }
     
     func sweat()
     {
-        
+        strategy = MOptionWhistlesVsZombiesPlayerStrategyAliveSweat(model:self)
+    }
+    
+    func scared()
+    {
+        strategy = MOptionWhistlesVsZombiesPlayerStrategyAliveScared(model:self)
     }
     
     func defeated()
     {
-        
+        strategy = MOptionWhistlesVsZombiesPlayerStrategyDefeated(model:self)
     }
 }

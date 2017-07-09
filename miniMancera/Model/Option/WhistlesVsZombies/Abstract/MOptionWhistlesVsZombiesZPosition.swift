@@ -4,6 +4,7 @@ enum MOptionWhistlesVsZombiesZPosition:CGFloat
 {
     case Background
     case Whistle
+    case Player
     case Zombie
     case SonicRelease
     case SonicBoom

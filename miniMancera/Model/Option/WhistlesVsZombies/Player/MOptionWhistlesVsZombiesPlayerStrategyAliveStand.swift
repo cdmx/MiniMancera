@@ -1,9 +1,10 @@
-//
-//  MOptionWhistlesVsZombiesPlayerStrategyAliveStand.swift
-//  miniMancera
-//
-//  Created by zero on 7/9/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
-
 import Foundation
+
+class MOptionWhistlesVsZombiesPlayerStrategyAliveStand:MOptionWhistlesVsZombiesPlayerStrategyAlive
+{
+    override func updateTexture(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        let texture:MGameTexture = scene.controller.model.textures.playerStand
+        model.view?.updateTexture(texture:texture)
+    }
+}
