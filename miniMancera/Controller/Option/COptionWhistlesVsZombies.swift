@@ -103,7 +103,7 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
     {
         postScore()
         
-        let newScene:VOptionPollutedGardenSceneOver = VOptionPollutedGardenSceneOver(
+        let newScene:VOptionWhistlesVsZombiesSceneOver = VOptionWhistlesVsZombiesSceneOver(
             controller:self)
         
         presentScene(newScene:newScene)
