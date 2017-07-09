@@ -4,7 +4,7 @@ class MOptionWhistlesVsZombiesWhistleTypeOrange:MOptionWhistlesVsZombiesWhistleT
 {
     private(set) var whistle:MOptionWhistlesVsZombiesWhistleProtocol
     private(set) var boardItemType:MOptionWhistlesVsZombiesBoardItemProtocol.Type
-    private(set) var textureGame:MGameTexture
+    private(set) var texture:MGameTexture
     private(set) var colour:UIColor
     private(set) var barrelLength:CGFloat
     private let kBarrelLength:CGFloat = 18
@@ -13,7 +13,7 @@ class MOptionWhistlesVsZombiesWhistleTypeOrange:MOptionWhistlesVsZombiesWhistleT
     {
         whistle = MOptionWhistlesVsZombiesWhistleOrange()
         boardItemType = MOptionWhistlesVsZombiesBoardItemOrange.self
-        textureGame = textures.whistleOrange
+        texture = textures.whistleOrange
         colour = UIColor(
             red:0.96078431372549,
             green:0.650980392156863,
