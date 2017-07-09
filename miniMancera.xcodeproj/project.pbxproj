@@ -1845,8 +1845,8 @@
 				DA06014E1F118B3F00A147C0 /* MOptionWhistlesVsZombiesTexturesFactory.swift */,
 				DA8ACFAD1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift */,
 				DA36A6B31F0F98A800BC8BDD /* MOptionWhistlesVsZombiesActionsFactory.swift */,
-				DA69BD621EFC7E22002CEB85 /* MOptionWhistlesVsZombiesZPosition.swift */,
 				DA36A6951F0EFCBD00BC8BDD /* MOptionWhistlesVsZombiesContact.swift */,
+				DA69BD621EFC7E22002CEB85 /* MOptionWhistlesVsZombiesZPosition.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";

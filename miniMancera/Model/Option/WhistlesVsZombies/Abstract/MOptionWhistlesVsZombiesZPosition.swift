@@ -13,6 +13,7 @@ enum MOptionWhistlesVsZombiesZPosition:CGFloat
     case PointsCoin
     case Base
     case Physics
+    case Hud
     case Menu
     case GameOverInfo
     case GameOverPlayer
