@@ -1,16 +1,19 @@
-import UIKit
+import SpriteKit
 
 class VOptionWhistlesVsZombiesPoints:ViewGameNode<MOptionWhistlesVsZombies>
 {
     private weak var modelZombie:MOptionWhistlesVsZombiesZombieItem?
-    private let kWidth:CGFloat = 140
+    private weak var fadeAnimation:SKAction!
+    private let kWidth:CGFloat = 100
     private let kHeight:CGFloat = 50
+    private let kAddPositionY:CGFloat = 20
     
     init(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
         modelZombie:MOptionWhistlesVsZombiesZombieItem)
     {
         self.modelZombie = modelZombie
+        fadeAnimation = controller.model.actions.actionFadeOut
         let size:CGSize = CGSize(
             width:kWidth,
             height:kHeight)
@@ -39,13 +42,29 @@ class VOptionWhistlesVsZombiesPoints:ViewGameNode<MOptionWhistlesVsZombies>
     {
         guard
         
-            let viewZombie:VOptionWhistlesVsZombiesZombie = modelZombie?.view
+            let zombiePosition:CGPoint = modelZombie?.view?.position
         
         else
         {
             return
         }
         
-        position = viewZombie.position
+        let positionX:CGFloat = zombiePosition.x
+        let positionY:CGFloat = zombiePosition.y + kAddPositionY
+        
+        position = CGPoint(x:positionX, y:positionY)
+    }
+    
+    //MARK: public
+    
+    func fade()
+    {
+        run(fadeAnimation)
+    }
+    
+    func finished()
+    {
+        removeAllActions()
+        removeFromParent()
     }
 }

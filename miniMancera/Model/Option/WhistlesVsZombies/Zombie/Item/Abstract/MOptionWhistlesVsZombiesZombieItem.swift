@@ -49,10 +49,18 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
             model:self)
     }
     
-    func defeated()
+    func defeated(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
+        scene.controller.model.addPoints(zombie:self)
+        
         strategy = MOptionWhistlesVsZombiesZombieItemStrategyDefeated(
             model:self)
+    }
+    
+    func defeatedFinished(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    {
+        view?.defeatedFinished()
+        scene.controller.model.zombie.zombieDefeated(zombie:self)
     }
     
     func initialPosition() -> CGPoint
@@ -91,11 +99,5 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
         {
             life = 0
         }
-    }
-    
-    func defeated(scene:ViewGameScene<MOptionWhistlesVsZombies>)
-    {
-        view?.defeatedFinished()
-        scene.controller.model.zombie.zombieDefeated(zombie:self)
     }
 }

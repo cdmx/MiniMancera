@@ -7,6 +7,7 @@ class MOptionWhistlesVsZombies:MGame
     let whistle:MOptionWhistlesVsZombiesWhistle
     let zombie:MOptionWhistlesVsZombiesZombie
     let sonicBoom:MOptionWhistlesVsZombiesSonicBoom
+    let points:MOptionWhistlesVsZombiesPoints
     let textures:MOptionWhistlesVsZombiesTextures
     let actions:MOptionWhistlesVsZombiesActions
     let contact:MOptionWhistlesVsZombiesContact
@@ -30,6 +31,7 @@ class MOptionWhistlesVsZombies:MGame
             ground:ground,
             textures:textures,
             actions:actions)
+        points = MOptionWhistlesVsZombiesPoints()
         coins = kInitialCoins
         
         super.init()
@@ -76,5 +78,11 @@ class MOptionWhistlesVsZombies:MGame
     {
         coins -= item.price
         base.charge(whistleType:item.whistleType)
+    }
+    
+    func addPoints(zombie:MOptionWhistlesVsZombiesZombieItem)
+    {
+        coins += zombie.type.coins
+        points.addPoints(zombie:zombie)
     }
 }

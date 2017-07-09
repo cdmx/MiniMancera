@@ -107,4 +107,16 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         
         addChild(view)
     }
+    
+    func addPoints(
+        model:MOptionWhistlesVsZombiesPointsItem,
+        modelZombie:MOptionWhistlesVsZombiesZombieItem)
+    {
+        let view:VOptionWhistlesVsZombiesPoints = VOptionWhistlesVsZombiesPoints(
+            controller:controller,
+            modelZombie:modelZombie)
+        model.view = view
+        
+        addChild(view)
+    }
 }

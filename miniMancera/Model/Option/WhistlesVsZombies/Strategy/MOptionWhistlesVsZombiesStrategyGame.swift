@@ -8,6 +8,7 @@ class MOptionWhistlesVsZombiesStrategyGame:MGameStrategyMain<MOptionWhistlesVsZo
             model.whistle,
             model.sonicBoom,
             model.zombie,
+            model.points,
             model.contact]
         
         super.init(

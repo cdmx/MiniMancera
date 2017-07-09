@@ -30,16 +30,16 @@ class MOptionWhistlesVsZombiesZombieItemStrategyAlive:MGameStrategy<
             }
             else
             {
-                zombieDefeated()
+                zombieDefeated(scene:scene)
             }
         }
     }
     
     //MARK: private
     
-    private func zombieDefeated()
+    private func zombieDefeated(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        model.defeated()
+        model.defeated(scene:scene)
     }
     
     private func animateHit()

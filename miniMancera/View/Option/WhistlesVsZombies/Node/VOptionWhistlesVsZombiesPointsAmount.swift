@@ -2,23 +2,20 @@ import SpriteKit
 
 class VOptionWhistlesVsZombiesPointsAmount:SKLabelNode
 {
-    private let kFontSize:CGFloat = 10
-    private let kPositionX:CGFloat = -35
+    private let kFontSize:CGFloat = 12
+    private let kPositionX:CGFloat = 20
+    private let kPositionY:CGFloat = -8
     
     init(amount:Int)
     {
-        let localizedString:String = String.localizedPollutedGarden(
-            key:"VOptionWhistlesVsZombiesPointsAmount_label")
-        let amount:NSNumber = amount as NSNumber
-        let string:String = String(
-            format:localizedString,
-            amount)
+        let string:String = "+ \(amount)"
         
         super.init()
         fontName = UIFont.kFontGame
         fontSize = kFontSize
         fontColor = SKColor.white
         zPosition = MOptionWhistlesVsZombiesZPosition.PointsAmount.rawValue
+        horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.right
         text = string
         
         positionStart()
@@ -33,6 +30,6 @@ class VOptionWhistlesVsZombiesPointsAmount:SKLabelNode
     
     private func positionStart()
     {
-        position = CGPoint(x:kPositionX, y:0)
+        position = CGPoint(x:kPositionX, y:kPositionY)
     }
 }

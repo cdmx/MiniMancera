@@ -31,6 +31,6 @@ class MOptionWhistlesVsZombiesZombieItemStrategyDefeated:MGameStrategy<
     
     private func timeOut(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        model.defeated(scene:scene)
+        model.defeatedFinished(scene:scene)
     }
 }

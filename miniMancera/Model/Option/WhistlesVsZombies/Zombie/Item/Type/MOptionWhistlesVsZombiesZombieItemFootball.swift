@@ -13,8 +13,8 @@ class MOptionWhistlesVsZombiesZombieItemFootball:MOptionWhistlesVsZombiesZombieI
     private let kSpeed:Int = 7
     private let kIntelligence:Int = 2
     private let kStrength:Int = 3
-    private let kLife:Int = 17
-    private let kCoins:Int = 2
+    private let kLife:Int = 25
+    private let kCoins:Int = 1
     
     required init(
         textures:MOptionWhistlesVsZombiesTextures,
