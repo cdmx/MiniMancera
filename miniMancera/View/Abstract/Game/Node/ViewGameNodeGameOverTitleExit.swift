@@ -3,7 +3,7 @@ import SpriteKit
 class ViewGameNodeGameOverTitleExit:SKLabelNode
 {
     private let orientation:UIInterfaceOrientation
-    private let kPositionY:CGFloat = 80
+    private let kPositionY:CGFloat = 55
     private let kFontSize:CGFloat = 12
     
     init(

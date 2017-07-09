@@ -3,7 +3,7 @@ import UIKit
 class ViewGameNodeGameOverExit<T:MGame>:ViewGameNode<T>
 {
     private let orientation:UIInterfaceOrientation
-    private let kPositionY:CGFloat = 50
+    private let kPositionY:CGFloat = 30
     
     init(
         controller:ControllerGame<T>,
@@ -25,7 +25,7 @@ class ViewGameNodeGameOverExit<T:MGame>:ViewGameNode<T>
     
     override func positionStart()
     {
-        let sceneWidth:CGFloat = MGame.sceneSize.width
+        let sceneWidth:CGFloat = orientationSceneWidth()
         let sceneWidth_2:CGFloat = sceneWidth / 2.0
         position = CGPoint(x:sceneWidth_2, y:kPositionY)
     }
