@@ -11,8 +11,7 @@ enum MOptionReformaCrossingZPosition:CGFloat
     case HudTime
     case Menu
     case Stop
-    case GameOverTitle
-    case GameOverDescr
+    case GameOverInfo
     case GameOverPlayer
     case GameOverTitle1up
     case GameOverTitleExit
