@@ -5,6 +5,7 @@ class COptionWhistlesVsZombiesBoard:Controller<VOptionWhistlesVsZombiesBoard>
     let model:MOptionWhistlesVsZombiesBoard
     private(set) weak var controllerGame:COptionWhistlesVsZombies?
     private weak var modelBase:MOptionWhistlesVsZombiesWhistleBase!
+    private let kResumeWait:TimeInterval = 0.4
     
     init(
         controllerGame:COptionWhistlesVsZombies,
@@ -29,17 +30,24 @@ class COptionWhistlesVsZombiesBoard:Controller<VOptionWhistlesVsZombiesBoard>
     {
         guard
         
-            let parent:ControllerParent = self.parent as? ControllerParent
+            let parent:ControllerParent = self.parent as? ControllerParent,
+            let controllerGame:COptionWhistlesVsZombies = self.controllerGame
         
         else
         {
             return
         }
         
+        let resumeWait:TimeInterval = kResumeWait
+        
         parent.dismissAnimateOver
-        { [weak self] in
-            
-            self?.controllerGame?.resume()
+        {
+            DispatchQueue.main.asyncAfter(
+                deadline:DispatchTime.now() + resumeWait)
+            { [weak controllerGame] in
+                
+                controllerGame?.resume()
+            }
         }
     }
     
