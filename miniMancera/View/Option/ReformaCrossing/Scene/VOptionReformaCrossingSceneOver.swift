@@ -39,6 +39,7 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
             text:String.localizedReformaCrossing(
                 key:"VOptionReformaCrossingSceneOver_1up"),
             zPosition:MOptionReformaCrossingZPosition.GameOverTitle1up.rawValue)
+        
         let titleExit:ViewGameNodeGameOverTitleExit = ViewGameNodeGameOverTitleExit(
             text:String.localizedReformaCrossing(
                 key:"VOptionReformaCrossingSceneOver_exit"),

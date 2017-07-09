@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class VOptionWhistlesVsZombiesSceneOver:ViewGameScene<MOptionWhistlesVsZombies>
 {
@@ -17,38 +17,46 @@ class VOptionWhistlesVsZombiesSceneOver:ViewGameScene<MOptionWhistlesVsZombies>
     
     private func factoryNodes()
     {
+        let orientation:UIInterfaceOrientation = UIInterfaceOrientation.landscapeLeft
         let textures:MOptionWhistlesVsZombiesTextures = controller.model.textures
         
         let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
             controller:controller)
         
         let info:ViewGameNodeGameOverInfo = ViewGameNodeGameOverInfo(
-            title:String.localizedPollutedGarden(
+            title:String.localizedWhistlesVsZombies(
                 key:"VOptionWhistlesVsZombiesSceneOver_infoTitle"),
-            descr:String.localizedPollutedGarden(
+            descr:String.localizedWhistlesVsZombies(
                 key:"VOptionWhistlesVsZombiesSceneOver_infoDescr"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.GameOverInfo.rawValue)
+            zPosition:MOptionWhistlesVsZombiesZPosition.GameOverInfo.rawValue,
+            orientation:orientation)
         
         let title1up:ViewGameNodeGameOverTitle1up = ViewGameNodeGameOverTitle1up(
-            text:String.localizedPollutedGarden(
+            text:String.localizedWhistlesVsZombies(
                 key:"VOptionWhistlesVsZombiesSceneOver_1up"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.GameOverTitle1up.rawValue)
+            zPosition:MOptionWhistlesVsZombiesZPosition.GameOverTitle1up.rawValue,
+            orientation:orientation)
+        
         let titleExit:ViewGameNodeGameOverTitleExit = ViewGameNodeGameOverTitleExit(
-            text:String.localizedPollutedGarden(
+            text:String.localizedWhistlesVsZombies(
                 key:"VOptionWhistlesVsZombiesSceneOver_exit"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.GameOverTitleExit.rawValue)
+            zPosition:MOptionWhistlesVsZombiesZPosition.GameOverTitleExit.rawValue,
+            orientation:orientation)
         
         let player:ViewGameNodeGameOverPlayer<MOptionWhistlesVsZombies> = ViewGameNodeGameOverPlayer<MOptionWhistlesVsZombies>(
             controller:controller,
-            texture:textures.playerDefeated)
+            texture:textures.playerDefeated,
+            orientation:orientation)
         
         let button1up:ViewGameNodeGameOver1up<MOptionWhistlesVsZombies> = ViewGameNodeGameOver1up<MOptionWhistlesVsZombies>(
             controller:controller,
-            texture:textures.gameOver1up)
+            texture:textures.gameOver1up,
+            orientation:orientation)
         
         let buttonExit:ViewGameNodeGameOverExit<MOptionWhistlesVsZombies> = ViewGameNodeGameOverExit<MOptionWhistlesVsZombies>(
             controller:controller,
-            texture:textures.gameOverExit)
+            texture:textures.gameOverExit,
+            orientation:orientation)
         
         addChild(background)
         addChild(info)

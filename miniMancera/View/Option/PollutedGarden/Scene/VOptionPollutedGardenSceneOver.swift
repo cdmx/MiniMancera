@@ -33,6 +33,7 @@ class VOptionPollutedGardenSceneOver:ViewGameScene<MOptionPollutedGarden>
             text:String.localizedPollutedGarden(
                 key:"VOptionPollutedGardenSceneOver_1up"),
             zPosition:MOptionPollutedGardenZPosition.GameOverTitle1up.rawValue)
+        
         let titleExit:ViewGameNodeGameOverTitleExit = ViewGameNodeGameOverTitleExit(
             text:String.localizedPollutedGarden(
                 key:"VOptionPollutedGardenSceneOver_exit"),
