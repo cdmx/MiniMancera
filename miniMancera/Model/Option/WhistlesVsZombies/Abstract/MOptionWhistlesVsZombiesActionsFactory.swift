@@ -84,7 +84,7 @@ extension MOptionWhistlesVsZombiesActions
         return sequence
     }
     
-    class func factoryZombieFootballWalkingAnimation(texture:MGameTextureAnimated) -> SKAction
+    class func factoryZombieWalkingAnimation(texture:MGameTextureAnimated) -> SKAction
     {
         let animation:SKAction = SKAction.animate(
             with:texture.textures,
@@ -98,7 +98,7 @@ extension MOptionWhistlesVsZombiesActions
         return repeatForever
     }
     
-    class func factoryZombieFootballDefeatedAnimation(texture:MGameTextureAnimated) -> SKAction
+    class func factoryZombieDefeatedAnimation(texture:MGameTextureAnimated) -> SKAction
     {
         let animation:SKAction = SKAction.animate(
             with:texture.textures,
