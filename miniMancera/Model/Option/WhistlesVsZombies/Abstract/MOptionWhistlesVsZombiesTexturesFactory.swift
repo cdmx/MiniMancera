@@ -87,4 +87,29 @@ extension MOptionWhistlesVsZombiesTextures
         
         return texture
     }
+    
+    class func factoryCopWalkingAnimated() -> MGameTextureAnimated
+    {
+        let images:[UIImage] = [
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesZombieCopWalking0"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesZombieCopWalking1")]
+        
+        let texture:MGameTextureAnimated = MGameTextureAnimated(
+            images:images)
+        
+        return texture
+    }
+    
+    class func factoryCopDefeatedAnimated() -> MGameTextureAnimated
+    {
+        let images:[UIImage] = [
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesZombieCopDefeated0"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesZombieCopDefeated1"),
+            #imageLiteral(resourceName: "assetWhistlesVsZombiesZombieCopDefeated2")]
+        
+        let texture:MGameTextureAnimated = MGameTextureAnimated(
+            images:images)
+        
+        return texture
+    }
 }
