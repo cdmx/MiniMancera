@@ -9,6 +9,7 @@ protocol MOptionWhistlesVsZombiesZombieItemProtocol:class
     weak var textureStand:MGameTexture! { get }
     weak var animatedWalking:SKAction! { get }
     weak var animatedDefeat:SKAction! { get }
+    var verticalDelta:CGFloat { get }
     var speed:Int { get }
     var intelligence:Int { get }
     var life:Int { get }
