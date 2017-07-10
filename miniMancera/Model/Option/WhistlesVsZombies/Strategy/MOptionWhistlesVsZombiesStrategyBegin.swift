@@ -49,7 +49,7 @@ class MOptionWhistlesVsZombiesStrategyBegin:MGameStrategyMain<MOptionWhistlesVsZ
         let actionFadeOut:SKAction = model.actions.actionFadeOut
         
         model.viewMenu?.run(actionFadeIn)
-//        model.hud.view?.run(actionFadeIn)
+        model.hud.view?.run(actionFadeIn)
 //        model.title.view?.run(actionFadeOut)
     }
 }
