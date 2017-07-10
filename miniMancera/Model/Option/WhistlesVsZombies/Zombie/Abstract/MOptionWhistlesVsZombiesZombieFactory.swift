@@ -9,9 +9,13 @@ extension MOptionWhistlesVsZombiesZombie
         let typeFootball:MOptionWhistlesVsZombiesZombieItemFootball = MOptionWhistlesVsZombiesZombieItemFootball(
             textures:textures,
             actions:actions)
+        let typeCop:MOptionWhistlesVsZombiesZombieItemCop = MOptionWhistlesVsZombiesZombieItemCop(
+            textures:textures,
+            actions:actions)
         
         let types:[MOptionWhistlesVsZombiesZombieItemProtocol] = [
-            typeFootball]
+            typeFootball,
+            typeCop]
         
         return types
     }

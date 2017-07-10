@@ -9,10 +9,10 @@ class MOptionWhistlesVsZombiesZombieItemCop:MOptionWhistlesVsZombiesZombieItemPr
     private(set) var intelligence:Int
     private(set) var life:Int
     private(set) var coins:Int
-    private let kSpeed:Int = 7
-    private let kIntelligence:Int = 2
-    private let kLife:Int = 25
-    private let kCoins:Int = 1
+    private let kSpeed:Int = 4
+    private let kIntelligence:Int = 5
+    private let kLife:Int = 35
+    private let kCoins:Int = 2
     
     required init(
         textures:MOptionWhistlesVsZombiesTextures,
