@@ -9,7 +9,7 @@ class MOptionWhistlesVsZombiesZombieItemCop:MOptionWhistlesVsZombiesZombieItemPr
     private(set) var intelligence:Int
     private(set) var life:Int
     private(set) var coins:Int
-    private let kSpeed:Int = 4
+    private let kSpeed:Int = 5
     private let kIntelligence:Int = 5
     private let kLife:Int = 35
     private let kCoins:Int = 2
@@ -18,9 +18,9 @@ class MOptionWhistlesVsZombiesZombieItemCop:MOptionWhistlesVsZombiesZombieItemPr
         textures:MOptionWhistlesVsZombiesTextures,
         actions:MOptionWhistlesVsZombiesActions)
     {
-        textureStand = textures.zombieFootballStand
-        animatedWalking = actions.actionZombieFootballWakingAnimation
-        animatedDefeat = actions.actionZombieFootballDefeatedAnimation
+        textureStand = textures.zombieCopStand
+        animatedWalking = actions.actionZombieCopWalkingAnimation
+        animatedDefeat = actions.actionZombieCopDefeatedAnimation
         speed = kSpeed
         intelligence = kIntelligence
         life = kLife

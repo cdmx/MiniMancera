@@ -12,7 +12,7 @@ class MOptionWhistlesVsZombiesActions
     let actionZombieSonicHit:SKAction
     let actionZombieFootballWakingAnimation:SKAction
     let actionZombieFootballDefeatedAnimation:SKAction
-    let actionZombieCopWakingAnimation:SKAction
+    let actionZombieCopWalkingAnimation:SKAction
     let actionZombieCopDefeatedAnimation:SKAction
     let transitionCrossFade:SKTransition
     private let kFadeDuration:TimeInterval = 0.3
@@ -47,9 +47,9 @@ class MOptionWhistlesVsZombiesActions
         actionZombieFootballDefeatedAnimation = MOptionWhistlesVsZombiesActions.factoryZombieDefeatedAnimation(
             texture:textures.zombieFootballDefeatedAnimated)
         
-        actionZombieCopWakingAnimation = MOptionWhistlesVsZombiesActions.factoryZombieWalkingAnimation(
-            texture:textures.zombieFootballWalkingAnimated)
+        actionZombieCopWalkingAnimation = MOptionWhistlesVsZombiesActions.factoryZombieWalkingAnimation(
+            texture:textures.zombieCopWalkingAnimated)
         actionZombieCopDefeatedAnimation = MOptionWhistlesVsZombiesActions.factoryZombieDefeatedAnimation(
-            texture:textures.zombieFootballDefeatedAnimated)
+            texture:textures.zombieCopDefeatedAnimated)
     }
 }
