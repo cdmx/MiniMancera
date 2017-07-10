@@ -47,15 +47,22 @@ class VOptionWhistlesVsZombiesZombie:ViewGameNode<MOptionWhistlesVsZombies>
     {
         guard
             
-            let modelTexture:MGameTexture = self.modelTexture
+            let modelTexture:MGameTexture = self.modelTexture,
+            let model:MOptionWhistlesVsZombiesZombieItem = self.model
             
         else
         {
             return
         }
         
+        let center:CGPoint = CGPoint(
+            x:0,
+            y:-model.type.verticalDelta)
+        
         let radius:CGFloat = modelTexture.width_2
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(circleOfRadius:radius)
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(
+            circleOfRadius:radius,
+            center:center)
         physicsBody.isDynamic = true
         physicsBody.friction = kFriction
         physicsBody.allowsRotation = false

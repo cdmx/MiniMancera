@@ -2,8 +2,8 @@ import Foundation
 
 class MOptionWhistlesVsZombiesWhistlePink:MOptionWhistlesVsZombiesWhistleProtocol
 {
-    private let kSpeed:TimeInterval = 9
-    private let kPower:Int = 9
+    private let kSpeed:TimeInterval = 8
+    private let kPower:Int = 8
     
     var speed:TimeInterval
     {

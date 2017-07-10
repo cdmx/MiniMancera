@@ -12,7 +12,6 @@ class VOptionWhistlesVsZombiesPlayer:ViewGameNode<MOptionWhistlesVsZombies>
         super.init(
             controller:controller,
             texture:texture)
-        alpha = 0
     }
     
     required init?(coder:NSCoder)
