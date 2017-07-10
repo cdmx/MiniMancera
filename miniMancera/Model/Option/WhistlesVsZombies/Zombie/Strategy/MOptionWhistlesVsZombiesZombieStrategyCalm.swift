@@ -3,7 +3,7 @@ import Foundation
 class MOptionWhistlesVsZombiesZombieStrategyCalm:MOptionWhistlesVsZombiesZombieStrategy
 {
     private let kWaitTime:TimeInterval = 0.05
-    private let kSpawnRate:UInt32 = 35
+    private let kSpawnRate:UInt32 = 40
     
     override var waitTime:TimeInterval
     {

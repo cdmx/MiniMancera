@@ -3,7 +3,7 @@ import UIKit
 class ViewGameNodeMenu<T:MGame>:ViewGameNode<T>
 {
     private let orientation:UIInterfaceOrientation
-    private let kMargin:CGFloat = 45
+    private let kPositionY:CGFloat = 45
     
     init(
         controller:ControllerGame<T>,
@@ -37,7 +37,7 @@ class ViewGameNodeMenu<T:MGame>:ViewGameNode<T>
         
         let sceneHeight:CGFloat = orientationSceneHeight()
         let width_2:CGFloat = modelTexture.width_2
-        let positionY:CGFloat = sceneHeight - kMargin
+        let positionY:CGFloat = sceneHeight - kPositionY
         position = CGPoint(x:width_2, y:positionY)
     }
     

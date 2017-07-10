@@ -12,7 +12,7 @@ class MOptionWhistlesVsZombiesZombieItemCop:MOptionWhistlesVsZombiesZombieItemPr
     private(set) var coins:Int
     private let kVerticalDelta:CGFloat = 2
     private let kSpeed:Int = 5
-    private let kIntelligence:Int = 5
+    private let kIntelligence:Int = 7
     private let kLife:Int = 35
     private let kCoins:Int = 2
     

@@ -7,7 +7,7 @@ class MOptionWhistlesVsZombiesZombieItemStrategyAliveWait:MOptionWhistlesVsZombi
     private let kWaitTime:TimeInterval = 0.1
     private let kWalkMultiplier:Int = 10
     private let kWalkMax:Int = 100
-    private let kWalkMin:Int = 10
+    private let kWalkMin:Int = 5
     
     override init(model:MOptionWhistlesVsZombiesZombieItem)
     {

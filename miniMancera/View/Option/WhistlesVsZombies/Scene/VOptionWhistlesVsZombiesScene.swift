@@ -23,6 +23,10 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
             controller:controller)
         
+        let hud:VOptionWhistlesVsZombiesHud = VOptionWhistlesVsZombiesHud(
+            controller:controller)
+        model.hud.view = hud
+        
         let player:VOptionWhistlesVsZombiesPlayer = VOptionWhistlesVsZombiesPlayer(
             controller:controller)
         model.player.view = player
@@ -40,11 +44,11 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         model.viewMenu = menu
         
         addChild(background)
+        addChild(hud)
         addChild(player)
         factoryBases()
         addChild(physicHome)
         addChild(physicSonicLimit)
-        
         addChild(menu)
     }
     
