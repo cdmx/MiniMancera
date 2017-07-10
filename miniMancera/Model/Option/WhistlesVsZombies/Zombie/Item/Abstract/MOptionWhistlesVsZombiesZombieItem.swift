@@ -73,9 +73,11 @@ class MOptionWhistlesVsZombiesZombieItem:MGameUpdate<MOptionWhistlesVsZombies>
     
     func initialPosition() -> CGPoint
     {
+        let positionY:CGFloat = lane.positionY + type.verticalDelta
+        
         let point:CGPoint = CGPoint(
             x:initialPositionX,
-            y:lane.positionY)
+            y:positionY)
         
         return point
     }
