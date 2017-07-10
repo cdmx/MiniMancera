@@ -2,8 +2,8 @@ import SpriteKit
 
 class VOptionWhistlesVsZombiesTitle:SKLabelNode
 {
-    private let kAddPositionY:CGFloat = 20
-    private let kFontSize:CGFloat = 16
+    private let kAddPositionY:CGFloat = 40
+    private let kFontSize:CGFloat = 15
     
     override init()
     {
@@ -27,9 +27,11 @@ class VOptionWhistlesVsZombiesTitle:SKLabelNode
     
     private func positionStart()
     {
+        let sceneWidth:CGFloat = MGame.sceneSize.height
         let sceneHeight:CGFloat = MGame.sceneSize.width
+        let sceneWidth_2:CGFloat = sceneWidth / 2.0
         let sceneHeight_2:CGFloat = sceneHeight / 2.0
         let positionY:CGFloat = sceneHeight_2 + kAddPositionY
-        position = CGPoint(x:0, y:positionY)
+        position = CGPoint(x:sceneWidth_2, y:positionY)
     }
 }

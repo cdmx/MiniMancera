@@ -50,6 +50,6 @@ class MOptionWhistlesVsZombiesStrategyBegin:MGameStrategyMain<MOptionWhistlesVsZ
         
         model.viewMenu?.run(actionFadeIn)
         model.hud.view?.run(actionFadeIn)
-//        model.title.view?.run(actionFadeOut)
+        model.viewTitle?.run(actionFadeOut)
     }
 }
