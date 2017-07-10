@@ -43,6 +43,9 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
             orientation:UIInterfaceOrientation.landscapeLeft)
         model.viewMenu = menu
         
+        let title:VOptionWhistlesVsZombiesTitle = VOptionWhistlesVsZombiesTitle()
+        model.viewTitle = title
+        
         addChild(background)
         addChild(hud)
         addChild(player)
@@ -50,6 +53,7 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         addChild(physicHome)
         addChild(physicSonicLimit)
         addChild(menu)
+        addChild(title)
     }
     
     private func factoryBases()
