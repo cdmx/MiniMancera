@@ -36,6 +36,14 @@ class MHomeOptionsWhistlesVsZombies:MHomeOptions
         }
     }
     
+    override var scoreIcon:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericWhistlesVsZombiesScore")
+        }
+    }
+    
     override func gameController() -> UIViewController?
     {
         let controller:UIViewController? = gameControllerWith(type:COptionWhistlesVsZombies.self)
