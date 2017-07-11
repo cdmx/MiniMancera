@@ -20,6 +20,22 @@ class MHomeOptionsWhistlesVsZombies:MHomeOptions
         }
     }
     
+    override var thumbnail:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericWhistlesVsZombiesThumbnail")
+        }
+    }
+    
+    override var splashImage:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericWhistlesVsZombiesSplash")
+        }
+    }
+    
     override func gameController() -> UIViewController?
     {
         let controller:UIViewController? = gameControllerWith(type:COptionWhistlesVsZombies.self)
