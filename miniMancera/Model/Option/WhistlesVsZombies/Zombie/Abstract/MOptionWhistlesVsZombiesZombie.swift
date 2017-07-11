@@ -1,4 +1,4 @@
-import Foundation
+import SpriteKit
 
 class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
 {
@@ -42,8 +42,11 @@ class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
             model:self)
     }
     
-    func horde()
+    func horde(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
+        let soundVictory:SKAction = scene.controller.model.sounds.soundVictory
+        scene.controller.playSound(actionSound:soundVictory)
+        
         strategy = MOptionWhistlesVsZombiesZombieStrategyHorde(
             model:self)
     }

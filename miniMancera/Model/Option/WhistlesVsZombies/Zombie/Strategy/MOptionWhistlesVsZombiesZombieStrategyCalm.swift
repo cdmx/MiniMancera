@@ -40,7 +40,7 @@ class MOptionWhistlesVsZombiesZombieStrategyCalm:MOptionWhistlesVsZombiesZombieS
             {
                 self.lastElapsedTime = elapsedTime
                 
-                tryHorde()
+                tryHorde(scene:scene)
             }
         }
         else
@@ -52,13 +52,13 @@ class MOptionWhistlesVsZombiesZombieStrategyCalm:MOptionWhistlesVsZombiesZombieS
     
     //MARK: private
     
-    private func tryHorde()
+    private func tryHorde(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
         let random:UInt32 = arc4random_uniform(kHordeRatio)
         
         if random == 0
         {
-            model.horde()
+            model.horde(scene:scene)
         }
     }
 }
