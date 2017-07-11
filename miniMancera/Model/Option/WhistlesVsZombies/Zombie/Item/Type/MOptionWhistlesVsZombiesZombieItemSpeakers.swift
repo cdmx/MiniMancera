@@ -11,7 +11,7 @@ class MOptionWhistlesVsZombiesZombieItemSpeakers:MOptionWhistlesVsZombiesZombieI
     private(set) var life:Int
     private(set) var coins:Int
     private let kVerticalDelta:CGFloat = -3
-    private let kSpeed:Int = 4
+    private let kSpeed:Int = 5
     private let kIntelligence:Int = 2
     private let kLife:Int = 60
     private let kCoins:Int = 3
