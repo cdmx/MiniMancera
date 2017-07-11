@@ -1,0 +1,26 @@
+import UIKit
+
+class VOptionWhistlesVsZombiesFire:ViewGameNode<MOptionWhistlesVsZombies>
+{
+    private let kPositionX:CGFloat = 280
+    private let kPositionY:CGFloat = 45
+    
+    override init(controller:ControllerGame<MOptionWhistlesVsZombies>)
+    {
+        let texture:MGameTexture = controller.model.textures.fire
+        
+        super.init(
+            controller:controller,
+            texture:texture)
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
+    override func positionStart()
+    {
+        position = CGPoint(x:kPositionX, y:kPositionY)
+    }
+}
