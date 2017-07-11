@@ -2,7 +2,7 @@ import UIKit
 
 class VOptionWhistlesVsZombiesFire:ViewGameNode<MOptionWhistlesVsZombies>
 {
-    private let kPositionX:CGFloat = 280
+    private let kPositionX:CGFloat = 300
     private let kPositionY:CGFloat = 45
     
     override init(controller:ControllerGame<MOptionWhistlesVsZombies>)
