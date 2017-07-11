@@ -8,6 +8,7 @@ class VOptionWhistlesVsZombiesHordeTitle:SKLabelNode
     override init()
     {
         super.init()
+        alpha = 0
         text = String.localizedWhistlesVsZombies(
             key:"VOptionWhistlesVsZombiesHordeTitle_label")
         fontName = UIFont.kFontGame
