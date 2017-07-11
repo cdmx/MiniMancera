@@ -62,6 +62,12 @@ class MOptionWhistlesVsZombiesWhistleBase:MGameUpdate<MOptionWhistlesVsZombies>
     
     func explodeFinish()
     {
+        restart()
+    }
+    
+    func restart()
+    {
+        whistleType = nil
         wait()
         viewBase?.disCharged()
         viewWhistle?.explodeFinished()

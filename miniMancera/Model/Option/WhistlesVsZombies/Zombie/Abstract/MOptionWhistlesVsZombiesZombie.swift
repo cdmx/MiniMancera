@@ -79,4 +79,9 @@ class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
         
         self.items = items
     }
+    
+    func restart()
+    {
+        items = []
+    }
 }
