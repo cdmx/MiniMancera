@@ -47,6 +47,9 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
             orientation:UIInterfaceOrientation.landscapeLeft)
         model.viewMenu = menu
         
+        let hordeTitle:VOptionWhistlesVsZombiesHordeTitle = VOptionWhistlesVsZombiesHordeTitle()
+        model.horde.viewTitle = hordeTitle
+        
         let title:VOptionWhistlesVsZombiesTitle = VOptionWhistlesVsZombiesTitle()
         model.viewTitle = title
         
@@ -58,6 +61,7 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         addChild(physicHome)
         addChild(physicSonicLimit)
         addChild(menu)
+        addChild(hordeTitle)
         addChild(title)
     }
     
