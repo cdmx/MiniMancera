@@ -231,6 +231,7 @@
 		DA838D2C1F1542090079FA14 /* MOptionWhistlesVsZombiesHorde.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA838D2B1F1542090079FA14 /* MOptionWhistlesVsZombiesHorde.swift */; };
 		DA838D2E1F1545550079FA14 /* VOptionWhistlesVsZombiesHordeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA838D2D1F1545550079FA14 /* VOptionWhistlesVsZombiesHordeTitle.swift */; };
 		DA838D301F154A6E0079FA14 /* MOptionWhistlesVsZombiesZombieStrategyHorde.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA838D2F1F154A6E0079FA14 /* MOptionWhistlesVsZombiesZombieStrategyHorde.swift */; };
+		DA838D341F156C040079FA14 /* soundWhistlesVsZombies.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA838D331F156C040079FA14 /* soundWhistlesVsZombies.caf */; };
 		DA8ACFA51F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */; };
 		DA8ACFAE1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFAD1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift */; };
 		DA8ACFB11F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFB01F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift */; };
@@ -605,6 +606,7 @@
 		DA838D2B1F1542090079FA14 /* MOptionWhistlesVsZombiesHorde.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesHorde.swift; sourceTree = "<group>"; };
 		DA838D2D1F1545550079FA14 /* VOptionWhistlesVsZombiesHordeTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesHordeTitle.swift; sourceTree = "<group>"; };
 		DA838D2F1F154A6E0079FA14 /* MOptionWhistlesVsZombiesZombieStrategyHorde.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesZombieStrategyHorde.swift; sourceTree = "<group>"; };
+		DA838D331F156C040079FA14 /* soundWhistlesVsZombies.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundWhistlesVsZombies.caf; sourceTree = "<group>"; };
 		DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesTextures.swift; sourceTree = "<group>"; };
 		DA8ACFAD1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesActions.swift; sourceTree = "<group>"; };
 		DA8ACFB01F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesStrategyGame.swift; sourceTree = "<group>"; };
@@ -822,6 +824,7 @@
 		DA1D57841EF1E73F00ECA895 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				DA838D331F156C040079FA14 /* soundWhistlesVsZombies.caf */,
 				DA2892841EF61D2000C80D3D /* soundPop.caf */,
 				DA1D578D1EF207B700ECA895 /* soundCarHorn.caf */,
 				DA1D578E1EF207B700ECA895 /* soundCoin.caf */,
@@ -2044,6 +2047,7 @@
 			files = (
 				DA5667941EF2969B000055D8 /* assetSpinner.xcassets in Resources */,
 				DA1D57921EF207B700ECA895 /* soundCarHorn.caf in Resources */,
+				DA838D341F156C040079FA14 /* soundWhistlesVsZombies.caf in Resources */,
 				DA3A387A1EFC082D0028C35E /* WhistlesVsZombies.strings in Resources */,
 				DA2DFFD81EECB16A00365F23 /* LaunchScreen.storyboard in Resources */,
 				DA56675F1EF252AE000055D8 /* assetGeneric.xcassets in Resources */,
