@@ -234,6 +234,8 @@
 		DA838D341F156C040079FA14 /* soundWhistlesVsZombies.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA838D331F156C040079FA14 /* soundWhistlesVsZombies.caf */; };
 		DA838D361F15702F0079FA14 /* soundWhistle.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA838D351F15702F0079FA14 /* soundWhistle.caf */; };
 		DA838D381F15706E0079FA14 /* MOptionWhistlesVsZombiesSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA838D371F15706E0079FA14 /* MOptionWhistlesVsZombiesSounds.swift */; };
+		DA838D3C1F1573BE0079FA14 /* soundHeadWall.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA838D3A1F1573BE0079FA14 /* soundHeadWall.caf */; };
+		DA838D3E1F1573EA0079FA14 /* soundExplosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA838D3D1F1573EA0079FA14 /* soundExplosion.caf */; };
 		DA8ACFA51F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */; };
 		DA8ACFAE1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFAD1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift */; };
 		DA8ACFB11F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFB01F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift */; };
@@ -611,6 +613,8 @@
 		DA838D331F156C040079FA14 /* soundWhistlesVsZombies.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundWhistlesVsZombies.caf; sourceTree = "<group>"; };
 		DA838D351F15702F0079FA14 /* soundWhistle.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundWhistle.caf; sourceTree = "<group>"; };
 		DA838D371F15706E0079FA14 /* MOptionWhistlesVsZombiesSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSounds.swift; sourceTree = "<group>"; };
+		DA838D3A1F1573BE0079FA14 /* soundHeadWall.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundHeadWall.caf; sourceTree = "<group>"; };
+		DA838D3D1F1573EA0079FA14 /* soundExplosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundExplosion.caf; sourceTree = "<group>"; };
 		DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesTextures.swift; sourceTree = "<group>"; };
 		DA8ACFAD1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesActions.swift; sourceTree = "<group>"; };
 		DA8ACFB01F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesStrategyGame.swift; sourceTree = "<group>"; };
@@ -828,6 +832,8 @@
 		DA1D57841EF1E73F00ECA895 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				DA838D3D1F1573EA0079FA14 /* soundExplosion.caf */,
+				DA838D3A1F1573BE0079FA14 /* soundHeadWall.caf */,
 				DA838D351F15702F0079FA14 /* soundWhistle.caf */,
 				DA838D331F156C040079FA14 /* soundWhistlesVsZombies.caf */,
 				DA2892841EF61D2000C80D3D /* soundPop.caf */,
@@ -2068,12 +2074,14 @@
 				DA60C5071F0C5FB200CF0207 /* assetWhistlesVsZombies.xcassets in Resources */,
 				DA27A6141EF9C4C0009378E2 /* Pixeled.ttf in Resources */,
 				DA2D003E1EED2F0000365F23 /* assetSprites.xcassets in Resources */,
+				DA838D3E1F1573EA0079FA14 /* soundExplosion.caf in Resources */,
 				DA1D57961EF207B700ECA895 /* soundVictory.caf in Resources */,
 				DA2892851EF61D2000C80D3D /* soundPop.caf in Resources */,
 				DA56679B1EF31023000055D8 /* ReformaCrossing.strings in Resources */,
 				DA1D57931EF207B700ECA895 /* soundCoin.caf in Resources */,
 				DA2DFFE41EECB16A00365F23 /* ResourceURL.plist in Resources */,
 				DA2892871EF64E3300C80D3D /* brand.xcassets in Resources */,
+				DA838D3C1F1573BE0079FA14 /* soundHeadWall.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
