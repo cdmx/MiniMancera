@@ -108,8 +108,6 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
     
     func showBoard(modelBase:MOptionWhistlesVsZombiesWhistleBase)
     {
-        pause()
-        
         DispatchQueue.main.async
         { [weak self] in
             

@@ -17,6 +17,7 @@ class MOptionWhistlesVsZombies:MGame
     let horde:MOptionWhistlesVsZombiesHorde
     private(set) var coins:Int
     private var strategy:MGameStrategyMain<MOptionWhistlesVsZombies>?
+    private let kSoundBackground:String = "soundWhistlesVsZombies.caf"
     private let kInitialCoins:Int = 30
     
     required init()
@@ -52,6 +53,14 @@ class MOptionWhistlesVsZombies:MGame
         get
         {
             return VOptionWhistlesVsZombiesScene.self
+        }
+    }
+    
+    override var soundBackground:String?
+    {
+        get
+        {
+            return kSoundBackground
         }
     }
     
