@@ -3,7 +3,7 @@ import SpriteKit
 class MOptionWhistlesVsZombiesStrategyDefeated:MGameStrategyMain<MOptionWhistlesVsZombies>
 {
     private var startingTime:TimeInterval?
-    private let kWait:TimeInterval = 1.5
+    private let kWait:TimeInterval = 3
     
     init(model:MOptionWhistlesVsZombies)
     {
