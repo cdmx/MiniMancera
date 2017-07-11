@@ -46,16 +46,16 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
     {
         super.game1up()
         
-        //        let sound1up:SKAction = model.sounds.sound1up
-        //        playSound(actionSound:sound1up)
+        let sound1up:SKAction = model.sounds.sound1up
+        playSound(actionSound:sound1up)
         
         newGameScene()
     }
     
     override func gamePlayNoMore()
     {
-        //        let soundFail:SKAction = model.sounds.soundFail
-        //        playSound(actionSound:soundFail)
+        let soundFail:SKAction = model.sounds.soundFail
+        playSound(actionSound:soundFail)
         
         super.gamePlayNoMore()
     }
