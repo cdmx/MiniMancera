@@ -9,8 +9,8 @@ class VOptionWhistlesVsZombiesSonicBoom:ViewGameNode<MOptionWhistlesVsZombies>
     private let velocityX:CGFloat
     private let density:CGFloat
     private let kColourBlendFactor:CGFloat = 1
-    private let kVelocityX:CGFloat = 0.000005
-    private let kDensity:CGFloat = 0.0000005
+    private let kVelocityX:CGFloat = 0.00001
+    private let kDensity:CGFloat = 0.000001
     
     init(
         controller:ControllerGame<MOptionWhistlesVsZombies>,
