@@ -12,6 +12,7 @@ class MOptionWhistlesVsZombies:MGame
     let points:MOptionWhistlesVsZombiesPoints
     let textures:MOptionWhistlesVsZombiesTextures
     let actions:MOptionWhistlesVsZombiesActions
+    let sounds:MOptionWhistlesVsZombiesSounds
     let contact:MOptionWhistlesVsZombiesContact
     let hud:MOptionWhistlesVsZombiesHud
     let horde:MOptionWhistlesVsZombiesHorde
@@ -25,6 +26,7 @@ class MOptionWhistlesVsZombies:MGame
         let area:MOptionWhistlesVsZombiesArea = MOptionWhistlesVsZombies.loadArea()
         
         textures = MOptionWhistlesVsZombiesTextures()
+        sounds = MOptionWhistlesVsZombiesSounds()
         actions = MOptionWhistlesVsZombiesActions(textures:textures)
         ground = MOptionWhistlesVsZombiesGround(area:area)
         whistle = MOptionWhistlesVsZombiesWhistle(
