@@ -159,7 +159,16 @@ class MOptionWhistlesVsZombiesContact:MGameUpdate<MOptionWhistlesVsZombies>
     
     private func zombieAndHome(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        scene.controller.model.zombiesGotHome()
+        guard
+            
+            let controller:COptionWhistlesVsZombies = scene.controller as? COptionWhistlesVsZombies
+        
+        else
+        {
+            return
+        }
+        
+        controller.zombiesGotHome()
     }
     
     //MARK: public

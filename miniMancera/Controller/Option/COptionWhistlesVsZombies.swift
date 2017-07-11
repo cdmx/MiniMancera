@@ -125,4 +125,12 @@ class COptionWhistlesVsZombies:ControllerGame<MOptionWhistlesVsZombies>
         
         presentScene(newScene:newScene)
     }
+    
+    func zombiesGotHome()
+    {
+        let soundHorror:SKAction = model.sounds.soundHorror
+        playSound(actionSound:soundHorror)
+        
+        model.zombiesGotHome()
+    }
 }
