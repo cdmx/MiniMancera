@@ -52,7 +52,10 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyCharged:MGameStrategy<
             return
         }
         
-        scene.addWhistle(base:model)
+        let model:MOptionWhistlesVsZombies = scene.controller.model
+        let soundGunCock:SKAction = model.sounds.soundGunCock
+        scene.controller.playSound(actionSound:soundGunCock)
+        scene.addWhistle(base:self.model)
     }
     
     private func releaseSonicBoom(scene:ViewGameScene<MOptionWhistlesVsZombies>)
