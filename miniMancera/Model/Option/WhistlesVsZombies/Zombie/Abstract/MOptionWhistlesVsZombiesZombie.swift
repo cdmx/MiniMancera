@@ -42,9 +42,9 @@ class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
             model:self)
     }
     
-    func rush()
+    func horde()
     {
-        strategy = MOptionWhistlesVsZombiesZombieStrategyRush(
+        strategy = MOptionWhistlesVsZombiesZombieStrategyHorde(
             model:self)
     }
     
@@ -82,6 +82,7 @@ class MOptionWhistlesVsZombiesZombie:MGameUpdate<MOptionWhistlesVsZombies>
     
     func restart()
     {
+        calm()
         items = []
     }
 }
