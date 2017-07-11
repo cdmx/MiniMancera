@@ -2,8 +2,8 @@ import SpriteKit
 
 class VOptionWhistlesVsZombiesHordeTitle:SKLabelNode
 {
-    private let kAddPositionY:CGFloat = 120
-    private let kFontSize:CGFloat = 11
+    private let kAddPositionY:CGFloat = 80
+    private let kFontSize:CGFloat = 12
     
     override init()
     {

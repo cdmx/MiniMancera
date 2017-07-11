@@ -5,9 +5,9 @@ class MOptionWhistlesVsZombiesZombieStrategyHorde:MOptionWhistlesVsZombiesZombie
     private var titleHidden:Bool
     private var startingTime:TimeInterval?
     private let kWaitTime:TimeInterval = 0.05
-    private let kSpawnRate:UInt32 = 5
+    private let kSpawnRate:UInt32 = 2
     private let kDuration:TimeInterval = 10
-    private let kTitleDuration:TimeInterval = 3
+    private let kTitleDuration:TimeInterval = 4
     
     override init(model:MOptionWhistlesVsZombiesZombie)
     {
