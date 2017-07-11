@@ -8,12 +8,14 @@ class MOptionWhistlesVsZombiesSounds
     let sound1up:SKAction
     let soundGunCock:SKAction
     let soundExplosion:SKAction
+    let soundHorror:SKAction
     private let kSoundFail:String = "soundFail.caf"
     private let kSoundWhistle:String = "soundWhistle.caf"
     private let kSoundVictory:String = "soundVictory.caf"
     private let kSound1up:String = "sound1up.caf"
     private let kSoundGunCock:String = "soundGunCock.caf"
     private let kSoundExplosion:String = "soundExplosion.caf"
+    private let kSoundHorror:String = "soundHorror.caf"
     
     init()
     {
@@ -23,5 +25,6 @@ class MOptionWhistlesVsZombiesSounds
         sound1up = SKAction.playSoundFileNamed(kSound1up, waitForCompletion:false)
         soundGunCock = SKAction.playSoundFileNamed(kSoundGunCock, waitForCompletion:false)
         soundExplosion = SKAction.playSoundFileNamed(kSoundExplosion, waitForCompletion:false)
+        soundHorror = SKAction.playSoundFileNamed(kSoundHorror, waitForCompletion:false)
     }
 }
