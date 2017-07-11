@@ -1,4 +1,4 @@
-import Foundation
+import SpriteKit
 
 class MOptionWhistlesVsZombiesWhistleBaseStrategyCharged:MGameStrategy<
     MOptionWhistlesVsZombiesWhistleBase,
@@ -57,8 +57,12 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyCharged:MGameStrategy<
     
     private func releaseSonicBoom(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
-        scene.controller.model.sonicBoom.release(
-            base:model,
+        let model:MOptionWhistlesVsZombies = scene.controller.model
+        let soundWhistle:SKAction = model.sounds.soundWhistle
+        scene.controller.playSound(actionSound:soundWhistle)
+        
+        model.sonicBoom.release(
+            base:self.model,
             whistleType:whistleType)
     }
 }
