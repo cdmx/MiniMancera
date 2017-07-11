@@ -57,6 +57,11 @@ class MOptionWhistlesVsZombies:MGame
     {
         super.startLevel()
         
+        score = 0
+        coins = kInitialCoins
+        player.stand()
+        whistle.restart()
+        zombie.restart()
         strategy = MOptionWhistlesVsZombiesStrategyBegin(model:self)
     }
     
@@ -75,11 +80,6 @@ class MOptionWhistlesVsZombies:MGame
     
     private func strategyGame()
     {
-        score = 0
-        coins = kInitialCoins
-        whistle.restart()
-        zombie.restart()
-        
         strategy = MOptionWhistlesVsZombiesStrategyGame(model:self)
     }
     

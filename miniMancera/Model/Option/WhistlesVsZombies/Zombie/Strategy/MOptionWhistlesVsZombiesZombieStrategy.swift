@@ -35,7 +35,7 @@ class MOptionWhistlesVsZombiesZombieStrategy:MGameStrategy<
     {
         if let lastElapsedTime:TimeInterval = self.lastElapsedTime
         {
-            let deltaTime:TimeInterval = elapsedTime - lastElapsedTime
+            let deltaTime:TimeInterval = abs(elapsedTime - lastElapsedTime)
             
             if deltaTime > waitTime
             {
