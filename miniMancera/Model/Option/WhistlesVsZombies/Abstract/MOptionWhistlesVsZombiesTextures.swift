@@ -31,6 +31,9 @@ class MOptionWhistlesVsZombiesTextures
     let zombieCopStand:MGameTexture
     let zombieCopWalkingAnimated:MGameTextureAnimated
     let zombieCopDefeatedAnimated:MGameTextureAnimated
+    let zombieSpeakersStand:MGameTexture
+    let zombieSpeakersWalkingAnimated:MGameTextureAnimated
+    let zombieSpeakersDefeatedAnimated:MGameTextureAnimated
     
     init()
     {
@@ -98,5 +101,11 @@ class MOptionWhistlesVsZombiesTextures
             zPosition:MOptionWhistlesVsZombiesZPosition.Zombie.rawValue)
         zombieCopWalkingAnimated = MOptionWhistlesVsZombiesTextures.factoryCopWalkingAnimated()
         zombieCopDefeatedAnimated = MOptionWhistlesVsZombiesTextures.factoryCopDefeatedAnimated()
+        
+        zombieSpeakersStand = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesZombieSpeakersStand"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.Zombie.rawValue)
+        zombieSpeakersWalkingAnimated = MOptionWhistlesVsZombiesTextures.factorySpeakersWalkingAnimated()
+        zombieSpeakersDefeatedAnimated = MOptionWhistlesVsZombiesTextures.factorySpeakersDefeatedAnimated()
     }
 }
