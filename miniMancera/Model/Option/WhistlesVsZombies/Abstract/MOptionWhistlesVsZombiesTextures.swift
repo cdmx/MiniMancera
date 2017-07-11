@@ -7,6 +7,7 @@ class MOptionWhistlesVsZombiesTextures
     let base:MGameTexture
     let menu:MGameTexture
     let hud:MGameTexture
+    let fire:MGameTexture
     let gameOver1up:MGameTexture
     let gameOverExit:MGameTexture
     
@@ -52,6 +53,9 @@ class MOptionWhistlesVsZombiesTextures
         hud = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombiesHud"),
             zPosition:MOptionWhistlesVsZombiesZPosition.Hud.rawValue)
+        fire = MGameTexture(
+            image:#imageLiteral(resourceName: "assetWhistlesVsZombiesFire"),
+            zPosition:MOptionWhistlesVsZombiesZPosition.Fire.rawValue)
         gameOver1up = MGameTexture(
             image:#imageLiteral(resourceName: "assetWhistlesVsZombies1up"),
             zPosition:MOptionWhistlesVsZombiesZPosition.GameOver1up.rawValue)
