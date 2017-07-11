@@ -21,6 +21,8 @@ class VOptionWhistlesVsZombiesFire:ViewGameNode<MOptionWhistlesVsZombies>
     
     override func positionStart()
     {
-        position = CGPoint(x:kPositionX, y:kPositionY)
+        let sceneHeight:CGFloat = MGame.sceneSize.width
+        let positionY:CGFloat = sceneHeight - kPositionY
+        position = CGPoint(x:kPositionX, y:positionY)
     }
 }

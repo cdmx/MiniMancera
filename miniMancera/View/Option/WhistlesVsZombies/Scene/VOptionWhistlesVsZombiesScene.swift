@@ -27,6 +27,10 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
             controller:controller)
         model.hud.view = hud
         
+        let fire:VOptionWhistlesVsZombiesFire = VOptionWhistlesVsZombiesFire(
+            controller:controller)
+        model.horde.viewFire = fire
+        
         let player:VOptionWhistlesVsZombiesPlayer = VOptionWhistlesVsZombiesPlayer(
             controller:controller)
         model.player.view = player
@@ -48,6 +52,7 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
         
         addChild(background)
         addChild(hud)
+        addChild(fire)
         addChild(player)
         factoryBases()
         addChild(physicHome)

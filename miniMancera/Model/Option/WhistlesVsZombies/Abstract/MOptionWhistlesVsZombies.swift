@@ -14,7 +14,7 @@ class MOptionWhistlesVsZombies:MGame
     let actions:MOptionWhistlesVsZombiesActions
     let contact:MOptionWhistlesVsZombiesContact
     let hud:MOptionWhistlesVsZombiesHud
-    let horder:MOptionWhistlesVsZombiesHorde
+    let horde:MOptionWhistlesVsZombiesHorde
     private(set) var coins:Int
     private var strategy:MGameStrategyMain<MOptionWhistlesVsZombies>?
     private let kInitialCoins:Int = 30
@@ -38,7 +38,7 @@ class MOptionWhistlesVsZombies:MGame
             actions:actions)
         points = MOptionWhistlesVsZombiesPoints()
         hud = MOptionWhistlesVsZombiesHud()
-        horder = MOptionWhistlesVsZombiesHorde()
+        horde = MOptionWhistlesVsZombiesHorde()
         coins = kInitialCoins
         
         super.init()
