@@ -20,9 +20,9 @@ class MOptionWhistlesVsZombiesZombieItemSpeakers:MOptionWhistlesVsZombiesZombieI
         textures:MOptionWhistlesVsZombiesTextures,
         actions:MOptionWhistlesVsZombiesActions)
     {
-        textureStand = textures.zombieFootballStand
-        animatedWalking = actions.actionZombieFootballWakingAnimation
-        animatedDefeat = actions.actionZombieFootballDefeatedAnimation
+        textureStand = textures.zombieSpeakersStand
+        animatedWalking = actions.actionZombieSpeakersWalkingAnimation
+        animatedDefeat = actions.actionZombieSpeakersDefeatedAnimation
         verticalDelta = kVerticalDelta
         speed = kSpeed
         intelligence = kIntelligence
