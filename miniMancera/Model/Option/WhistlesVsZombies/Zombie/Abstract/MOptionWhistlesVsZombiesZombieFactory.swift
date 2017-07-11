@@ -12,10 +12,14 @@ extension MOptionWhistlesVsZombiesZombie
         let typeCop:MOptionWhistlesVsZombiesZombieItemCop = MOptionWhistlesVsZombiesZombieItemCop(
             textures:textures,
             actions:actions)
+        let typeSpeakers:MOptionWhistlesVsZombiesZombieItemSpeakers = MOptionWhistlesVsZombiesZombieItemSpeakers(
+            textures:textures,
+            actions:actions)
         
         let types:[MOptionWhistlesVsZombiesZombieItemProtocol] = [
             typeFootball,
-            typeCop]
+            typeCop,
+            typeSpeakers]
         
         return types
     }
