@@ -1,4 +1,4 @@
-import Foundation
+import SpriteKit
 
 class MOptionWhistlesVsZombiesSonicBoomItemStrategyCollision:MGameStrategy<MOptionWhistlesVsZombiesSonicBoomItem,
     MOptionWhistlesVsZombies>
@@ -22,14 +22,17 @@ class MOptionWhistlesVsZombiesSonicBoomItemStrategyCollision:MGameStrategy<MOpti
         else
         {
             startingTime = elapsedTime
-            animateCollision()
+            animateCollision(scene:scene)
         }
     }
     
     //MARK: private
     
-    private func animateCollision()
+    private func animateCollision(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
+        let soundHeadWall:SKAction = scene.controller.model.sounds.soundHeadWall
+        scene.controller.playSound(actionSound:soundHeadWall)
+        
         model.viewBoom?.collisionAnimate()
     }
     
