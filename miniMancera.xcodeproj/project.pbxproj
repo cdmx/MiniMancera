@@ -236,6 +236,8 @@
 		DA838D381F15706E0079FA14 /* MOptionWhistlesVsZombiesSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA838D371F15706E0079FA14 /* MOptionWhistlesVsZombiesSounds.swift */; };
 		DA838D3C1F1573BE0079FA14 /* soundHeadWall.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA838D3A1F1573BE0079FA14 /* soundHeadWall.caf */; };
 		DA838D3E1F1573EA0079FA14 /* soundExplosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA838D3D1F1573EA0079FA14 /* soundExplosion.caf */; };
+		DA838D401F1575580079FA14 /* soundGunCock.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA838D3F1F1575580079FA14 /* soundGunCock.caf */; };
+		DA838D421F15780A0079FA14 /* soundHorror.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA838D411F15780A0079FA14 /* soundHorror.caf */; };
 		DA8ACFA51F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */; };
 		DA8ACFAE1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFAD1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift */; };
 		DA8ACFB11F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8ACFB01F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift */; };
@@ -615,6 +617,8 @@
 		DA838D371F15706E0079FA14 /* MOptionWhistlesVsZombiesSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesSounds.swift; sourceTree = "<group>"; };
 		DA838D3A1F1573BE0079FA14 /* soundHeadWall.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundHeadWall.caf; sourceTree = "<group>"; };
 		DA838D3D1F1573EA0079FA14 /* soundExplosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundExplosion.caf; sourceTree = "<group>"; };
+		DA838D3F1F1575580079FA14 /* soundGunCock.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundGunCock.caf; sourceTree = "<group>"; };
+		DA838D411F15780A0079FA14 /* soundHorror.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundHorror.caf; sourceTree = "<group>"; };
 		DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesTextures.swift; sourceTree = "<group>"; };
 		DA8ACFAD1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesActions.swift; sourceTree = "<group>"; };
 		DA8ACFB01F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesStrategyGame.swift; sourceTree = "<group>"; };
@@ -832,6 +836,8 @@
 		DA1D57841EF1E73F00ECA895 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				DA838D411F15780A0079FA14 /* soundHorror.caf */,
+				DA838D3F1F1575580079FA14 /* soundGunCock.caf */,
 				DA838D3D1F1573EA0079FA14 /* soundExplosion.caf */,
 				DA838D3A1F1573BE0079FA14 /* soundHeadWall.caf */,
 				DA838D351F15702F0079FA14 /* soundWhistle.caf */,
@@ -2058,6 +2064,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5667941EF2969B000055D8 /* assetSpinner.xcassets in Resources */,
+				DA838D401F1575580079FA14 /* soundGunCock.caf in Resources */,
 				DA1D57921EF207B700ECA895 /* soundCarHorn.caf in Resources */,
 				DA838D341F156C040079FA14 /* soundWhistlesVsZombies.caf in Resources */,
 				DA838D361F15702F0079FA14 /* soundWhistle.caf in Resources */,
@@ -2072,6 +2079,7 @@
 				DA1D578C1EF1EEE100ECA895 /* soundReformaCrossing.caf in Resources */,
 				DABD4F161EF4635E003DF861 /* PollutedGarden.strings in Resources */,
 				DA60C5071F0C5FB200CF0207 /* assetWhistlesVsZombies.xcassets in Resources */,
+				DA838D421F15780A0079FA14 /* soundHorror.caf in Resources */,
 				DA27A6141EF9C4C0009378E2 /* Pixeled.ttf in Resources */,
 				DA2D003E1EED2F0000365F23 /* assetSprites.xcassets in Resources */,
 				DA838D3E1F1573EA0079FA14 /* soundExplosion.caf in Resources */,

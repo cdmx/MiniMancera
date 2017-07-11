@@ -9,7 +9,7 @@ class MOptionPollutedGardenSounds
     private let kSoundCoin:String = "soundCoin.caf"
     private let kSoundFail:String = "soundFail.caf"
     private let kSoundPop:String = "soundPop.caf"
-    private let kSound1up:String = "sound1up"
+    private let kSound1up:String = "sound1up.caf"
     
     init()
     {
