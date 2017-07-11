@@ -1,4 +1,4 @@
-import Foundation
+import SpriteKit
 
 class MOptionWhistlesVsZombiesWhistleBaseStrategyExploded:MGameStrategy<
     MOptionWhistlesVsZombiesWhistleBase,
@@ -23,14 +23,17 @@ class MOptionWhistlesVsZombiesWhistleBaseStrategyExploded:MGameStrategy<
         else
         {
             startingTime = elapsedTime
-            showExploded()
+            showExploded(scene:scene)
         }
     }
     
     //MARK: private
     
-    private func showExploded()
+    private func showExploded(scene:ViewGameScene<MOptionWhistlesVsZombies>)
     {
+        let soundExplosion:SKAction = scene.controller.model.sounds.soundExplosion
+        scene.controller.playSound(actionSound:soundExplosion)
+        
         model.viewWhistle?.explode()
     }
 }
