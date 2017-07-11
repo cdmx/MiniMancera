@@ -1,0 +1,15 @@
+"MHomeOptionsWhistlesVsZombies_title"="Silbatos vs Zombies";
+"MHomeOptionsWhistlesVsZombies_descr"="\nEl Monumento a la Revolución fue abandonado y hordas de Zombies empezaron a habitar los alrededores.\n\nAhora son tantos que una invasión es inminente.\n\nPor suerte MiniMancera tiene muchos Silbatos de protección, ayudalo a detener la Invasión Zombie.";
+"MOptionWhistlesVsZombiesBoardItemBlue_title"="AZUL";
+"MOptionWhistlesVsZombiesBoardItemPink_title"="ROSA";
+"MOptionWhistlesVsZombiesBoardItemOrange_title"="NARANJA";
+"MOptionWhistlesVsZombiesBoardScore_titleSpeed"="Velocidad";
+"MOptionWhistlesVsZombiesBoardScore_titlePower"="Fuerza";
+
+"VOptionWhistlesVsZombiesTitle_label"="DETÉN LA INVASIÓN ZOMBIE";
+"VOptionWhistlesVsZombiesHordeTitle_label"="SE APROXIMA UNA HORDA";
+"VOptionWhistlesVsZombiesBoardBar_labelTitle"="Elige un Silbato";
+"VOptionWhistlesVsZombiesSceneOver_infoTitle"="Invadieron los Zombies";
+"VOptionWhistlesVsZombiesSceneOver_infoDescr"="No pudiste detenerlos";
+"VOptionWhistlesVsZombiesSceneOver_1up"="Reintentar";
+"VOptionWhistlesVsZombiesSceneOver_exit"="Salir";

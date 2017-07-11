@@ -619,6 +619,7 @@
 		DA838D3D1F1573EA0079FA14 /* soundExplosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundExplosion.caf; sourceTree = "<group>"; };
 		DA838D3F1F1575580079FA14 /* soundGunCock.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundGunCock.caf; sourceTree = "<group>"; };
 		DA838D411F15780A0079FA14 /* soundHorror.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundHorror.caf; sourceTree = "<group>"; };
+		DA838D431F159A380079FA14 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/WhistlesVsZombies.strings; sourceTree = "<group>"; };
 		DA8ACFA41F0A85C00065C26C /* MOptionWhistlesVsZombiesTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesTextures.swift; sourceTree = "<group>"; };
 		DA8ACFAD1F0A9E790065C26C /* MOptionWhistlesVsZombiesActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesActions.swift; sourceTree = "<group>"; };
 		DA8ACFB01F0AA31D0065C26C /* MOptionWhistlesVsZombiesStrategyGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesStrategyGame.swift; sourceTree = "<group>"; };
@@ -2470,6 +2471,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DA3A38791EFC082D0028C35E /* en */,
+				DA838D431F159A380079FA14 /* es */,
 			);
 			name = WhistlesVsZombies.strings;
 			sourceTree = "<group>";
