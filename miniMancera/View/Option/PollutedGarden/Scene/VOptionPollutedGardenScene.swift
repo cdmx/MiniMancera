@@ -7,8 +7,6 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
     
     required init(controller:ControllerGame<MOptionPollutedGarden>)
     {
-        controller.model.startLevel()
-        
         super.init(controller:controller)
         startPhysics()
         factoryNodes()
@@ -58,16 +56,17 @@ class VOptionPollutedGardenScene:ViewGameScene<MOptionPollutedGarden>
             controller:controller)
         model.hud.view = hud
         
-        let menu:VOptionPollutedGardenMenu = VOptionPollutedGardenMenu(
-            controller:controller)
-        model.menu.view = menu
+        let menu:ViewGameNodeMenu<MOptionPollutedGarden> = ViewGameNodeMenu<MOptionPollutedGarden>(
+            controller:controller,
+            texture:model.textures.menu)
+        model.viewMenu = menu
         
         let controls:VOptionPollutedGardenControls = VOptionPollutedGardenControls(
             controller:controller)
         model.controls.view = controls
         
         let title:VOptionPollutedGardenTitle = VOptionPollutedGardenTitle()
-        model.title.view = title
+        model.viewTitle = title
         
         addChild(background)
         addChild(floor)

@@ -5,5 +5,5 @@
 "MOptionReformaCrossingGameOverHitAndRun_title"="MiniMancera was hit";
 "MOptionReformaCrossingGameOverHitAndRun_descr"="Crossing is more dangerous than you think";
 "MOptionReformaCrossingTitle_label"="LEVEL %@";
-"VOptionReformaCrossingGameOverTitle1up_label"="Try again";
-"VOptionReformaCrossingGameOverTitleExit_label"="Exit";
+"VOptionReformaCrossingSceneOver_1up"="Try again";
+"VOptionReformaCrossingSceneOver_exit"="Exit";

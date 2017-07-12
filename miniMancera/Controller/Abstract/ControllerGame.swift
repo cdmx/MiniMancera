@@ -5,8 +5,8 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
     let model:T
     let playSounds:Bool
     private(set) weak var dataOption:DOption?
-    private(set) var lastUpdateTime:TimeInterval?
-    private(set) var elapsedTime:TimeInterval
+    private var lastUpdateTime:TimeInterval?
+    private var elapsedTime:TimeInterval
     
     required init(dataOption:DOption)
     {
@@ -45,6 +45,14 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
     override var prefersStatusBarHidden:Bool
     {
         return true
+    }
+    
+    override var shouldAutorotate:Bool
+    {
+        get
+        {
+            return true
+        }
     }
     
     override func loadView()
@@ -93,6 +101,24 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
     
     //MARK: public
     
+    func exitGame()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            guard
+                
+                let parent:ControllerParent = self?.parent as? ControllerParent
+                
+            else
+            {
+                return
+            }
+            
+            parent.pop(vertical:ControllerParent.Vertical.bottom)
+        }
+    }
+    
     func didMove()
     {
         model.didMove()
@@ -137,6 +163,16 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
         lastUpdateTime = nil
     }
     
+    func game1up()
+    {
+        restartTimer()
+    }
+    
+    func gamePlayNoMore()
+    {
+        exitGame()
+    }
+    
     //MARK: scene delegate
     
     func update(_ currentTime:TimeInterval, for scene:SKScene)
@@ -156,10 +192,13 @@ class ControllerGame<T:MGame>:UIViewController, SKSceneDelegate, SKPhysicsContac
                 return
             }
             
+            self.lastUpdateTime = currentTime
             strategy.update(elapsedTime:elapsedTime, scene:scene)
         }
-        
-        lastUpdateTime = currentTime
+        else
+        {
+            lastUpdateTime = currentTime
+        }
     }
     
     //MARK: contact delegate

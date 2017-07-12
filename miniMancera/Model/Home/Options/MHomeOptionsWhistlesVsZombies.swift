@@ -6,7 +6,41 @@ class MHomeOptionsWhistlesVsZombies:MHomeOptions
     {
         get
         {
-            return String.localizedWhistlesVsZombies(key:"MHomeOptionsWhistlesVsZombies_title")
+            return String.localizedWhistlesVsZombies(
+                key:"MHomeOptionsWhistlesVsZombies_title")
+        }
+    }
+    
+    override var descr:String?
+    {
+        get
+        {
+            return String.localizedWhistlesVsZombies(
+                key:"MHomeOptionsWhistlesVsZombies_descr")
+        }
+    }
+    
+    override var thumbnail:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericWhistlesVsZombiesThumbnail")
+        }
+    }
+    
+    override var splashImage:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericWhistlesVsZombiesSplash")
+        }
+    }
+    
+    override var scoreIcon:UIImage?
+    {
+        get
+        {
+            return #imageLiteral(resourceName: "assetGenericWhistlesVsZombiesScore")
         }
     }
     

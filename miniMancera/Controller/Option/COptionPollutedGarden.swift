@@ -7,6 +7,23 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
         model.contact.addContact(contact:contact)
     }
     
+    override func game1up()
+    {
+        super.game1up()
+        
+        let sound1up:SKAction = model.sounds.sound1up
+        playSound(actionSound:sound1up)
+        newGameScene()
+    }
+    
+    override func gamePlayNoMore()
+    {
+        let soundFail:SKAction = model.sounds.soundFail
+        playSound(actionSound:soundFail)
+        
+        super.gamePlayNoMore()
+    }
+    
     //MAKR: private
     
     private func newGameScene()
@@ -14,6 +31,8 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
         let newScene:VOptionPollutedGardenScene = VOptionPollutedGardenScene(
             controller:self)
         presentScene(newScene:newScene)
+        
+        model.startLevel()
     }
     
     private func presentScene(newScene:SKScene)
@@ -43,22 +62,5 @@ class COptionPollutedGarden:ControllerGame<MOptionPollutedGarden>
             controller:self)
         
         presentScene(newScene:newScene)
-    }
-    
-    func game1up()
-    {
-        let sound1up:SKAction = model.sounds.sound1up
-        playSound(actionSound:sound1up)
-        
-        restartTimer()
-        newGameScene()
-    }
-    
-    func gamePlayNoMore()
-    {
-        let soundFail:SKAction = model.sounds.soundFail
-        playSound(actionSound:soundFail)
-        
-        exitGame()
     }
 }

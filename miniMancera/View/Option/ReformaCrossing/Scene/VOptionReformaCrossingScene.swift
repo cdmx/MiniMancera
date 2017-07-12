@@ -4,8 +4,6 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
 {
     required init(controller:ControllerGame<MOptionReformaCrossing>)
     {
-        controller.model.startLevel()
-        
         super.init(controller:controller)
         physicsWorld.gravity = CGVector.zero
         factoryNodes()
@@ -33,9 +31,10 @@ class VOptionReformaCrossingScene:ViewGameScene<MOptionReformaCrossing>
             controller:controller)
         model.hud.view = hud
         
-        let menu:VOptionReformaCrossingMenu = VOptionReformaCrossingMenu(
-            controller:controller)
-        model.menu.view = menu
+        let menu:ViewGameNodeMenu<MOptionReformaCrossing> = ViewGameNodeMenu<MOptionReformaCrossing>(
+            controller:controller,
+            texture:model.textures.menu)
+        model.viewMenu = menu
         
         let title:VOptionReformaCrossingTitle = VOptionReformaCrossingTitle()
         model.title.view = title

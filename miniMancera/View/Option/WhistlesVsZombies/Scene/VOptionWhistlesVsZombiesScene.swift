@@ -2,23 +2,11 @@ import SpriteKit
 
 class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
 {
-    private(set) weak var menu:VOptionWhistlesVsZombiesMenu!
-    
     required init(controller:ControllerGame<MOptionWhistlesVsZombies>)
     {
         super.init(controller:controller)
-        /*
-        let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
-            controller:controller)
-        
-        let menu:VOptionWhistlesVsZombiesMenu = VOptionWhistlesVsZombiesMenu(
-            controller:controller)
-        self.menu = menu
-        
-        addChild(background)
-        addChild(menu)
- 
-        addBase()*/
+        physicsWorld.gravity = CGVector.zero
+        factoryNodes()
     }
     
     required init?(coder:NSCoder)
@@ -27,18 +15,130 @@ class VOptionWhistlesVsZombiesScene:ViewGameScene<MOptionWhistlesVsZombies>
     }
     
     //MARK: private
-    /*
-    private func addBase()
+
+    private func factoryNodes()
     {
-        let items:[MOptionWhistlesVsZombiesBaseItem] = controller.model.base.items
+        let model:MOptionWhistlesVsZombies = controller.model
         
-        for item:MOptionWhistlesVsZombiesBaseItem in items
+        let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
+            controller:controller)
+        
+        let hud:VOptionWhistlesVsZombiesHud = VOptionWhistlesVsZombiesHud(
+            controller:controller)
+        model.hud.view = hud
+        
+        let fire:VOptionWhistlesVsZombiesFire = VOptionWhistlesVsZombiesFire(
+            controller:controller)
+        model.horde.viewFire = fire
+        
+        let player:VOptionWhistlesVsZombiesPlayer = VOptionWhistlesVsZombiesPlayer(
+            controller:controller)
+        model.player.view = player
+     
+        let physicHome:VOptionWhistlesVsZombiesPhysicHome = VOptionWhistlesVsZombiesPhysicHome(
+            controller:controller)
+        
+        let physicSonicLimit:VOptionWhistlesVsZombiesPhysicSonicLimit = VOptionWhistlesVsZombiesPhysicSonicLimit(
+            controller:controller)
+        
+        let menu:ViewGameNodeMenu<MOptionWhistlesVsZombies> = ViewGameNodeMenu<MOptionWhistlesVsZombies>(
+            controller:controller,
+            texture:model.textures.menu,
+            orientation:UIInterfaceOrientation.landscapeLeft)
+        model.viewMenu = menu
+        
+        let hordeTitle:VOptionWhistlesVsZombiesHordeTitle = VOptionWhistlesVsZombiesHordeTitle()
+        model.horde.viewTitle = hordeTitle
+        
+        let title:VOptionWhistlesVsZombiesTitle = VOptionWhistlesVsZombiesTitle()
+        model.viewTitle = title
+        
+        addChild(background)
+        addChild(hud)
+        addChild(fire)
+        addChild(player)
+        factoryBases()
+        addChild(physicHome)
+        addChild(physicSonicLimit)
+        addChild(menu)
+        addChild(hordeTitle)
+        addChild(title)
+    }
+    
+    private func factoryBases()
+    {
+        let bases:[MOptionWhistlesVsZombiesWhistleBase] = controller.model.whistle.bases
+        
+        for base:MOptionWhistlesVsZombiesWhistleBase in bases
         {
-            let viewItem:VOptionWhistlesVsZombiesBase = VOptionWhistlesVsZombiesBase(
+            let view:VOptionWhistlesVsZombiesBase = VOptionWhistlesVsZombiesBase(
                 controller:controller,
-                model:item)
+                model:base)
+            base.viewBase = view
             
-            addChild(viewItem)
+            addChild(view)
         }
-    }*/
+    }
+    
+    //MARK: public
+    
+    func addWhistle(base:MOptionWhistlesVsZombiesWhistleBase)
+    {
+        guard
+            
+            let view:VOptionWhistlesVsZombiesWhistle = VOptionWhistlesVsZombiesWhistle(
+                controller:controller,
+                model:base)
+        
+        else
+        {
+            return
+        }
+        
+        base.viewWhistle = view
+        
+        addChild(view)
+    }
+    
+    func addSonicBoomRelease(model:MOptionWhistlesVsZombiesSonicBoomItem)
+    {
+        let view:VOptionWhistlesVsZombiesSonicRelease = VOptionWhistlesVsZombiesSonicRelease(
+            controller:controller,
+            model:model)
+        model.viewRelease = view
+        
+        addChild(view)
+    }
+    
+    func addSonicBoom(model:MOptionWhistlesVsZombiesSonicBoomItem)
+    {
+        let view:VOptionWhistlesVsZombiesSonicBoom = VOptionWhistlesVsZombiesSonicBoom(
+            controller:controller,
+            model:model)
+        model.viewBoom = view
+        
+        addChild(view)
+    }
+    
+    func addZombie(model:MOptionWhistlesVsZombiesZombieItem)
+    {
+        let view:VOptionWhistlesVsZombiesZombie = VOptionWhistlesVsZombiesZombie(
+            controller:controller,
+            model:model)
+        model.view = view
+        
+        addChild(view)
+    }
+    
+    func addPoints(
+        model:MOptionWhistlesVsZombiesPointsItem,
+        modelZombie:MOptionWhistlesVsZombiesZombieItem)
+    {
+        let view:VOptionWhistlesVsZombiesPoints = VOptionWhistlesVsZombiesPoints(
+            controller:controller,
+            modelZombie:modelZombie)
+        model.view = view
+        
+        addChild(view)
+    }
 }

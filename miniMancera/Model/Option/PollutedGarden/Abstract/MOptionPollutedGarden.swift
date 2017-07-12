@@ -2,13 +2,13 @@ import SpriteKit
 
 class MOptionPollutedGarden:MGame
 {
+    weak var viewMenu:ViewGameNodeMenu<MOptionPollutedGarden>?
+    weak var viewTitle:VOptionPollutedGardenTitle?
     let controls:MOptionPollutedGardenControls
     let bubble:MOptionPollutedGardenBubble
     let plant:MOptionPollutedGardenPlant
     let player:MOptionPollutedGardenPlayer
     let hud:MOptionPollutedGardenHud
-    let menu:MOptionPollutedGardenMenu
-    let title:MOptionPollutedGardenTitle
     let textures:MOptionPollutedGardenTextures
     let actions:MOptionPollutedGardenActions
     let sounds:MOptionPollutedGardenSounds
@@ -24,8 +24,6 @@ class MOptionPollutedGarden:MGame
         plant = MOptionPollutedGardenPlant()
         player = MOptionPollutedGardenPlayer()
         hud = MOptionPollutedGardenHud()
-        menu = MOptionPollutedGardenMenu()
-        title = MOptionPollutedGardenTitle()
         textures = MOptionPollutedGardenTextures()
         actions = MOptionPollutedGardenActions()
         sounds = MOptionPollutedGardenSounds()
@@ -38,6 +36,8 @@ class MOptionPollutedGarden:MGame
         plant.factoryAnimations(
             actions:actions,
             textures:textures)
+        
+        startLevel()
     }
     
     override var startSceneType:SKScene.Type?
@@ -56,12 +56,23 @@ class MOptionPollutedGarden:MGame
         }
     }
     
+    override func startLevel()
+    {
+        super.startLevel()
+        
+        score = 0
+        currentScore = 0
+        plant.restart()
+        bubble.restart()
+        strategy = MOptionPollutedGardenStrategyBegin(model:self)
+    }
+    
     override func activateGame()
     {
+        super.activateGame()
+        
         strategy = MOptionPollutedGardenStrategyGame(model:self)
         player.activateGame()
-        
-        super.activateGame()
     }
     
     override func gameStrategy<T>(modelType:T) -> MGameStrategyMain<T>? where T:MGame
@@ -79,15 +90,6 @@ class MOptionPollutedGarden:MGame
     }
     
     //MARK: public
-    
-    func startLevel()
-    {
-        score = 0
-        currentScore = 0
-        plant.restart()
-        bubble.restart()
-        strategy = MOptionPollutedGardenStrategyBegin(model:self)
-    }
     
     func collectedFlower(plantItem:MOptionPollutedGardenPlantItem)
     {

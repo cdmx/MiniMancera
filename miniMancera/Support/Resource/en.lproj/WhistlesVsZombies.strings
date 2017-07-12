@@ -1,9 +1,15 @@
-"MHomeOptionsWhistlesVsZombies_title"="Silbatos vs Zombies";
-"MOptionWhistlesVsZombiesMenuItemPink_title"="Rosa";
-"MOptionWhistlesVsZombiesMenuItemBlue_title"="Azul";
-"MOptionWhistlesVsZombiesMenuItemOrange_title"="Naranja";
-"MOptionWhistlesVsZombiesMenuItemPink_descr"="Máxima velocidad";
-"MOptionWhistlesVsZombiesMenuItemBlue_descr"="Máximo Alcance";
-"MOptionWhistlesVsZombiesMenuItemOrange_descr"="Máxima Destrucción";
+"MHomeOptionsWhistlesVsZombies_title"="Whistles vs Zombies";
+"MHomeOptionsWhistlesVsZombies_descr"="\nThe Revolution Monument has been neglected and Zombie hordes appeared on the surroundings.\n\nNow there are too many that an invasion is imminent.\n\nLuckily MiniMancera has lots of protection Whistles, help him stop the Zombie Invasion.";
+"MOptionWhistlesVsZombiesBoardItemBlue_title"="BLUE";
+"MOptionWhistlesVsZombiesBoardItemPink_title"="PINK";
+"MOptionWhistlesVsZombiesBoardItemOrange_title"="ORANGE";
+"MOptionWhistlesVsZombiesBoardScore_titleSpeed"="Speed";
+"MOptionWhistlesVsZombiesBoardScore_titlePower"="Power";
 
-"VOptionWhistlesVsZombiesMenu_labelTitle"="SILBATOS";
+"VOptionWhistlesVsZombiesTitle_label"="STOP THE ZOMBIE INVASION";
+"VOptionWhistlesVsZombiesHordeTitle_label"="A HORDE IS COMING";
+"VOptionWhistlesVsZombiesBoardBar_labelTitle"="Pick a Whistle";
+"VOptionWhistlesVsZombiesSceneOver_infoTitle"="The Zombies Invaded";
+"VOptionWhistlesVsZombiesSceneOver_infoDescr"="You couldn't stop them";
+"VOptionWhistlesVsZombiesSceneOver_1up"="Try again";
+"VOptionWhistlesVsZombiesSceneOver_exit"="Exit";

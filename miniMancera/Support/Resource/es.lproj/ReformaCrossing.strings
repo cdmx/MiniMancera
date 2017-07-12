@@ -5,5 +5,5 @@
 "MOptionReformaCrossingGameOverHitAndRun_title"="MiniMancera atropellado";
 "MOptionReformaCrossingGameOverHitAndRun_descr"="Cruzar es más difícil de lo que creías";
 "MOptionReformaCrossingTitle_label"="NIVEL %@";
-"VOptionReformaCrossingGameOverTitle1up_label"="Reintentar";
-"VOptionReformaCrossingGameOverTitleExit_label"="Salir";
+"VOptionReformaCrossingSceneOver_1up"="Reintentar";
+"VOptionReformaCrossingSceneOver_exit"="Salir";

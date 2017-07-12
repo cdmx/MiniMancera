@@ -1,7 +1,7 @@
 "MHomeOptionsPollutedGarden_title"="Polluted Garden";
 "MHomeOptionsPollutedGarden_descr"="\nOnce more there is an Environmental Warning in Mexico City, besides it just started raining, making Ozone and Particulates reach the ground.\n\nHelp MiniMancera protect the Petunias in his garden against pollution.";
 "VOptionPollutedGardenTitle_label"="PROTECT YOUR PETUNIAS";
-"VOptionPollutedGardenGameOverTitle_label"="Pollution Wins";
-"VOptionPollutedGardenGameOverDescr_label"="Your Petunias were polluted";
-"VOptionPollutedGardenGameOverTitle1up_label"="Try again";
-"VOptionPollutedGardenGameOverTitleExit_label"="Exit";
+"VOptionPollutedGardenSceneOver_infoTitle"="Pollution Wins";
+"VOptionPollutedGardenSceneOver_infoDescr"="Your Petunias were polluted";
+"VOptionPollutedGardenSceneOver_1up"="Try again";
+"VOptionPollutedGardenSceneOver_exit"="Exit";

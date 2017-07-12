@@ -24,32 +24,41 @@ class VOptionReformaCrossingSceneOver:ViewGameScene<MOptionReformaCrossing>
     
     private func factoryNodes(gameOver:MOptionReformaCrossingGameOverProtocol)
     {
+        let textures:MOptionReformaCrossingTextures = controller.model.textures
+        let texturePlayer:MGameTexture = gameOver.texture(textures:textures)
+        
         let background:VOptionReformaCrossingBackground = VOptionReformaCrossingBackground(
             controller:controller)
         
-        let title:VOptionReformaCrossingGameOverTitle = VOptionReformaCrossingGameOverTitle(
-            model:gameOver)
+        let info:ViewGameNodeGameOverInfo = ViewGameNodeGameOverInfo(
+            title:gameOver.title,
+            descr:gameOver.descr,
+            zPosition:MOptionReformaCrossingZPosition.GameOverInfo.rawValue)
         
-        let descr:VOptionReformaCrossingGameOverDescr = VOptionReformaCrossingGameOverDescr(
-            model:gameOver)
+        let title1up:ViewGameNodeGameOverTitle1up = ViewGameNodeGameOverTitle1up(
+            text:String.localizedReformaCrossing(
+                key:"VOptionReformaCrossingSceneOver_1up"),
+            zPosition:MOptionReformaCrossingZPosition.GameOverTitle1up.rawValue)
         
-        let title1up:VOptionReformaCrossingGameOverTitle1up = VOptionReformaCrossingGameOverTitle1up()
+        let titleExit:ViewGameNodeGameOverTitleExit = ViewGameNodeGameOverTitleExit(
+            text:String.localizedReformaCrossing(
+                key:"VOptionReformaCrossingSceneOver_exit"),
+            zPosition:MOptionReformaCrossingZPosition.GameOverTitleExit.rawValue)
         
-        let titleExit:VOptionReformaCrossingGameOverTitleExit = VOptionReformaCrossingGameOverTitleExit()
-        
-        let player:VOptionReformaCrossingGameOverPlayer = VOptionReformaCrossingGameOverPlayer(
+        let player:ViewGameNodeGameOverPlayer<MOptionReformaCrossing> = ViewGameNodeGameOverPlayer<MOptionReformaCrossing>(
             controller:controller,
-            gameOver:gameOver)
+            texture:texturePlayer)
         
-        let button1up:VOptionReformaCrossingGameOver1up = VOptionReformaCrossingGameOver1up(
-            controller:controller)
+        let button1up:ViewGameNodeGameOver1up<MOptionReformaCrossing> = ViewGameNodeGameOver1up<MOptionReformaCrossing>(
+            controller:controller,
+            texture:textures.gameOver1up)
         
-        let buttonExit:VOptionReformaCrossingGameOverExit = VOptionReformaCrossingGameOverExit(
-            controller:controller)
+        let buttonExit:ViewGameNodeGameOverExit<MOptionReformaCrossing> = ViewGameNodeGameOverExit<MOptionReformaCrossing>(
+            controller:controller,
+            texture:textures.gameOverExit)
         
         addChild(background)
-        addChild(title)
-        addChild(descr)
+        addChild(info)
         addChild(title1up)
         addChild(titleExit)
         addChild(player)

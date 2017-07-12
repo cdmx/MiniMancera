@@ -4,9 +4,12 @@ class ControllerParent:UIViewController
 {
     private var barHidden:Bool = true
     private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.lightContent
+    private var orientation:UIInterfaceOrientationMask
+    private let kOrientationKey:String = "orientation"
     
     init()
     {
+        orientation = UIInterfaceOrientationMask.portrait
         super.init(nibName:nil, bundle:nil)
     }
     
@@ -52,6 +55,32 @@ class ControllerParent:UIViewController
         return barHidden
     }
     
+    override var supportedInterfaceOrientations:UIInterfaceOrientationMask
+    {
+        get
+        {
+            return orientation
+        }
+    }
+    
+    override var shouldAutorotate:Bool
+    {
+        get
+        {
+            return true
+        }
+    }
+    
+    //MARK: private
+    
+    private func updateOrientation(orientation:UIInterfaceOrientation)
+    {
+        UIDevice.current.setValue(
+            orientation.rawValue,
+            forKey:kOrientationKey)
+        UIViewController.attemptRotationToDeviceOrientation()
+    }
+    
     //MARK: public
     
     func hideBar(barHidden:Bool)
@@ -64,5 +93,19 @@ class ControllerParent:UIViewController
     {
         self.statusBarStyle = statusBarStyle
         setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    func landscapeOrientation()
+    {
+        orientation = UIInterfaceOrientationMask.landscape
+        updateOrientation(
+            orientation:UIInterfaceOrientation.landscapeLeft)
+    }
+    
+    func portraitOrientation()
+    {
+        orientation = UIInterfaceOrientationMask.portrait
+        updateOrientation(
+            orientation:UIInterfaceOrientation.portrait)
     }
 }

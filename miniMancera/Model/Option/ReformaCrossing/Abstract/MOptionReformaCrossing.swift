@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionReformaCrossing:MGame
 {
+    weak var viewMenu:ViewGameNodeMenu<MOptionReformaCrossing>?
     let contact:MOptionReformaCrossingContact
     let textures:MOptionReformaCrossingTextures
     let sounds:MOptionReformaCrossingSounds
@@ -12,7 +13,6 @@ class MOptionReformaCrossing:MGame
     let coin:MOptionReformaCrossingCoin
     let stop:MOptionReformaCrossingStop
     let hud:MOptionReformaCrossingHud
-    let menu:MOptionReformaCrossingMenu
     let title:MOptionReformaCrossingTitle
     private(set) var level:Int
     private var strategy:MGameStrategyMain<MOptionReformaCrossing>?
@@ -31,12 +31,13 @@ class MOptionReformaCrossing:MGame
         coin = MOptionReformaCrossingCoin()
         stop = MOptionReformaCrossingStop()
         hud = MOptionReformaCrossingHud()
-        menu = MOptionReformaCrossingMenu()
         title = MOptionReformaCrossingTitle()
         level = kStartingLevel
         
         super.init()
         actions.createAnimations(textures:textures)
+        
+        startLevel()
     }
     
     override var startSceneType:SKScene.Type?
@@ -55,12 +56,22 @@ class MOptionReformaCrossing:MGame
         }
     }
     
+    override func startLevel()
+    {
+        super.startLevel()
+        
+        strategy = MOptionReformaCrossingStrategyBegin(model:self)
+        title.startLevel(level:level)
+        laneGroup.restart(level:level)
+        coin.chargeCoinsWith(laneGroup:laneGroup)
+    }
+    
     override func activateGame()
     {
+        super.activateGame()
+        
         strategy = MOptionReformaCrossingStrategyGame(model:self)
         player.activateGame()
-        
-        super.activateGame()
     }
     
     override func gameStrategy<T>(modelType:T) -> MGameStrategyMain<T>? where T:MGame
@@ -69,14 +80,6 @@ class MOptionReformaCrossing:MGame
     }
     
     //MARK: public
-    
-    func startLevel()
-    {
-        strategy = MOptionReformaCrossingStrategyBegin(model:self)
-        title.startLevel(level:level)
-        laneGroup.restart(level:level)
-        coin.chargeCoinsWith(laneGroup:laneGroup)
-    }
     
     func playerSuccess()
     {

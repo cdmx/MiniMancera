@@ -1,28 +1,21 @@
 import SpriteKit
 
-class VOptionWhistlesVsZombiesBase:SKSpriteNode
+class VOptionWhistlesVsZombiesBase:ViewGameNodeTouch<MOptionWhistlesVsZombies>
 {
-    private weak var controller:COptionWhistlesVsZombies!
-    private weak var modelBase:MOptionWhistlesVsZombiesBase!
-    private weak var model:MOptionWhistlesVsZombiesBaseItem!
-    private let kAlphaCharged:CGFloat = 0.5
+    private weak var model:MOptionWhistlesVsZombiesWhistleBase!
+    private weak var animationOutIn:SKAction!
     
     init(
-        controller:COptionWhistlesVsZombies,
-        model:MOptionWhistlesVsZombiesBaseItem)
+        controller:ControllerGame<MOptionWhistlesVsZombies>,
+        model:MOptionWhistlesVsZombiesWhistleBase)
     {
-        self.controller = controller
         self.model = model
-//        modelBase = controller.model.base
+        let texture:MGameTexture = controller.model.textures.base
+        animationOutIn = controller.model.actions.actionFadeOutIn
         
         super.init(
-            texture:modelBase.texture,
-            color:UIColor.clear,
-            size:modelBase.textureSize)
-        zPosition = MOptionWhistlesVsZombiesZPosition.Base.rawValue
-        position = CGPoint(x:model.positionX, y:model.positionY)
-        isUserInteractionEnabled = true
-        model.view = self
+            controller:controller,
+            texture:texture)
     }
     
     required init?(coder:NSCoder)
@@ -30,20 +23,26 @@ class VOptionWhistlesVsZombiesBase:SKSpriteNode
         return nil
     }
     
-    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
+    override func positionStart()
     {
-        run(modelBase.actionAnimation)
+        position = model.position
     }
     
-    override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
+    override func touchesBegan(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        controller.editBase(editingBase:model)
+        run(animationOutIn)
     }
     
     //MARK: public
     
     func charged()
     {
-        alpha = kAlphaCharged
+        isHidden = true
+        lastTouch()
+    }
+    
+    func disCharged()
+    {
+        isHidden = false
     }
 }

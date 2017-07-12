@@ -7,6 +7,25 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         model.contact.addContact(contact:contact)
     }
     
+    override func game1up()
+    {
+        super.game1up()
+        
+        let sound1up:SKAction = model.sounds.sound1up
+        playSound(actionSound:sound1up)
+        
+        model.revertChanges()
+        newGameScene()
+    }
+    
+    override func gamePlayNoMore()
+    {
+        let soundFail:SKAction = model.sounds.soundFail
+        playSound(actionSound:soundFail)
+        
+        super.gamePlayNoMore()
+    }
+    
     //MARK: private
     
     private func newGameScene()
@@ -14,6 +33,8 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
         let newScene:VOptionReformaCrossingScene = VOptionReformaCrossingScene(
             controller:self)
         presentScene(newScene:newScene)
+        
+        model.startLevel()
     }
     
     //MARK: public
@@ -44,23 +65,5 @@ class COptionReformaCrossing:ControllerGame<MOptionReformaCrossing>
     {
         model.strategyWait()
         postScore()
-    }
-    
-    func game1up()
-    {
-        let sound1up:SKAction = model.sounds.sound1up
-        playSound(actionSound:sound1up)
-        
-        model.revertChanges()
-        restartTimer()
-        newGameScene()
-    }
-    
-    func gamePlayNoMore()
-    {
-        let soundFail:SKAction = model.sounds.soundFail
-        playSound(actionSound:soundFail)
-        
-        exitGame()
     }
 }

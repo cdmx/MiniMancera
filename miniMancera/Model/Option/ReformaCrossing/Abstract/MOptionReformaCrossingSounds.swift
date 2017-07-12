@@ -11,7 +11,7 @@ class MOptionReformaCrossingSounds
     private let kSoundFail:String = "soundFail.caf"
     private let kSoundHonk:String = "soundCarHorn.caf"
     private let kSoundVictory:String = "soundVictory.caf"
-    private let kSound1up:String = "sound1up"
+    private let kSound1up:String = "sound1up.caf"
     
     init()
     {

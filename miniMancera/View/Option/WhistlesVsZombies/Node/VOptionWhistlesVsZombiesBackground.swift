@@ -1,31 +1,37 @@
 import SpriteKit
 
-class VOptionWhistlesVsZombiesBackground:SKSpriteNode
+class VOptionWhistlesVsZombiesBackground:ViewGameNode<MOptionWhistlesVsZombies>
 {
-    private weak var controller:COptionWhistlesVsZombies!
-    
-    init(controller:COptionWhistlesVsZombies)
+    override init(controller:ControllerGame<MOptionWhistlesVsZombies>)
     {
-        self.controller = controller
-        let texture:SKTexture = SKTexture(image:#imageLiteral(resourceName: "assetWhistlesVsZombiesBackground"))
-        let textureSize:CGSize = texture.size()
+        let texture:MGameTexture = controller.model.textures.background
         
-        super.init(texture:texture, color:UIColor.clear, size:textureSize)
-        /*
-        let textureHeight:CGFloat = textureSize.height
-        let textureHeight_2:CGFloat = textureHeight / 2.0
-        let sceneSize:CGSize = controller.model.size
-        let sceneWidth:CGFloat = sceneSize.width
-        let sceneHeight:CGFloat = sceneSize.height
-        let sceneWidth_2:CGFloat = sceneWidth / 2.0
-        let positionY:CGFloat = sceneHeight - textureHeight_2
-        let centerPosition:CGPoint = CGPoint(x:sceneWidth_2, y:positionY)
-        position = centerPosition
-        zPosition = MOptionWhistlesVsZombiesZPosition.Background.rawValue*/
+        super.init(
+            controller:controller,
+            texture:texture)
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func positionStart()
+    {
+        guard
+        
+            let modelTexture:MGameTexture = self.modelTexture
+        
+        else
+        {
+            return
+        }
+        
+        let sceneSize:CGSize = MGame.sceneSize
+        let sceneWidth:CGFloat = sceneSize.height
+        let width_2:CGFloat = modelTexture.width_2
+        let height_2:CGFloat = modelTexture.height_2
+        let positionX:CGFloat = -width_2 + sceneWidth
+        position = CGPoint(x:positionX, y:height_2)
     }
 }

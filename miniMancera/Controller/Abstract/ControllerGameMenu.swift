@@ -5,7 +5,6 @@ extension ControllerGame
     func showMenu()
     {
         pause()
-        stopTimer()
         
         DispatchQueue.main.async
         { [weak self] in
@@ -16,6 +15,8 @@ extension ControllerGame
     
     func pause()
     {
+        stopTimer()
+        
         guard
             
             let view:SKView = self.view as? SKView
@@ -40,24 +41,6 @@ extension ControllerGame
         }
         
         view.isPaused = false
-    }
-    
-    func exitGame()
-    {
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            guard
-                
-                let parent:ControllerParent = self?.parent as? ControllerParent
-                
-            else
-            {
-                return
-            }
-            
-            parent.pop(vertical:ControllerParent.Vertical.bottom)
-        }
     }
     
     func exitGameAndPostScore()

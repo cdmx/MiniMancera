@@ -6,7 +6,8 @@ class MOptionReformaCrossingGameOverHitAndRun:MOptionReformaCrossingGameOverProt
     {
         get
         {
-            return String.localizedReformaCrossing(key:"MOptionReformaCrossingGameOverHitAndRun_title")
+            return String.localizedReformaCrossing(
+                key:"MOptionReformaCrossingGameOverHitAndRun_title")
         }
     }
     
@@ -14,7 +15,8 @@ class MOptionReformaCrossingGameOverHitAndRun:MOptionReformaCrossingGameOverProt
     {
         get
         {
-            return String.localizedReformaCrossing(key:"MOptionReformaCrossingGameOverHitAndRun_descr")
+            return String.localizedReformaCrossing(
+                key:"MOptionReformaCrossingGameOverHitAndRun_descr")
         }
     }
     

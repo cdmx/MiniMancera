@@ -2,42 +2,127 @@ import SpriteKit
 
 class MOptionWhistlesVsZombies:MGame
 {
-    let menu:MOptionWhistlesVsZombiesMenu
-    let base:MOptionWhistlesVsZombiesBase
+    weak var viewMenu:ViewGameNodeMenu<MOptionWhistlesVsZombies>?
+    weak var viewTitle:VOptionWhistlesVsZombiesTitle?
+    let ground:MOptionWhistlesVsZombiesGround
+    let player:MOptionWhistlesVsZombiesPlayer
+    let whistle:MOptionWhistlesVsZombiesWhistle
+    let zombie:MOptionWhistlesVsZombiesZombie
+    let sonicBoom:MOptionWhistlesVsZombiesSonicBoom
+    let points:MOptionWhistlesVsZombiesPoints
+    let textures:MOptionWhistlesVsZombiesTextures
+    let actions:MOptionWhistlesVsZombiesActions
+    let sounds:MOptionWhistlesVsZombiesSounds
+    let contact:MOptionWhistlesVsZombiesContact
+    let hud:MOptionWhistlesVsZombiesHud
+    let horde:MOptionWhistlesVsZombiesHorde
+    private(set) var coins:Int
+    private var strategy:MGameStrategyMain<MOptionWhistlesVsZombies>?
+    private let kSoundBackground:String = "soundWhistlesVsZombies.caf"
+    private let kInitialCoins:Int = 30
     
     required init()
     {
-        menu = MOptionWhistlesVsZombiesMenu()
-        base = MOptionWhistlesVsZombiesBase()
+        let area:MOptionWhistlesVsZombiesArea = MOptionWhistlesVsZombies.loadArea()
+        
+        textures = MOptionWhistlesVsZombiesTextures()
+        sounds = MOptionWhistlesVsZombiesSounds()
+        actions = MOptionWhistlesVsZombiesActions(textures:textures)
+        ground = MOptionWhistlesVsZombiesGround(area:area)
+        whistle = MOptionWhistlesVsZombiesWhistle(
+            area:area,
+            textures:textures)
+        player = MOptionWhistlesVsZombiesPlayer()
+        sonicBoom = MOptionWhistlesVsZombiesSonicBoom()
+        contact = MOptionWhistlesVsZombiesContact()
+        zombie = MOptionWhistlesVsZombiesZombie(
+            ground:ground,
+            textures:textures,
+            actions:actions)
+        points = MOptionWhistlesVsZombiesPoints()
+        hud = MOptionWhistlesVsZombiesHud()
+        horde = MOptionWhistlesVsZombiesHorde()
+        coins = kInitialCoins
         
         super.init()
-    }
-    /*
-    //MARK: game protocol
-    
-    func activateGame()
-    {
         
+        hud.model = self
+        startLevel()
     }
     
-    func sceneWithSize(controller:UIViewController, size:CGSize) -> SKScene?
+    override var startSceneType:SKScene.Type?
     {
-        guard
-            
-            let controller:COptionWhistlesVsZombies = controller as? COptionWhistlesVsZombies
-            
-        else
+        get
         {
-            return nil
+            return VOptionWhistlesVsZombiesScene.self
         }
+    }
+    
+    override var soundBackground:String?
+    {
+        get
+        {
+            return kSoundBackground
+        }
+    }
+    
+    override func startLevel()
+    {
+        super.startLevel()
         
-        self.size = size
-        menu.update(sceneSize:size)
-        base.createItems(sceneSize:size)
+        score = 0
+        coins = kInitialCoins
+        player.stand()
+        whistle.restart()
+        zombie.restart()
+        strategy = MOptionWhistlesVsZombiesStrategyBegin(model:self)
+    }
+    
+    override func activateGame()
+    {
+        super.activateGame()
+        strategyGame()
+    }
+    
+    override func gameStrategy<T>(modelType:T) -> MGameStrategyMain<T>? where T:MGame
+    {
+        return strategy as? MGameStrategyMain<T>
+    }
+    
+    //MARK: private
+    
+    private func strategyGame()
+    {
+        strategy = MOptionWhistlesVsZombiesStrategyGame(model:self)
+    }
+    
+    //MARK: public
+    
+    func strategyWait()
+    {
+        strategy = MOptionWhistlesVsZombiesStrategyWait(model:self)
+    }
+    
+    func whistleSelected(
+        base:MOptionWhistlesVsZombiesWhistleBase,
+        item:MOptionWhistlesVsZombiesBoardItemProtocol)
+    {
+        coins -= item.price
+        base.charge(whistleType:item.whistleType)
+    }
+    
+    func zombieDefeated(zombie:MOptionWhistlesVsZombiesZombieItem)
+    {
+        score += 1
+        coins += zombie.type.coins
         
-        let scene:VOptionWhistlesVsZombiesScene = VOptionWhistlesVsZombiesScene(
-            controller:controller)
-        
-        return scene
-    }*/
+        points.addPoints(zombie:zombie)
+    }
+    
+    func zombiesGotHome()
+    {
+        player.defeated()
+        deActivateGame()
+        strategy = MOptionWhistlesVsZombiesStrategyDefeated(model:self)
+    }
 }

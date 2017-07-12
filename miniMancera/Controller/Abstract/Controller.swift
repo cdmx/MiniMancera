@@ -12,6 +12,14 @@ class Controller<T:View>:UIViewController
         return nil
     }
     
+    override var shouldAutorotate:Bool
+    {
+        get
+        {
+            return true
+        }
+    }
+    
     override func loadView()
     {
         let view:View = T(controller:self)
