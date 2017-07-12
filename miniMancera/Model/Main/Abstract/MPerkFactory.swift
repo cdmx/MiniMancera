@@ -7,11 +7,13 @@ class MPerkFactory
         let perkReformaCrossing:MPerkReformaCrossing = MPerkReformaCrossing()
         let perkPollutedGarden:MPerkPollutedGarden = MPerkPollutedGarden()
         let perkWhistlesVsZombies:MPerkWhistlesVsZombies = MPerkWhistlesVsZombies()
+        let perkTamalesOaxaquenos:MPerkTamalesOaxaquenos = MPerkTamalesOaxaquenos()
         
         let perks:[MPerkProtocol] = [
             perkReformaCrossing,
             perkPollutedGarden,
-            perkWhistlesVsZombies]
+            perkWhistlesVsZombies,
+            perkTamalesOaxaquenos]
         
         return perks
     }
