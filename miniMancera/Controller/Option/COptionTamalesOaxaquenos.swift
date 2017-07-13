@@ -1,6 +1,6 @@
 import Foundation
 
-class COptionTamalesOaxaquenos:ControllerGame
+class COptionTamalesOaxaquenos:ControllerGame<MOptionTamalesOaxaquenos>
 {
     
 }
