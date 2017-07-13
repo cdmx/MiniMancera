@@ -13,7 +13,7 @@ class MHomeOptionsTamalesOaxaquenos:MHomeOptions
     
     override func gameController() -> UIViewController?
     {
-        let controller:UIViewController? = gameControllerWith(type:COptionWhistlesVsZombies.self)
+        let controller:UIViewController? = gameControllerWith(type:COptionTamalesOaxaquenos.self)
         
         return controller
     }

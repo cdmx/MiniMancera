@@ -37,6 +37,7 @@
 		DA11DE3F1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */; };
 		DA17320D1F13C67000D94C15 /* MOptionWhistlesVsZombiesZombieItemCop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17320C1F13C67000D94C15 /* MOptionWhistlesVsZombiesZombieItemCop.swift */; };
 		DA19B3931F17E53600E9CAAD /* MOptionTamalesOaxaquenos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19B3921F17E53600E9CAAD /* MOptionTamalesOaxaquenos.swift */; };
+		DA19B3981F17E63D00E9CAAD /* VOptionTamalesOaxaquenosScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19B3971F17E63D00E9CAAD /* VOptionTamalesOaxaquenosScene.swift */; };
 		DA1BDB161EF702740040FBEA /* DOptionPurchaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */; };
 		DA1BDB181EF705050040FBEA /* CHomeFroob.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB171EF705050040FBEA /* CHomeFroob.swift */; };
 		DA1BDB241EF705960040FBEA /* VHomeFroob.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BDB211EF705960040FBEA /* VHomeFroob.swift */; };
@@ -423,6 +424,7 @@
 		DA11DE3E1EF0F8D00043749D /* MOptionReformaCrossingGameOverHitAndRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionReformaCrossingGameOverHitAndRun.swift; sourceTree = "<group>"; };
 		DA17320C1F13C67000D94C15 /* MOptionWhistlesVsZombiesZombieItemCop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesZombieItemCop.swift; sourceTree = "<group>"; };
 		DA19B3921F17E53600E9CAAD /* MOptionTamalesOaxaquenos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenos.swift; sourceTree = "<group>"; };
+		DA19B3971F17E63D00E9CAAD /* VOptionTamalesOaxaquenosScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionTamalesOaxaquenosScene.swift; sourceTree = "<group>"; };
 		DA1BDB151EF702740040FBEA /* DOptionPurchaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionPurchaseExtension.swift; sourceTree = "<group>"; };
 		DA1BDB171EF705050040FBEA /* CHomeFroob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHomeFroob.swift; sourceTree = "<group>"; };
 		DA1BDB211EF705960040FBEA /* VHomeFroob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeFroob.swift; sourceTree = "<group>"; };
@@ -861,6 +863,30 @@
 			children = (
 			);
 			path = Strategy;
+			sourceTree = "<group>";
+		};
+		DA19B3941F17E62200E9CAAD /* TamalesOaxaquenos */ = {
+			isa = PBXGroup;
+			children = (
+				DA19B3951F17E62200E9CAAD /* Node */,
+				DA19B3961F17E62200E9CAAD /* Scene */,
+			);
+			path = TamalesOaxaquenos;
+			sourceTree = "<group>";
+		};
+		DA19B3951F17E62200E9CAAD /* Node */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		DA19B3961F17E62200E9CAAD /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				DA19B3971F17E63D00E9CAAD /* VOptionTamalesOaxaquenosScene.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		DA1BDB201EF705960040FBEA /* HomeFroob */ = {
@@ -1467,6 +1493,7 @@
 		DA7E46781EFAED3B00466867 /* Option */ = {
 			isa = PBXGroup;
 			children = (
+				DA19B3941F17E62200E9CAAD /* TamalesOaxaquenos */,
 				DAD3686A1EFC275A00CBAC5B /* WhistlesVsZombies */,
 				DA7E467A1EFAED3B00466867 /* ReformaCrossing */,
 				DA7E46791EFAED3B00466867 /* PollutedGarden */,
@@ -2199,6 +2226,7 @@
 				DA7E46851EFAEF3E00466867 /* MPerkPurchaseProtocol.swift in Sources */,
 				DA7689111F122C3800D51B6B /* ViewGameNodeGameOverExit.swift in Sources */,
 				DA1D579C1EF245C800ECA895 /* VHomeFooterCell.swift in Sources */,
+				DA19B3981F17E63D00E9CAAD /* VOptionTamalesOaxaquenosScene.swift in Sources */,
 				DA11217F1F0464ED00275465 /* MOptionReformaCrossingCoinItemStrategyWaiting.swift in Sources */,
 				DA228C341F121271004542CE /* MOptionWhistlesVsZombiesPlayerStrategyAliveSweat.swift in Sources */,
 				DA2D00B11EEFD83900365F23 /* MOptionReformaCrossingGameOverProtocol.swift in Sources */,
