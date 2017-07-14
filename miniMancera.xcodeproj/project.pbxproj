@@ -282,6 +282,9 @@
 		DAA7E5571F1975CE00D8F629 /* MOptionTamalesOaxaquenosTextures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E5561F1975CE00D8F629 /* MOptionTamalesOaxaquenosTextures.swift */; };
 		DAA7E5591F19777000D8F629 /* MOptionTamalesOaxaquenosZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E5581F19777000D8F629 /* MOptionTamalesOaxaquenosZPosition.swift */; };
 		DAA7E55B1F19796A00D8F629 /* MOptionTamalesOaxaquenosAreaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E55A1F19796A00D8F629 /* MOptionTamalesOaxaquenosAreaFactory.swift */; };
+		DAA7E55D1F197AFA00D8F629 /* MOptionTamalesOaxaquenosAreaItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E55C1F197AFA00D8F629 /* MOptionTamalesOaxaquenosAreaItemProtocol.swift */; };
+		DAA7E55F1F197C2F00D8F629 /* MOptionTamalesOaxaquenosAreaItemGroundProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E55E1F197C2F00D8F629 /* MOptionTamalesOaxaquenosAreaItemGroundProtocol.swift */; };
+		DAA7E5611F197C4000D8F629 /* MOptionTamalesOaxaquenosAreaItemGroundGrass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E5601F197C4000D8F629 /* MOptionTamalesOaxaquenosAreaItemGroundGrass.swift */; };
 		DAAF2F861EF6EC6300589BB0 /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F851EF6EC6300589BB0 /* CSettings.swift */; };
 		DAAF2F8C1EF6EC9A00589BB0 /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */; };
 		DAAF2F8D1EF6EC9A00589BB0 /* MSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */; };
@@ -674,6 +677,9 @@
 		DAA7E5561F1975CE00D8F629 /* MOptionTamalesOaxaquenosTextures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosTextures.swift; sourceTree = "<group>"; };
 		DAA7E5581F19777000D8F629 /* MOptionTamalesOaxaquenosZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosZPosition.swift; sourceTree = "<group>"; };
 		DAA7E55A1F19796A00D8F629 /* MOptionTamalesOaxaquenosAreaFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosAreaFactory.swift; sourceTree = "<group>"; };
+		DAA7E55C1F197AFA00D8F629 /* MOptionTamalesOaxaquenosAreaItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosAreaItemProtocol.swift; sourceTree = "<group>"; };
+		DAA7E55E1F197C2F00D8F629 /* MOptionTamalesOaxaquenosAreaItemGroundProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosAreaItemGroundProtocol.swift; sourceTree = "<group>"; };
+		DAA7E5601F197C4000D8F629 /* MOptionTamalesOaxaquenosAreaItemGroundGrass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosAreaItemGroundGrass.swift; sourceTree = "<group>"; };
 		DAAF2F851EF6EC6300589BB0 /* CSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAAF2F881EF6EC9A00589BB0 /* MSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAAF2F891EF6EC9A00589BB0 /* MSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -1706,6 +1712,9 @@
 			children = (
 				DAA7E5541F19724700D8F629 /* MOptionTamalesOaxaquenosArea.swift */,
 				DAA7E55A1F19796A00D8F629 /* MOptionTamalesOaxaquenosAreaFactory.swift */,
+				DAA7E55C1F197AFA00D8F629 /* MOptionTamalesOaxaquenosAreaItemProtocol.swift */,
+				DAA7E55E1F197C2F00D8F629 /* MOptionTamalesOaxaquenosAreaItemGroundProtocol.swift */,
+				DAA7E5601F197C4000D8F629 /* MOptionTamalesOaxaquenosAreaItemGroundGrass.swift */,
 			);
 			path = Area;
 			sourceTree = "<group>";
@@ -2203,6 +2212,7 @@
 				DA7E46811EFAEF0200466867 /* MPerkProtocol.swift in Sources */,
 				DA3B38411F0DCA3A00810688 /* MOptionWhistlesVsZombiesWhistleTypeProtocol.swift in Sources */,
 				DA6928CD1F098006001E9326 /* MOptionPollutedGardenPlantPoison.swift in Sources */,
+				DAA7E5611F197C4000D8F629 /* MOptionTamalesOaxaquenosAreaItemGroundGrass.swift in Sources */,
 				DA5667821EF276CD000055D8 /* MHomeFooterProtocol.swift in Sources */,
 				DAF37BB21F02E938004C505D /* MOptionReformaCrossingFoeItemMetrobus.swift in Sources */,
 				DA6FDFE91F0D595400A1566B /* MOptionWhistlesVsZombiesBoardItemOrange.swift in Sources */,
@@ -2263,6 +2273,7 @@
 				DA6FDFEF1F0D69E700A1566B /* MOptionWhistlesVsZombiesBoardScoreItem.swift in Sources */,
 				DA2DFFDD1EECB16A00365F23 /* ExtensionNSManagedObject.swift in Sources */,
 				DAF14F591F05B3190091EB63 /* MOptionPollutedGardenPlayerStrategyWait.swift in Sources */,
+				DAA7E55F1F197C2F00D8F629 /* MOptionTamalesOaxaquenosAreaItemGroundProtocol.swift in Sources */,
 				DA8DF11B1F0C42C2005F3680 /* COptionWhistlesVsZombiesBoard.swift in Sources */,
 				DA717F9F1F08945C00033BA4 /* MOptionPollutedGardenPlantCollect.swift in Sources */,
 				DAAF2FC81EF6F6F700589BB0 /* VStoreHeader.swift in Sources */,
@@ -2394,6 +2405,7 @@
 				DA228C281F120F87004542CE /* MOptionWhistlesVsZombiesPlayer.swift in Sources */,
 				DAF37BCD1F02E98F004C505D /* MOptionReformaCrossingLaneD.swift in Sources */,
 				DA25B0651F0726710042462A /* MOptionPollutedGardenPlayerStrategyWalk.swift in Sources */,
+				DAA7E55D1F197AFA00D8F629 /* MOptionTamalesOaxaquenosAreaItemProtocol.swift in Sources */,
 				DA27A60E1EF9A1EB009378E2 /* MHomeSplashOptions.swift in Sources */,
 				DAA7E5571F1975CE00D8F629 /* MOptionTamalesOaxaquenosTextures.swift in Sources */,
 				DAB0618A1F05A00C00F90E85 /* MOptionPollutedGardenHud.swift in Sources */,
