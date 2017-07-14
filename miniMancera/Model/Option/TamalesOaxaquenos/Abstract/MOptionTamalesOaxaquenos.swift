@@ -2,11 +2,13 @@ import SpriteKit
 
 class MOptionTamalesOaxaquenos:MGame
 {
+    let textures:MOptionTamalesOaxaquenosTextures
     let area:MOptionTamalesOaxaquenosArea
     
     required init()
     {
-        area = MOptionTamalesOaxaquenosArea()
+        textures = MOptionTamalesOaxaquenosTextures()
+        area = MOptionTamalesOaxaquenosArea(textures:textures)
         
         super.init()
     }
