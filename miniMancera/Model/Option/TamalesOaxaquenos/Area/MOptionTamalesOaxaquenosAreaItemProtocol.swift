@@ -1,5 +1,6 @@
-import Foundation
+import UIKit
 
 protocol MOptionTamalesOaxaquenosAreaItemProtocol
 {
+    var positionX:CGFloat { get }
 }
