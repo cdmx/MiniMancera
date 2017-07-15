@@ -19,6 +19,9 @@ class MOptionTamalesOaxaquenosTextures
     let perspective2:MGameTexture
     let perspective3:MGameTexture
     
+    let playerStand:MGameTexture
+    let playerWalkingAnimated:MGameTextureAnimated
+    
     init()
     {
         background = MGameTexture(
@@ -63,5 +66,10 @@ class MOptionTamalesOaxaquenosTextures
         perspective3 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosPerspective3"),
             zPosition:MOptionTamalesOaxaquenosZPosition.Perspective.rawValue)
+        
+        playerStand = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosPlayer0"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.Player.rawValue)
+        playerWalkingAnimated = MOptionTamalesOaxaquenosTextures.factoryPlayerWalkingAnimated()
     }
 }
