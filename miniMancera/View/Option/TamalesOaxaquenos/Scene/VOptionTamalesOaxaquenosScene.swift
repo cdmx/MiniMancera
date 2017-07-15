@@ -27,7 +27,22 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
     
     private func factoryArea()
     {
+        factoryPerspective()
         factoryFloor()
+    }
+    
+    private func factoryPerspective()
+    {
+        let items:[MOptionTamalesOaxaquenosAreaPerspectiveItem] = controller.model.area.perspectiveItems
+        
+        for item:MOptionTamalesOaxaquenosAreaPerspectiveItem in items
+        {
+            let node:VOptionTamalesOaxaquenosPerspective = VOptionTamalesOaxaquenosPerspective(
+                controller:controller,
+                model:item)
+            
+            addChild(node)
+        }
     }
     
     private func factoryFloor()
@@ -41,7 +56,7 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
                 let node:ViewGameNode<MOptionTamalesOaxaquenos> = item.factoryNode(
                     controller:controller)
                 
-                else
+            else
             {
                 continue
             }
