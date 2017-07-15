@@ -8,6 +8,7 @@ class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaqu
     private let height_2:CGFloat
     private let groundPositionY:CGFloat
     private let grassPositionY:CGFloat
+    private let kVerticalAlign:CGFloat = 150
     
     init(
         controller:ControllerGame<MOptionTamalesOaxaquenos>,
@@ -52,8 +53,11 @@ class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaqu
     
     override func positionStart()
     {
+        let sceneHeight:CGFloat = MGame.sceneSize.height
+        let sceneHeight_2:CGFloat = sceneHeight / 2.0
+        let positionY:CGFloat = sceneHeight_2 - (kVerticalAlign + height_2)
         let positionX:CGFloat = model.positionX
-        position = CGPoint(x:positionX, y:height_2)
+        position = CGPoint(x:positionX, y:positionY)
         
         viewGround.position = CGPoint(x:0, y:groundPositionY)
         viewGrass.position = CGPoint(x:0, y:grassPositionY)
