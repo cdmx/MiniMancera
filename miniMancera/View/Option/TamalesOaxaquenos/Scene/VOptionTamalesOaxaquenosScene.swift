@@ -17,6 +17,11 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
     
     private func factoryNodes()
     {
+        let background:VOptionTamalesOaxaquenosBackground = VOptionTamalesOaxaquenosBackground(
+            controller:controller)
+        
+        addChild(background)
+        
         factoryArea()
     }
     
