@@ -184,6 +184,7 @@
 		DA6FACA51F1A2A670041273F /* VOptionTamalesOaxaquenosPerspective.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACA41F1A2A670041273F /* VOptionTamalesOaxaquenosPerspective.swift */; };
 		DA6FACA71F1A2B350041273F /* MOptionTamalesOaxaquenosAreaFactoryPerspective.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACA61F1A2B350041273F /* MOptionTamalesOaxaquenosAreaFactoryPerspective.swift */; };
 		DA6FACA91F1A2BC00041273F /* MOptionTamalesOaxaquenosAreaPerspectiveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACA81F1A2BC00041273F /* MOptionTamalesOaxaquenosAreaPerspectiveItem.swift */; };
+		DA6FACAB1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACAA1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift */; };
 		DA6FDFE11F0D590600A1566B /* MOptionWhistlesVsZombiesBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDFE01F0D590600A1566B /* MOptionWhistlesVsZombiesBoard.swift */; };
 		DA6FDFE31F0D593000A1566B /* MOptionWhistlesVsZombiesBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDFE21F0D593000A1566B /* MOptionWhistlesVsZombiesBoardItemProtocol.swift */; };
 		DA6FDFE51F0D593B00A1566B /* MOptionWhistlesVsZombiesBoardItemBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDFE41F0D593B00A1566B /* MOptionWhistlesVsZombiesBoardItemBlue.swift */; };
@@ -585,6 +586,7 @@
 		DA6FACA41F1A2A670041273F /* VOptionTamalesOaxaquenosPerspective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionTamalesOaxaquenosPerspective.swift; sourceTree = "<group>"; };
 		DA6FACA61F1A2B350041273F /* MOptionTamalesOaxaquenosAreaFactoryPerspective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosAreaFactoryPerspective.swift; sourceTree = "<group>"; };
 		DA6FACA81F1A2BC00041273F /* MOptionTamalesOaxaquenosAreaPerspectiveItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosAreaPerspectiveItem.swift; sourceTree = "<group>"; };
+		DA6FACAA1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosTexturesFactory.swift; sourceTree = "<group>"; };
 		DA6FDFE01F0D590600A1566B /* MOptionWhistlesVsZombiesBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBoard.swift; sourceTree = "<group>"; };
 		DA6FDFE21F0D593000A1566B /* MOptionWhistlesVsZombiesBoardItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBoardItemProtocol.swift; sourceTree = "<group>"; };
 		DA6FDFE41F0D593B00A1566B /* MOptionWhistlesVsZombiesBoardItemBlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBoardItemBlue.swift; sourceTree = "<group>"; };
@@ -877,6 +879,7 @@
 			children = (
 				DA19B3921F17E53600E9CAAD /* MOptionTamalesOaxaquenos.swift */,
 				DAA7E5561F1975CE00D8F629 /* MOptionTamalesOaxaquenosTextures.swift */,
+				DA6FACAA1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift */,
 				DAA7E5581F19777000D8F629 /* MOptionTamalesOaxaquenosZPosition.swift */,
 			);
 			path = Abstract;
@@ -2360,6 +2363,7 @@
 				DA838D281F15358A0079FA14 /* VOptionWhistlesVsZombiesFire.swift in Sources */,
 				DA2DFFDB1EECB16A00365F23 /* ExtensionNotification.swift in Sources */,
 				DA8ACFB51F0AA34C0065C26C /* MOptionWhistlesVsZombiesStrategyBegin.swift in Sources */,
+				DA6FACAB1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift in Sources */,
 				DA6928DF1F09840B001E9326 /* MOptionPollutedGardenBubbleItemTypePositive.swift in Sources */,
 				DA838D2E1F1545550079FA14 /* VOptionWhistlesVsZombiesHordeTitle.swift in Sources */,
 				DA91C3ED1F01B82B0045FAE2 /* MOptionReformaCrossingStrategyGame.swift in Sources */,
