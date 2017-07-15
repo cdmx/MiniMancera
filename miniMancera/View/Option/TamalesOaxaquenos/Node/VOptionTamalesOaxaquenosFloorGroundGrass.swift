@@ -1,9 +1,9 @@
 import UIKit
 
-class VOptionTamalesOaxaquenosGroundGrass:ViewGameNode<MOptionTamalesOaxaquenos>
+class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaquenos>
 {
-    private weak var viewGround:VOptionTamalesOaxaquenosGround!
-    private weak var viewGrass:VOptionTamalesOaxaquenosGrass!
+    private weak var viewGround:VOptionTamalesOaxaquenosFloorGround!
+    private weak var viewGrass:VOptionTamalesOaxaquenosFloorGrass!
     private weak var model:MOptionTamalesOaxaquenosAreaItemGroundGrass!
     private let height_2:CGFloat
     private let groundPositionY:CGFloat
@@ -15,12 +15,12 @@ class VOptionTamalesOaxaquenosGroundGrass:ViewGameNode<MOptionTamalesOaxaquenos>
     {
         self.model = model
         
-        let viewGround:VOptionTamalesOaxaquenosGround = VOptionTamalesOaxaquenosGround(
+        let viewGround:VOptionTamalesOaxaquenosFloorGround = VOptionTamalesOaxaquenosFloorGround(
             controller:controller,
             model:model)
         self.viewGround = viewGround
         
-        let viewGrass:VOptionTamalesOaxaquenosGrass = VOptionTamalesOaxaquenosGrass(
+        let viewGrass:VOptionTamalesOaxaquenosFloorGrass = VOptionTamalesOaxaquenosFloorGrass(
             controller:controller,
             model:model)
         self.viewGrass = viewGrass

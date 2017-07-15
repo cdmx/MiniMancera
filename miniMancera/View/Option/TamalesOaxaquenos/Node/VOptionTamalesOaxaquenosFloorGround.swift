@@ -1,6 +1,6 @@
 import Foundation
 
-class VOptionTamalesOaxaquenosGround:ViewGameNode<MOptionTamalesOaxaquenos>
+class VOptionTamalesOaxaquenosFloorGround:ViewGameNode<MOptionTamalesOaxaquenos>
 {
     init(
         controller:ControllerGame<MOptionTamalesOaxaquenos>,
