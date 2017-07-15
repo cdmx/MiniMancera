@@ -44,7 +44,8 @@ extension MOptionTamalesOaxaquenosArea
         textures:MOptionTamalesOaxaquenosTextures,
         positionX:CGFloat) -> MOptionTamalesOaxaquenosAreaItemGroundProtocol
     {
-        let texture:MGameTexture = randomGroundTexture(textures:textures)
+        let textureGround:MGameTexture = randomGroundTexture(textures:textures)
+        let textureGrass:MGameTexture = randomGrassTexture(textures:textures)
         let item:MOptionTamalesOaxaquenosAreaItemGroundGrass = MOptionTamalesOaxaquenosAreaItemGroundGrass(
             texture:texture,
             positionX:positionX)

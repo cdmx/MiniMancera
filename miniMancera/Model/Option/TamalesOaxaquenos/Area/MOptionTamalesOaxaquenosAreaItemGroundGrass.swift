@@ -2,12 +2,17 @@ import UIKit
 
 class MOptionTamalesOaxaquenosAreaItemGroundGrass:MOptionTamalesOaxaquenosAreaItemGroundProtocol
 {
-    private(set) weak var texture:MGameTexture!
+    private(set) weak var textureGround:MGameTexture!
+    private(set) weak var textureGrass:MGameTexture!
     private(set) var positionX:CGFloat
     
-    init(texture:MGameTexture, positionX:CGFloat)
+    init(
+        textureGround:MGameTexture,
+        textureGrass:MGameTexture,
+        positionX:CGFloat)
     {
-        self.texture = texture
+        self.textureGround = textureGround
+        self.textureGrass = textureGrass
         self.positionX = positionX
     }
     
