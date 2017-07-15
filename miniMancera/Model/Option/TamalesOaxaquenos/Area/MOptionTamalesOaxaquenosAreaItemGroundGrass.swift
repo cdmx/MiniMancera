@@ -11,7 +11,7 @@ class MOptionTamalesOaxaquenosAreaItemGroundGrass:MOptionTamalesOaxaquenosAreaIt
         self.positionX = positionX
     }
     
-    func factoryNode(controller:COptionTamalesOaxaquenos) -> ViewGameNode<MOptionTamalesOaxaquenos>?
+    func factoryNode(controller:ControllerGame<MOptionTamalesOaxaquenos>) -> ViewGameNode<MOptionTamalesOaxaquenos>?
     {
         let node:VOptionTamalesOaxaquenosGroundGrass = VOptionTamalesOaxaquenosGroundGrass(
             controller:controller,

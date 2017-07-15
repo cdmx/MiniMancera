@@ -26,7 +26,17 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
         
         for item:MOptionTamalesOaxaquenosAreaItemProtocol in area.items
         {
+            guard
             
+                let node:ViewGameNode<MOptionTamalesOaxaquenos> = item.factoryNode(
+                    controller:controller)
+            
+            else
+            {
+                continue
+            }
+            
+            addChild(node)
         }
     }
 }

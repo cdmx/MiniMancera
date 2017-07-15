@@ -4,5 +4,5 @@ protocol MOptionTamalesOaxaquenosAreaItemProtocol
 {
     var positionX:CGFloat { get }
     
-    func factoryNode(controller:COptionTamalesOaxaquenos) -> ViewGameNode<MOptionTamalesOaxaquenos>?
+    func factoryNode(controller:ControllerGame<MOptionTamalesOaxaquenos>) -> ViewGameNode<MOptionTamalesOaxaquenos>?
 }
