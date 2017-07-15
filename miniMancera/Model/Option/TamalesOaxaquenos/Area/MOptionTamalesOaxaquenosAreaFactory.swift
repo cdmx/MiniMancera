@@ -5,6 +5,7 @@ extension MOptionTamalesOaxaquenosArea
     private static let areaWidth:CGFloat = 10000
     private static let itemWidth:CGFloat = 32
     private static let kTotalGroundTextures:UInt32 = 4
+    private static let kTotalGrassTextures:UInt32 = 4
     
     class func factoryItems(textures:MOptionTamalesOaxaquenosTextures) -> [MOptionTamalesOaxaquenosAreaItemProtocol]
     {
@@ -73,6 +74,32 @@ extension MOptionTamalesOaxaquenosArea
         default:
             
             return textures.ground3
+        }
+    }
+    
+    private class func randomGrassTexture(
+        textures:MOptionTamalesOaxaquenosTextures) -> MGameTexture
+    {
+        let random:UInt32 = arc4random_uniform(kTotalGrassTextures)
+        
+        switch random
+        {
+        case 0:
+            
+            return textures.grass0
+            
+        case 1:
+            
+            return textures.grass1
+            
+            
+        case 2:
+            
+            return textures.grass2
+            
+        default:
+            
+            return textures.grass3
         }
     }
 }
