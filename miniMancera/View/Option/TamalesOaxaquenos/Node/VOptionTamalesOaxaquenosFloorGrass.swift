@@ -3,7 +3,7 @@ import Foundation
 class VOptionTamalesOaxaquenosFloorGrass:ViewGameNode<MOptionTamalesOaxaquenos>
 {
     init(controller:ControllerGame<MOptionTamalesOaxaquenos>,
-         model:MOptionTamalesOaxaquenosAreaItemGroundGrass)
+         model:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass)
     {
         let texture:MGameTexture = model.textureGrass
         

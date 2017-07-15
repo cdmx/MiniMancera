@@ -4,14 +4,14 @@ class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaqu
 {
     private weak var viewGround:VOptionTamalesOaxaquenosFloorGround!
     private weak var viewGrass:VOptionTamalesOaxaquenosFloorGrass!
-    private weak var model:MOptionTamalesOaxaquenosAreaItemGroundGrass!
+    private weak var model:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass!
     private let height_2:CGFloat
     private let groundPositionY:CGFloat
     private let grassPositionY:CGFloat
     
     init(
         controller:ControllerGame<MOptionTamalesOaxaquenos>,
-        model:MOptionTamalesOaxaquenosAreaItemGroundGrass)
+        model:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass)
     {
         self.model = model
         

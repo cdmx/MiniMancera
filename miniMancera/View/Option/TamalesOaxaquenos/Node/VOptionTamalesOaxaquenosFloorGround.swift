@@ -4,7 +4,7 @@ class VOptionTamalesOaxaquenosFloorGround:ViewGameNode<MOptionTamalesOaxaquenos>
 {
     init(
         controller:ControllerGame<MOptionTamalesOaxaquenos>,
-        model:MOptionTamalesOaxaquenosAreaItemGroundProtocol)
+        model:MOptionTamalesOaxaquenosAreaFloorItemGroundProtocol)
     {
         let texture:MGameTexture = model.textureGround
         

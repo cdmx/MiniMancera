@@ -22,16 +22,21 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
     
     private func factoryArea()
     {
-        let area:MOptionTamalesOaxaquenosArea = controller.model.area
+        factoryFloor()
+    }
+    
+    private func factoryFloor()
+    {
+        let items:[MOptionTamalesOaxaquenosAreaFloorItemProtocol] = controller.model.area.floorItems
         
-        for item:MOptionTamalesOaxaquenosAreaItemProtocol in area.items
+        for item:MOptionTamalesOaxaquenosAreaFloorItemProtocol in items
         {
             guard
-            
+                
                 let node:ViewGameNode<MOptionTamalesOaxaquenos> = item.factoryNode(
                     controller:controller)
-            
-            else
+                
+                else
             {
                 continue
             }

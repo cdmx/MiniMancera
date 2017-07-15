@@ -1,6 +1,6 @@
 import UIKit
 
-protocol MOptionTamalesOaxaquenosAreaItemProtocol
+protocol MOptionTamalesOaxaquenosAreaFloorItemProtocol
 {
     var positionX:CGFloat { get }
     

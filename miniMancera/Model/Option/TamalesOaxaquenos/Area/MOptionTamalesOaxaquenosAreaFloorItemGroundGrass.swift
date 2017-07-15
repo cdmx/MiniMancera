@@ -1,6 +1,6 @@
 import UIKit
 
-class MOptionTamalesOaxaquenosAreaItemGroundGrass:MOptionTamalesOaxaquenosAreaItemGroundProtocol
+class MOptionTamalesOaxaquenosAreaFloorItemGroundGrass:MOptionTamalesOaxaquenosAreaFloorItemGroundProtocol
 {
     private(set) weak var textureGround:MGameTexture!
     private(set) weak var textureGrass:MGameTexture!
@@ -18,7 +18,7 @@ class MOptionTamalesOaxaquenosAreaItemGroundGrass:MOptionTamalesOaxaquenosAreaIt
     
     func factoryNode(controller:ControllerGame<MOptionTamalesOaxaquenos>) -> ViewGameNode<MOptionTamalesOaxaquenos>?
     {
-        let node:VOptionTamalesOaxaquenosGroundGrass = VOptionTamalesOaxaquenosGroundGrass(
+        let node:VOptionTamalesOaxaquenosFloorGroundGrass = VOptionTamalesOaxaquenosFloorGroundGrass(
             controller:controller,
             model:self)
         

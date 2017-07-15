@@ -2,11 +2,11 @@ import Foundation
 
 class MOptionTamalesOaxaquenosArea:MGameUpdate<MOptionTamalesOaxaquenos>
 {
-    let items:[MOptionTamalesOaxaquenosAreaItemProtocol]
+    let floorItems:[MOptionTamalesOaxaquenosAreaFloorItemProtocol]
     
     init(textures:MOptionTamalesOaxaquenosTextures)
     {
-        items = MOptionTamalesOaxaquenosArea.factoryItems(textures:textures)
+        floorItems = MOptionTamalesOaxaquenosArea.factoryFloorItems(textures:textures)
         
         super.init()
     }

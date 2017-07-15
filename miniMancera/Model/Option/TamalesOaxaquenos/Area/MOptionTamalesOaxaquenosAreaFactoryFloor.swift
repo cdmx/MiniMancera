@@ -7,16 +7,16 @@ extension MOptionTamalesOaxaquenosArea
     private static let kTotalGroundTextures:UInt32 = 4
     private static let kTotalGrassTextures:UInt32 = 4
     
-    class func factoryItems(textures:MOptionTamalesOaxaquenosTextures) -> [MOptionTamalesOaxaquenosAreaItemProtocol]
+    class func factoryFloorItems(textures:MOptionTamalesOaxaquenosTextures) -> [MOptionTamalesOaxaquenosAreaFloorItemProtocol]
     {
-        var items:[MOptionTamalesOaxaquenosAreaItemProtocol] = []
+        var items:[MOptionTamalesOaxaquenosAreaFloorItemProtocol] = []
         let itemWidth_2:CGFloat = itemWidth / 2.0
         let maxPositionX:CGFloat = areaWidth + itemWidth_2
         var positionX:CGFloat = itemWidth_2
         
         while positionX < maxPositionX
         {
-            let item:MOptionTamalesOaxaquenosAreaItemProtocol = factoryItem(
+            let item:MOptionTamalesOaxaquenosAreaFloorItemProtocol = factoryItem(
                 textures:textures,
                 positionX:positionX)
             items.append(item)
@@ -31,9 +31,9 @@ extension MOptionTamalesOaxaquenosArea
     
     private class func factoryItem(
         textures:MOptionTamalesOaxaquenosTextures,
-        positionX:CGFloat) -> MOptionTamalesOaxaquenosAreaItemProtocol
+        positionX:CGFloat) -> MOptionTamalesOaxaquenosAreaFloorItemProtocol
     {
-        let item:MOptionTamalesOaxaquenosAreaItemProtocol = factoryGroundItem(
+        let item:MOptionTamalesOaxaquenosAreaFloorItemProtocol = factoryGroundItem(
             textures:textures,
             positionX:positionX)
         
@@ -42,11 +42,11 @@ extension MOptionTamalesOaxaquenosArea
     
     private class func factoryGroundItem(
         textures:MOptionTamalesOaxaquenosTextures,
-        positionX:CGFloat) -> MOptionTamalesOaxaquenosAreaItemGroundProtocol
+        positionX:CGFloat) -> MOptionTamalesOaxaquenosAreaFloorItemGroundProtocol
     {
         let textureGround:MGameTexture = randomGroundTexture(textures:textures)
         let textureGrass:MGameTexture = randomGrassTexture(textures:textures)
-        let item:MOptionTamalesOaxaquenosAreaItemGroundGrass = MOptionTamalesOaxaquenosAreaItemGroundGrass(
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass = MOptionTamalesOaxaquenosAreaFloorItemGroundGrass(
             textureGround:textureGround,
             textureGrass:textureGrass,
             positionX:positionX)
