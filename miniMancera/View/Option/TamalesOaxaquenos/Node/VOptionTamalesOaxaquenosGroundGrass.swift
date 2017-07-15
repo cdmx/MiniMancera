@@ -32,7 +32,7 @@ class VOptionTamalesOaxaquenosGroundGrass:ViewGameNode<MOptionTamalesOaxaquenos>
         let height:CGFloat = groundHeight + grassHeight
         height_2 = height / 2.0
         groundPositionY = textureGround.height_2 - height_2
-        grassPositionY = groundPositionY + textureGrass.height_2
+        grassPositionY = groundPositionY + textureGround.height_2 + textureGrass.height_2
         let size:CGSize = CGSize(width:width, height:height)
         
         super.init(
