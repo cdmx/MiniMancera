@@ -6,7 +6,10 @@ class MOptionTamalesOaxaquenosTextures
     let ground1:MGameTexture
     let ground2:MGameTexture
     let ground3:MGameTexture
-    let grass:MGameTexture
+    let grass0:MGameTexture
+    let grass1:MGameTexture
+    let grass2:MGameTexture
+    let grass3:MGameTexture
     
     init()
     {
@@ -22,8 +25,17 @@ class MOptionTamalesOaxaquenosTextures
         ground3 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGround3"),
             zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
-        grass = MGameTexture(
-            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass"),
+        grass0 = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass0"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+        grass1 = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass1"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+        grass2 = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass2"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+        grass3 = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass3"),
             zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
     }
 }
