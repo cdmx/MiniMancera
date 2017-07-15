@@ -2,10 +2,13 @@ import UIKit
 
 class MOptionTamalesOaxaquenosTextures
 {
+    let background:MGameTexture
+    
     let ground0:MGameTexture
     let ground1:MGameTexture
     let ground2:MGameTexture
     let ground3:MGameTexture
+    
     let grass0:MGameTexture
     let grass1:MGameTexture
     let grass2:MGameTexture
@@ -13,6 +16,10 @@ class MOptionTamalesOaxaquenosTextures
     
     init()
     {
+        background = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosBackground"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.Background.rawValue)
+        
         ground0 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGround0"),
             zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
@@ -25,6 +32,7 @@ class MOptionTamalesOaxaquenosTextures
         ground3 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGround3"),
             zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+        
         grass0 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass0"),
             zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
