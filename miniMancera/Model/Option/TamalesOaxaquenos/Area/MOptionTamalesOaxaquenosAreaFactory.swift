@@ -47,7 +47,8 @@ extension MOptionTamalesOaxaquenosArea
         let textureGround:MGameTexture = randomGroundTexture(textures:textures)
         let textureGrass:MGameTexture = randomGrassTexture(textures:textures)
         let item:MOptionTamalesOaxaquenosAreaItemGroundGrass = MOptionTamalesOaxaquenosAreaItemGroundGrass(
-            texture:texture,
+            textureGround:textureGround,
+            textureGrass:textureGrass,
             positionX:positionX)
         
         return item

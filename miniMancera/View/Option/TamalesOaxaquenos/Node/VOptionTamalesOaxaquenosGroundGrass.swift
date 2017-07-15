@@ -21,11 +21,12 @@ class VOptionTamalesOaxaquenosGroundGrass:ViewGameNode<MOptionTamalesOaxaquenos>
         self.viewGround = viewGround
         
         let viewGrass:VOptionTamalesOaxaquenosGrass = VOptionTamalesOaxaquenosGrass(
-            controller:controller)
+            controller:controller,
+            model:model)
         self.viewGrass = viewGrass
         
-        let textureGround:MGameTexture = model.texture
-        let textureGrass:MGameTexture = controller.model.textures.grass
+        let textureGround:MGameTexture = model.textureGround
+        let textureGrass:MGameTexture = model.textureGrass
         let width:CGFloat = textureGround.width
         let groundHeight:CGFloat = textureGround.height
         let grassHeight:CGFloat = textureGrass.height

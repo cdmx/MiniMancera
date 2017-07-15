@@ -2,9 +2,10 @@ import Foundation
 
 class VOptionTamalesOaxaquenosGrass:ViewGameNode<MOptionTamalesOaxaquenos>
 {
-    override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
+    init(controller:ControllerGame<MOptionTamalesOaxaquenos>,
+         model:MOptionTamalesOaxaquenosAreaItemGroundGrass)
     {
-        let texture:MGameTexture = controller.model.textures.grass
+        let texture:MGameTexture = model.textureGrass
         
         super.init(
             controller:controller,

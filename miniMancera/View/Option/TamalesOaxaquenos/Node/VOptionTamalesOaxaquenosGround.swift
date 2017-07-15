@@ -6,7 +6,7 @@ class VOptionTamalesOaxaquenosGround:ViewGameNode<MOptionTamalesOaxaquenos>
         controller:ControllerGame<MOptionTamalesOaxaquenos>,
         model:MOptionTamalesOaxaquenosAreaItemGroundProtocol)
     {
-        let texture:MGameTexture = model.texture
+        let texture:MGameTexture = model.textureGround
         
         super.init(
             controller:controller,
