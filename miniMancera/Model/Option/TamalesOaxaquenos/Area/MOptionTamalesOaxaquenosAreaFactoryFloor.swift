@@ -2,16 +2,16 @@ import UIKit
 
 extension MOptionTamalesOaxaquenosArea
 {
-    private static let areaWidth:CGFloat = 10000
-    private static let itemWidth:CGFloat = 32
+    private static let kItemWidth:CGFloat = 32
     private static let kTotalGroundTextures:UInt32 = 4
     private static let kTotalGrassTextures:UInt32 = 4
     
-    class func factoryFloorItems(textures:MOptionTamalesOaxaquenosTextures) -> [MOptionTamalesOaxaquenosAreaFloorItemProtocol]
+    class func factoryFloorItems(
+        textures:MOptionTamalesOaxaquenosTextures) -> [MOptionTamalesOaxaquenosAreaFloorItemProtocol]
     {
         var items:[MOptionTamalesOaxaquenosAreaFloorItemProtocol] = []
-        let itemWidth_2:CGFloat = itemWidth / 2.0
-        let maxPositionX:CGFloat = areaWidth + itemWidth_2
+        let itemWidth_2:CGFloat = kItemWidth / 2.0
+        let maxPositionX:CGFloat = kAreaWidth + itemWidth_2
         var positionX:CGFloat = itemWidth_2
         
         while positionX < maxPositionX
@@ -21,7 +21,7 @@ extension MOptionTamalesOaxaquenosArea
                 positionX:positionX)
             items.append(item)
             
-            positionX += itemWidth
+            positionX += kItemWidth
         }
         
         return items
@@ -93,7 +93,6 @@ extension MOptionTamalesOaxaquenosArea
         case 1:
             
             return textures.grass1
-            
             
         case 2:
             
