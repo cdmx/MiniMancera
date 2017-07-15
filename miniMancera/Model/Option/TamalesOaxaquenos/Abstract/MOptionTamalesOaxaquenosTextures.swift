@@ -14,6 +14,11 @@ class MOptionTamalesOaxaquenosTextures
     let grass2:MGameTexture
     let grass3:MGameTexture
     
+    let perspective0:MGameTexture
+    let perspective1:MGameTexture
+    let perspective2:MGameTexture
+    let perspective3:MGameTexture
+    
     init()
     {
         background = MGameTexture(
@@ -45,5 +50,18 @@ class MOptionTamalesOaxaquenosTextures
         grass3 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass3"),
             zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+        
+        perspective0 = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosPerspective0"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.Perspective.rawValue)
+        perspective1 = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosPerspective1"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.Perspective.rawValue)
+        perspective2 = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosPerspective2"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.Perspective.rawValue)
+        perspective3 = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosPerspective3"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.Perspective.rawValue)
     }
 }
