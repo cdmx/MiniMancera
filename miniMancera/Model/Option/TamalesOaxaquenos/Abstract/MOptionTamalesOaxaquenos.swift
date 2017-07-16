@@ -6,6 +6,7 @@ class MOptionTamalesOaxaquenos:MGame
     let action:MOptionTamalesOaxaquenosActions
     let area:MOptionTamalesOaxaquenosArea
     let player:MOptionTamalesOaxaquenosPlayer
+    private var strategy:MGameStrategyMain<MOptionTamalesOaxaquenos>?
     
     required init()
     {
@@ -23,5 +24,18 @@ class MOptionTamalesOaxaquenos:MGame
         {
             return VOptionTamalesOaxaquenosScene.self
         }
+    }
+    
+    override func gameStrategy<T>(modelType:T) -> MGameStrategyMain<T>? where T:MGame
+    {
+        return strategy as? MGameStrategyMain<T>
+    }
+    
+    override func startLevel()
+    {
+        super.startLevel()
+        
+        score = 0
+        strategy = MOptionTamalesOaxaquenosStrategyBegin(model:self)
     }
 }
