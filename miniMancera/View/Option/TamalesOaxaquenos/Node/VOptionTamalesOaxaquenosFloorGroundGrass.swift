@@ -40,7 +40,7 @@ class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaqu
         super.init(
             controller:controller,
             size:size,
-            zPosition:textureGround.zPosition)
+            zPosition:MOptionTamalesOaxaquenosZPosition.Floor.rawValue)
         
         addChild(viewGround)
         addChild(viewGrass)

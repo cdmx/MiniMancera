@@ -24,10 +24,8 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
             controller:controller)
         controller.model.player.view = player
         
-        addChild(background)
-        
         factoryArea()
-        
+        addChild(background)
         addChild(player)
     }
     

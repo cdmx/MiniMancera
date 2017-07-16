@@ -2,8 +2,9 @@ import UIKit
 
 enum MOptionTamalesOaxaquenosZPosition:CGFloat
 {
+    case None
     case Background
     case Perspective
-    case Ground
+    case Floor
     case Player
 }

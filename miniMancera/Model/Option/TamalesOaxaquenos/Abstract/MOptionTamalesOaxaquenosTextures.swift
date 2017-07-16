@@ -30,29 +30,29 @@ class MOptionTamalesOaxaquenosTextures
         
         ground0 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGround0"),
-            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+            zPosition:MOptionTamalesOaxaquenosZPosition.None.rawValue)
         ground1 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGround1"),
-            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+            zPosition:MOptionTamalesOaxaquenosZPosition.None.rawValue)
         ground2 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGround2"),
-            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+            zPosition:MOptionTamalesOaxaquenosZPosition.None.rawValue)
         ground3 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGround3"),
-            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+            zPosition:MOptionTamalesOaxaquenosZPosition.None.rawValue)
         
         grass0 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass0"),
-            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+            zPosition:MOptionTamalesOaxaquenosZPosition.None.rawValue)
         grass1 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass1"),
-            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+            zPosition:MOptionTamalesOaxaquenosZPosition.None.rawValue)
         grass2 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass2"),
-            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+            zPosition:MOptionTamalesOaxaquenosZPosition.None.rawValue)
         grass3 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGrass3"),
-            zPosition:MOptionTamalesOaxaquenosZPosition.Ground.rawValue)
+            zPosition:MOptionTamalesOaxaquenosZPosition.None.rawValue)
         
         perspective0 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosPerspective0"),
