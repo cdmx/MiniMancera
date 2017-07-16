@@ -1,0 +1,6 @@
+import SpriteKit
+
+class MOptionTamalesOaxaquenosActions
+{
+    
+}

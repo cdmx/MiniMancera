@@ -185,6 +185,7 @@
 		DA6FACA71F1A2B350041273F /* MOptionTamalesOaxaquenosAreaFactoryPerspective.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACA61F1A2B350041273F /* MOptionTamalesOaxaquenosAreaFactoryPerspective.swift */; };
 		DA6FACA91F1A2BC00041273F /* MOptionTamalesOaxaquenosAreaPerspectiveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACA81F1A2BC00041273F /* MOptionTamalesOaxaquenosAreaPerspectiveItem.swift */; };
 		DA6FACAB1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACAA1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift */; };
+		DA6FACAD1F1AE6C80041273F /* MOptionTamalesOaxaquenosActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACAC1F1AE6C80041273F /* MOptionTamalesOaxaquenosActions.swift */; };
 		DA6FDFE11F0D590600A1566B /* MOptionWhistlesVsZombiesBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDFE01F0D590600A1566B /* MOptionWhistlesVsZombiesBoard.swift */; };
 		DA6FDFE31F0D593000A1566B /* MOptionWhistlesVsZombiesBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDFE21F0D593000A1566B /* MOptionWhistlesVsZombiesBoardItemProtocol.swift */; };
 		DA6FDFE51F0D593B00A1566B /* MOptionWhistlesVsZombiesBoardItemBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDFE41F0D593B00A1566B /* MOptionWhistlesVsZombiesBoardItemBlue.swift */; };
@@ -587,6 +588,7 @@
 		DA6FACA61F1A2B350041273F /* MOptionTamalesOaxaquenosAreaFactoryPerspective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosAreaFactoryPerspective.swift; sourceTree = "<group>"; };
 		DA6FACA81F1A2BC00041273F /* MOptionTamalesOaxaquenosAreaPerspectiveItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosAreaPerspectiveItem.swift; sourceTree = "<group>"; };
 		DA6FACAA1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosTexturesFactory.swift; sourceTree = "<group>"; };
+		DA6FACAC1F1AE6C80041273F /* MOptionTamalesOaxaquenosActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosActions.swift; sourceTree = "<group>"; };
 		DA6FDFE01F0D590600A1566B /* MOptionWhistlesVsZombiesBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBoard.swift; sourceTree = "<group>"; };
 		DA6FDFE21F0D593000A1566B /* MOptionWhistlesVsZombiesBoardItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBoardItemProtocol.swift; sourceTree = "<group>"; };
 		DA6FDFE41F0D593B00A1566B /* MOptionWhistlesVsZombiesBoardItemBlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBoardItemBlue.swift; sourceTree = "<group>"; };
@@ -880,6 +882,7 @@
 				DA19B3921F17E53600E9CAAD /* MOptionTamalesOaxaquenos.swift */,
 				DAA7E5561F1975CE00D8F629 /* MOptionTamalesOaxaquenosTextures.swift */,
 				DA6FACAA1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift */,
+				DA6FACAC1F1AE6C80041273F /* MOptionTamalesOaxaquenosActions.swift */,
 				DAA7E5581F19777000D8F629 /* MOptionTamalesOaxaquenosZPosition.swift */,
 			);
 			path = Abstract;
@@ -2235,6 +2238,7 @@
 				DAAF2FD61EF6FBB500589BB0 /* MStoreStatusNotAvailable.swift in Sources */,
 				DA7E46811EFAEF0200466867 /* MPerkProtocol.swift in Sources */,
 				DA3B38411F0DCA3A00810688 /* MOptionWhistlesVsZombiesWhistleTypeProtocol.swift in Sources */,
+				DA6FACAD1F1AE6C80041273F /* MOptionTamalesOaxaquenosActions.swift in Sources */,
 				DA6928CD1F098006001E9326 /* MOptionPollutedGardenPlantPoison.swift in Sources */,
 				DA5667821EF276CD000055D8 /* MHomeFooterProtocol.swift in Sources */,
 				DAF37BB21F02E938004C505D /* MOptionReformaCrossingFoeItemMetrobus.swift in Sources */,
