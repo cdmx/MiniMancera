@@ -3,7 +3,7 @@ import SpriteKit
 class MOptionTamalesOaxaquenos:MGame
 {
     let textures:MOptionTamalesOaxaquenosTextures
-    let action:MOptionTamalesOaxaquenosActions
+    let actions:MOptionTamalesOaxaquenosActions
     let area:MOptionTamalesOaxaquenosArea
     let player:MOptionTamalesOaxaquenosPlayer
     private var strategy:MGameStrategyMain<MOptionTamalesOaxaquenos>?
@@ -11,7 +11,7 @@ class MOptionTamalesOaxaquenos:MGame
     required init()
     {
         textures = MOptionTamalesOaxaquenosTextures()
-        action = MOptionTamalesOaxaquenosActions(textures:textures)
+        actions = MOptionTamalesOaxaquenosActions(textures:textures)
         area = MOptionTamalesOaxaquenosArea(textures:textures)
         player = MOptionTamalesOaxaquenosPlayer()
         
