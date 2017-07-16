@@ -186,6 +186,7 @@
 		DA6FACA91F1A2BC00041273F /* MOptionTamalesOaxaquenosAreaPerspectiveItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACA81F1A2BC00041273F /* MOptionTamalesOaxaquenosAreaPerspectiveItem.swift */; };
 		DA6FACAB1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACAA1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift */; };
 		DA6FACAD1F1AE6C80041273F /* MOptionTamalesOaxaquenosActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACAC1F1AE6C80041273F /* MOptionTamalesOaxaquenosActions.swift */; };
+		DA6FACAF1F1AE6F40041273F /* MOptionTamalesOaxaquenosActionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FACAE1F1AE6F40041273F /* MOptionTamalesOaxaquenosActionsFactory.swift */; };
 		DA6FDFE11F0D590600A1566B /* MOptionWhistlesVsZombiesBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDFE01F0D590600A1566B /* MOptionWhistlesVsZombiesBoard.swift */; };
 		DA6FDFE31F0D593000A1566B /* MOptionWhistlesVsZombiesBoardItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDFE21F0D593000A1566B /* MOptionWhistlesVsZombiesBoardItemProtocol.swift */; };
 		DA6FDFE51F0D593B00A1566B /* MOptionWhistlesVsZombiesBoardItemBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FDFE41F0D593B00A1566B /* MOptionWhistlesVsZombiesBoardItemBlue.swift */; };
@@ -589,6 +590,7 @@
 		DA6FACA81F1A2BC00041273F /* MOptionTamalesOaxaquenosAreaPerspectiveItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosAreaPerspectiveItem.swift; sourceTree = "<group>"; };
 		DA6FACAA1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosTexturesFactory.swift; sourceTree = "<group>"; };
 		DA6FACAC1F1AE6C80041273F /* MOptionTamalesOaxaquenosActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosActions.swift; sourceTree = "<group>"; };
+		DA6FACAE1F1AE6F40041273F /* MOptionTamalesOaxaquenosActionsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosActionsFactory.swift; sourceTree = "<group>"; };
 		DA6FDFE01F0D590600A1566B /* MOptionWhistlesVsZombiesBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBoard.swift; sourceTree = "<group>"; };
 		DA6FDFE21F0D593000A1566B /* MOptionWhistlesVsZombiesBoardItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBoardItemProtocol.swift; sourceTree = "<group>"; };
 		DA6FDFE41F0D593B00A1566B /* MOptionWhistlesVsZombiesBoardItemBlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesBoardItemBlue.swift; sourceTree = "<group>"; };
@@ -883,6 +885,7 @@
 				DAA7E5561F1975CE00D8F629 /* MOptionTamalesOaxaquenosTextures.swift */,
 				DA6FACAA1F1AE16E0041273F /* MOptionTamalesOaxaquenosTexturesFactory.swift */,
 				DA6FACAC1F1AE6C80041273F /* MOptionTamalesOaxaquenosActions.swift */,
+				DA6FACAE1F1AE6F40041273F /* MOptionTamalesOaxaquenosActionsFactory.swift */,
 				DAA7E5581F19777000D8F629 /* MOptionTamalesOaxaquenosZPosition.swift */,
 			);
 			path = Abstract;
@@ -2425,6 +2428,7 @@
 				DA3A38731EFC03140028C35E /* MHomeOptionsWhistlesVsZombies.swift in Sources */,
 				DAF37BA91F02E938004C505D /* MOptionReformaCrossingFoe.swift in Sources */,
 				DA8DF1121F0C34A9005F3680 /* ViewProtocol.swift in Sources */,
+				DA6FACAF1F1AE6F40041273F /* MOptionTamalesOaxaquenosActionsFactory.swift in Sources */,
 				DA2974E41EFF38DD00300455 /* ControllerGameMenu.swift in Sources */,
 				DAAF2F9A1EF6ECB800589BB0 /* VSettingsCellShare.swift in Sources */,
 				DAAF2FC51EF6F6F700589BB0 /* VStoreCellNotAvailable.swift in Sources */,
