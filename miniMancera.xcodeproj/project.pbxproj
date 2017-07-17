@@ -66,6 +66,7 @@
 		DA27A6121EF9C116009378E2 /* VHomeSplashCellScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27A6111EF9C116009378E2 /* VHomeSplashCellScore.swift */; };
 		DA27A6141EF9C4C0009378E2 /* Pixeled.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA27A6131EF9C4C0009378E2 /* Pixeled.ttf */; };
 		DA27A6161EF9C647009378E2 /* MHomeSplashScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA27A6151EF9C647009378E2 /* MHomeSplashScore.swift */; };
+		DA288EFB1F1C50D600CAFF11 /* MOptionTamalesOaxaquenosPlayerStrategyWalking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA288EFA1F1C50D600CAFF11 /* MOptionTamalesOaxaquenosPlayerStrategyWalking.swift */; };
 		DA2892831EF61A3800C80D3D /* DOptionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2892821EF61A3800C80D3D /* DOptionExtension.swift */; };
 		DA2892851EF61D2000C80D3D /* soundPop.caf in Resources */ = {isa = PBXBuildFile; fileRef = DA2892841EF61D2000C80D3D /* soundPop.caf */; };
 		DA2892871EF64E3300C80D3D /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2892861EF64E3300C80D3D /* brand.xcassets */; };
@@ -473,6 +474,7 @@
 		DA27A6111EF9C116009378E2 /* VHomeSplashCellScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHomeSplashCellScore.swift; sourceTree = "<group>"; };
 		DA27A6131EF9C4C0009378E2 /* Pixeled.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixeled.ttf; sourceTree = "<group>"; };
 		DA27A6151EF9C647009378E2 /* MHomeSplashScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHomeSplashScore.swift; sourceTree = "<group>"; };
+		DA288EFA1F1C50D600CAFF11 /* MOptionTamalesOaxaquenosPlayerStrategyWalking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosPlayerStrategyWalking.swift; sourceTree = "<group>"; };
 		DA2892821EF61A3800C80D3D /* DOptionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOptionExtension.swift; sourceTree = "<group>"; };
 		DA2892841EF61D2000C80D3D /* soundPop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundPop.caf; sourceTree = "<group>"; };
 		DA2892861EF64E3300C80D3D /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
@@ -1482,6 +1484,7 @@
 			isa = PBXGroup;
 			children = (
 				DA6FACB11F1AE9FA0041273F /* MOptionTamalesOaxaquenosPlayer.swift */,
+				DA288EFA1F1C50D600CAFF11 /* MOptionTamalesOaxaquenosPlayerStrategyWalking.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -2494,6 +2497,7 @@
 				DA7E468B1EFAEFCC00466867 /* MPerkPollutedGarden.swift in Sources */,
 				DA4BA4841F12E8C200C26EE2 /* VOptionWhistlesVsZombiesHud.swift in Sources */,
 				DA2892891EF66B7E00C80D3D /* CHomeSplash.swift in Sources */,
+				DA288EFB1F1C50D600CAFF11 /* MOptionTamalesOaxaquenosPlayerStrategyWalking.swift in Sources */,
 				DA7E46711EFAC82A00466867 /* VHomeFroobContentActions.swift in Sources */,
 				DAAF2FC71EF6F6F700589BB0 /* VStoreCellPurchasing.swift in Sources */,
 				DACD31361EFB04D800F205A0 /* VOptionReformaCrossingBackground.swift in Sources */,
