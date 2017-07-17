@@ -5,6 +5,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     private weak var actionWalking:SKAction!
     private let kPositionX:CGFloat = 100
     private let kPositionY:CGFloat = 200
+    private let kWalkingKey:String = "actionWalking"
     
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
@@ -24,5 +25,12 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     override func positionStart()
     {
         position = CGPoint(x:kPositionX, y:kPositionY)
+    }
+    
+    //MARK: public
+    
+    func startWalking()
+    {
+        run(actionWalking, withKey:kWalkingKey)
     }
 }
