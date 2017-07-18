@@ -5,6 +5,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     private weak var actionWalking:SKAction!
     private let kPositionX:CGFloat = 100
     private let kWalkingKey:String = "actionWalking"
+    private let kRadius:CGFloat = 24
     private let kDensity:CGFloat = 1
     
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
@@ -35,17 +36,8 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     
     private func startPhysics()
     {
-        guard
-            
-            let modelTexture:MGameTexture = self.modelTexture
-            
-        else
-        {
-            return
-        }
-        
-        let radius:CGFloat = modelTexture.width_2
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(circleOfRadius:radius)
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(
+            circleOfRadius:kRadius)
         physicsBody.isDynamic = true
         physicsBody.friction = 0
         physicsBody.allowsRotation = false
@@ -55,7 +47,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
         
         physicsBody.categoryBitMask = MOptionTamalesOaxaquenosPhysicsStruct.Player
         physicsBody.contactTestBitMask = MOptionTamalesOaxaquenosPhysicsStruct.None
-        physicsBody.collisionBitMask = MOptionTamalesOaxaquenosPhysicsStruct.None
+        physicsBody.collisionBitMask = MOptionTamalesOaxaquenosPhysicsStruct.Floor
         self.physicsBody = physicsBody
     }
     
