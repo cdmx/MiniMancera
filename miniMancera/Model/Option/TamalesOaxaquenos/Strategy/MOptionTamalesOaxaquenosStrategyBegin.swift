@@ -19,6 +19,10 @@ class MOptionTamalesOaxaquenosStrategyBegin:MGameStrategyMain<MOptionTamalesOaxa
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionTamalesOaxaquenos>)
     {
+        super.update(
+            elapsedTime:elapsedTime,
+            scene:scene)
+        
         if let startingTime:TimeInterval = self.startingTime
         {
             let deltaTime:TimeInterval = elapsedTime - startingTime

@@ -16,6 +16,8 @@ class MOptionTamalesOaxaquenos:MGame
         player = MOptionTamalesOaxaquenosPlayer()
         
         super.init()
+        
+        startLevel()
     }
     
     override var startSceneType:SKScene.Type?

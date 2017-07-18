@@ -7,7 +7,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     private let kWalkingKey:String = "actionWalking"
     private let kRadius:CGFloat = 24
     private let kDensity:CGFloat = 1
-    private let kImpulseX:CGFloat = 1
+    private let kImpulseX:CGFloat = 0.5
     
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
