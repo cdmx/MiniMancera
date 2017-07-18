@@ -18,7 +18,7 @@ class MOptionTamalesOaxaquenosAreaFloorItemGroundHill:MOptionTamalesOaxaquenosAr
     
     func factoryNode(controller:ControllerGame<MOptionTamalesOaxaquenos>) -> ViewGameNode<MOptionTamalesOaxaquenos>?
     {
-        let node:VOptionTamalesOaxaquenosFloorGroundGrass = VOptionTamalesOaxaquenosFloorGroundGrass(
+        let node:VOptionTamalesOaxaquenosFloorGroundHill = VOptionTamalesOaxaquenosFloorGroundHill(
             controller:controller,
             model:self)
         

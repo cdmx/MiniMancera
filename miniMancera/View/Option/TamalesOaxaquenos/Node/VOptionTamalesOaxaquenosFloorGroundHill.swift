@@ -7,7 +7,7 @@ class VOptionTamalesOaxaquenosFloorGroundHill:ViewGameNode<MOptionTamalesOaxaque
     private weak var model:MOptionTamalesOaxaquenosAreaFloorItemGroundHill!
     private let height_2:CGFloat
     private let groundPositionY:CGFloat
-    private let grassPositionY:CGFloat
+    private let hillPositionY:CGFloat
     private let kVerticalAlign:CGFloat = 150
     
     init(
@@ -21,20 +21,20 @@ class VOptionTamalesOaxaquenosFloorGroundHill:ViewGameNode<MOptionTamalesOaxaque
             model:model)
         self.viewGround = viewGround
         
-        let viewGrass:VOptionTamalesOaxaquenosFloorGrass = VOptionTamalesOaxaquenosFloorGrass(
+        let viewHill:VOptionTamalesOaxaquenosFloorHill = VOptionTamalesOaxaquenosFloorHill(
             controller:controller,
             model:model)
-        self.viewGrass = viewGrass
+        self.viewHill = viewHill
         
         let textureGround:MGameTexture = model.textureGround
-        let textureGrass:MGameTexture = model.textureGrass
+        let textureHill:MGameTexture = model.textureHill
         let width:CGFloat = textureGround.width
         let groundHeight:CGFloat = textureGround.height
-        let grassHeight:CGFloat = textureGrass.height
-        let height:CGFloat = groundHeight + grassHeight
+        let hillHeight:CGFloat = textureHill.height
+        let height:CGFloat = groundHeight + hillHeight
         height_2 = height / 2.0
         groundPositionY = textureGround.height_2 - height_2
-        grassPositionY = groundPositionY + textureGround.height_2 + textureGrass.height_2
+        hillPositionY = groundPositionY + textureGround.height_2 + textureHill.height_2
         let size:CGSize = CGSize(width:width, height:height)
         
         super.init(
@@ -43,7 +43,7 @@ class VOptionTamalesOaxaquenosFloorGroundHill:ViewGameNode<MOptionTamalesOaxaque
             zPosition:MOptionTamalesOaxaquenosZPosition.Floor.rawValue)
         
         addChild(viewGround)
-        addChild(viewGrass)
+        addChild(viewHill)
         
         startPhysics()
     }
@@ -62,7 +62,7 @@ class VOptionTamalesOaxaquenosFloorGroundHill:ViewGameNode<MOptionTamalesOaxaque
         position = CGPoint(x:positionX, y:positionY)
         
         viewGround.position = CGPoint(x:0, y:groundPositionY)
-        viewGrass.position = CGPoint(x:0, y:grassPositionY)
+        viewHill.position = CGPoint(x:0, y:hillPositionY)
     }
     
     //MARK: private
