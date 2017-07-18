@@ -2,7 +2,7 @@ import SpriteKit
 
 extension MOptionTamalesOaxaquenosActions
 {
-    private static let kPlayerWalkingFrameDuration:TimeInterval = 0.1
+    private static let kPlayerWalkingFrameDuration:TimeInterval = 0.16
     
     class func factoryPlayerWalkingnimation(texture:MGameTextureAnimated) -> SKAction
     {

@@ -5,6 +5,7 @@ class MOptionTamalesOaxaquenosPlayerStrategyWalking:MGameStrategy<
     MOptionTamalesOaxaquenos>
 {
     private var lastElapsedTime:TimeInterval?
+    private let kDeltaTime:TimeInterval = 0.1
     
     override func update(
         elapsedTime:TimeInterval,
@@ -13,7 +14,12 @@ class MOptionTamalesOaxaquenosPlayerStrategyWalking:MGameStrategy<
         if let lastElapsedTime:TimeInterval = self.lastElapsedTime
         {
             let deltaTime:TimeInterval = elapsedTime - lastElapsedTime
-            walk(deltaTime:deltaTime)
+            
+            if deltaTime > kDeltaTime
+            {
+                walk(deltaTime:deltaTime)
+                self.lastElapsedTime = elapsedTime
+            }
         }
         else
         {
