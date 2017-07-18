@@ -242,6 +242,7 @@
 		DA7E468B1EFAEFCC00466867 /* MPerkPollutedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E468A1EFAEFCC00466867 /* MPerkPollutedGarden.swift */; };
 		DA80364D1F1E6CA5007FD820 /* MOptionTamalesOaxaquenosPlayerStrategyStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80364C1F1E6CA5007FD820 /* MOptionTamalesOaxaquenosPlayerStrategyStand.swift */; };
 		DA80364F1F1E70DC007FD820 /* MOptionTamalesOaxaquenosPhysicsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80364E1F1E70DC007FD820 /* MOptionTamalesOaxaquenosPhysicsStruct.swift */; };
+		DA8036511F1E77E0007FD820 /* MOptionTamalesOaxaquenosStrategyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8036501F1E77E0007FD820 /* MOptionTamalesOaxaquenosStrategyGame.swift */; };
 		DA838D281F15358A0079FA14 /* VOptionWhistlesVsZombiesFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA838D271F15358A0079FA14 /* VOptionWhistlesVsZombiesFire.swift */; };
 		DA838D2C1F1542090079FA14 /* MOptionWhistlesVsZombiesHorde.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA838D2B1F1542090079FA14 /* MOptionWhistlesVsZombiesHorde.swift */; };
 		DA838D2E1F1545550079FA14 /* VOptionWhistlesVsZombiesHordeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA838D2D1F1545550079FA14 /* VOptionWhistlesVsZombiesHordeTitle.swift */; };
@@ -652,6 +653,7 @@
 		DA7E468A1EFAEFCC00466867 /* MPerkPollutedGarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPerkPollutedGarden.swift; sourceTree = "<group>"; };
 		DA80364C1F1E6CA5007FD820 /* MOptionTamalesOaxaquenosPlayerStrategyStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosPlayerStrategyStand.swift; sourceTree = "<group>"; };
 		DA80364E1F1E70DC007FD820 /* MOptionTamalesOaxaquenosPhysicsStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosPhysicsStruct.swift; sourceTree = "<group>"; };
+		DA8036501F1E77E0007FD820 /* MOptionTamalesOaxaquenosStrategyGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionTamalesOaxaquenosStrategyGame.swift; sourceTree = "<group>"; };
 		DA838D271F15358A0079FA14 /* VOptionWhistlesVsZombiesFire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesFire.swift; sourceTree = "<group>"; };
 		DA838D2B1F1542090079FA14 /* MOptionWhistlesVsZombiesHorde.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOptionWhistlesVsZombiesHorde.swift; sourceTree = "<group>"; };
 		DA838D2D1F1545550079FA14 /* VOptionWhistlesVsZombiesHordeTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOptionWhistlesVsZombiesHordeTitle.swift; sourceTree = "<group>"; };
@@ -916,6 +918,7 @@
 			isa = PBXGroup;
 			children = (
 				DA6FACB31F1AEAAB0041273F /* MOptionTamalesOaxaquenosStrategyBegin.swift */,
+				DA8036501F1E77E0007FD820 /* MOptionTamalesOaxaquenosStrategyGame.swift */,
 			);
 			path = Strategy;
 			sourceTree = "<group>";
@@ -2584,6 +2587,7 @@
 				DACD31301EFB001200F205A0 /* VOptionReformaCrossingScene.swift in Sources */,
 				DAC7D3B41F01C537008DC416 /* MOptionReformaCrossingTitle.swift in Sources */,
 				DAF37BB31F02E938004C505D /* MOptionReformaCrossingFoeItemPolice.swift in Sources */,
+				DA8036511F1E77E0007FD820 /* MOptionTamalesOaxaquenosStrategyGame.swift in Sources */,
 				DA8DF10F1F0C34A9005F3680 /* View.swift in Sources */,
 				DAB631C81F057F3D003C6934 /* MOptionPollutedGardenStrategyGame.swift in Sources */,
 				DAB631CC1F05883A003C6934 /* MOptionPollutedGardenContact.swift in Sources */,
