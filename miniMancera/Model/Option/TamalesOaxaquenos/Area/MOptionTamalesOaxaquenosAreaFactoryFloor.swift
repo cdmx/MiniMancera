@@ -6,8 +6,10 @@ extension MOptionTamalesOaxaquenosArea
     private static let kTotalGroundTextures:UInt32 = 4
     private static let kTotalGrassTextures:UInt32 = 4
     private static let kTotalHillTextures:UInt32 = 4
-    private static let kCreateHillRatio:UInt32 = 100
+    private static let kCreateHillRatio:UInt32 = 10
     private static let kHillLengthRatio:UInt32 = 5
+    private static let kHillHeightRatio:UInt32 = 30
+    private static var hillHeight:CGFloat = 0
     private static var remainHills:Int = 0
     
     class func factoryFloorItems(
@@ -79,9 +81,21 @@ extension MOptionTamalesOaxaquenosArea
         
         if randomShouldCreate == 0
         {
-            let randomLength:UInt32 = arc4random_uniform(kHillLengthRatio)
-            remainHills = Int(randomLength)
+            randomHillLength()
+            randomHillHeight()
         }
+    }
+    
+    private class func randomHillLength()
+    {
+        let randomLength:UInt32 = arc4random_uniform(kHillLengthRatio) + 1
+        remainHills = Int(randomLength)
+    }
+    
+    private class func randomHillHeight()
+    {
+        let random:UInt32 = arc4random_uniform(kHillHeightRatio)
+        hillHeight = CGFloat(random)
     }
     
     private class func factoryGroundGrassItem(
@@ -107,6 +121,7 @@ extension MOptionTamalesOaxaquenosArea
         let item:MOptionTamalesOaxaquenosAreaFloorItemGroundHill = MOptionTamalesOaxaquenosAreaFloorItemGroundHill(
             textureGround:textureGround,
             textureHill:textureHill,
+            hillHeight:hillHeight,
             positionX:positionX)
         
         return item

@@ -2,6 +2,7 @@ import UIKit
 
 class MOptionTamalesOaxaquenosAreaFloorItemGroundHill:MOptionTamalesOaxaquenosAreaFloorItemGroundProtocol
 {
+    let hillHeight:CGFloat
     private(set) weak var textureGround:MGameTexture!
     private(set) weak var textureHill:MGameTexture!
     private(set) var positionX:CGFloat
@@ -9,10 +10,12 @@ class MOptionTamalesOaxaquenosAreaFloorItemGroundHill:MOptionTamalesOaxaquenosAr
     init(
         textureGround:MGameTexture,
         textureHill:MGameTexture,
+        hillHeight:CGFloat,
         positionX:CGFloat)
     {
         self.textureGround = textureGround
         self.textureHill = textureHill
+        self.hillHeight = hillHeight
         self.positionX = positionX
     }
     

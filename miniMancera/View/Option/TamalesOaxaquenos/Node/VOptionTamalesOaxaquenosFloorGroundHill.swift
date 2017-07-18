@@ -8,7 +8,7 @@ class VOptionTamalesOaxaquenosFloorGroundHill:ViewGameNode<MOptionTamalesOaxaque
     private let height_2:CGFloat
     private let groundPositionY:CGFloat
     private let hillPositionY:CGFloat
-    private let kVerticalAlign:CGFloat = 150
+    private let kVerticalAlign:CGFloat = 125
     
     init(
         controller:ControllerGame<MOptionTamalesOaxaquenos>,
@@ -57,7 +57,8 @@ class VOptionTamalesOaxaquenosFloorGroundHill:ViewGameNode<MOptionTamalesOaxaque
     {
         let sceneHeight:CGFloat = MGame.sceneSize.height
         let sceneHeight_2:CGFloat = sceneHeight / 2.0
-        let positionY:CGFloat = sceneHeight_2 - (kVerticalAlign + height_2)
+        let hillHeight:CGFloat = model.hillHeight
+        let positionY:CGFloat = sceneHeight_2 - (kVerticalAlign + height_2) - hillHeight
         let positionX:CGFloat = model.positionX
         position = CGPoint(x:positionX, y:positionY)
         
