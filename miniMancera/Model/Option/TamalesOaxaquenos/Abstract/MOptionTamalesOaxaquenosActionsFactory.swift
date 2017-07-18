@@ -11,7 +11,8 @@ extension MOptionTamalesOaxaquenosActions
             timePerFrame:kPlayerWalkingFrameDuration,
             resize:false,
             restore:false)
+        let repeatForever:SKAction = SKAction.repeatForever(action)
         
-        return action
+        return repeatForever
     }
 }
