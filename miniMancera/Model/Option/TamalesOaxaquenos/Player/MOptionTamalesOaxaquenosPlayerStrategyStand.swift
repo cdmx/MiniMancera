@@ -1,6 +1,6 @@
 import Foundation
 
-class MOptionTamalesOaxaquenosPlayerStrategyWalking:MGameStrategy<
+class MOptionTamalesOaxaquenosPlayerStrategyStand:MGameStrategy<
     MOptionTamalesOaxaquenosPlayer,
     MOptionTamalesOaxaquenos>
 {
