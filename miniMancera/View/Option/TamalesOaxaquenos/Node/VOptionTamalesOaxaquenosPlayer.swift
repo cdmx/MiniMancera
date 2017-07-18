@@ -29,6 +29,11 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     
     //MARK: public
     
+    func stand()
+    {
+        removeAction(forKey:kWalkingKey)
+    }
+    
     func startWalking()
     {
         run(actionWalking, withKey:kWalkingKey)
