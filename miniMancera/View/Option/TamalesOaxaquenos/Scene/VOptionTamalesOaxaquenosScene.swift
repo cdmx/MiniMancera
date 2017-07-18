@@ -32,8 +32,8 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
 
         addChild(camera)
         factoryArea()
-        addChild(background)
         addChild(player)
+        camera.addChild(background)
     }
     
     private func factoryArea()

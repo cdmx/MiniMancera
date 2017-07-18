@@ -27,10 +27,7 @@ class VOptionTamalesOaxaquenosBackground:ViewGameNode<MOptionTamalesOaxaquenos>
             return
         }
         
-        let sceneHeight:CGFloat = MGame.sceneSize.height
-        let sceneHeight_2:CGFloat = sceneHeight / 2.0
         let height_2:CGFloat = modelTexture.height_2
-        let positionY:CGFloat = sceneHeight_2 + height_2
-        position = CGPoint(x:0, y:positionY)
+        position = CGPoint(x:0, y:height_2)
     }
 }
