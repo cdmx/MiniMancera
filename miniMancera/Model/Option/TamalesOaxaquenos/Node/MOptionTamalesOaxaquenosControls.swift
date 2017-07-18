@@ -8,5 +8,18 @@ class MOptionTamalesOaxaquenosControls:MGameUpdate<MOptionTamalesOaxaquenos>
         elapsedTime:TimeInterval,
         scene:ViewGameScene<MOptionTamalesOaxaquenos>)
     {
+        guard
+        
+            let pendingTouch:Bool = view?.pendingTouch()
+        
+        else
+        {
+            return
+        }
+        
+        if pendingTouch
+        {
+            scene.controller.model.player.jump()
+        }
     }
 }

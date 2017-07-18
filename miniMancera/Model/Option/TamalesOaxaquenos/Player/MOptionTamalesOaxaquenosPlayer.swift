@@ -32,4 +32,9 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
     {
         strategy = MOptionTamalesOaxaquenosPlayerStrategyWalking(model:self)
     }
+    
+    func jump()
+    {
+        
+    }
 }

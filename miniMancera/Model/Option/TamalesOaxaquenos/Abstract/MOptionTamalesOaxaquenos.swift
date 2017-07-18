@@ -6,6 +6,7 @@ class MOptionTamalesOaxaquenos:MGame
     let actions:MOptionTamalesOaxaquenosActions
     let area:MOptionTamalesOaxaquenosArea
     let player:MOptionTamalesOaxaquenosPlayer
+    let controls:MOptionTamalesOaxaquenosControls
     let camera:MOptionTamalesOaxaquenosCamera
     private var strategy:MGameStrategyMain<MOptionTamalesOaxaquenos>?
     
@@ -15,6 +16,7 @@ class MOptionTamalesOaxaquenos:MGame
         actions = MOptionTamalesOaxaquenosActions(textures:textures)
         area = MOptionTamalesOaxaquenosArea(textures:textures)
         player = MOptionTamalesOaxaquenosPlayer()
+        controls = MOptionTamalesOaxaquenosControls()
         camera = MOptionTamalesOaxaquenosCamera(player:player)
         
         super.init()

@@ -32,6 +32,7 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
         
         let controls:VOptionTamalesOaxaquenosControls = VOptionTamalesOaxaquenosControls(
             controller:controller)
+        model.controls.view = controls
 
         camera.addChild(background)
         camera.addChild(controls)

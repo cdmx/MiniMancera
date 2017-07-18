@@ -2,9 +2,12 @@ import SpriteKit
 
 class VOptionTamalesOaxaquenosControls:ViewGameNode<MOptionTamalesOaxaquenos>
 {
+    private var touchWaiting:Bool
+    
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
         let size:CGSize = MGame.sceneSize
+        touchWaiting = false
         
         super.init(
             controller:controller,
@@ -26,6 +29,20 @@ class VOptionTamalesOaxaquenosControls:ViewGameNode<MOptionTamalesOaxaquenos>
     
     override func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?)
     {
-        print("touch")
+        touchWaiting = true
+    }
+    
+    //MARK: public
+    
+    func pendingTouch() -> Bool
+    {
+        if touchWaiting
+        {
+            touchWaiting = false
+            
+            return true
+        }
+        
+        return false
     }
 }
