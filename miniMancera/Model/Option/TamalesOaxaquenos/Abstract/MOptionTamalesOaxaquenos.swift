@@ -19,7 +19,7 @@ class MOptionTamalesOaxaquenos:MGame
         player = MOptionTamalesOaxaquenosPlayer()
         controls = MOptionTamalesOaxaquenosControls()
         camera = MOptionTamalesOaxaquenosCamera(player:player)
-        controls = MOptionTamalesOaxaquenosContact()
+        contact = MOptionTamalesOaxaquenosContact()
         
         super.init()
         

@@ -35,7 +35,42 @@ class MOptionTamalesOaxaquenosContact:MGameUpdate<MOptionTamalesOaxaquenos>
         let bodyA:SKNode? = contact.bodyA.node
         let bodyB:SKNode? = contact.bodyB.node
         
-        
+        if let player:VOptionTamalesOaxaquenosPlayer = bodyA as? VOptionTamalesOaxaquenosPlayer
+        {
+            playerAndBody(
+                player:player,
+                body:bodyB,
+                scene:scene)
+        }
+        else if let player:VOptionTamalesOaxaquenosPlayer = bodyB as? VOptionTamalesOaxaquenosPlayer
+        {
+            playerAndBody(
+                player:player,
+                body:bodyA,
+                scene:scene)
+        }
+    }
+    
+    private func playerAndBody(
+        player:VOptionTamalesOaxaquenosPlayer,
+        body:SKNode?,
+        scene:ViewGameScene<MOptionTamalesOaxaquenos>)
+    {
+        if let floor:VOptionTamalesOaxaquenosFloor = body as? VOptionTamalesOaxaquenosFloor
+        {
+            playerAndFloor(
+                player:player,
+                floor:floor,
+                scene:scene)
+        }
+    }
+    
+    private func playerAndFloor(
+        player:VOptionTamalesOaxaquenosPlayer,
+        floor:VOptionTamalesOaxaquenosFloor,
+        scene:ViewGameScene<MOptionTamalesOaxaquenos>)
+    {
+        scene.controller.model.player.landed()
     }
     
     //MARK: public

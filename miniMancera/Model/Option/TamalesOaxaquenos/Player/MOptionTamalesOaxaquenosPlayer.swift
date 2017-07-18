@@ -53,4 +53,18 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
         
         strategyJump()
     }
+    
+    func landed()
+    {
+        guard
+        
+            let _:MOptionTamalesOaxaquenosPlayerStrategyJump = strategy as? MOptionTamalesOaxaquenosPlayerStrategyJump
+        
+        else
+        {
+            return
+        }
+        
+        walk()
+    }
 }
