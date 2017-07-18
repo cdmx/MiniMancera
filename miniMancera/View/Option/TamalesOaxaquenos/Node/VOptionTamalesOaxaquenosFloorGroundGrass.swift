@@ -1,4 +1,4 @@
-import UIKit
+import SpriteKit
 
 class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaquenos>
 {
@@ -44,6 +44,8 @@ class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaqu
         
         addChild(viewGround)
         addChild(viewGrass)
+        
+        startPhysics()
     }
     
     required init?(coder:NSCoder)
@@ -61,5 +63,23 @@ class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaqu
         
         viewGround.position = CGPoint(x:0, y:groundPositionY)
         viewGrass.position = CGPoint(x:0, y:grassPositionY)
+    }
+    
+    //MARK: private
+    
+    private func startPhysics()
+    {
+        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
+        physicsBody.isDynamic = false
+        physicsBody.friction = 1
+        physicsBody.angularVelocity = 0
+        physicsBody.allowsRotation = false
+        physicsBody.affectedByGravity = false
+        physicsBody.restitution = 0
+        
+        physicsBody.categoryBitMask = MOptionTamalesOaxaquenosPhysicsStruct.Floor
+        physicsBody.contactTestBitMask = MOptionTamalesOaxaquenosPhysicsStruct.None
+        physicsBody.collisionBitMask = MOptionTamalesOaxaquenosPhysicsStruct.None
+        self.physicsBody = physicsBody
     }
 }
