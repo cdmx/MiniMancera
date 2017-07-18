@@ -21,6 +21,13 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
             scene:scene)
     }
     
+    //MARK: private
+    
+    private func strategyJump()
+    {
+        strategy = MOptionTamalesOaxaquenosPlayerStrategyJump(model:self)
+    }
+    
     //MARK: public
     
     func stand()
@@ -35,6 +42,15 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
     
     func jump()
     {
+        guard
         
+            let _:MOptionTamalesOaxaquenosPlayerStrategyWalking = strategy as? MOptionTamalesOaxaquenosPlayerStrategyWalking
+        
+        else
+        {
+            return
+        }
+        
+        strategyJump()
     }
 }
