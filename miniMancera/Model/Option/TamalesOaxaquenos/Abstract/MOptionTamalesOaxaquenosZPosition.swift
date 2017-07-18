@@ -7,4 +7,5 @@ enum MOptionTamalesOaxaquenosZPosition:CGFloat
     case Perspective
     case Floor
     case Player
+    case Controls
 }
