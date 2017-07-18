@@ -1,4 +1,4 @@
-import Foundation
+import SpriteKit
 
 class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
 {
@@ -24,9 +24,14 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
             controller:controller)
         controller.model.player.view = player
         
+        let camera:SKCameraNode = SKCameraNode()
+        
+        
         factoryArea()
         addChild(background)
         addChild(player)
+        
+        player.addChild(camera)
     }
     
     private func factoryArea()
