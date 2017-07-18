@@ -9,7 +9,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     private let kRadius:CGFloat = 24
     private let kDensity:CGFloat = 1
     private let kWalkImpulseX:CGFloat = 15
-    private let kJumpImpulseY:CGFloat = -30
+    private let kJumpImpulseY:CGFloat = 30
     
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
