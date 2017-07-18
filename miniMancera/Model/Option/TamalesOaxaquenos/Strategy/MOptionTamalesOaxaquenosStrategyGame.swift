@@ -11,4 +11,11 @@ class MOptionTamalesOaxaquenosStrategyGame:MGameStrategyMain<MOptionTamalesOaxaq
             model:model,
             updateItems:updateItems)
     }
+    
+    override func update(
+        elapsedTime:TimeInterval,
+        scene:ViewGameScene<MOptionTamalesOaxaquenos>)
+    {
+        
+    }
 }

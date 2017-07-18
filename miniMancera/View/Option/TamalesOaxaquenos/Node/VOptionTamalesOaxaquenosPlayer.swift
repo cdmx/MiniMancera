@@ -7,6 +7,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     private let kWalkingKey:String = "actionWalking"
     private let kRadius:CGFloat = 24
     private let kDensity:CGFloat = 1
+    private let kImpulseX:CGFloat = 1
     
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
@@ -61,5 +62,13 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     func startWalking()
     {
         run(actionWalking, withKey:kWalkingKey)
+    }
+    
+    func walk(moveAmount:CGFloat)
+    {
+        let deltaImpulse:CGFloat = moveAmount * kImpulseX
+        let vector:CGVector = CGVector(dx:deltaImpulse, dy:0)
+        
+        physicsBody?.applyImpulse(vector)
     }
 }

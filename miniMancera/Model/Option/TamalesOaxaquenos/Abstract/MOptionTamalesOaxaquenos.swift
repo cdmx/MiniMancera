@@ -44,5 +44,6 @@ class MOptionTamalesOaxaquenos:MGame
     func strategyGame()
     {
         strategy = MOptionTamalesOaxaquenosStrategyGame(model:self)
+        player.walk()
     }
 }
