@@ -38,4 +38,11 @@ class MOptionTamalesOaxaquenos:MGame
         score = 0
         strategy = MOptionTamalesOaxaquenosStrategyBegin(model:self)
     }
+    
+    //MARK: public
+    
+    func strategyGame()
+    {
+        strategy = MOptionTamalesOaxaquenosStrategyGame(model:self)
+    }
 }
