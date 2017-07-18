@@ -8,6 +8,7 @@ class MOptionTamalesOaxaquenos:MGame
     let player:MOptionTamalesOaxaquenosPlayer
     let controls:MOptionTamalesOaxaquenosControls
     let camera:MOptionTamalesOaxaquenosCamera
+    let contact:MOptionTamalesOaxaquenosContact
     private var strategy:MGameStrategyMain<MOptionTamalesOaxaquenos>?
     
     required init()
@@ -18,6 +19,7 @@ class MOptionTamalesOaxaquenos:MGame
         player = MOptionTamalesOaxaquenosPlayer()
         controls = MOptionTamalesOaxaquenosControls()
         camera = MOptionTamalesOaxaquenosCamera(player:player)
+        controls = MOptionTamalesOaxaquenosContact()
         
         super.init()
         
