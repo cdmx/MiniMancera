@@ -3,7 +3,7 @@ import SpriteKit
 class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
 {
     private weak var actionWalking:SKAction!
-    private let kPositionX:CGFloat = 100
+    private let kSubtractPositionX:CGFloat = 100
     private let kWalkingKey:String = "actionWalking"
     private let kRadius:CGFloat = 24
     private let kDensity:CGFloat = 1
@@ -27,10 +27,14 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     
     override func positionStart()
     {
-        let sceneHeight:CGFloat = MGame.sceneSize.height
+        let sceneSize:CGSize = MGame.sceneSize
+        let sceneWidth:CGFloat = sceneSize.width
+        let sceneHeight:CGFloat = sceneSize.height
+        let sceneWidth_2:CGFloat = sceneWidth / 2.0
         let sceneHeight_2:CGFloat = sceneHeight / 2.0
+        let positionX:CGFloat = sceneWidth_2 - kSubtractPositionX
         
-        position = CGPoint(x:kPositionX, y:sceneHeight_2)
+        position = CGPoint(x:positionX, y:sceneHeight_2)
     }
     
     //MARK: private

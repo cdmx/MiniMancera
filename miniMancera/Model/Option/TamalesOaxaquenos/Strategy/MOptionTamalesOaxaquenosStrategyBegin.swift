@@ -8,6 +8,7 @@ class MOptionTamalesOaxaquenosStrategyBegin:MGameStrategyMain<MOptionTamalesOaxa
     init(model:MOptionTamalesOaxaquenos)
     {
         let updateItems:[MGameUpdate<MOptionTamalesOaxaquenos>] = [
+            model.camera,
             model.player]
         
         super.init(

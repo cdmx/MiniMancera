@@ -17,21 +17,23 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
     
     private func factoryNodes()
     {
+        let model:MOptionTamalesOaxaquenos = controller.model
+        
+        let camera:SKCameraNode = SKCameraNode()
+        self.camera = camera
+        model.camera.view = camera
+        
         let background:VOptionTamalesOaxaquenosBackground = VOptionTamalesOaxaquenosBackground(
             controller:controller)
         
         let player:VOptionTamalesOaxaquenosPlayer = VOptionTamalesOaxaquenosPlayer(
             controller:controller)
-        controller.model.player.view = player
-        
-        let camera:SKCameraNode = SKCameraNode()
-        
-        
+        model.player.view = player
+
+        addChild(camera)
         factoryArea()
         addChild(background)
         addChild(player)
-        
-        player.addChild(camera)
     }
     
     private func factoryArea()
