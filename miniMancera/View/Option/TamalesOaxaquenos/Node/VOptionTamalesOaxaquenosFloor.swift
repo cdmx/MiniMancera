@@ -2,6 +2,8 @@ import SpriteKit
 
 class VOptionTamalesOaxaquenosFloor:ViewGameNode<MOptionTamalesOaxaquenos>
 {
+    private let kFriction:CGFloat = 1
+    
     init(
         controller:ControllerGame<MOptionTamalesOaxaquenos>,
         size:CGSize)
@@ -25,14 +27,14 @@ class VOptionTamalesOaxaquenosFloor:ViewGameNode<MOptionTamalesOaxaquenos>
     {
         let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
         physicsBody.isDynamic = false
-        physicsBody.friction = 1
+        physicsBody.friction = kFriction
         physicsBody.angularVelocity = 0
         physicsBody.allowsRotation = false
         physicsBody.affectedByGravity = false
         physicsBody.restitution = 0
         
         physicsBody.categoryBitMask = MOptionTamalesOaxaquenosPhysicsStruct.Floor
-        physicsBody.contactTestBitMask = MOptionTamalesOaxaquenosPhysicsStruct.None
+        physicsBody.contactTestBitMask = MOptionTamalesOaxaquenosPhysicsStruct.Player
         physicsBody.collisionBitMask = MOptionTamalesOaxaquenosPhysicsStruct.None
         self.physicsBody = physicsBody
     }

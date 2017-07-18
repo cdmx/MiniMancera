@@ -1,6 +1,6 @@
-import SpriteKit
+import UIKit
 
-class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaquenos>
+class VOptionTamalesOaxaquenosFloorGroundGrass:VOptionTamalesOaxaquenosFloor
 {
     private weak var viewGround:VOptionTamalesOaxaquenosFloorGround!
     private weak var viewGrass:VOptionTamalesOaxaquenosFloorGrass!
@@ -37,15 +37,10 @@ class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaqu
         grassPositionY = groundPositionY + textureGround.height_2 + textureGrass.height_2
         let size:CGSize = CGSize(width:width, height:height)
         
-        super.init(
-            controller:controller,
-            size:size,
-            zPosition:MOptionTamalesOaxaquenosZPosition.Floor.rawValue)
+        super.init(controller:controller, size:size)
         
         addChild(viewGround)
         addChild(viewGrass)
-        
-        startPhysics()
     }
     
     required init?(coder:NSCoder)
@@ -63,23 +58,5 @@ class VOptionTamalesOaxaquenosFloorGroundGrass:ViewGameNode<MOptionTamalesOaxaqu
         
         viewGround.position = CGPoint(x:0, y:groundPositionY)
         viewGrass.position = CGPoint(x:0, y:grassPositionY)
-    }
-    
-    //MARK: private
-    
-    private func startPhysics()
-    {
-        let physicsBody:SKPhysicsBody = SKPhysicsBody(rectangleOf:size)
-        physicsBody.isDynamic = false
-        physicsBody.friction = 1
-        physicsBody.angularVelocity = 0
-        physicsBody.allowsRotation = false
-        physicsBody.affectedByGravity = false
-        physicsBody.restitution = 0
-        
-        physicsBody.categoryBitMask = MOptionTamalesOaxaquenosPhysicsStruct.Floor
-        physicsBody.contactTestBitMask = MOptionTamalesOaxaquenosPhysicsStruct.None
-        physicsBody.collisionBitMask = MOptionTamalesOaxaquenosPhysicsStruct.None
-        self.physicsBody = physicsBody
     }
 }

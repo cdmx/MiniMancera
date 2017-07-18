@@ -8,6 +8,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     private let kWalkingKey:String = "actionWalking"
     private let kRadius:CGFloat = 24
     private let kDensity:CGFloat = 1
+    private let kLinearDamping:CGFloat = 1
     private let kWalkImpulseX:CGFloat = 15
     private let kJumpImpulseY:CGFloat = 30
     
@@ -52,6 +53,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
         physicsBody.restitution = 0
         physicsBody.angularVelocity = 0
         physicsBody.density = kDensity
+        physicsBody.linearDamping = kLinearDamping
         
         physicsBody.categoryBitMask = MOptionTamalesOaxaquenosPhysicsStruct.Player
         physicsBody.contactTestBitMask = MOptionTamalesOaxaquenosPhysicsStruct.None
