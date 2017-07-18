@@ -29,11 +29,16 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
         let player:VOptionTamalesOaxaquenosPlayer = VOptionTamalesOaxaquenosPlayer(
             controller:controller)
         model.player.view = player
+        
+        let controls:VOptionTamalesOaxaquenosControls = VOptionTamalesOaxaquenosControls(
+            controller:controller)
 
-        addChild(camera)
-        factoryArea()
-        addChild(player)
         camera.addChild(background)
+        camera.addChild(controls)
+        
+        factoryArea()
+        addChild(camera)
+        addChild(player)
     }
     
     private func factoryArea()
