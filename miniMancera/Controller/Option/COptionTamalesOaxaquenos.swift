@@ -7,6 +7,25 @@ class COptionTamalesOaxaquenos:ControllerGame<MOptionTamalesOaxaquenos>
         model.contact.addContact(contact:contact)
     }
     
+    override func game1up()
+    {
+        super.game1up()
+        
+//        let sound1up:SKAction = model.sounds.sound1up
+//        playSound(actionSound:sound1up)
+        
+        newGameScene()
+    }
+    
+    private func newGameScene()
+    {
+        let newScene:VOptionTamalesOaxaquenosScene = VOptionTamalesOaxaquenosScene(
+            controller:self)
+        presentScene(newScene:newScene)
+        
+        model.startLevel()
+    }
+    
     private func presentScene(newScene:SKScene)
     {
         let transition:SKTransition = model.actions.transitionCrossFade
