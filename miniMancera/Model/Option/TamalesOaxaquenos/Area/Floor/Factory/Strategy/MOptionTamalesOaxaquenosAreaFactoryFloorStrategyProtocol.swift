@@ -4,7 +4,7 @@ protocol MOptionTamalesOaxaquenosAreaFactoryFloorStrategyProtocol
 {
     init(model:MOptionTamalesOaxaquenosAreaFactoryFloor)
     
-    var model:MOptionTamalesOaxaquenosAreaFactoryFloor! { get }
+    weak var model:MOptionTamalesOaxaquenosAreaFactoryFloor! { get }
     
     func factoryItem(
         textures:MOptionTamalesOaxaquenosTextures,
