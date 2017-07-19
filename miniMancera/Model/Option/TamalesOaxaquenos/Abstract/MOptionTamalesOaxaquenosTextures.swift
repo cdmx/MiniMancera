@@ -24,6 +24,9 @@ class MOptionTamalesOaxaquenosTextures
     let perspective2:MGameTexture
     let perspective3:MGameTexture
     
+    let gullyStart:MGameTexture
+    let gullyEnd:MGameTexture
+    
     let playerStand:MGameTexture
     let playerWalkingAnimated:MGameTextureAnimated
     
@@ -84,6 +87,13 @@ class MOptionTamalesOaxaquenosTextures
         perspective3 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosPerspective3"),
             zPosition:MOptionTamalesOaxaquenosZPosition.Perspective.rawValue)
+        
+        gullyStart = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGullyStart"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.None.rawValue)
+        gullyEnd = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGullyEnd"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.None.rawValue)
         
         playerStand = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosPlayer0"),

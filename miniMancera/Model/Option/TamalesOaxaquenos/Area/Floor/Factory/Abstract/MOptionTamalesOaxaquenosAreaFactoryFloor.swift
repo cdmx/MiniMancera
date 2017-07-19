@@ -200,7 +200,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
         let textureGround:MGameTexture = randomGroundTexture()
         let textureGrass:MGameTexture = randomGrassTexture()
         
-        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass = MOptionTamalesOaxaquenosAreaFloorItemGroundGrass(
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGullyHole = MOptionTamalesOaxaquenosAreaFloorItemGullyHole(
             textureGround:textureGround,
             textureGrass:textureGrass,
             positionX:currentPositionX)
