@@ -10,7 +10,7 @@ extension MOptionTamalesOaxaquenosArea
     {
         var items:[MOptionTamalesOaxaquenosAreaPerspectiveItem] = []
         let itemWidth_2:CGFloat = kItemWidth / 2.0
-        let maxPositionX:CGFloat = kAreaWidth + itemWidth_2
+        let maxPositionX:CGFloat = kWidth + itemWidth_2
         var positionX:CGFloat = itemWidth_2
         
         while positionX < maxPositionX

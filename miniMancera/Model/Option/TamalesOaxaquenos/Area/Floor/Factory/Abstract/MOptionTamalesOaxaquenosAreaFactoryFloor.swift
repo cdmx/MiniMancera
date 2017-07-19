@@ -19,7 +19,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
     {
         self.textures = textures
         
-        let areaLength:CGFloat = MOptionTamalesOaxaquenosArea.kAreaWidth
+        let areaLength:CGFloat = MOptionTamalesOaxaquenosArea.kWidth
         
         items = []
         itemWidth_2 = kItemWidth / 2.0

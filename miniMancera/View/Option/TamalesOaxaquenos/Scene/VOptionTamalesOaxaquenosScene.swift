@@ -44,6 +44,9 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
         
         let hole:VOptionTamalesOaxaquenosPhysicHole = VOptionTamalesOaxaquenosPhysicHole(
             controller:controller)
+        
+        let finish:VOptionTamalesOaxaquenosPhysicFinish = VOptionTamalesOaxaquenosPhysicFinish(
+            controller:controller)
 
         camera.addChild(background)
         camera.addChild(hole)
@@ -53,6 +56,7 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
         factoryArea()
         addChild(camera)
         addChild(player)
+        addChild(finish)
     }
     
     private func factoryArea()

@@ -2,7 +2,7 @@ import UIKit
 
 class MOptionTamalesOaxaquenosArea:MGameUpdate<MOptionTamalesOaxaquenos>
 {
-    static let kAreaWidth:CGFloat = 10000
+    static let kWidth:CGFloat = 10000
     
     let floorItems:[MOptionTamalesOaxaquenosAreaFloorItemProtocol]
     let perspectiveItems:[MOptionTamalesOaxaquenosAreaPerspectiveItem]
