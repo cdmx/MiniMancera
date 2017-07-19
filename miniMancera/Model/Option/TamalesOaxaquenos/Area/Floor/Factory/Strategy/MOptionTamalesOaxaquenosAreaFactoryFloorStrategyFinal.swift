@@ -1,9 +1,18 @@
-//
-//  MOptionTamalesOaxaquenosAreaFactoryFloorStrategyFinal.swift
-//  miniMancera
-//
-//  Created by zero on 7/18/17.
-//  Copyright © 2017 iturbide. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class MOptionTamalesOaxaquenosAreaFactoryFloorStrategyFinal:MOptionTamalesOaxaquenosAreaFactoryFloorStrategyProtocol
+{
+    private(set) weak var model:MOptionTamalesOaxaquenosAreaFactoryFloor!
+    
+    required init(model:MOptionTamalesOaxaquenosAreaFactoryFloor)
+    {
+        self.model = model
+    }
+    
+    func factoryItem() -> MOptionTamalesOaxaquenosAreaFloorItemProtocol
+    {
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass = model.factoryItemGrass()
+        
+        return item
+    }
+}

@@ -182,14 +182,12 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
         return item
     }
     
-    func factoryItemGullyStart() -> MOptionTamalesOaxaquenosAreaFloorItemGullyStart
+    func factoryItemGullyStart() -> MOptionTamalesOaxaquenosAreaFloorItemGroundGullyStart
     {
         let textureGround:MGameTexture = randomGroundTexture()
-        let textureGrass:MGameTexture = randomGrassTexture()
         
-        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass = MOptionTamalesOaxaquenosAreaFloorItemGroundGrass(
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGullyStart = MOptionTamalesOaxaquenosAreaFloorItemGroundGullyStart(
             textureGround:textureGround,
-            textureGrass:textureGrass,
             positionX:currentPositionX)
         
         return item
@@ -197,25 +195,18 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
     
     func factoryItemGullyHole() -> MOptionTamalesOaxaquenosAreaFloorItemGullyHole
     {
-        let textureGround:MGameTexture = randomGroundTexture()
-        let textureGrass:MGameTexture = randomGrassTexture()
-        
         let item:MOptionTamalesOaxaquenosAreaFloorItemGullyHole = MOptionTamalesOaxaquenosAreaFloorItemGullyHole(
-            textureGround:textureGround,
-            textureGrass:textureGrass,
             positionX:currentPositionX)
         
         return item
     }
     
-    func factoryItemGullyEnd() -> MOptionTamalesOaxaquenosAreaFloorItemGullyEnd
+    func factoryItemGullyEnd() -> MOptionTamalesOaxaquenosAreaFloorItemGroundGullyEnd
     {
         let textureGround:MGameTexture = randomGroundTexture()
-        let textureGrass:MGameTexture = randomGrassTexture()
         
-        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass = MOptionTamalesOaxaquenosAreaFloorItemGroundGrass(
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGullyEnd = MOptionTamalesOaxaquenosAreaFloorItemGroundGullyEnd(
             textureGround:textureGround,
-            textureGrass:textureGrass,
             positionX:currentPositionX)
         
         return item
