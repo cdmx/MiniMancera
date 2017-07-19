@@ -75,4 +75,9 @@ class MOptionTamalesOaxaquenos:MGame
         deActivateGame()
         strategy = MOptionTamalesOaxaquenosStrategyDefeated(model:self)
     }
+    
+    func playerFinish()
+    {
+        
+    }
 }

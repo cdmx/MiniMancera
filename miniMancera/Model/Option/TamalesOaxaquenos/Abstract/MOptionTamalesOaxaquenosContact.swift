@@ -70,6 +70,13 @@ class MOptionTamalesOaxaquenosContact:MGameUpdate<MOptionTamalesOaxaquenos>
                 hole:hole,
                 scene:scene)
         }
+        else if let finish:VOptionTamalesOaxaquenosPhysicFinish = body as? VOptionTamalesOaxaquenosPhysicFinish
+        {
+            playerAndFinish(
+                player:player,
+                finish:finish,
+                scene:scene)
+        }
     }
     
     private func playerAndFloor(
@@ -86,6 +93,14 @@ class MOptionTamalesOaxaquenosContact:MGameUpdate<MOptionTamalesOaxaquenos>
         scene:ViewGameScene<MOptionTamalesOaxaquenos>)
     {
         scene.controller.model.playerInHole()
+    }
+    
+    private func playerAndFinish(
+        player:VOptionTamalesOaxaquenosPlayer,
+        finish:VOptionTamalesOaxaquenosPhysicFinish,
+        scene:ViewGameScene<MOptionTamalesOaxaquenos>)
+    {
+        scene.controller.model.playerFinish()
     }
     
     //MARK: public
