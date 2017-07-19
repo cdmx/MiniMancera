@@ -3,7 +3,7 @@ import Foundation
 class MOptionTamalesOaxaquenosStrategyDefeated:MGameStrategyMain<MOptionTamalesOaxaquenos>
 {
     private var startingTime:TimeInterval?
-    private let kWait:TimeInterval = 2
+    private let kWait:TimeInterval = 1
     
     init(model:MOptionTamalesOaxaquenos)
     {
