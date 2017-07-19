@@ -6,12 +6,12 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     private let jumpVector:CGVector
     private let kSubtractPositionX:CGFloat = 100
     private let kWalkingKey:String = "actionWalking"
-    private let kRadius:CGFloat = 24
+    private let kRadius:CGFloat = 15
     private let kDensity:CGFloat = 1
     private let kLinearDamping:CGFloat = 1
-    private let kWalkImpulseX:CGFloat = 15
-    private let kJumpImpulseX:CGFloat = 10
-    private let kJumpImpulseY:CGFloat = 30
+    private let kWalkImpulseX:CGFloat = 10
+    private let kJumpImpulseX:CGFloat = 3
+    private let kJumpImpulseY:CGFloat = 20
     
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
