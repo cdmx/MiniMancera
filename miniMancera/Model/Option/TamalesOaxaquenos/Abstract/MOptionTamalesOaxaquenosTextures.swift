@@ -3,6 +3,8 @@ import UIKit
 class MOptionTamalesOaxaquenosTextures
 {
     let background:MGameTexture
+    let gameOver1up:MGameTexture
+    let gameOverExit:MGameTexture
     
     let ground0:MGameTexture
     let ground1:MGameTexture
@@ -37,6 +39,12 @@ class MOptionTamalesOaxaquenosTextures
         background = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosBackground"),
             zPosition:MOptionTamalesOaxaquenosZPosition.Background.rawValue)
+        gameOver1up = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenos1up"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.GameOver1up.rawValue)
+        gameOverExit = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosGameOver"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.GameOverExit.rawValue)
         
         ground0 = MGameTexture(
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosTileGround0"),

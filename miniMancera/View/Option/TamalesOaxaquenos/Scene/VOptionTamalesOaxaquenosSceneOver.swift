@@ -1,8 +1,8 @@
 import UIKit
 
-class VOptionTamalesOaxaquenosSceneOver:ViewGameScene<MOptionWhistlesVsZombies>
+class VOptionTamalesOaxaquenosSceneOver:ViewGameScene<MOptionTamalesOaxaquenos>
 {
-    required init(controller:ControllerGame<MOptionWhistlesVsZombies>)
+    required init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
         super.init(controller:controller)
         factoryNodes()
@@ -17,52 +17,36 @@ class VOptionTamalesOaxaquenosSceneOver:ViewGameScene<MOptionWhistlesVsZombies>
     
     private func factoryNodes()
     {
-        let orientation:UIInterfaceOrientation = UIInterfaceOrientation.landscapeLeft
-        let textures:MOptionWhistlesVsZombiesTextures = controller.model.textures
-        
-        let background:VOptionWhistlesVsZombiesBackground = VOptionWhistlesVsZombiesBackground(
-            controller:controller)
+        let textures:MOptionTamalesOaxaquenosTextures = controller.model.textures
         
         let info:ViewGameNodeGameOverInfo = ViewGameNodeGameOverInfo(
-            title:String.localizedWhistlesVsZombies(
-                key:"VOptionWhistlesVsZombiesSceneOver_infoTitle"),
-            descr:String.localizedWhistlesVsZombies(
-                key:"VOptionWhistlesVsZombiesSceneOver_infoDescr"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.GameOverInfo.rawValue,
-            orientation:orientation)
+            title:String.localizedTamalesOaxaquenos(
+                key:"VOptionTamalesOaxaquenosSceneOver_infoTitle"),
+            descr:String.localizedTamalesOaxaquenos(
+                key:"VOptionTamalesOaxaquenosSceneOver_infoDescr"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.GameOverInfo.rawValue)
         
         let title1up:ViewGameNodeGameOverTitle1up = ViewGameNodeGameOverTitle1up(
-            text:String.localizedWhistlesVsZombies(
-                key:"VOptionWhistlesVsZombiesSceneOver_1up"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.GameOverTitle1up.rawValue,
-            orientation:orientation)
+            text:String.localizedTamalesOaxaquenos(
+                key:"VOptionTamalesOaxaquenosSceneOver_1up"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.GameOverTitle1up.rawValue)
         
         let titleExit:ViewGameNodeGameOverTitleExit = ViewGameNodeGameOverTitleExit(
-            text:String.localizedWhistlesVsZombies(
-                key:"VOptionWhistlesVsZombiesSceneOver_exit"),
-            zPosition:MOptionWhistlesVsZombiesZPosition.GameOverTitleExit.rawValue,
-            orientation:orientation)
+            text:String.localizedTamalesOaxaquenos(
+                key:"VOptionTamalesOaxaquenosSceneOver_exit"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.GameOverTitleExit.rawValue)
         
-        let player:ViewGameNodeGameOverPlayer<MOptionWhistlesVsZombies> = ViewGameNodeGameOverPlayer<MOptionWhistlesVsZombies>(
+        let button1up:ViewGameNodeGameOver1up<MOptionTamalesOaxaquenos> = ViewGameNodeGameOver1up<MOptionTamalesOaxaquenos>(
             controller:controller,
-            texture:textures.playerDefeated,
-            orientation:orientation)
+            texture:textures.gameOver1up)
         
-        let button1up:ViewGameNodeGameOver1up<MOptionWhistlesVsZombies> = ViewGameNodeGameOver1up<MOptionWhistlesVsZombies>(
+        let buttonExit:ViewGameNodeGameOverExit<MOptionTamalesOaxaquenos> = ViewGameNodeGameOverExit<MOptionTamalesOaxaquenos>(
             controller:controller,
-            texture:textures.gameOver1up,
-            orientation:orientation)
+            texture:textures.gameOverExit)
         
-        let buttonExit:ViewGameNodeGameOverExit<MOptionWhistlesVsZombies> = ViewGameNodeGameOverExit<MOptionWhistlesVsZombies>(
-            controller:controller,
-            texture:textures.gameOverExit,
-            orientation:orientation)
-        
-        addChild(background)
         addChild(info)
         addChild(title1up)
         addChild(titleExit)
-        addChild(player)
         addChild(button1up)
         addChild(buttonExit)
     }

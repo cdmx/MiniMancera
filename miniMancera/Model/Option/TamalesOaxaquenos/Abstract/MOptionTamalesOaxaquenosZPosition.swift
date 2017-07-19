@@ -10,4 +10,11 @@ enum MOptionTamalesOaxaquenosZPosition:CGFloat
     case Physics
     case Controls
     case Menu
+    case GameOverInfo
+    case GameOverPlayer
+    case GameOverTitle1up
+    case GameOverTitleExit
+    case GameOver1up
+    case GameOverExit
+    case Title
 }

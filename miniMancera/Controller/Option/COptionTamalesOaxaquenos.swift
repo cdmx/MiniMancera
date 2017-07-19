@@ -30,7 +30,7 @@ class COptionTamalesOaxaquenos:ControllerGame<MOptionTamalesOaxaquenos>
         model.strategyWait()
         postScore()
         
-        let newScene:VOptionWhistlesVsZombiesSceneOver = VOptionWhistlesVsZombiesSceneOver(
+        let newScene:VOptionTamalesOaxaquenosSceneOver = VOptionTamalesOaxaquenosSceneOver(
             controller:self)
         
         presentScene(newScene:newScene)
