@@ -84,6 +84,8 @@ class MOptionTamalesOaxaquenos:MGame
     
     func playerFinish()
     {
-        
+        player.finish()
+        deActivateGame()
+        strategy = MOptionTamalesOaxaquenosStrategyFinish(model:self)
     }
 }

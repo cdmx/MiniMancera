@@ -48,7 +48,7 @@ class VOptionTamalesOaxaquenosPhysicHole:ViewGameNode<MOptionTamalesOaxaquenos>
             width:width,
             height:kHeight)
         let physicsBody:SKPhysicsBody = SKPhysicsBody(edgeLoopFrom:edgeFrame)
-        physicsBody.categoryBitMask = MOptionTamalesOaxaquenosPhysicsStruct.Finish
+        physicsBody.categoryBitMask = MOptionTamalesOaxaquenosPhysicsStruct.Hole
         physicsBody.contactTestBitMask = MOptionTamalesOaxaquenosPhysicsStruct.Player
         physicsBody.collisionBitMask = MOptionTamalesOaxaquenosPhysicsStruct.None
         self.physicsBody = physicsBody

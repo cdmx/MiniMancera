@@ -50,6 +50,11 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
         strategy = MOptionTamalesOaxaquenosPlayerStrategyHole(model:self)
     }
     
+    func finish()
+    {
+        strategy = MOptionTamalesOaxaquenosPlayerStrategyFinish(model:self)
+    }
+    
     func impulse()
     {
         guard

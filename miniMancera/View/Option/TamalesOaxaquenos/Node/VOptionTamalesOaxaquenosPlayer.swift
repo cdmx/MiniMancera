@@ -10,8 +10,8 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     private let kDensity:CGFloat = 1
     private let kLinearDamping:CGFloat = 1
     private let kWalkImpulseX:CGFloat = 10
-    private let kJumpImpulseY:CGFloat = 25
-    private let kDiveImpulseY:CGFloat = 25
+    private let kJumpImpulseY:CGFloat = 16
+    private let kDiveImpulseY:CGFloat = 18
     private let kDiveImpulseX:CGFloat = 5
     
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
