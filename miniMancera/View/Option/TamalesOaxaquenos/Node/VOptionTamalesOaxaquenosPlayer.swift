@@ -10,13 +10,16 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     private let kDensity:CGFloat = 1
     private let kLinearDamping:CGFloat = 1
     private let kWalkImpulseX:CGFloat = 15
+    private let kJumpImpulseX:CGFloat = 10
     private let kJumpImpulseY:CGFloat = 30
     
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
         let texture:MGameTexture = controller.model.textures.playerStand
         actionWalking = controller.model.actions.actionPlayerWalkingAnimation
-        jumpVector = CGVector(dx:0, dy:kJumpImpulseY)
+        jumpVector = CGVector(
+            dx:kJumpImpulseX,
+            dy:kJumpImpulseY)
         
         super.init(
             controller:controller,
@@ -83,6 +86,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     
     func jump()
     {
+        removeAction(forKey:kWalkingKey)
         physicsBody?.applyImpulse(jumpVector)
     }
 }
