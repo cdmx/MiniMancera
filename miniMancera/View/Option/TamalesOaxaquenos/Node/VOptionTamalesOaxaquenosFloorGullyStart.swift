@@ -2,11 +2,9 @@ import Foundation
 
 class VOptionTamalesOaxaquenosFloorGullyStart:ViewGameNode<MOptionTamalesOaxaquenos>
 {
-    init(
-        controller:ControllerGame<MOptionTamalesOaxaquenos>,
-        model:MOptionTamalesOaxaquenosAreaFloorItemGroundProtocol)
+    override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
-        let texture:MGameTexture = model.textureGround
+        let texture:MGameTexture = controller.model.textures.gullyStart
         
         super.init(
             controller:controller,
