@@ -87,6 +87,6 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     func jump()
     {
         removeAction(forKey:kWalkingKey)
-        physicsBody?.applyImpulse(jumpVector)
+        run(SKAction.applyImpulse(jumpVector, duration:0.1))
     }
 }
