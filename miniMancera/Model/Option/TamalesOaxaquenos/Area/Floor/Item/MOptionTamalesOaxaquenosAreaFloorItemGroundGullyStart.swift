@@ -1,6 +1,6 @@
 import UIKit
 
-class MOptionTamalesOaxaquenosAreaFloorItemGroundGullyStart:MOptionTamalesOaxaquenosAreaFloorItemProtocol
+class MOptionTamalesOaxaquenosAreaFloorItemGroundGullyStart:MOptionTamalesOaxaquenosAreaFloorItemGroundProtocol
 {
     private(set) weak var textureGround:MGameTexture!
     private(set) var positionX:CGFloat
@@ -15,7 +15,7 @@ class MOptionTamalesOaxaquenosAreaFloorItemGroundGullyStart:MOptionTamalesOaxaqu
     
     func factoryNode(controller:ControllerGame<MOptionTamalesOaxaquenos>) -> ViewGameNode<MOptionTamalesOaxaquenos>?
     {
-        let node:VOptionTamalesOaxaquenosFloorGroundHill = VOptionTamalesOaxaquenosFloorGroundHill(
+        let node:VOptionTamalesOaxaquenosFloorGroundGullyStart = VOptionTamalesOaxaquenosFloorGroundGullyStart(
             controller:controller,
             model:self)
         

@@ -4,6 +4,7 @@ class VOptionTamalesOaxaquenosFloorGroundGullyStart:VOptionTamalesOaxaquenosFloo
 {
     private weak var viewGround:VOptionTamalesOaxaquenosFloorGround!
     private weak var viewGully:VOptionTamalesOaxaquenosFloorGullyStart!
+    private let positionX:CGFloat
     private let height_2:CGFloat
     private let groundPositionY:CGFloat
     private let gullyPositionY:CGFloat
@@ -11,35 +12,34 @@ class VOptionTamalesOaxaquenosFloorGroundGullyStart:VOptionTamalesOaxaquenosFloo
     
     init(
         controller:ControllerGame<MOptionTamalesOaxaquenos>,
-        model:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass)
+        model:MOptionTamalesOaxaquenosAreaFloorItemGroundGullyStart)
     {
-        self.model = model
+        positionX = model.positionX
         
         let viewGround:VOptionTamalesOaxaquenosFloorGround = VOptionTamalesOaxaquenosFloorGround(
             controller:controller,
             model:model)
         self.viewGround = viewGround
         
-        let viewGrass:VOptionTamalesOaxaquenosFloorGrass = VOptionTamalesOaxaquenosFloorGrass(
-            controller:controller,
-            model:model)
-        self.viewGrass = viewGrass
+        let viewGully:VOptionTamalesOaxaquenosFloorGullyStart = VOptionTamalesOaxaquenosFloorGullyStart(
+            controller:controller)
+        self.viewGully = viewGully
         
         let textureGround:MGameTexture = model.textureGround
-        let textureGrass:MGameTexture = model.textureGrass
         let width:CGFloat = textureGround.width
         let groundHeight:CGFloat = textureGround.height
-        let grassHeight:CGFloat = textureGrass.height
-        let height:CGFloat = groundHeight + grassHeight
+        let gullyHeight:CGFloat = viewGully.size.height
+        let gullyHeight_2:CGFloat = gullyHeight / 2.0
+        let height:CGFloat = groundHeight + gullyHeight
         height_2 = height / 2.0
         groundPositionY = textureGround.height_2 - height_2
-        grassPositionY = groundPositionY + textureGround.height_2 + textureGrass.height_2
+        gullyPositionY = groundPositionY + textureGround.height_2 + gullyHeight_2
         let size:CGSize = CGSize(width:width, height:height)
         
         super.init(controller:controller, size:size)
         
         addChild(viewGround)
-        addChild(viewGrass)
+        addChild(viewGully)
     }
     
     required init?(coder:NSCoder)
@@ -52,10 +52,9 @@ class VOptionTamalesOaxaquenosFloorGroundGullyStart:VOptionTamalesOaxaquenosFloo
         let sceneHeight:CGFloat = MGame.sceneSize.height
         let sceneHeight_2:CGFloat = sceneHeight / 2.0
         let positionY:CGFloat = sceneHeight_2 - (kVerticalAlign + height_2)
-        let positionX:CGFloat = model.positionX
         position = CGPoint(x:positionX, y:positionY)
         
         viewGround.position = CGPoint(x:0, y:groundPositionY)
-        viewGrass.position = CGPoint(x:0, y:grassPositionY)
+        viewGully.position = CGPoint(x:0, y:gullyPositionY)
     }
 }
