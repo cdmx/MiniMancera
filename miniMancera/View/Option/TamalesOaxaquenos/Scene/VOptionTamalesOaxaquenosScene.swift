@@ -41,8 +41,12 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
             texture:model.textures.menu)
         model.viewMenu = menu
         positionMenu(menu:menu)
+        
+        let hole:VOptionTamalesOaxaquenosPhysicHole = VOptionTamalesOaxaquenosPhysicHole(
+            controller:controller)
 
         camera.addChild(background)
+        camera.addChild(hole)
         camera.addChild(controls)
         camera.addChild(menu)
         
