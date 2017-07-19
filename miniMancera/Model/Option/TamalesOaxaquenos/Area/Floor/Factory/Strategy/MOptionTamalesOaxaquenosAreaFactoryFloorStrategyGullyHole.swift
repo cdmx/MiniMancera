@@ -4,7 +4,6 @@ class MOptionTamalesOaxaquenosAreaFactoryFloorStrategyGullyHole:MOptionTamalesOa
 {
     private(set) weak var model:MOptionTamalesOaxaquenosAreaFactoryFloor!
     private(set) var counter:Int
-    private let length:Int
     private let kLength:Int = 2
     
     required init(model:MOptionTamalesOaxaquenosAreaFactoryFloor)

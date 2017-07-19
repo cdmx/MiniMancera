@@ -9,7 +9,9 @@ class MOptionTamalesOaxaquenosArea:MGameUpdate<MOptionTamalesOaxaquenos>
     
     init(textures:MOptionTamalesOaxaquenosTextures)
     {
-        floorItems = MOptionTamalesOaxaquenosArea.factoryFloorItems(textures:textures)
+        let factoryFloor:MOptionTamalesOaxaquenosAreaFactoryFloor = MOptionTamalesOaxaquenosAreaFactoryFloor(
+            textures:textures)
+        floorItems = factoryFloor.floorItems()
         perspectiveItems = MOptionTamalesOaxaquenosArea.factoryPerspectiveItems(textures:textures)
         
         super.init()

@@ -15,8 +15,10 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
     private let kTotalGrassTextures:UInt32 = 4
     private let kTotalHillTextures:UInt32 = 4
     
-    init()
+    init(textures:MOptionTamalesOaxaquenosTextures)
     {
+        self.textures = textures
+        
         let areaLength:CGFloat = MOptionTamalesOaxaquenosArea.kAreaWidth
         
         items = []
@@ -105,8 +107,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
     
     //MARK: public
     
-    func floorItems(
-        textures:MOptionTamalesOaxaquenosTextures) -> [MOptionTamalesOaxaquenosAreaFloorItemProtocol]
+    func floorItems() -> [MOptionTamalesOaxaquenosAreaFloorItemProtocol]
     {
         while currentPositionX < maxPositionX
         {
