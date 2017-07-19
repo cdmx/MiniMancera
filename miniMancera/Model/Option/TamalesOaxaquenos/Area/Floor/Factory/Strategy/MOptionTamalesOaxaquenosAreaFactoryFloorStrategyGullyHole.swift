@@ -22,8 +22,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloorStrategyGullyHole:MOptionTamalesOa
             model.strategyGullyEnd()
         }
         
-        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundHill = model.factoryItemHill(
-            height:height)
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGullyHole = model.factoryItemGullyHole()
         
         return item
     }

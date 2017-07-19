@@ -13,7 +13,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloorStrategyGullyStart:MOptionTamalesO
     {
         model.strategyGullyHole()
         
-        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundHill = model.factoryItemHill()
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGullyStart = model.factoryItemGullyStart()
         
         return item
     }
