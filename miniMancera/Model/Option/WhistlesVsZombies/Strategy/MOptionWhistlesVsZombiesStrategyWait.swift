@@ -1,3 +1,5 @@
+import Foundation
+
 class MOptionWhistlesVsZombiesStrategyWait:MGameStrategyMain<MOptionWhistlesVsZombies>
 {
     init(model:MOptionWhistlesVsZombies)

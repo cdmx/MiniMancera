@@ -1,18 +1,16 @@
 import Foundation
 
-class MOptionWhistlesVsZombiesStrategyDefeated:MGameStrategyMain<MOptionWhistlesVsZombies>
+class MOptionTamalesOaxaquenosStrategyDefeated:MGameStrategyMain<MOptionTamalesOaxaquenos>
 {
     private var startingTime:TimeInterval?
-    private let kWait:TimeInterval = 3.5
+    private let kWait:TimeInterval = 2
     
-    init(model:MOptionWhistlesVsZombies)
+    init(model:MOptionTamalesOaxaquenos)
     {
-        let updateItems:[MGameUpdate<MOptionWhistlesVsZombies>] = [
-            model.player,
-            model.sonicBoom,
-            model.zombie,
-            model.points,
-            model.hud]
+        let updateItems:[MGameUpdate<MOptionTamalesOaxaquenos>] = [
+            model.contact,
+            model.camera,
+            model.player]
         
         super.init(
             model:model,
@@ -21,7 +19,7 @@ class MOptionWhistlesVsZombiesStrategyDefeated:MGameStrategyMain<MOptionWhistles
     
     override func update(
         elapsedTime:TimeInterval,
-        scene:ViewGameScene<MOptionWhistlesVsZombies>)
+        scene:ViewGameScene<MOptionTamalesOaxaquenos>)
     {
         super.update(elapsedTime:elapsedTime, scene:scene)
         
@@ -42,12 +40,12 @@ class MOptionWhistlesVsZombiesStrategyDefeated:MGameStrategyMain<MOptionWhistles
     
     //MARK: private
     
-    private func timeOut(scene:ViewGameScene<MOptionWhistlesVsZombies>)
+    private func timeOut(scene:ViewGameScene<MOptionTamalesOaxaquenos>)
     {
         guard
-        
-            let controller:COptionWhistlesVsZombies = scene.controller as? COptionWhistlesVsZombies
-        
+            
+            let controller:COptionTamalesOaxaquenos = scene.controller as? COptionTamalesOaxaquenos
+            
         else
         {
             return

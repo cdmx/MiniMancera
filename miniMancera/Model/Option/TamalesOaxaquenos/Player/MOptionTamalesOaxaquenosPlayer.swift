@@ -45,6 +45,11 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
         strategy = MOptionTamalesOaxaquenosPlayerStrategyWalking(model:self)
     }
     
+    func hole()
+    {
+        strategy = MOptionTamalesOaxaquenosPlayerStrategyHole(model:self)
+    }
+    
     func impulse()
     {
         guard

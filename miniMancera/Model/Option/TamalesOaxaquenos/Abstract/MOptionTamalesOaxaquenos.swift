@@ -61,4 +61,18 @@ class MOptionTamalesOaxaquenos:MGame
         strategy = MOptionTamalesOaxaquenosStrategyGame(model:self)
         player.walk()
     }
+    
+    //MARK: public
+    
+    func strategyWait()
+    {
+        strategy = MOptionTamalesOaxaquenosStrategyWait(model:self)
+    }
+    
+    func playerInHole()
+    {
+        player.hole()
+        deActivateGame()
+        strategy = MOptionTamalesOaxaquenosStrategyDefeated(model:self)
+    }
 }
