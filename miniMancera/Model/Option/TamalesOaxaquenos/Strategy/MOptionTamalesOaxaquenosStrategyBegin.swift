@@ -1,9 +1,9 @@
-import Foundation
+import SpriteKit
 
 class MOptionTamalesOaxaquenosStrategyBegin:MGameStrategyMain<MOptionTamalesOaxaquenos>
 {
     private var startingTime:TimeInterval?
-    private let kDuration:TimeInterval = 3
+    private let kDuration:TimeInterval = 2
     
     init(model:MOptionTamalesOaxaquenos)
     {
@@ -32,12 +32,26 @@ class MOptionTamalesOaxaquenosStrategyBegin:MGameStrategyMain<MOptionTamalesOaxa
             
             if deltaTime > kDuration
             {
-                model.strategyGame()
+                timeOut()
             }
         }
         else
         {
             startingTime = elapsedTime
         }
+    }
+    
+    //MARK: private
+    
+    private func timeOut()
+    {
+        model.activateGame()
+        
+        let actionFadeIn:SKAction = model.actions.actionFadeIn
+        let actionFadeOut:SKAction = model.actions.actionFadeOut
+        
+        model.viewMenu?.run(actionFadeIn)
+//        model.hud.view?.run(actionFadeIn)
+//        model.viewTitle?.run(actionFadeOut)
     }
 }

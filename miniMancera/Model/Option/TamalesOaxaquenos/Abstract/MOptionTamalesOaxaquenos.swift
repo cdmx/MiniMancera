@@ -48,9 +48,15 @@ class MOptionTamalesOaxaquenos:MGame
         strategy = MOptionTamalesOaxaquenosStrategyBegin(model:self)
     }
     
-    //MARK: public
+    override func activateGame()
+    {
+        super.activateGame()
+        strategyGame()
+    }
     
-    func strategyGame()
+    //MARK: private
+    
+    private func strategyGame()
     {
         strategy = MOptionTamalesOaxaquenosStrategyGame(model:self)
         player.walk()
