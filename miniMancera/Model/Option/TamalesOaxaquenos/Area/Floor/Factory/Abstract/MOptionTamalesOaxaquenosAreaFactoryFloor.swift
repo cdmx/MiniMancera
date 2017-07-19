@@ -165,4 +165,43 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
         
         return item
     }
+    
+    func factoryItemGullyStart() -> MOptionTamalesOaxaquenosAreaFloorItemGroundGrass
+    {
+        let textureGround:MGameTexture = randomGroundTexture()
+        let textureGrass:MGameTexture = randomGrassTexture()
+        
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass = MOptionTamalesOaxaquenosAreaFloorItemGroundGrass(
+            textureGround:textureGround,
+            textureGrass:textureGrass,
+            positionX:currentPositionX)
+        
+        return item
+    }
+    
+    func factoryItemGullyHole() -> MOptionTamalesOaxaquenosAreaFloorItemGroundGrass
+    {
+        let textureGround:MGameTexture = randomGroundTexture()
+        let textureGrass:MGameTexture = randomGrassTexture()
+        
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass = MOptionTamalesOaxaquenosAreaFloorItemGroundGrass(
+            textureGround:textureGround,
+            textureGrass:textureGrass,
+            positionX:currentPositionX)
+        
+        return item
+    }
+    
+    func factoryItemGullyEnd() -> MOptionTamalesOaxaquenosAreaFloorItemGroundGrass
+    {
+        let textureGround:MGameTexture = randomGroundTexture()
+        let textureGrass:MGameTexture = randomGrassTexture()
+        
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass = MOptionTamalesOaxaquenosAreaFloorItemGroundGrass(
+            textureGround:textureGround,
+            textureGrass:textureGrass,
+            positionX:currentPositionX)
+        
+        return item
+    }
 }
