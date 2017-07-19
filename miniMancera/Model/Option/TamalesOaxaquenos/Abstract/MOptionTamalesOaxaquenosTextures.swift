@@ -30,6 +30,8 @@ class MOptionTamalesOaxaquenosTextures
     let playerStand:MGameTexture
     let playerWalkingAnimated:MGameTextureAnimated
     
+    let menu:MGameTexture
+    
     init()
     {
         background = MGameTexture(
@@ -99,5 +101,9 @@ class MOptionTamalesOaxaquenosTextures
             image:#imageLiteral(resourceName: "assetTamalesOaxaquenosPlayer0"),
             zPosition:MOptionTamalesOaxaquenosZPosition.Player.rawValue)
         playerWalkingAnimated = MOptionTamalesOaxaquenosTextures.factoryPlayerWalkingAnimated()
+        
+        menu = MGameTexture(
+            image:#imageLiteral(resourceName: "assetTamalesOaxaquenosMenu"),
+            zPosition:MOptionTamalesOaxaquenosZPosition.Menu.rawValue)
     }
 }
