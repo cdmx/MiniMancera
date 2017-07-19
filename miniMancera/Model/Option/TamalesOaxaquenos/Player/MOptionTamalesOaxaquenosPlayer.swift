@@ -28,6 +28,11 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
         strategy = MOptionTamalesOaxaquenosPlayerStrategyJump(model:self)
     }
     
+    private func strategyDive()
+    {
+        
+    }
+    
     //MARK: public
     
     func stand()
@@ -40,7 +45,7 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
         strategy = MOptionTamalesOaxaquenosPlayerStrategyWalking(model:self)
     }
     
-    func jump()
+    func impulse()
     {
         guard
         

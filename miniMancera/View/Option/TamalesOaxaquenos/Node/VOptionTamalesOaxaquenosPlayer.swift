@@ -4,6 +4,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
 {
     private weak var actionWalking:SKAction!
     private weak var actionJumpImpulse:SKAction!
+    private weak var actionDiveImpulse:SKAction!
     private let kSubtractPositionX:CGFloat = 100
     private let kWalkingKey:String = "actionWalking"
     private let kRadius:CGFloat = 15
@@ -18,6 +19,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
         let texture:MGameTexture = model.textures.playerStand
         actionWalking = actions.actionPlayerWalkingAnimation
         actionJumpImpulse = actions.actionPlayerJumpImpulse
+        actionDiveImpulse = actions.actionPlayerDiveImpulse
         
         super.init(
             controller:controller,
@@ -86,5 +88,10 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     {
         removeAction(forKey:kWalkingKey)
         run(actionJumpImpulse)
+    }
+    
+    func dive()
+    {
+        run(actionDiveImpulse)
     }
 }
