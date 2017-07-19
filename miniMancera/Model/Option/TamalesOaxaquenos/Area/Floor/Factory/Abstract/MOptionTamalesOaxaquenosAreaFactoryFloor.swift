@@ -121,22 +121,38 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
     
     func strategyRegular()
     {
-        
+        strategy = MOptionTamalesOaxaquenosAreaFactoryFloorStrategyRegular(
+            model:self)
     }
     
     func strategyHill()
     {
-        
+        strategy = MOptionTamalesOaxaquenosAreaFactoryFloorStrategyHill(
+            model:self)
     }
     
-    func strategyGully()
+    func strategyGullyStart()
     {
-        
+        strategy = MOptionTamalesOaxaquenosAreaFactoryFloorStrategyGullyStart(
+            model:self)
+    }
+    
+    func strategyGullyHole()
+    {
+        strategy = MOptionTamalesOaxaquenosAreaFactoryFloorStrategyGullyHole(
+            model:self)
+    }
+    
+    func strategyGullyEnd()
+    {
+        strategy = MOptionTamalesOaxaquenosAreaFactoryFloorStrategyGullyEnd(
+            model:self)
     }
     
     func strategyFinal()
     {
-        
+        strategy = MOptionTamalesOaxaquenosAreaFactoryFloorStrategyFinal(
+            model:self)
     }
     
     func factoryItemGrass() -> MOptionTamalesOaxaquenosAreaFloorItemGroundGrass
@@ -166,7 +182,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
         return item
     }
     
-    func factoryItemGullyStart() -> MOptionTamalesOaxaquenosAreaFloorItemGroundGrass
+    func factoryItemGullyStart() -> MOptionTamalesOaxaquenosAreaFloorItemGullyStart
     {
         let textureGround:MGameTexture = randomGroundTexture()
         let textureGrass:MGameTexture = randomGrassTexture()
@@ -179,7 +195,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
         return item
     }
     
-    func factoryItemGullyHole() -> MOptionTamalesOaxaquenosAreaFloorItemGroundGrass
+    func factoryItemGullyHole() -> MOptionTamalesOaxaquenosAreaFloorItemGullyHole
     {
         let textureGround:MGameTexture = randomGroundTexture()
         let textureGrass:MGameTexture = randomGrassTexture()
@@ -192,7 +208,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
         return item
     }
     
-    func factoryItemGullyEnd() -> MOptionTamalesOaxaquenosAreaFloorItemGroundGrass
+    func factoryItemGullyEnd() -> MOptionTamalesOaxaquenosAreaFloorItemGullyEnd
     {
         let textureGround:MGameTexture = randomGroundTexture()
         let textureGrass:MGameTexture = randomGrassTexture()

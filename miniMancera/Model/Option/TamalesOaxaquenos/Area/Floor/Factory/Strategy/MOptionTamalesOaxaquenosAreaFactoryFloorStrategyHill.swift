@@ -25,7 +25,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloorStrategyHill:MOptionTamalesOaxaque
     {
         counter += 1
         
-        if counter < length
+        if counter > length
         {
             model.strategyRegular()
         }

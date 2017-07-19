@@ -40,7 +40,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloorStrategyRegular:MOptionTamalesOaxa
         }
         else if random < kRandomMaxGully
         {
-            model.strategyGully()
+            model.strategyGullyStart()
         }
     }
 }

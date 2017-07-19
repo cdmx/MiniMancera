@@ -11,7 +11,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloorStrategyGullyStart:MOptionTamalesO
     
     func factoryItem() -> MOptionTamalesOaxaquenosAreaFloorItemProtocol
     {
-        
+        model.strategyGullyHole()
         
         let item:MOptionTamalesOaxaquenosAreaFloorItemGroundHill = model.factoryItemHill()
         
