@@ -9,6 +9,7 @@ class VOptionTamalesOaxaquenosFloorGroundGullyStart:VOptionTamalesOaxaquenosFloo
     private let groundPositionY:CGFloat
     private let gullyPositionY:CGFloat
     private let kVerticalAlign:CGFloat = 150
+    private let kGroundXPosition:CGFloat = -10
     
     init(
         controller:ControllerGame<MOptionTamalesOaxaquenos>,
@@ -54,7 +55,7 @@ class VOptionTamalesOaxaquenosFloorGroundGullyStart:VOptionTamalesOaxaquenosFloo
         let positionY:CGFloat = sceneHeight_2 - (kVerticalAlign + height_2)
         position = CGPoint(x:positionX, y:positionY)
         
-        viewGround.position = CGPoint(x:0, y:groundPositionY)
+        viewGround.position = CGPoint(x:kGroundXPosition, y:groundPositionY)
         viewGully.position = CGPoint(x:0, y:gullyPositionY)
     }
 }
