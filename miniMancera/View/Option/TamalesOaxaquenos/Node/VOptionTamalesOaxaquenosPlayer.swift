@@ -3,14 +3,16 @@ import SpriteKit
 class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
 {
     private weak var actionWalking:SKAction!
-    private weak var actionJumpImpulse:SKAction!
-    private weak var actionDiveImpulse:SKAction!
+    private let vectorJump:CGVector
+    private let vectorDive:CGVector
     private let kSubtractPositionX:CGFloat = 100
-    private let kWalkingKey:String = "actionWalking"
     private let kRadius:CGFloat = 15
     private let kDensity:CGFloat = 1
     private let kLinearDamping:CGFloat = 1
     private let kWalkImpulseX:CGFloat = 10
+    private let kJumpImpulseY:CGFloat = 25
+    private let kDiveImpulseY:CGFloat = 25
+    private let kDiveImpulseX:CGFloat = 5
     
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
@@ -18,8 +20,8 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
         let actions:MOptionTamalesOaxaquenosActions = model.actions
         let texture:MGameTexture = model.textures.playerStand
         actionWalking = actions.actionPlayerWalkingAnimation
-        actionJumpImpulse = actions.actionPlayerJumpImpulse
-        actionDiveImpulse = actions.actionPlayerDiveImpulse
+        vectorJump = CGVector(dx:0, dy:kJumpImpulseY)
+        vectorDive = CGVector(dx:kDiveImpulseX, dy:kDiveImpulseY)
         
         super.init(
             controller:controller,
@@ -73,7 +75,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     
     func startWalking()
     {
-        run(actionWalking, withKey:kWalkingKey)
+        run(actionWalking)
     }
     
     func walk(moveAmount:CGFloat)
@@ -87,12 +89,11 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     func jump()
     {
         removeAllActions()
-        run(actionJumpImpulse)
+        physicsBody?.applyImpulse(vectorJump)
     }
     
     func dive()
     {
-        removeAllActions()
-        run(actionJumpImpulse)
+        physicsBody?.applyImpulse(vectorDive)
     }
 }
