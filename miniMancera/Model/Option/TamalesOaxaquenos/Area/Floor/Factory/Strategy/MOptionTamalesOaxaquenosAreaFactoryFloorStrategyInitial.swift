@@ -3,27 +3,21 @@ import UIKit
 class MOptionTamalesOaxaquenosAreaFactoryFloorStrategyInitial:MOptionTamalesOaxaquenosAreaFactoryFloorStrategyProtocol
 {
     private(set) weak var model:MOptionTamalesOaxaquenosAreaFactoryFloor!
-    private var left:Int
-    private let kLength:Int = 10
+    private let kMinLength:CGFloat = 768
     
     required init(model:MOptionTamalesOaxaquenosAreaFactoryFloor)
     {
-        left = kLength
         self.model = model
     }
     
-    func factoryItem(
-        textures:MOptionTamalesOaxaquenosTextures,
-        positionX:CGFloat) -> MOptionTamalesOaxaquenosAreaFloorItemProtocol
+    func factoryItem() -> MOptionTamalesOaxaquenosAreaFloorItemProtocol
     {
-        left -= 1
-        
-        if left < 0
+        if model.currentPositionX > kMinLength
         {
             model.strategyRegular()
         }
         
-        let item:MOptionTamalesOaxaquenosAreaFloorItemProtocol = model.factoryItemGrass()
+        let item:MOptionTamalesOaxaquenosAreaFloorItemGroundGrass = model.factoryItemGrass()
         
         return item
     }

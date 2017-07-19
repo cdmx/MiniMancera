@@ -6,7 +6,5 @@ protocol MOptionTamalesOaxaquenosAreaFactoryFloorStrategyProtocol
     
     weak var model:MOptionTamalesOaxaquenosAreaFactoryFloor! { get }
     
-    func factoryItem(
-        textures:MOptionTamalesOaxaquenosTextures,
-        positionX:CGFloat) -> MOptionTamalesOaxaquenosAreaFloorItemProtocol
+    func factoryItem() -> MOptionTamalesOaxaquenosAreaFloorItemProtocol
 }
