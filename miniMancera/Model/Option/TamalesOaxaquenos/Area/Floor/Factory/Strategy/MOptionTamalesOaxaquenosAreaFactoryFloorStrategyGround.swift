@@ -1,5 +1,5 @@
 //
-//  MOptionTamalesOaxaquenosAreaStrategyGully.swift
+//  MOptionTamalesOaxaquenosAreaFactoryFloorStrategyGround.swift
 //  miniMancera
 //
 //  Created by zero on 7/18/17.
