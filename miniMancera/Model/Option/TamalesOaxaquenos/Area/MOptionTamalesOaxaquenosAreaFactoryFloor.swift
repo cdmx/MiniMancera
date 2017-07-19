@@ -1,10 +1,13 @@
 import UIKit
 
-extension MOptionTamalesOaxaquenosArea
+class MOptionTamalesOaxaquenosAreaFactoryFloor
 {
-    private static let kItemWidth:CGFloat = 32
+    private(set) var strategy:MOptionTamalesOaxaquenosAreaStrategy?
+    private let kItemWidth:CGFloat = 32
     
-    class func factoryFloorItems(
+    //MARK: public
+    
+    func floorItems(
         textures:MOptionTamalesOaxaquenosTextures) -> [MOptionTamalesOaxaquenosAreaFloorItemProtocol]
     {
         var items:[MOptionTamalesOaxaquenosAreaFloorItemProtocol] = []
@@ -27,14 +30,5 @@ extension MOptionTamalesOaxaquenosArea
     
     //MARK: private
     
-    private class func factoryItem(
-        textures:MOptionTamalesOaxaquenosTextures,
-        positionX:CGFloat) -> MOptionTamalesOaxaquenosAreaFloorItemProtocol
-    {
-        let item:MOptionTamalesOaxaquenosAreaFloorItemProtocol = factoryGroundItem(
-            textures:textures,
-            positionX:positionX)
-        
-        return item
-    }
+    
 }
