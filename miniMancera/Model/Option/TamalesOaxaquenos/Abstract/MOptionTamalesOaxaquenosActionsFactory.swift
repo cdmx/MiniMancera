@@ -2,10 +2,10 @@ import SpriteKit
 
 extension MOptionTamalesOaxaquenosActions
 {
-    private static let kPlayerJumpImpulseX:CGFloat = 3
-    private static let kPlayerJumpImpulseY:CGFloat = 20
+    private static let kPlayerDiveImpulseX:CGFloat = 10
+    private static let kPlayerJumpImpulseY:CGFloat = 30
     private static let kPlayerWalkingFrameDuration:TimeInterval = 0.16
-    private static let kPlayerJumpDuration:TimeInterval = 0.01
+    private static let kPlayerImpulseDuration:TimeInterval = 0.001
     
     class func factoryPlayerWalkingAnimation(texture:MGameTextureAnimated) -> SKAction
     {
@@ -25,21 +25,23 @@ extension MOptionTamalesOaxaquenosActions
             dx:0,
             dy:kPlayerJumpImpulseY)
         
-        let vectorHorizontal:CGVector = CGVector(
-            dx:kPlayerJumpImpulseX,
+        let actionVertical:SKAction = SKAction.applyImpulse(
+            vectorVertical,
+            duration:kPlayerImpulseDuration)
+        
+        return actionVertical
+    }
+    
+    class func factoryPlayerDiveImpulse() -> SKAction
+    {
+        let vectorVertical:CGVector = CGVector(
+            dx:kPlayerDiveImpulseX,
             dy:0)
         
         let actionVertical:SKAction = SKAction.applyImpulse(
             vectorVertical,
-            duration:kPlayerJumpDuration)
-        let actionHorizontal:SKAction = SKAction.applyImpulse(
-            vectorHorizontal,
-            duration:kPlayerJumpDuration)
-        let actions:[SKAction] = [
-            actionVertical,
-            actionHorizontal]
-        let sequence:SKAction = SKAction.sequence(actions)
+            duration:kPlayerImpulseDuration)
         
-        return sequence
+        return actionVertical
     }
 }

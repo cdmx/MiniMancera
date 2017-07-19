@@ -4,6 +4,7 @@ class MOptionTamalesOaxaquenosActions
 {
     let actionPlayerWalkingAnimation:SKAction
     let actionPlayerJumpImpulse:SKAction
+    let actionPlayerDiveImpulse:SKAction
     
     init(textures:MOptionTamalesOaxaquenosTextures)
     {
@@ -11,5 +12,6 @@ class MOptionTamalesOaxaquenosActions
             texture:textures.playerWalkingAnimated)
         
         actionPlayerJumpImpulse = MOptionTamalesOaxaquenosActions.factoryPlayerJumpImpulse()
+        actionPlayerDiveImpulse = MOptionTamalesOaxaquenosActions.factoryPlayerDiveImpulse()
     }
 }
