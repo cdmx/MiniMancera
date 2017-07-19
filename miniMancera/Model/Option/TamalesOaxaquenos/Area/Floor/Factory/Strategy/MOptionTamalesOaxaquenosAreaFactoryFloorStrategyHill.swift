@@ -7,7 +7,7 @@ class MOptionTamalesOaxaquenosAreaFactoryFloorStrategyHill:MOptionTamalesOaxaque
     private let height:CGFloat
     private let length:Int
     private let kLengthRatio:UInt32 = 5
-    private let kHeightRatio:UInt32 = 30
+    private let kHeightRatio:UInt32 = 35
     
     required init(model:MOptionTamalesOaxaquenosAreaFactoryFloor)
     {

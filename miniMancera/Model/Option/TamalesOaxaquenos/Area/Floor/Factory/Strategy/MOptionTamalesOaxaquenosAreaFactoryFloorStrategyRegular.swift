@@ -4,8 +4,8 @@ class MOptionTamalesOaxaquenosAreaFactoryFloorStrategyRegular:MOptionTamalesOaxa
 {
     private(set) weak var model:MOptionTamalesOaxaquenosAreaFactoryFloor!
     private let kRandomRange:UInt32 = 100
-    private let kRandomMaxHill:UInt32 = 10
-    private let kRandomMaxGully:UInt32 = 15
+    private let kRandomMaxHill:UInt32 = 12
+    private let kRandomMaxGully:UInt32 = 16
     
     required init(model:MOptionTamalesOaxaquenosAreaFactoryFloor)
     {
