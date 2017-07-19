@@ -2,6 +2,7 @@ import SpriteKit
 
 class MOptionTamalesOaxaquenos:MGame
 {
+    weak var viewMenu:ViewGameNodeMenu<MOptionTamalesOaxaquenos>?
     let textures:MOptionTamalesOaxaquenosTextures
     let actions:MOptionTamalesOaxaquenosActions
     let area:MOptionTamalesOaxaquenosArea

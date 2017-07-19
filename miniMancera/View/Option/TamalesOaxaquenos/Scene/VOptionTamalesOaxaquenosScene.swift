@@ -33,6 +33,11 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
         let controls:VOptionTamalesOaxaquenosControls = VOptionTamalesOaxaquenosControls(
             controller:controller)
         model.controls.view = controls
+        
+        let menu:ViewGameNodeMenu<MOptionTamalesOaxaquenos> = ViewGameNodeMenu<MOptionTamalesOaxaquenos>(
+            controller:controller,
+            texture:model.textures.menu)
+        model.viewMenu = menu
 
         camera.addChild(background)
         camera.addChild(controls)
@@ -40,6 +45,7 @@ class VOptionTamalesOaxaquenosScene:ViewGameScene<MOptionTamalesOaxaquenos>
         factoryArea()
         addChild(camera)
         addChild(player)
+        addChild(menu)
     }
     
     private func factoryArea()
