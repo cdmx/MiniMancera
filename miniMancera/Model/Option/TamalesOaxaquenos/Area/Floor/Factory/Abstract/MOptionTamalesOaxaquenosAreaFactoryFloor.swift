@@ -5,7 +5,6 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
     let maxPositionX:CGFloat
     let finalLine:CGFloat
     private(set) weak var textures:MOptionTamalesOaxaquenosTextures!
-    private(set) var items:[MOptionTamalesOaxaquenosAreaFloorItemProtocol]
     private(set) var currentPositionX:CGFloat
     private var strategy:MOptionTamalesOaxaquenosAreaFactoryFloorStrategyProtocol!
     private let itemWidth_2:CGFloat
@@ -20,8 +19,6 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
         self.textures = textures
         
         let areaLength:CGFloat = MOptionTamalesOaxaquenosArea.kWidth
-        
-        items = []
         itemWidth_2 = kItemWidth / 2.0
         currentPositionX = itemWidth_2
         maxPositionX = areaLength + itemWidth_2
@@ -109,6 +106,8 @@ class MOptionTamalesOaxaquenosAreaFactoryFloor
     
     func floorItems() -> [MOptionTamalesOaxaquenosAreaFloorItemProtocol]
     {
+        var items:[MOptionTamalesOaxaquenosAreaFloorItemProtocol] = []
+        
         while currentPositionX < maxPositionX
         {
             let item:MOptionTamalesOaxaquenosAreaFloorItemProtocol = strategy.factoryItem()

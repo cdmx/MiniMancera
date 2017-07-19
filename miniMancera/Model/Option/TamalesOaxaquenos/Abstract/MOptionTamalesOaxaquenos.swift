@@ -24,7 +24,7 @@ class MOptionTamalesOaxaquenos:MGame
         
         super.init()
         
-        startLevel()
+        generateLevel()
     }
     
     override var startSceneType:SKScene.Type?
@@ -63,6 +63,12 @@ class MOptionTamalesOaxaquenos:MGame
     }
     
     //MARK: public
+    
+    func generateLevel()
+    {
+        area.generateFloor()
+        strategy = MOptionTamalesOaxaquenosStrategyBegin(model:self)
+    }
     
     func strategyWait()
     {

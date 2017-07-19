@@ -92,7 +92,16 @@ class MOptionTamalesOaxaquenosContact:MGameUpdate<MOptionTamalesOaxaquenos>
         hole:VOptionTamalesOaxaquenosPhysicHole,
         scene:ViewGameScene<MOptionTamalesOaxaquenos>)
     {
-        scene.controller.model.playerInHole()
+        guard
+            
+            let controller:COptionTamalesOaxaquenos = scene.controller as? COptionTamalesOaxaquenos
+        
+        else
+        {
+            return
+        }
+        
+        controller.playerInHole()
     }
     
     private func playerAndFinish(
@@ -100,7 +109,16 @@ class MOptionTamalesOaxaquenosContact:MGameUpdate<MOptionTamalesOaxaquenos>
         finish:VOptionTamalesOaxaquenosPhysicFinish,
         scene:ViewGameScene<MOptionTamalesOaxaquenos>)
     {
-        scene.controller.model.playerFinish()
+        guard
+            
+            let controller:COptionTamalesOaxaquenos = scene.controller as? COptionTamalesOaxaquenos
+            
+        else
+        {
+            return
+        }
+        
+        controller.playerFinish()
     }
     
     //MARK: public

@@ -19,11 +19,15 @@ class COptionTamalesOaxaquenos:ControllerGame<MOptionTamalesOaxaquenos>
     
     private func newGameScene()
     {
+        presentNewGameScene()
+        model.startLevel()
+    }
+    
+    private func presentNewGameScene()
+    {
         let newScene:VOptionTamalesOaxaquenosScene = VOptionTamalesOaxaquenosScene(
             controller:self)
         presentScene(newScene:newScene)
-        
-        model.startLevel()
     }
     
     private func presentScene(newScene:SKScene)
@@ -55,11 +59,26 @@ class COptionTamalesOaxaquenos:ControllerGame<MOptionTamalesOaxaquenos>
         presentScene(newScene:newScene)
     }
     
+    func showFinish()
+    {
+        postScore()
+        model.generateLevel()
+        presentNewGameScene()
+    }
+    
     func playerInHole()
     {
 //        let soundHorror:SKAction = model.sounds.soundHorror
 //        playSound(actionSound:soundHorror)
         
         model.playerInHole()
+    }
+    
+    func playerFinish()
+    {
+//        let soundHorror:SKAction = model.sounds.soundHorror
+//        playSound(actionSound:soundHorror)
+        
+        model.playerFinish()
     }
 }
