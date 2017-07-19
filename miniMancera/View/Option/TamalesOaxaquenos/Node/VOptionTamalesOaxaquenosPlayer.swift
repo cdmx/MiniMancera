@@ -68,7 +68,7 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     
     func stand()
     {
-        removeAction(forKey:kWalkingKey)
+        removeAllActions()
     }
     
     func startWalking()
@@ -86,12 +86,13 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     
     func jump()
     {
-        removeAction(forKey:kWalkingKey)
+        removeAllActions()
         run(actionJumpImpulse)
     }
     
     func dive()
     {
-        run(actionDiveImpulse)
+        removeAllActions()
+        run(actionJumpImpulse)
     }
 }

@@ -30,7 +30,7 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
     
     private func strategyDive()
     {
-        
+        strategy = MOptionTamalesOaxaquenosPlayerStrategyDive(model:self)
     }
     
     //MARK: public
@@ -53,6 +53,17 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
         
         else
         {
+            guard
+                
+                let _:MOptionTamalesOaxaquenosPlayerStrategyJump = strategy as? MOptionTamalesOaxaquenosPlayerStrategyJump
+                
+            else
+            {
+                return
+            }
+            
+            strategyDive()
+            
             return
         }
         
@@ -67,6 +78,17 @@ class MOptionTamalesOaxaquenosPlayer:MGameUpdate<MOptionTamalesOaxaquenos>
         
         else
         {
+            guard
+                
+                let _:MOptionTamalesOaxaquenosPlayerStrategyDive = strategy as? MOptionTamalesOaxaquenosPlayerStrategyDive
+                
+            else
+            {
+                return
+            }
+            
+            walk()
+            
             return
         }
         

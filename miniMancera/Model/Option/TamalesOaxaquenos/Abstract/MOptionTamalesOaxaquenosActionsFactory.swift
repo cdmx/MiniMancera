@@ -2,7 +2,8 @@ import SpriteKit
 
 extension MOptionTamalesOaxaquenosActions
 {
-    private static let kPlayerDiveImpulseX:CGFloat = 10
+    private static let kPlayerDiveImpulseX:CGFloat = 30
+    private static let kPlayerDiveImpulseY:CGFloat = 30
     private static let kPlayerJumpImpulseY:CGFloat = 30
     private static let kPlayerWalkingFrameDuration:TimeInterval = 0.16
     private static let kPlayerImpulseDuration:TimeInterval = 0.001
@@ -36,7 +37,7 @@ extension MOptionTamalesOaxaquenosActions
     {
         let vectorVertical:CGVector = CGVector(
             dx:kPlayerDiveImpulseX,
-            dy:0)
+            dy:kPlayerDiveImpulseY)
         
         let actionVertical:SKAction = SKAction.applyImpulse(
             vectorVertical,

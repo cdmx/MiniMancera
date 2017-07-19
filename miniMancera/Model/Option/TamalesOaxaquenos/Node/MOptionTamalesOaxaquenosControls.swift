@@ -19,7 +19,7 @@ class MOptionTamalesOaxaquenosControls:MGameUpdate<MOptionTamalesOaxaquenos>
         
         if pendingTouch
         {
-            scene.controller.model.player.jump()
+            scene.controller.model.player.impulse()
         }
     }
 }
