@@ -3,23 +3,21 @@ import SpriteKit
 class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
 {
     private weak var actionWalking:SKAction!
-    private let jumpVector:CGVector
+    private weak var actionJumpImpulse:SKAction!
     private let kSubtractPositionX:CGFloat = 100
     private let kWalkingKey:String = "actionWalking"
     private let kRadius:CGFloat = 15
     private let kDensity:CGFloat = 1
     private let kLinearDamping:CGFloat = 1
     private let kWalkImpulseX:CGFloat = 10
-    private let kJumpImpulseX:CGFloat = 3
-    private let kJumpImpulseY:CGFloat = 20
     
     override init(controller:ControllerGame<MOptionTamalesOaxaquenos>)
     {
-        let texture:MGameTexture = controller.model.textures.playerStand
-        actionWalking = controller.model.actions.actionPlayerWalkingAnimation
-        jumpVector = CGVector(
-            dx:kJumpImpulseX,
-            dy:kJumpImpulseY)
+        let model:MOptionTamalesOaxaquenos = controller.model
+        let actions:MOptionTamalesOaxaquenosActions = model.actions
+        let texture:MGameTexture = model.textures.playerStand
+        actionWalking = actions.actionPlayerWalkingAnimation
+        actionJumpImpulse = actions.actionPlayerJumpImpulse
         
         super.init(
             controller:controller,
@@ -87,6 +85,6 @@ class VOptionTamalesOaxaquenosPlayer:ViewGameNode<MOptionTamalesOaxaquenos>
     func jump()
     {
         removeAction(forKey:kWalkingKey)
-        run(SKAction.applyImpulse(jumpVector, duration:0.1))
+        run(actionJumpImpulse)
     }
 }
