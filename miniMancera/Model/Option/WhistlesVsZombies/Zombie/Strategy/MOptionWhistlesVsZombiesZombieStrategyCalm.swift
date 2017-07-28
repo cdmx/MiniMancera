@@ -6,7 +6,7 @@ class MOptionWhistlesVsZombiesZombieStrategyCalm:MOptionWhistlesVsZombiesZombieS
     private let kWaitTime:TimeInterval = 0.05
     private let kSpawnRate:UInt32 = 60
     private let kDeltaTime:TimeInterval = 5
-    private let kHordeRatio:UInt32 = 25
+    private let kHordeRatio:UInt32 = 50
     
     override var waitTime:TimeInterval
     {

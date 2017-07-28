@@ -5,6 +5,7 @@ extension String
     private static let tableReformaCrossing:String = "ReformaCrossing"
     private static let tablePollutedGarden:String = "PollutedGarden"
     private static let tableWhistlesVsZombies:String = "WhistlesVsZombies"
+    private static let tableTalamesOaxaquenos:String = "TamalesOaxaquenos"
     
     static func localized(key:String) -> String
     {
@@ -24,6 +25,11 @@ extension String
     static func localizedWhistlesVsZombies(key:String) -> String
     {
         return NSLocalizedString(key, tableName:tableWhistlesVsZombies, comment:"")
+    }
+    
+    static func localizedTamalesOaxaquenos(key:String) -> String
+    {
+        return NSLocalizedString(key, tableName:tableTalamesOaxaquenos, comment:"")
     }
     
     func capitalizedFirstLetter() -> String
