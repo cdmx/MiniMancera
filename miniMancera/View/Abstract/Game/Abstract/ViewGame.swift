@@ -16,7 +16,7 @@ class ViewGame<T:MGame>:SKView, ViewProtocol
         showsNodeCount = false
         ignoresSiblingOrder = true
         translatesAutoresizingMaskIntoConstraints = false
-        showsPhysics = true
+        showsPhysics = false
         
         guard
             
